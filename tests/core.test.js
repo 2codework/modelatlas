@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict'),C=require('../web/core.js');
+test('progress round trip / dedupe / unknown IDs',()=>assert.deepEqual([...C.parseProgress('{"schema":"modelatlas.progress.v1","completed":["a","a","unknown"]}',new Set(['a']))],['a']));
+test('malformed or wrong progress rejected atomically',()=>{for(const s of ['{','null','{}','{"schema":"modelatlas.progress.v1","completed":[null]}','{"schema":"other","completed":[]}'])assert.throws(()=>C.parseProgress(s,new Set()));});
+test('oversized import refused',()=>assert.throws(()=>C.parseProgress('x'.repeat(1000001),new Set())));
+test('unsafe protocols and credentials rejected',()=>{for(const u of ['javascript:alert(1)','data:text/html,x','file:///x','https://a:b@example.com','https://example.com/a b'])assert.equal(C.safeURL(u),null);assert.equal(C.safeURL('https://example.com'),'https://example.com/');});
+test('Chinese search and filters compose',()=>{const ns=[{id:'a',title:'推理模型',description_zh:'测试',type:'model',category:'text'},{id:'b',title:'向量',type:'concept',category:'base'}],v=new Map([['a',{vendor:'A',availability:'public'}],['b',{vendor:'B',availability:'unknown'}]]);assert.equal(C.search(ns,v,{query:'推理',type:'model',vendor:'A'}).length,1);assert.equal(C.search(ns,v,{query:'推理',vendor:'B'}).length,0);assert.equal(C.search(ns,v,{query:''}).length,2);});

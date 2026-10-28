@@ -1,0 +1,3573 @@
+{
+  "schema_version": "modelatlas-systems-1.0",
+  "checked_at": "2026-10-28",
+  "scope_zh": "系统、数据与评测的首轮精选登记；不是全部信息或全部评测集清单。",
+  "nodes": [
+    {
+      "id": "sys-vllm",
+      "title": "vLLM推理服务",
+      "type": "runtime",
+      "category": "deployment",
+      "description_zh": "面向语言模型推理与服务的运行时；关注吞吐、显存、并发和受支持的模型及内核，不是模型权重。",
+      "summary_zh": "面向语言模型推理与服务的运行时；关注吞吐、显存、并发和受支持的模型及内核，不是模型权重。",
+      "steps_zh": [
+        "固定模型与运行时版本",
+        "核对硬件和量化支持",
+        "以同一输入长度与并发评估首token延迟、解码速度及显存。"
+      ],
+      "prerequisites": [
+        "sys-pagedattention"
+      ],
+      "misconceptions": [
+        "不是所有量化在所有GPU上都能运行；吞吐增益不等于单请求延迟同比下降。"
+      ],
+      "pitfalls": [
+        "不是所有量化在所有GPU上都能运行；吞吐增益不等于单请求延迟同比下降。"
+      ],
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-paged"
+      ],
+      "source_urls": [
+        "https://docs.vllm.ai/en/stable/features/quantization/index.html",
+        "https://arxiv.org/abs/2309.06180"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "vLLM推理服务：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-vllm",
+          "sys-src-paged"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定模型与运行时版本",
+          "核对硬件和量化支持",
+          "以同一输入长度与并发评估首token延迟、解码速度及显存。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-pagedattention",
+      "title": "PagedAttention与KV缓存",
+      "type": "method",
+      "category": "deployment",
+      "description_zh": "把注意力KV缓存按块管理，以减少碎片并支持共享；KV缓存是推理状态，不是长期用户记忆。",
+      "summary_zh": "把注意力KV缓存按块管理，以减少碎片并支持共享；KV缓存是推理状态，不是长期用户记忆。",
+      "steps_zh": [
+        "区分prefill与decode",
+        "画出请求到缓存块的映射",
+        "在不同序列长度下记录缓存占用。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "论文特定负载上的加速不能外推到任意设备；缓存优化不会自动增加模型知识。"
+      ],
+      "pitfalls": [
+        "论文特定负载上的加速不能外推到任意设备；缓存优化不会自动增加模型知识。"
+      ],
+      "source_ids": [
+        "sys-src-paged"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.06180"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2023-09-12",
+      "release_dates": {
+        "paper_first_submitted": "2023-09-12",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "PagedAttention与KV缓存：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-paged"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "区分prefill与decode",
+          "画出请求到缓存块的映射",
+          "在不同序列长度下记录缓存占用。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-llamacpp",
+      "title": "llama.cpp",
+      "type": "runtime",
+      "category": "deployment",
+      "description_zh": "C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGUF承载模型。",
+      "summary_zh": "C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGUF承载模型。",
+      "steps_zh": [
+        "核对模型架构与转换支持",
+        "固定GGUF文件哈希",
+        "核对上下文/模板",
+        "在隔离环境评测CPU或GPU后端。"
+      ],
+      "prerequisites": [
+        "sys-gguf"
+      ],
+      "misconceptions": [
+        "支持Apple Silicon不意味着仅支持Mac；同为4位文件也可能采用不同量化布局。"
+      ],
+      "pitfalls": [
+        "支持Apple Silicon不意味着仅支持Mac；同为4位文件也可能采用不同量化布局。"
+      ],
+      "source_ids": [
+        "sys-src-llama",
+        "sys-src-gguf"
+      ],
+      "source_urls": [
+        "https://github.com/ggml-org/llama.cpp",
+        "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "llama.cpp：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-llama",
+          "sys-src-gguf"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "核对模型架构与转换支持",
+          "固定GGUF文件哈希",
+          "核对上下文/模板",
+          "在隔离环境评测CPU或GPU后端。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-mlx",
+      "title": "MLX LM",
+      "type": "runtime",
+      "category": "deployment",
+      "description_zh": "基于MLX的语言模型生成和微调工具，主要面向Apple Silicon；与MLX数组框架本身分层。",
+      "summary_zh": "基于MLX的语言模型生成和微调工具，主要面向Apple Silicon；与MLX数组框架本身分层。",
+      "steps_zh": [
+        "先看支持模型和内存需求",
+        "确认模型转换方式与聊天模板",
+        "比较原精度与量化质量；这里只作教程研究。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "不要把统一内存容量当作无限显存；trust_remote_code会扩大执行风险，不应盲目开启。"
+      ],
+      "pitfalls": [
+        "不要把统一内存容量当作无限显存；trust_remote_code会扩大执行风险，不应盲目开启。"
+      ],
+      "source_ids": [
+        "sys-src-mlx"
+      ],
+      "source_urls": [
+        "https://github.com/ml-explore/mlx-lm"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "MLX LM：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-mlx"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "先看支持模型和内存需求",
+          "确认模型转换方式与聊天模板",
+          "比较原精度与量化质量；这里只作教程研究。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-gptq",
+      "title": "GPTQ",
+      "type": "method",
+      "category": "quantization",
+      "description_zh": "利用近似二阶信息的训练后权重量化方法；需结合校准、位宽、分组及推理内核理解。",
+      "summary_zh": "利用近似二阶信息的训练后权重量化方法；需结合校准、位宽、分组及推理内核理解。",
+      "steps_zh": [
+        "选代表性校准数据",
+        "固定量化配置",
+        "比较原权重与量化权重的任务质量及运行成本。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "GPTQ不是单一通用文件格式；论文压缩效果不是所有模型的保证。"
+      ],
+      "pitfalls": [
+        "GPTQ不是单一通用文件格式；论文压缩效果不是所有模型的保证。"
+      ],
+      "source_ids": [
+        "sys-src-gptq"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2210.17323"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2022-10-31",
+      "release_dates": {
+        "paper_first_submitted": "2022-10-31",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "GPTQ：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-gptq"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "选代表性校准数据",
+          "固定量化配置",
+          "比较原权重与量化权重的任务质量及运行成本。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-awq",
+      "title": "AWQ",
+      "type": "method",
+      "category": "quantization",
+      "description_zh": "利用激活统计识别显著通道并缩放，以降低低位权重量化误差。",
+      "summary_zh": "利用激活统计识别显著通道并缩放，以降低低位权重量化误差。",
+      "steps_zh": [
+        "收集代表性激活统计",
+        "记录位宽和分组",
+        "验证目标内核",
+        "运行同口径质量对比。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "activation-aware不等于把所有激活都量化；低位权重不自动加速所有设备。"
+      ],
+      "pitfalls": [
+        "activation-aware不等于把所有激活都量化；低位权重不自动加速所有设备。"
+      ],
+      "source_ids": [
+        "sys-src-awq"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2306.00978"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2023-06-01",
+      "release_dates": {
+        "paper_first_submitted": "2023-06-01",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "AWQ：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-awq"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "收集代表性激活统计",
+          "记录位宽和分组",
+          "验证目标内核",
+          "运行同口径质量对比。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-qlora",
+      "title": "QLoRA与NF4",
+      "type": "method",
+      "category": "quantization",
+      "description_zh": "冻结低位量化基础权重并训练LoRA适配器；NF4、双重量化与分页优化器服务于节省微调内存。",
+      "summary_zh": "冻结低位量化基础权重并训练LoRA适配器；NF4、双重量化与分页优化器服务于节省微调内存。",
+      "steps_zh": [
+        "区分底座权重和可训练适配器",
+        "记录NF4与计算精度",
+        "保留验证集",
+        "测试合并/部署后的结果。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "QLoRA不是单纯推理格式；4位存储不代表全部计算都是4位。"
+      ],
+      "pitfalls": [
+        "QLoRA不是单纯推理格式；4位存储不代表全部计算都是4位。"
+      ],
+      "source_ids": [
+        "sys-src-qlora"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2305.14314"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2023-05-23",
+      "release_dates": {
+        "paper_first_submitted": "2023-05-23",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "QLoRA与NF4：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-qlora"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "区分底座权重和可训练适配器",
+          "记录NF4与计算精度",
+          "保留验证集",
+          "测试合并/部署后的结果。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-gguf",
+      "title": "GGUF模型容器",
+      "type": "format",
+      "category": "quantization",
+      "description_zh": "保存张量和模型元数据的二进制格式，可包含不同张量类型；与具体量化算法不是同一层。",
+      "summary_zh": "保存张量和模型元数据的二进制格式，可包含不同张量类型；与具体量化算法不是同一层。",
+      "steps_zh": [
+        "检查架构/分词器/模板元数据",
+        "核对张量类型",
+        "记录来源和哈希",
+        "验证目标运行时兼容。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "GGUF不等于4位量化；扩展名不能证明模型许可或质量。"
+      ],
+      "pitfalls": [
+        "GGUF不等于4位量化；扩展名不能证明模型许可或质量。"
+      ],
+      "source_ids": [
+        "sys-src-gguf"
+      ],
+      "source_urls": [
+        "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "GGUF模型容器：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-gguf"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "检查架构/分词器/模板元数据",
+          "核对张量类型",
+          "记录来源和哈希",
+          "验证目标运行时兼容。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-safetensors",
+      "title": "Safetensors张量容器",
+      "type": "format",
+      "category": "deployment",
+      "description_zh": "用于安全存储张量的格式，避免pickle式任意对象反序列化；不负责定义整个模型行为。",
+      "summary_zh": "用于安全存储张量的格式，避免pickle式任意对象反序列化；不负责定义整个模型行为。",
+      "steps_zh": [
+        "核对文件与索引哈希",
+        "匹配配置和分词器",
+        "检查加载端是否还需要额外代码。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "张量文件安全不等于仓库所有代码安全，也不代表模型已量化。"
+      ],
+      "pitfalls": [
+        "张量文件安全不等于仓库所有代码安全，也不代表模型已量化。"
+      ],
+      "source_ids": [
+        "sys-src-safe"
+      ],
+      "source_urls": [
+        "https://huggingface.co/docs/safetensors/index"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Safetensors张量容器：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-safe"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "核对文件与索引哈希",
+          "匹配配置和分词器",
+          "检查加载端是否还需要额外代码。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-rag",
+      "title": "RAG工程实践",
+      "type": "pipeline",
+      "category": "retrieval",
+      "description_zh": "把检索得到的外部证据加入生成流程；原论文的联合建模方法与今天广义RAG工程管线应区分。",
+      "summary_zh": "把检索得到的外部证据加入生成流程；原论文的联合建模方法与今天广义RAG工程管线应区分。",
+      "steps_zh": [
+        "整理合法语料",
+        "分块保留来源",
+        "检索/重排",
+        "将证据与问题一起生成",
+        "检查引用及拒答。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "向量库不是RAG全部；检索到相关内容不保证回答忠实或内容可信。"
+      ],
+      "pitfalls": [
+        "向量库不是RAG全部；检索到相关内容不保证回答忠实或内容可信。"
+      ],
+      "source_ids": [
+        "sys-src-rag"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.11401"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2020-05-22",
+      "release_dates": {
+        "paper_first_submitted": "2020-05-22",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "RAG工程实践：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-rag"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "整理合法语料",
+          "分块保留来源",
+          "检索/重排",
+          "将证据与问题一起生成",
+          "检查引用及拒答。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-vectorsearch",
+      "title": "向量检索与ANN",
+      "type": "concept",
+      "category": "retrieval",
+      "description_zh": "用向量距离寻找邻近项；近似近邻以召回率换延迟/内存，精确搜索可作为质量基线。",
+      "summary_zh": "用向量距离寻找邻近项；近似近邻以召回率换延迟/内存，精确搜索可作为质量基线。",
+      "steps_zh": [
+        "固定嵌入版本与距离",
+        "建立精确基线",
+        "调索引参数",
+        "测recall@k及延迟。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "向量维度相同不表示不同嵌入模型能混用；相似度不是事实正确概率。"
+      ],
+      "pitfalls": [
+        "向量维度相同不表示不同嵌入模型能混用；相似度不是事实正确概率。"
+      ],
+      "source_ids": [
+        "sys-src-faiss",
+        "sys-src-pg"
+      ],
+      "source_urls": [
+        "https://github.com/facebookresearch/faiss",
+        "https://github.com/pgvector/pgvector"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "向量检索与ANN：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-faiss",
+          "sys-src-pg"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定嵌入版本与距离",
+          "建立精确基线",
+          "调索引参数",
+          "测recall@k及延迟。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-faiss",
+      "title": "Faiss相似度检索库",
+      "type": "library",
+      "category": "retrieval",
+      "description_zh": "提供稠密向量相似度检索与聚类算法，包含精确及近似索引；不是完整数据库服务。",
+      "summary_zh": "提供稠密向量相似度检索与聚类算法，包含精确及近似索引；不是完整数据库服务。",
+      "steps_zh": [
+        "建立小规模精确索引",
+        "比较压缩/近似索引",
+        "记录召回、内存、构建和查询时间。"
+      ],
+      "prerequisites": [
+        "sys-vectorsearch"
+      ],
+      "misconceptions": [
+        "持久化、权限、事务与服务运维不能仅凭使用Faiss就视为已具备。"
+      ],
+      "pitfalls": [
+        "持久化、权限、事务与服务运维不能仅凭使用Faiss就视为已具备。"
+      ],
+      "source_ids": [
+        "sys-src-faiss"
+      ],
+      "source_urls": [
+        "https://github.com/facebookresearch/faiss"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Faiss相似度检索库：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-faiss"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "建立小规模精确索引",
+          "比较压缩/近似索引",
+          "记录召回、内存、构建和查询时间。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-pgvector",
+      "title": "pgvector",
+      "type": "database_extension",
+      "category": "retrieval",
+      "description_zh": "为PostgreSQL增加向量类型与相似度查询，可选择精确搜索、HNSW或IVFFlat。",
+      "summary_zh": "为PostgreSQL增加向量类型与相似度查询，可选择精确搜索、HNSW或IVFFlat。",
+      "steps_zh": [
+        "先用精确SQL建立基线",
+        "按距离建索引",
+        "结合过滤条件检验召回",
+        "审查租户隔离。"
+      ],
+      "prerequisites": [
+        "sys-vectorsearch"
+      ],
+      "misconceptions": [
+        "ANN后过滤可能返回少于k条；加近似索引可能改变结果而非只加速。"
+      ],
+      "pitfalls": [
+        "ANN后过滤可能返回少于k条；加近似索引可能改变结果而非只加速。"
+      ],
+      "source_ids": [
+        "sys-src-pg"
+      ],
+      "source_urls": [
+        "https://github.com/pgvector/pgvector"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "pgvector：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-pg"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "先用精确SQL建立基线",
+          "按距离建索引",
+          "结合过滤条件检验召回",
+          "审查租户隔离。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-qdrant",
+      "title": "Qdrant",
+      "type": "database",
+      "category": "retrieval",
+      "description_zh": "以collection组织向量与payload的向量数据库；向量维度、距离及过滤设计影响检索。",
+      "summary_zh": "以collection组织向量与payload的向量数据库；向量维度、距离及过滤设计影响检索。",
+      "steps_zh": [
+        "定义collection向量配置",
+        "保留原文ID和权限字段",
+        "写入/查询",
+        "测试过滤、删除及恢复。"
+      ],
+      "prerequisites": [
+        "sys-vectorsearch"
+      ],
+      "misconceptions": [
+        "payload过滤不能代替应用授权；数据库存在不说明嵌入已自动生成。"
+      ],
+      "pitfalls": [
+        "payload过滤不能代替应用授权；数据库存在不说明嵌入已自动生成。"
+      ],
+      "source_ids": [
+        "sys-src-qdrant"
+      ],
+      "source_urls": [
+        "https://qdrant.tech/documentation/manage-data/collections/"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Qdrant：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-qdrant"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "定义collection向量配置",
+          "保留原文ID和权限字段",
+          "写入/查询",
+          "测试过滤、删除及恢复。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-milvus",
+      "title": "Milvus",
+      "type": "database",
+      "category": "retrieval",
+      "description_zh": "面向向量搜索的数据库系统，组织结构化字段及多种向量数据；可部署规模与配置相关。",
+      "summary_zh": "面向向量搜索的数据库系统，组织结构化字段及多种向量数据；可部署规模与配置相关。",
+      "steps_zh": [
+        "设计collection schema",
+        "选择索引和度量",
+        "导入小样本",
+        "测召回与资源",
+        "规划扩容。"
+      ],
+      "prerequisites": [
+        "sys-vectorsearch"
+      ],
+      "misconceptions": [
+        "不能把云服务和开源软件部署方式、成本或许可完全混同。"
+      ],
+      "pitfalls": [
+        "不能把云服务和开源软件部署方式、成本或许可完全混同。"
+      ],
+      "source_ids": [
+        "sys-src-milvus"
+      ],
+      "source_urls": [
+        "https://milvus.io/docs/overview.md"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Milvus：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-milvus"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "设计collection schema",
+          "选择索引和度量",
+          "导入小样本",
+          "测召回与资源",
+          "规划扩容。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-memory",
+      "title": "Agent记忆分层",
+      "type": "concept",
+      "category": "memory",
+      "description_zh": "短期记忆通常为线程状态；长期记忆跨会话保存。记忆是应用数据管理，不必改变模型权重。",
+      "summary_zh": "短期记忆通常为线程状态；长期记忆跨会话保存。记忆是应用数据管理，不必改变模型权重。",
+      "steps_zh": [
+        "定义作用域",
+        "存储事实及来源/时间",
+        "按需检索",
+        "支持修正、遗忘和删除",
+        "验证线程隔离。"
+      ],
+      "prerequisites": [
+        "sys-rag"
+      ],
+      "misconceptions": [
+        "上下文窗口、KV缓存、向量库、用户画像不是同一种记忆。"
+      ],
+      "pitfalls": [
+        "上下文窗口、KV缓存、向量库、用户画像不是同一种记忆。"
+      ],
+      "source_ids": [
+        "sys-src-memory"
+      ],
+      "source_urls": [
+        "https://docs.langchain.com/oss/python/concepts/memory"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Agent记忆分层：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-memory"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "定义作用域",
+          "存储事实及来源/时间",
+          "按需检索",
+          "支持修正、遗忘和删除",
+          "验证线程隔离。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-memgpt",
+      "title": "MemGPT",
+      "type": "system",
+      "category": "memory",
+      "description_zh": "通过层级记忆与数据移动管理有限上下文，借鉴操作系统虚拟内存思想。",
+      "summary_zh": "通过层级记忆与数据移动管理有限上下文，借鉴操作系统虚拟内存思想。",
+      "steps_zh": [
+        "画出上下文内外存储",
+        "记录读写事件",
+        "测试跨会话检索与失效",
+        "测错误记忆传播。"
+      ],
+      "prerequisites": [
+        "sys-memory"
+      ],
+      "misconceptions": [
+        "操作系统类比不是让LLM成为真实内核；外部存储不等于无限可靠回忆。"
+      ],
+      "pitfalls": [
+        "操作系统类比不是让LLM成为真实内核；外部存储不等于无限可靠回忆。"
+      ],
+      "source_ids": [
+        "sys-src-memgpt"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.08560"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2023-10-12",
+      "release_dates": {
+        "paper_first_submitted": "2023-10-12",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "MemGPT：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-memgpt"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "画出上下文内外存储",
+          "记录读写事件",
+          "测试跨会话检索与失效",
+          "测错误记忆传播。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-fineweb",
+      "title": "FineWeb",
+      "type": "dataset",
+      "category": "data",
+      "description_zh": "由网页抓取加工而来的大规模文本语料；需要按数据卡指定版本/子集和处理流程理解规模。",
+      "summary_zh": "由网页抓取加工而来的大规模文本语料；需要按数据卡指定版本/子集和处理流程理解规模。",
+      "steps_zh": [
+        "读数据卡许可",
+        "选子集及快照",
+        "抽样看质量和语言",
+        "做去重/隐私审查",
+        "保留文档来源。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "数据库许可不等于每个原网页内容统一授权；token总量依赖版本与分词器。"
+      ],
+      "pitfalls": [
+        "数据库许可不等于每个原网页内容统一授权；token总量依赖版本与分词器。"
+      ],
+      "source_ids": [
+        "sys-src-fineweb"
+      ],
+      "source_urls": [
+        "https://huggingface.co/datasets/HuggingFaceFW/fineweb"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "FineWeb：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-fineweb"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "读数据卡许可",
+          "选子集及快照",
+          "抽样看质量和语言",
+          "做去重/隐私审查",
+          "保留文档来源。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-dolma",
+      "title": "Dolma",
+      "type": "dataset",
+      "category": "data",
+      "description_zh": "混合网页、代码、论文等来源的预训练语料及相关构建工具；版本不同，组成与统计也不同。",
+      "summary_zh": "混合网页、代码、论文等来源的预训练语料及相关构建工具；版本不同，组成与统计也不同。",
+      "steps_zh": [
+        "固定数据版本",
+        "记录组成比例",
+        "审查原来源约束",
+        "隔离测试集污染",
+        "保存处理日志。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "不能只记总token数而忽略数据版本；数据集许可与组成内容许可应分层。"
+      ],
+      "pitfalls": [
+        "不能只记总token数而忽略数据版本；数据集许可与组成内容许可应分层。"
+      ],
+      "source_ids": [
+        "sys-src-dolma"
+      ],
+      "source_urls": [
+        "https://huggingface.co/datasets/allenai/dolma"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Dolma：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-dolma"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定数据版本",
+          "记录组成比例",
+          "审查原来源约束",
+          "隔离测试集污染",
+          "保存处理日志。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-stack",
+      "title": "The Stack v2",
+      "type": "dataset",
+      "category": "data",
+      "description_zh": "具有来源信息的代码语料集合，包含不同原始许可证；访问条款及批量获取条件需分别核验。",
+      "summary_zh": "具有来源信息的代码语料集合，包含不同原始许可证；访问条款及批量获取条件需分别核验。",
+      "steps_zh": [
+        "读访问条款",
+        "记录原项目许可证与来源",
+        "尊重移除要求",
+        "评测前做代码去重。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "公开数据卡不代表无条件可下载；不能用一个总许可覆盖全部代码。"
+      ],
+      "pitfalls": [
+        "公开数据卡不代表无条件可下载；不能用一个总许可覆盖全部代码。"
+      ],
+      "source_ids": [
+        "sys-src-stack"
+      ],
+      "source_urls": [
+        "https://huggingface.co/datasets/bigcode/the-stack-v2"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "The Stack v2：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-stack"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "读访问条款",
+          "记录原项目许可证与来源",
+          "尊重移除要求",
+          "评测前做代码去重。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-c4",
+      "title": "C4",
+      "type": "dataset",
+      "category": "data",
+      "description_zh": "Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英文、多语言及其它配置。",
+      "summary_zh": "Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英文、多语言及其它配置。",
+      "steps_zh": [
+        "指定configuration和split",
+        "核对清洗策略",
+        "记录来源与快照",
+        "检查领域和语言偏差。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "C4与mC4不是可随意合并比较的单一数据版本；公开文本仍需内容权利审查。"
+      ],
+      "pitfalls": [
+        "C4与mC4不是可随意合并比较的单一数据版本；公开文本仍需内容权利审查。"
+      ],
+      "source_ids": [
+        "sys-src-c4"
+      ],
+      "source_urls": [
+        "https://huggingface.co/datasets/allenai/c4"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "C4：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-c4"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "指定configuration和split",
+          "核对清洗策略",
+          "记录来源与快照",
+          "检查领域和语言偏差。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-mmlu",
+      "title": "MMLU",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "学科多项选择题评测；结果依赖题集版本、few-shot示例、选项评分和聚合方式。",
+      "summary_zh": "学科多项选择题评测；结果依赖题集版本、few-shot示例、选项评分和聚合方式。",
+      "steps_zh": [
+        "固定任务配置",
+        "隔离dev/validation/test",
+        "记录prompt与评分方式",
+        "报告学科及总体指标。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "MMLU不等于所有知识或真实工作能力；MMLU-Pro不能冒充同一个benchmark。"
+      ],
+      "pitfalls": [
+        "MMLU不等于所有知识或真实工作能力；MMLU-Pro不能冒充同一个benchmark。"
+      ],
+      "source_ids": [
+        "sys-src-mmlu",
+        "sys-src-harness"
+      ],
+      "source_urls": [
+        "https://github.com/hendrycks/test",
+        "https://github.com/EleutherAI/lm-evaluation-harness"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "MMLU：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-mmlu",
+          "sys-src-harness"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定任务配置",
+          "隔离dev/validation/test",
+          "记录prompt与评分方式",
+          "报告学科及总体指标。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-gsm8k",
+      "title": "GSM8K",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "面向多步骤小学数学应用题的评测；答案抽取规则和推理采样会显著影响结果。",
+      "summary_zh": "面向多步骤小学数学应用题的评测；答案抽取规则和推理采样会显著影响结果。",
+      "steps_zh": [
+        "固定test split",
+        "声明是否思维链/工具",
+        "保存答案抽取规则",
+        "报告一次采样与多次采样区别。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "不能把多数投票成绩当单次成功率；训练集中见过类似题会影响解释。"
+      ],
+      "pitfalls": [
+        "不能把多数投票成绩当单次成功率；训练集中见过类似题会影响解释。"
+      ],
+      "source_ids": [
+        "sys-src-gsm"
+      ],
+      "source_urls": [
+        "https://github.com/openai/grade-school-math"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "GSM8K：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-gsm"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定test split",
+          "声明是否思维链/工具",
+          "保存答案抽取规则",
+          "报告一次采样与多次采样区别。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-humaneval",
+      "title": "HumanEval",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "通过执行测试验证代码补全的功能正确性；常用pass@k，对采样数量有要求。",
+      "summary_zh": "通过执行测试验证代码补全的功能正确性；常用pass@k，对采样数量有要求。",
+      "steps_zh": [
+        "固定题集/语言",
+        "隔离沙箱运行",
+        "记录n、k和温度",
+        "保留超时及失败分类。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "通过有限测试不等于代码完全正确；不能在有敏感文件或凭据的主机直接执行生成代码。"
+      ],
+      "pitfalls": [
+        "通过有限测试不等于代码完全正确；不能在有敏感文件或凭据的主机直接执行生成代码。"
+      ],
+      "source_ids": [
+        "sys-src-human"
+      ],
+      "source_urls": [
+        "https://github.com/openai/human-eval"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "HumanEval：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-human"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定题集/语言",
+          "隔离沙箱运行",
+          "记录n、k和温度",
+          "保留超时及失败分类。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-swebench",
+      "title": "SWE-bench家族",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "以真实仓库问题和测试检验补丁；Full、Lite、Verified、Multilingual和Multimodal范围不同。",
+      "summary_zh": "以真实仓库问题和测试检验补丁；Full、Lite、Verified、Multilingual和Multimodal范围不同。",
+      "steps_zh": [
+        "固定子集和harness",
+        "锁定仓库/容器",
+        "记录agent、模型、预算和重试",
+        "报告resolved比例。"
+      ],
+      "prerequisites": [
+        "sys-humaneval"
+      ],
+      "misconceptions": [
+        "模型+工具+脚手架的整体分数不能归功为裸模型能力；不同子集不能直接排同榜。"
+      ],
+      "pitfalls": [
+        "模型+工具+脚手架的整体分数不能归功为裸模型能力；不同子集不能直接排同榜。"
+      ],
+      "source_ids": [
+        "sys-src-swe"
+      ],
+      "source_urls": [
+        "https://www.swebench.com/"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "SWE-bench家族：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-swe"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定子集和harness",
+          "锁定仓库/容器",
+          "记录agent、模型、预算和重试",
+          "报告resolved比例。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-livecodebench",
+      "title": "LiveCodeBench",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "滚动收集竞赛编程题并按时间切片，帮助降低旧题污染影响；包含多种代码相关任务。",
+      "summary_zh": "滚动收集竞赛编程题并按时间切片，帮助降低旧题污染影响；包含多种代码相关任务。",
+      "steps_zh": [
+        "固定release和题目日期范围",
+        "声明模型截止信息",
+        "保留prompt和采样",
+        "分场景报告。"
+      ],
+      "prerequisites": [
+        "sys-humaneval"
+      ],
+      "misconceptions": [
+        "论文标题中的contamination-free不是永远零污染保证；上线后题目也可能被训练使用。"
+      ],
+      "pitfalls": [
+        "论文标题中的contamination-free不是永远零污染保证；上线后题目也可能被训练使用。"
+      ],
+      "source_ids": [
+        "sys-src-live",
+        "sys-src-livepaper"
+      ],
+      "source_urls": [
+        "https://github.com/LiveCodeBench/LiveCodeBench",
+        "https://arxiv.org/abs/2403.07974"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": "2024-03-12",
+      "release_dates": {
+        "paper_first_submitted": "2024-03-12",
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "LiveCodeBench：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-live",
+          "sys-src-livepaper"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定release和题目日期范围",
+          "声明模型截止信息",
+          "保留prompt和采样",
+          "分场景报告。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-gpqa",
+      "title": "GPQA",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "研究生层次问答评测；主集与Diamond等子集、选项顺序和是否可检索应明确标注。",
+      "summary_zh": "研究生层次问答评测；主集与Diamond等子集、选项顺序和是否可检索应明确标注。",
+      "steps_zh": [
+        "从官方入口获取",
+        "尊重防污染提示",
+        "固定子集与随机种子",
+        "分开closed-book/open-book结果。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "Google-proof是评测设计描述，不是对所有搜索或未来模型的绝对保证。"
+      ],
+      "pitfalls": [
+        "Google-proof是评测设计描述，不是对所有搜索或未来模型的绝对保证。"
+      ],
+      "source_ids": [
+        "sys-src-gpqa"
+      ],
+      "source_urls": [
+        "https://github.com/idavidrein/gpqa"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "GPQA：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-gpqa"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "从官方入口获取",
+          "尊重防污染提示",
+          "固定子集与随机种子",
+          "分开closed-book/open-book结果。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-frontiermath",
+      "title": "FrontierMath Tiers 1–4",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "官方描述的未公开高难数学题评测；与公开研究问题分支不是同一题库。",
+      "summary_zh": "官方描述的未公开高难数学题评测；与公开研究问题分支不是同一题库。",
+      "steps_zh": [
+        "阅读公开方法和结果",
+        "向运营方询问合法评测入口",
+        "记录tier/工具/预算",
+        "不传播未授权题目。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "不能因公开了样例或成绩就称完整题集开源；无法独立取得全部题目时明确复现限制。"
+      ],
+      "pitfalls": [
+        "不能因公开了样例或成绩就称完整题集开源；无法独立取得全部题目时明确复现限制。"
+      ],
+      "source_ids": [
+        "sys-src-frontier"
+      ],
+      "source_urls": [
+        "https://epoch.ai/frontiermath"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "FrontierMath Tiers 1–4：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-frontier"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "阅读公开方法和结果",
+          "向运营方询问合法评测入口",
+          "记录tier/工具/预算",
+          "不传播未授权题目。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-harness",
+      "title": "LM Evaluation Harness",
+      "type": "framework",
+      "category": "evaluation",
+      "description_zh": "统一组织多任务语言模型评测的框架；任务配置、模型接口和版本共同决定评分口径。",
+      "summary_zh": "统一组织多任务语言模型评测的框架；任务配置、模型接口和版本共同决定评分口径。",
+      "steps_zh": [
+        "固定commit和任务YAML",
+        "锁定数据版本",
+        "保存完整配置",
+        "对少量样本检查prompt及答案映射。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "工具统一不意味着不同配置的结果可比；新版任务定义可能改变旧分数。"
+      ],
+      "pitfalls": [
+        "工具统一不意味着不同配置的结果可比；新版任务定义可能改变旧分数。"
+      ],
+      "source_ids": [
+        "sys-src-harness"
+      ],
+      "source_urls": [
+        "https://github.com/EleutherAI/lm-evaluation-harness"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "LM Evaluation Harness：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-harness"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "固定commit和任务YAML",
+          "锁定数据版本",
+          "保存完整配置",
+          "对少量样本检查prompt及答案映射。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-contamination",
+      "title": "评测污染与可复现性",
+      "type": "practice",
+      "category": "evaluation",
+      "description_zh": "训练/调优数据与测试数据重合会削弱泛化结论；需要区分显式泄漏、近重复和题型学习。",
+      "summary_zh": "训练/调优数据与测试数据重合会削弱泛化结论；需要区分显式泄漏、近重复和题型学习。",
+      "steps_zh": [
+        "记录数据截止日期",
+        "做精确/近重复审查",
+        "隔离开发与测试",
+        "保留评测代码和预算",
+        "披露未知项。"
+      ],
+      "prerequisites": [
+        "sys-livecodebench",
+        "sys-harness"
+      ],
+      "misconceptions": [
+        "未检出污染不是证明没有污染；私有测试也不自动保证公平与可复现。"
+      ],
+      "pitfalls": [
+        "未检出污染不是证明没有污染；私有测试也不自动保证公平与可复现。"
+      ],
+      "source_ids": [
+        "sys-src-livepaper",
+        "sys-src-harness"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2403.07974",
+        "https://github.com/EleutherAI/lm-evaluation-harness"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "评测污染与可复现性：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-livepaper",
+          "sys-src-harness"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "记录数据截止日期",
+          "做精确/近重复审查",
+          "隔离开发与测试",
+          "保留评测代码和预算",
+          "披露未知项。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-mcp",
+      "title": "Model Context Protocol",
+      "type": "protocol",
+      "category": "agent_tools",
+      "description_zh": "在host、client和server间连接工具、资源与提示的开放协议；本节点固定2025-06-18规范。",
+      "summary_zh": "在host、client和server间连接工具、资源与提示的开放协议；本节点固定2025-06-18规范。",
+      "steps_zh": [
+        "区分三种角色",
+        "协商能力",
+        "验证输入输出schema",
+        "按权限调用",
+        "记录审计并处理不可信工具内容。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "协议兼容不等于工具安全或模型更聪明；MCP本身不是权重、记忆数据库或训练方法。"
+      ],
+      "pitfalls": [
+        "协议兼容不等于工具安全或模型更聪明；MCP本身不是权重、记忆数据库或训练方法。"
+      ],
+      "source_ids": [
+        "sys-src-mcp",
+        "sys-src-mcpnews"
+      ],
+      "source_urls": [
+        "https://modelcontextprotocol.io/specification/2025-06-18",
+        "https://www.anthropic.com/news/model-context-protocol"
+      ],
+      "version": "MCP specification 2025-06-18 (historical pinned version; not claimed latest)",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": "2024-11-25",
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Model Context Protocol：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "historical_pinned_specification",
+        "as_of": "2026-10-28",
+        "applicable_version": "MCP specification 2025-06-18 (historical pinned version; not claimed latest)",
+        "replacement_node_ids": [],
+        "note_zh": "为保证可复查固定2025-06-18规范；不声称其为当前最新版本；替代版本本轮未核验。",
+        "source_ids": [
+          "sys-src-mcp",
+          "sys-src-mcpnews"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "区分三种角色",
+          "协商能力",
+          "验证输入输出schema",
+          "按权限调用",
+          "记录审计并处理不可信工具内容。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-skills",
+      "title": "Agent Skills",
+      "type": "instruction_package",
+      "category": "agent_tools",
+      "description_zh": "以SKILL.md元数据与正文组织的可发现指令包，可附脚本、参考资料和资源；加载与执行由宿主决定。",
+      "summary_zh": "以SKILL.md元数据与正文组织的可发现指令包，可附脚本、参考资料和资源；加载与执行由宿主决定。",
+      "steps_zh": [
+        "写明确触发描述",
+        "提供步骤/失败边界",
+        "逐步加载参考资料",
+        "审查脚本权限",
+        "用任务测试触发与结果。"
+      ],
+      "prerequisites": [],
+      "misconceptions": [
+        "skill不是参数微调；allowed-tools字段不是绕过宿主授权；文档可能携带不可信指令。"
+      ],
+      "pitfalls": [
+        "skill不是参数微调；allowed-tools字段不是绕过宿主授权；文档可能携带不可信指令。"
+      ],
+      "source_ids": [
+        "sys-src-skills"
+      ],
+      "source_urls": [
+        "https://agentskills.io/specification"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "Agent Skills：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-skills"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "写明确触发描述",
+          "提供步骤/失败边界",
+          "逐步加载参考资料",
+          "审查脚本权限",
+          "用任务测试触发与结果。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-sweagent",
+      "title": "SWE-agent",
+      "type": "agent_framework",
+      "category": "coding_agents",
+      "description_zh": "将模型与软件工程环境及操作循环结合以修复问题的研究项目；官方现提示转向mini-SWE-agent。",
+      "summary_zh": "将模型与软件工程环境及操作循环结合以修复问题的研究项目；官方现提示转向mini-SWE-agent。",
+      "steps_zh": [
+        "读历史设计",
+        "固定环境与仓库",
+        "观察读文件/编辑/测试循环",
+        "保存补丁和轨迹",
+        "人工审阅。"
+      ],
+      "prerequisites": [
+        "sys-swebench"
+      ],
+      "misconceptions": [
+        "框架名字不是特定模型；历史SOTA和当前推荐不能混为一谈。"
+      ],
+      "pitfalls": [
+        "框架名字不是特定模型；历史SOTA和当前推荐不能混为一谈。"
+      ],
+      "source_ids": [
+        "sys-src-sweagent"
+      ],
+      "source_urls": [
+        "https://github.com/SWE-agent/SWE-agent"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "SWE-agent：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "superseded_per_maintainer",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [
+          "sys-miniagent"
+        ],
+        "note_zh": "官方README明确推荐今后采用mini-SWE-agent；保留SWE-agent用于历史设计学习。",
+        "source_ids": [
+          "sys-src-sweagent"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "读历史设计",
+          "固定环境与仓库",
+          "观察读文件/编辑/测试循环",
+          "保存补丁和轨迹",
+          "人工审阅。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-miniagent",
+      "title": "mini-SWE-agent",
+      "type": "agent_framework",
+      "category": "coding_agents",
+      "description_zh": "以简洁实现组织模型、执行环境和循环；当前仓库提示v2，历史v1需单独查看。",
+      "summary_zh": "以简洁实现组织模型、执行环境和循环；当前仓库提示v2，历史v1需单独查看。",
+      "steps_zh": [
+        "阅读agent/model/environment分层",
+        "选择隔离环境",
+        "限制预算",
+        "记录每次动作",
+        "测试并检查diff。"
+      ],
+      "prerequisites": [
+        "sys-swebench"
+      ],
+      "misconceptions": [
+        "短代码不代表低风险；不同模型后端与工具预算仍会改变结果。"
+      ],
+      "pitfalls": [
+        "短代码不代表低风险；不同模型后端与工具预算仍会改变结果。"
+      ],
+      "source_ids": [
+        "sys-src-mini"
+      ],
+      "source_urls": [
+        "https://github.com/SWE-agent/mini-swe-agent"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "mini-SWE-agent：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "当前所读README标记v2；v1另分支，未锁定commit",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-mini"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "阅读agent/model/environment分层",
+          "选择隔离环境",
+          "限制预算",
+          "记录每次动作",
+          "测试并检查diff。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-openhands",
+      "title": "OpenHands",
+      "type": "agent_framework",
+      "category": "coding_agents",
+      "description_zh": "面向软件开发的agent项目；执行环境与宿主挂载路径决定能读取和修改哪些资源。",
+      "summary_zh": "面向软件开发的agent项目；执行环境与宿主挂载路径决定能读取和修改哪些资源。",
+      "steps_zh": [
+        "检查版本与部署模式",
+        "仅挂载授权项目",
+        "使用隔离环境",
+        "保存轨迹/补丁",
+        "测试后请求合并。"
+      ],
+      "prerequisites": [
+        "sys-swebench"
+      ],
+      "misconceptions": [
+        "无沙箱模式可能获得宿主文件系统访问；容器也不自动隔离全部网络和挂载目录。"
+      ],
+      "pitfalls": [
+        "无沙箱模式可能获得宿主文件系统访问；容器也不自动隔离全部网络和挂载目录。"
+      ],
+      "source_ids": [
+        "sys-src-openhands"
+      ],
+      "source_urls": [
+        "https://github.com/OpenHands/OpenHands"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "OpenHands：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "current_documentation_reviewed",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-openhands"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "检查版本与部署模式",
+          "仅挂载授权项目",
+          "使用隔离环境",
+          "保存轨迹/补丁",
+          "测试后请求合并。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-promptcontracts",
+      "title": "提示词与任务契约",
+      "type": "practice",
+      "category": "agent_tools",
+      "description_zh": "把任务目标、输入、输出、限制、证据要求和完成标准写清；是应用层工程而非模型新增能力。",
+      "summary_zh": "把任务目标、输入、输出、限制、证据要求和完成标准写清；是应用层工程而非模型新增能力。",
+      "steps_zh": [
+        "明确产物",
+        "给定可信上下文与输出schema",
+        "列明工具边界",
+        "提供可判定验收",
+        "用反例测试。"
+      ],
+      "prerequisites": [
+        "sys-skills",
+        "sys-mcp"
+      ],
+      "misconceptions": [
+        "长提示不必然更好；检索文档中的指令不能替代用户授权。"
+      ],
+      "pitfalls": [
+        "长提示不必然更好；检索文档中的指令不能替代用户授权。"
+      ],
+      "source_ids": [
+        "sys-src-skills",
+        "sys-src-mcp"
+      ],
+      "source_urls": [
+        "https://agentskills.io/specification",
+        "https://modelcontextprotocol.io/specification/2025-06-18"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "提示词与任务契约：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-skills",
+          "sys-src-mcp"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "明确产物",
+          "给定可信上下文与输出schema",
+          "列明工具边界",
+          "提供可判定验收",
+          "用反例测试。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    },
+    {
+      "id": "sys-modelpath",
+      "title": "不同模型的部署学习路径",
+      "type": "learning_path",
+      "category": "deployment",
+      "description_zh": "模型家族教程应落到具体模型ID、revision、许可证、分词器/聊天模板及运行时支持；避免一条命令套全部模型。",
+      "summary_zh": "模型家族教程应落到具体模型ID、revision、许可证、分词器/聊天模板及运行时支持；避免一条命令套全部模型。",
+      "steps_zh": [
+        "先查模型卡",
+        "选择vLLM/llama.cpp/MLX适配路线",
+        "记录精度和上下文",
+        "小规模验收",
+        "同口径对比。"
+      ],
+      "prerequisites": [
+        "sys-vllm",
+        "sys-llamacpp",
+        "sys-mlx"
+      ],
+      "misconceptions": [
+        "API协议兼容不代表所有模型支持相同工具调用或多模态；本研究未实测任何设备。"
+      ],
+      "pitfalls": [
+        "API协议兼容不代表所有模型支持相同工具调用或多模态；本研究未实测任何设备。"
+      ],
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-llama",
+        "sys-src-mlx"
+      ],
+      "source_urls": [
+        "https://docs.vllm.ai/en/stable/features/quantization/index.html",
+        "https://github.com/ggml-org/llama.cpp",
+        "https://github.com/ml-explore/mlx-lm"
+      ],
+      "version": "研究快照 2026-10-28；实际运行需固定revision",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "publication_date": null,
+      "release_dates": {
+        "paper_first_submitted": null,
+        "technical_report": null,
+        "announced": null,
+        "repo_opened": null,
+        "weights_released": null,
+        "api_launched": null
+      },
+      "tutorial_status": "原创学习步骤，未执行",
+      "illustration": {
+        "status": "original_diagram_spec",
+        "caption_zh": "不同模型的部署学习路径：输入—处理—验证",
+        "reuse_external_assets": false
+      },
+      "lifecycle": {
+        "status": "reference_concept_or_dataset",
+        "as_of": "2026-10-28",
+        "applicable_version": "研究快照 2026-10-28；实际运行需固定revision",
+        "replacement_node_ids": [],
+        "note_zh": "收录不等于推荐生产采用；运行兼容性需按固定版本重新核验。",
+        "source_ids": [
+          "sys-src-vllm",
+          "sys-src-llama",
+          "sys-src-mlx"
+        ]
+      },
+      "best_practice_path": {
+        "steps": [
+          "先查模型卡",
+          "选择vLLM/llama.cpp/MLX适配路线",
+          "记录精度和上下文",
+          "小规模验收",
+          "同口径对比。"
+        ],
+        "acceptance_zh": "固定来源与版本，记录输入/配置/输出，先在授权隔离小样本中验收，保留失败与限制。",
+        "status": "editorial_guidance_not_executed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "sys-pagedattention",
+      "target": "sys-vllm",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-paged"
+      ]
+    },
+    {
+      "source": "sys-gguf",
+      "target": "sys-llamacpp",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-llama",
+        "sys-src-gguf"
+      ]
+    },
+    {
+      "source": "sys-vectorsearch",
+      "target": "sys-faiss",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-faiss"
+      ]
+    },
+    {
+      "source": "sys-vectorsearch",
+      "target": "sys-pgvector",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-pg"
+      ]
+    },
+    {
+      "source": "sys-vectorsearch",
+      "target": "sys-qdrant",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-qdrant"
+      ]
+    },
+    {
+      "source": "sys-vectorsearch",
+      "target": "sys-milvus",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-milvus"
+      ]
+    },
+    {
+      "source": "sys-rag",
+      "target": "sys-memory",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-memory"
+      ]
+    },
+    {
+      "source": "sys-memory",
+      "target": "sys-memgpt",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-memgpt"
+      ]
+    },
+    {
+      "source": "sys-humaneval",
+      "target": "sys-swebench",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-swe"
+      ]
+    },
+    {
+      "source": "sys-humaneval",
+      "target": "sys-livecodebench",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-live",
+        "sys-src-livepaper"
+      ]
+    },
+    {
+      "source": "sys-livecodebench",
+      "target": "sys-contamination",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-livepaper",
+        "sys-src-harness"
+      ]
+    },
+    {
+      "source": "sys-harness",
+      "target": "sys-contamination",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-livepaper",
+        "sys-src-harness"
+      ]
+    },
+    {
+      "source": "sys-swebench",
+      "target": "sys-sweagent",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-sweagent"
+      ]
+    },
+    {
+      "source": "sys-swebench",
+      "target": "sys-miniagent",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-mini"
+      ]
+    },
+    {
+      "source": "sys-swebench",
+      "target": "sys-openhands",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-openhands"
+      ]
+    },
+    {
+      "source": "sys-skills",
+      "target": "sys-promptcontracts",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-skills",
+        "sys-src-mcp"
+      ]
+    },
+    {
+      "source": "sys-mcp",
+      "target": "sys-promptcontracts",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-skills",
+        "sys-src-mcp"
+      ]
+    },
+    {
+      "source": "sys-vllm",
+      "target": "sys-modelpath",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-llama",
+        "sys-src-mlx"
+      ]
+    },
+    {
+      "source": "sys-llamacpp",
+      "target": "sys-modelpath",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-llama",
+        "sys-src-mlx"
+      ]
+    },
+    {
+      "source": "sys-mlx",
+      "target": "sys-modelpath",
+      "type": "prerequisite_for",
+      "evidence_type": "editorial_learning_order",
+      "source_ids": [
+        "sys-src-vllm",
+        "sys-src-llama",
+        "sys-src-mlx"
+      ]
+    },
+    {
+      "source": "sys-llamacpp",
+      "target": "sys-gguf",
+      "type": "loads_format",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-llama"
+      ]
+    },
+    {
+      "source": "sys-vllm",
+      "target": "sys-pagedattention",
+      "type": "implements",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-paged"
+      ]
+    },
+    {
+      "source": "sys-vllm",
+      "target": "sys-awq",
+      "type": "supports_method_conditionally",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-vllm"
+      ]
+    },
+    {
+      "source": "sys-vllm",
+      "target": "sys-gptq",
+      "type": "supports_method_conditionally",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-vllm"
+      ]
+    },
+    {
+      "source": "sys-sweagent",
+      "target": "sys-swebench",
+      "type": "evaluated_on",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-swe"
+      ]
+    },
+    {
+      "source": "sys-miniagent",
+      "target": "sys-swebench",
+      "type": "evaluated_on",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-swe"
+      ]
+    },
+    {
+      "source": "sys-skills",
+      "target": "sys-mcp",
+      "type": "complementary_not_equivalent",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-skills"
+      ]
+    },
+    {
+      "source": "sys-memory",
+      "target": "sys-pagedattention",
+      "type": "distinct_from",
+      "evidence_type": "source_supported_or_explicit_distinction",
+      "source_ids": [
+        "sys-src-memory"
+      ]
+    },
+    {
+      "source": "rag",
+      "target": "sys-rag",
+      "type": "extends",
+      "evidence_type": "editorial_cross_module",
+      "source_ids": [
+        "sys-src-rag"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "sys-src-vllm",
+      "title": "vLLM量化支持",
+      "url": "https://docs.vllm.ai/en/stable/features/quantization/index.html",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-paged",
+      "title": "PagedAttention论文",
+      "url": "https://arxiv.org/abs/2309.06180",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-llama",
+      "title": "llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-mlx",
+      "title": "MLX LM",
+      "url": "https://github.com/ml-explore/mlx-lm",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-gptq",
+      "title": "GPTQ论文",
+      "url": "https://arxiv.org/abs/2210.17323",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-awq",
+      "title": "AWQ论文",
+      "url": "https://arxiv.org/abs/2306.00978",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-qlora",
+      "title": "QLoRA论文",
+      "url": "https://arxiv.org/abs/2305.14314",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-gguf",
+      "title": "GGUF规范",
+      "url": "https://github.com/ggml-org/ggml/blob/master/docs/gguf.md",
+      "kind": "specification",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-safe",
+      "title": "Safetensors文档",
+      "url": "https://huggingface.co/docs/safetensors/index",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-rag",
+      "title": "RAG论文",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-faiss",
+      "title": "Faiss",
+      "url": "https://github.com/facebookresearch/faiss",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-pg",
+      "title": "pgvector",
+      "url": "https://github.com/pgvector/pgvector",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-qdrant",
+      "title": "Qdrant Collections",
+      "url": "https://qdrant.tech/documentation/manage-data/collections/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-milvus",
+      "title": "Milvus概览",
+      "url": "https://milvus.io/docs/overview.md",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-memgpt",
+      "title": "MemGPT论文",
+      "url": "https://arxiv.org/abs/2310.08560",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-memory",
+      "title": "LangGraph记忆概念",
+      "url": "https://docs.langchain.com/oss/python/concepts/memory",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-fineweb",
+      "title": "FineWeb数据卡",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb",
+      "kind": "dataset_card",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-dolma",
+      "title": "Dolma数据卡",
+      "url": "https://huggingface.co/datasets/allenai/dolma",
+      "kind": "dataset_card",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-stack",
+      "title": "The Stack v2数据卡",
+      "url": "https://huggingface.co/datasets/bigcode/the-stack-v2",
+      "kind": "dataset_card",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-c4",
+      "title": "C4数据卡（Ai2托管）",
+      "url": "https://huggingface.co/datasets/allenai/c4",
+      "kind": "dataset_card",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-mmlu",
+      "title": "MMLU作者仓库",
+      "url": "https://github.com/hendrycks/test",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-gsm",
+      "title": "GSM8K作者仓库",
+      "url": "https://github.com/openai/grade-school-math",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-human",
+      "title": "HumanEval作者仓库",
+      "url": "https://github.com/openai/human-eval",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-swe",
+      "title": "SWE-bench官方",
+      "url": "https://www.swebench.com/",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-mcp",
+      "title": "MCP 2025-06-18规范",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18",
+      "kind": "specification",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-mcpnews",
+      "title": "MCP公开公告",
+      "url": "https://www.anthropic.com/news/model-context-protocol",
+      "kind": "official_announcement",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-skills",
+      "title": "Agent Skills规范",
+      "url": "https://agentskills.io/specification",
+      "kind": "specification",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-sweagent",
+      "title": "SWE-agent",
+      "url": "https://github.com/SWE-agent/SWE-agent",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-openhands",
+      "title": "OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-harness",
+      "title": "lm-evaluation-harness",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-live",
+      "title": "LiveCodeBench",
+      "url": "https://github.com/LiveCodeBench/LiveCodeBench",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-livepaper",
+      "title": "LiveCodeBench论文",
+      "url": "https://arxiv.org/abs/2403.07974",
+      "kind": "paper",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-frontier",
+      "title": "FrontierMath官方项目",
+      "url": "https://epoch.ai/frontiermath",
+      "kind": "official_docs",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-gpqa",
+      "title": "GPQA作者仓库",
+      "url": "https://github.com/idavidrein/gpqa",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "sys-src-mini",
+      "title": "mini-SWE-agent",
+      "url": "https://github.com/SWE-agent/mini-swe-agent",
+      "kind": "official_repo",
+      "primary": true,
+      "checked_at": "2026-10-28",
+      "verification_status": "web_open_verified",
+      "version": "网页快照；非固定提交",
+      "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    }
+  ],
+  "events": [
+    {
+      "id": "sys-event-pagedattention-paper-v1",
+      "node_id": "sys-pagedattention",
+      "event_type": "paper_first_submitted",
+      "date": "2023-09-12",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-paged"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-gptq-paper-v1",
+      "node_id": "sys-gptq",
+      "event_type": "paper_first_submitted",
+      "date": "2022-10-31",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-gptq"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-awq-paper-v1",
+      "node_id": "sys-awq",
+      "event_type": "paper_first_submitted",
+      "date": "2023-06-01",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-awq"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-qlora-paper-v1",
+      "node_id": "sys-qlora",
+      "event_type": "paper_first_submitted",
+      "date": "2023-05-23",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-qlora"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-rag-paper-v1",
+      "node_id": "sys-rag",
+      "event_type": "paper_first_submitted",
+      "date": "2020-05-22",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-rag"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-memgpt-paper-v1",
+      "node_id": "sys-memgpt",
+      "event_type": "paper_first_submitted",
+      "date": "2023-10-12",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-memgpt"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-livecodebench-paper-v1",
+      "node_id": "sys-livecodebench",
+      "event_type": "paper_first_submitted",
+      "date": "2024-03-12",
+      "date_precision": "day",
+      "evidence": "arXiv Submission history v1",
+      "source_ids": [
+        "sys-src-livepaper"
+      ],
+      "checked_at": "2026-10-28"
+    },
+    {
+      "id": "sys-event-mcp-announced",
+      "node_id": "sys-mcp",
+      "event_type": "announced",
+      "date": "2024-11-25",
+      "date_precision": "day",
+      "evidence": "Official announcement Published Nov 25, 2024; describes open-sourcing protocol",
+      "source_ids": [
+        "sys-src-mcpnews"
+      ],
+      "checked_at": "2026-10-28"
+    }
+  ],
+  "dataset_benchmark_registry": [
+    {
+      "node_id": "sys-fineweb",
+      "availability": "public_download",
+      "license": "ODC-BY metadata; underlying page rights require separate review",
+      "split": "版本/子集，train",
+      "access_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "训练语料，不设统一能力分数",
+      "protocol": "记录抓取快照、过滤、去重、分词器",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-fineweb"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb"
+      }
+    },
+    {
+      "node_id": "sys-dolma",
+      "availability": "public_download",
+      "license": "ODC-BY metadata; mixed-source terms apply",
+      "split": "v1.6/v1.7等版本须固定",
+      "access_url": "https://huggingface.co/datasets/allenai/dolma",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "训练语料，不设统一能力分数",
+      "protocol": "记录混合比例与数据处理版本",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-dolma"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://huggingface.co/datasets/allenai/dolma"
+      }
+    },
+    {
+      "node_id": "sys-stack",
+      "availability": "gated",
+      "license": "varied original code licenses + dataset access conditions",
+      "split": "版本/语言/许可证子集",
+      "access_url": "https://huggingface.co/datasets/bigcode/the-stack-v2",
+      "access_application_url": "https://huggingface.co/datasets/bigcode/the-stack-v2",
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "训练语料，不设统一能力分数",
+      "protocol": "批量访问需遵循Software Heritage条件；逐文件保留来源",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-stack"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://huggingface.co/datasets/bigcode/the-stack-v2"
+      }
+    },
+    {
+      "node_id": "sys-c4",
+      "availability": "public_download",
+      "license": "ODC-BY dataset-card metadata; underlying content review required",
+      "split": "configuration + train/validation",
+      "access_url": "https://huggingface.co/datasets/allenai/c4",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "训练语料；验证loss须声明模型/分词器",
+      "protocol": "不能将不同配置的token数直接混合",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-c4"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://huggingface.co/datasets/allenai/c4"
+      }
+    },
+    {
+      "node_id": "sys-mmlu",
+      "availability": "public_download",
+      "license": "未在本轮逐文件核验，禁止推定统一授权",
+      "split": "dev/validation/test；学科分组",
+      "access_url": "https://github.com/hendrycks/test",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "accuracy；须声明聚合",
+      "protocol": "few-shot数、选项logprob或生成答案、模板、截断",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-mmlu",
+        "sys-src-harness"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://github.com/hendrycks/test"
+      }
+    },
+    {
+      "node_id": "sys-gsm8k",
+      "availability": "public_download",
+      "license": "仓库许可需在再分发前逐文件复核",
+      "split": "train/test",
+      "access_url": "https://github.com/openai/grade-school-math",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "最终答案正确率",
+      "protocol": "答案提取、CoT、工具、采样/投票次数",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-gsm"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://github.com/openai/grade-school-math"
+      }
+    },
+    {
+      "node_id": "sys-humaneval",
+      "availability": "public_download",
+      "license": "仓库许可需在再分发前逐文件复核",
+      "split": "HumanEval问题集；固定版本",
+      "access_url": "https://github.com/openai/human-eval",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "pass@k",
+      "protocol": "n≥k；温度、超时、测试环境、沙箱",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-human"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://github.com/openai/human-eval"
+      }
+    },
+    {
+      "node_id": "sys-swebench",
+      "availability": "public_download",
+      "license": "数据与原仓库代码分层许可；再分发前复核",
+      "split": "Full/Lite/Verified/Multilingual/Multimodal",
+      "access_url": "https://www.swebench.com/",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "% Resolved",
+      "protocol": "模型、agent、harness、测试容器、预算、重试",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-swe"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://www.swebench.com/"
+      }
+    },
+    {
+      "node_id": "sys-livecodebench",
+      "availability": "public_download",
+      "license": "代码与竞赛题来源权利分层；本轮未做完整许可审计",
+      "split": "release + 日期窗口 + scenario",
+      "access_url": "https://github.com/LiveCodeBench/LiveCodeBench",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "按场景pass@k/正确率",
+      "protocol": "题目发布日期、模型截止、prompt、采样",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-live",
+        "sys-src-livepaper"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://github.com/LiveCodeBench/LiveCodeBench"
+      }
+    },
+    {
+      "node_id": "sys-gpqa",
+      "availability": "public_download",
+      "license": "官方仓库显示MIT；内容再分发仍需复核适用范围",
+      "split": "main/diamond等必须指明",
+      "access_url": "https://github.com/idavidrein/gpqa",
+      "access_application_url": null,
+      "access_application_note": "以数据卡当日访问条款为准",
+      "metric": "多项选择accuracy",
+      "protocol": "选项shuffle种子、few-shot、CoT、open/closed-book",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "本轮只审阅来源，未下载数据或执行评测；运行时须锁定revision、prompt、seed及环境。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-gpqa"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://github.com/idavidrein/gpqa"
+      }
+    },
+    {
+      "node_id": "sys-frontiermath",
+      "availability": "private_described",
+      "license": "未授权公开完整题库；仅公开metadata",
+      "split": "仅本节点Tiers 1–4；不混同Open Problems",
+      "access_url": "https://epoch.ai/frontiermath",
+      "access_application_url": "https://epoch.ai/frontiermath",
+      "access_application_note": "公开项目页入口，不声称已提供自助申请或已获准",
+      "metric": "正确解决比例；需运营方口径",
+      "protocol": "tier、工具、推理预算、判分与独立验证情况",
+      "contamination": "须报告训练数据截止与重合检查；公开题目可能被训练使用；未检出不等于零污染。",
+      "reproducibility": "无法独立获得完整题库；只登记公开描述，不获取秘密题或答案。",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "sys-src-frontier"
+      ],
+      "display_policy": "只展示公开介绍、口径、来源及跳转链接；不镜像试题、答案、受限集或整套语料。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "本轮未固化模型版本/配置一致的成绩快照，避免误导排名；跳转官方结果入口。",
+        "official_results_url": "https://epoch.ai/frontiermath"
+      }
+    }
+  ],
+  "timeline_policy_zh": "论文首次提交、技术报告、公告、仓库开放、权重开放、API上线分别登记；无明确证据为null，禁止从仓库当前公开状态倒推日期。",
+  "license_policy_zh": "数据卡许可、原始内容许可、代码许可、模型许可分别审查；可访问不等于无限制使用。不镜像秘密评测题、答案或受限语料。",
+  "coverage_gaps": [
+    "未覆盖全部公开/私有/内部benchmark；无法证明全球穷尽。",
+    "未核验全部数据集文件级许可证、修订历史及去重清单。",
+    "动态仓库多数未锁定commit；版本字段明确快照，不代表最新已实测版。",
+    "MCP使用明确历史规范2025-06-18，未宣称2026-10-28最新协议版本。",
+    "尚未覆盖SGLang、TensorRT-LLM、ONNX Runtime、OpenVINO及所有硬件内核。",
+    "尚未系统收录多模态/语音/机器人、安全与医学等专用评测。",
+    "模型家族逐版本教程需与模型登记表继续关联；本轮只有运行时路线，不捏造具体模型支持。",
+    "JEV未定义，未重复研究或臆测展开。",
+    "尚未导入可比的模型成绩快照；结果展示目前为官方结果入口，非伪造空白分数为零。"
+  ],
+  "tutorial_paths": [
+    {
+      "id": "sys-path-local",
+      "title": "从模型卡到本地推理验收",
+      "nodes": [
+        "sys-modelpath",
+        "sys-gguf",
+        "sys-llamacpp",
+        "sys-mlx"
+      ],
+      "acceptance": "记录精确模型revision、格式、模板、质量样例、延迟与硬件；不要混报运行时结果。"
+    },
+    {
+      "id": "sys-path-rag",
+      "title": "从语料到可追溯RAG",
+      "nodes": [
+        "sys-fineweb",
+        "sys-vectorsearch",
+        "sys-pgvector",
+        "sys-rag",
+        "sys-memory"
+      ],
+      "acceptance": "以自有/获授权小语料完成权限过滤、检索召回、引用忠实和删除测试；不要求下载FineWeb。"
+    },
+    {
+      "id": "sys-path-agent",
+      "title": "从提示契约到受控coding agent",
+      "nodes": [
+        "sys-promptcontracts",
+        "sys-skills",
+        "sys-mcp",
+        "sys-miniagent",
+        "sys-swebench"
+      ],
+      "acceptance": "任务、权限、工具日志、补丁、测试和预算齐全；未经批准不执行外部副作用。"
+    }
+  ]
+}

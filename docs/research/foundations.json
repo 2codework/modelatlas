@@ -1,0 +1,4508 @@
+{
+  "schema_version": "modelatlas.research.v1",
+  "title": "ModelAtlas 基础、历史与全球代表性家族（研究首版）",
+  "checked_at": "2026-10-28",
+  "scope": "代表性历史基础图谱，不是全球所有模型目录，不是2026最新产品清单。",
+  "verification_policy": {
+    "primary_source_checked": "已在本次检索打开论文元数据/摘要或官方仓库/模型卡；证明来源存在且支持简短说明，不代表独立复现实验。",
+    "editorial_learning_relation": "教学先修建议；非论文的历史发明或因果断言。",
+    "research_claim_scoped": "已核验研究来源，但结论受理论假设或实验范围限制。",
+    "ambiguous": "用户术语尚未消歧；没有技术事实断言。"
+  },
+  "date_policy": "publication_date默认是来源论文首次提交日，不是模型部署日期；概念日期为代表文献而非起源。",
+  "nodes": [
+    {
+      "id": "nlp",
+      "title": "自然语言处理 NLP",
+      "type": "field",
+      "category": "foundations",
+      "description_zh": "研究计算系统如何处理、理解和生成语言；语言模型只是其中一类方法。",
+      "prerequisites": [],
+      "misconceptions": [
+        "NLP不始于Transformer，也不等于聊天机器人。"
+      ],
+      "source_urls": [
+        "https://web.stanford.edu/~jurafsky/slp3/"
+      ],
+      "publication_date": null,
+      "version": "SLP3 online manuscript 2026-08-19",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-001"
+      ],
+      "summary_zh": "研究计算系统如何处理、理解和生成语言；语言模型只是其中一类方法。",
+      "pitfalls": [
+        "NLP不始于Transformer，也不等于聊天机器人。"
+      ]
+    },
+    {
+      "id": "tokenization",
+      "title": "分词与 tokenization",
+      "type": "concept",
+      "category": "foundations",
+      "description_zh": "把文本转换为模型处理的符号序列；不同语言和分词器的token边界不同。",
+      "prerequisites": [
+        "nlp"
+      ],
+      "misconceptions": [
+        "一个token不固定等于一个词或一个汉字。"
+      ],
+      "source_urls": [
+        "https://web.stanford.edu/~jurafsky/slp3/"
+      ],
+      "publication_date": null,
+      "version": "SLP3 2026-08-19",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-001"
+      ],
+      "summary_zh": "把文本转换为模型处理的符号序列；不同语言和分词器的token边界不同。",
+      "pitfalls": [
+        "一个token不固定等于一个词或一个汉字。"
+      ]
+    },
+    {
+      "id": "language-modeling",
+      "title": "语言建模",
+      "type": "concept",
+      "category": "foundations",
+      "description_zh": "估计语言序列的概率；自回归生成通过条件概率逐步产生后续符号。",
+      "prerequisites": [
+        "tokenization"
+      ],
+      "misconceptions": [
+        "概率高不等于事实正确。"
+      ],
+      "source_urls": [
+        "https://web.stanford.edu/~jurafsky/slp3/"
+      ],
+      "publication_date": null,
+      "version": "SLP3 2026-08-19",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-001"
+      ],
+      "summary_zh": "估计语言序列的概率；自回归生成通过条件概率逐步产生后续符号。",
+      "pitfalls": [
+        "概率高不等于事实正确。"
+      ]
+    },
+    {
+      "id": "embeddings",
+      "title": "向量表示 / embeddings",
+      "type": "concept",
+      "category": "foundations",
+      "description_zh": "用连续向量表示离散符号或对象，便于学习相似性和执行神经计算。",
+      "prerequisites": [
+        "tokenization"
+      ],
+      "misconceptions": [
+        "静态词向量、上下文表示与句向量不是同一个对象。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "publication_date": "2013-01-16",
+      "version": "representative paper v1; not invention date",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-002"
+      ],
+      "summary_zh": "用连续向量表示离散符号或对象，便于学习相似性和执行神经计算。",
+      "pitfalls": [
+        "静态词向量、上下文表示与句向量不是同一个对象。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "word2vec",
+      "title": "word2vec",
+      "type": "method",
+      "category": "foundations",
+      "description_zh": "以高效的预测任务学习词的连续表示，是静态词向量的重要里程碑。",
+      "prerequisites": [
+        "embeddings"
+      ],
+      "misconceptions": [
+        "word2vec不是Transformer，也不是对话大模型。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "publication_date": "2013-01-16",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-002"
+      ],
+      "summary_zh": "以高效的预测任务学习词的连续表示，是静态词向量的重要里程碑。",
+      "pitfalls": [
+        "word2vec不是Transformer，也不是对话大模型。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "seq2seq",
+      "title": "LSTM sequence-to-sequence",
+      "type": "architecture",
+      "category": "foundations",
+      "description_zh": "编码器把输入序列编码，解码器产生输出序列；2014论文使用多层LSTM。",
+      "prerequisites": [
+        "language-modeling",
+        "embeddings"
+      ],
+      "misconceptions": [
+        "seq2seq是任务/架构范式，不专指Transformer。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1409.3215"
+      ],
+      "publication_date": "2014-09-10",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-003"
+      ],
+      "summary_zh": "编码器把输入序列编码，解码器产生输出序列；2014论文使用多层LSTM。",
+      "pitfalls": [
+        "seq2seq是任务/架构范式，不专指Transformer。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "attention",
+      "title": "神经注意力：软对齐",
+      "type": "method",
+      "category": "foundations",
+      "description_zh": "解码时对输入表示分配可学习权重，减少固定长度编码的瓶颈。",
+      "prerequisites": [
+        "seq2seq"
+      ],
+      "misconceptions": [
+        "注意力权重不能直接视为完整的因果解释。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1409.0473"
+      ],
+      "publication_date": "2014-09-01",
+      "version": "Bahdanau et al. paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-004"
+      ],
+      "summary_zh": "解码时对输入表示分配可学习权重，减少固定长度编码的瓶颈。",
+      "pitfalls": [
+        "注意力权重不能直接视为完整的因果解释。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "transformer",
+      "title": "Transformer",
+      "type": "architecture",
+      "category": "foundations",
+      "description_zh": "以注意力与前馈网络为核心的序列建模架构；原论文提出编码器—解码器结构。",
+      "prerequisites": [
+        "attention",
+        "embeddings"
+      ],
+      "misconceptions": [
+        "Transformer原论文并非decoder-only；也不是所有模型都使用同一注意力实现。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "publication_date": "2017-06-12",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-005"
+      ],
+      "summary_zh": "以注意力与前馈网络为核心的序列建模架构；原论文提出编码器—解码器结构。",
+      "pitfalls": [
+        "Transformer原论文并非decoder-only；也不是所有模型都使用同一注意力实现。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "pretraining",
+      "title": "预训练与迁移学习",
+      "type": "concept",
+      "category": "training",
+      "description_zh": "先用较广泛的数据和目标训练，再迁移到下游任务；目标和架构可以不同。",
+      "prerequisites": [
+        "language-modeling",
+        "transformer"
+      ],
+      "misconceptions": [
+        "预训练模型不自动具备可靠的指令遵循。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1910.10683"
+      ],
+      "publication_date": "2019-10-23",
+      "version": "representative study v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-006"
+      ],
+      "summary_zh": "先用较广泛的数据和目标训练，再迁移到下游任务；目标和架构可以不同。",
+      "pitfalls": [
+        "预训练模型不自动具备可靠的指令遵循。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "bert",
+      "title": "BERT",
+      "type": "model_family",
+      "category": "text-models",
+      "description_zh": "双向Transformer语言表示模型家族；采用预训练后微调的使用方式。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "BERT不是典型的自回归聊天模型。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1810.04805"
+      ],
+      "publication_date": "2018-10-11",
+      "version": "family; original paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-007"
+      ],
+      "summary_zh": "双向Transformer语言表示模型家族；采用预训练后微调的使用方式。",
+      "pitfalls": [
+        "BERT不是典型的自回归聊天模型。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "t5",
+      "title": "T5",
+      "type": "model_family",
+      "category": "text-models",
+      "description_zh": "把多类NLP任务统一表示为文本到文本的预训练Transformer家族。",
+      "prerequisites": [
+        "pretraining",
+        "seq2seq"
+      ],
+      "misconceptions": [
+        "统一任务格式不代表任务之间的难度完全相同。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1910.10683"
+      ],
+      "publication_date": "2019-10-23",
+      "version": "family; original report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-006"
+      ],
+      "summary_zh": "把多类NLP任务统一表示为文本到文本的预训练Transformer家族。",
+      "pitfalls": [
+        "统一任务格式不代表任务之间的难度完全相同。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "gpt",
+      "title": "GPT",
+      "type": "model_family",
+      "category": "text-models",
+      "description_zh": "自回归语言模型家族；本版以GPT-3原始论文为已核验历史锚点，不列当前版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "GPT家族名称不等于某个API快照或ChatGPT产品。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "publication_date": null,
+      "version": "family anchored to GPT-3 paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-008"
+      ],
+      "summary_zh": "自回归语言模型家族；本版以GPT-3原始论文为已核验历史锚点，不列当前版本。",
+      "pitfalls": [
+        "GPT家族名称不等于某个API快照或ChatGPT产品。"
+      ]
+    },
+    {
+      "id": "gpt-3",
+      "title": "GPT-3（2020论文）",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "研究自回归语言模型在少样本上下文设置下完成任务的能力。",
+      "prerequisites": [
+        "gpt"
+      ],
+      "misconceptions": [
+        "few-shot上下文学习通常不意味着推理时更新模型权重。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "publication_date": "2020-05-28",
+      "version": "GPT-3 paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "gpt",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base",
+      "source_ids": [
+        "found-src-008"
+      ],
+      "summary_zh": "研究自回归语言模型在少样本上下文设置下完成任务的能力。",
+      "pitfalls": [
+        "few-shot上下文学习通常不意味着推理时更新模型权重。"
+      ],
+      "date_kind": "paper_first_submitted",
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "in-context-learning",
+      "title": "上下文学习 ICL",
+      "type": "concept",
+      "category": "inference",
+      "description_zh": "在提示中提供示例或任务描述，让固定权重模型适应当前任务。",
+      "prerequisites": [
+        "language-modeling"
+      ],
+      "misconceptions": [
+        "上下文适应与参数微调不同。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "publication_date": "2020-05-28",
+      "version": "representative paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-008"
+      ],
+      "summary_zh": "在提示中提供示例或任务描述，让固定权重模型适应当前任务。",
+      "pitfalls": [
+        "上下文适应与参数微调不同。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "instruction-tuning",
+      "title": "监督指令微调 SFT",
+      "type": "method",
+      "category": "training",
+      "description_zh": "使用指令与期望回答示例调整模型行为；是InstructGPT流程的一部分。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "SFT不是RLHF的同义词。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2203.02155"
+      ],
+      "publication_date": "2022-03-04",
+      "version": "representative paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-009"
+      ],
+      "summary_zh": "使用指令与期望回答示例调整模型行为；是InstructGPT流程的一部分。",
+      "pitfalls": [
+        "SFT不是RLHF的同义词。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "rlhf",
+      "title": "人类反馈强化学习 RLHF",
+      "type": "method",
+      "category": "alignment",
+      "description_zh": "InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调整语言模型。",
+      "prerequisites": [
+        "instruction-tuning"
+      ],
+      "misconceptions": [
+        "偏好优化不保证真实、无偏或适合所有人的价值观。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2203.02155"
+      ],
+      "publication_date": "2022-03-04",
+      "version": "InstructGPT example; not first RLHF invention",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-009"
+      ],
+      "summary_zh": "InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调整语言模型。",
+      "pitfalls": [
+        "偏好优化不保证真实、无偏或适合所有人的价值观。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "constitutional-ai",
+      "title": "Constitutional AI / RLAIF",
+      "type": "method",
+      "category": "alignment",
+      "description_zh": "用明确原则引导自我批评与修订，并以AI偏好反馈支持后续训练。",
+      "prerequisites": [
+        "instruction-tuning",
+        "rlhf"
+      ],
+      "misconceptions": [
+        "AI反馈仍依赖人类设计的原则和训练环境；不是无条件安全保证。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2212.08073"
+      ],
+      "publication_date": "2022-12-15",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-010"
+      ],
+      "summary_zh": "用明确原则引导自我批评与修订，并以AI偏好反馈支持后续训练。",
+      "pitfalls": [
+        "AI反馈仍依赖人类设计的原则和训练环境；不是无条件安全保证。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "dpo",
+      "title": "Direct Preference Optimization",
+      "type": "method",
+      "category": "alignment",
+      "description_zh": "通过偏好样本直接优化策略的目标，避免经典RLHF中显式奖励模型和在线RL训练的组合。",
+      "prerequisites": [
+        "rlhf"
+      ],
+      "misconceptions": [
+        "DPO仍需要偏好数据；不是不做训练的提示技巧。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2305.18290"
+      ],
+      "publication_date": "2023-05-29",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-011"
+      ],
+      "summary_zh": "通过偏好样本直接优化策略的目标，避免经典RLHF中显式奖励模型和在线RL训练的组合。",
+      "pitfalls": [
+        "DPO仍需要偏好数据；不是不做训练的提示技巧。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "cot",
+      "title": "Chain-of-Thought prompting",
+      "type": "method",
+      "category": "reasoning",
+      "description_zh": "用分步示例提示模型生成中间推理文本，是推理提示方法的重要研究方向。",
+      "prerequisites": [
+        "in-context-learning"
+      ],
+      "misconceptions": [
+        "生成看似合理的推理链不保证答案正确，也不保证忠实反映内部计算。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2201.11903"
+      ],
+      "publication_date": "2022-01-28",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-012"
+      ],
+      "summary_zh": "用分步示例提示模型生成中间推理文本，是推理提示方法的重要研究方向。",
+      "pitfalls": [
+        "生成看似合理的推理链不保证答案正确，也不保证忠实反映内部计算。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "reasoning-models",
+      "title": "推理导向模型",
+      "type": "concept",
+      "category": "reasoning",
+      "description_zh": "通过训练和推理策略加强多步骤问题求解的模型类别；本版以DeepSeek-R1为实例。",
+      "prerequisites": [
+        "rlhf",
+        "cot"
+      ],
+      "misconceptions": [
+        "推理模型不是已证明具有普适逻辑正确性的形式系统。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948"
+      ],
+      "publication_date": "2025-01-22",
+      "version": "representative report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-013"
+      ],
+      "summary_zh": "通过训练和推理策略加强多步骤问题求解的模型类别；本版以DeepSeek-R1为实例。",
+      "pitfalls": [
+        "推理模型不是已证明具有普适逻辑正确性的形式系统。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "deepseek",
+      "title": "DeepSeek",
+      "type": "model_family",
+      "category": "text-models",
+      "description_zh": "本版仅收录R1作为DeepSeek家族的历史推理实例，不推断所有版本结构或能力。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "DeepSeek公司、产品与单个模型权重需要分开。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "publication_date": null,
+      "version": "family; R1 anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ],
+      "summary_zh": "本版仅收录R1作为DeepSeek家族的历史推理实例，不推断所有版本结构或能力。",
+      "pitfalls": [
+        "DeepSeek公司、产品与单个模型权重需要分开。"
+      ]
+    },
+    {
+      "id": "deepseek-r1-2025",
+      "title": "DeepSeek-R1（2025原始报告）",
+      "type": "model_release",
+      "category": "reasoning",
+      "description_zh": "报告包含冷启动数据和多阶段训练；与不进行前置SFT的R1-Zero区别明确。",
+      "prerequisites": [
+        "deepseek",
+        "reasoning-models"
+      ],
+      "misconceptions": [
+        "不能把R1-Zero的纯RL实验流程直接套用于R1。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "publication_date": "2025-01-22",
+      "version": "original paper v1; not later checkpoint",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "deepseek",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "reasoning",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ],
+      "summary_zh": "报告包含冷启动数据和多阶段训练；与不进行前置SFT的R1-Zero区别明确。",
+      "pitfalls": [
+        "不能把R1-Zero的纯RL实验流程直接套用于R1。"
+      ],
+      "date_kind": "paper_first_submitted",
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "rag",
+      "title": "检索增强生成 RAG",
+      "type": "method",
+      "category": "inference",
+      "description_zh": "组合可检索外部知识与生成模型，使回答能够利用参数之外的材料。",
+      "prerequisites": [
+        "embeddings",
+        "pretraining"
+      ],
+      "misconceptions": [
+        "检索到相关内容不意味着答案必定正确或引用充分。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.11401"
+      ],
+      "publication_date": "2020-05-22",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-015"
+      ],
+      "summary_zh": "组合可检索外部知识与生成模型，使回答能够利用参数之外的材料。",
+      "pitfalls": [
+        "检索到相关内容不意味着答案必定正确或引用充分。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "multimodal",
+      "title": "多模态模型",
+      "type": "concept",
+      "category": "multimodal",
+      "description_zh": "联合处理多种信息形式；必须分别注明输入和输出支持，不能仅用多模态一词推断所有能力。",
+      "prerequisites": [
+        "embeddings",
+        "pretraining"
+      ],
+      "misconceptions": [
+        "图像理解、图像生成、语音识别、语音生成不是同一种能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2103.00020",
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "publication_date": null,
+      "version": "concept; representative sources",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-016",
+        "found-src-017"
+      ],
+      "summary_zh": "联合处理多种信息形式；必须分别注明输入和输出支持，不能仅用多模态一词推断所有能力。",
+      "pitfalls": [
+        "图像理解、图像生成、语音识别、语音生成不是同一种能力。"
+      ]
+    },
+    {
+      "id": "clip",
+      "title": "CLIP",
+      "type": "model_family",
+      "category": "multimodal",
+      "description_zh": "通过图像—文本配对学习可迁移表示，支持文本描述与图像的匹配。",
+      "prerequisites": [
+        "multimodal"
+      ],
+      "misconceptions": [
+        "CLIP不是自然语言对话模型，也不直接生成图像。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "publication_date": "2021-02-26",
+      "version": "original paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "modalities": [
+        "image",
+        "text"
+      ],
+      "source_ids": [
+        "found-src-016"
+      ],
+      "summary_zh": "通过图像—文本配对学习可迁移表示，支持文本描述与图像的匹配。",
+      "pitfalls": [
+        "CLIP不是自然语言对话模型，也不直接生成图像。"
+      ],
+      "date_kind": "paper_first_submitted",
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "embedding"
+      ]
+    },
+    {
+      "id": "llava",
+      "title": "LLaVA",
+      "type": "model_family",
+      "category": "multimodal",
+      "description_zh": "连接视觉编码器与语言模型，通过视觉指令微调支持图文问答。",
+      "prerequisites": [
+        "multimodal",
+        "instruction-tuning"
+      ],
+      "misconceptions": [
+        "家族后续版本不能直接继承首版报告的全部训练描述。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2304.08485"
+      ],
+      "publication_date": "2023-04-17",
+      "version": "original paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "modalities": [
+        "image",
+        "text"
+      ],
+      "source_ids": [
+        "found-src-018"
+      ],
+      "summary_zh": "连接视觉编码器与语言模型，通过视觉指令微调支持图文问答。",
+      "pitfalls": [
+        "家族后续版本不能直接继承首版报告的全部训练描述。"
+      ],
+      "date_kind": "paper_first_submitted",
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "image",
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "whisper",
+      "title": "Whisper",
+      "type": "model_family",
+      "category": "multimodal",
+      "description_zh": "利用大规模弱监督音频转写数据训练的语音识别模型家族。",
+      "prerequisites": [
+        "seq2seq",
+        "multimodal"
+      ],
+      "misconceptions": [
+        "语音识别不是语音合成，也不保证逐字无误。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2212.04356"
+      ],
+      "publication_date": "2022-12-06",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "source_ids": [
+        "found-src-019"
+      ],
+      "summary_zh": "利用大规模弱监督音频转写数据训练的语音识别模型家族。",
+      "pitfalls": [
+        "语音识别不是语音合成，也不保证逐字无误。"
+      ],
+      "date_kind": "paper_first_submitted",
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "latent-diffusion",
+      "title": "Latent Diffusion",
+      "type": "method",
+      "category": "multimodal",
+      "description_zh": "在压缩的潜在表示空间执行扩散过程，用于图像合成等任务。",
+      "prerequisites": [
+        "embeddings",
+        "multimodal"
+      ],
+      "misconceptions": [
+        "图像生成模型不一定是自回归语言模型。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2112.10752"
+      ],
+      "publication_date": "2021-12-20",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-020"
+      ],
+      "summary_zh": "在压缩的潜在表示空间执行扩散过程，用于图像合成等任务。",
+      "pitfalls": [
+        "图像生成模型不一定是自回归语言模型。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "agents",
+      "title": "语言模型驱动的 agents",
+      "type": "concept",
+      "category": "agents",
+      "description_zh": "以模型作为决策组件，与工具或环境循环交互的系统；ReAct是一个代表性研究范式。",
+      "prerequisites": [
+        "in-context-learning"
+      ],
+      "misconceptions": [
+        "agent不是单一模型名称；工具权限、环境、评估和终止条件同样关键。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "publication_date": null,
+      "version": "concept; ReAct anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-021"
+      ],
+      "summary_zh": "以模型作为决策组件，与工具或环境循环交互的系统；ReAct是一个代表性研究范式。",
+      "pitfalls": [
+        "agent不是单一模型名称；工具权限、环境、评估和终止条件同样关键。"
+      ]
+    },
+    {
+      "id": "react",
+      "title": "ReAct",
+      "type": "method",
+      "category": "agents",
+      "description_zh": "交替产生推理文本和行动，并利用环境观察继续完成任务。",
+      "prerequisites": [
+        "agents",
+        "cot"
+      ],
+      "misconceptions": [
+        "生成行动文本不意味着工具已实际执行成功。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "publication_date": "2022-10-06",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-021"
+      ],
+      "summary_zh": "交替产生推理文本和行动，并利用环境观察继续完成任务。",
+      "pitfalls": [
+        "生成行动文本不意味着工具已实际执行成功。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "rsi",
+      "title": "递归自我改进 RSI",
+      "type": "research_concept",
+      "category": "frontiers",
+      "description_zh": "研究系统修改自身改进机制并循环提升的可能性；定义、闭环范围与可验证收益必须明确。",
+      "prerequisites": [
+        "agents"
+      ],
+      "misconceptions": [
+        "有限任务的自修代码实验不是无限自我提升或AGI已经实现的证明。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/cs/0309048",
+        "https://arxiv.org/abs/2310.02304"
+      ],
+      "publication_date": null,
+      "version": "research concept; no general realized claim",
+      "checked_at": "2026-10-28",
+      "verification_status": "research_claim_scoped",
+      "source_ids": [
+        "found-src-022",
+        "found-src-023"
+      ],
+      "summary_zh": "研究系统修改自身改进机制并循环提升的可能性；定义、闭环范围与可验证收益必须明确。",
+      "pitfalls": [
+        "有限任务的自修代码实验不是无限自我提升或AGI已经实现的证明。"
+      ]
+    },
+    {
+      "id": "godel-machine",
+      "title": "Gödel machine",
+      "type": "theoretical_framework",
+      "category": "frontiers",
+      "description_zh": "在形式化公理和效用设定下，以找到改进证明作为自修改条件的理论框架。",
+      "prerequisites": [
+        "rsi"
+      ],
+      "misconceptions": [
+        "理论最优性条件不等于现实系统能高效找到所需证明。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/cs/0309048"
+      ],
+      "publication_date": "2003-09-25",
+      "version": "paper v1; scoped theoretical result",
+      "checked_at": "2026-10-28",
+      "verification_status": "research_claim_scoped",
+      "source_ids": [
+        "found-src-022"
+      ],
+      "summary_zh": "在形式化公理和效用设定下，以找到改进证明作为自修改条件的理论框架。",
+      "pitfalls": [
+        "理论最优性条件不等于现实系统能高效找到所需证明。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "stop",
+      "title": "Self-Taught Optimizer (STOP)",
+      "type": "research_system",
+      "category": "frontiers",
+      "description_zh": "研究语言模型辅助的程序框架如何改进自身；论文明确底层语言模型没有被修改。",
+      "prerequisites": [
+        "agents",
+        "rsi"
+      ],
+      "misconceptions": [
+        "论文明确称其不是完整的递归自我改进。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.02304"
+      ],
+      "publication_date": "2023-10-03",
+      "version": "paper v1; COLM 2024",
+      "checked_at": "2026-10-28",
+      "verification_status": "research_claim_scoped",
+      "source_ids": [
+        "found-src-023"
+      ],
+      "summary_zh": "研究语言模型辅助的程序框架如何改进自身；论文明确底层语言模型没有被修改。",
+      "pitfalls": [
+        "论文明确称其不是完整的递归自我改进。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "jev",
+      "title": "JEV（用户术语，待确认）",
+      "type": "unresolved_term",
+      "category": "frontiers",
+      "description_zh": "含义未确定：需用户给出全称、论文或链接后再建立实体和技术关系。",
+      "prerequisites": [],
+      "misconceptions": [
+        "不得未经确认等同JEPA，亦不得虚构其论文和发布日期。"
+      ],
+      "source_urls": [],
+      "publication_date": null,
+      "version": null,
+      "checked_at": "2026-10-28",
+      "verification_status": "ambiguous",
+      "source_ids": [],
+      "summary_zh": "含义未确定：需用户给出全称、论文或链接后再建立实体和技术关系。",
+      "pitfalls": [
+        "不得未经确认等同JEPA，亦不得虚构其论文和发布日期。"
+      ]
+    },
+    {
+      "id": "glue",
+      "title": "GLUE",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "汇集多种语言理解任务，用于比较模型在指定评测协议下的表现。",
+      "prerequisites": [
+        "nlp"
+      ],
+      "misconceptions": [
+        "单一基准得分不代表所有语言能力或真实部署质量。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1804.07461"
+      ],
+      "publication_date": "2018-04-20",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-024"
+      ],
+      "summary_zh": "汇集多种语言理解任务，用于比较模型在指定评测协议下的表现。",
+      "pitfalls": [
+        "单一基准得分不代表所有语言能力或真实部署质量。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "mmlu",
+      "title": "MMLU",
+      "type": "benchmark",
+      "category": "evaluation",
+      "description_zh": "跨多个知识学科的语言理解评测；结果依赖版本、提示、采样和污染控制。",
+      "prerequisites": [
+        "nlp"
+      ],
+      "misconceptions": [
+        "原始论文结果不是持续有效的模型排行榜。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2009.03300"
+      ],
+      "publication_date": "2020-09-07",
+      "version": "paper v1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-025"
+      ],
+      "summary_zh": "跨多个知识学科的语言理解评测；结果依赖版本、提示、采样和污染控制。",
+      "pitfalls": [
+        "原始论文结果不是持续有效的模型排行榜。"
+      ],
+      "date_kind": "paper_first_submitted"
+    },
+    {
+      "id": "org-llama",
+      "title": "Meta",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Llama原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "美国/跨国研究团队",
+      "source_ids": [
+        "found-src-026"
+      ],
+      "summary_zh": "本图谱中与Llama原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "llama",
+      "title": "Llama",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Llama家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-026"
+      ],
+      "summary_zh": "Llama家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "llama-2",
+      "title": "Llama 2",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "包含基础模型与对话微调版本的历史模型系列。",
+      "prerequisites": [
+        "llama"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "publication_date": "2023-07-18",
+      "version": "2",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "llama",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base_and_chat",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-026"
+      ],
+      "summary_zh": "包含基础模型与对话微调版本的历史模型系列。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-qwen",
+      "title": "Alibaba Cloud / Qwen Team",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Qwen原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "中国",
+      "source_ids": [
+        "found-src-027"
+      ],
+      "summary_zh": "本图谱中与Qwen原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "qwen",
+      "title": "Qwen",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Qwen家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-027"
+      ],
+      "summary_zh": "Qwen家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "qwen-2023",
+      "title": "Qwen（2023首篇报告）",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "报告区分基础预训练模型、聊天对齐模型及代码/数学方向。",
+      "prerequisites": [
+        "qwen"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "publication_date": "2023-09-28",
+      "version": "2023 report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "qwen",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base_and_chat",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-027"
+      ],
+      "summary_zh": "报告区分基础预训练模型、聊天对齐模型及代码/数学方向。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-mistral",
+      "title": "Mistral AI",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Mistral原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "法国",
+      "source_ids": [
+        "found-src-028"
+      ],
+      "summary_zh": "本图谱中与Mistral原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "mistral",
+      "title": "Mistral",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Mistral家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-028"
+      ],
+      "summary_zh": "Mistral家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "mistral-7b-v0-1",
+      "title": "Mistral 7B v0.1",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "历史7B模型，报告说明grouped-query attention与sliding-window attention。",
+      "prerequisites": [
+        "mistral"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "publication_date": "2023-10-10",
+      "version": "7B v0.1",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "mistral",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base_and_instruct",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-028"
+      ],
+      "summary_zh": "历史7B模型，报告说明grouped-query attention与sliding-window attention。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-bloom",
+      "title": "BigScience Workshop",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与BLOOM原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "国际协作",
+      "source_ids": [
+        "found-src-029"
+      ],
+      "summary_zh": "本图谱中与BLOOM原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "bloom",
+      "title": "BLOOM",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "BLOOM家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-029"
+      ],
+      "summary_zh": "BLOOM家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "bloom-176b",
+      "title": "BLOOM 176B",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "多语言自回归语言模型，作为跨国开放科研协作实例。",
+      "prerequisites": [
+        "bloom"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "publication_date": "2022-11-09",
+      "version": "176B original report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "bloom",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-029"
+      ],
+      "summary_zh": "多语言自回归语言模型，作为跨国开放科研协作实例。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-gemini",
+      "title": "Google / Gemini Team",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Gemini原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "美国/英国/跨国研究团队",
+      "source_ids": [
+        "found-src-017"
+      ],
+      "summary_zh": "本图谱中与Gemini原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "gemini",
+      "title": "Gemini",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Gemini家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-017"
+      ],
+      "summary_zh": "Gemini家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "gemini-1-report",
+      "title": "Gemini（首代技术报告）",
+      "type": "model_release",
+      "category": "multimodal",
+      "description_zh": "原始报告描述多模态模型家族；不推断当前服务的模态或限制。",
+      "prerequisites": [
+        "gemini"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "publication_date": "2023-12-19",
+      "version": "first generation report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "gemini",
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "release_class": "multimodal",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-017"
+      ],
+      "summary_zh": "原始报告描述多模态模型家族；不推断当前服务的模态或限制。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output_modalities": null
+    },
+    {
+      "id": "org-falcon",
+      "title": "Technology Innovation Institute",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Falcon原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "阿联酋",
+      "source_ids": [
+        "found-src-030"
+      ],
+      "summary_zh": "本图谱中与Falcon原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "falcon",
+      "title": "Falcon",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Falcon家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-030"
+      ],
+      "summary_zh": "Falcon家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "falcon-180b",
+      "title": "Falcon 180B",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "Falcon系列中的历史因果解码器模型。",
+      "prerequisites": [
+        "falcon"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "publication_date": "2023-11-28",
+      "version": "180B report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "falcon",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-030"
+      ],
+      "summary_zh": "Falcon系列中的历史因果解码器模型。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-jais",
+      "title": "Inception / MBZUAI / Cerebras",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Jais原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "阿联酋/美国合作",
+      "source_ids": [
+        "found-src-031"
+      ],
+      "summary_zh": "本图谱中与Jais原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "jais",
+      "title": "Jais",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Jais家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-031"
+      ],
+      "summary_zh": "Jais家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "jais-13b",
+      "title": "Jais 13B",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "重点面向阿拉伯语与英语，报告区分基础版与聊天版。",
+      "prerequisites": [
+        "jais"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "publication_date": "2023-08-30",
+      "version": "13B original report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "jais",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base_and_chat",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-031"
+      ],
+      "summary_zh": "重点面向阿拉伯语与英语，报告区分基础版与聊天版。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-aya",
+      "title": "Cohere For AI",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Aya原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "加拿大关联/国际协作",
+      "source_ids": [
+        "found-src-032"
+      ],
+      "summary_zh": "本图谱中与Aya原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "aya",
+      "title": "Aya",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Aya家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-032"
+      ],
+      "summary_zh": "Aya家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "aya-101",
+      "title": "Aya 101",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "多语言指令微调模型，重视低资源语言覆盖。",
+      "prerequisites": [
+        "aya"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "publication_date": "2024-02-12",
+      "version": "Aya 101 report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "aya",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "instruct",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-032"
+      ],
+      "summary_zh": "多语言指令微调模型，重视低资源语言覆盖。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-baichuan",
+      "title": "Baichuan",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "本图谱中与Baichuan原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "prerequisites": [],
+      "misconceptions": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "publication_date": null,
+      "version": "historical report attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "中国",
+      "source_ids": [
+        "found-src-033"
+      ],
+      "summary_zh": "本图谱中与Baichuan原始技术报告关联的研究/开发主体；不将地点视为团队成员国籍。",
+      "pitfalls": [
+        "公司、合作项目、模型家族和版本是不同实体。"
+      ]
+    },
+    {
+      "id": "baichuan",
+      "title": "Baichuan",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Baichuan家族入口；本版仅用已核验历史报告连接具体版本。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "publication_date": null,
+      "version": "family; historical anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-033"
+      ],
+      "summary_zh": "Baichuan家族入口；本版仅用已核验历史报告连接具体版本。",
+      "pitfalls": [
+        "家族名称不等于固定权重、固定许可证或固定能力。"
+      ]
+    },
+    {
+      "id": "baichuan-2",
+      "title": "Baichuan 2",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "历史多语言模型系列；报告包含7B与13B模型。",
+      "prerequisites": [
+        "baichuan"
+      ],
+      "misconceptions": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "publication_date": "2023-09-19",
+      "version": "2 original report",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "family_id": "baichuan",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base_and_chat",
+      "date_kind": "paper_first_submitted",
+      "source_ids": [
+        "found-src-033"
+      ],
+      "summary_zh": "历史多语言模型系列；报告包含7B与13B模型。",
+      "pitfalls": [
+        "该日期是论文首发日期，不应自动当作产品发布或权重开放日。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "org-openai",
+      "title": "OpenAI",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "GPT-3、InstructGPT及CLIP等所引用原始研究的研发主体。",
+      "prerequisites": [],
+      "misconceptions": [
+        "机构当前产品线与历史论文中的模型不可混同。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165",
+        "https://arxiv.org/abs/2203.02155",
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "publication_date": null,
+      "version": "historical research attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "美国/跨国研究团队",
+      "source_ids": [
+        "found-src-008",
+        "found-src-009",
+        "found-src-016"
+      ],
+      "summary_zh": "GPT-3、InstructGPT及CLIP等所引用原始研究的研发主体。",
+      "pitfalls": [
+        "机构当前产品线与历史论文中的模型不可混同。"
+      ]
+    },
+    {
+      "id": "org-anthropic",
+      "title": "Anthropic",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "Constitutional AI研究关联机构；此节点不表示所有Claude版本都有同一训练细节。",
+      "prerequisites": [],
+      "misconceptions": [
+        "单篇训练研究不等于完整披露所有产品实现。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2212.08073"
+      ],
+      "publication_date": null,
+      "version": "historical research attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "美国/跨国研究团队",
+      "source_ids": [
+        "found-src-010"
+      ],
+      "summary_zh": "Constitutional AI研究关联机构；此节点不表示所有Claude版本都有同一训练细节。",
+      "pitfalls": [
+        "单篇训练研究不等于完整披露所有产品实现。"
+      ]
+    },
+    {
+      "id": "org-deepseek",
+      "title": "DeepSeek-AI",
+      "type": "organization",
+      "category": "organizations",
+      "description_zh": "DeepSeek-R1论文与官方仓库的发布主体。",
+      "prerequisites": [],
+      "misconceptions": [
+        "论文报告与独立复现实验是不同证据。"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "publication_date": null,
+      "version": "R1 attribution",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "region": "中国",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ],
+      "summary_zh": "DeepSeek-R1论文与官方仓库的发布主体。",
+      "pitfalls": [
+        "论文报告与独立复现实验是不同证据。"
+      ]
+    },
+    {
+      "id": "sarvam-1",
+      "title": "Sarvam-1",
+      "type": "model_release",
+      "category": "text-models",
+      "description_zh": "官方模型卡描述面向印度语言的基础文本补全模型，不能直接当作指令聊天模型。",
+      "prerequisites": [
+        "sarvam"
+      ],
+      "misconceptions": [
+        "基础模型支持的语言不表示每种语言质量相同。"
+      ],
+      "source_urls": [
+        "https://huggingface.co/sarvamai/sarvam-1"
+      ],
+      "publication_date": null,
+      "version": "sarvamai/sarvam-1 model card; release date not verified",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "modalities": [
+        "text"
+      ],
+      "release_class": "base",
+      "organization": "Sarvam AI",
+      "region": "印度",
+      "family_id": "sarvam",
+      "source_ids": [
+        "found-src-034"
+      ],
+      "summary_zh": "官方模型卡描述面向印度语言的基础文本补全模型，不能直接当作指令聊天模型。",
+      "pitfalls": [
+        "基础模型支持的语言不表示每种语言质量相同。"
+      ],
+      "modality_note": "原始报告讨论的模态集合，不是全部模态均支持双向输入输出，也不表示当前API能力。",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    {
+      "id": "sarvam",
+      "title": "Sarvam",
+      "type": "model_family",
+      "category": "model-families",
+      "description_zh": "Sarvam模型家族入口；本版仅核验Sarvam-1官方模型卡。",
+      "prerequisites": [
+        "pretraining"
+      ],
+      "misconceptions": [
+        "家族名不等于特定权重或全部后续版本。"
+      ],
+      "source_urls": [
+        "https://huggingface.co/sarvamai/sarvam-1"
+      ],
+      "publication_date": null,
+      "version": "family; Sarvam-1 anchor",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-034"
+      ],
+      "summary_zh": "Sarvam模型家族入口；本版仅核验Sarvam-1官方模型卡。",
+      "pitfalls": [
+        "家族名不等于特定权重或全部后续版本。"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "llama-2",
+      "target": "llama",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-026"
+      ]
+    },
+    {
+      "source": "llama",
+      "target": "org-llama",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-026"
+      ]
+    },
+    {
+      "source": "qwen-2023",
+      "target": "qwen",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-027"
+      ]
+    },
+    {
+      "source": "qwen",
+      "target": "org-qwen",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-027"
+      ]
+    },
+    {
+      "source": "mistral-7b-v0-1",
+      "target": "mistral",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-028"
+      ]
+    },
+    {
+      "source": "mistral",
+      "target": "org-mistral",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-028"
+      ]
+    },
+    {
+      "source": "bloom-176b",
+      "target": "bloom",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-029"
+      ]
+    },
+    {
+      "source": "bloom",
+      "target": "org-bloom",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-029"
+      ]
+    },
+    {
+      "source": "gemini-1-report",
+      "target": "gemini",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-017"
+      ]
+    },
+    {
+      "source": "gemini",
+      "target": "org-gemini",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-017"
+      ]
+    },
+    {
+      "source": "falcon-180b",
+      "target": "falcon",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-030"
+      ]
+    },
+    {
+      "source": "falcon",
+      "target": "org-falcon",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-030"
+      ]
+    },
+    {
+      "source": "jais-13b",
+      "target": "jais",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-031"
+      ]
+    },
+    {
+      "source": "jais",
+      "target": "org-jais",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-031"
+      ]
+    },
+    {
+      "source": "aya-101",
+      "target": "aya",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-032"
+      ]
+    },
+    {
+      "source": "aya",
+      "target": "org-aya",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-032"
+      ]
+    },
+    {
+      "source": "baichuan-2",
+      "target": "baichuan",
+      "type": "version_of",
+      "explanation_zh": "具体历史版本归属家族。",
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-033"
+      ]
+    },
+    {
+      "source": "baichuan",
+      "target": "org-baichuan",
+      "type": "developed_by",
+      "explanation_zh": "技术报告的研发归属；合作方范围以原报告为准。",
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-033"
+      ]
+    },
+    {
+      "source": "nlp",
+      "target": "tokenization",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://web.stanford.edu/~jurafsky/slp3/"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-001"
+      ]
+    },
+    {
+      "source": "tokenization",
+      "target": "embeddings",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-002"
+      ]
+    },
+    {
+      "source": "tokenization",
+      "target": "language-modeling",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://web.stanford.edu/~jurafsky/slp3/"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-001"
+      ]
+    },
+    {
+      "source": "embeddings",
+      "target": "word2vec",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-002"
+      ]
+    },
+    {
+      "source": "language-modeling",
+      "target": "seq2seq",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1409.3215"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-003"
+      ]
+    },
+    {
+      "source": "seq2seq",
+      "target": "attention",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1409.0473"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-004"
+      ]
+    },
+    {
+      "source": "attention",
+      "target": "transformer",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-005"
+      ]
+    },
+    {
+      "source": "transformer",
+      "target": "pretraining",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/1910.10683"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-006"
+      ]
+    },
+    {
+      "source": "pretraining",
+      "target": "instruction-tuning",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2203.02155"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-009"
+      ]
+    },
+    {
+      "source": "instruction-tuning",
+      "target": "rlhf",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2203.02155"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-009"
+      ]
+    },
+    {
+      "source": "rlhf",
+      "target": "dpo",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2305.18290"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-011"
+      ]
+    },
+    {
+      "source": "rlhf",
+      "target": "reasoning-models",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-013"
+      ]
+    },
+    {
+      "source": "pretraining",
+      "target": "multimodal",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2103.00020",
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-016",
+        "found-src-017"
+      ]
+    },
+    {
+      "source": "multimodal",
+      "target": "clip",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-016"
+      ]
+    },
+    {
+      "source": "multimodal",
+      "target": "llava",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2304.08485"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-018"
+      ]
+    },
+    {
+      "source": "in-context-learning",
+      "target": "agents",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-021"
+      ]
+    },
+    {
+      "source": "agents",
+      "target": "react",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-021"
+      ]
+    },
+    {
+      "source": "agents",
+      "target": "rsi",
+      "type": "prerequisite_of",
+      "explanation_zh": "编辑者建议的学习顺序，不是唯一历史因果链。",
+      "source_urls": [
+        "https://arxiv.org/abs/cs/0309048",
+        "https://arxiv.org/abs/2310.02304"
+      ],
+      "verification_status": "editorial_learning_relation",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-022",
+        "found-src-023"
+      ]
+    },
+    {
+      "source": "bert",
+      "target": "transformer",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/1810.04805"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-007"
+      ]
+    },
+    {
+      "source": "t5",
+      "target": "transformer",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/1910.10683"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-006"
+      ]
+    },
+    {
+      "source": "gpt-3",
+      "target": "transformer",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-008"
+      ]
+    },
+    {
+      "source": "llava",
+      "target": "multimodal",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/2304.08485"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-018"
+      ]
+    },
+    {
+      "source": "constitutional-ai",
+      "target": "rlhf",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/2212.08073"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-010"
+      ]
+    },
+    {
+      "source": "deepseek-r1-2025",
+      "target": "reasoning-models",
+      "type": "uses",
+      "explanation_zh": "架构、方法或类别关系；不表示简单继承全部实现。",
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ]
+    },
+    {
+      "source": "bert",
+      "target": "glue",
+      "type": "evaluated_by",
+      "explanation_zh": "原始报告包含该基准；不录入未经独立复核的分数。",
+      "source_urls": [
+        "https://arxiv.org/abs/1810.04805"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-007"
+      ]
+    },
+    {
+      "source": "baichuan-2",
+      "target": "mmlu",
+      "type": "evaluated_by",
+      "explanation_zh": "原始报告包含该基准；不录入未经独立复核的分数。",
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-033"
+      ]
+    },
+    {
+      "source": "gpt-3",
+      "target": "gpt",
+      "type": "version_of",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-008"
+      ]
+    },
+    {
+      "source": "deepseek-r1-2025",
+      "target": "deepseek",
+      "type": "version_of",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ]
+    },
+    {
+      "source": "gpt",
+      "target": "org-openai",
+      "type": "developed_by",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165",
+        "https://arxiv.org/abs/2203.02155",
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-008",
+        "found-src-009",
+        "found-src-016"
+      ]
+    },
+    {
+      "source": "clip",
+      "target": "org-openai",
+      "type": "developed_by",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165",
+        "https://arxiv.org/abs/2203.02155",
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-008",
+        "found-src-009",
+        "found-src-016"
+      ]
+    },
+    {
+      "source": "whisper",
+      "target": "org-openai",
+      "type": "developed_by",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165",
+        "https://arxiv.org/abs/2203.02155",
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-008",
+        "found-src-009",
+        "found-src-016"
+      ]
+    },
+    {
+      "source": "deepseek",
+      "target": "org-deepseek",
+      "type": "developed_by",
+      "explanation_zh": "",
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948",
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-013",
+        "found-src-014"
+      ]
+    },
+    {
+      "source": "constitutional-ai",
+      "target": "org-anthropic",
+      "type": "introduced_by",
+      "explanation_zh": "本方法的原始论文主体，而非整个AI反馈方向的唯一发明者。",
+      "source_urls": [
+        "https://arxiv.org/abs/2212.08073"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-010"
+      ]
+    },
+    {
+      "source": "react",
+      "target": "agents",
+      "type": "instance_of",
+      "explanation_zh": "agent研究范式实例。",
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "verification_status": "primary_source_checked",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-021"
+      ]
+    },
+    {
+      "source": "stop",
+      "target": "rsi",
+      "type": "investigates",
+      "explanation_zh": "受限自改进框架实验，不是已实现通用RSI的断言。",
+      "source_urls": [
+        "https://arxiv.org/abs/2310.02304"
+      ],
+      "verification_status": "research_claim_scoped",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-023"
+      ]
+    },
+    {
+      "source": "godel-machine",
+      "target": "rsi",
+      "type": "formalizes",
+      "explanation_zh": "在形式化假设下讨论自修改。",
+      "source_urls": [
+        "https://arxiv.org/abs/cs/0309048"
+      ],
+      "verification_status": "research_claim_scoped",
+      "checked_at": "2026-10-28",
+      "source_ids": [
+        "found-src-022"
+      ]
+    },
+    {
+      "source": "sarvam-1",
+      "target": "sarvam",
+      "type": "version_of",
+      "explanation_zh": "具体模型与家族分离。",
+      "source_urls": [
+        "https://huggingface.co/sarvamai/sarvam-1"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "source_ids": [
+        "found-src-034"
+      ]
+    }
+  ],
+  "coverage_gaps": [
+    "早期统计NLP、HMM/CRF、RNN/LSTM原始论文仍需单列",
+    "日本、韩国、东南亚、非洲、拉丁美洲以及其他欧洲研究生态覆盖不足",
+    "未系统枚举2025—2026最新版本；家族与具体权重/服务快照需持续补录",
+    "视频、音乐、3D、机器人和世界模型仅有类别位置，缺独立系列",
+    "许可证/商用条款、参数、训练数据与开放程度应按具体版本另行核验",
+    "JEV待用户确认，不映射JEPA",
+    "不提供当前价格、排行榜、无条件性能优越声明"
+  ],
+  "sources": [
+    {
+      "id": "found-src-001",
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "source_type": "author_textbook",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "official_page",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-002",
+      "url": "https://arxiv.org/abs/1301.3781",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-003",
+      "url": "https://arxiv.org/abs/1409.3215",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-004",
+      "url": "https://arxiv.org/abs/1409.0473",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-005",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-006",
+      "url": "https://arxiv.org/abs/1910.10683",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-007",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-008",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-009",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-010",
+      "url": "https://arxiv.org/abs/2212.08073",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-011",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-012",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-013",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-014",
+      "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "source_type": "official_repository",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "official_page",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-015",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-016",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-017",
+      "url": "https://arxiv.org/abs/2312.11805",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-018",
+      "url": "https://arxiv.org/abs/2304.08485",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-019",
+      "url": "https://arxiv.org/abs/2212.04356",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-020",
+      "url": "https://arxiv.org/abs/2112.10752",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-021",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-022",
+      "url": "https://arxiv.org/abs/cs/0309048",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-023",
+      "url": "https://arxiv.org/abs/2310.02304",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-024",
+      "url": "https://arxiv.org/abs/1804.07461",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-025",
+      "url": "https://arxiv.org/abs/2009.03300",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-026",
+      "url": "https://arxiv.org/abs/2307.09288",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-027",
+      "url": "https://arxiv.org/abs/2309.16609",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-028",
+      "url": "https://arxiv.org/abs/2310.06825",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-029",
+      "url": "https://arxiv.org/abs/2211.05100",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-030",
+      "url": "https://arxiv.org/abs/2311.16867",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-031",
+      "url": "https://arxiv.org/abs/2308.16149",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-032",
+      "url": "https://arxiv.org/abs/2402.07827",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-033",
+      "url": "https://arxiv.org/abs/2309.10305",
+      "source_type": "original_paper",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "metadata_and_abstract",
+      "not_independent_replication": true
+    },
+    {
+      "id": "found-src-034",
+      "url": "https://huggingface.co/sarvamai/sarvam-1",
+      "source_type": "official_model_card",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked",
+      "evidence_scope": "official_page",
+      "not_independent_replication": true
+    }
+  ],
+  "events": [
+    {
+      "id": "found-event-001",
+      "event_type": "paper_submission",
+      "date": "2013-01-16",
+      "date_precision": "day",
+      "title": "向量表示 / embeddings：所引论文首次提交",
+      "node_ids": [
+        "embeddings",
+        "word2vec"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1301.3781"
+      ],
+      "source_ids": [
+        "found-src-002"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-002",
+      "event_type": "paper_submission",
+      "date": "2014-09-10",
+      "date_precision": "day",
+      "title": "LSTM sequence-to-sequence：所引论文首次提交",
+      "node_ids": [
+        "seq2seq"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1409.3215"
+      ],
+      "source_ids": [
+        "found-src-003"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-003",
+      "event_type": "paper_submission",
+      "date": "2014-09-01",
+      "date_precision": "day",
+      "title": "神经注意力：软对齐：所引论文首次提交",
+      "node_ids": [
+        "attention"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1409.0473"
+      ],
+      "source_ids": [
+        "found-src-004"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-004",
+      "event_type": "paper_submission",
+      "date": "2017-06-12",
+      "date_precision": "day",
+      "title": "Transformer：所引论文首次提交",
+      "node_ids": [
+        "transformer"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1706.03762"
+      ],
+      "source_ids": [
+        "found-src-005"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-005",
+      "event_type": "paper_submission",
+      "date": "2019-10-23",
+      "date_precision": "day",
+      "title": "预训练与迁移学习：所引论文首次提交",
+      "node_ids": [
+        "pretraining",
+        "t5"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1910.10683"
+      ],
+      "source_ids": [
+        "found-src-006"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-006",
+      "event_type": "paper_submission",
+      "date": "2018-10-11",
+      "date_precision": "day",
+      "title": "BERT：所引论文首次提交",
+      "node_ids": [
+        "bert"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1810.04805"
+      ],
+      "source_ids": [
+        "found-src-007"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-007",
+      "event_type": "paper_submission",
+      "date": "2020-05-28",
+      "date_precision": "day",
+      "title": "GPT-3（2020论文）：所引论文首次提交",
+      "node_ids": [
+        "gpt-3",
+        "in-context-learning"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.14165"
+      ],
+      "source_ids": [
+        "found-src-008"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-008",
+      "event_type": "paper_submission",
+      "date": "2022-03-04",
+      "date_precision": "day",
+      "title": "监督指令微调 SFT：所引论文首次提交",
+      "node_ids": [
+        "instruction-tuning",
+        "rlhf"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2203.02155"
+      ],
+      "source_ids": [
+        "found-src-009"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-009",
+      "event_type": "paper_submission",
+      "date": "2022-12-15",
+      "date_precision": "day",
+      "title": "Constitutional AI / RLAIF：所引论文首次提交",
+      "node_ids": [
+        "constitutional-ai"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2212.08073"
+      ],
+      "source_ids": [
+        "found-src-010"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-010",
+      "event_type": "paper_submission",
+      "date": "2023-05-29",
+      "date_precision": "day",
+      "title": "Direct Preference Optimization：所引论文首次提交",
+      "node_ids": [
+        "dpo"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2305.18290"
+      ],
+      "source_ids": [
+        "found-src-011"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-011",
+      "event_type": "paper_submission",
+      "date": "2022-01-28",
+      "date_precision": "day",
+      "title": "Chain-of-Thought prompting：所引论文首次提交",
+      "node_ids": [
+        "cot"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2201.11903"
+      ],
+      "source_ids": [
+        "found-src-012"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-012",
+      "event_type": "paper_submission",
+      "date": "2025-01-22",
+      "date_precision": "day",
+      "title": "推理导向模型：所引论文首次提交",
+      "node_ids": [
+        "reasoning-models",
+        "deepseek-r1-2025"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2501.12948"
+      ],
+      "source_ids": [
+        "found-src-013"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-013",
+      "event_type": "paper_submission",
+      "date": "2020-05-22",
+      "date_precision": "day",
+      "title": "检索增强生成 RAG：所引论文首次提交",
+      "node_ids": [
+        "rag"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2005.11401"
+      ],
+      "source_ids": [
+        "found-src-015"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-014",
+      "event_type": "paper_submission",
+      "date": "2021-02-26",
+      "date_precision": "day",
+      "title": "CLIP：所引论文首次提交",
+      "node_ids": [
+        "clip"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2103.00020"
+      ],
+      "source_ids": [
+        "found-src-016"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-015",
+      "event_type": "paper_submission",
+      "date": "2023-04-17",
+      "date_precision": "day",
+      "title": "LLaVA：所引论文首次提交",
+      "node_ids": [
+        "llava"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2304.08485"
+      ],
+      "source_ids": [
+        "found-src-018"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-016",
+      "event_type": "paper_submission",
+      "date": "2022-12-06",
+      "date_precision": "day",
+      "title": "Whisper：所引论文首次提交",
+      "node_ids": [
+        "whisper"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2212.04356"
+      ],
+      "source_ids": [
+        "found-src-019"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-017",
+      "event_type": "paper_submission",
+      "date": "2021-12-20",
+      "date_precision": "day",
+      "title": "Latent Diffusion：所引论文首次提交",
+      "node_ids": [
+        "latent-diffusion"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2112.10752"
+      ],
+      "source_ids": [
+        "found-src-020"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-018",
+      "event_type": "paper_submission",
+      "date": "2022-10-06",
+      "date_precision": "day",
+      "title": "ReAct：所引论文首次提交",
+      "node_ids": [
+        "react"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2210.03629"
+      ],
+      "source_ids": [
+        "found-src-021"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-019",
+      "event_type": "paper_submission",
+      "date": "2003-09-25",
+      "date_precision": "day",
+      "title": "Gödel machine：所引论文首次提交",
+      "node_ids": [
+        "godel-machine"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/cs/0309048"
+      ],
+      "source_ids": [
+        "found-src-022"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-020",
+      "event_type": "paper_submission",
+      "date": "2023-10-03",
+      "date_precision": "day",
+      "title": "Self-Taught Optimizer (STOP)：所引论文首次提交",
+      "node_ids": [
+        "stop"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.02304"
+      ],
+      "source_ids": [
+        "found-src-023"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-021",
+      "event_type": "paper_submission",
+      "date": "2018-04-20",
+      "date_precision": "day",
+      "title": "GLUE：所引论文首次提交",
+      "node_ids": [
+        "glue"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/1804.07461"
+      ],
+      "source_ids": [
+        "found-src-024"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-022",
+      "event_type": "paper_submission",
+      "date": "2020-09-07",
+      "date_precision": "day",
+      "title": "MMLU：所引论文首次提交",
+      "node_ids": [
+        "mmlu"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2009.03300"
+      ],
+      "source_ids": [
+        "found-src-025"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-023",
+      "event_type": "paper_submission",
+      "date": "2023-07-18",
+      "date_precision": "day",
+      "title": "Llama 2：所引论文首次提交",
+      "node_ids": [
+        "llama-2"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2307.09288"
+      ],
+      "source_ids": [
+        "found-src-026"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-024",
+      "event_type": "paper_submission",
+      "date": "2023-09-28",
+      "date_precision": "day",
+      "title": "Qwen（2023首篇报告）：所引论文首次提交",
+      "node_ids": [
+        "qwen-2023"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.16609"
+      ],
+      "source_ids": [
+        "found-src-027"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-025",
+      "event_type": "paper_submission",
+      "date": "2023-10-10",
+      "date_precision": "day",
+      "title": "Mistral 7B v0.1：所引论文首次提交",
+      "node_ids": [
+        "mistral-7b-v0-1"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2310.06825"
+      ],
+      "source_ids": [
+        "found-src-028"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-026",
+      "event_type": "paper_submission",
+      "date": "2022-11-09",
+      "date_precision": "day",
+      "title": "BLOOM 176B：所引论文首次提交",
+      "node_ids": [
+        "bloom-176b"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2211.05100"
+      ],
+      "source_ids": [
+        "found-src-029"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-027",
+      "event_type": "paper_submission",
+      "date": "2023-12-19",
+      "date_precision": "day",
+      "title": "Gemini（首代技术报告）：所引论文首次提交",
+      "node_ids": [
+        "gemini-1-report"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2312.11805"
+      ],
+      "source_ids": [
+        "found-src-017"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-028",
+      "event_type": "paper_submission",
+      "date": "2023-11-28",
+      "date_precision": "day",
+      "title": "Falcon 180B：所引论文首次提交",
+      "node_ids": [
+        "falcon-180b"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2311.16867"
+      ],
+      "source_ids": [
+        "found-src-030"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-029",
+      "event_type": "paper_submission",
+      "date": "2023-08-30",
+      "date_precision": "day",
+      "title": "Jais 13B：所引论文首次提交",
+      "node_ids": [
+        "jais-13b"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2308.16149"
+      ],
+      "source_ids": [
+        "found-src-031"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-030",
+      "event_type": "paper_submission",
+      "date": "2024-02-12",
+      "date_precision": "day",
+      "title": "Aya 101：所引论文首次提交",
+      "node_ids": [
+        "aya-101"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2402.07827"
+      ],
+      "source_ids": [
+        "found-src-032"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-031",
+      "event_type": "paper_submission",
+      "date": "2023-09-19",
+      "date_precision": "day",
+      "title": "Baichuan 2：所引论文首次提交",
+      "node_ids": [
+        "baichuan-2"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2309.10305"
+      ],
+      "source_ids": [
+        "found-src-033"
+      ],
+      "evidence_locator": "arXiv submission history [v1]",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "found-event-032",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "GPT-3（2020论文）：announcement日期待独立核验",
+      "node_ids": [
+        "gpt-3"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-033",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "GPT-3（2020论文）：weights_release日期待独立核验",
+      "node_ids": [
+        "gpt-3"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-034",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "GPT-3（2020论文）：api_launch日期待独立核验",
+      "node_ids": [
+        "gpt-3"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-035",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "GPT-3（2020论文）：report_publication日期待独立核验",
+      "node_ids": [
+        "gpt-3"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-036",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "DeepSeek-R1（2025原始报告）：announcement日期待独立核验",
+      "node_ids": [
+        "deepseek-r1-2025"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-037",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "DeepSeek-R1（2025原始报告）：weights_release日期待独立核验",
+      "node_ids": [
+        "deepseek-r1-2025"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-038",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "DeepSeek-R1（2025原始报告）：api_launch日期待独立核验",
+      "node_ids": [
+        "deepseek-r1-2025"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-039",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "DeepSeek-R1（2025原始报告）：report_publication日期待独立核验",
+      "node_ids": [
+        "deepseek-r1-2025"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-040",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Llama 2：announcement日期待独立核验",
+      "node_ids": [
+        "llama-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-041",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Llama 2：weights_release日期待独立核验",
+      "node_ids": [
+        "llama-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-042",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Llama 2：api_launch日期待独立核验",
+      "node_ids": [
+        "llama-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-043",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Llama 2：report_publication日期待独立核验",
+      "node_ids": [
+        "llama-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-044",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Qwen（2023首篇报告）：announcement日期待独立核验",
+      "node_ids": [
+        "qwen-2023"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-045",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Qwen（2023首篇报告）：weights_release日期待独立核验",
+      "node_ids": [
+        "qwen-2023"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-046",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Qwen（2023首篇报告）：api_launch日期待独立核验",
+      "node_ids": [
+        "qwen-2023"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-047",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Qwen（2023首篇报告）：report_publication日期待独立核验",
+      "node_ids": [
+        "qwen-2023"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-048",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Mistral 7B v0.1：announcement日期待独立核验",
+      "node_ids": [
+        "mistral-7b-v0-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-049",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Mistral 7B v0.1：weights_release日期待独立核验",
+      "node_ids": [
+        "mistral-7b-v0-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-050",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Mistral 7B v0.1：api_launch日期待独立核验",
+      "node_ids": [
+        "mistral-7b-v0-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-051",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Mistral 7B v0.1：report_publication日期待独立核验",
+      "node_ids": [
+        "mistral-7b-v0-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-052",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "BLOOM 176B：announcement日期待独立核验",
+      "node_ids": [
+        "bloom-176b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-053",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "BLOOM 176B：weights_release日期待独立核验",
+      "node_ids": [
+        "bloom-176b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-054",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "BLOOM 176B：api_launch日期待独立核验",
+      "node_ids": [
+        "bloom-176b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-055",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "BLOOM 176B：report_publication日期待独立核验",
+      "node_ids": [
+        "bloom-176b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-056",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Gemini（首代技术报告）：announcement日期待独立核验",
+      "node_ids": [
+        "gemini-1-report"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-057",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Gemini（首代技术报告）：weights_release日期待独立核验",
+      "node_ids": [
+        "gemini-1-report"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-058",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Gemini（首代技术报告）：api_launch日期待独立核验",
+      "node_ids": [
+        "gemini-1-report"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-059",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Gemini（首代技术报告）：report_publication日期待独立核验",
+      "node_ids": [
+        "gemini-1-report"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-060",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Falcon 180B：announcement日期待独立核验",
+      "node_ids": [
+        "falcon-180b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-061",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Falcon 180B：weights_release日期待独立核验",
+      "node_ids": [
+        "falcon-180b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-062",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Falcon 180B：api_launch日期待独立核验",
+      "node_ids": [
+        "falcon-180b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-063",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Falcon 180B：report_publication日期待独立核验",
+      "node_ids": [
+        "falcon-180b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-064",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Jais 13B：announcement日期待独立核验",
+      "node_ids": [
+        "jais-13b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-065",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Jais 13B：weights_release日期待独立核验",
+      "node_ids": [
+        "jais-13b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-066",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Jais 13B：api_launch日期待独立核验",
+      "node_ids": [
+        "jais-13b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-067",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Jais 13B：report_publication日期待独立核验",
+      "node_ids": [
+        "jais-13b"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-068",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Aya 101：announcement日期待独立核验",
+      "node_ids": [
+        "aya-101"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-069",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Aya 101：weights_release日期待独立核验",
+      "node_ids": [
+        "aya-101"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-070",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Aya 101：api_launch日期待独立核验",
+      "node_ids": [
+        "aya-101"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-071",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Aya 101：report_publication日期待独立核验",
+      "node_ids": [
+        "aya-101"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-072",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Baichuan 2：announcement日期待独立核验",
+      "node_ids": [
+        "baichuan-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-073",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Baichuan 2：weights_release日期待独立核验",
+      "node_ids": [
+        "baichuan-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-074",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Baichuan 2：api_launch日期待独立核验",
+      "node_ids": [
+        "baichuan-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-075",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Baichuan 2：report_publication日期待独立核验",
+      "node_ids": [
+        "baichuan-2"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-076",
+      "event_type": "announcement",
+      "date": null,
+      "date_precision": null,
+      "title": "Sarvam-1：announcement日期待独立核验",
+      "node_ids": [
+        "sarvam-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-077",
+      "event_type": "weights_release",
+      "date": null,
+      "date_precision": null,
+      "title": "Sarvam-1：weights_release日期待独立核验",
+      "node_ids": [
+        "sarvam-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-078",
+      "event_type": "api_launch",
+      "date": null,
+      "date_precision": null,
+      "title": "Sarvam-1：api_launch日期待独立核验",
+      "node_ids": [
+        "sarvam-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    },
+    {
+      "id": "found-event-079",
+      "event_type": "report_publication",
+      "date": null,
+      "date_precision": null,
+      "title": "Sarvam-1：report_publication日期待独立核验",
+      "node_ids": [
+        "sarvam-1"
+      ],
+      "source_urls": [],
+      "source_ids": [],
+      "checked_at": "2026-10-28",
+      "verification_status": "not_checked",
+      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+    }
+  ],
+  "event_policy": "paper_submission、report_publication、announcement、weights_release、api_launch分别记录。无独立日期证据置null；不把arXiv上传等同所有发布事件。"
+}
