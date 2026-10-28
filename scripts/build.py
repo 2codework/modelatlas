@@ -122,6 +122,7 @@ def normalize(bundles):
         require(snap.get('limitations_zh'),'evaluation requires limitations')
         if snap.get('node_id'): require(snap['node_id'] in sets['nodes'],'dangling evaluation node')
     result['coverage_gaps']=[('已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。' if '尚未导入可比' in str(g) else g) for g in result['coverage_gaps']]
+    result['coverage_gaps']=[('视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。' if g=='视频、音乐、3D、机器人和世界模型仅有类别位置，缺独立系列' else g) for g in result['coverage_gaps']]
     # Derived view fields are separate; source records remain byte-equivalent in research/.
     org_edges={e['source']:e['target'] for e in result['edges'] if e['type'] in ('developed_by','introduced_by')}
     byid={n['id']:n for n in result['nodes']}

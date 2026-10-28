@@ -12,3 +12,10 @@ class Creative(unittest.TestCase):
  def test_duplicate_case_fails(self):
   self.d['cases'].append(copy.deepcopy(self.d['cases'][0]))
   with self.assertRaisesRegex(ValueError,'duplicate'):B.normalize([self.d])
+
+ def test_current_coverage_keeps_real_gaps(self):
+  bundles=[json.loads(p.read_text()) for p in (R/'data/research').glob('*.json')]
+  result=B.normalize(bundles);text=' '.join(map(str,result['coverage_gaps']))
+  self.assertNotIn('视频、音乐、3D、机器人和世界模型仅有类别位置',text)
+  self.assertIn('视频与音乐已初步纳入相关技术节点',text)
+  self.assertIn('3D、机器人和世界模型仍缺独立系列',text)
