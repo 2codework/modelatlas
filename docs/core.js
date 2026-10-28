@@ -22,5 +22,18 @@ function hasExplicitUnknownAvailability(value){
  const label=value.trim();
  return label===''||label==='未核验'||/^unknown\b/i.test(label);
 }
-const api={safeURL,parseProgress,search,deepLinkID,hasExplicitUnknownAvailability};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
+// Exact metadata vocabulary only. Editorial classification takes precedence over
+// source review: a citation does not turn a teaching comparison into integration.
+function relationDisplay(edge){
+ const e=edge&&typeof edge==='object'?edge:{};
+ const editorialTypes=['editorial_learning_relation','editorial_learning_order','learning_path','learning_prerequisite','prerequisite_for','prerequisite_of'];
+ const editorialEvidence=['editorial_learning_order','editorial_learning_relation','editorial_learning_relation_not_vendor_integration_claim','editorial_cross_module'];
+ const editorialStatus=['editorial_learning_relation'];
+ if(editorialTypes.includes(e.type)||editorialEvidence.includes(e.evidence_type)||editorialStatus.includes(e.verification_status))return {kind:'editorial',label:'编辑学习对照，非厂商集成'};
+ if(e.type==='documented_migration_target'&&e.evidence_type==='official_documented_product_migration')return {kind:'documented',label:'官方文档关系，非运行核验'};
+ const officialStatus=['primary_source_checked','primary_metadata_reviewed_not_executed','primary_sources_reviewed_not_executed'];
+ if(officialStatus.includes(e.verification_status))return {kind:'documented',label:'来源文档关系，本库未运行核验'};
+ return {kind:'unknown',label:'关系性质待核验，非运行证明'};
+}
+const api={relationDisplay,safeURL,parseProgress,search,deepLinkID,hasExplicitUnknownAvailability};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

@@ -1,0 +1,34 @@
+{
+  "baseline_json_object_equal": true,
+  "counts_match": true,
+  "all_endpoints_existing": true,
+  "all_source_ids_existing": true,
+  "no_existing_edge_either_direction": true,
+  "candidate_pairs_unique": true,
+  "canonical_worktree_clean": true,
+  "canonical_modified": false,
+  "product_sdk_model_account_executed": false,
+  "graph_scope": {
+    "input": "canonical dist/data.json 的 nodes 与 edges（D.nodes / D.edges）",
+    "degree": "只计算 D.edges 中 source/target 端点的入边+出边；度数为0称本内部图孤立",
+    "connectivity": "忽略 D.edges 方向计算弱连通分量；不代表网页导航的连通性",
+    "excluded_links": [
+      "practice registry / learning_paths 中的实践或学习路径链接",
+      "nodes.agentwork_links 及其他 AgentWork 跨站链接",
+      "source_urls、来源链接、正文 Markdown 链接及网页导航链接"
+    ],
+    "interpretation": "89个孤立节点仅指 D.edges 内无边，不等于这些节点或网页没有任何链接；不据连接数宣称知识准确性提高。"
+  },
+  "excluded_links": [
+    "practice registry / learning_paths 中的实践或学习路径链接",
+    "nodes.agentwork_links 及其他 AgentWork 跨站链接",
+    "source_urls、来源链接、正文 Markdown 链接及网页导航链接"
+  ],
+  "after_state": "仅未应用的静态候选复算；canonical仍为242节点/139边",
+  "r1_bytes_preserved": true,
+  "candidate_identity_and_relation_claims_unchanged": true,
+  "only_edge_01_unknown_and_source_qa_enriched": true,
+  "graph_scope_explicit": true,
+  "independent_qa_statistics_agree": true,
+  "revision_status": "frozen_after_independent_qa_comments"
+}

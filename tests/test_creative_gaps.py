@@ -53,7 +53,10 @@ class CreativeGapTests(unittest.TestCase):
   for kind in ['nodes','sources']:
    current={x['id']:x for x in actual[kind]}
    for id,digest in frozen[kind].items():self.assertEqual(h(current[id]),digest,id)
-  for key,digest in frozen['preserved_fields'].items():self.assertEqual(h(actual[key]),digest,key)
+  self.assertEqual(len(actual['edges']),151)
+  for key,digest in frozen['preserved_fields'].items():
+   preserved=actual[key][:139] if key=='edges' else actual[key]
+   self.assertEqual(h(preserved),digest,key)
  def test_source_r2_sha_matches_final_qa(self):
   import hashlib
   p=ROOT/'learning/creative-gaps/raw/creative-learning-gap-research-r2/creative-learning-gap-research-r2.json'

@@ -1,0 +1,490 @@
+{
+  "schema_version": "knowledge-graph-links-research-r2",
+  "baseline": {
+    "requested_semantic_head": "d6b2c248ee73317fcce4cca8a031b6a2722507df",
+    "observed_head": "5f4f7f3ed69a62e0a601b98f3056a72ef6cb85c1",
+    "note": "父任务说明新 HEAD 5f4f7f3ed69a62e0a601b98f3056a72ef6cb85c1 仅紧凑 JSON 排版且对象相同；本研究另在 validation 中检查固定提交对象。",
+    "data_sha256": "53aecb7eb2a9bc96460293bc1eda4f48ef4f3a726950bb2408078fbcc80853b9"
+  },
+  "scope": "有限代表性关系候选；非全集，未整合，非运行验证",
+  "edges": [
+    {
+      "id": "kgl-r1-01",
+      "source": "office-zapier-agents",
+      "target": "office-ai-by-zapier",
+      "type": "documented_migration_target",
+      "explanation_zh": "官方明确旧 Agents 向 Zap 编辑器里的 AI by Zapier 迁移；教学重点是迁移前盘点触发器、工具和审批，不将“迁移目标”误写为已停用。",
+      "evidence_type": "official_documented_product_migration",
+      "source_ids": [
+        "office-src-zap-migrate"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "office-src-zap-migrate",
+          "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+          "evidence_mode": "本轮官方页复核",
+          "locator": "Why Agents is migrating; When to migrate; How to migrate; lines 6–18, 33–53",
+          "supported_claim_zh": "官方迁移目标；迁移仍保留单个 AI step，未给 Agents 关闭日期。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false,
+          "independent_qa_r2": {
+            "reviewer": "independent QA / audit_regional_platform_sources",
+            "checked_at": "2026-10-28",
+            "status": "official_page_independently_opened",
+            "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+            "locator": "L35; L40–53; L69; L90; L120; L125; L127–132",
+            "supported_claim_zh": "未定停用日；单个AI step；默认工具不暂停，须逐工具启用批准；on-demand无直接等价触发；组织级BYOM未支持；列出的五种知识源未支持，Q4 2026为计划；支持源仍有规模/加载/权限差异。",
+            "scope": "只补迁移限制；不扩大迁移关系，不把计划当已上线。"
+          }
+        }
+      ],
+      "unknown_boundary_zh": "官方未定 Agents 停用日；每账户迁移状态及实际运行均 unknown，不宣称迁移完成或全部功能等价。工具默认不暂停，须逐工具开启 Require approval；聊天 on-demand 暂无直接等价触发；组织级 BYOM 未支持。HubSpot/Asana/Zendesk/Zoom/Jira 知识源尚未支持，Q4 2026 仅为计划；已支持来源仍有规模、加载和权限差异。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "旧入口到文档迁移目标"
+    },
+    {
+      "id": "kgl-r1-02",
+      "source": "office-n8n-ai-agent",
+      "target": "regional-dify",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "对照工具执行前的人审与工作流 Human Input 暂停：练习画出“何处暂停、谁能批准、拒绝后如何继续”的不同边界。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "office-src-n8n-hitl",
+        "regional-src-dify-human"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "office-src-n8n-hitl",
+          "url": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Human-in-the-loop for tools; Approve/Deny; raw_office_record.confirmation_boundary",
+          "supported_claim_zh": "接到 human review 的工具调用前暂停，批准按给定输入执行，拒绝取消操作并通知 AI。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "regional-src-dify-human",
+          "url": "https://docs.dify.ai/en/cloud/use-dify/nodes/human-input",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Human Input: pause, delivery methods, first response",
+          "supported_claim_zh": "工作流暂停等待输入；邮件链接持有者可响应，首个响应关闭请求。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不是互相集成或等价安全保证；n8n 仅接入审核的工具受保护，Dify 邮件链接持有者可响应；未验证租户权限。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-03",
+      "source": "regional-coze-studio",
+      "target": "regional-dify",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "同为可自托管的 Agent/工作流平台，学习将平台、模型服务、插件凭据和部署责任拆开；源码许可不可由“开源平台”标签统一推导。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "regional-src-coze-repo",
+        "regional-src-coze-license",
+        "regional-src-dify-repo",
+        "regional-src-dify-license"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "regional-src-coze-repo",
+          "url": "https://github.com/coze-dev/coze-studio",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "README: features, model setup, security warning",
+          "supported_claim_zh": "可视化 Agent/工作流平台，模型和插件另配置；公开部署有安全提示。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "regional-src-coze-license",
+          "url": "https://github.com/coze-dev/coze-studio/blob/main/LICENSE-APACHE",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "LICENSE-APACHE",
+          "supported_claim_zh": "该许可证文件为 Apache-2.0。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "regional-src-dify-repo",
+          "url": "https://github.com/langgenius/dify",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "README: features / deployment",
+          "supported_claim_zh": "Agent/RAG/workflow 平台，有云和自托管部署。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "regional-src-dify-license",
+          "url": "https://github.com/langgenius/dify/blob/main/LICENSE",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "LICENSE: additional conditions",
+          "supported_claim_zh": "修改版 Apache-2.0，带多租户和前端品牌条件；非法律建议。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不比较优劣、不声称兼容；两者 main 未锁定；Coze 托管产品不等同 Studio，Dify 附加条件不扩推为法律结论。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-04",
+      "source": "assistant-chatgpt-deep-research",
+      "target": "assistant-claude-research",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "研究助手的方法对照：来源范围、引用核验与连接器调用权限需要分开；ChatGPT Chat 研究使用应用读取动作，Claude Research 已启用连接工具可自动调用。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "assistant-src-oa-dr-help",
+        "assistant-src-cl-research"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "assistant-src-oa-dr-help",
+          "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L15–24; L31–59; L62–88",
+          "supported_claim_zh": "Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "assistant-src-cl-research",
+          "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Availability; Use research; FAQ",
+          "supported_claim_zh": "Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不推定同一模型、互通或同一权限机制；Claude mobile 与 web/desktop 来源不同，本地 MCP 不等同 Research 连接器；账户资格未知。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-05",
+      "source": "assistant-gemini-apps-deep-research",
+      "target": "assistant-chatgpt-deep-research",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "以“先审计划、再审来源、最后核对引文”形成跨研究助手学习路径；两者文档均支持研究计划审改。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "assistant-src-g-dr",
+        "assistant-src-oa-dr-help"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "assistant-src-g-dr",
+          "url": "https://support.google.com/gemini/answer/15719111?hl=en",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L19–55; L64–104",
+          "supported_claim_zh": "18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "assistant-src-oa-dr-help",
+          "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L15–24; L31–59; L62–88",
+          "supported_claim_zh": "Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "仅 Gemini Apps 与 ChatGPT Chat 范围，不包含 API、Work 或 Workspace Studio；额度、客户端和来源接入不能相互继承。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-06",
+      "source": "assistant-perplexity-research",
+      "target": "assistant-perplexity-create-files-apps",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "把研究报告与可操作产物分开学习：前者主张必须可追溯，后者表格公式、文件和简单应用需要单独验收。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "assistant-src-p-pro"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "assistant-src-p-pro",
+          "url": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Research Mode; Create files and apps",
+          "supported_claim_zh": "Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "同一产品里的两功能也不推出自动交接、相同模型或审批；生成/发布具体人审机制和账户额度未知，历史 Labs 全量迁移未知。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-07",
+      "source": "wm-genie",
+      "target": "vid-cogvideox",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "区分可行动控制的生成环境与文本条件视频生成：Genie 以潜在动作逐帧交互，CogVideoX 论文描述视频扩散 Transformer。学会问“动作改变未来”还是“文字描述画面”。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "wm-src-paper-genie",
+        "vid-src-cogpaper"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "wm-src-paper-genie",
+          "url": "https://arxiv.org/abs/2402.15391",
+          "evidence_mode": "本轮作者论文摘要复核",
+          "locator": "arXiv abstract lines 14–16; v1",
+          "supported_claim_zh": "无动作标签视频训练；潜在动作模型与逐帧可控生成环境。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "vid-src-cogpaper",
+          "url": "https://arxiv.org/abs/2408.06072",
+          "evidence_mode": "本轮作者论文摘要复核",
+          "locator": "arXiv v3 abstract lines 15–18",
+          "supported_claim_zh": "文本到视频扩散 Transformer，3D VAE 压缩时空维度。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不是技术派生、组件依赖或同等物理真实性；Genie 限 2024 研究系统，CogVideoX 来源为论文 v3；不推广到各版本规格。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-08",
+      "source": "wm-vjepa",
+      "target": "vid-cogvideox",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "对照视频表征预测与像素视频生成：V-JEPA 在抽象表征空间预测遮挡部分，CogVideoX 以 3D VAE 和扩散 Transformer 生成视频。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "wm-src-vjepa-blog",
+        "vid-src-cogpaper"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "wm-src-vjepa-blog",
+          "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+          "evidence_mode": "本轮官方页复核",
+          "locator": "Video JEPA in focus; lines 55–62",
+          "supported_claim_zh": "非生成模型，在抽象表征空间预测遮挡的视频区域。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "vid-src-cogpaper",
+          "url": "https://arxiv.org/abs/2408.06072",
+          "evidence_mode": "本轮作者论文摘要复核",
+          "locator": "arXiv v3 abstract lines 15–18",
+          "supported_claim_zh": "文本到视频扩散 Transformer，3D VAE 压缩时空维度。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不是互相使用或性能排名；原 V-JEPA 不等于后续动作条件 V-JEPA 2；预测表征不自动构成机器人规划能力。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-09",
+      "source": "creative-express-ai-assistant",
+      "target": "design-canva-template",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "设计任务的两种约束方式：会话局部修改及手工接管，对照结构化品牌模板填充；用文字、版式不变量和人工验收连接，而非把二者都称生成模型。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "creative-gap-src-express-how",
+        "design-src-canva-autofill"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "creative-gap-src-express-how",
+          "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L712–750",
+          "supported_claim_zh": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "design-src-canva-autofill",
+          "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Autofill guide: brand template data filling",
+          "supported_claim_zh": "数据填充品牌模板的文档工作流。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "无跨产品集成、素材互用或权限继承结论；Express 地域/计划与 Canva 模板资格独立核验；实际保真未知。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-10",
+      "source": "creative-underlord",
+      "target": "vid-kdenlive",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "把 AI 粗剪审查接到通用剪辑交付知识：Underlord 恢复需检查全项目与协作者变更，Kdenlive 代理预览与原片渲染需区分；二者共同用于讲“预览不是最终交付验收”。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "creative-gap-src-underlord-help",
+        "creative-gap-src-underlord-history-independent",
+        "creative-gap-src-kden-proxy"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "creative-gap-src-underlord-help",
+          "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L249–269",
+          "supported_claim_zh": "Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "creative-gap-src-underlord-history-independent",
+          "url": "https://help.descript.com/working-in-projects/version-history",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "L249–252",
+          "supported_claim_zh": "可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "creative-gap-src-kden-proxy",
+          "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Proxy Clip lines 352–359",
+          "supported_claim_zh": "26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "纯编辑方法对照，不保证项目格式互通、自动导入或回滚等价；未测试恢复、代理或渲染；不保证无限版本保留。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-11",
+      "source": "music-musicgen",
+      "target": "creative-ableton-live",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "区分音乐生成草图与录音编辑：MusicGen 是条件音乐模型，Live comping 从多个录次选择片段；教学上分别检查创意内容与接点/同步，不把 DAW 当音乐 Agent。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "music-src-musicgen",
+        "creative-gap-src-ableton-comp"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "music-src-musicgen",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+          "evidence_mode": "本轮官方模型卡复核",
+          "locator": "Model details lines 178–184; Intended use lines 187–194",
+          "supported_claim_zh": "v1 为音频 token 自回归音乐模型，含文本条件与旋律引导变体；代码 MIT，权重 CC-BY-NC 4.0。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "creative-gap-src-ableton-comp",
+          "url": "https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "Comping FAQ lines 13–27, 59–61",
+          "supported_claim_zh": "Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不宣称原生集成或输出可商用；MusicGen 权重许可与 Live/录音/素材许可独立，实际导入与音质未知。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    },
+    {
+      "id": "kgl-r1-12",
+      "source": "creative-indesign",
+      "target": "design-c2pa",
+      "type": "editorial_learning_relation",
+      "explanation_zh": "区分交付打包、资产授权与内容来源凭证：InDesign Package 组织交付资产，C2PA 描述签名和来源链；有包或有效凭证都不等于拥有字体/素材版权。",
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "source_ids": [
+        "creative-gap-src-indesign-package",
+        "creative-gap-src-font-licensing-faq-independent",
+        "design-src-c2pa"
+      ],
+      "official_evidence": [
+        {
+          "source_id": "creative-gap-src-indesign-package",
+          "url": "https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "body lines 1414–1439",
+          "supported_claim_zh": "File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "creative-gap-src-font-licensing-faq-independent",
+          "url": "https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "lines 116–117,128–130,137–152",
+          "supported_claim_zh": "不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        },
+        {
+          "source_id": "design-src-c2pa",
+          "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+          "evidence_mode": "复用已收录原始官方文档研究",
+          "locator": "C2PA Specification 2.5: claims, assertions, signatures, validation",
+          "supported_claim_zh": "签名、绑定、断言与验证用于来源链，不能单独证明内容真实或版权所有。",
+          "checked_at": "2026-10-28",
+          "runtime_verified": false
+        }
+      ],
+      "unknown_boundary_zh": "不声称 InDesign Package 实现 C2PA 或自动附凭证；具体文件签名、完整版权与收件方许可均未验证。",
+      "verification_status": "documentation_review_not_runtime_verified",
+      "integration_status": "candidate_only_not_applied",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向"
+    }
+  ],
+  "graph_scope": {
+    "input": "canonical dist/data.json 的 nodes 与 edges（D.nodes / D.edges）",
+    "degree": "只计算 D.edges 中 source/target 端点的入边+出边；度数为0称本内部图孤立",
+    "connectivity": "忽略 D.edges 方向计算弱连通分量；不代表网页导航的连通性",
+    "excluded_links": [
+      "practice registry / learning_paths 中的实践或学习路径链接",
+      "nodes.agentwork_links 及其他 AgentWork 跨站链接",
+      "source_urls、来源链接、正文 Markdown 链接及网页导航链接"
+    ],
+    "interpretation": "89个孤立节点仅指 D.edges 内无边，不等于这些节点或网页没有任何链接；不据连接数宣称知识准确性提高。"
+  },
+  "excluded_links": [
+    "practice registry / learning_paths 中的实践或学习路径链接",
+    "nodes.agentwork_links 及其他 AgentWork 跨站链接",
+    "source_urls、来源链接、正文 Markdown 链接及网页导航链接"
+  ],
+  "after_state": "仅未应用的静态候选复算；canonical仍为242节点/139边"
+}

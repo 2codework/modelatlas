@@ -11,7 +11,7 @@ class CatalogTests(unittest.TestCase):
   if rehash:a['accepted'][0]['sha256']=V.digest(f);m.write_text(json.dumps(a))
   return p
  def test_current_aggregate_counts_and_preserved_catalog(self):
-  self.assertEqual((len(self.data['nodes']),len(self.data['edges']),len(self.data['events'])),(242,139,166));self.assertEqual(sum(bool(e['date']) for e in self.data['events']),91);self.assertEqual(len(self.catalog['records']),77)
+  self.assertEqual((len(self.data['nodes']),len(self.data['edges']),len(self.data['events'])),(242,151,166));self.assertEqual(sum(bool(e['date']) for e in self.data['events']),91);self.assertEqual(len(self.catalog['records']),77)
  def test_lossless_all_fields_and_bytes(self):
   for b in self.catalog['bundles']:
    raw=json.loads((ROOT/'data/vendor-catalog'/b['file']).read_text());self.assertEqual(raw,b['raw'])

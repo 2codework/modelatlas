@@ -7683,6 +7683,121 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - transformer → editorial_learning_order → wm-ijepa · editorial_learning_relation · wm-src-paper-ijepa, wm-src-ijepa-blog, wm-src-ijepa-repo, wm-src-ijepa-license
 - multimodal → editorial_learning_order → wm-openvla · editorial_learning_relation · wm-src-paper-openvla, wm-src-openvla-repo, wm-src-openvla-card
 - agents → editorial_learning_order → wm-dreamer · editorial_learning_relation · wm-src-paper-dreamer
+- office-zapier-agents → documented_migration_target → office-ai-by-zapier · documentation_review_not_runtime_verified · office-src-zap-migrate
+- office-n8n-ai-agent → editorial_learning_relation → regional-dify · documentation_review_not_runtime_verified · office-src-n8n-hitl, regional-src-dify-human
+- regional-coze-studio → editorial_learning_relation → regional-dify · documentation_review_not_runtime_verified · regional-src-coze-repo, regional-src-coze-license, regional-src-dify-repo, regional-src-dify-license
+- assistant-chatgpt-deep-research → editorial_learning_relation → assistant-claude-research · documentation_review_not_runtime_verified · assistant-src-oa-dr-help, assistant-src-cl-research
+- assistant-gemini-apps-deep-research → editorial_learning_relation → assistant-chatgpt-deep-research · documentation_review_not_runtime_verified · assistant-src-g-dr, assistant-src-oa-dr-help
+- assistant-perplexity-research → editorial_learning_relation → assistant-perplexity-create-files-apps · documentation_review_not_runtime_verified · assistant-src-p-pro
+- wm-genie → editorial_learning_relation → vid-cogvideox · documentation_review_not_runtime_verified · wm-src-paper-genie, vid-src-cogpaper
+- wm-vjepa → editorial_learning_relation → vid-cogvideox · documentation_review_not_runtime_verified · wm-src-vjepa-blog, vid-src-cogpaper
+- creative-express-ai-assistant → editorial_learning_relation → design-canva-template · documentation_review_not_runtime_verified · creative-gap-src-express-how, design-src-canva-autofill
+- creative-underlord → editorial_learning_relation → vid-kdenlive · documentation_review_not_runtime_verified · creative-gap-src-underlord-help, creative-gap-src-underlord-history-independent, creative-gap-src-kden-proxy
+- music-musicgen → editorial_learning_relation → creative-ableton-live · documentation_review_not_runtime_verified · music-src-musicgen, creative-gap-src-ableton-comp
+- creative-indesign → editorial_learning_relation → design-c2pa · documentation_review_not_runtime_verified · creative-gap-src-indesign-package, creative-gap-src-font-licensing-faq-independent, design-src-c2pa
+
+## 新增12条知识关联 · 接纳状态与阅读边界
+1条官方文档迁移目标、11条编辑学习对照。迁移目标不表示迁移已完成、旧服务已关闭或功能完全等价；编辑箭头仅为阅读对照，不是厂商整合、模型派生或权限继承。
+接纳到本地构建关系不代表产品运行或网站部署。原始研究candidate_only_not_applied保留原状，派生应用索引单独记录候选ID及来源对象哈希。
+只统计D.edges内部图：139→151边，89→72孤立，120→108弱连通分量。排除practice registry、AgentWork跨站、来源与网页导航链接；孤立不等于网页无链接。
+
+### kgl-r1-01 · 官方文档迁移关系（非运行核验）
+office-zapier-agents → office-ai-by-zapier
+官方明确旧 Agents 向 Zap 编辑器里的 AI by Zapier 迁移；教学重点是迁移前盘点触发器、工具和审批，不将“迁移目标”误写为已停用。
+- 方向：旧入口到文档迁移目标
+- 未知边界：官方未定 Agents 停用日；每账户迁移状态及实际运行均 unknown，不宣称迁移完成或全部功能等价。工具默认不暂停，须逐工具开启 Require approval；聊天 on-demand 暂无直接等价触发；组织级 BYOM 未支持。HubSpot/Asana/Zendesk/Zoom/Jira 知识源尚未支持，Q4 2026 仅为计划；已支持来源仍有规模、加载和权限差异。
+- 来源 office-src-zap-migrate：https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier · Why Agents is migrating; When to migrate; How to migrate; lines 6–18, 33–53
+
+### kgl-r1-02 · 编辑学习对照（非厂商集成）
+office-n8n-ai-agent → regional-dify
+对照工具执行前的人审与工作流 Human Input 暂停：练习画出“何处暂停、谁能批准、拒绝后如何继续”的不同边界。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不是互相集成或等价安全保证；n8n 仅接入审核的工具受保护，Dify 邮件链接持有者可响应；未验证租户权限。
+- 来源 office-src-n8n-hitl：https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md · Human-in-the-loop for tools; Approve/Deny; raw_office_record.confirmation_boundary
+- 来源 regional-src-dify-human：https://docs.dify.ai/en/cloud/use-dify/nodes/human-input · Human Input: pause, delivery methods, first response
+
+### kgl-r1-03 · 编辑学习对照（非厂商集成）
+regional-coze-studio → regional-dify
+同为可自托管的 Agent/工作流平台，学习将平台、模型服务、插件凭据和部署责任拆开；源码许可不可由“开源平台”标签统一推导。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不比较优劣、不声称兼容；两者 main 未锁定；Coze 托管产品不等同 Studio，Dify 附加条件不扩推为法律结论。
+- 来源 regional-src-coze-repo：https://github.com/coze-dev/coze-studio · README: features, model setup, security warning
+- 来源 regional-src-coze-license：https://github.com/coze-dev/coze-studio/blob/main/LICENSE-APACHE · LICENSE-APACHE
+- 来源 regional-src-dify-repo：https://github.com/langgenius/dify · README: features / deployment
+- 来源 regional-src-dify-license：https://github.com/langgenius/dify/blob/main/LICENSE · LICENSE: additional conditions
+
+### kgl-r1-04 · 编辑学习对照（非厂商集成）
+assistant-chatgpt-deep-research → assistant-claude-research
+研究助手的方法对照：来源范围、引用核验与连接器调用权限需要分开；ChatGPT Chat 研究使用应用读取动作，Claude Research 已启用连接工具可自动调用。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不推定同一模型、互通或同一权限机制；Claude mobile 与 web/desktop 来源不同，本地 MCP 不等同 Research 连接器；账户资格未知。
+- 来源 assistant-src-oa-dr-help：https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt · L15–24; L31–59; L62–88
+- 来源 assistant-src-cl-research：https://support.claude.com/en/articles/11088861-use-research-on-claude · Availability; Use research; FAQ
+
+### kgl-r1-05 · 编辑学习对照（非厂商集成）
+assistant-gemini-apps-deep-research → assistant-chatgpt-deep-research
+以“先审计划、再审来源、最后核对引文”形成跨研究助手学习路径；两者文档均支持研究计划审改。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：仅 Gemini Apps 与 ChatGPT Chat 范围，不包含 API、Work 或 Workspace Studio；额度、客户端和来源接入不能相互继承。
+- 来源 assistant-src-g-dr：https://support.google.com/gemini/answer/15719111?hl=en · L19–55; L64–104
+- 来源 assistant-src-oa-dr-help：https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt · L15–24; L31–59; L62–88
+
+### kgl-r1-06 · 编辑学习对照（非厂商集成）
+assistant-perplexity-research → assistant-perplexity-create-files-apps
+把研究报告与可操作产物分开学习：前者主张必须可追溯，后者表格公式、文件和简单应用需要单独验收。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：同一产品里的两功能也不推出自动交接、相同模型或审批；生成/发布具体人审机制和账户额度未知，历史 Labs 全量迁移未知。
+- 来源 assistant-src-p-pro：https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro · Research Mode; Create files and apps
+
+### kgl-r1-07 · 编辑学习对照（非厂商集成）
+wm-genie → vid-cogvideox
+区分可行动控制的生成环境与文本条件视频生成：Genie 以潜在动作逐帧交互，CogVideoX 论文描述视频扩散 Transformer。学会问“动作改变未来”还是“文字描述画面”。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不是技术派生、组件依赖或同等物理真实性；Genie 限 2024 研究系统，CogVideoX 来源为论文 v3；不推广到各版本规格。
+- 来源 wm-src-paper-genie：https://arxiv.org/abs/2402.15391 · arXiv abstract lines 14–16; v1
+- 来源 vid-src-cogpaper：https://arxiv.org/abs/2408.06072 · arXiv v3 abstract lines 15–18
+
+### kgl-r1-08 · 编辑学习对照（非厂商集成）
+wm-vjepa → vid-cogvideox
+对照视频表征预测与像素视频生成：V-JEPA 在抽象表征空间预测遮挡部分，CogVideoX 以 3D VAE 和扩散 Transformer 生成视频。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不是互相使用或性能排名；原 V-JEPA 不等于后续动作条件 V-JEPA 2；预测表征不自动构成机器人规划能力。
+- 来源 wm-src-vjepa-blog：https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/ · Video JEPA in focus; lines 55–62
+- 来源 vid-src-cogpaper：https://arxiv.org/abs/2408.06072 · arXiv v3 abstract lines 15–18
+
+### kgl-r1-09 · 编辑学习对照（非厂商集成）
+creative-express-ai-assistant → design-canva-template
+设计任务的两种约束方式：会话局部修改及手工接管，对照结构化品牌模板填充；用文字、版式不变量和人工验收连接，而非把二者都称生成模型。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：无跨产品集成、素材互用或权限继承结论；Express 地域/计划与 Canva 模板资格独立核验；实际保真未知。
+- 来源 creative-gap-src-express-how：https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html · L712–750
+- 来源 design-src-canva-autofill：https://www.canva.dev/docs/apps/rest-apis/autofill-guide/ · Autofill guide: brand template data filling
+
+### kgl-r1-10 · 编辑学习对照（非厂商集成）
+creative-underlord → vid-kdenlive
+把 AI 粗剪审查接到通用剪辑交付知识：Underlord 恢复需检查全项目与协作者变更，Kdenlive 代理预览与原片渲染需区分；二者共同用于讲“预览不是最终交付验收”。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：纯编辑方法对照，不保证项目格式互通、自动导入或回滚等价；未测试恢复、代理或渲染；不保证无限版本保留。
+- 来源 creative-gap-src-underlord-help：https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript · L249–269
+- 来源 creative-gap-src-underlord-history-independent：https://help.descript.com/working-in-projects/version-history · L249–252
+- 来源 creative-gap-src-kden-proxy：https://docs.kdenlive.org/en/user_interface/menu/media_menu.html · Proxy Clip lines 352–359
+
+### kgl-r1-11 · 编辑学习对照（非厂商集成）
+music-musicgen → creative-ableton-live
+区分音乐生成草图与录音编辑：MusicGen 是条件音乐模型，Live comping 从多个录次选择片段；教学上分别检查创意内容与接点/同步，不把 DAW 当音乐 Agent。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不宣称原生集成或输出可商用；MusicGen 权重许可与 Live/录音/素材许可独立，实际导入与音质未知。
+- 来源 music-src-musicgen：https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md · Model details lines 178–184; Intended use lines 187–194
+- 来源 creative-gap-src-ableton-comp：https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ · Comping FAQ lines 13–27, 59–61
+
+### kgl-r1-12 · 编辑学习对照（非厂商集成）
+creative-indesign → design-c2pa
+区分交付打包、资产授权与内容来源凭证：InDesign Package 组织交付资产，C2PA 描述签名和来源链；有包或有效凭证都不等于拥有字体/素材版权。
+- 方向：建议阅读顺序；非技术依赖方向
+- 未知边界：不声称 InDesign Package 实现 C2PA 或自动附凭证；具体文件签名、完整版权与收件方许可均未验证。
+- 来源 creative-gap-src-indesign-package：https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html · body lines 1414–1439
+- 来源 creative-gap-src-font-licensing-faq-independent：https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html · lines 116–117,128–130,137–152
+- 来源 design-src-c2pa：https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html · C2PA Specification 2.5: claims, assertions, signatures, validation
 
 ## 来源目录
 - design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。

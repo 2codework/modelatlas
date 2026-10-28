@@ -1,0 +1,315 @@
+{
+  "status": "PASS-source-and-semantics-r2",
+  "reviewed_at": "2026-10-28T22:52:34.949090+00:00",
+  "input_hashes": {
+    "manifest.json": "62075078d35fd1cd19b5f992ef4dd05d3f6a29a49269579f9990619f63048150",
+    "candidates.json": "5983167dff486b41b8c12920ab96446e21cedac8dc63c49270af6d1c0350df95",
+    "source-checks.json": "0af2ec0cba8e32c4b304263d0b336b50e32a044d3b3ab91ddfa7791969dd5cc3",
+    "changes.json": "9415dfb1974f02a8a978bb14d74509f3e5514cb0dcd993f3ce9145fefee5201d",
+    "finalize_revision.py": "12a04db235bf77758c4ce514d56509d4fbbd94310d373449338b4ea46b814b04",
+    "SHA256SUMS": "aa7fe87da368dd8e9fd84bce4c000e913828cfd28acd12fc0498164d419286c6",
+    "REPORT.zh-CN.md": "e735de08d9388a7cddd4ea71c9234593f8857409683329ed8836a7e19821a360",
+    "statistics.json": "5b222f12efdfbe762df02e014b0183816618a7f869f0785c0aa61d23f2f6a6b0",
+    "validation.json": "6217fb3373f2c67996a09c9f10c17a20748640bdf4571c9ae5f8b72862fe61c5",
+    "before-qa/candidates.json": "54898f37afc03f614d98e0683fb247cbb5d1e590cc323f8b6393a3f41ad1f618",
+    "before-qa/build_research.py": "4159f1a89395f52e3ac59e69eb4eecb7aef667c52e35a1ab5a7413a5f4deafef",
+    "before-qa/source-checks.json": "7501bce19cc04cf2e0b3a44d0be57ec36c2e7ab32033ae3b5b707bb45e5ffa3e",
+    "before-qa/SHA256SUMS": "c755e1558b03d736a379c3c627945b760a3370525fdaf1d390cea857eff5a640",
+    "before-qa/REPORT.zh-CN.md": "dd0b8eaaa8d4bc82fc326a7670cf5f648ee9c9bfdf23ffa6d8e4089ee189b4a5",
+    "before-qa/statistics.json": "aefc2fc24b650773263c4911725a1a3940ba0ebc58ee617402f3c1a847c6221d",
+    "before-qa/validation.json": "9c66f490d79cdbe77b1658987689bb9f8b34c25e3d634b57fe4c225e3c63d16b"
+  },
+  "verdict_counts": {
+    "accept": 12,
+    "fix_edges": 0,
+    "unknown_edges": 0
+  },
+  "edges": [
+    {
+      "id": "kgl-r1-01",
+      "verdict": "accept",
+      "reason_zh": "官方2026-10-01更新页直接确认迁移目标，不是关闭日期或全部账户已迁移；无功能/权限继承承诺。",
+      "source_ids": [
+        "office-src-zap-migrate"
+      ],
+      "evidence_type": "official_documented_product_migration",
+      "direction_semantics": "旧入口到文档迁移目标",
+      "unknown_retained": "官方未定 Agents 停用日；每账户迁移状态及实际运行均 unknown，不宣称迁移完成或全部功能等价。工具默认不暂停，须逐工具开启 Require approval；聊天 on-demand 暂无直接等价触发；组织级 BYOM 未支持。HubSpot/Asana/Zendesk/Zoom/Jira 知识源尚未支持，Q4 2026 仅为计划；已支持来源仍有规模、加载和权限差异。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-02",
+      "verdict": "accept",
+      "reason_zh": "两端资料支持工具前审批与工作流暂停的不同范围；Dify链接持有人身份弱点保留。",
+      "source_ids": [
+        "office-src-n8n-hitl",
+        "regional-src-dify-human"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不是互相集成或等价安全保证；n8n 仅接入审核的工具受保护，Dify 邮件链接持有者可响应；未验证租户权限。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-03",
+      "verdict": "accept",
+      "reason_zh": "平台自托管/外部模型插件/不同源码许可对照成立，不合并Coze托管或Dify附加条件。",
+      "source_ids": [
+        "regional-src-coze-repo",
+        "regional-src-coze-license",
+        "regional-src-dify-repo",
+        "regional-src-dify-license"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不比较优劣、不声称兼容；两者 main 未锁定；Coze 托管产品不等同 Studio，Dify 附加条件不扩推为法律结论。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-04",
+      "verdict": "accept",
+      "reason_zh": "两端已核验原始资料支持来源、引用及连接权限差异；不是同模型或互通关系。",
+      "source_ids": [
+        "assistant-src-oa-dr-help",
+        "assistant-src-cl-research"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不推定同一模型、互通或同一权限机制；Claude mobile 与 web/desktop 来源不同，本地 MCP 不等同 Research 连接器；账户资格未知。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-05",
+      "verdict": "accept",
+      "reason_zh": "两端资料支持先审研究计划；限定Gemini Apps与ChatGPT Chat，非API/Work。",
+      "source_ids": [
+        "assistant-src-g-dr",
+        "assistant-src-oa-dr-help"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "仅 Gemini Apps 与 ChatGPT Chat 范围，不包含 API、Work 或 Workspace Studio；额度、客户端和来源接入不能相互继承。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-06",
+      "verdict": "accept",
+      "reason_zh": "同源官方套餐/功能资料描述报告与文件应用产物；教学验收对照不推出自动交接。",
+      "source_ids": [
+        "assistant-src-p-pro"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "同一产品里的两功能也不推出自动交接、相同模型或审批；生成/发布具体人审机制和账户额度未知，历史 Labs 全量迁移未知。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-07",
+      "verdict": "accept",
+      "reason_zh": "独立读两篇作者摘要，Genie潜在动作逐帧控制与CogVideoX文本视频扩散对照成立；非派生/组件关系。",
+      "source_ids": [
+        "wm-src-paper-genie",
+        "vid-src-cogpaper"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不是技术派生、组件依赖或同等物理真实性；Genie 限 2024 研究系统，CogVideoX 来源为论文 v3；不推广到各版本规格。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-08",
+      "verdict": "accept",
+      "reason_zh": "独立读Meta官方V-JEPA及CogVideoX论文，抽象表征预测与像素视频生成差别成立；非V-JEPA2机器人能力。",
+      "source_ids": [
+        "wm-src-vjepa-blog",
+        "vid-src-cogpaper"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不是互相使用或性能排名；原 V-JEPA 不等于后续动作条件 V-JEPA 2；预测表征不自动构成机器人规划能力。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-09",
+      "verdict": "accept",
+      "reason_zh": "Canva官方autofill直读与Express原始资料支持结构化模板与会话局部编辑对照，资格不继承。",
+      "source_ids": [
+        "creative-gap-src-express-how",
+        "design-src-canva-autofill"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "无跨产品集成、素材互用或权限继承结论；Express 地域/计划与 Canva 模板资格独立核验；实际保真未知。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-10",
+      "verdict": "accept",
+      "reason_zh": "Underlord恢复资料与Kdenlive官方代理页支持预览/最终交付验收对照；Kden代理来源全局已收录但未直接挂该节点source_ids，不妨碍边显式引用。",
+      "source_ids": [
+        "creative-gap-src-underlord-help",
+        "creative-gap-src-underlord-history-independent",
+        "creative-gap-src-kden-proxy"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "纯编辑方法对照，不保证项目格式互通、自动导入或回滚等价；未测试恢复、代理或渲染；不保证无限版本保留。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-11",
+      "verdict": "accept",
+      "reason_zh": "模型卡与Ableton资料支持音乐生成草图/录次选段比较；权重与素材许可独立，非集成。",
+      "source_ids": [
+        "music-src-musicgen",
+        "creative-gap-src-ableton-comp"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不宣称原生集成或输出可商用；MusicGen 权重许可与 Live/录音/素材许可独立，实际导入与音质未知。",
+      "runtime_verified": false
+    },
+    {
+      "id": "kgl-r1-12",
+      "verdict": "accept",
+      "reason_zh": "官方打包、字体和C2PA资料分别支持资产交接与来源凭证的边界；不把有效签名当版权所有或InDesign集成C2PA。",
+      "source_ids": [
+        "creative-gap-src-indesign-package",
+        "creative-gap-src-font-licensing-faq-independent",
+        "design-src-c2pa"
+      ],
+      "evidence_type": "editorial_learning_relation_not_vendor_integration_claim",
+      "direction_semantics": "建议阅读顺序；非技术依赖方向",
+      "unknown_retained": "不声称 InDesign Package 实现 C2PA 或自动附凭证；具体文件签名、完整版权与收件方许可均未验证。",
+      "runtime_verified": false
+    }
+  ],
+  "independent_stats": {
+    "scope": "Only D.edges internal graph; undirected degree and weak components. Excludes practice registry, AgentWork cross-site and ordinary hyperlinks.",
+    "current": {
+      "nodes": 242,
+      "edges": 139,
+      "isolated": 89,
+      "weak_components": 120
+    },
+    "hypothetical_not_applied": {
+      "nodes": 242,
+      "edges": 151,
+      "isolated": 72,
+      "weak_components": 108
+    }
+  },
+  "required_global_fixes": [
+    {
+      "id": "G1",
+      "status": "resolved-in-r2",
+      "issue": "r1 REPORT/statistics未明确排除practice/cross-site等其他链接，孤立一词可能误指网页无链接。",
+      "acceptance": "r2/整合可见文案明确仅D.edges内部图谱；89孤点≠无学习/跨站链接；151/72/108只是12边未应用假设。"
+    }
+  ],
+  "integration_display_gates": [
+    "按type/evidence_type/verification_status识别编辑关系，不得仅判断verification_status字面值。",
+    "图与关系列表显示中文“编辑学习对照，非厂商集成”，建议阅读方向与unknown_boundary_zh；不能只英文type+箭头。",
+    "文档迁移目标箭头不表示迁移完成/停用/功能等价/权限继承。",
+    "原始候选字段与source_ids逐字保留，UI可使用派生标签，不为迁就renderer改写证据类别。"
+  ],
+  "official_page_reads": [
+    {
+      "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+      "locator": "L35,L40–53,L69,L90,L120–132",
+      "finding": "迁移目标支持；未定停用；工具默认不暂停，on-demand/知识源等不等价；预览测试可能消耗tasks。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.15391",
+      "locator": "abstract L14–16;v1",
+      "finding": "latent actions/frame-by-frame environments"
+    },
+    {
+      "url": "https://arxiv.org/abs/2408.06072",
+      "locator": "abstract L15–18;v3",
+      "finding": "text-to-video diffusion transformer and3D VAE"
+    },
+    {
+      "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+      "locator": "L55–62",
+      "finding": "non-generative abstract representation prediction"
+    },
+    {
+      "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+      "locator": "L45–75",
+      "finding": "brand template autofill; plan/account/scope prerequisites separate"
+    },
+    {
+      "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+      "locator": "L352–359",
+      "finding": "proxy preview replaced by original source at final render"
+    }
+  ],
+  "source_scope": "Six official public pages independently opened; remaining endpoint claims compared against existing primary-source records and preserved raw endpoint evidence, not claimed re-browsed. No access failures this pass; historical failed sources not retried.",
+  "canonical_modified": false,
+  "product_execution": "never-run",
+  "revision": "r2",
+  "r1_qa_history_preserved": true,
+  "r2_signoff": {
+    "final_manifest_sha256": "62075078d35fd1cd19b5f992ef4dd05d3f6a29a49269579f9990619f63048150",
+    "r1_and_before_qa_bytes_exact": true,
+    "12_edge_identity_semantics_sources_unchanged": true,
+    "edge_deltas": [
+      {
+        "id": "kgl-r1-01",
+        "changed_keys": [
+          "official_evidence",
+          "unknown_boundary_zh"
+        ]
+      },
+      {
+        "id": "kgl-r1-02",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-03",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-04",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-05",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-06",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-07",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-08",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-09",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-10",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-11",
+        "changed_keys": []
+      },
+      {
+        "id": "kgl-r1-12",
+        "changed_keys": []
+      }
+    ],
+    "graph_scope_exclusions_explicit": true,
+    "hypothetical_not_applied_explicit": true,
+    "research_status_immutable_derived_application_record_required": true,
+    "numeric_statistics_unchanged": true
+  }
+}

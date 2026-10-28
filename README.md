@@ -96,3 +96,11 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 ## 区域办公平台补包
 
 [7条区域办公平台与人监督练习](REGIONAL_OFFICE.md)：Dify、Coze Studio、飞书 aily 企业工作伙伴、钉钉宜搭 AI 助理、Zoho Zia Agents、百炼智能体应用、腾讯云智能体开发平台。均为 documentation-only / never-run；保留许可、地域/租户条件、命名关系未知及较弱来源说明，不是7个基础模型。原始包与独立QA位于 `learning/regional-office/r1/`。
+
+## 知识图谱关联补充 r1
+
+新增12条现有节点间关系：1条官方文档迁移目标、11条编辑学习对照。网页用显式分类区分来源文档关系、编辑对照与未知；来源审阅不是产品运行验证，迁移目标不是迁移完成。
+
+原始R1/R2研究与独立QA完整保留于 `learning/knowledge-graph-links/r1/raw/`，仍为研究时 `candidate_only_not_applied`；`admission.json` 固定字节与来源对象哈希，派生 `knowledge_graph_links_application` / `knowledge-graph-links/application.json` 单独记录接纳到本地构建。151边、72孤立、108弱连通分量只统计D.edges内部图，不计实践、AgentWork跨站及网页导航链接；孤立不等于网页无链接，不表示知识覆盖完整或准确性提升。未运行产品或发布本候选。
+
+维护边界：本批采用整份基线顶层对象哈希的 fail-closed 接纳，不是自动兼容未来目录增量的通用适配器。后续任何模块改变基线对象都会阻断构建，须重新审核并更新 admission 中的基线对象哈希及适配器固定 admission SHA，再完整复跑保真与负面门禁；不可跳过校验或覆盖原始研究状态。

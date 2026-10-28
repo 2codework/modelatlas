@@ -1,0 +1,25 @@
+{
+  "from": "knowledge-graph-links-research-r1",
+  "to": "knowledge-graph-links-research-r2",
+  "changes": [
+    "新增graph_scope/excluded_links，孤立及弱连通分量仅D.edges内部关系",
+    "明确已有practice registry/AgentWork等链接不计入，孤立不代表网页无链接",
+    "全部after指标明确未应用假设，不据增加边宣称准确性提升",
+    "边01仅补Zapier迁移默认审批/on-demand/BYOM/知识源限制和独立QA来源定位",
+    "明确candidate_only_not_applied为研究时历史状态；未来需另建派生应用记录，不能改写原候选为已部署"
+  ],
+  "unchanged": [
+    "12条关系source/target/type/source_ids与解释",
+    "全部图统计值",
+    "canonical仓库与原始研究"
+  ],
+  "r1_preserved_sha256": {
+    "candidates.json": "54898f37afc03f614d98e0683fb247cbb5d1e590cc323f8b6393a3f41ad1f618",
+    "build_research.py": "4159f1a89395f52e3ac59e69eb4eecb7aef667c52e35a1ab5a7413a5f4deafef",
+    "source-checks.json": "7501bce19cc04cf2e0b3a44d0be57ec36c2e7ab32033ae3b5b707bb45e5ffa3e",
+    "SHA256SUMS": "c755e1558b03d736a379c3c627945b760a3370525fdaf1d390cea857eff5a640",
+    "REPORT.zh-CN.md": "dd0b8eaaa8d4bc82fc326a7670cf5f648ee9c9bfdf23ffa6d8e4089ee189b4a5",
+    "statistics.json": "aefc2fc24b650773263c4911725a1a3940ba0ebc58ee617402f3c1a847c6221d",
+    "validation.json": "9c66f490d79cdbe77b1658987689bb9f8b34c25e3d634b57fe4c225e3c63d16b"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "baseline_json_object_equal": true,
+  "counts_match": true,
+  "all_endpoints_existing": true,
+  "all_source_ids_existing": true,
+  "no_existing_edge_either_direction": true,
+  "candidate_pairs_unique": true,
+  "canonical_worktree_clean": true,
+  "canonical_modified": false,
+  "product_sdk_model_account_executed": false
+}

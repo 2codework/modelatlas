@@ -1,0 +1,218 @@
+[
+  {
+    "source_id": "assistant-src-cl-research",
+    "url": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Availability; Use research; FAQ",
+    "supported_claim_zh": "Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "assistant-src-g-dr",
+    "url": "https://support.google.com/gemini/answer/15719111?hl=en",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "L19–55; L64–104",
+    "supported_claim_zh": "18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "assistant-src-oa-dr-help",
+    "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "L15–24; L31–59; L62–88",
+    "supported_claim_zh": "Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "assistant-src-p-pro",
+    "url": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Research Mode; Create files and apps",
+    "supported_claim_zh": "Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-ableton-comp",
+    "url": "https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Comping FAQ lines 13–27, 59–61",
+    "supported_claim_zh": "Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-express-how",
+    "url": "https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "L712–750",
+    "supported_claim_zh": "主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-font-licensing-faq-independent",
+    "url": "https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "lines 116–117,128–130,137–152",
+    "supported_claim_zh": "不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-indesign-package",
+    "url": "https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "body lines 1414–1439",
+    "supported_claim_zh": "File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-kden-proxy",
+    "url": "https://docs.kdenlive.org/en/user_interface/menu/media_menu.html",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Proxy Clip lines 352–359",
+    "supported_claim_zh": "26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-underlord-help",
+    "url": "https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "L249–269",
+    "supported_claim_zh": "Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "creative-gap-src-underlord-history-independent",
+    "url": "https://help.descript.com/working-in-projects/version-history",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "L249–252",
+    "supported_claim_zh": "可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "design-src-c2pa",
+    "url": "https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "C2PA Specification 2.5: claims, assertions, signatures, validation",
+    "supported_claim_zh": "签名、绑定、断言与验证用于来源链，不能单独证明内容真实或版权所有。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "design-src-canva-autofill",
+    "url": "https://www.canva.dev/docs/apps/rest-apis/autofill-guide/",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Autofill guide: brand template data filling",
+    "supported_claim_zh": "数据填充品牌模板的文档工作流。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "music-src-musicgen",
+    "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+    "evidence_mode": "本轮官方模型卡复核",
+    "locator": "Model details lines 178–184; Intended use lines 187–194",
+    "supported_claim_zh": "v1 为音频 token 自回归音乐模型，含文本条件与旋律引导变体；代码 MIT，权重 CC-BY-NC 4.0。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "office-src-n8n-hitl",
+    "url": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Human-in-the-loop for tools; Approve/Deny; raw_office_record.confirmation_boundary",
+    "supported_claim_zh": "接到 human review 的工具调用前暂停，批准按给定输入执行，拒绝取消操作并通知 AI。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "office-src-zap-migrate",
+    "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+    "evidence_mode": "本轮官方页复核",
+    "locator": "Why Agents is migrating; When to migrate; How to migrate; lines 6–18, 33–53",
+    "supported_claim_zh": "官方迁移目标；迁移仍保留单个 AI step，未给 Agents 关闭日期。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "regional-src-coze-license",
+    "url": "https://github.com/coze-dev/coze-studio/blob/main/LICENSE-APACHE",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "LICENSE-APACHE",
+    "supported_claim_zh": "该许可证文件为 Apache-2.0。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "regional-src-coze-repo",
+    "url": "https://github.com/coze-dev/coze-studio",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "README: features, model setup, security warning",
+    "supported_claim_zh": "可视化 Agent/工作流平台，模型和插件另配置；公开部署有安全提示。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "regional-src-dify-human",
+    "url": "https://docs.dify.ai/en/cloud/use-dify/nodes/human-input",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "Human Input: pause, delivery methods, first response",
+    "supported_claim_zh": "工作流暂停等待输入；邮件链接持有者可响应，首个响应关闭请求。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "regional-src-dify-license",
+    "url": "https://github.com/langgenius/dify/blob/main/LICENSE",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "LICENSE: additional conditions",
+    "supported_claim_zh": "修改版 Apache-2.0，带多租户和前端品牌条件；非法律建议。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "regional-src-dify-repo",
+    "url": "https://github.com/langgenius/dify",
+    "evidence_mode": "复用已收录原始官方文档研究",
+    "locator": "README: features / deployment",
+    "supported_claim_zh": "Agent/RAG/workflow 平台，有云和自托管部署。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "vid-src-cogpaper",
+    "url": "https://arxiv.org/abs/2408.06072",
+    "evidence_mode": "本轮作者论文摘要复核",
+    "locator": "arXiv v3 abstract lines 15–18",
+    "supported_claim_zh": "文本到视频扩散 Transformer，3D VAE 压缩时空维度。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "wm-src-paper-genie",
+    "url": "https://arxiv.org/abs/2402.15391",
+    "evidence_mode": "本轮作者论文摘要复核",
+    "locator": "arXiv abstract lines 14–16; v1",
+    "supported_claim_zh": "无动作标签视频训练；潜在动作模型与逐帧可控生成环境。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  },
+  {
+    "source_id": "wm-src-vjepa-blog",
+    "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+    "evidence_mode": "本轮官方页复核",
+    "locator": "Video JEPA in focus; lines 55–62",
+    "supported_claim_zh": "非生成模型，在抽象表征空间预测遮挡的视频区域。",
+    "checked_at": "2026-10-28",
+    "runtime_verified": false
+  }
+]
