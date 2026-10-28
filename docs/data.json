@@ -1,6 +1,6 @@
 {
   "schema_version": "modelatlas.site.v1",
-  "version": "0.2.0-candidate",
+  "version": "0.2.2",
   "checked_at": "2026-10-28",
   "nodes": [
     {
@@ -9387,6 +9387,116 @@
       "verification_status": "web_open_verified",
       "version": "网页快照；非固定提交",
       "notes_zh": "仅元数据与原创摘要；未下载或执行项目。"
+    },
+    {
+      "id": "timeline-r1-src-001",
+      "url": "https://openai.com/index/openai-api/",
+      "title": "OpenAI API",
+      "source_type": "original_official_blog",
+      "version": "2020-06-11; page says updated 2020-09-18",
+      "evidence_locator": "Date header; paragraphs beginning Today the API runs and But we also know",
+      "evidence_summary_zh": "官方正文明确GPT-3家族驱动API，并明确当日为private beta而非GA。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-002",
+      "url": "https://ai.meta.com/blog/llama-2/",
+      "title": "Meta and Microsoft Introduce the Next Generation of Llama",
+      "source_type": "original_official_blog",
+      "version": "2023-07-18 publication",
+      "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+      "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-003",
+      "url": "https://mistral.ai/news/announcing-mistral-7b/",
+      "title": "Mistral 7B",
+      "source_type": "original_official_blog",
+      "version": "2023-09-27 publication",
+      "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+      "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-004",
+      "url": "https://huggingface.co/blog/bloom",
+      "title": "Introducing The World’s Largest Open Multilingual Language Model: BLOOM",
+      "source_type": "original_project_host_blog",
+      "version": "2022-07-12 publication",
+      "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+      "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-005",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+      "title": "Introducing Gemini: our largest and most capable AI model",
+      "source_type": "original_official_blog",
+      "version": "2023-12-06 publication",
+      "evidence_locator": "Date header; Introducing Gemini; Availability",
+      "evidence_summary_zh": "12月6日介绍Gemini，API在该公告中仍为12月13日计划；不可据此单独认定已上线。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-006",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai",
+      "title": "Gemini, Google’s most capable model, is now available on Vertex AI",
+      "source_type": "original_official_blog",
+      "version": "2023-12-13 publication",
+      "evidence_locator": "Date header; opening paragraph",
+      "evidence_summary_zh": "12月13日正文明确Gemini Pro现已在Vertex AI公开可用。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-007",
+      "url": "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+      "title": "Vertex AI release notes",
+      "source_type": "official_release_notes",
+      "version": "2023-12-13 historical entry, live page checked 2026-10-28",
+      "evidence_locator": "December 13, 2023 / Vertex AI Gemini models",
+      "evidence_summary_zh": "明确Gemini Pro与Pro Vision为Preview；不能标作GA。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-008",
+      "url": "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b",
+      "title": "TII introduces Falcon 180B",
+      "source_type": "original_official_blog",
+      "version": "2023-09-06 publication",
+      "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph",
+      "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-009",
+      "url": "https://huggingface.co/blog/falcon-180b",
+      "title": "Spread Your Wings: Falcon 180B is here",
+      "source_type": "original_distribution_partner_blog",
+      "version": "2023-09-06 publication; benchmark table later updated November 2023",
+      "evidence_locator": "Date header; Introduction; How to use Falcon 180B / license acceptance",
+      "evidence_summary_zh": "当日欢迎Falcon 180B进入Hub并链接base/chat权重；使用需接受许可及条款。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
+    },
+    {
+      "id": "timeline-r1-src-010",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
+      "title": "Mistral 7B v0.1 official model card",
+      "source_type": "official_model_card",
+      "version": "Mistral-7B-v0.1",
+      "evidence_locator": "Model card link to original release blog",
+      "evidence_summary_zh": "核对v0.1版本身份；发布日期证据仍来自原始公告。",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_source_checked"
     }
   ],
   "events": [
@@ -10017,17 +10127,27 @@
     {
       "id": "found-event-034",
       "event_type": "api_launch",
-      "date": null,
-      "date_precision": null,
-      "title": "GPT-3（2020论文）：api_launch日期待独立核验",
+      "date": "2020-06-11",
+      "date_precision": "day",
+      "title": "GPT-3家族：OpenAI API private beta",
       "node_ids": [
         "gpt-3"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://openai.com/index/openai-api/"
+      ],
+      "source_ids": [
+        "timeline-r1-src-001"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "不是GA，不是论文首次提交，也不是权重开放。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; paragraphs beginning Today the API runs and But we also know",
+      "evidence_summary_zh": "官方正文明确GPT-3家族驱动API，并明确当日为private beta而非GA。",
+      "availability_scope": "private_beta_approved_users",
+      "version": "GPT-3 family API; not a fixed checkpoint; original 2020 launch"
     },
     {
       "id": "found-event-035",
@@ -10107,32 +10227,52 @@
     {
       "id": "found-event-040",
       "event_type": "announcement",
-      "date": null,
-      "date_precision": null,
-      "title": "Llama 2：announcement日期待独立核验",
+      "date": "2023-07-18",
+      "date_precision": "day",
+      "title": "Llama 2：官方宣布",
       "node_ids": [
         "llama-2"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://ai.meta.com/blog/llama-2/"
+      ],
+      "source_ids": [
+        "timeline-r1-src-002"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "此条仅记录宣布。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+      "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+      "availability_scope": "public_announcement",
+      "version": "Llama 2 original release"
     },
     {
       "id": "found-event-041",
       "event_type": "weights_release",
-      "date": null,
-      "date_precision": null,
-      "title": "Llama 2：weights_release日期待独立核验",
+      "date": "2023-07-18",
+      "date_precision": "day",
+      "title": "Llama 2：权重开放",
       "node_ids": [
         "llama-2"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://ai.meta.com/blog/llama-2/"
+      ],
+      "source_ids": [
+        "timeline-r1-src-002"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "开放权重不代表OSI开源；不据Azure目录可用推断API GA。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+      "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+      "availability_scope": "weights_available_subject_to_llama2_license",
+      "version": "Llama 2 pretrained and conversational fine-tuned weights"
     },
     {
       "id": "found-event-042",
@@ -10227,32 +10367,56 @@
     {
       "id": "found-event-048",
       "event_type": "announcement",
-      "date": null,
-      "date_precision": null,
-      "title": "Mistral 7B v0.1：announcement日期待独立核验",
+      "date": "2023-09-27",
+      "date_precision": "day",
+      "title": "Mistral 7B v0.1：官方宣布",
       "node_ids": [
         "mistral-7b-v0-1"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://mistral.ai/news/announcing-mistral-7b/",
+        "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+      ],
+      "source_ids": [
+        "timeline-r1-src-003",
+        "timeline-r1-src-010"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "不是10月技术报告提交日。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+      "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+      "availability_scope": "public_announcement",
+      "version": "Mistral 7B original v0.1"
     },
     {
       "id": "found-event-049",
       "event_type": "weights_release",
-      "date": null,
-      "date_precision": null,
-      "title": "Mistral 7B v0.1：weights_release日期待独立核验",
+      "date": "2023-09-27",
+      "date_precision": "day",
+      "title": "Mistral 7B v0.1：权重开放",
       "node_ids": [
         "mistral-7b-v0-1"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://mistral.ai/news/announcing-mistral-7b/",
+        "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+      ],
+      "source_ids": [
+        "timeline-r1-src-003",
+        "timeline-r1-src-010"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "原文提供下载及Hub入口，不据此填API事件。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+      "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+      "availability_scope": "public_weight_download_apache_2_0",
+      "version": "Mistral 7B original v0.1"
     },
     {
       "id": "found-event-050",
@@ -10287,47 +10451,79 @@
     {
       "id": "found-event-052",
       "event_type": "announcement",
-      "date": null,
-      "date_precision": null,
-      "title": "BLOOM 176B：announcement日期待独立核验",
+      "date": "2022-07-12",
+      "date_precision": "day",
+      "title": "BLOOM 176B：官方宣布",
       "node_ids": [
         "bloom-176b"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://huggingface.co/blog/bloom"
+      ],
+      "source_ids": [
+        "timeline-r1-src-004"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "不是后来的论文提交日。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+      "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+      "availability_scope": "public_announcement",
+      "version": "BLOOM original 176B"
     },
     {
       "id": "found-event-053",
       "event_type": "weights_release",
-      "date": null,
-      "date_precision": null,
-      "title": "BLOOM 176B：weights_release日期待独立核验",
+      "date": "2022-07-12",
+      "date_precision": "day",
+      "title": "BLOOM 176B：权重开放",
       "node_ids": [
         "bloom-176b"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://huggingface.co/blog/bloom"
+      ],
+      "source_ids": [
+        "timeline-r1-src-004"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "需同意Responsible AI License，非无限制开放。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+      "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+      "availability_scope": "public_weight_download_subject_to_rail",
+      "version": "BLOOM original 176B"
     },
     {
       "id": "found-event-054",
       "event_type": "api_launch",
       "date": null,
       "date_precision": null,
-      "title": "BLOOM 176B：api_launch日期待独立核验",
+      "title": "BLOOM 176B：Hub小规模推理API已可用",
       "node_ids": [
         "bloom-176b"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://huggingface.co/blog/bloom"
+      ],
+      "source_ids": [
+        "timeline-r1-src-004"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "availability_observed_launch_date_unresolved",
+      "note_zh": "官方2022-07-12公告证明截至当日BLOOM 176B的Hub推理API已可用于小规模测试及原型；不证明API精确首发日期，不是生产GA。首发日期仍待核验。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+      "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+      "availability_scope": "hosted_inference_for_tests_prototyping_small_scale",
+      "version": "BLOOM 176B Hugging Face hosted inference",
+      "available_by": "2022-07-12",
+      "available_by_precision": "day"
     },
     {
       "id": "found-event-055",
@@ -10347,17 +10543,27 @@
     {
       "id": "found-event-056",
       "event_type": "announcement",
-      "date": null,
-      "date_precision": null,
-      "title": "Gemini（首代技术报告）：announcement日期待独立核验",
+      "date": "2023-12-06",
+      "date_precision": "day",
+      "title": "Gemini 1.0：官方宣布",
       "node_ids": [
         "gemini-1-report"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/"
+      ],
+      "source_ids": [
+        "timeline-r1-src-005"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "不是所有规模当日API开放；不等同arXiv提交。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Introducing Gemini; Availability",
+      "evidence_summary_zh": "12月6日介绍Gemini，API在该公告中仍为12月13日计划；不可据此单独认定已上线。",
+      "availability_scope": "public_announcement",
+      "version": "Gemini 1.0 family (Ultra, Pro, Nano)"
     },
     {
       "id": "found-event-057",
@@ -10377,17 +10583,29 @@
     {
       "id": "found-event-058",
       "event_type": "api_launch",
-      "date": null,
-      "date_precision": null,
-      "title": "Gemini（首代技术报告）：api_launch日期待独立核验",
+      "date": "2023-12-13",
+      "date_precision": "day",
+      "title": "Gemini 1.0 Pro / Pro Vision：Vertex AI API Preview",
       "node_ids": [
         "gemini-1-report"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai",
+        "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes"
+      ],
+      "source_ids": [
+        "timeline-r1-src-006",
+        "timeline-r1-src-007"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "收窄原家族事件到已核验API版本和平台；不是GA。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; opening paragraph; December 13, 2023 / Vertex AI Gemini models",
+      "evidence_summary_zh": "12月13日正文明确Gemini Pro现已在Vertex AI公开可用。 明确Gemini Pro与Pro Vision为Preview；不能标作GA。",
+      "availability_scope": "public_preview_vertex_ai",
+      "version": "Gemini 1.0 Pro and Pro Vision on Vertex AI; not Ultra/Nano"
     },
     {
       "id": "found-event-059",
@@ -10407,32 +10625,54 @@
     {
       "id": "found-event-060",
       "event_type": "announcement",
-      "date": null,
-      "date_precision": null,
-      "title": "Falcon 180B：announcement日期待独立核验",
+      "date": "2023-09-06",
+      "date_precision": "day",
+      "title": "Falcon 180B：官方宣布",
       "node_ids": [
         "falcon-180b"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b"
+      ],
+      "source_ids": [
+        "timeline-r1-src-008"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "不采纳发布材料里的全局排名断言。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph",
+      "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。",
+      "availability_scope": "public_announcement",
+      "version": "Falcon 180B original release"
     },
     {
       "id": "found-event-061",
       "event_type": "weights_release",
-      "date": null,
-      "date_precision": null,
-      "title": "Falcon 180B：weights_release日期待独立核验",
+      "date": "2023-09-06",
+      "date_precision": "day",
+      "title": "Falcon 180B：权重开放",
       "node_ids": [
         "falcon-180b"
       ],
-      "source_urls": [],
-      "source_ids": [],
+      "source_urls": [
+        "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b",
+        "https://huggingface.co/blog/falcon-180b"
+      ],
+      "source_ids": [
+        "timeline-r1-src-008",
+        "timeline-r1-src-009"
+      ],
       "checked_at": "2026-10-28",
-      "verification_status": "not_checked",
-      "note_zh": "未核验不等于未发生；不可用论文首发日期填充。"
+      "verification_status": "primary_source_checked",
+      "note_zh": "公开可取得权重但须接受条款；开放不等于不受限制。",
+      "timezone": null,
+      "timezone_status": "not_stated_by_source",
+      "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph; Date header; Introduction; How to use Falcon 180B / license acceptance",
+      "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。 当日欢迎Falcon 180B进入Hub并链接base/chat权重；使用需接受许可及条款。",
+      "availability_scope": "gated_weight_download_license_acceptance_required",
+      "version": "Falcon 180B base and chat"
     },
     {
       "id": "found-event-062",
@@ -25462,6 +25702,525 @@
             "sys-swebench"
           ],
           "acceptance": "任务、权限、工具日志、补丁、测试和预算齐全；未经批准不执行外部副作用。"
+        }
+      ]
+    },
+    {
+      "schema_version": "modelatlas.timeline.overlay.v1",
+      "title": "模型历史事件日期与可获得性证据",
+      "checked_at": "2026-10-28",
+      "scope_zh": "11条精确事件日期；BLOOM API仅证明截至某日已可用，首发日期仍未知。",
+      "date_policy": "精确日期与available_by上界分开；未知时区不补造；private beta与preview不等于GA。",
+      "sources": [
+        {
+          "id": "timeline-r1-src-001",
+          "url": "https://openai.com/index/openai-api/",
+          "title": "OpenAI API",
+          "source_type": "original_official_blog",
+          "version": "2020-06-11; page says updated 2020-09-18",
+          "evidence_locator": "Date header; paragraphs beginning Today the API runs and But we also know",
+          "evidence_summary_zh": "官方正文明确GPT-3家族驱动API，并明确当日为private beta而非GA。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-002",
+          "url": "https://ai.meta.com/blog/llama-2/",
+          "title": "Meta and Microsoft Introduce the Next Generation of Llama",
+          "source_type": "original_official_blog",
+          "version": "2023-07-18 publication",
+          "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+          "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-003",
+          "url": "https://mistral.ai/news/announcing-mistral-7b/",
+          "title": "Mistral 7B",
+          "source_type": "original_official_blog",
+          "version": "2023-09-27 publication",
+          "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+          "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-004",
+          "url": "https://huggingface.co/blog/bloom",
+          "title": "Introducing The World’s Largest Open Multilingual Language Model: BLOOM",
+          "source_type": "original_project_host_blog",
+          "version": "2022-07-12 publication",
+          "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+          "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-005",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+          "title": "Introducing Gemini: our largest and most capable AI model",
+          "source_type": "original_official_blog",
+          "version": "2023-12-06 publication",
+          "evidence_locator": "Date header; Introducing Gemini; Availability",
+          "evidence_summary_zh": "12月6日介绍Gemini，API在该公告中仍为12月13日计划；不可据此单独认定已上线。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-006",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai",
+          "title": "Gemini, Google’s most capable model, is now available on Vertex AI",
+          "source_type": "original_official_blog",
+          "version": "2023-12-13 publication",
+          "evidence_locator": "Date header; opening paragraph",
+          "evidence_summary_zh": "12月13日正文明确Gemini Pro现已在Vertex AI公开可用。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-007",
+          "url": "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes",
+          "title": "Vertex AI release notes",
+          "source_type": "official_release_notes",
+          "version": "2023-12-13 historical entry, live page checked 2026-10-28",
+          "evidence_locator": "December 13, 2023 / Vertex AI Gemini models",
+          "evidence_summary_zh": "明确Gemini Pro与Pro Vision为Preview；不能标作GA。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-008",
+          "url": "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b",
+          "title": "TII introduces Falcon 180B",
+          "source_type": "original_official_blog",
+          "version": "2023-09-06 publication",
+          "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph",
+          "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-009",
+          "url": "https://huggingface.co/blog/falcon-180b",
+          "title": "Spread Your Wings: Falcon 180B is here",
+          "source_type": "original_distribution_partner_blog",
+          "version": "2023-09-06 publication; benchmark table later updated November 2023",
+          "evidence_locator": "Date header; Introduction; How to use Falcon 180B / license acceptance",
+          "evidence_summary_zh": "当日欢迎Falcon 180B进入Hub并链接base/chat权重；使用需接受许可及条款。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        },
+        {
+          "id": "timeline-r1-src-010",
+          "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
+          "title": "Mistral 7B v0.1 official model card",
+          "source_type": "official_model_card",
+          "version": "Mistral-7B-v0.1",
+          "evidence_locator": "Model card link to original release blog",
+          "evidence_summary_zh": "核对v0.1版本身份；发布日期证据仍来自原始公告。",
+          "checked_at": "2026-10-28",
+          "verification_status": "primary_source_checked"
+        }
+      ],
+      "event_patches": [
+        {
+          "event_id": "found-event-034",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "api_launch",
+            "node_ids": [
+              "gpt-3"
+            ]
+          },
+          "set": {
+            "date": "2020-06-11",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "GPT-3家族：OpenAI API private beta",
+            "source_ids": [
+              "timeline-r1-src-001"
+            ],
+            "source_urls": [
+              "https://openai.com/index/openai-api/"
+            ],
+            "evidence_locator": "Date header; paragraphs beginning Today the API runs and But we also know",
+            "evidence_summary_zh": "官方正文明确GPT-3家族驱动API，并明确当日为private beta而非GA。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "private_beta_approved_users",
+            "version": "GPT-3 family API; not a fixed checkpoint; original 2020 launch",
+            "note_zh": "不是GA，不是论文首次提交，也不是权重开放。"
+          }
+        },
+        {
+          "event_id": "found-event-040",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "announcement",
+            "node_ids": [
+              "llama-2"
+            ]
+          },
+          "set": {
+            "date": "2023-07-18",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Llama 2：官方宣布",
+            "source_ids": [
+              "timeline-r1-src-002"
+            ],
+            "source_urls": [
+              "https://ai.meta.com/blog/llama-2/"
+            ],
+            "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+            "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_announcement",
+            "version": "Llama 2 original release",
+            "note_zh": "此条仅记录宣布。"
+          }
+        },
+        {
+          "event_id": "found-event-041",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "weights_release",
+            "node_ids": [
+              "llama-2"
+            ]
+          },
+          "set": {
+            "date": "2023-07-18",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Llama 2：权重开放",
+            "source_ids": [
+              "timeline-r1-src-002"
+            ],
+            "source_urls": [
+              "https://ai.meta.com/blog/llama-2/"
+            ],
+            "evidence_locator": "Date header; Takeaways; paragraph beginning We’re now ready",
+            "evidence_summary_zh": "当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "weights_available_subject_to_llama2_license",
+            "version": "Llama 2 pretrained and conversational fine-tuned weights",
+            "note_zh": "开放权重不代表OSI开源；不据Azure目录可用推断API GA。"
+          }
+        },
+        {
+          "event_id": "found-event-048",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "announcement",
+            "node_ids": [
+              "mistral-7b-v0-1"
+            ]
+          },
+          "set": {
+            "date": "2023-09-27",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Mistral 7B v0.1：官方宣布",
+            "source_ids": [
+              "timeline-r1-src-003",
+              "timeline-r1-src-010"
+            ],
+            "source_urls": [
+              "https://mistral.ai/news/announcing-mistral-7b/",
+              "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+            ],
+            "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+            "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_announcement",
+            "version": "Mistral 7B original v0.1",
+            "note_zh": "不是10月技术报告提交日。"
+          }
+        },
+        {
+          "event_id": "found-event-049",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "weights_release",
+            "node_ids": [
+              "mistral-7b-v0-1"
+            ]
+          },
+          "set": {
+            "date": "2023-09-27",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Mistral 7B v0.1：权重开放",
+            "source_ids": [
+              "timeline-r1-src-003",
+              "timeline-r1-src-010"
+            ],
+            "source_urls": [
+              "https://mistral.ai/news/announcing-mistral-7b/",
+              "https://huggingface.co/mistralai/Mistral-7B-v0.1"
+            ],
+            "evidence_locator": "Date header; Mistral 7B in short; Download it link",
+            "evidence_summary_zh": "公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_weight_download_apache_2_0",
+            "version": "Mistral 7B original v0.1",
+            "note_zh": "原文提供下载及Hub入口，不据此填API事件。"
+          }
+        },
+        {
+          "event_id": "found-event-052",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "announcement",
+            "node_ids": [
+              "bloom-176b"
+            ]
+          },
+          "set": {
+            "date": "2022-07-12",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "BLOOM 176B：官方宣布",
+            "source_ids": [
+              "timeline-r1-src-004"
+            ],
+            "source_urls": [
+              "https://huggingface.co/blog/bloom"
+            ],
+            "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+            "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_announcement",
+            "version": "BLOOM original 176B",
+            "note_zh": "不是后来的论文提交日。"
+          }
+        },
+        {
+          "event_id": "found-event-053",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "weights_release",
+            "node_ids": [
+              "bloom-176b"
+            ]
+          },
+          "set": {
+            "date": "2022-07-12",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "BLOOM 176B：权重开放",
+            "source_ids": [
+              "timeline-r1-src-004"
+            ],
+            "source_urls": [
+              "https://huggingface.co/blog/bloom"
+            ],
+            "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+            "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_weight_download_subject_to_rail",
+            "version": "BLOOM original 176B",
+            "note_zh": "需同意Responsible AI License，非无限制开放。"
+          }
+        },
+        {
+          "event_id": "found-event-054",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "api_launch",
+            "node_ids": [
+              "bloom-176b"
+            ]
+          },
+          "set": {
+            "date": null,
+            "date_precision": null,
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "BLOOM 176B：Hub小规模推理API已可用",
+            "source_ids": [
+              "timeline-r1-src-004"
+            ],
+            "source_urls": [
+              "https://huggingface.co/blog/bloom"
+            ],
+            "evidence_locator": "Date header; Today we release; Researchers can now download; inference API paragraph",
+            "evidence_summary_zh": "当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。",
+            "checked_at": "2026-10-28",
+            "verification_status": "availability_observed_launch_date_unresolved",
+            "availability_scope": "hosted_inference_for_tests_prototyping_small_scale",
+            "version": "BLOOM 176B Hugging Face hosted inference",
+            "note_zh": "官方2022-07-12公告证明截至当日BLOOM 176B的Hub推理API已可用于小规模测试及原型；不证明API精确首发日期，不是生产GA。首发日期仍待核验。",
+            "available_by": "2022-07-12",
+            "available_by_precision": "day"
+          }
+        },
+        {
+          "event_id": "found-event-056",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "announcement",
+            "node_ids": [
+              "gemini-1-report"
+            ]
+          },
+          "set": {
+            "date": "2023-12-06",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Gemini 1.0：官方宣布",
+            "source_ids": [
+              "timeline-r1-src-005"
+            ],
+            "source_urls": [
+              "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/"
+            ],
+            "evidence_locator": "Date header; Introducing Gemini; Availability",
+            "evidence_summary_zh": "12月6日介绍Gemini，API在该公告中仍为12月13日计划；不可据此单独认定已上线。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_announcement",
+            "version": "Gemini 1.0 family (Ultra, Pro, Nano)",
+            "note_zh": "不是所有规模当日API开放；不等同arXiv提交。"
+          }
+        },
+        {
+          "event_id": "found-event-058",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "api_launch",
+            "node_ids": [
+              "gemini-1-report"
+            ]
+          },
+          "set": {
+            "date": "2023-12-13",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Gemini 1.0 Pro / Pro Vision：Vertex AI API Preview",
+            "source_ids": [
+              "timeline-r1-src-006",
+              "timeline-r1-src-007"
+            ],
+            "source_urls": [
+              "https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai",
+              "https://docs.cloud.google.com/vertex-ai/docs/core-release-notes"
+            ],
+            "evidence_locator": "Date header; opening paragraph; December 13, 2023 / Vertex AI Gemini models",
+            "evidence_summary_zh": "12月13日正文明确Gemini Pro现已在Vertex AI公开可用。 明确Gemini Pro与Pro Vision为Preview；不能标作GA。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_preview_vertex_ai",
+            "version": "Gemini 1.0 Pro and Pro Vision on Vertex AI; not Ultra/Nano",
+            "note_zh": "收窄原家族事件到已核验API版本和平台；不是GA。"
+          }
+        },
+        {
+          "event_id": "found-event-060",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "announcement",
+            "node_ids": [
+              "falcon-180b"
+            ]
+          },
+          "set": {
+            "date": "2023-09-06",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Falcon 180B：官方宣布",
+            "source_ids": [
+              "timeline-r1-src-008"
+            ],
+            "source_urls": [
+              "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b"
+            ],
+            "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph",
+            "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "public_announcement",
+            "version": "Falcon 180B original release",
+            "note_zh": "不采纳发布材料里的全局排名断言。"
+          }
+        },
+        {
+          "event_id": "found-event-061",
+          "operation": "merge_fields_by_existing_id",
+          "expected_before": {
+            "date": null,
+            "event_type": "weights_release",
+            "node_ids": [
+              "falcon-180b"
+            ]
+          },
+          "set": {
+            "date": "2023-09-06",
+            "date_precision": "day",
+            "timezone": null,
+            "timezone_status": "not_stated_by_source",
+            "title": "Falcon 180B：权重开放",
+            "source_ids": [
+              "timeline-r1-src-008",
+              "timeline-r1-src-009"
+            ],
+            "source_urls": [
+              "https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b",
+              "https://huggingface.co/blog/falcon-180b"
+            ],
+            "evidence_locator": "Date header; Abu Dhabi-UAE dateline and launch paragraph; Date header; Introduction; How to use Falcon 180B / license acceptance",
+            "evidence_summary_zh": "研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。 当日欢迎Falcon 180B进入Hub并链接base/chat权重；使用需接受许可及条款。",
+            "checked_at": "2026-10-28",
+            "verification_status": "primary_source_checked",
+            "availability_scope": "gated_weight_download_license_acceptance_required",
+            "version": "Falcon 180B base and chat",
+            "note_zh": "公开可取得权重但须接受条款；开放不等于不受限制。"
+          }
+        }
+      ],
+      "conflicts_and_caveats": [
+        {
+          "event_ids": [
+            "found-event-036",
+            "found-event-037",
+            "found-event-038"
+          ],
+          "status": "retained_unknown",
+          "source_urls": [
+            "https://api-docs.deepseek.com/news/news250120",
+            "https://api-docs.deepseek.com/updates/"
+          ],
+          "checked_at": "2026-10-28",
+          "detail_zh": "原news250120目前返回Your First API Call通用页。官方changelog 2025-01-20条目前句将deepseek-reasoner识别为DeepSeek-R1，后句却写调用DeepSeek-V3。未独立核验原始不可变发布记录，暂不填日期；不否认1月20日历史日期，只保留证据缺口。"
         }
       ]
     }

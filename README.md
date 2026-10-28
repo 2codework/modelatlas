@@ -1,6 +1,6 @@
 # ModelAtlas
 
-**把模型放回知识的坐标系。** 可追溯的大模型知识地图与中文学习书稿，r1 已上线，当前 r0.2 创作专题候选。
+**把模型放回知识的坐标系。** 可追溯的大模型知识地图与中文学习书稿，v0.2.2。
 
 这是代表性研究起点，不是全球所有厂商、所有版本或截至今天的完整清单，也不是性能排行榜。
 
@@ -47,19 +47,23 @@ data/research/    不丢字段的研究输入
 web/              无依赖 HTML/CSS/JavaScript
 scripts/build.py  标准库校验、规范化、同源书稿生成
 tests/            内容完整性与浏览器纯逻辑测试
-ci-drafts/        保留旧禁用草案；当前只读门禁候选在 .github/workflows/checks.yml
+ci-drafts/        保留旧禁用草案；当前只读门禁在 .github/workflows/checks.yml
 dist/             生成后的静态网页
 BOOK.md           同源生成的中文书稿
 ```
 
 ## 发布与许可
 
-r1 远端仓库与 Pages 已上线。本 r0.2 候选尚未推送；含 push/PR 只读 CI 配置，须发布后核验对应 SHA 的真实 Actions 结果。部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+包含 push/PR 只读 CI 配置；线上状态以对应提交的 Actions 与 Pages 结果为准。部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
 本轮采用代码 MIT、原创编辑文本与原创图形 CC BY 4.0 的许可方案。第三方模型、论文、数据、网页、商标及引用的事实来源不受本项目重新许可。详见 [LICENSE-CONTENT.md](LICENSE-CONTENT.md)。
 
-## 创作专题 r0.2 候选
+## 创作专题与历史时间轴
 
-r1 已上线于 https://2codework.github.io/modelatlas/ 。本目录是待独立 QA 的 r0.2 候选，不代表已经发布。新增设计、音乐、视频资料以官方文档审阅为依据，未运行模型/付费 API/第三方工具，不承诺全量市场覆盖。
+网站：https://2codework.github.io/modelatlas/ 。新增设计、音乐、视频资料以官方文档审阅为依据，未运行模型/付费 API/第三方工具，不承诺全量市场覆盖。
 
 实践与技术使用经 ID 校验的 `?case=<id>` / `?node=<id>` 双向链接；模型、工具接口、标准、普通软件分别保留类型。书稿和网站由同一研究 JSON 构建。旧节点与案例保留；许可、费用、生命周期、来源和未实测状态不可省略。
+
+## 日期证据
+
+87 条事件中 50 条有日期、37 条日期未知。`timeline-dates.json` 是追加式证据覆盖层；构建时核对 `expected_before`，不重写历史研究包。BLOOM API 的 `available_by=2022-07-12` 只说明截至该日可用，不替代精确首发日期。GPT-3 API 限 private beta，Gemini 1.0 Pro / Pro Vision 限 Vertex AI Preview，不标作 GA。时区未声明则保留 null。

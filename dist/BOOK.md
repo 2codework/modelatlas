@@ -1,6 +1,6 @@
 # ModelAtlas · 大模型知识地图
 
-> v0.2 创作专题候选（r1 已上线；本候选尚未发布）；不是全厂商、全版本目录。最后核验：2026-10-28。来源核验不是独立复现实验。
+> v0.2.2 · 代表性知识地图；不是全厂商、全版本目录。最后核验：2026-10-28。来源核验不是独立复现实验。
 
 ## 阅读路径
 
@@ -790,7 +790,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：静态词向量、上下文表示与句向量不是同一个对象。
 - 来源：https://arxiv.org/abs/1301.3781
-- 事件：paper_submission · 2013-01-16 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1301.3781
+- 事件：paper_submission · 2013-01-16 · 向量表示 / embeddings：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1301.3781
 
 ## word2vec
 
@@ -802,7 +802,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：word2vec不是Transformer，也不是对话大模型。
 - 来源：https://arxiv.org/abs/1301.3781
-- 事件：paper_submission · 2013-01-16 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1301.3781
+- 事件：paper_submission · 2013-01-16 · 向量表示 / embeddings：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1301.3781
 
 ## LSTM sequence-to-sequence
 
@@ -814,7 +814,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：seq2seq是任务/架构范式，不专指Transformer。
 - 来源：https://arxiv.org/abs/1409.3215
-- 事件：paper_submission · 2014-09-10 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1409.3215
+- 事件：paper_submission · 2014-09-10 · LSTM sequence-to-sequence：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1409.3215
 
 ## 神经注意力：软对齐
 
@@ -826,7 +826,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：注意力权重不能直接视为完整的因果解释。
 - 来源：https://arxiv.org/abs/1409.0473
-- 事件：paper_submission · 2014-09-01 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1409.0473
+- 事件：paper_submission · 2014-09-01 · 神经注意力：软对齐：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1409.0473
 
 ## Transformer
 
@@ -838,7 +838,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：Transformer原论文并非decoder-only；也不是所有模型都使用同一注意力实现。
 - 来源：https://arxiv.org/abs/1706.03762
-- 事件：paper_submission · 2017-06-12 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1706.03762
+- 事件：paper_submission · 2017-06-12 · Transformer：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1706.03762
 
 ## 预训练与迁移学习
 
@@ -850,7 +850,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：预训练模型不自动具备可靠的指令遵循。
 - 来源：https://arxiv.org/abs/1910.10683
-- 事件：paper_submission · 2019-10-23 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1910.10683
+- 事件：paper_submission · 2019-10-23 · 预训练与迁移学习：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1910.10683
 
 ## BERT
 
@@ -862,7 +862,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：BERT不是典型的自回归聊天模型。
 - 来源：https://arxiv.org/abs/1810.04805
-- 事件：paper_submission · 2018-10-11 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1810.04805
+- 事件：paper_submission · 2018-10-11 · BERT：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1810.04805
 
 ## T5
 
@@ -874,7 +874,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：统一任务格式不代表任务之间的难度完全相同。
 - 来源：https://arxiv.org/abs/1910.10683
-- 事件：paper_submission · 2019-10-23 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1910.10683
+- 事件：paper_submission · 2019-10-23 · 预训练与迁移学习：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1910.10683
 
 ## GPT
 
@@ -897,11 +897,11 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：few-shot上下文学习通常不意味着推理时更新模型权重。
 - 来源：https://arxiv.org/abs/2005.14165
-- 事件：paper_submission · 2020-05-28 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.14165
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2020-05-28 · GPT-3（2020论文）：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.14165
+- 事件：announcement · 未知 / 待核验 · GPT-3（2020论文）：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · GPT-3（2020论文）：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 2020-06-11 · GPT-3家族：OpenAI API private beta · 精度 day · 时区 未知 · 范围 private_beta_approved_users · 版本 GPT-3 family API; not a fixed checkpoint; original 2020 launch · 截至已可用（非首发） 无独立观察 · 说明 不是GA，不是论文首次提交，也不是权重开放。 · 证据 Date header; paragraphs beginning Today the API runs and But we also know · 来源 https://openai.com/index/openai-api/
+- 事件：report_publication · 未知 / 待核验 · GPT-3（2020论文）：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## 上下文学习 ICL
 
@@ -913,7 +913,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：上下文适应与参数微调不同。
 - 来源：https://arxiv.org/abs/2005.14165
-- 事件：paper_submission · 2020-05-28 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.14165
+- 事件：paper_submission · 2020-05-28 · GPT-3（2020论文）：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.14165
 
 ## 监督指令微调 SFT
 
@@ -925,7 +925,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：SFT不是RLHF的同义词。
 - 来源：https://arxiv.org/abs/2203.02155
-- 事件：paper_submission · 2022-03-04 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2203.02155
+- 事件：paper_submission · 2022-03-04 · 监督指令微调 SFT：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2203.02155
 
 ## 人类反馈强化学习 RLHF
 
@@ -937,7 +937,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：偏好优化不保证真实、无偏或适合所有人的价值观。
 - 来源：https://arxiv.org/abs/2203.02155
-- 事件：paper_submission · 2022-03-04 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2203.02155
+- 事件：paper_submission · 2022-03-04 · 监督指令微调 SFT：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2203.02155
 
 ## Constitutional AI / RLAIF
 
@@ -949,7 +949,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：AI反馈仍依赖人类设计的原则和训练环境；不是无条件安全保证。
 - 来源：https://arxiv.org/abs/2212.08073
-- 事件：paper_submission · 2022-12-15 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2212.08073
+- 事件：paper_submission · 2022-12-15 · Constitutional AI / RLAIF：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2212.08073
 
 ## Direct Preference Optimization
 
@@ -961,7 +961,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：DPO仍需要偏好数据；不是不做训练的提示技巧。
 - 来源：https://arxiv.org/abs/2305.18290
-- 事件：paper_submission · 2023-05-29 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2305.18290
+- 事件：paper_submission · 2023-05-29 · Direct Preference Optimization：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2305.18290
 
 ## Chain-of-Thought prompting
 
@@ -973,7 +973,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：生成看似合理的推理链不保证答案正确，也不保证忠实反映内部计算。
 - 来源：https://arxiv.org/abs/2201.11903
-- 事件：paper_submission · 2022-01-28 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2201.11903
+- 事件：paper_submission · 2022-01-28 · Chain-of-Thought prompting：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2201.11903
 
 ## 推理导向模型
 
@@ -985,7 +985,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：推理模型不是已证明具有普适逻辑正确性的形式系统。
 - 来源：https://arxiv.org/abs/2501.12948
-- 事件：paper_submission · 2025-01-22 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2501.12948
+- 事件：paper_submission · 2025-01-22 · 推理导向模型：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2501.12948
 
 ## DeepSeek
 
@@ -1010,11 +1010,11 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 注意：不能把R1-Zero的纯RL实验流程直接套用于R1。
 - 来源：https://arxiv.org/abs/2501.12948
 - 来源：https://github.com/deepseek-ai/DeepSeek-R1
-- 事件：paper_submission · 2025-01-22 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2501.12948
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2025-01-22 · 推理导向模型：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2501.12948
+- 事件：announcement · 未知 / 待核验 · DeepSeek-R1（2025原始报告）：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · DeepSeek-R1（2025原始报告）：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · DeepSeek-R1（2025原始报告）：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · DeepSeek-R1（2025原始报告）：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## 检索增强生成 RAG
 
@@ -1026,7 +1026,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：检索到相关内容不意味着答案必定正确或引用充分。
 - 来源：https://arxiv.org/abs/2005.11401
-- 事件：paper_submission · 2020-05-22 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.11401
+- 事件：paper_submission · 2020-05-22 · 检索增强生成 RAG：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2005.11401
 
 ## 多模态模型
 
@@ -1050,7 +1050,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：CLIP不是自然语言对话模型，也不直接生成图像。
 - 来源：https://arxiv.org/abs/2103.00020
-- 事件：paper_submission · 2021-02-26 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2103.00020
+- 事件：paper_submission · 2021-02-26 · CLIP：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2103.00020
 
 ## LLaVA
 
@@ -1062,7 +1062,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：家族后续版本不能直接继承首版报告的全部训练描述。
 - 来源：https://arxiv.org/abs/2304.08485
-- 事件：paper_submission · 2023-04-17 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2304.08485
+- 事件：paper_submission · 2023-04-17 · LLaVA：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2304.08485
 
 ## Whisper
 
@@ -1074,7 +1074,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：语音识别不是语音合成，也不保证逐字无误。
 - 来源：https://arxiv.org/abs/2212.04356
-- 事件：paper_submission · 2022-12-06 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2212.04356
+- 事件：paper_submission · 2022-12-06 · Whisper：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2212.04356
 
 ## Latent Diffusion
 
@@ -1086,7 +1086,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：图像生成模型不一定是自回归语言模型。
 - 来源：https://arxiv.org/abs/2112.10752
-- 事件：paper_submission · 2021-12-20 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2112.10752
+- 事件：paper_submission · 2021-12-20 · Latent Diffusion：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2112.10752
 
 ## 语言模型驱动的 agents
 
@@ -1109,7 +1109,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：生成行动文本不意味着工具已实际执行成功。
 - 来源：https://arxiv.org/abs/2210.03629
-- 事件：paper_submission · 2022-10-06 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2210.03629
+- 事件：paper_submission · 2022-10-06 · ReAct：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2210.03629
 
 ## 递归自我改进 RSI
 
@@ -1133,7 +1133,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · research_claim_scoped
 - 注意：理论最优性条件不等于现实系统能高效找到所需证明。
 - 来源：https://arxiv.org/abs/cs/0309048
-- 事件：paper_submission · 2003-09-25 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/cs/0309048
+- 事件：paper_submission · 2003-09-25 · Gödel machine：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/cs/0309048
 
 ## Self-Taught Optimizer (STOP)
 
@@ -1145,7 +1145,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · research_claim_scoped
 - 注意：论文明确称其不是完整的递归自我改进。
 - 来源：https://arxiv.org/abs/2310.02304
-- 事件：paper_submission · 2023-10-03 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2310.02304
+- 事件：paper_submission · 2023-10-03 · Self-Taught Optimizer (STOP)：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2310.02304
 
 ## JEV（用户术语，待确认）
 
@@ -1167,7 +1167,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：单一基准得分不代表所有语言能力或真实部署质量。
 - 来源：https://arxiv.org/abs/1804.07461
-- 事件：paper_submission · 2018-04-20 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1804.07461
+- 事件：paper_submission · 2018-04-20 · GLUE：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/1804.07461
 
 ## MMLU
 
@@ -1179,7 +1179,7 @@ InstructGPT流程用人类偏好排序训练奖励模型，再用强化学习调
 - 核验：2026-10-28 · primary_source_checked
 - 注意：原始论文结果不是持续有效的模型排行榜。
 - 来源：https://arxiv.org/abs/2009.03300
-- 事件：paper_submission · 2020-09-07 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2009.03300
+- 事件：paper_submission · 2020-09-07 · MMLU：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2009.03300
 
 ## Meta
 
@@ -1213,11 +1213,11 @@ Llama家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2307.09288
-- 事件：paper_submission · 2023-07-18 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2307.09288
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-07-18 · Llama 2：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2307.09288
+- 事件：announcement · 2023-07-18 · Llama 2：官方宣布 · 精度 day · 时区 未知 · 范围 public_announcement · 版本 Llama 2 original release · 截至已可用（非首发） 无独立观察 · 说明 此条仅记录宣布。 · 证据 Date header; Takeaways; paragraph beginning We’re now ready · 来源 https://ai.meta.com/blog/llama-2/
+- 事件：weights_release · 2023-07-18 · Llama 2：权重开放 · 精度 day · 时区 未知 · 范围 weights_available_subject_to_llama2_license · 版本 Llama 2 pretrained and conversational fine-tuned weights · 截至已可用（非首发） 无独立观察 · 说明 开放权重不代表OSI开源；不据Azure目录可用推断API GA。 · 证据 Date header; Takeaways; paragraph beginning We’re now ready · 来源 https://ai.meta.com/blog/llama-2/
+- 事件：api_launch · 未知 / 待核验 · Llama 2：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Llama 2：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Alibaba Cloud / Qwen Team
 
@@ -1251,11 +1251,11 @@ Qwen家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2309.16609
-- 事件：paper_submission · 2023-09-28 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2309.16609
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-09-28 · Qwen（2023首篇报告）：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2309.16609
+- 事件：announcement · 未知 / 待核验 · Qwen（2023首篇报告）：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · Qwen（2023首篇报告）：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · Qwen（2023首篇报告）：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Qwen（2023首篇报告）：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Mistral AI
 
@@ -1289,11 +1289,11 @@ Mistral家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2310.06825
-- 事件：paper_submission · 2023-10-10 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2310.06825
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-10-10 · Mistral 7B v0.1：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2310.06825
+- 事件：announcement · 2023-09-27 · Mistral 7B v0.1：官方宣布 · 精度 day · 时区 未知 · 范围 public_announcement · 版本 Mistral 7B original v0.1 · 截至已可用（非首发） 无独立观察 · 说明 不是10月技术报告提交日。 · 证据 Date header; Mistral 7B in short; Download it link · 来源 https://mistral.ai/news/announcing-mistral-7b/, https://huggingface.co/mistralai/Mistral-7B-v0.1
+- 事件：weights_release · 2023-09-27 · Mistral 7B v0.1：权重开放 · 精度 day · 时区 未知 · 范围 public_weight_download_apache_2_0 · 版本 Mistral 7B original v0.1 · 截至已可用（非首发） 无独立观察 · 说明 原文提供下载及Hub入口，不据此填API事件。 · 证据 Date header; Mistral 7B in short; Download it link · 来源 https://mistral.ai/news/announcing-mistral-7b/, https://huggingface.co/mistralai/Mistral-7B-v0.1
+- 事件：api_launch · 未知 / 待核验 · Mistral 7B v0.1：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Mistral 7B v0.1：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## BigScience Workshop
 
@@ -1327,11 +1327,11 @@ BLOOM家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2211.05100
-- 事件：paper_submission · 2022-11-09 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2211.05100
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2022-11-09 · BLOOM 176B：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2211.05100
+- 事件：announcement · 2022-07-12 · BLOOM 176B：官方宣布 · 精度 day · 时区 未知 · 范围 public_announcement · 版本 BLOOM original 176B · 截至已可用（非首发） 无独立观察 · 说明 不是后来的论文提交日。 · 证据 Date header; Today we release; Researchers can now download; inference API paragraph · 来源 https://huggingface.co/blog/bloom
+- 事件：weights_release · 2022-07-12 · BLOOM 176B：权重开放 · 精度 day · 时区 未知 · 范围 public_weight_download_subject_to_rail · 版本 BLOOM original 176B · 截至已可用（非首发） 无独立观察 · 说明 需同意Responsible AI License，非无限制开放。 · 证据 Date header; Today we release; Researchers can now download; inference API paragraph · 来源 https://huggingface.co/blog/bloom
+- 事件：api_launch · 未知 / 待核验 · BLOOM 176B：Hub小规模推理API已可用 · 精度 unknown · 时区 未知 · 范围 hosted_inference_for_tests_prototyping_small_scale · 版本 BLOOM 176B Hugging Face hosted inference · 截至已可用（非首发） 2022-07-12 · 说明 官方2022-07-12公告证明截至当日BLOOM 176B的Hub推理API已可用于小规模测试及原型；不证明API精确首发日期，不是生产GA。首发日期仍待核验。 · 证据 Date header; Today we release; Researchers can now download; inference API paragraph · 来源 https://huggingface.co/blog/bloom
+- 事件：report_publication · 未知 / 待核验 · BLOOM 176B：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Google / Gemini Team
 
@@ -1365,11 +1365,11 @@ Gemini家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2312.11805
-- 事件：paper_submission · 2023-12-19 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2312.11805
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-12-19 · Gemini（首代技术报告）：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2312.11805
+- 事件：announcement · 2023-12-06 · Gemini 1.0：官方宣布 · 精度 day · 时区 未知 · 范围 public_announcement · 版本 Gemini 1.0 family (Ultra, Pro, Nano) · 截至已可用（非首发） 无独立观察 · 说明 不是所有规模当日API开放；不等同arXiv提交。 · 证据 Date header; Introducing Gemini; Availability · 来源 https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/
+- 事件：weights_release · 未知 / 待核验 · Gemini（首代技术报告）：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 2023-12-13 · Gemini 1.0 Pro / Pro Vision：Vertex AI API Preview · 精度 day · 时区 未知 · 范围 public_preview_vertex_ai · 版本 Gemini 1.0 Pro and Pro Vision on Vertex AI; not Ultra/Nano · 截至已可用（非首发） 无独立观察 · 说明 收窄原家族事件到已核验API版本和平台；不是GA。 · 证据 Date header; opening paragraph; December 13, 2023 / Vertex AI Gemini models · 来源 https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai, https://docs.cloud.google.com/vertex-ai/docs/core-release-notes
+- 事件：report_publication · 未知 / 待核验 · Gemini（首代技术报告）：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Technology Innovation Institute
 
@@ -1403,11 +1403,11 @@ Falcon系列中的历史因果解码器模型。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2311.16867
-- 事件：paper_submission · 2023-11-28 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2311.16867
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-11-28 · Falcon 180B：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2311.16867
+- 事件：announcement · 2023-09-06 · Falcon 180B：官方宣布 · 精度 day · 时区 未知 · 范围 public_announcement · 版本 Falcon 180B original release · 截至已可用（非首发） 无独立观察 · 说明 不采纳发布材料里的全局排名断言。 · 证据 Date header; Abu Dhabi-UAE dateline and launch paragraph · 来源 https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b
+- 事件：weights_release · 2023-09-06 · Falcon 180B：权重开放 · 精度 day · 时区 未知 · 范围 gated_weight_download_license_acceptance_required · 版本 Falcon 180B base and chat · 截至已可用（非首发） 无独立观察 · 说明 公开可取得权重但须接受条款；开放不等于不受限制。 · 证据 Date header; Abu Dhabi-UAE dateline and launch paragraph; Date header; Introduction; How to use Falcon 180B / license acceptance · 来源 https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b, https://huggingface.co/blog/falcon-180b
+- 事件：api_launch · 未知 / 待核验 · Falcon 180B：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Falcon 180B：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Inception / MBZUAI / Cerebras
 
@@ -1441,11 +1441,11 @@ Jais家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2308.16149
-- 事件：paper_submission · 2023-08-30 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2308.16149
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-08-30 · Jais 13B：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2308.16149
+- 事件：announcement · 未知 / 待核验 · Jais 13B：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · Jais 13B：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · Jais 13B：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Jais 13B：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Cohere For AI
 
@@ -1479,11 +1479,11 @@ Aya家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2402.07827
-- 事件：paper_submission · 2024-02-12 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2402.07827
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2024-02-12 · Aya 101：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2402.07827
+- 事件：announcement · 未知 / 待核验 · Aya 101：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · Aya 101：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · Aya 101：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Aya 101：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Baichuan
 
@@ -1517,11 +1517,11 @@ Baichuan家族入口；本版仅用已核验历史报告连接具体版本。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：该日期是论文首发日期，不应自动当作产品发布或权重开放日。
 - 来源：https://arxiv.org/abs/2309.10305
-- 事件：paper_submission · 2023-09-19 · 精度 day · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2309.10305
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：paper_submission · 2023-09-19 · Baichuan 2：所引论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv submission history [v1] · 来源 https://arxiv.org/abs/2309.10305
+- 事件：announcement · 未知 / 待核验 · Baichuan 2：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · Baichuan 2：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · Baichuan 2：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Baichuan 2：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## OpenAI
 
@@ -1569,10 +1569,10 @@ DeepSeek-R1论文与官方仓库的发布主体。
 - 核验：2026-10-28 · primary_source_checked
 - 注意：基础模型支持的语言不表示每种语言质量相同。
 - 来源：https://huggingface.co/sarvamai/sarvam-1
-- 事件：announcement · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：weights_release · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：api_launch · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
-- 事件：report_publication · 未知 / 待核验 · 精度 unknown · 证据 见原始来源 · 来源 
+- 事件：announcement · 未知 / 待核验 · Sarvam-1：announcement日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：weights_release · 未知 / 待核验 · Sarvam-1：weights_release日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：api_launch · 未知 / 待核验 · Sarvam-1：api_launch日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
+- 事件：report_publication · 未知 / 待核验 · Sarvam-1：report_publication日期待独立核验 · 精度 unknown · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验不等于未发生；不可用论文首发日期填充。 · 证据 见原始来源 · 来源
 
 ## Sarvam
 
@@ -1613,7 +1613,7 @@ Sarvam模型家族入口；本版仅核验Sarvam-1官方模型卡。
 - 学习步骤（未执行）：在不同序列长度下记录缓存占用。
 - 注意：论文特定负载上的加速不能外推到任意设备；缓存优化不会自动增加模型知识。
 - 来源：https://arxiv.org/abs/2309.06180
-- 事件：paper_submission · 2023-09-12 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2309.06180
+- 事件：paper_submission · 2023-09-12 · sys-event-pagedattention-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2309.06180
 
 ## llama.cpp
 
@@ -1658,7 +1658,7 @@ C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGU
 - 学习步骤（未执行）：比较原权重与量化权重的任务质量及运行成本。
 - 注意：GPTQ不是单一通用文件格式；论文压缩效果不是所有模型的保证。
 - 来源：https://arxiv.org/abs/2210.17323
-- 事件：paper_submission · 2022-10-31 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2210.17323
+- 事件：paper_submission · 2022-10-31 · sys-event-gptq-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2210.17323
 
 ## AWQ
 
@@ -1674,7 +1674,7 @@ C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGU
 - 学习步骤（未执行）：运行同口径质量对比。
 - 注意：activation-aware不等于把所有激活都量化；低位权重不自动加速所有设备。
 - 来源：https://arxiv.org/abs/2306.00978
-- 事件：paper_submission · 2023-06-01 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2306.00978
+- 事件：paper_submission · 2023-06-01 · sys-event-awq-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2306.00978
 
 ## QLoRA与NF4
 
@@ -1690,7 +1690,7 @@ C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGU
 - 学习步骤（未执行）：测试合并/部署后的结果。
 - 注意：QLoRA不是单纯推理格式；4位存储不代表全部计算都是4位。
 - 来源：https://arxiv.org/abs/2305.14314
-- 事件：paper_submission · 2023-05-23 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2305.14314
+- 事件：paper_submission · 2023-05-23 · sys-event-qlora-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2305.14314
 
 ## GGUF模型容器
 
@@ -1736,7 +1736,7 @@ C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGU
 - 学习步骤（未执行）：检查引用及拒答。
 - 注意：向量库不是RAG全部；检索到相关内容不保证回答忠实或内容可信。
 - 来源：https://arxiv.org/abs/2005.11401
-- 事件：paper_submission · 2020-05-22 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2005.11401
+- 事件：paper_submission · 2020-05-22 · sys-event-rag-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2005.11401
 
 ## 向量检索与ANN
 
@@ -1844,7 +1844,7 @@ C/C++实现的本地及云端推理项目，支持多种硬件后端；常用GGU
 - 学习步骤（未执行）：测错误记忆传播。
 - 注意：操作系统类比不是让LLM成为真实内核；外部存储不等于无限可靠回忆。
 - 来源：https://arxiv.org/abs/2310.08560
-- 事件：paper_submission · 2023-10-12 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2310.08560
+- 事件：paper_submission · 2023-10-12 · sys-event-memgpt-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2310.08560
 
 ## FineWeb
 
@@ -1993,7 +1993,7 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - 注意：论文标题中的contamination-free不是永远零污染保证；上线后题目也可能被训练使用。
 - 来源：https://github.com/LiveCodeBench/LiveCodeBench
 - 来源：https://arxiv.org/abs/2403.07974
-- 事件：paper_submission · 2024-03-12 · 精度 day · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2403.07974
+- 事件：paper_submission · 2024-03-12 · sys-event-livecodebench-paper-v1 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 arXiv Submission history v1 · 来源 https://arxiv.org/abs/2403.07974
 
 ## GPQA
 
@@ -2075,7 +2075,7 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - 注意：协议兼容不等于工具安全或模型更聪明；MCP本身不是权重、记忆数据库或训练方法。
 - 来源：https://modelcontextprotocol.io/specification/2025-06-18
 - 来源：https://www.anthropic.com/news/model-context-protocol
-- 事件：announcement · 2024-11-25 · 精度 day · 证据 Official announcement Published Nov 25, 2024; describes open-sourcing protocol · 来源 https://www.anthropic.com/news/model-context-protocol
+- 事件：announcement · 2024-11-25 · sys-event-mcp-announced · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 Official announcement Published Nov 25, 2024; describes open-sourcing protocol · 来源 https://www.anthropic.com/news/model-context-protocol
 
 ## Agent Skills
 
@@ -2278,13 +2278,13 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - design-visual-regression → evaluates_output → design-figma-mcp · editorial_learning_relation_not_vendor_integration_claim · design-src-pw-license, design-src-figma, design-src-playwright, design-src-figma-access
 - vid-whisperx → uses → vid-whisper · primary_sources_reviewed_not_executed · vid-src-whisperx
 - vid-ltx-video → superseded_by → vid-ltx2 · primary_sources_reviewed_not_executed · vid-src-ltxv
-- vid-vimax → learning_path → vid-wan22 · editorial_learning_relation · 
-- vid-filmagent → learning_path → vid-otio · editorial_learning_relation · 
-- vid-videoagent-edit → learning_path → vid-ffmpeg · editorial_learning_relation · 
-- vid-comfyui → learning_path → vid-otio · editorial_learning_relation · 
-- vid-wan22 → learning_path → vid-whisper · editorial_learning_relation · 
-- vid-whisper → learning_path → vid-kdenlive · editorial_learning_relation · 
-- vid-kdenlive → learning_path → vid-otio · editorial_learning_relation · 
+- vid-vimax → learning_path → vid-wan22 · editorial_learning_relation ·
+- vid-filmagent → learning_path → vid-otio · editorial_learning_relation ·
+- vid-videoagent-edit → learning_path → vid-ffmpeg · editorial_learning_relation ·
+- vid-comfyui → learning_path → vid-otio · editorial_learning_relation ·
+- vid-wan22 → learning_path → vid-whisper · editorial_learning_relation ·
+- vid-whisper → learning_path → vid-kdenlive · editorial_learning_relation ·
+- vid-kdenlive → learning_path → vid-otio · editorial_learning_relation ·
 - llama-2 → version_of → llama · primary_source_checked · found-src-026
 - llama → developed_by → org-llama · primary_source_checked · found-src-026
 - qwen-2023 → version_of → qwen · primary_source_checked · found-src-027
@@ -2499,6 +2499,16 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - sys-src-frontier · https://epoch.ai/frontiermath · 核验 2026-10-28 · 仅元数据与原创摘要；未下载或执行项目。
 - sys-src-gpqa · https://github.com/idavidrein/gpqa · 核验 2026-10-28 · 仅元数据与原创摘要；未下载或执行项目。
 - sys-src-mini · https://github.com/SWE-agent/mini-swe-agent · 核验 2026-10-28 · 仅元数据与原创摘要；未下载或执行项目。
+- timeline-r1-src-001 · https://openai.com/index/openai-api/ · 核验 2026-10-28 · 官方正文明确GPT-3家族驱动API，并明确当日为private beta而非GA。
+- timeline-r1-src-002 · https://ai.meta.com/blog/llama-2/ · 核验 2026-10-28 · 当日宣布Llama 2可用，并明确包含预训练和对话微调模型权重及起始代码。
+- timeline-r1-src-003 · https://mistral.ai/news/announcing-mistral-7b/ · 核验 2026-10-28 · 公告当日发布Mistral 7B并提供模型下载；Apache 2.0。部署到云不等于厂商API上线。
+- timeline-r1-src-004 · https://huggingface.co/blog/bloom · 核验 2026-10-28 · 当日发布176B BLOOM，说明可下载权重，且已有供小规模测试及原型使用的推理API。
+- timeline-r1-src-005 · https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/ · 核验 2026-10-28 · 12月6日介绍Gemini，API在该公告中仍为12月13日计划；不可据此单独认定已上线。
+- timeline-r1-src-006 · https://cloud.google.com/blog/products/ai-machine-learning/gemini-support-on-vertex-ai · 核验 2026-10-28 · 12月13日正文明确Gemini Pro现已在Vertex AI公开可用。
+- timeline-r1-src-007 · https://docs.cloud.google.com/vertex-ai/docs/core-release-notes · 核验 2026-10-28 · 明确Gemini Pro与Pro Vision为Preview；不能标作GA。
+- timeline-r1-src-008 · https://www.tii.ae/news/technology-innovation-institute-introduces-worlds-most-powerful-open-llm-falcon-180b · 核验 2026-10-28 · 研发机构当日宣布Falcon 180B发布并开放研究与商业用途访问；不是无限制许可。
+- timeline-r1-src-009 · https://huggingface.co/blog/falcon-180b · 核验 2026-10-28 · 当日欢迎Falcon 180B进入Hub并链接base/chat权重；使用需接受许可及条款。
+- timeline-r1-src-010 · https://huggingface.co/mistralai/Mistral-7B-v0.1 · 核验 2026-10-28 · 核对v0.1版本身份；发布日期证据仍来自原始公告。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果

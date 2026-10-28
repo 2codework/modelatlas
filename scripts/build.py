@@ -21,10 +21,25 @@ def date_ok(value, precision):
     return False
 
 def normalize(bundles):
-    result={'schema_version':'modelatlas.site.v1','version':'0.2.0-candidate','checked_at':'2026-10-28','nodes':[],'edges':[],'sources':[],'events':[],'research_bundles':bundles,'coverage_gaps':[]}
+    result={'schema_version':'modelatlas.site.v1','version':'0.2.2','checked_at':'2026-10-28','nodes':[],'edges':[],'sources':[],'events':[],'research_bundles':bundles,'coverage_gaps':[]}
     for b in bundles:
         for k in ('nodes','edges','sources','events'): result[k].extend(copy.deepcopy(b.get(k,[])))
         result['coverage_gaps'].extend(b.get('coverage_gaps',[]))
+    # Apply checked overlays only to derived events; historical bundles stay intact.
+    patched=set()
+    for bundle in bundles:
+        for patch in bundle.get('event_patches',[]):
+            eid=patch.get('event_id')
+            require(eid not in patched,'duplicate event patch')
+            matches=[e for e in result['events'] if e['id']==eid]
+            require(len(matches)==1,'missing/duplicate patch target')
+            require(patch.get('operation')=='merge_fields_by_existing_id','unsupported patch operation')
+            before=patch.get('expected_before',{})
+            require(all(k in before for k in ('date','event_type','node_ids')),'incomplete expected_before')
+            require(all(k in matches[0] and matches[0][k]==v for k,v in before.items()),'event patch expected_before mismatch: '+eid)
+            updates=patch.get('set',{})
+            require(not set(updates).intersection({'id','node_ids','event_type'}),'patch cannot change event identity')
+            matches[0].update(copy.deepcopy(updates));patched.add(eid)
     # Creative source records are preserved in research_bundles. Only derived views adapt aliases.
     case_ids=set()
     for bundle in bundles:
@@ -85,6 +100,10 @@ def normalize(bundles):
             require(event.get('source_ids') or event.get('source_urls'),'dated event without source')
             require(event.get('verification_status') not in {'not_checked','ambiguous'},'unverified dated event')
         else: require(event.get('date_precision') in (None,'unknown'),'unknown date precision')
+        if event.get('available_by') is not None:
+            require(date_ok(event['available_by'],event.get('available_by_precision')),'invalid available_by/precision')
+            require(event.get('source_ids') or event.get('source_urls'),'available_by without source')
+            require(event.get('note_zh'),'available_by requires scope note')
     for row in result['dataset_benchmark_registry']:
         require(row['node_id'] in sets['nodes'],'dangling registry node')
         require(not row.get('results_preview',{}).get('scores'),'score import unsupported in v0.1; full provenance schema required')
@@ -146,7 +165,7 @@ def normalize(bundles):
     return result
 
 def book(data):
-    lines=['# ModelAtlas · 大模型知识地图','', '> v0.2 创作专题候选（r1 已上线；本候选尚未发布）；不是全厂商、全版本目录。最后核验：'+data['checked_at']+'。来源核验不是独立复现实验。','', '## 阅读路径']
+    lines=['# ModelAtlas · 大模型知识地图','', '> v0.2.2 · 代表性知识地图；不是全厂商、全版本目录。最后核验：'+data['checked_at']+'。来源核验不是独立复现实验。','', '## 阅读路径']
     for p in data['learning_paths']: lines += ['','### '+p['title'],p['note'],' → '.join(p['node_ids'])]
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
@@ -163,7 +182,7 @@ def book(data):
             if source['url'] not in urls: urls.append(source['url'])
         for u in urls: lines+=['- 来源：'+u]
         for e in data['events']:
-            if n['id'] in e['node_ids']: lines+=['- 事件：'+e['event_type']+' · '+str(e.get('date') or '未知 / 待核验')+' · 精度 '+str(e.get('date_precision') or 'unknown')+' · 证据 '+str(e.get('evidence_locator','见原始来源'))+' · 来源 '+', '.join(next(s['url'] for s in data['sources'] if s['id']==sid) for sid in e.get('source_ids',[]))]
+            if n['id'] in e['node_ids']: lines+=['- 事件：'+e['event_type']+' · '+str(e.get('date') or '未知 / 待核验')+' · '+e['title']+' · 精度 '+str(e.get('date_precision') or 'unknown')+' · 时区 '+str(e.get('timezone') or '未知')+' · 范围 '+str(e.get('availability_scope') or '未核验')+' · 版本 '+str(e.get('version') or '未核验')+' · 截至已可用（非首发） '+str(e.get('available_by') or '无独立观察')+' · 说明 '+str(e.get('note_zh') or '')+' · 证据 '+str(e.get('evidence_locator','见原始来源'))+' · 来源 '+', '.join(next(s['url'] for s in data['sources'] if s['id']==sid) for sid in e.get('source_ids',[]))]
     lines+=['','## 历史报告成绩快照（非排行榜，非独立复现）']
     for snap in data.get('evaluation_snapshots',[]):
         lines+=['','### '+snap.get('title',snap['id'])]
@@ -171,9 +190,9 @@ def book(data):
     lines+=['','## 关系索引（教学建议不代表历史因果）']
     for e in data['edges']: lines+=['- '+e['source']+' → '+e['type']+' → '+e['target']+' · '+str(e.get('verification_status',e.get('evidence_type','未核验')))+' · '+', '.join(e.get('source_ids',[]))]
     lines+=['','## 来源目录']
-    for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('notes_zh','原始来源页面')))]
+    for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
     lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
-    return '\n'.join(lines)+'\n'
+    return '\n'.join(line.rstrip() for line in lines)+'\n'
 def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     data=normalize(bundles)
