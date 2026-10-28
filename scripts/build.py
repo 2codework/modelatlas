@@ -241,6 +241,8 @@ def build():
         if p.is_file(): shutil.copy2(p,out/p.name)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
+    # Root BOOK.md uses the same relative image URL as the published book.
+    shutil.copy2(ROOT/'web/world-model-learning.svg',ROOT/'world-model-learning.svg')
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
     mcp_learning.publish(ROOT,out)
     creative_workflows.publish(ROOT,out)
