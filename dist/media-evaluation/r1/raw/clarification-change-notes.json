@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "change": "MMAU-mini limitation wording only; withheld-answer caveat belongs to separate 9000 test split, not 1000 mini",
+  "new_facts_added": false,
+  "raw_archive": "media-eval-research-r1/original-before-mini-clarification",
+  "changed_files": [
+    {
+      "path": "media-eval-research-r1/media-eval-research-r1.json",
+      "before_sha256": "2499baf309e328934deaa34a09dd67c6591300e2c3f1745308d6dadbf8aa0a45",
+      "after_sha256": "5d44353716ab4dff18fc751c7cdbdca080c4a9f567f4c8a1ef11e6ad62f84e84"
+    },
+    {
+      "path": "media-eval-research-r1/media-eval-research-r1.zh-CN.md",
+      "before_sha256": "c627b1f9ca9deb950a7a32837aa6cef612ff9b54fa1760014efd99ade783e886",
+      "after_sha256": "2d2aab9eada72c3bac774df523ba091aa06c21eaa7c270c20b0b175347972ed2"
+    },
+    {
+      "path": "media-eval-research-r1/build.py",
+      "before_sha256": "d4c378eaa34b2ce7bc664abd123c8c9bc40dd640909bc7d63ceec7ad37a87d59",
+      "after_sha256": "00a76e4e563469b9d68990709185b0bcf58a4b262372bc68377aff1db971128a"
+    }
+  ],
+  "json_semantic_diff": "one field: records[bench-mmau-v051525-test-mini].limitations_zh",
+  "candidate_built": false,
+  "canonical_written": false,
+  "latest_root_sha": "pending"
+}

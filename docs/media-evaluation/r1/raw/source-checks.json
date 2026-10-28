@@ -1,0 +1,206 @@
+[
+  {
+    "url": "https://github.com/djghosh13/geneval",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2310.11513",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/TencentQQGYLab/ELLA",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2403.05135",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/bioinf-jku/TTUR",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/1706.08500",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/Vchitect/VBench",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2311.17982",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/Vchitect/VBench/tree/master/VBench-2.0",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2503.21755",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/google-research/google-research/tree/master/frechet_video_distance",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/1812.01717",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/google-research/google-research/tree/master/frechet_audio_distance",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/1812.08466",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/AudioLLMs/AudioBench",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2406.16020",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/Sakshi113/MMAU",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2410.19168",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://github.com/Sakshi113/MMAU",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2410.19168",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://google-research.github.io/seanet/musiclm/examples/",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "公开 README：身份、评测流程或版本声明；代码许可证仅在明确显示时采用",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://arxiv.org/abs/2301.11325",
+    "checked_at": "2026-10-28",
+    "method": "web open / author README / arXiv abstract",
+    "status": "public_metadata_read",
+    "evidence_scope": "作者论文摘要与 arXiv submission history：任务定位、论文首发/修订日期",
+    "content_saved": "original metadata notes only; no benchmark examples"
+  },
+  {
+    "url": "https://www.kaggle.com/datasets/googleai/musiccaps",
+    "checked_at": "2026-10-28",
+    "method": "web open",
+    "status": "unreadable_body",
+    "evidence_scope": "入口来自MusicLM论文；正文返回0行，不据此确认许可/访问条件"
+  },
+  {
+    "url": "https://research.google/resources/datasets/musiccaps/",
+    "checked_at": "2026-10-28",
+    "method": "web open",
+    "status": "redirect_to_generic_dataset_index",
+    "evidence_scope": "不是有效MusicCaps详情证据；不列为主入口"
+  },
+  {
+    "url": "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini",
+    "checked_at": "2026-10-28",
+    "method": "web open from author README link",
+    "status": "metadata_read",
+    "evidence_scope": "许可证标签CC-BY-NC-4.0；页面附带示例未收录、未复制、未使用"
+  },
+  {
+    "url": "https://huggingface.co/spaces/sonalkum/MMAU-Eval",
+    "checked_at": "2026-10-28",
+    "method": "web open from author README link",
+    "status": "entrypoint_observed",
+    "evidence_scope": "仅Space入口；没有提交或交互评测"
+  }
+]

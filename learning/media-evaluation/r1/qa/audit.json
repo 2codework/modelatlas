@@ -1,0 +1,287 @@
+{
+  "audit": "media-eval-qa-r1",
+  "checked_at_utc": "2026-10-28T20:58:40.980641+00:00",
+  "decision": "accept_metadata_only",
+  "counts": {
+    "benchmark": 6,
+    "metric": 3,
+    "harness": 1,
+    "dataset": 1,
+    "leaderboard": 0
+  },
+  "required_fix_count": 0,
+  "records": [
+    {
+      "node_id": "bench-geneval-original",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Author paper confirms object co-occurrence, position, count and color; repository labels MIT for code.",
+      "official_sources": [
+        "https://github.com/djghosh13/geneval",
+        "https://arxiv.org/abs/2310.11513"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2023-10-17",
+        "paper_last_revision": "2023-10-17",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "bench-dpg-bench-original",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Paper confirms 1K dense prompts; author changelog says DPG-Bench released 2024-03-11; README recommends four images per prompt in a 2x2 grid; repository labels Apache-2.0.",
+      "official_sources": [
+        "https://github.com/TencentQQGYLab/ELLA",
+        "https://arxiv.org/abs/2403.05135"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2024-03-08",
+        "paper_last_revision": "2024-03-08",
+        "benchmark_release": "2024-03-11",
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "metric-fid-original",
+      "entity_kind": "metric",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Author paper introduces FID; TTUR README specifies Inception pool_3 distribution statistics, warns old unbatched implementation is buggy, and labels repository Apache-2.0. Not a dataset.",
+      "official_sources": [
+        "https://github.com/bioinf-jku/TTUR",
+        "https://arxiv.org/abs/1706.08500"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2017-06-26",
+        "paper_last_revision": "2018-01-12",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "bench-vbench-original",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Original paper states 16 dimensions. Repository distinguishes standard prompt suite and custom_input. Original protocol must not merge with 2.0, I2V or other variants.",
+      "official_sources": [
+        "https://github.com/Vchitect/VBench",
+        "https://arxiv.org/abs/2311.17982"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2023-11-29",
+        "paper_last_revision": "2023-11-29",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "bench-vbench-2-0",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Paper confirms five dimensions (human fidelity, controllability, creativity, physics, commonsense); author subdirectory and paper identify separate 2.0 protocol.",
+      "official_sources": [
+        "https://github.com/Vchitect/VBench/tree/master/VBench-2.0",
+        "https://arxiv.org/abs/2503.21755"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2025-03-27",
+        "paper_last_revision": "2025-08-20",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "metric-fvd-original",
+      "entity_kind": "metric",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Paper explicitly separates FVD metric from SCV benchmark; author README identifies implementation and real/generated video tensor preprocessing. Not a dataset.",
+      "official_sources": [
+        "https://github.com/google-research/google-research/tree/master/frechet_video_distance",
+        "https://arxiv.org/abs/1812.01717"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2018-12-03",
+        "paper_last_revision": "2019-03-27",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "metric-fad-original",
+      "entity_kind": "metric",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Paper identifies music-enhancement metric; author implementation depends on VGGish. Background distribution, embedding and preprocessing must remain explicit. Not a dataset.",
+      "official_sources": [
+        "https://github.com/google-research/google-research/tree/master/frechet_audio_distance",
+        "https://arxiv.org/abs/1812.08466"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2018-12-20",
+        "paper_last_revision": "2019-01-17",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "harness-audiobench",
+      "entity_kind": "harness",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Author current README says 50+ datasets; paper abstract says 8 tasks and 26 datasets. Harness entity is an explicit registry modeling choice, not denial that paper calls it a benchmark.",
+      "official_sources": [
+        "https://github.com/AudioLLMs/AudioBench",
+        "https://arxiv.org/abs/2406.16020"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2024-06-23",
+        "paper_last_revision": "2025-05-06",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license"
+      ]
+    },
+    {
+      "node_id": "bench-mmau-v051525-test-mini",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Author README confirms version v05.15.25 and 1000 mini samples; linked HF dataset page license tag confirms CC-BY-NC-4.0. Card-revision-to-version mapping remains unpinned.",
+      "official_sources": [
+        "https://github.com/Sakshi113/MMAU",
+        "https://arxiv.org/abs/2410.19168",
+        "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2024-10-24",
+        "paper_last_revision": "2024-10-24",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "dataset card revision not pinned to v05.15.25"
+      ]
+    },
+    {
+      "node_id": "bench-mmau-v051525-test",
+      "entity_kind": "benchmark",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "Author README confirms 9000 test samples with answers/explanations withheld, and 2026-01-30 move from Eval.ai to linked HF Space. No evaluation submission performed.",
+      "official_sources": [
+        "https://github.com/Sakshi113/MMAU",
+        "https://arxiv.org/abs/2410.19168",
+        "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2024-10-24",
+        "paper_last_revision": "2024-10-24",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license",
+        "dataset card revision not pinned to v05.15.25"
+      ]
+    },
+    {
+      "node_id": "data-musiccaps-original",
+      "entity_kind": "dataset",
+      "decision": "accept_with_explicit_unknowns",
+      "evidence": "MusicLM abstract confirms approximately 5.5k expert-described music-text pairs and links official project/Kaggle. Exact size, split, license and access remain unknown; existing unreadable targets not retried.",
+      "official_sources": [
+        "https://google-research.github.io/seanet/musiclm/examples/",
+        "https://arxiv.org/abs/2301.11325",
+        "https://www.kaggle.com/datasets/googleai/musiccaps"
+      ],
+      "paper_dates_verified": {
+        "paper_first_arxiv": "2023-01-26",
+        "paper_last_revision": "2023-01-26",
+        "benchmark_release": null,
+        "repository_last_update": null,
+        "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；null 为未核验，不推测。"
+      },
+      "required_fixes": [],
+      "unknowns": [
+        "harness/data revisions and actual execution not verified; no download or scoring access claim",
+        "data/media license not verified; implementation license is not dataset license",
+        "exact count, split and anonymous access not verified"
+      ]
+    }
+  ],
+  "optional_clarity": [
+    {
+      "target": "bench-mmau-v051525-test-mini.limitations_zh",
+      "suggestion": "Explicitly say withholding applies to the separate 9000-test split, to avoid a reader applying it to mini."
+    }
+  ],
+  "boundaries": [
+    "No canonical/candidate/source-pack writes",
+    "No benchmark execution, models, dependencies, credentials, media, question/answer files or restricted downloads",
+    "Primary author paper/repository reads only; HF metadata tag observed; incidental viewer example not copied to artifacts",
+    "All 10 distinct paper first/revision dates independently checked and matched",
+    "web reads may serve cached content; checked_at is observation date, not repository modification date or proof of live execution"
+  ],
+  "blocked_targets": [
+    {
+      "target": "https://www.kaggle.com/datasets/googleai/musiccaps",
+      "status": "unknown_retained_not_retried",
+      "reason": "Existing source-check reports zero-line body; evidence insufficiency, not authorization denial"
+    },
+    {
+      "target": "https://research.google/resources/datasets/musiccaps/",
+      "status": "excluded_not_retried",
+      "reason": "Existing source-check reports redirect to generic dataset index; not a MusicCaps detail source"
+    }
+  ]
+}

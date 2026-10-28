@@ -6204,6 +6204,399 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
 - 来源：https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/
 
+## GenEval
+
+文生图对象组合对齐：共现、数量、位置与颜色。
+
+- ID / 类型：bench-geneval-original / benchmark
+- 生命周期：unknown
+- 版本：original paper protocol
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：original paper protocol
+- split：original prompt suite
+- execution_status：never-run
+- metric：对象属性检测得到的分项与整体得分；非FID
+- protocol：固定原始prompt套件/自采样套件、每prompt生成数、检测器checkpoint与阈值；分项与总体分别展示
+- availability：公开介绍 / 官方入口
+- limitations_zh：可重新采样prompts，不能将自定义集合成绩当原版；不测量全部美学或人类偏好。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "MIT", "source_url": "https://github.com/djghosh13/geneval", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2023-10-17", "paper_last_revision": "2023-10-17", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/djghosh13/geneval", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2310.11513)
+- [repo · 官方入口](https://github.com/djghosh13/geneval)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：可重新采样prompts，不能将自定义集合成绩当原版；不测量全部美学或人类偏好。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/djghosh13/geneval
+- 来源：https://arxiv.org/abs/2310.11513
+
+## DPG-Bench
+
+检验图像生成对复杂密集文本描述的遵循。
+
+- ID / 类型：bench-dpg-bench-original / benchmark
+- 生命周期：unknown
+- 版本：original ELLA release
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：original ELLA release
+- split：dense prompt suite
+- execution_status：never-run
+- metric：DPG-Bench graph/question-based evaluation；精确聚合实现未审计
+- protocol：固定密集prompt套件及评分器；官方建议每prompt四图并组成2×2，记录分辨率
+- availability：公开介绍 / 官方入口
+- limitations_zh：不能把ELLA模型发布日期当基准发布日期；不可与GenEval整体分数直接换算。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "Apache-2.0", "source_url": "https://github.com/TencentQQGYLab/ELLA", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2024-03-08", "paper_last_revision": "2024-03-08", "benchmark_release": "2024-03-11", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[{"value": 1000, "unit": "dense prompts", "scope": "paper original suite", "source_url": "https://arxiv.org/abs/2403.05135"}]
+- harness_metadata：{"url": "https://github.com/TencentQQGYLab/ELLA", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2403.05135)
+- [repo · 官方入口](https://github.com/TencentQQGYLab/ELLA)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：不能把ELLA模型发布日期当基准发布日期；不可与GenEval整体分数直接换算。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/TencentQQGYLab/ELLA
+- 来源：https://arxiv.org/abs/2403.05135
+
+## Fréchet Inception Distance (FID)
+
+比较真实与生成图像特征分布的距离；不是独立数据集。
+
+- ID / 类型：metric-fid-original / metric
+- 生命周期：unknown
+- 版本：original Inception pool_3 formulation
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：metric
+- version：original Inception pool_3 formulation
+- split：not_applicable
+- execution_status：never-run
+- metric：Fréchet distance between Gaussian feature statistics; lower is better under same protocol
+- protocol：固定参考集/统计量、Inception实现、resize、样本量与数值实现
+- availability：公开介绍 / 官方入口
+- limitations_zh：代码仓库警告旧unbatched实现有bug；不是逐样本准确率，也不直接评估文本对齐。不同参考集和实现不横比。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "Apache-2.0", "source_url": "https://github.com/bioinf-jku/TTUR", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2017-06-26", "paper_last_revision": "2018-01-12", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/bioinf-jku/TTUR", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/1706.08500)
+- [repo · 官方入口](https://github.com/bioinf-jku/TTUR)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：代码仓库警告旧unbatched实现有bug；不是逐样本准确率，也不直接评估文本对齐。不同参考集和实现不横比。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
+- 来源：https://github.com/bioinf-jku/TTUR
+- 来源：https://arxiv.org/abs/1706.08500
+
+## VBench（原版T2V）
+
+视频生成的16个细分维度，覆盖时序质量与条件一致性。
+
+- ID / 类型：bench-vbench-original / benchmark
+- 生命周期：unknown
+- 版本：original 16-dimension suite
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：original 16-dimension suite
+- split：standard T2V prompt suite
+- execution_status：never-run
+- metric：分维度指标；总体聚合须注明官方实现及权重
+- protocol：固定标准prompt列表、视频长度/FPS/分辨率、每prompt样本量、检测器和聚合；custom_input单列
+- availability：公开介绍 / 官方入口
+- limitations_zh：原版、I2V、Trustworthiness、VBench++与2.0不可混同；pip包版本不是基准代际。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "unknown", "source_url": "https://github.com/Vchitect/VBench", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2023-11-29", "paper_last_revision": "2023-11-29", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/Vchitect/VBench", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2311.17982)
+- [repo · 官方入口](https://github.com/Vchitect/VBench)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：原版、I2V、Trustworthiness、VBench++与2.0不可混同；pip包版本不是基准代际。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/Vchitect/VBench
+- 来源：https://arxiv.org/abs/2311.17982
+
+## VBench-2.0
+
+视频生成内在可信性：人体保真、可控性、创造力、物理与常识。
+
+- ID / 类型：bench-vbench-2-0 / benchmark
+- 生命周期：unknown
+- 版本：2.0
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：2.0
+- split：2.0 standard suite
+- execution_status：never-run
+- metric：五大维度下的细分能力评价；不等同VBench原版总体
+- protocol：固定2.0套件、逐维度评估器/模型版本、生成和视频预处理设置
+- availability：公开介绍 / 官方入口
+- limitations_zh：框架结合通用VLM/LLM和专用检测器；本轮不下载、不运行、不调用裁判模型。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "unknown", "source_url": "https://github.com/Vchitect/VBench/tree/master/VBench-2.0", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2025-03-27", "paper_last_revision": "2025-08-20", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/Vchitect/VBench/tree/master/VBench-2.0", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2503.21755)
+- [repo · 官方入口](https://github.com/Vchitect/VBench/tree/master/VBench-2.0)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：框架结合通用VLM/LLM和专用检测器；本轮不下载、不运行、不调用裁判模型。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/Vchitect/VBench/tree/master/VBench-2.0
+- 来源：https://arxiv.org/abs/2503.21755
+
+## Fréchet Video Distance (FVD)
+
+用于视频生成分布比较的距离指标；不是SCV数据集本身。
+
+- ID / 类型：metric-fvd-original / metric
+- 生命周期：unknown
+- 版本：original paper formulation
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：metric
+- version：original paper formulation
+- split：not_applicable
+- execution_status：never-run
+- metric：Fréchet Video Distance; lower is better under same protocol
+- protocol：固定视频特征提取器、参考集、样本数、帧采样/长度/FPS/分辨率；不可横比不一致预处理
+- availability：公开介绍 / 官方入口
+- limitations_zh：FVD与同论文提出的SCV基准须分实体；不能由FVD断言物理常识或文本遵循。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "unknown", "source_url": "https://github.com/google-research/google-research/tree/master/frechet_video_distance", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2018-12-03", "paper_last_revision": "2019-03-27", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/google-research/google-research/tree/master/frechet_video_distance", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/1812.01717)
+- [repo · 官方入口](https://github.com/google-research/google-research/tree/master/frechet_video_distance)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：FVD与同论文提出的SCV基准须分实体；不能由FVD断言物理常识或文本遵循。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
+- 来源：https://github.com/google-research/google-research/tree/master/frechet_video_distance
+- 来源：https://arxiv.org/abs/1812.01717
+
+## Fréchet Audio Distance (FAD)
+
+音频分布距离，原论文针对音乐增强质量评价。
+
+- ID / 类型：metric-fad-original / metric
+- 生命周期：unknown
+- 版本：original VGGish formulation
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：metric
+- version：original VGGish formulation
+- split：not_applicable
+- execution_status：never-run
+- metric：Fréchet Audio Distance; lower is better under same protocol
+- protocol：固定VGGish或明确另选embedding、背景参考集合、采样率、音频长度、样本量
+- availability：公开介绍 / 官方入口
+- limitations_zh：reference-free 指无需逐样本干净配对，并非完全无需背景集合；不同embedding的FAD不可直接横比；不直接测文本语义匹配。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "unknown", "source_url": "https://github.com/google-research/google-research/tree/master/frechet_audio_distance", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2018-12-20", "paper_last_revision": "2019-01-17", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/google-research/google-research/tree/master/frechet_audio_distance", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/1812.08466)
+- [repo · 官方入口](https://github.com/google-research/google-research/tree/master/frechet_audio_distance)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：reference-free 指无需逐样本干净配对，并非完全无需背景集合；不同embedding的FAD不可直接横比；不直接测文本语义匹配。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
+- 来源：https://github.com/google-research/google-research/tree/master/frechet_audio_distance
+- 来源：https://arxiv.org/abs/1812.08466
+
+## AudioBench（评测工具／套件）
+
+音频语言模型的语音、声景与副语言理解评测工具。
+
+- ID / 类型：harness-audiobench / harness
+- 生命周期：unknown
+- 版本：repository snapshot; paper scope separately recorded
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：harness
+- version：repository snapshot; paper scope separately recorded
+- split：per constituent dataset/configuration
+- execution_status：never-run
+- metric：各数据集分别采用WER、BLEU、judge等；不存在可无条件混加的单一准确率
+- protocol：固定具体数据集/切分、metric、裁判模型及prompt、采样和工具链commit
+- availability：公开介绍 / 官方入口
+- limitations_zh：当前README写50+数据集；论文摘要为8任务26数据集，属于不同scope。不能把当前工具链当固定26项数据集；本轮不调用任何API或裁判服务。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "unknown", "source_url": "https://github.com/AudioLLMs/AudioBench", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "未核验", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2024-06-23", "paper_last_revision": "2025-05-06", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[]
+- harness_metadata：{"url": "https://github.com/AudioLLMs/AudioBench", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2406.16020)
+- [repo · 官方入口](https://github.com/AudioLLMs/AudioBench)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：当前README写50+数据集；论文摘要为8任务26数据集，属于不同scope。不能把当前工具链当固定26项数据集；本轮不调用任何API或裁判服务。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为harness。
+- 来源：https://github.com/AudioLLMs/AudioBench
+- 来源：https://arxiv.org/abs/2406.16020
+
+## MMAU v05.15.25 — test-mini
+
+语音、环境声与音乐理解/推理；分版分切分登记。
+
+- ID / 类型：bench-mmau-v051525-test-mini / benchmark
+- 生命周期：unknown
+- 版本：MMAU-v05.15.25
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：MMAU-v05.15.25
+- split：test-mini
+- execution_status：never-run
+- metric：accuracy；固定答案解析及分组汇总
+- protocol：必须注明MMAU-v05.15.25而非旧版；mini与test分开；固定音频处理、prompt与模型版本
+- availability：公开介绍 / 官方入口
+- limitations_zh：版本标识带日期但本轮不以之替代独立核验的发布日期。答案及解释保留的限制属于另一个9000条test切分，不属于本条1000条test-mini；mini与test成绩不可互换。本轮未验证mini完整本地评分。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "Apache-2.0", "source_url": "https://github.com/Sakshi113/MMAU", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "CC-BY-NC-4.0 (dataset card)", "source_url": "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2024-10-24", "paper_last_revision": "2024-10-24", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[{"value": 1000, "unit": "samples", "split": "test-mini", "source_url": "https://github.com/Sakshi113/MMAU"}]
+- harness_metadata：{"url": "https://github.com/Sakshi113/MMAU", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2410.19168)
+- [repo · 官方入口](https://github.com/Sakshi113/MMAU)
+- [data · 官方入口](https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：版本标识带日期但本轮不以之替代独立核验的发布日期。答案及解释保留的限制属于另一个9000条test切分，不属于本条1000条test-mini；mini与test成绩不可互换。本轮未验证mini完整本地评分。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/Sakshi113/MMAU
+- 来源：https://arxiv.org/abs/2410.19168
+- 来源：https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini
+
+## MMAU v05.15.25 — test
+
+语音、环境声与音乐理解/推理；分版分切分登记。
+
+- ID / 类型：bench-mmau-v051525-test / benchmark
+- 生命周期：unknown
+- 版本：MMAU-v05.15.25
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：benchmark
+- version：MMAU-v05.15.25
+- split：test
+- execution_status：never-run
+- metric：accuracy；固定答案解析及分组汇总
+- protocol：必须注明MMAU-v05.15.25而非旧版；mini与test分开；固定音频处理、prompt与模型版本
+- availability：公开介绍 / 官方入口
+- limitations_zh：版本标识带日期但本轮不以之替代独立核验的发布日期。test答案及解释保留，不能声称本地完整评分可用；mini不是test的可互换成绩。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "withheld_test_labels"}
+- license_evidence：{"code": {"statement": "Apache-2.0", "source_url": "https://github.com/Sakshi113/MMAU", "scope": "repository only; not underlying data or evaluator checkpoints"}, "data": {"statement": "unknown", "source_url": "https://huggingface.co/datasets/gamma-lab-umd/MMAU-test", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2024-10-24", "paper_last_revision": "2024-10-24", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[{"value": 9000, "unit": "samples", "split": "test", "source_url": "https://github.com/Sakshi113/MMAU"}]
+- harness_metadata：{"url": "https://github.com/Sakshi113/MMAU", "revision": "未核验", "status": "official_entrypoint_only_not_pinned"}
+- [paper · 官方入口](https://arxiv.org/abs/2410.19168)
+- [repo · 官方入口](https://github.com/Sakshi113/MMAU)
+- [data · 官方入口](https://huggingface.co/datasets/gamma-lab-umd/MMAU-test)
+- [evaluation_service · 官方入口](https://huggingface.co/spaces/sonalkum/MMAU-Eval)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：版本标识带日期但本轮不以之替代独立核验的发布日期。test答案及解释保留，不能声称本地完整评分可用；mini不是test的可互换成绩。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
+- 来源：https://github.com/Sakshi113/MMAU
+- 来源：https://arxiv.org/abs/2410.19168
+- 来源：https://huggingface.co/datasets/gamma-lab-umd/MMAU-test
+- 来源：https://huggingface.co/spaces/sonalkum/MMAU-Eval
+
+## MusicCaps
+
+专家描述的音乐—文本配对数据，支持音乐生成与理解研究。
+
+- ID / 类型：data-musiccaps-original / dataset
+- 生命周期：unknown
+- 版本：original MusicLM accompanying dataset
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 媒体评测 · 类型化metadata（未运行）
+- 统计边界：本批11知识实体＝6 benchmark＋3 metric＋1 harness＋1 dataset；不合并到既有数据集/基准registry。
+- entity_kind：dataset
+- version：original MusicLM accompanying dataset
+- split：split not verified
+- execution_status：never-run
+- metric：数据集本身无唯一分数；生成质量/文本对齐指标另行指定
+- protocol：固定数据revision、选取子集、音频可得性与评测协议；不能把配对数当模型质量
+- availability：公开介绍 / 官方入口
+- limitations_zh：Kaggle正文未通过本轮文本读取核验；不填未经确认的精确5521、split、license或可匿名下载结论；原始音乐权利与描述元数据必须分开。
+- reproducibility：仅metadata调研。复现须另行授权并固定模型、harness commit、数据revision、生成seed、采样数、预处理和评估器。
+- contamination：公开材料可能进入训练；需报告模型训练截止与重合检查。未检出不等于零污染。
+- display_policy：仅原创公开介绍、口径、公开汇总事实与官方跳转；不镜像题目、答案、音视频、受限下载或私有评测。
+- access_semantics：{"public_metadata": true, "download_access": "not_end_to_end_verified", "requires_account": "unknown", "full_local_scoring_access": "not_verified"}
+- license_evidence：{"code": {"statement": "not_applicable", "source_url": "未核验", "scope": "dataset entity"}, "data": {"statement": "unknown", "source_url": "https://www.kaggle.com/datasets/googleai/musiccaps", "scope": "dataset/card only; underlying media rights separate"}, "metadata": {"statement": "原创摘要与官方链接；不声称对源网页拥有再分发授权", "mirrored_content": false}}
+- dates：{"paper_first_arxiv": "2023-01-26", "paper_last_revision": "2023-01-26", "benchmark_release": "未核验", "repository_last_update": "未核验", "note_zh": "论文首发、论文修订、基准发布、仓库更新互不替代；"未核验" 为未核验，不推测。"}
+- dataset_sizes：[{"value": 5500, "unit": "music-text pairs", "approximate": true, "scope": "paper abstract says 5.5k", "source_url": "https://arxiv.org/abs/2301.11325"}]
+- harness_metadata：{"url": "未核验", "revision": "未核验", "status": "not_applicable_dataset"}
+- [paper · 官方入口](https://arxiv.org/abs/2301.11325)
+- [data · 官方入口](https://www.kaggle.com/datasets/googleai/musiccaps)
+- [project · 官方入口](https://google-research.github.io/seanet/musiclm/examples/)
+- 原始metadata及未知项：[研究JSON](media-evaluation/r1/raw/media-eval-research-r1.json)；[来源检查](media-evaluation/r1/raw/source-checks.json)。
+- license：代码、数据与原始素材许可分别核验；详见媒体评测metadata。
+- 注意：Kaggle正文未通过本轮文本读取核验；不填未经确认的精确5521、split、license或可匿名下载结论；原始音乐权利与描述元数据必须分开。
+- 注意：11个知识实体不是11个数据集或11个benchmark；本实体为dataset。
+- 来源：https://google-research.github.io/seanet/musiclm/examples/
+- 来源：https://arxiv.org/abs/2301.11325
+- 来源：https://www.kaggle.com/datasets/googleai/musiccaps
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -6713,6 +7106,30 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - office-src-lindy-drafts · https://docs.lindy.ai/features/inbox-management/email-drafting · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
 - office-src-n8n-hitl · https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md · 核验 2026-10-28 · 旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页；official_documentation；documentation-only
 - office-src-rovo-slack · https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/ · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- media-src-1223de59d7b6c292 · https://github.com/djghosh13/geneval · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-2da47e6f77711c51 · https://arxiv.org/abs/2310.11513 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-42f01042f3e137f7 · https://github.com/TencentQQGYLab/ELLA · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-4e9df6c9eaa67eea · https://arxiv.org/abs/2403.05135 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-445b69ee18cd2aac · https://github.com/bioinf-jku/TTUR · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-a690179b203521ef · https://arxiv.org/abs/1706.08500 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-3ff1149b9cbea4f9 · https://github.com/Vchitect/VBench · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-eced35def835b9d5 · https://arxiv.org/abs/2311.17982 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-537654aac58c0b19 · https://github.com/Vchitect/VBench/tree/master/VBench-2.0 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-1746836d5aa71d8b · https://arxiv.org/abs/2503.21755 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-7738c186ce1a5807 · https://github.com/google-research/google-research/tree/master/frechet_video_distance · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-b994b53b1353fd71 · https://arxiv.org/abs/1812.01717 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-60f5d4139e8bee50 · https://github.com/google-research/google-research/tree/master/frechet_audio_distance · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-e9ea2b814d1c455c · https://arxiv.org/abs/1812.08466 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-78cbb61bd9978018 · https://github.com/AudioLLMs/AudioBench · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-4797486d5832491f · https://arxiv.org/abs/2406.16020 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-df5741391b27f261 · https://github.com/Sakshi113/MMAU · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-69630aad242c8438 · https://arxiv.org/abs/2410.19168 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-18edcb6d7286f565 · https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-e7de1128f8ab1773 · https://huggingface.co/datasets/gamma-lab-umd/MMAU-test · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-ce716e17eaedbd59 · https://huggingface.co/spaces/sonalkum/MMAU-Eval · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-7fafb4ff07e8f634 · https://google-research.github.io/seanet/musiclm/examples/ · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-be6bc7e1786807c2 · https://arxiv.org/abs/2301.11325 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- media-src-89747c3fbdcf1342 · https://www.kaggle.com/datasets/googleai/musiccaps · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
@@ -6761,6 +7178,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - README date conflict and parameter-count scope conflicts intentionally unresolved.
 - No exact license-version or full dependency/data-rights audit performed.
 - 办公 Agent 系统已有11命名实体/10家族代表批次；OpenAI、Anthropic及更多地区平台仍待专项核验，未覆盖全球全部服务或版本。
+- 媒体评测仅补充11个代表知识实体（6 benchmark、3 metric、1 harness、1 dataset）；不代表完整目录，不导入成绩或形成统一榜单。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。

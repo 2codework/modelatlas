@@ -1,0 +1,16 @@
+{
+  "json_parses": true,
+  "record_count": 11,
+  "entity_counts": {
+    "benchmark": 6,
+    "metric": 3,
+    "harness": 1,
+    "dataset": 1
+  },
+  "ids_unique": true,
+  "canonical_hash_unchanged_during_research": true,
+  "all_execution_never_run": true,
+  "all_score_arrays_empty": true,
+  "all_download_access_not_verified": true,
+  "all_entity_kinds_explicit": true
+}

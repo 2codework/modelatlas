@@ -6,6 +6,7 @@ import asset_versions
 import mcp_learning
 import creative_workflows
 import office_agents
+import media_evaluation
 import vendor_catalog
 import benchmark_catalog
 import world_models
@@ -92,6 +93,7 @@ def normalize(bundles):
         if e.get('evidence_type')=='editorial_learning_order': e.setdefault('verification_status','editorial_learning_relation')
     result['evaluation_snapshots']=[copy.deepcopy(r) for b in bundles for r in b.get('snapshots',[])]
     result['dataset_benchmark_registry']=[copy.deepcopy(r) for b in bundles for r in b.get('dataset_benchmark_registry',[])]
+    result['media_evaluation_registry']=[copy.deepcopy(r) for b in bundles for r in b.get('media_evaluation_registry',[])]
     sets={}
     for kind in ('nodes','sources','events'):
         ids=[n['id'] for n in result[kind]]
@@ -134,6 +136,11 @@ def normalize(bundles):
         if row.get('results_preview',{}).get('official_results_url'): require(url_ok(row['results_preview']['official_results_url']),'unsafe results URL')
         for k in ('access_url','access_application_url'):
             if row.get(k): require(url_ok(row[k]),'unsafe registry URL')
+    for row in result['media_evaluation_registry']:
+        require(row['node_id'] in sets['nodes'],'dangling media registry node')
+        require(row['entity_kind'] in media_evaluation.KINDS,'invalid media entity kind')
+        require(row['execution_status']=='never-run' and not row['results_preview']['scores'],'unsupported media execution/score claim')
+        refs(row,'media registry')
     for node in result['nodes']:
         life=node.get('lifecycle','unknown')
         if isinstance(life,dict):
@@ -194,6 +201,7 @@ def book(data):
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
         if 'tutorial_markdown' in n: lines += [n['tutorial_markdown']]
+        if 'media_evaluation' in n: lines += media_evaluation.book(n['media_evaluation'])
         if 'office_agent' in n:
             w=n['office_agent']
             lines += ['### 办公系统 · 权限与未执行实践']
@@ -245,6 +253,7 @@ def build():
     bundles.append(world_models.load(ROOT))
     _, office_bundle = office_agents.load(ROOT)
     bundles.append(office_bundle)
+    bundles.append(media_evaluation.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -261,6 +270,7 @@ def build():
     benchmark_catalog.publish(ROOT,out)
     world_models.publish(ROOT,out)
     office_agents.publish(ROOT,out)
+    media_evaluation.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

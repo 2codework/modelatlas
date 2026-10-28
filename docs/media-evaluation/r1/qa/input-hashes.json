@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "media-eval-research-r1/build.py": "d4c378eaa34b2ce7bc664abd123c8c9bc40dd640909bc7d63ceec7ad37a87d59",
+    "media-eval-research-r1/media-eval-research-r1.json": "2499baf309e328934deaa34a09dd67c6591300e2c3f1745308d6dadbf8aa0a45",
+    "media-eval-research-r1/media-eval-research-r1.zh-CN.md": "c627b1f9ca9deb950a7a32837aa6cef612ff9b54fa1760014efd99ade783e886",
+    "media-eval-research-r1/source-checks.json": "31941bf457e5e7f8b47d3544ded3fb015ba4f9d390fa4a7c2af67119a6227ae5",
+    "media-eval-research-r1/unknowns.md": "39ecd002a4652a055f71648b15ae11a0d2835f0805cbf276bcc7c45c9c9834f3",
+    "media-eval-research-r1/validation.json": "39853ac02285d04a3ace8c0631cdc5146555e66eefe1c017df3a16ce2072ca4a",
+    "github-migration-r1/public/modelatlas/docs/data.json": "b673d3f3e5cdbc2fa852aad4b3900462192e4e1e77ce176f3180a1acbc0730e0"
+  },
+  "canonical_matches_research_baseline": true
+}
