@@ -1,0 +1,307 @@
+{
+  "decision": "accept_proposal_evidence_with_integration_gate",
+  "required_proposal_fixes": [],
+  "events": [
+    {
+      "id": "media-paper-1706-08500-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2017-06-26",
+      "node_ids": [
+        "metric-fid-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1706.08500"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-1706-08500-revision-2018-01-12",
+      "decision": "accept",
+      "type": "paper_revision",
+      "date": "2018-01-12",
+      "node_ids": [
+        "metric-fid-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1706.08500"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack",
+        "revision version number not retained; not full revision history"
+      ]
+    },
+    {
+      "id": "media-paper-1812-01717-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2018-12-03",
+      "node_ids": [
+        "metric-fvd-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1812.01717"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-1812-08466-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2018-12-20",
+      "node_ids": [
+        "metric-fad-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1812.08466"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-1812-08466-revision-2019-01-17",
+      "decision": "accept",
+      "type": "paper_revision",
+      "date": "2019-01-17",
+      "node_ids": [
+        "metric-fad-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1812.08466"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack",
+        "revision version number not retained; not full revision history"
+      ]
+    },
+    {
+      "id": "media-paper-1812-01717-revision-2019-03-27",
+      "decision": "accept",
+      "type": "paper_revision",
+      "date": "2019-03-27",
+      "node_ids": [
+        "metric-fvd-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/1812.01717"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack",
+        "revision version number not retained; not full revision history"
+      ]
+    },
+    {
+      "id": "media-paper-2301-11325-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2023-01-26",
+      "node_ids": [
+        "data-musiccaps-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2301.11325"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2310-11513-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2023-10-17",
+      "node_ids": [
+        "bench-geneval-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2310.11513"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2311-17982-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2023-11-29",
+      "node_ids": [
+        "bench-vbench-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2311.17982"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2403-05135-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2024-03-08",
+      "node_ids": [
+        "bench-dpg-bench-original"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2403.05135"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-dpg-bench-release-2024-03-11",
+      "decision": "accept",
+      "type": "benchmark_release",
+      "date": "2024-03-11",
+      "node_ids": [
+        "bench-dpg-bench-original"
+      ],
+      "evidence": [
+        "https://github.com/TencentQQGYLab/ELLA"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2406-16020-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2024-06-23",
+      "node_ids": [
+        "harness-audiobench"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2406.16020"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2410-19168-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2024-10-24",
+      "node_ids": [
+        "bench-mmau-v051525-test-mini",
+        "bench-mmau-v051525-test"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2410.19168"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2503-21755-v1",
+      "decision": "accept",
+      "type": "paper_submission",
+      "date": "2025-03-27",
+      "node_ids": [
+        "bench-vbench-2-0"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2503.21755"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    },
+    {
+      "id": "media-paper-2406-16020-revision-2025-05-06",
+      "decision": "accept",
+      "type": "paper_revision",
+      "date": "2025-05-06",
+      "node_ids": [
+        "harness-audiobench"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2406.16020"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack",
+        "revision version number not retained; not full revision history"
+      ]
+    },
+    {
+      "id": "media-paper-2503-21755-revision-2025-08-20",
+      "decision": "accept",
+      "type": "paper_revision",
+      "date": "2025-08-20",
+      "node_ids": [
+        "bench-vbench-2-0"
+      ],
+      "evidence": [
+        "https://arxiv.org/abs/2503.21755"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack",
+        "revision version number not retained; not full revision history"
+      ]
+    },
+    {
+      "id": "media-mmau-test-platform-migration-announced-2026-01-30",
+      "decision": "accept",
+      "type": "platform_migration",
+      "date": "2026-01-30",
+      "node_ids": [
+        "bench-mmau-v051525-test"
+      ],
+      "evidence": [
+        "https://github.com/Sakshi113/MMAU"
+      ],
+      "unknown": [
+        "timezone not retained in audited pack"
+      ]
+    }
+  ],
+  "counts": {
+    "paper_submission": 10,
+    "paper_revision": 5,
+    "benchmark_release": 1,
+    "platform_migration": 1
+  },
+  "input_sha256": {
+    "media-eval-timeline-proposal-r1/proposal.json": "7fb134b9923425881028ff65de04b5b2068e111d3a2c7e4b4384f5af42380d0c",
+    "media-eval-timeline-proposal-r1/README.zh-CN.md": "a7afcfdbd2f26b7016d49d87bbf6c5cabcc16133415dc36d8db11c823742a041",
+    "media-eval-timeline-proposal-r1/extract.py": "351047c19785ebc9fd2a5e92d3bd1ea9dad98513acc3fa76fab1ef16101e840f",
+    "media-eval-timeline-proposal-r1/validation.json": "99ff93ed5f82c96cc5b5c54609d80270a738d79733ab4a7bb15972d402c39e42",
+    "media-eval-research-r1/media-eval-research-r1.json": "5d44353716ab4dff18fc751c7cdbdca080c4a9f567f4c8a1ef11e6ad62f84e84",
+    "github-migration-r1/public/modelatlas/docs/data.json": "c6fc70a87a6481147707963f88cf814c5629e5e4790b68acf89922e160c943fb",
+    "media-eval-integration-r1/modelatlas/docs/data.json": "c6fc70a87a6481147707963f88cf814c5629e5e4790b68acf89922e160c943fb",
+    "github-migration-r1/public/modelatlas/scripts/build.py": "a52a6a9ffd92da9416fe418d1f1b27455b35b27d8c15925d4990c3f6c02b04a4",
+    "github-migration-r1/public/modelatlas/web/app.js": "c5639a9cd72a8e051b22ff213f0fbb9262f309dedd9f358e5ea8ef0f660261f3"
+  },
+  "baseline_events_examined": 149,
+  "conflicts": {
+    "id": [],
+    "same_source_date_kind": [],
+    "shared_source_any_date_kind": [],
+    "same_node_date_kind": []
+  },
+  "within_proposal_semantic_keys_unique": true,
+  "unknown_date_fields_preserved": 21,
+  "same_day_revision_groups_suppressed": 5,
+  "integration_gate": {
+    "status": "pending_explicit_schema_and_ui_support",
+    "types": [
+      "paper_revision",
+      "platform_migration"
+    ],
+    "targets": [
+      "scripts/build.py:EVENT_TYPES",
+      "web/app.js:eventLabels and event-type filter"
+    ],
+    "required": "Add explicit types, labels and offline regression tests before merge; do not alias to legacy types."
+  },
+  "scope": "Read-only existing reviewed metadata and earlier primary evidence; no network refetch; no proposal/canonical mutation."
+}

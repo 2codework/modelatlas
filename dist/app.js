@@ -17,7 +17,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  const catalogValid=!!(catalogModule&&typeof catalogModule.validate==='function'&&catalogModule.validate(D));
  const nodes=new Map(D.nodes.map(n=>[n.id,n])), views=new Map(D.view_nodes.map(n=>[n.id,n])),sources=new Map(D.sources.map(s=>[s.id,s]));
  const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;let importGeneration=0,progressRevision=0;
- const eventLabels={paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布'};
+ const eventLabels={paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布',paper_revision:'论文修订（截至核验快照）',platform_migration:'平台迁移公告'};
  const display=value=>value===null||value===undefined||value===''?'未核验':typeof value==='object'?JSON.stringify(value):String(value);
  $('stats').textContent=`${D.nodes.length} 节点 · ${D.edges.length} 关联 · ${D.sources.length} 登记来源 · 核验 ${D.checked_at}`;
  try{const raw=localStorage.getItem('modelatlas.progress');if(raw)completed=C.parseProgress(raw,allIds);}catch{$('progress-status').textContent='本地进度不可用或已损坏；本次会话仍可使用，导出可备份。';}
@@ -84,6 +84,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  if(neighborIds.length>12)ul.prepend(el('li',`图中显示 12 / ${neighborIds.length} 个邻居，完整关系均列于此。`));
  }
  function eventEvidence(root,e){
+ if(e.media_timeline){root.append(el('p','媒体事件核验日期：'+(e.checked_at||'未核验')+'；仅公开元数据，未运行评测。'));if(e.event_type==='paper_revision')root.append(el('p','修订快照边界：仅表示截至 '+(e.checked_at||'未核验')+' 已核验的论文修订，不声称当前最新版或覆盖全部中间修订；不是基准发布。'));if(e.timezone_note_zh)root.append(el('p','时区说明：'+e.timezone_note_zh));if(e.observation_scope_zh)root.append(el('p','观察范围：'+e.observation_scope_zh));}
  for(const [label,value] of [['可获得范围',e.availability_scope],['版本',e.version],['时区',e.timezone||'未知（未声明）'],['截至已可用（非精确首发、非GA）',e.available_by],['说明',e.note_zh],['日期证据',e.evidence_locator],['证据摘要',e.evidence_summary_zh]])if(value)root.append(el('p',label+'：'+value));
  root.append(el('small',`${e.checked_at||'未核验'} / ${e.verification_status}`));sourceList(root,e);
  }

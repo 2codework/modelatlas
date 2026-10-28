@@ -1,0 +1,854 @@
+{
+  "schema_version": "media-eval-timeline-proposal-r1",
+  "prepared_at_utc_date": "2026-10-28",
+  "status": "read_only_proposal_not_applied",
+  "input_sha256": {
+    "media-eval-research-r1/media-eval-research-r1.json": "5d44353716ab4dff18fc751c7cdbdca080c4a9f567f4c8a1ef11e6ad62f84e84",
+    "github-migration-r1/public/modelatlas/docs/data.json": "c6fc70a87a6481147707963f88cf814c5629e5e4790b68acf89922e160c943fb",
+    "media-eval-integration-r1/modelatlas/docs/data.json": "c6fc70a87a6481147707963f88cf814c5629e5e4790b68acf89922e160c943fb"
+  },
+  "evidence_mode": "offline extraction from already-reviewed public metadata; no web refetch",
+  "counts": {
+    "paper_submission": 10,
+    "paper_revision": 5,
+    "benchmark_release": 1,
+    "platform_migration": 1
+  },
+  "events": [
+    {
+      "id": "media-paper-1706-08500-v1",
+      "title": "1706.08500 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2017-06-26",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fid-original"
+      ],
+      "version": "arXiv:1706.08500v1",
+      "source_urls": [
+        "https://arxiv.org/abs/1706.08500"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/5",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fid-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2017-06-26"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-1706-08500-revision-2018-01-12",
+      "title": "1706.08500 论文末次已核验修订",
+      "event_type": "paper_revision",
+      "date": "2018-01-12",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fid-original"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://arxiv.org/abs/1706.08500"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/5",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fid-original",
+          "field": "dates.paper_last_revision",
+          "value": "2018-01-12"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_revision",
+      "note_zh": "论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-1812-01717-v1",
+      "title": "1812.01717 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2018-12-03",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fvd-original"
+      ],
+      "version": "arXiv:1812.01717v1",
+      "source_urls": [
+        "https://arxiv.org/abs/1812.01717"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/11",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fvd-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2018-12-03"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-1812-08466-v1",
+      "title": "1812.08466 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2018-12-20",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fad-original"
+      ],
+      "version": "arXiv:1812.08466v1",
+      "source_urls": [
+        "https://arxiv.org/abs/1812.08466"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/13",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fad-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2018-12-20"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-1812-08466-revision-2019-01-17",
+      "title": "1812.08466 论文末次已核验修订",
+      "event_type": "paper_revision",
+      "date": "2019-01-17",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fad-original"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://arxiv.org/abs/1812.08466"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/13",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fad-original",
+          "field": "dates.paper_last_revision",
+          "value": "2019-01-17"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_revision",
+      "note_zh": "论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-1812-01717-revision-2019-03-27",
+      "title": "1812.01717 论文末次已核验修订",
+      "event_type": "paper_revision",
+      "date": "2019-03-27",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "metric-fvd-original"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://arxiv.org/abs/1812.01717"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/11",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订",
+      "raw_date_fields": [
+        {
+          "node_id": "metric-fvd-original",
+          "field": "dates.paper_last_revision",
+          "value": "2019-03-27"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_revision",
+      "note_zh": "论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2301-11325-v1",
+      "title": "2301.11325 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2023-01-26",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "data-musiccaps-original"
+      ],
+      "version": "arXiv:2301.11325v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2301.11325"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/21",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "data-musiccaps-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2023-01-26"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2310-11513-v1",
+      "title": "2310.11513 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2023-10-17",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-geneval-original"
+      ],
+      "version": "arXiv:2310.11513v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2310.11513"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/1",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-geneval-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2023-10-17"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2311-17982-v1",
+      "title": "2311.17982 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2023-11-29",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-vbench-original"
+      ],
+      "version": "arXiv:2311.17982v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2311.17982"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/7",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-vbench-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2023-11-29"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2403-05135-v1",
+      "title": "2403.05135 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2024-03-08",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-dpg-bench-original"
+      ],
+      "version": "arXiv:2403.05135v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2403.05135"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/3",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-dpg-bench-original",
+          "field": "dates.paper_first_arxiv",
+          "value": "2024-03-08"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-dpg-bench-release-2024-03-11",
+      "title": "DPG-Bench 官方发布公告",
+      "event_type": "benchmark_release",
+      "date": "2024-03-11",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-dpg-bench-original"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://github.com/TencentQQGYLab/ELLA"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/2",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "ELLA README → Changelog，2024.3.11 条目明确 Release DPG-Bench",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-dpg-bench-original",
+          "field": "dates.benchmark_release",
+          "value": "2024-03-11"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "benchmark_release",
+      "note_zh": "日期来自基准发布条目；不是ELLA模型权重发布，也不是论文2024-03-08首发。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2406-16020-v1",
+      "title": "2406.16020 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2024-06-23",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "harness-audiobench"
+      ],
+      "version": "arXiv:2406.16020v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2406.16020"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/15",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "harness-audiobench",
+          "field": "dates.paper_first_arxiv",
+          "value": "2024-06-23"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2410-19168-v1",
+      "title": "2410.19168 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2024-10-24",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-mmau-v051525-test-mini",
+        "bench-mmau-v051525-test"
+      ],
+      "version": "arXiv:2410.19168v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2410.19168"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/17",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        },
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/19",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-mmau-v051525-test-mini",
+          "field": "dates.paper_first_arxiv",
+          "value": "2024-10-24"
+        },
+        {
+          "node_id": "bench-mmau-v051525-test",
+          "field": "dates.paper_first_arxiv",
+          "value": "2024-10-24"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2503-21755-v1",
+      "title": "2503.21755 论文首次提交",
+      "event_type": "paper_submission",
+      "date": "2025-03-27",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-vbench-2-0"
+      ],
+      "version": "arXiv:2503.21755v1",
+      "source_urls": [
+        "https://arxiv.org/abs/2503.21755"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/9",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面标题上方 Submitted on；Submission history [v1]",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-vbench-2-0",
+          "field": "dates.paper_first_arxiv",
+          "value": "2025-03-27"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_submission",
+      "note_zh": "只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2406-16020-revision-2025-05-06",
+      "title": "2406.16020 论文末次已核验修订",
+      "event_type": "paper_revision",
+      "date": "2025-05-06",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "harness-audiobench"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://arxiv.org/abs/2406.16020"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/15",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订",
+      "raw_date_fields": [
+        {
+          "node_id": "harness-audiobench",
+          "field": "dates.paper_last_revision",
+          "value": "2025-05-06"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_revision",
+      "note_zh": "论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-paper-2503-21755-revision-2025-08-20",
+      "title": "2503.21755 论文末次已核验修订",
+      "event_type": "paper_revision",
+      "date": "2025-08-20",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-vbench-2-0"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://arxiv.org/abs/2503.21755"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/9",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-vbench-2-0",
+          "field": "dates.paper_last_revision",
+          "value": "2025-08-20"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "paper_revision",
+      "note_zh": "论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。",
+      "merge_status": "proposal_only_not_applied"
+    },
+    {
+      "id": "media-mmau-test-platform-migration-announced-2026-01-30",
+      "title": "MMAU test 评估入口迁移公告",
+      "event_type": "platform_migration",
+      "date": "2026-01-30",
+      "date_precision": "day",
+      "timezone": null,
+      "timezone_note_zh": "此提案只沿用已审核日期字段；原始记录未保留统一时区，故置未知，不补猜UTC或当地时间。",
+      "node_ids": [
+        "bench-mmau-v051525-test"
+      ],
+      "version": null,
+      "source_urls": [
+        "https://github.com/Sakshi113/MMAU"
+      ],
+      "source_check_refs": [
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/16",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        },
+        {
+          "input": "media-eval-research-r1.json",
+          "json_pointer": "/source_checks/18",
+          "checked_at": "2026-10-28",
+          "status": "public_metadata_read"
+        }
+      ],
+      "evidence_locator": "MMAU README → Announcement，30 Jan 2026；test evaluation moved from Eval.ai to HF Space",
+      "raw_date_fields": [
+        {
+          "node_id": "bench-mmau-v051525-test",
+          "field": "access_application_note",
+          "value": "官方2026-01-30公告：test评估由Eval.ai迁至HF Space；仅登记入口，不提交预测。"
+        }
+      ],
+      "verification_status": "source_reviewed_metadata_only_not_replicated",
+      "execution_status": "never-run",
+      "occurrence_semantics": "dated_platform_migration_announcement_not_observed_cutover",
+      "note_zh": "这是日期明确的官方迁移公告；不声称独立观测实际切换时刻、服务可用性或获得提交权限。只关联9000条test，不关联mini。",
+      "merge_status": "proposal_only_not_applied"
+    }
+  ],
+  "unknown_dates": [
+    {
+      "node_id": "bench-geneval-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-geneval-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-dpg-bench-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fid-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fid-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-vbench-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-vbench-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-vbench-2-0",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-vbench-2-0",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fvd-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fvd-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fad-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "metric-fad-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "harness-audiobench",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "harness-audiobench",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-mmau-v051525-test-mini",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-mmau-v051525-test-mini",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-mmau-v051525-test",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "bench-mmau-v051525-test",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "data-musiccaps-original",
+      "field": "dates.benchmark_release",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    },
+    {
+      "node_id": "data-musiccaps-original",
+      "field": "dates.repository_last_update",
+      "date": null,
+      "reason_zh": "源包为null；不从论文日期、版本名、核验日或仓库当前内容推断。"
+    }
+  ],
+  "suppressed_duplicate_date_events": [
+    {
+      "node_ids": [
+        "bench-geneval-original"
+      ],
+      "paper_url": "https://arxiv.org/abs/2310.11513",
+      "date": "2023-10-17",
+      "reason_zh": "首发与末次修订字段同日，不另建修订事件；不能由此断言当天没有修订。"
+    },
+    {
+      "node_ids": [
+        "bench-dpg-bench-original"
+      ],
+      "paper_url": "https://arxiv.org/abs/2403.05135",
+      "date": "2024-03-08",
+      "reason_zh": "首发与末次修订字段同日，不另建修订事件；不能由此断言当天没有修订。"
+    },
+    {
+      "node_ids": [
+        "bench-vbench-original"
+      ],
+      "paper_url": "https://arxiv.org/abs/2311.17982",
+      "date": "2023-11-29",
+      "reason_zh": "首发与末次修订字段同日，不另建修订事件；不能由此断言当天没有修订。"
+    },
+    {
+      "node_ids": [
+        "bench-mmau-v051525-test-mini",
+        "bench-mmau-v051525-test"
+      ],
+      "paper_url": "https://arxiv.org/abs/2410.19168",
+      "date": "2024-10-24",
+      "reason_zh": "首发与末次修订字段同日，不另建修订事件；不能由此断言当天没有修订。"
+    },
+    {
+      "node_ids": [
+        "data-musiccaps-original"
+      ],
+      "paper_url": "https://arxiv.org/abs/2301.11325",
+      "date": "2023-01-26",
+      "reason_zh": "首发与末次修订字段同日，不另建修订事件；不能由此断言当天没有修订。"
+    }
+  ],
+  "baseline_event_overlap_check": {
+    "events_examined": 149,
+    "matched_existing_paper_event_ids": [],
+    "method": "compare source URLs after /pdf/ to /abs/ and arXiv version-suffix normalization; not global semantic deduplication"
+  },
+  "integration_requirements": [
+    "Await root approval and current navigation/media acceptance; no merge performed.",
+    "Add paper_revision and platform_migration as explicit schema/UI/filter labels if accepted; do not silently relabel as paper_submission or benchmark_release.",
+    "Recheck latest baseline for duplicate IDs, paper-source/date/event-type collisions and existing node associations.",
+    "Group shared-paper first submissions/revisions by canonical paper URL, date and event kind; MMAU test-mini/test share one original-paper event.",
+    "MMAU-v05.15.25 node IDs retain current version identity but 2024 paper event is original-paper background, not that later dataset release.",
+    "Keep platform announcement time separate from actual service cutover, and all timezone fields unknown.",
+    "Do not add events for nulls, checked_at, paper same-day duplicate revisions, version-string dates or repository current content.",
+    "If all 17 unique events later accepted against unchanged149 baseline, arithmetic total166 is provisional, not current count."
+  ],
+  "execution_status": "never-run",
+  "canonical_or_candidate_modified": false
+}

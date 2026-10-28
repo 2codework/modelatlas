@@ -34,3 +34,7 @@ python scripts/check_pages.py
 ## 媒体评测有限补包 r1
 
 独立 `media_evaluation_registry` 登记11知识实体：6 benchmark、3 metric、1 harness、1 dataset。既有 `dataset_benchmark_registry` 33条保留。只读公开metadata、许可与访问边界分开；所有新增实体 never-run，不导入分数，不执行模型或评测工具。源包、原始措辞及哈希保存在 `learning/media-evaluation/r1/`。
+
+## 媒体评测时间轴补包 r1
+
+新增17条事件：10论文首发、5个截至来源核验快照的末次论文修订、1基准发布、1平台迁移公告；并非完整修订历史。paper_revision / platform_migration显式区分，日期day精度、时区未知；核验日不当事件日。已审核原提案及QA保存在`learning/media-evaluation-timeline/r1/`。

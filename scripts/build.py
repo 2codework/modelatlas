@@ -7,13 +7,14 @@ import mcp_learning
 import creative_workflows
 import office_agents
 import media_evaluation
+import media_timeline
 import vendor_catalog
 import benchmark_catalog
 import world_models
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
-EVENT_TYPES = {'paper_submission','report_publication','announcement','weights_release','api_launch','documentation_update','standard_publication','benchmark_release'}
+EVENT_TYPES = {'paper_submission','report_publication','announcement','weights_release','api_launch','documentation_update','standard_publication','benchmark_release','paper_revision','platform_migration'}
 def require(ok, message):
     if not ok: raise ValueError(message)
 def url_ok(url):
@@ -233,6 +234,8 @@ def book(data):
         for u in urls: lines+=['- 来源：'+u]
         for e in data['events']:
             if n['id'] in e['node_ids']: lines+=['- 事件：'+e['event_type']+' · '+str(e.get('date') or '未知 / 待核验')+' · '+e['title']+' · 精度 '+str(e.get('date_precision') or 'unknown')+' · 时区 '+str(e.get('timezone') or '未知')+' · 范围 '+str(e.get('availability_scope') or '未核验')+' · 版本 '+str(e.get('version') or '未核验')+' · 截至已可用（非首发） '+str(e.get('available_by') or '无独立观察')+' · 说明 '+str(e.get('note_zh') or '')+' · 证据 '+str(e.get('evidence_locator','见原始来源'))+' · 来源 '+', '.join(next(s['url'] for s in data['sources'] if s['id']==sid) for sid in e.get('source_ids',[]))]
+        for e in data['events']:
+            if e.get('media_timeline') and n['id'] in e['node_ids']: lines += media_timeline.book(e)
     lines+=['','## 历史报告成绩快照（非排行榜，非独立复现）']
     for snap in data.get('evaluation_snapshots',[]):
         lines+=['','### '+snap.get('title',snap['id'])]
@@ -254,6 +257,7 @@ def build():
     _, office_bundle = office_agents.load(ROOT)
     bundles.append(office_bundle)
     bundles.append(media_evaluation.load(ROOT))
+    bundles.append(media_timeline.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -271,6 +275,7 @@ def build():
     world_models.publish(ROOT,out)
     office_agents.publish(ROOT,out)
     media_evaluation.publish(ROOT,out)
+    media_timeline.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

@@ -6238,6 +6238,12 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
 - 来源：https://github.com/djghosh13/geneval
 - 来源：https://arxiv.org/abs/2310.11513
+- 事件：paper_submission · 2023-10-17 · 2310.11513 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2310.11513v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-geneval-original", "field": "dates.paper_first_arxiv", "value": "2023-10-17"}]
+- 原始来源：https://arxiv.org/abs/2310.11513
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## DPG-Bench
 
@@ -6273,6 +6279,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
 - 来源：https://github.com/TencentQQGYLab/ELLA
 - 来源：https://arxiv.org/abs/2403.05135
+- 事件：paper_submission · 2024-03-08 · 2403.05135 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2403.05135v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：benchmark_release · 2024-03-11 · DPG-Bench 官方发布公告 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 日期来自基准发布条目；不是ELLA模型权重发布，也不是论文2024-03-08首发。 · 证据 ELLA README → Changelog，2024.3.11 条目明确 Release DPG-Bench · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-dpg-bench-original", "field": "dates.paper_first_arxiv", "value": "2024-03-08"}]
+- 原始来源：https://arxiv.org/abs/2403.05135
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：日期来自基准发布条目；不是ELLA模型权重发布，也不是论文2024-03-08首发。
+- 原始日期字段：[{"node_id": "bench-dpg-bench-original", "field": "dates.benchmark_release", "value": "2024-03-11"}]
+- 原始来源：https://github.com/TencentQQGYLab/ELLA
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## Fréchet Inception Distance (FID)
 
@@ -6308,6 +6326,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
 - 来源：https://github.com/bioinf-jku/TTUR
 - 来源：https://arxiv.org/abs/1706.08500
+- 事件：paper_submission · 2017-06-26 · 1706.08500 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:1706.08500v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：paper_revision · 2018-01-12 · 1706.08500 论文末次已核验修订 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。 · 证据 arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订 · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "metric-fid-original", "field": "dates.paper_first_arxiv", "value": "2017-06-26"}]
+- 原始来源：https://arxiv.org/abs/1706.08500
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：末次修订仅指截至来源核验快照（2026-10-28）已观察到的末次版本，不代表完整修订历史。
+- 原始日期字段：[{"node_id": "metric-fid-original", "field": "dates.paper_last_revision", "value": "2018-01-12"}]
+- 原始来源：https://arxiv.org/abs/1706.08500
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## VBench（原版T2V）
 
@@ -6343,6 +6373,12 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
 - 来源：https://github.com/Vchitect/VBench
 - 来源：https://arxiv.org/abs/2311.17982
+- 事件：paper_submission · 2023-11-29 · 2311.17982 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2311.17982v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-vbench-original", "field": "dates.paper_first_arxiv", "value": "2023-11-29"}]
+- 原始来源：https://arxiv.org/abs/2311.17982
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## VBench-2.0
 
@@ -6378,6 +6414,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为benchmark。
 - 来源：https://github.com/Vchitect/VBench/tree/master/VBench-2.0
 - 来源：https://arxiv.org/abs/2503.21755
+- 事件：paper_submission · 2025-03-27 · 2503.21755 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2503.21755v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：paper_revision · 2025-08-20 · 2503.21755 论文末次已核验修订 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。 · 证据 arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订 · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-vbench-2-0", "field": "dates.paper_first_arxiv", "value": "2025-03-27"}]
+- 原始来源：https://arxiv.org/abs/2503.21755
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：末次修订仅指截至来源核验快照（2026-10-28）已观察到的末次版本，不代表完整修订历史。
+- 原始日期字段：[{"node_id": "bench-vbench-2-0", "field": "dates.paper_last_revision", "value": "2025-08-20"}]
+- 原始来源：https://arxiv.org/abs/2503.21755
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## Fréchet Video Distance (FVD)
 
@@ -6413,6 +6461,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
 - 来源：https://github.com/google-research/google-research/tree/master/frechet_video_distance
 - 来源：https://arxiv.org/abs/1812.01717
+- 事件：paper_submission · 2018-12-03 · 1812.01717 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:1812.01717v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：paper_revision · 2019-03-27 · 1812.01717 论文末次已核验修订 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。 · 证据 arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订 · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "metric-fvd-original", "field": "dates.paper_first_arxiv", "value": "2018-12-03"}]
+- 原始来源：https://arxiv.org/abs/1812.01717
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：末次修订仅指截至来源核验快照（2026-10-28）已观察到的末次版本，不代表完整修订历史。
+- 原始日期字段：[{"node_id": "metric-fvd-original", "field": "dates.paper_last_revision", "value": "2019-03-27"}]
+- 原始来源：https://arxiv.org/abs/1812.01717
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## Fréchet Audio Distance (FAD)
 
@@ -6448,6 +6508,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为metric。
 - 来源：https://github.com/google-research/google-research/tree/master/frechet_audio_distance
 - 来源：https://arxiv.org/abs/1812.08466
+- 事件：paper_submission · 2018-12-20 · 1812.08466 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:1812.08466v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：paper_revision · 2019-01-17 · 1812.08466 论文末次已核验修订 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。 · 证据 arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订 · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "metric-fad-original", "field": "dates.paper_first_arxiv", "value": "2018-12-20"}]
+- 原始来源：https://arxiv.org/abs/1812.08466
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：末次修订仅指截至来源核验快照（2026-10-28）已观察到的末次版本，不代表完整修订历史。
+- 原始日期字段：[{"node_id": "metric-fad-original", "field": "dates.paper_last_revision", "value": "2019-01-17"}]
+- 原始来源：https://arxiv.org/abs/1812.08466
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## AudioBench（评测工具／套件）
 
@@ -6483,6 +6555,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 注意：11个知识实体不是11个数据集或11个benchmark；本实体为harness。
 - 来源：https://github.com/AudioLLMs/AudioBench
 - 来源：https://arxiv.org/abs/2406.16020
+- 事件：paper_submission · 2024-06-23 · 2406.16020 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2406.16020v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：paper_revision · 2025-05-06 · 2406.16020 论文末次已核验修订 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 论文修订不是新基准发布；不声称覆盖所有中间修订，不从当前仓库变化推断日期。 · 证据 arXiv abstract 页面 last revised 与 Submission history 最后一条；仅所审核快照的末次修订 · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "harness-audiobench", "field": "dates.paper_first_arxiv", "value": "2024-06-23"}]
+- 原始来源：https://arxiv.org/abs/2406.16020
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：末次修订仅指截至来源核验快照（2026-10-28）已观察到的末次版本，不代表完整修订历史。
+- 原始日期字段：[{"node_id": "harness-audiobench", "field": "dates.paper_last_revision", "value": "2025-05-06"}]
+- 原始来源：https://arxiv.org/abs/2406.16020
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## MMAU v05.15.25 — test-mini
 
@@ -6520,6 +6604,12 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 来源：https://github.com/Sakshi113/MMAU
 - 来源：https://arxiv.org/abs/2410.19168
 - 来源：https://huggingface.co/datasets/gamma-lab-umd/MMAU-test-mini
+- 事件：paper_submission · 2024-10-24 · 2410.19168 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2410.19168v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-mmau-v051525-test-mini", "field": "dates.paper_first_arxiv", "value": "2024-10-24"}, {"node_id": "bench-mmau-v051525-test", "field": "dates.paper_first_arxiv", "value": "2024-10-24"}]
+- 原始来源：https://arxiv.org/abs/2410.19168
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## MMAU v05.15.25 — test
 
@@ -6559,6 +6649,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 来源：https://arxiv.org/abs/2410.19168
 - 来源：https://huggingface.co/datasets/gamma-lab-umd/MMAU-test
 - 来源：https://huggingface.co/spaces/sonalkum/MMAU-Eval
+- 事件：paper_submission · 2024-10-24 · 2410.19168 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2410.19168v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 事件：platform_migration · 2026-01-30 · MMAU test 评估入口迁移公告 · 精度 day · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 这是日期明确的官方迁移公告；不声称独立观测实际切换时刻、服务可用性或获得提交权限。只关联9000条test，不关联mini。 · 证据 MMAU README → Announcement，30 Jan 2026；test evaluation moved from Eval.ai to HF Space · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "bench-mmau-v051525-test-mini", "field": "dates.paper_first_arxiv", "value": "2024-10-24"}, {"node_id": "bench-mmau-v051525-test", "field": "dates.paper_first_arxiv", "value": "2024-10-24"}]
+- 原始来源：https://arxiv.org/abs/2410.19168
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：官方迁移公告日期，不是独立观测实际服务切换时刻；仅关联test。
+- 原始日期字段：[{"node_id": "bench-mmau-v051525-test", "field": "access_application_note", "value": "官方2026-01-30公告：test评估由Eval.ai迁至HF Space；仅登记入口，不提交预测。"}]
+- 原始来源：https://github.com/Sakshi113/MMAU
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## MusicCaps
 
@@ -6596,6 +6698,12 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 来源：https://google-research.github.io/seanet/musiclm/examples/
 - 来源：https://arxiv.org/abs/2301.11325
 - 来源：https://www.kaggle.com/datasets/googleai/musiccaps
+- 事件：paper_submission · 2023-01-26 · 2301.11325 论文首次提交 · 精度 day · 时区 未知 · 范围 未核验 · 版本 arXiv:2301.11325v1 · 截至已可用（非首发） 无独立观察 · 说明 只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。 · 证据 arXiv abstract 页面标题上方 Submitted on；Submission history [v1] · 来源
+- 媒体时间轴核验日期（不是事件日期）：2026-10-28；时区：未知。
+- 观察范围：只表示关联论文首发，不是模型、数据集、代码、权重或基准发布日期。若节点代表较新版本，原论文事件仅为学术来源背景。
+- 原始日期字段：[{"node_id": "data-musiccaps-original", "field": "dates.paper_first_arxiv", "value": "2023-01-26"}]
+- 原始来源：https://arxiv.org/abs/2301.11325
+- 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
 ## 历史报告成绩快照（非排行榜，非独立复现）
 

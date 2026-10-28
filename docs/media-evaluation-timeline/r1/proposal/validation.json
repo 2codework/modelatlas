@@ -1,0 +1,17 @@
+{
+  "events": 17,
+  "counts": {
+    "paper_submission": 10,
+    "paper_revision": 5,
+    "benchmark_release": 1,
+    "platform_migration": 1
+  },
+  "ids_unique": true,
+  "input_hashes_unchanged": true,
+  "source_check_references_valid": true,
+  "all_precision_day": true,
+  "all_timezones_unknown": true,
+  "canonical_written": false,
+  "candidate_written": false,
+  "network_access": "none"
+}

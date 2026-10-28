@@ -1,0 +1,9 @@
+{
+  "qa/audit.json": "8b25abcccdabc3f30a424a3a44ef0ca5b89ca93f868d813c0b1f3436f35569a8",
+  "qa/REPORT.md": "c31970e7cb80188a3dffe6fac31558d34247df7b877ab83a7da3e9ab62ff464b",
+  "qa/SHA256SUMS": "afeb9cbed9376e607c298ba8a2d78d41678581d4741316efaedfb58aa9112e1c",
+  "proposal/proposal.json": "7fb134b9923425881028ff65de04b5b2068e111d3a2c7e4b4384f5af42380d0c",
+  "proposal/README.zh-CN.md": "a7afcfdbd2f26b7016d49d87bbf6c5cabcc16133415dc36d8db11c823742a041",
+  "proposal/extract.py": "351047c19785ebc9fd2a5e92d3bd1ea9dad98513acc3fa76fab1ef16101e840f",
+  "proposal/validation.json": "99ff93ed5f82c96cc5b5c54609d80270a738d79733ab4a7bb15972d402c39e42"
+}
