@@ -40,7 +40,14 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  // End typed media evaluation renderer.
  for(const key of ['type','category','vendor','availability']){const values=new Set(D.nodes.map(n=>key==='type'||key==='category'?n[key]:views.get(n.id)[key]));for(const v of [...values].sort()){const o=el('option',v);o.value=v;$(key).append(o);}}
  for(const key of Object.keys(eventLabels)){const o=el('option',eventLabels[key]);o.value=key;$('event-type').append(o);}
- function choose(id,scroll=false){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const text of [n.type,n.category,n.verification_status])tags.append(el('span',text,'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));const dl=el('dl');
+ // Only deliberate entry changes push. Rendering and URL restoration never write history.
+ function writeNavigation(kind,id,mode='push'){
+  if(mode==='none')return;
+  const params=new URLSearchParams(location.search),same=params.get(kind)===id&&!params.has(kind==='node'?'catalog':'node')&&!location.hash;
+  if(mode==='push'&&same)return;
+  history[mode==='replace'?'replaceState':'pushState'](null,'','?'+kind+'='+encodeURIComponent(id));
+ }
+ function choose(id,scroll=false,historyMode='push'){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const text of [n.type,n.category,n.verification_status])tags.append(el('span',text,'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));const dl=el('dl');
  const fields={'版本 / 快照':n.version,'最后核验':n.checked_at,'机构':v.vendor,'可获得性':v.availability,'许可证':n.license||n.license_notes||v.license,'费用与预算':n.cost||n.cost_notes,'生命周期':v.lifecycle||'unknown','适用版本':n.lifecycle?.applicable_version||n.applicable_versions||n.version,'输入模态':n.input_modalities,'输出模态':n.output_modalities};
  for(const [k,value] of Object.entries(fields)){dl.append(el('dt',k),el('dd',display(value)));}root.append(dl);
  if(n.tutorial_markdown){root.append(markdownDOM(n.tutorial_markdown));const a=link('https://2codework.github.io/modelatlas/mcp-offline-labs.zip','下载原创离线课程包（ZIP；不自动执行）');a.href='mcp-offline-labs.zip';a.removeAttribute('target');a.download='mcp-offline-labs.zip';root.append(a);}
@@ -59,10 +66,10 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  if(n.agentwork_links?.length){const box=section(root,'对应实践 · 编辑学习关系（未执行）');for(const x of n.agentwork_links)box.append(link(x.url,x.title));}const evs=D.events.filter(e=>e.node_ids.includes(id));if(evs.length){const box=section(root,'事件记录'),ul=el('ul');for(const e of evs){const li=el('li',`${e.title} · ${eventLabels[e.event_type]||e.event_type} · ${e.date||'未知 / 待核验'} · 精度：${e.date_precision||'unknown'}`);eventEvidence(li,e);ul.append(li);}box.append(ul);}
  const relatedCatalog=(catalogValid?D.vendor_catalog.records:[]).filter(r=>r.links.some(e=>e.target===id));if(relatedCatalog.length){const box=section(root,'关联厂商目录记录（编辑关联，不合并实体）');for(const r of relatedCatalog)box.append(button(r.title,()=>{catalogController?.select(r.id,true);}));}
  sourceList(section(root,'原始来源 · 请阅读适用范围'),n);
- const read=button(completed.has(id)?'✓ 已读 · 点击撤销':'标记为已读',()=>{completed.has(id)?completed.delete(id):completed.add(id);save();choose(id);});root.append(read);
+ const read=button(completed.has(id)?'✓ 已读 · 点击撤销':'标记为已读',()=>{completed.has(id)?completed.delete(id):completed.add(id);save();choose(id,false,'none');});root.append(read);
  const raw=el('details');raw.append(el('summary','完整研究记录（含证据、教程与评测字段）'),el('pre',JSON.stringify(n,null,2)));root.append(raw);
  renderGraph(n);document.querySelectorAll('#results button').forEach(b=>b.setAttribute('aria-current',String(b.dataset.id===id)));
- history.replaceState(null,'','?node='+encodeURIComponent(id));if(scroll)$('explore').scrollIntoView({behavior:'auto'});
+ writeNavigation('node',id,historyMode);if(scroll)$('explore').scrollIntoView({behavior:'auto'});
  }
  function renderResults(){const filters={};for(const k of ['query','type','category','availability','vendor'])filters[k]=$(k).value;const list=C.search(D.nodes,views,filters);$('results').replaceChildren();$('result-count').textContent=`${list.length} / ${D.nodes.length} 个节点`;for(const n of list){const b=button(n.title,()=>choose(n.id));b.dataset.id=n.id;b.setAttribute('aria-current',String(n.id===selected));b.append(el('small',`${n.category} / ${n.type}`));const li=el('li');li.append(b);$('results').append(li);}if(!list.length)$('results').append(el('li','无匹配节点。试试更短的关键词或重置筛选。'));}
  $('filters').addEventListener('submit',e=>e.preventDefault());$('filters').addEventListener('input',renderResults);$('filters').addEventListener('reset',()=>setTimeout(renderResults,0));
@@ -82,7 +89,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  }
  function renderEvents(){const wanted=$('event-type').value,list=D.events.filter(e=>!wanted||e.event_type===wanted),known=list.filter(e=>e.date).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id)),unknown=list.filter(e=>!e.date);$('events').replaceChildren();$('unknown-events').replaceChildren();for(const e of known){const li=el('li'),time=el('time',e.date);time.dateTime=e.date;time.append(el('small','精度 '+e.date_precision));li.append(time,el('span',eventLabels[e.event_type]||e.event_type));const body=el('div');body.append(el('strong',e.title));const row=el('div');for(const id of e.node_ids)row.append(button(nodes.get(id).title,()=>choose(id,true)));body.append(row);const d=el('details');d.append(el('summary','日期证据与核验范围'));eventEvidence(d,e);body.append(d);li.append(body);$('events').append(li);}if(!known.length)$('events').append(el('li','此事件类型暂无已核验日期。'));$('unknown-count').textContent=`未知日期 / 待核验：${unknown.length} 条（不放入已发生时间轴）`;for(const e of unknown){const li=el('li',`${e.title} · ${eventLabels[e.event_type]||e.event_type} · 日期未知 / 待核验`);eventEvidence(li,e);$('unknown-events').append(li);}}
  $('event-type').addEventListener('change',renderEvents);
- function renderPaths(){$('paths').replaceChildren();for(const p of D.learning_paths){const card=el('article',undefined,'path');card.append(el('h3',p.title),el('p',p.note,'muted'));const ol=el('ol');for(const id of p.node_ids){const li=el('li'),label=el('label'),check=el('input');check.type='checkbox';check.checked=completed.has(id);check.setAttribute('aria-label',nodes.get(id).title+' 已读');check.addEventListener('change',()=>{check.checked?completed.add(id):completed.delete(id);save();if(selected===id)choose(id);});label.append(check,button(nodes.get(id).title,()=>choose(id,true)));li.append(label);ol.append(li);}card.append(ol);$('paths').append(card);}$('progress-count').textContent=`已标记 ${completed.size} / ${D.nodes.length} 个节点`;}
+ function renderPaths(){$('paths').replaceChildren();for(const p of D.learning_paths){const card=el('article',undefined,'path');card.append(el('h3',p.title),el('p',p.note,'muted'));const ol=el('ol');for(const id of p.node_ids){const li=el('li'),label=el('label'),check=el('input');check.type='checkbox';check.checked=completed.has(id);check.setAttribute('aria-label',nodes.get(id).title+' 已读');check.addEventListener('change',()=>{check.checked?completed.add(id):completed.delete(id);save();if(selected===id)choose(id,false,'none');});label.append(check,button(nodes.get(id).title,()=>choose(id,true)));li.append(label);ol.append(li);}card.append(ol);$('paths').append(card);}$('progress-count').textContent=`已标记 ${completed.size} / ${D.nodes.length} 个节点`;}
  $('export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download='modelatlas-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('progress-status').textContent='已生成下载；请检查浏览器下载记录。';});
  $('import').addEventListener('change',async e=>{
   const file=e.target.files[0];if(!file)return;
@@ -92,18 +99,26 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
    if(file.size>1000000)throw Error('文件过大');
    const text=await file.text();if(!current())return;
    const next=C.parseProgress(text,allIds);completed=next;const persisted=save();
-   if(selected)choose(selected);
+   if(selected)choose(selected,false,'none');
    $('progress-status').textContent=persisted?'导入成功；未知节点 ID 已忽略。':'导入仅在本页内存中生效；浏览器无法持久保存，刷新可能恢复旧记录，请导出备份。';
   }catch(err){if(current())$('progress-status').textContent='导入失败，原进度未改动：'+err.message;}
   finally{if(generation===importGeneration)e.target.value='';}
  });
- $('clear').addEventListener('click',()=>{if(window.confirm('清空此浏览器的已读记录？建议先导出备份。')){completed.clear();save();if(selected)choose(selected);}});
+ $('clear').addEventListener('click',()=>{if(window.confirm('清空此浏览器的已读记录？建议先导出备份。')){completed.clear();save();if(selected)choose(selected,false,'none');}});
  for(const snap of D.evaluation_snapshots||[]){const card=el('article',undefined,'path');card.append(el('h3',snap.title||snap.model),el('p',`${snap.benchmark} · ${snap.metric}: ${snap.value} ${snap.unit||''}`),el('p',snap.limitations_zh,'muted'));const dl=el('dl');for(const key of ['model','model_version','model_version_note','benchmark','benchmark_version','benchmark_version_note','split','split_note','shot','shot_note','prompt','harness','harness_note','sampling','report_date','report_date_note','report_first_published_date','report_version','reported_by','evidence_type','verification_status','checked_at'])dl.append(el('dt',key),el('dd',display(snap[key])));card.append(dl,el('p',snap.evidence_locator),link(snap.source_url,'原始报告与表格 ↗'));const raw=el('details');raw.append(el('summary','全部口径与证据字段'),el('pre',JSON.stringify(snap,null,2)));card.append(raw);if(snap.node_id&&nodes.has(snap.node_id))card.append(button('查看关联知识',()=>choose(snap.node_id,true)));$('evaluation-snapshots').append(card);}
  if(!(D.evaluation_snapshots||[]).length)$('evaluation-snapshots').append(el('p','报告成绩快照仍在核验；不填入默认分数。'));
  const table=el('table'),head=el('thead'),hr=el('tr');for(const h of ['类别','收录节点','有日期事件覆盖节点','可获得性待核验','说明'])hr.append(el('th',h));head.append(hr);table.append(head);const tbody=el('tbody');for(const cat of [...new Set(D.nodes.map(n=>n.category))].sort()){const ns=D.nodes.filter(n=>n.category===cat),dated=ns.filter(n=>D.events.some(e=>e.date&&e.node_ids.includes(n.id))).length,tr=el('tr');for(const cell of [cat,ns.length,dated,ns.filter(n=>views.get(n.id).availability==='未核验').length,'代表性条目；不保证完整'])tr.append(el('td',String(cell)));tbody.append(tr);}table.append(tbody);$('coverage-table').append(table);for(const gap of D.coverage_gaps)$('gaps').append(el('li',typeof gap==='string'?gap:JSON.stringify(gap)));for(const b of D.research_bundles){$('methods').append(el('h4',b.title||b.scope||b.scope_zh||'研究包'),el('p',display(b.scope||b.scope_zh)),el('pre',JSON.stringify({verification_policy:b.verification_policy,date_policy:b.date_policy,event_policy:b.event_policy||b.timeline_policy_zh,license_policy:b.license_policy_zh},null,2)));}
- renderResults();renderEvents();renderPaths();let initial=C.deepLinkID(location.search,location.hash,allIds);if(!new URLSearchParams(location.search).has('catalog'))choose(nodes.has(initial)?initial:nodes.has('transformer')?'transformer':D.nodes[0].id);
+ renderResults();renderEvents();renderPaths();
  if(!catalogModule||typeof catalogModule.initialize!=='function')catalogStatus('module-unavailable','目录模块未载入或版本不匹配；知识图谱可独立使用。请核对 catalog.js 与 app.js 属于同一发布版本。');
- else catalogController=catalogModule.initialize(D,choose,catalogStatus);
- window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#node=')){try{choose(decodeURIComponent(location.hash.slice(6)));}catch{}}});
+ else catalogController=catalogModule.initialize(D,choose,catalogStatus,writeNavigation);
+ function restoreLocation(initial=false){
+  const params=new URLSearchParams(location.search);
+  if(params.has('catalog')){catalogController?.select(params.get('catalog'),true,'none');return;}
+  const id=C.deepLinkID(location.search,location.hash,allIds);
+  choose(id|| (nodes.has('transformer')?'transformer':D.nodes[0].id),!initial,initial?'replace':'none');
+ }
+ restoreLocation(true);
+ window.addEventListener('popstate',()=>restoreLocation());
+ window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#node=')){try{choose(decodeURIComponent(location.hash.slice(6)),true,'replace');}catch{}}});
  }catch(error){catalogStatus('initialization-error','页面初始化未完成；目录是否可用尚未确认。请保留当前状态并核对发布资源，不能将部分内容当作完整结果。');const stats=$('stats');if(stats){stats.textContent='页面初始化失败或数据格式不受支持；请核对发布资源。';stats.className='error';}}
 })();

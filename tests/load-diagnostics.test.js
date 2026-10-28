@@ -5,7 +5,7 @@ class E{constructor(tag){this.tag=tag;this.children=[];this.events={};this.datas
 async function boot(options={}){const html=fs.readFileSync(path.join(root,'web/index.html'),'utf8'),ids=new Map([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new E('div')]));
  const doc={getElementById:id=>ids.get(id),createElement:t=>new E(t),createTextNode:t=>({textContent:t}),createElementNS:(_,t)=>new E(t),querySelectorAll:()=>ids.get('results').querySelectorAll('button')};
  const d=structuredClone(data);options.edit?.(d);let requests=0;
- const ctx={document:doc,URL,URLSearchParams,Blob,location:{search:'',hash:''},history:{replaceState(){}},localStorage:{getItem(){return null;}},addEventListener(){},fetch:async()=>{requests++;if(options.fetchFailure)throw Error('offline fixture');return{ok:true,json:async()=>d};},setTimeout};ctx.window=ctx;vm.createContext(ctx);
+ const ctx={document:doc,URL,URLSearchParams,Blob,location:{search:'',hash:''},history:{replaceState(){},pushState(){}},localStorage:{getItem(){return null;}},addEventListener(){},fetch:async()=>{requests++;if(options.fetchFailure)throw Error('offline fixture');return{ok:true,json:async()=>d};},setTimeout};ctx.window=ctx;vm.createContext(ctx);
  for(const name of ['core','reader','catalog'])if(name!==options.omit)vm.runInContext(fs.readFileSync(path.join(root,'web',name+'.js'),'utf8'),ctx);
  await vm.runInContext(fs.readFileSync(path.join(root,'web/app.js'),'utf8'),ctx);return{ids,ctx,requests};}
 test('static HTML is visibly pending if app never executes',()=>{const html=fs.readFileSync(path.join(root,'web/index.html'),'utf8');assert.match(html,/id="catalog-load-status"[^>]*data-state="loading">目录尚未完成初始化/);assert.ok(!html.includes('onerror='));});
