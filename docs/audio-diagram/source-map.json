@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-10-28",
+  "evidence_basis": "realtime-audio-model-research-r2/raw-models.json; accepted by realtime-audio-model-qa-r2",
+  "not_fresh_web_reverification": true,
+  "panels": [
+    {
+      "panel": "01",
+      "source_ids": [
+        "vox-paper-html",
+        "vox-api-guide",
+        "vox-card"
+      ]
+    },
+    {
+      "panel": "02",
+      "source_ids": [
+        "csm-card",
+        "csm-repo",
+        "csm-post"
+      ]
+    },
+    {
+      "panel": "03",
+      "source_ids": [
+        "vox-card",
+        "vox-paper-html"
+      ]
+    },
+    {
+      "panel": "04",
+      "source_ids": [
+        "csm-card",
+        "csm-repo",
+        "vox-api-guide"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "csm-repo",
+      "url": "https://github.com/SesameAILabs/csm",
+      "final_url": "https://github.com/SesameAILabs/csm",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+      "primary": true
+    },
+    {
+      "id": "csm-card",
+      "url": "https://huggingface.co/sesame/csm-1b",
+      "final_url": "https://huggingface.co/sesame/csm-1b",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+      "primary": true
+    },
+    {
+      "id": "csm-post",
+      "url": "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+      "final_url": "https://www.sesame.com/journal/crossing-the-uncanny-valley-of-voice",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "技术介绍2025-02-27；早于1B权重发布。",
+      "primary": true
+    },
+    {
+      "id": "vox-card",
+      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "final_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+      "primary": true
+    },
+    {
+      "id": "vox-api-guide",
+      "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "final_url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+      "primary": true
+    },
+    {
+      "id": "vox-paper-html",
+      "url": "https://arxiv.org/html/2602.11298v3",
+      "final_url": "https://arxiv.org/html/2602.11298v3",
+      "status": "opened",
+      "method": "web.run click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "§3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。",
+      "primary": true
+    }
+  ]
+}

@@ -4,6 +4,55 @@
 <a href="#speech-voxtral-realtime-2602">Voxtral Mini 4B Realtime 2602</a> ·
 <a href="#speech-gpt-realtime-family">GPT-Realtime family (2025-08-28 / 2.1)</a> ·
 </nav>
+<section id="audio-learning-diagram" aria-labelledby="audio-learning-diagram-title">
+<h2 id="audio-learning-diagram-title">配图学习：四个问题分别核验</h2>
+<figure style="margin:1rem 0">
+<a href="audio-diagram/realtime-audio-four-checks.zh.svg" aria-label="查看实时音频核对图原尺寸"><img src="audio-diagram/realtime-audio-four-checks.zh.svg" width="1100" height="1140" style="display:block;width:100%;max-width:1100px;height:auto" alt="实时音频学习核对图：分别检查传输、模型能力、时延口径和使用条件。完整文字版紧随图片。"></a>
+<figcaption>原创教学框架，非模型内部架构或性能排名；模型未运行，未测速。资料核查：2026-10-28。 <a href="audio-diagram/realtime-audio-four-checks.zh.svg">查看原尺寸 SVG</a></figcaption>
+</figure>
+<details open><summary>完整文字版（正常字号，可展开或收起）</summary><div style="font-size:1rem;line-height:1.8">
+<p>读懂实时音频</p>
+<p>四个问题，分别核验；“实时 / 全双工”不是所有能力的通行证。</p>
+<p>01</p>
+<p>传输层</p>
+<p>数据怎样来回传？</p>
+<p>双向流式传输 ≠ 语音对话</p>
+<p>Voxtral Realtime 2602：音频输入 → 转写文字输出</p>
+<p>可以边收音频边回文字；不生成语音回答。</p>
+<p>查：协议方向、消息类型、流式输入与输出。</p>
+<p>02</p>
+<p>模型能力</p>
+<p>输入、输出是什么？</p>
+<p>上下文语音生成 ≠ 完整对话产品</p>
+<p>CSM 1B：文本 + 音频上下文 → 音频</p>
+<p>不等于 Sesame 完整对话产品。</p>
+<p>开放 1B 权重的实时双工会话：已核资料未证明。</p>
+<p>查：精确模型 ID；未知不写成“不支持”。</p>
+<p>03</p>
+<p>时延口径</p>
+<p>这个数字测了什么？</p>
+<p>目标 / 配置延迟 ≠ 真实端到端时延</p>
+<p>Voxtral 模型卡推荐配置：480 ms。</p>
+<p>这不是本项目实测值，也不是每位用户的体验保证。</p>
+<p>实测另记起止点、计算 / 排队 / 网络条件。</p>
+<p>04</p>
+<p>使用条件</p>
+<p>我能怎样使用它？</p>
+<p>模型 ≠ 服务 ≠ 产品；开放 ≠ 免条件</p>
+<p>CSM 1B：HF 门控；依赖模型访问与条款另核。</p>
+<p>分别核验权重、代码、依赖许可和算力条件。</p>
+<p>托管 API 另查账号、地区、额度；本项目未验证。</p>
+<p>动手核对：挑一个模型，逐项写下“结论 + source_id + 核查日期”。</p>
+<p>缺证据就标未知；不要用演示体验替代开放权重的能力或性能。</p>
+<p>核查：2026-10-28 · 原创教学框架，非内部架构 / 性能排名 · 未运行模型或测速</p>
+</div></details><h3>配图官方来源与许可</h3><p><a href="audio-diagram/source-map.json">source_ids 映射（沿用已验收来源，非本次重新联网核验）</a> · <a href="audio-diagram/RIGHTS.zh.md">原创内容与第三方权利边界</a></p><ul>
+<li><a href="https://github.com/SesameAILabs/csm" rel="noopener noreferrer">csm-repo</a></li>
+<li><a href="https://huggingface.co/sesame/csm-1b" rel="noopener noreferrer">csm-card</a></li>
+<li><a href="https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice" rel="noopener noreferrer">csm-post</a></li>
+<li><a href="https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602" rel="noopener noreferrer">vox-card</a></li>
+<li><a href="https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription" rel="noopener noreferrer">vox-api-guide</a></li>
+<li><a href="https://arxiv.org/html/2602.11298v3" rel="noopener noreferrer">vox-paper-html</a></li>
+</ul></section>
 <article id="speech-moshi"><h2>Moshi / Moshiko BF16</h2><p>开放权重语音对话家族；并行语音流支持对话双工，家族日期不代表精确checkpoint上传。</p><p>类型：model_family；精确版本：Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16</p><p><a href="index.html?node=speech-moshi">模型详情与事件</a></p>
 <h3>精确版本（家族与checkpoint分开）</h3><pre>未知（未证实，不补日期）</pre>
 <h3>已核变体</h3><pre>[

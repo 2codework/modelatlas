@@ -16,6 +16,7 @@ import benchmark_catalog
 import world_models
 import knowledge_graph_links
 import realtime_audio
+import audio_diagram
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -300,6 +301,7 @@ def build():
     creative_gaps.publish(ROOT,out,gap_registry,data['sources'])
     knowledge_graph_links.publish(ROOT,out,data)
     realtime_audio.publish(ROOT,out,data)
+    audio_diagram.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

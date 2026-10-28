@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1140" viewBox="0 0 1100 1140" role="img" aria-labelledby="title desc" lang="zh-CN">
+<title id="title">读懂实时音频：四个问题，分别核验</title>
+<desc id="desc">实时或全双工不是所有能力的通行证。分别检查传输是否双向、模型输入输出与对话能力、延迟指标口径，以及产品账号与许可。Voxtral Realtime 2602的双向流式传输接收音频并返回转写文字，不生成语音回答。CSM 1B以文本和音频上下文生成音频，不等于Sesame完整对话产品，开放权重实时双工能力未证明。Voxtral模型卡推荐480毫秒是配置值，不是本项目实测的端到端时延。开放权重仍需核验许可、依赖和账号条件。本图是学习核对框架，不是模型内部架构或性能排名。资料核查日2026年10月28日。</desc>
+<rect width="1100" height="1140" fill="#F5F7FB"/>
+<g font-family="Noto Sans CJK SC, sans-serif" fill="#14243A">
+<text x="44" y="62" font-size="38" font-weight="bold" fill="#14243A">读懂实时音频</text>
+<text x="44" y="105" font-size="23" font-weight="normal" fill="#14243A">四个问题，分别核验；“实时 / 全双工”不是所有能力的通行证。</text>
+<rect x="34" y="160" width="1032" height="180" rx="14" fill="#FFFFFF" stroke="#CCD5E2"/>
+<rect x="34" y="160" width="245" height="180" rx="14" fill="#E5EDF7" stroke="none"/>
+<text x="56" y="199" font-size="22" font-weight="bold" fill="#294E7C">01</text>
+<text x="56" y="240" font-size="28" font-weight="bold" fill="#14243A">传输层</text>
+<text x="56" y="280" font-size="20" font-weight="normal" fill="#14243A">数据怎样来回传？</text>
+<text x="305" y="199" font-size="26" font-weight="bold" fill="#14243A">双向流式传输 ≠ 语音对话</text>
+<text x="305" y="233" font-size="22" font-weight="normal" fill="#14243A">Voxtral Realtime 2602：音频输入 → 转写文字输出</text>
+<text x="305" y="267" font-size="22" font-weight="normal" fill="#14243A">可以边收音频边回文字；不生成语音回答。</text>
+<text x="305" y="301" font-size="21" font-weight="normal" fill="#14243A">查：协议方向、消息类型、流式输入与输出。</text>
+<rect x="34" y="360" width="1032" height="210" rx="14" fill="#FFFFFF" stroke="#CCD5E2"/>
+<rect x="34" y="360" width="245" height="210" rx="14" fill="#E5EDF7" stroke="none"/>
+<text x="56" y="399" font-size="22" font-weight="bold" fill="#294E7C">02</text>
+<text x="56" y="440" font-size="28" font-weight="bold" fill="#14243A">模型能力</text>
+<text x="56" y="480" font-size="20" font-weight="normal" fill="#14243A">输入、输出是什么？</text>
+<text x="305" y="399" font-size="26" font-weight="bold" fill="#14243A">上下文语音生成 ≠ 完整对话产品</text>
+<text x="305" y="433" font-size="22" font-weight="normal" fill="#14243A">CSM 1B：文本 + 音频上下文 → 音频</text>
+<text x="305" y="467" font-size="22" font-weight="normal" fill="#14243A">不等于 Sesame 完整对话产品。</text>
+<text x="305" y="501" font-size="22" font-weight="normal" fill="#14243A">开放 1B 权重的实时双工会话：已核资料未证明。</text>
+<text x="305" y="535" font-size="21" font-weight="normal" fill="#14243A">查：精确模型 ID；未知不写成“不支持”。</text>
+<rect x="34" y="590" width="1032" height="180" rx="14" fill="#FFFFFF" stroke="#CCD5E2"/>
+<rect x="34" y="590" width="245" height="180" rx="14" fill="#E5EDF7" stroke="none"/>
+<text x="56" y="629" font-size="22" font-weight="bold" fill="#294E7C">03</text>
+<text x="56" y="670" font-size="28" font-weight="bold" fill="#14243A">时延口径</text>
+<text x="56" y="710" font-size="20" font-weight="normal" fill="#14243A">这个数字测了什么？</text>
+<text x="305" y="629" font-size="26" font-weight="bold" fill="#14243A">目标 / 配置延迟 ≠ 真实端到端时延</text>
+<text x="305" y="663" font-size="22" font-weight="normal" fill="#14243A">Voxtral 模型卡推荐配置：480 ms。</text>
+<text x="305" y="697" font-size="22" font-weight="normal" fill="#14243A">这不是本项目实测值，也不是每位用户的体验保证。</text>
+<text x="305" y="731" font-size="21" font-weight="normal" fill="#14243A">实测另记起止点、计算 / 排队 / 网络条件。</text>
+<rect x="34" y="790" width="1032" height="180" rx="14" fill="#FFFFFF" stroke="#CCD5E2"/>
+<rect x="34" y="790" width="245" height="180" rx="14" fill="#E5EDF7" stroke="none"/>
+<text x="56" y="829" font-size="22" font-weight="bold" fill="#294E7C">04</text>
+<text x="56" y="870" font-size="28" font-weight="bold" fill="#14243A">使用条件</text>
+<text x="56" y="910" font-size="20" font-weight="normal" fill="#14243A">我能怎样使用它？</text>
+<text x="305" y="829" font-size="26" font-weight="bold" fill="#14243A">模型 ≠ 服务 ≠ 产品；开放 ≠ 免条件</text>
+<text x="305" y="863" font-size="22" font-weight="normal" fill="#14243A">CSM 1B：HF 门控；依赖模型访问与条款另核。</text>
+<text x="305" y="897" font-size="22" font-weight="normal" fill="#14243A">分别核验权重、代码、依赖许可和算力条件。</text>
+<text x="305" y="931" font-size="21" font-weight="normal" fill="#14243A">托管 API 另查账号、地区、额度；本项目未验证。</text>
+<rect x="34" y="992" width="1032" height="111" rx="14" fill="#14243A" stroke="none"/>
+<text x="56" y="1028" font-size="22" font-weight="bold" fill="#FFFFFF">动手核对：挑一个模型，逐项写下“结论 + source_id + 核查日期”。</text>
+<text x="56" y="1062" font-size="21" font-weight="normal" fill="#FFFFFF">缺证据就标未知；不要用演示体验替代开放权重的能力或性能。</text>
+<text x="44" y="1126" font-size="17" font-weight="normal" fill="#14243A">核查：2026-10-28 · 原创教学框架，非内部架构 / 性能排名 · 未运行模型或测速</text>
+</g></svg>
