@@ -1,12 +1,20 @@
 'use strict';
+function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-data-url');if(url===null||url===undefined)return 'data.json';if(!/^data\.json\?v=[a-f0-9]{64}$/.test(url))throw Error('invalid-pinned-data-url');return url;}
 (async function(){
- const $=id=>document.getElementById(id), C=ModelAtlasCore;
+ const $=id=>document.getElementById(id);
+ function catalogStatus(state,message){const status=$('catalog-load-status');if(status){status.dataset.state=state;status.textContent=message;status.className=['ready','empty','loading'].includes(state)?'muted':'error';}}
+ try{
+ const C=globalThis.ModelAtlasCore;
+ if(!C)throw Error('core-module-unavailable');
  const el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
  function link(url,title){const a=el('a',title||url),u=C.safeURL(url);if(u){a.href=u;a.target='_blank';a.rel='noopener noreferrer';}else a.textContent='不安全链接已拒绝';return a;}
  function button(text,fn){const b=el('button',text);b.type='button';b.addEventListener('click',fn);return b;}
  function section(parent,title){parent.append(el('h4',title));const box=el('div');parent.append(box);return box;}
  let D, catalogController;
- try{const r=await fetch('data.json');if(!r.ok)throw Error('HTTP '+r.status);D=await r.json();}catch(e){$('stats').textContent='数据载入失败：请通过 HTTP 静态服务器打开；同源书稿仍可下载。';$('stats').className='error';return;}
+ try{const r=await fetch(pinnedDataURL());if(!r.ok)throw Error('HTTP '+r.status);D=await r.json();}catch(e){$('stats').textContent='数据载入失败：请通过 HTTP 静态服务器打开；同源书稿仍可下载。';$('stats').className='error';catalogStatus('data-error','目录数据载入失败；不能据此判断目录为空。请核对同源 data.json 是否可用。');return;}
+ if(!D||D.schema_version!=='modelatlas.site.v1'||!['nodes','view_nodes','sources','edges','events','coverage_gaps','research_bundles'].every(k=>Array.isArray(D[k]))||!D.nodes.length)throw Error('unsupported-site-data');
+ const catalogModule=globalThis.ModelAtlasCatalog;
+ const catalogValid=!!(catalogModule&&typeof catalogModule.validate==='function'&&catalogModule.validate(D));
  const nodes=new Map(D.nodes.map(n=>[n.id,n])), views=new Map(D.view_nodes.map(n=>[n.id,n])),sources=new Map(D.sources.map(s=>[s.id,s]));
  const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;let importGeneration=0,progressRevision=0;
  const eventLabels={paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布'};
@@ -31,7 +39,7 @@
  const registry=D.dataset_benchmark_registry.find(r=>r.node_id===id);
  if(registry){const box=section(root,'数据 / 评测索引 · 仅介绍与跳转');box.append(el('p',registry.display_policy||'不镜像题目、答案、受限数据或整套语料。'));const meta=el('dl');for(const key of ['availability','license','split','metric','protocol','harness','contamination','reproducibility','checked_at']){if(registry[key])meta.append(el('dt',key),el('dd',display(registry[key])));}box.append(meta);if(registry.access_url)box.append(link(registry.access_url,'访问官方介绍 / 数据入口 ↗'));if(registry.access_application_note)box.append(el('p',registry.access_application_note));if(registry.access_application_url)box.append(link(registry.access_application_url,'访问条件 / 申请入口（以官方说明为准）↗'));if(registry.results_preview){box.append(el('p',registry.results_preview.reason_zh||'未收录可比较的成绩快照，不生成默认排名。'));if(registry.results_preview.official_results_url)box.append(link(registry.results_preview.official_results_url,'官方结果入口 ↗'));}sourceList(box,registry);}
  if(n.agentwork_links?.length){const box=section(root,'对应实践 · 编辑学习关系（未执行）');for(const x of n.agentwork_links)box.append(link(x.url,x.title));}const evs=D.events.filter(e=>e.node_ids.includes(id));if(evs.length){const box=section(root,'事件记录'),ul=el('ul');for(const e of evs){const li=el('li',`${e.title} · ${eventLabels[e.event_type]||e.event_type} · ${e.date||'未知 / 待核验'} · 精度：${e.date_precision||'unknown'}`);eventEvidence(li,e);ul.append(li);}box.append(ul);}
- const relatedCatalog=(D.vendor_catalog?.records||[]).filter(r=>r.links.some(e=>e.target===id));if(relatedCatalog.length){const box=section(root,'关联厂商目录记录（编辑关联，不合并实体）');for(const r of relatedCatalog)box.append(button(r.title,()=>{catalogController?.select(r.id,true);}));}
+ const relatedCatalog=(catalogValid?D.vendor_catalog.records:[]).filter(r=>r.links.some(e=>e.target===id));if(relatedCatalog.length){const box=section(root,'关联厂商目录记录（编辑关联，不合并实体）');for(const r of relatedCatalog)box.append(button(r.title,()=>{catalogController?.select(r.id,true);}));}
  sourceList(section(root,'原始来源 · 请阅读适用范围'),n);
  const read=button(completed.has(id)?'✓ 已读 · 点击撤销':'标记为已读',()=>{completed.has(id)?completed.delete(id):completed.add(id);save();choose(id);});root.append(read);
  const raw=el('details');raw.append(el('summary','完整研究记录（含证据、教程与评测字段）'),el('pre',JSON.stringify(n,null,2)));root.append(raw);
@@ -76,6 +84,8 @@
  if(!(D.evaluation_snapshots||[]).length)$('evaluation-snapshots').append(el('p','报告成绩快照仍在核验；不填入默认分数。'));
  const table=el('table'),head=el('thead'),hr=el('tr');for(const h of ['类别','收录节点','有日期事件覆盖节点','可获得性待核验','说明'])hr.append(el('th',h));head.append(hr);table.append(head);const tbody=el('tbody');for(const cat of [...new Set(D.nodes.map(n=>n.category))].sort()){const ns=D.nodes.filter(n=>n.category===cat),dated=ns.filter(n=>D.events.some(e=>e.date&&e.node_ids.includes(n.id))).length,tr=el('tr');for(const cell of [cat,ns.length,dated,ns.filter(n=>views.get(n.id).availability==='未核验').length,'代表性条目；不保证完整'])tr.append(el('td',String(cell)));tbody.append(tr);}table.append(tbody);$('coverage-table').append(table);for(const gap of D.coverage_gaps)$('gaps').append(el('li',typeof gap==='string'?gap:JSON.stringify(gap)));for(const b of D.research_bundles){$('methods').append(el('h4',b.title||b.scope||b.scope_zh||'研究包'),el('p',display(b.scope||b.scope_zh)),el('pre',JSON.stringify({verification_policy:b.verification_policy,date_policy:b.date_policy,event_policy:b.event_policy||b.timeline_policy_zh,license_policy:b.license_policy_zh},null,2)));}
  renderResults();renderEvents();renderPaths();let initial=C.deepLinkID(location.search,location.hash,allIds);if(!new URLSearchParams(location.search).has('catalog'))choose(nodes.has(initial)?initial:nodes.has('transformer')?'transformer':D.nodes[0].id);
- catalogController=ModelAtlasCatalog.mount(D,choose);
+ if(!catalogModule||typeof catalogModule.initialize!=='function')catalogStatus('module-unavailable','目录模块未载入或版本不匹配；知识图谱可独立使用。请核对 catalog.js 与 app.js 属于同一发布版本。');
+ else catalogController=catalogModule.initialize(D,choose,catalogStatus);
  window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#node=')){try{choose(decodeURIComponent(location.hash.slice(6)));}catch{}}});
+ }catch(error){catalogStatus('initialization-error','页面初始化未完成；目录是否可用尚未确认。请保留当前状态并核对发布资源，不能将部分内容当作完整结果。');const stats=$('stats');if(stats){stats.textContent='页面初始化失败或数据格式不受支持；请核对发布资源。';stats.className='error';}}
 })();

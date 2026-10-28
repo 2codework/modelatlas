@@ -2,6 +2,7 @@
 """Dependency-free, fail-closed research normalizer and static book builder."""
 import json, re, shutil, datetime, copy, math, sys
 sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
+import asset_versions
 import mcp_learning
 import vendor_catalog
 import benchmark_catalog
@@ -223,6 +224,7 @@ def build():
     vendor_catalog.publish(ROOT,out)
     benchmark_catalog.publish(ROOT,out)
     (out/'.nojekyll').touch()
+    asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)
     print(json.dumps({'nodes':len(data['nodes']),'edges':len(data['edges']),'sources':len(data['sources']),'events':len(data['events']),'output':str(out)},ensure_ascii=False))
     return data

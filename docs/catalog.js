@@ -2,6 +2,22 @@
 (function(global){
  const text=value=>value===null||value===undefined||value===''?'未知 / 本轮未核验':typeof value==='object'?JSON.stringify(value,null,2):String(value);
  const search=(records,filters)=>records.filter(r=>(!filters.query||JSON.stringify(r).toLocaleLowerCase().includes(filters.query.toLocaleLowerCase()))&&['provider','entity_type','status'].every(k=>!filters[k]||r[k]===filters[k])&&(!filters.modality||[...(r.inputs||[]),...(r.outputs||[])].includes(filters.modality)));
+ function validate(D){
+ const c=D&&D.vendor_catalog;
+ if(!c||c.schema_version!=='modelatlas.vendor-catalog.v1'||!Array.isArray(c.records)||!Array.isArray(c.bundles)||!Array.isArray(D.nodes))return false;
+ const ids=new Set();
+ for(const r of c.records){
+  if(!r||typeof r.id!=='string'||!r.id||ids.has(r.id)||typeof r.title!=='string'||!['provider','entity_type','status'].every(k=>typeof r[k]==='string')||!['links','sources','unresolved_links'].every(k=>Array.isArray(r[k]))||!['inputs','outputs'].every(k=>r[k]===null||Array.isArray(r[k]))||!r.urls||typeof r.urls!=='object'||Array.isArray(r.urls))return false;
+  ids.add(r.id);
+ }
+ const targets=new Set([...ids,...D.nodes.filter(n=>n&&typeof n.id==='string').map(n=>n.id)]);
+ return c.records.every(r=>r.links.every(e=>e&&targets.has(e.target))&&r.sources.every(s=>s&&typeof s.url==='string'))&&c.bundles.every(b=>b&&typeof b.file==='string');
+ }
+ function initialize(D,chooseNode,report){
+  if(!validate(D)){report('unsupported-data','目录数据缺失或格式不受支持；知识图谱可独立使用。请核对同一发布版本的数据与脚本。');return null;}
+  try{const controller=mount(D,chooseNode);report(D.vendor_catalog.records.length?'ready':'empty',D.vendor_catalog.records.length?'目录已载入 '+D.vendor_catalog.records.length+' 条记录；不代表新增模型数。':'目录数据已载入，当前为 0 条记录。');return controller;}
+  catch(error){report('mount-error','目录初始化失败；可能已有部分内容显示，请勿视为完整结果。知识图谱可独立使用。');return null;}
+ }
  function mount(D,chooseNode){
  const $=id=>document.getElementById(id),catalog=D.vendor_catalog;if(!catalog)return;
  const el=(tag,value)=>{const e=document.createElement(tag);if(value!==undefined)e.textContent=text(value);return e;};
@@ -28,5 +44,5 @@
  global.addEventListener('popstate',()=>{const id=new URLSearchParams(location.search).get('catalog');if(map.has(id))select(id);});
  return {select,search};
  }
- global.ModelAtlasCatalog={search,mount};if(typeof module!=='undefined')module.exports={search};
+ global.ModelAtlasCatalog={search,mount,validate,initialize};if(typeof module!=='undefined')module.exports={search,validate,initialize};
 })(typeof window==='undefined'?globalThis:window);
