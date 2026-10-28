@@ -6705,6 +6705,324 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 原始来源：https://arxiv.org/abs/2301.11325
 - 审核提案：[原始JSON](media-evaluation-timeline/r1/proposal/proposal.json)；[独立QA](media-evaluation-timeline/r1/qa/REPORT.md)。
 
+## ChatGPT agent
+
+2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。；当前官方帮助页顶部称不再可用，同页仍保留旧启动/套餐文案；仅确认文档冲突，不推断所有账号或所有代理能力的状态。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-chatgpt-agent / historical_executable_agent_surface
+- 生命周期：unknown
+- 版本：2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：historical_executable_agent_surface
+- platform_family_id：OpenAI
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：历史设计对重大操作请求授权，可接管/停止；本练习不进入账号。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。历史设计对重大操作请求授权，可接管/停止；本练习不进入账号。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documentation_unavailability_notice_with_conflicting_legacy_text；2025-07-17 agent mode；不是GPT模型ID或当前Work同义词。；{"announcement": "2025-07-17", "retirement": null, "document_update": "相对日期见来源"}
+- synthetic_input：历史agent mode文档冲突与迁移需求审计；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：输出含历史/当前两栏及证据URL。；三段中采购动作明确禁用。；retirement=null；核验日期不是停用日期，不推断所有代理能力停用。
+- 文档观察：ChatGPT agent；相对日期 yesterday；不换算精确日期；顶部说已不再可用；同页下方保留旧启动与套餐文案，存在内部时态冲突。；事件日期与文档观察不同。
+- 文档观察：Introducing ChatGPT agent；更新日未知；2025-07-17 发布；现页面标为过时。历史产品用虚拟电脑，重大操作询问授权，可中断或接管。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[历史agent mode文档冲突与迁移需求审计](https://2codework.github.io/agentwork/?case=assistant-case-chatgpt-agent)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"announcement": "2025-07-17", "retirement": null, "document_update": "相对日期见来源"}
+- 学习步骤（未执行）：离线写虚构目标：比较三家虚构文具供应商，不购买。
+- 学习步骤（未执行）：把任务分成公开资料读取、比较表、采购动作三段。
+- 学习步骤（未执行）：在历史说明上标注哪些需要人审。
+- 学习步骤（未执行）：记录当前帮助页不可用提示与残留旧启动说明的冲突；历史/agent步骤不得当当前可执行教程，迁移需求另列待核实。
+- 注意：限制：旧启动文案与不可用提示并存；精确停用事件和账号适用范围未核实。
+- 注意：限制：不能据新Work链接认定两者权限/计费等价。
+- 注意：未知：精确停用日期
+- 注意：未知：替代产品功能/计费是否完全等价
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://help.openai.com/en/articles/11752874-chatgpt-agent
+- 来源：https://openai.com/index/introducing-chatgpt-agent/
+
+## Deep research in ChatGPT
+
+本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。；取决于套餐、地区及工作区；额度以产品计数器为准。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-chatgpt-deep-research / research_feature
+- 生命周期：unknown
+- 版本：本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：research_feature
+- platform_family_id：OpenAI
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：用户可审改研究计划、调整可访问来源及中断。；Chat研究仅用应用读取动作；应用权限、角色和源系统权限共同约束。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。用户可审改研究计划、调整可访问来源及中断。；Chat研究仅用应用读取动作；应用权限、角色和源系统权限共同约束。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documented_current；本批仅Chat中的研究功能；不与历史agent mode、API模型或Work研究额度合并。；{"announcement": "2025-02-02", "feature_update": "2026-02-10", "document_update": "相对日期见来源"}
+- synthetic_input：虚构图书馆的开放资料研究简报；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：至少三条结论有逐条来源位。；公告日期与页面更新日期分栏。；不把版权建议写为确定法律结论。
+- 文档观察：Introducing deep research；2026-02-10 update block；首次公告为2025-02-02；2026-02-10是后续功能更新，不能替代首发日。；事件日期与文档观察不同。
+- 文档观察：Deep research in ChatGPT；9 days ago（本次打开版本）；Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构图书馆的开放资料研究简报](https://2codework.github.io/agentwork/?case=assistant-case-chatgpt-deep-research)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"announcement": "2025-02-02", "feature_update": "2026-02-10", "document_update": "相对日期见来源"}
+- 学习步骤（未执行）：离线写研究问题：为虚构社区图书馆解释开放数据与版权标注区别。
+- 学习步骤（未执行）：设计仅官方域名白名单，禁连接私有应用。
+- 学习步骤（未执行）：拟定三节计划并安排人工核准。
+- 学习步骤（未执行）：设计报告模板：结论/来源/日期/不确定性。
+- 学习步骤（未执行）：人工抽检每条结论对应原始来源；不发布。
+- 注意：限制：引用仍需逐项核验；不保证所有应用支持研究。
+- 注意：限制：搜索摘要与打开页面版本不完全一致；本条采用已打开Chat范围说明。
+- 注意：未知：当前账户可用性和剩余额度
+- 注意：未知：具体模型版本
+- 注意：未知：实时套餐价格
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://openai.com/index/introducing-deep-research/
+- 来源：https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt
+
+## Claude Cowork
+
+2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。；付费Pro/Max/Team/Enterprise；web/mobile受组织开关与beta条件；本地能力需桌面在线。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-claude-cowork / executable_agent_product_surface
+- 生命周期：unknown
+- 版本：2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：executable_agent_product_surface
+- platform_family_id：Anthropic
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：审批取决于Manual/Auto及连接工具策略，不承诺每次都问。；手动模式仍要核对已Always allow工具；不得把模式当唯一防线。；本练习禁computer use和连接器，限定合成输入及单独输出目录。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。审批取决于Manual/Auto及连接工具策略，不承诺每次都问。；手动模式仍要核对已Always allow工具；不得把模式当唯一防线。；本练习禁computer use和连接器，限定合成输入及单独输出目录。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documented_current_surface_rollout；2026当前帮助页：云端会话、桌面桥接；新统一对话体验逐步上线。不是Claude模型。；{"research_preview": "2026-01-12", "desktop_ga": "2026-04-09", "cloud_surface_expansion": "2026-07-07", "unified_rollout": "2026-09-16"}
+- synthetic_input：虚构展览物资台账整理；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：三行明细、金额公式、总额390元。；没有虚构真实采购、发票或供应商。；覆盖/删除/发送均禁止，权限范围可检查。
+- 文档观察：Get started with Claude Cowork；动态帮助页，精确日未核实；付费计划可用，表面和管理员条件有差异。当前云端执行，经桌面桥接本地资源；Manual/Auto/Skip等审批语义不同。；事件日期与文档观察不同。
+- 文档观察：Use Claude Cowork safely；this week；云隔离不是权限隔离；连接文件会在服务器处理。电脑点击有不同于普通工具的权限风险，需防提示注入。；事件日期与文档观察不同。
+- 文档观察：Claude release notes；over a week ago；Cowork 2026-01-12研究预览，04-09桌面GA，07-07云会话/web与mobile扩展，09-16开始统一对话体验。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构展览物资台账整理](https://2codework.github.io/agentwork/?case=assistant-case-claude-cowork)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"research_preview": "2026-01-12", "desktop_ga": "2026-04-09", "cloud_surface_expansion": "2026-07-07", "unified_rollout": "2026-09-16"}
+- 学习步骤（未执行）：离线造三条物资记录：纸张10包×20元，笔5盒×30元，夹子8包×5元。
+- 学习步骤（未执行）：拟定仅新建草稿，不覆盖/删除原文件的计划。
+- 学习步骤（未执行）：设计表格、总额摘要、缺失字段清单三个交付件。
+- 学习步骤（未执行）：审批点列明目录权限、连接工具、每项写入范围；不实际授权。
+- 学习步骤（未执行）：人工计算合计390元，检查输出验收清单。
+- 注意：限制：云隔离不代表本地文件不上传处理。
+- 注意：限制：本地文件/浏览器需在线桥接；Linux可用描述与部分本地能力要求不同，不能推断同等功能。
+- 注意：限制：删除防护不意味着所有写操作无风险。
+- 注意：未知：用户实际界面是否统一
+- 注意：未知：具体客户端build与地区
+- 注意：未知：Linux本地浏览器/文件能力的完整矩阵
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork
+- 来源：https://support.claude.com/en/articles/13364135-use-claude-cowork-safely
+- 来源：https://support.claude.com/en/articles/12138966-release-notes
+
+## Research in Claude
+
+Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。；Pro/Max/Team/Enterprise，需开启web search；组织模型授权也可能影响。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-claude-research / research_feature
+- 生命周期：unknown
+- 版本：Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：research_feature
+- platform_family_id：Anthropic
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：已启用连接器可被研究自动调用，不会逐次询问；因此练习先设计零连接器范围。；发布/分享属于另一步骤，必须人审。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。已启用连接器可被研究自动调用，不会逐次询问；因此练习先设计零连接器范围。；发布/分享属于另一步骤，必须人审。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documented_current；Research检索编排功能；web/desktop与mobile来源不同，不是独立模型或Cowork别名。；{"announcement": "2025-04-15", "document_update": "QA观察：over 2 weeks ago；原观察over a week ago保留在before-qa及来源观察历史；精确日未知"}
+- synthetic_input：虚构社团的公开资料证据对照；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：至少一条相反证据或信息缺口。；每项证据区分web来源与未接入内部资料。；不宣称已读取账号或本地MCP。
+- 文档观察：Use research on Claude；over 2 weeks ago；Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。；事件日期与文档观察不同。
+- 文档观察：Claude takes research to new places；更新日未知；2025-04-15宣布Research及Google Workspace集成；Research是多轮检索研究能力。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构社团的公开资料证据对照](https://2codework.github.io/agentwork/?case=assistant-case-claude-research)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"announcement": "2025-04-15", "document_update": "QA观察：over 2 weeks ago；原观察over a week ago保留在before-qa及来源观察历史；精确日未知"}
+- 学习步骤（未执行）：写一个合成问题：比较两种公开科学展览说明结构。
+- 学习步骤（未执行）：为web研究拟定只查官方教育机构来源的约束。
+- 学习步骤（未执行）：列出待核验主张、来源、反例三栏。
+- 学习步骤（未执行）：说明若换到mobile，任何连接器资料都不应默认存在。
+- 学习步骤（未执行）：核对引文而非仅看报告语气，输出草稿不发送。
+- 注意：限制：mobile研究仅web且可能不提醒连接器被跳过。
+- 注意：限制：不支持Claude Desktop本地MCP工具用于Research。
+- 注意：限制：功能可能更快消耗对话额度；底层模型会变化。
+- 注意：未知：动态底层模型配置是否已到本账户
+- 注意：未知：实际额度和价格
+- 注意：未知：连接工具自动调用的具体权限配置
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://support.claude.com/en/articles/11088861-use-research-on-claude
+- 来源：https://www.anthropic.com/news/research
+
+## Deep Research in Gemini Apps
+
+Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。；帮助页要求18岁以上且登录；Thinking报告面向所有用户，Pro/Ultra有较高额度及Pro选项。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-gemini-apps-deep-research / research_feature
+- 生命周期：unknown
+- 版本：Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：research_feature
+- platform_family_id：Google
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：可编辑计划，再点Start research；源选择不是所有写动作授权。；Gmail/Drive须Workspace应用连接；本练习只设计公开Search来源，不连接。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。可编辑计划，再点Start research；源选择不是所有写动作授权。；Gmail/Drive须Workspace应用连接；本练习只设计公开Search来源，不连接。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documented_current；Gemini Apps用户界面；不等同Gemini API Deep Research agent或Workspace Studio。；{"announcement": null, "document_update": null}
+- synthetic_input：虚构博物馆研究计划审稿；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：清楚区分研究计划和已完成报告。；无假定账号数据、无施工安全承诺。；来源与未核实项独立列出。
+- 文档观察：Use Deep Research in Gemini Apps；更新日未知；18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构博物馆研究计划审稿](https://2codework.github.io/agentwork/?case=assistant-case-gemini-apps-deep-research)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"announcement": null, "document_update": null}
+- 学习步骤（未执行）：设计问题：解释雨水收集展品的三种展示方式，不涉及建筑施工建议。
+- 学习步骤（未执行）：拟定默认Search来源、禁止Gmail和Drive的来源清单。
+- 学习步骤（未执行）：把计划改成原理、公开实例、未知风险三节。
+- 学习步骤（未执行）：为报告设引用/日期/事实与建议分栏。
+- 学习步骤（未执行）：输出前人工审查；Export to Docs或分享均不执行。
+- 注意：限制：每日/并发限额；不保证固定完成时间。
+- 注意：限制：Ultra视觉报告包含Workspace来源时有功能限制。
+- 注意：限制：历史报告获取受Keep Activity设置影响。
+- 注意：未知：首发日期未在本批证实
+- 注意：未知：文档精确更新时间
+- 注意：未知：当前地区/组织资格和额度
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://support.google.com/gemini/answer/15719111?hl=en
+
+## Perplexity Projects（原 Spaces）
+
+Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。；官方产品页列web/mobile/desktop/Slack/Teams；具体计划、组织策略、连接源需核验。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-perplexity-projects / research_workspace
+- 生命周期：unknown
+- 版本：Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：research_workspace
+- platform_family_id：Perplexity
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：共享项目与成员各自连接权限有区别；不应自动继承他人连接器或私人记忆。；本练习只设计私有项目，不邀请成员、不接Slack/Teams、不启用自动化。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。共享项目与成员各自连接权限有区别；不应自动继承他人连接器或私人记忆。；本练习只设计私有项目，不邀请成员、不接Slack/Teams、不启用自动化。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：renamed_migrated；Computer中的持久文件/上下文/协作工作区；Spaces为历史名称，迁移关系仅限官方明确的threads/files/history。新增能力不等于全部历史功能或权限自动继承。；{"documented_migration_update": null, "raw_date": "08/04/26", "normalized_date": null, "date_status": "unknown", "date_caveat": "本页未独立证实月日顺序；不可猜测ISO日期", "original_spaces_launch": null, "projects_first_launch": null}
+- synthetic_input：虚构公益阅读项目的资料边界设计；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：同一事实可回溯素材版本。；50人合计准确但不推断真实报名。；不存在共享就获得他人邮箱的权限假设。
+- 文档观察：Projects；更新日未知；官方明确Spaces现为Projects，threads/files/history自动迁移；Projects为Computer工作区。成员私人连接与记忆不合并，fork不继承作者权限；其他能力不作全量继承推断。；事件日期与文档观察不同。
+- 文档观察：Shared workspaces…；更新日未知；变更记录描述Projects与Spaces迁移；页面原日期08/04/26月日序未核实，不能据此断言ISO事件日，也不是Spaces首发日。；事件日期与文档观察不同。
+- 文档观察：Which Perplexity Subscription Plan is right for you?；2026-10-08；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构公益阅读项目的资料边界设计](https://2codework.github.io/agentwork/?case=assistant-case-perplexity-projects)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"documented_migration_update": null, "raw_date": "08/04/26", "normalized_date": null, "date_status": "unknown", "date_caveat": "本页未独立证实月日顺序；不可猜测ISO日期", "original_spaces_launch": null, "projects_first_launch": null}
+- 学习步骤（未执行）：离线拟定项目：虚构阅读周，目标是形成议程草稿。
+- 学习步骤（未执行）：写两份合成材料：A场次30人，B场次20人；标注素材版本。
+- 学习步骤（未执行）：设计文件目录、项目指令、引用格式和私有默认。
+- 学习步骤（未执行）：制作权限矩阵：作者、审阅者、连接器主体；不实际邀请。
+- 学习步骤（未执行）：设计缺失访问权限时停止并报告的测试。
+- 注意：限制：工作区本身不是可执行模型；Computer执行和项目容器要区分。
+- 注意：限制：持久记忆可能带入旧上下文；需明确来源。
+- 注意：限制：自动迁移不扩展到所有连接器、私人记忆、权限或组织文件库；组织文件库其他生命周期事件不能并入Spaces迁移。
+- 注意：未知：首次Projects发布日
+- 注意：未知：当前套餐精确资格与价格
+- 注意：未知：自动迁移在用户账号上的实际结果
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://www.perplexity.ai/en-GB/hub/products/projects
+- 来源：https://www.perplexity.ai/changelog/shared-workspaces-personal-computer-for-windows-and-model-council
+- 来源：https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you
+
+## Perplexity Research / Deep Research
+
+Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。；官方套餐表包含Free有限Research及付费更高额度；不把旧无限次数当当前事实。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-perplexity-research / research_feature
+- 生命周期：unknown
+- 版本：Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：research_feature
+- platform_family_id：Perplexity
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：研究报告不是发布授权；来源访问仍需相应权限。；本批未核实该模式对每类工具的审批机制，教程不声称所有动作都会确认。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。研究报告不是发布授权；来源访问仍需相应权限。；本批未核实该模式对每类工具的审批机制，教程不声称所有动作都会确认。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：documented_current_naming_variation；Research研究模式；Deep Research在升级记录继续使用，保留命名时态，不重复计数。；{"first_launch": null, "upgrade_visible_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "date_caveat": "URL提供二月上下文，但与页面可见日期冲突，精确升级事件日期未知。"}
+- synthetic_input：虚构采购前的证据可信度表；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：至少两项测量条件缺口被保留。；无无依据的最佳产品排名。；报告与实际采购决策分开。
+- 文档观察：Upgraded Deep Research, Model Council；更新日未知；页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。；事件日期与文档观察不同。
+- 文档观察：What is Perplexity Pro?；2026-10-26；Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。；事件日期与文档观察不同。
+- 文档观察：Which Perplexity Subscription Plan is right for you?；2026-10-08；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构采购前的证据可信度表](https://2codework.github.io/agentwork/?case=assistant-case-perplexity-research)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"first_launch": null, "upgrade_visible_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "date_caveat": "URL提供二月上下文，但与页面可见日期冲突，精确升级事件日期未知。"}
+- 学习步骤（未执行）：设计无采购动作问题：比较可重复使用包装的三类材料特性。
+- 学习步骤（未执行）：限定官方技术资料，不使用电商账户。
+- 学习步骤（未执行）：制作主张/测量条件/来源/未知项表。
+- 学习步骤（未执行）：要求把没有同条件数据的比较标为不可直接比较。
+- 学习步骤（未执行）：人工逐条核验引用，再决定是否另行研究，不下单。
+- 注意：限制：自动选择模型；不能等同某一个模型ID。
+- 注意：限制：升级性能说法是厂商宣称，本批未跑benchmark。
+- 注意：限制：命名和额度随页面版本变化。
+- 注意：未知：首发正文抓取失败，未据索引猜日期
+- 注意：未知：准确模型路由和账户额度
+- 注意：未知：审批机制完整矩阵
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026
+- 来源：https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro
+- 来源：https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you
+
+## Perplexity Create files and apps（原 Labs）
+
+Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。；Pro及更高档有文件/app生成额度，Free套餐表无该功能；API购买不等于web权益。；documentation-only / never-run。功能、工作区容器、客户端表面与模型分开，不把检索或写作都称自主Agent。
+
+- ID / 类型：assistant-perplexity-create-files-apps / artifact_creation_feature
+- 生命周期：unknown
+- 版本：Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：artifact_creation_feature
+- platform_family_id：Perplexity
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：代码/资产生成与发布、对外分享、连接账号分开审批。；文档未充分说明每次代码/部署的确认，学习设计一律禁外部网络、凭据和公开发布。
+- confirmation_boundary：仅纸面设计；不登录、开通、上传用户数据、调用模型或执行自动化。平台审批不是一律逐次确认；具体配置按下列权限说明。代码/资产生成与发布、对外分享、连接账号分开审批。；文档未充分说明每次代码/部署的确认，学习设计一律禁外部网络、凭据和公开发布。；停止条件：遇登录、付费、账号连接、真实个人数据、外发或权限扩大立即停；先核实能力再另行获授权。
+- lifecycle_note：renamed；Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM或无限制通用代理。；{"first_launch": null, "rename_evidence_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "document_update": "QA观察Pro帮助页Last modified on October 26, 2026；仅文档元数据", "date_caveat": "不能从文档改名证据推断准确生效时刻。"}
+- synthetic_input：虚构展览预算的表格与静态看板验收；仅原创虚构材料/公开官方资料；练习是设计稿，本轮未运行
+- expected_not_observed：预期验收（不是实测）：CSV可解析、单位一致、总额400/剩余100。；看板与表格同源且无隐藏外部请求。；公开发布从未执行，输出显式标草稿。
+- 文档观察：Upgraded Deep Research, Model Council；更新日未知；页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。；事件日期与文档观察不同。
+- 文档观察：What is Perplexity Pro?；2026-10-26；Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。；事件日期与文档观察不同。
+- 文档观察：Which Perplexity Subscription Plan is right for you?；2026-10-08；Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；事件日期与文档观察不同。
+- 文档观察：Introducing Perplexity Labs；更新日未知；原观察曾描述Labs代码执行/资产与命名，但QA本轮(400) Timeout fetching且无原始全文快照，无法独立复验。只保留历史观察，不作为当前执行环境或资产迁移事实。；事件日期与文档观察不同。
+- 对应实践（编辑学习关系）：[虚构展览预算的表格与静态看板验收](https://2codework.github.io/agentwork/?case=assistant-case-perplexity-create-files-apps)
+- license：本批未核验服务合同/许可；不推定开源或免费。
+- cost：价格未知，未核实；套餐条件不等于账号已可用，不开通或购买。
+- historical_context：原始与QA文档观察分别保留；访问/更新日不是产品事件日。日期范围：{"first_launch": null, "rename_evidence_date": null, "raw_date": "02/05/26", "normalized_date": null, "date_status": "unknown", "url_date_hint": "February-6th-2026", "document_update": "QA观察Pro帮助页Last modified on October 26, 2026；仅文档元数据", "date_caveat": "不能从文档改名证据推断准确生效时刻。"}
+- 学习步骤（未执行）：离线造预算：展板200元、材料150元、预留50元；预算上限500元。
+- 学习步骤（未执行）：设计CSV字段、总额及剩余额公式。
+- 学习步骤（未执行）：要求只生成下载草稿与静态看板设计，不部署。
+- 学习步骤（未执行）：用人工算术核对总额400元、剩余100元。
+- 学习步骤（未执行）：列出代码审查项：无外网请求、无密钥、无访问账号。
+- 注意：限制：生成代码及公式必须检查；历史营销时间不作SLA。
+- 注意：限制：简单web应用不等于生产安全应用。
+- 注意：限制：套餐页面的高额度措辞不作无限量保证。
+- 注意：限制：p-labs历史正文QA复核超时，证据状态unknown；改名关系由p-feb-change独立支持，不声称旧资产全部迁移、执行环境和权限相同。
+- 注意：未知：Labs首发精确日期未在已读正文确认
+- 注意：未知：生成或发布各环节的人审机制
+- 注意：未知：当前客户端/文件规格及价格
+- 注意：未知：Labs历史代码/资产说明本轮无法独立复验，原始观察仅作历史记录
+- 注意：8项有限补包，不是全球完整目录；产品和练习均未运行。
+- 来源：https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026
+- 来源：https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro
+- 来源：https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you
+- 来源：https://www.perplexity.ai/en-GB/hub/blog/introducing-perplexity-labs
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -7238,6 +7556,22 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - media-src-7fafb4ff07e8f634 · https://google-research.github.io/seanet/musiclm/examples/ · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
 - media-src-be6bc7e1786807c2 · https://arxiv.org/abs/2301.11325 · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
 - media-src-89747c3fbdcf1342 · https://www.kaggle.com/datasets/googleai/musiccaps · 核验 2026-10-28 · 公开论文、项目说明或官方入口；仅metadata，入口不代表下载/标签/运行已验证。
+- assistant-src-oa-agent-help · https://help.openai.com/en/articles/11752874-chatgpt-agent · 核验 2026-10-28 · 顶部说已不再可用；同页下方保留旧启动与套餐文案，存在内部时态冲突。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-oa-agent-launch · https://openai.com/index/introducing-chatgpt-agent/ · 核验 2026-10-28 · 2025-07-17 发布；现页面标为过时。历史产品用虚拟电脑，重大操作询问授权，可中断或接管。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-oa-dr-launch · https://openai.com/index/introducing-deep-research/ · 核验 2026-10-28 · 首次公告为2025-02-02；2026-02-10是后续功能更新，不能替代首发日。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-oa-dr-help · https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt · 核验 2026-10-28 · Chat 研究可审改计划、限定站点、核验引用；连接应用仅使用读取动作。套餐/地区/角色决定来源和额度。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-cl-cowork · https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork · 核验 2026-10-28 · 付费计划可用，表面和管理员条件有差异。当前云端执行，经桌面桥接本地资源；Manual/Auto/Skip等审批语义不同。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-cl-safety · https://support.claude.com/en/articles/13364135-use-claude-cowork-safely · 核验 2026-10-28 · 云隔离不是权限隔离；连接文件会在服务器处理。电脑点击有不同于普通工具的权限风险，需防提示注入。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-cl-releases · https://support.claude.com/en/articles/12138966-release-notes · 核验 2026-10-28 · Cowork 2026-01-12研究预览，04-09桌面GA，07-07云会话/web与mobile扩展，09-16开始统一对话体验。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-cl-research · https://support.claude.com/en/articles/11088861-use-research-on-claude · 核验 2026-10-28 · Research需付费及web search；移动端仅web，web/desktop可用已连接工具。研究调用连接工具不逐次确认，不支持桌面本地MCP。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-cl-research-launch · https://www.anthropic.com/news/research · 核验 2026-10-28 · 2025-04-15宣布Research及Google Workspace集成；Research是多轮检索研究能力。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-g-dr · https://support.google.com/gemini/answer/15719111?hl=en · 核验 2026-10-28 · 18岁以上登录用户；可改计划后启动研究；默认Search，可选择其他来源。Pro/Ultra有较高额度；Workspace来源须连接。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-projects · https://www.perplexity.ai/en-GB/hub/products/projects · 核验 2026-10-28 · 官方明确Spaces现为Projects，threads/files/history自动迁移；Projects为Computer工作区。成员私人连接与记忆不合并，fork不继承作者权限；其他能力不作全量继承推断。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-projects-change · https://www.perplexity.ai/changelog/shared-workspaces-personal-computer-for-windows-and-model-council · 核验 2026-10-28 · 变更记录描述Projects与Spaces迁移；页面原日期08/04/26月日序未核实，不能据此断言ISO事件日，也不是Spaces首发日。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-feb-change · https://www.perplexity.ai/changelog/what-we-shipped---february-6th-2026 · 核验 2026-10-28 · 页面显示02/05/26而URL含February-6th-2026；精确事件日未知。支持Labs旧名关系，不证明准确改名时刻、旧资产迁移或权限等价。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-pro · https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro · 核验 2026-10-28 · Research自动选模型做深入报告；Create files and apps可生成报告、表格、仪表板、简单web应用。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-plans · https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you · 核验 2026-10-28 · Research与文件/app生成额度按套餐；Free有有限Research但无文件/app生成；Pro有每30天生成额度。API单独计费。；官方文档观察，不是产品实测；更新时间不当事件日。
+- assistant-src-p-labs · https://www.perplexity.ai/en-GB/hub/blog/introducing-perplexity-labs · 核验 2026-10-28 · 原观察曾描述Labs代码执行/资产与命名，但QA本轮(400) Timeout fetching且无原始全文快照，无法独立复验。只保留历史观察，不作为当前执行环境或资产迁移事实。；官方文档观察，不是产品实测；更新时间不当事件日。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
@@ -7287,6 +7621,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - No exact license-version or full dependency/data-rights audit performed.
 - 办公 Agent 系统已有11命名实体/10家族代表批次；OpenAI、Anthropic及更多地区平台仍待专项核验，未覆盖全球全部服务或版本。
 - 媒体评测仅补充11个代表知识实体（6 benchmark、3 metric、1 harness、1 dataset）；不代表完整目录，不导入成绩或形成统一榜单。
+- 通用助手/研究工作区已有8项有限文档补包；功能、工作区、历史执行表面不是8个模型或8个自主Agent。账号可用性、实际效果和更广市场仍未覆盖。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。

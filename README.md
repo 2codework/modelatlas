@@ -54,7 +54,7 @@ BOOK.md           同源生成的中文书稿
 
 ## 发布与许可
 
-包含 push/PR 只读 CI 配置；线上状态以对应提交的 Actions 与 Pages 结果为准。部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+包含 push/PR 只读 CI 配置。此仓库维护源码；线上对应提交以 Actions / Pages 结果为准，本地测试不等于线上验收。部署步骤见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
 本轮采用代码 MIT、原创编辑文本与原创图形 CC BY 4.0 的许可方案。第三方模型、论文、数据、网页、商标及引用的事实来源不受本项目重新许可。详见 [LICENSE-CONTENT.md](LICENSE-CONTENT.md)。
 
@@ -66,9 +66,9 @@ BOOK.md           同源生成的中文书稿
 
 ## 日期证据
 
-87 条事件中 50 条有日期、37 条日期未知。`timeline-dates.json` 是追加式证据覆盖层；构建时核对 `expected_before`，不重写历史研究包。BLOOM API 的 `available_by=2022-07-12` 只说明截至该日可用，不替代精确首发日期。GPT-3 API 限 private beta，Gemini 1.0 Pro / Pro Vision 限 Vertex AI Preview，不标作 GA。时区未声明则保留 null。
+事件总数与已知/未知日期分布以网站时间轴统计及生成的 `dist/data.json` / `docs/data.json` 为准。`timeline-dates.json` 是追加式证据覆盖层；构建时核对 `expected_before`，不重写历史研究包。BLOOM API 的 `available_by=2022-07-12` 只说明截至该日可用，不替代精确首发日期。GPT-3 API 限 private beta，Gemini 1.0 Pro / Pro Vision 限 Vertex AI Preview，不标作 GA。时区未声明则保留 null。
 
-## MCP、Skill 与提示词 · 十二课候选
+## MCP、Skill 与提示词 · 十二课
 
 新增 12 个原创深教程：角色、历史初始化、工具调用、资源与模板、错误、取消、权限、提示注入、Skill、调试、迁移与现行消息。每课在网站和同源书稿中完整保留目标、前置、输入输出、提示词、步骤、验收、错误、权限、来源与版本。MCP 2025-11-25 的 initialize 是历史教学；2026-07-28 对照采用逐请求元数据。Skills 扩展已发布、SEP-2640 Final；具体宿主支持仍待逐版本验证。
 
@@ -79,11 +79,11 @@ python learning/mcp/raw/validate.py
 python -m unittest discover -s learning/mcp/raw/tests -v
 ```
 
-不新增未经核验的版本事件或模型能力断言。保留全部旧案例、节点、日期覆盖层与互链；源网页的权利与适用条件不因本教程而改变。此目录是待独立审阅的候选，不能据此推定线上已发布。
+不新增未经核验的版本事件或模型能力断言。保留全部旧案例、节点、日期覆盖层与互链；源网页的权利与适用条件不因本教程而改变。此仓库维护源码；线上对应提交以 Actions / Pages 结果为准，本地测试不等于线上验收。
 
-## 厂商目录（77 条可追溯记录）
+## 厂商目录（可追溯记录）
 
-新增独立目录视图与 `?catalog=<id>` 深链接，支持厂商、实体类型、输入/输出模态、生命周期与全字段搜索。77 是目录记录数，不是新增模型数；历史知识图与事件计数不变。原始数据、QA修订、覆盖缺口、许可差异与官方教程链接完整保留。详见 [CATALOG.md](CATALOG.md)；不生成价格/性能排名，不运行模型或SDK。
+新增独立目录视图与 `?catalog=<id>` 深链接，支持厂商、实体类型、输入/输出模态、生命周期与全字段搜索。目录记录数以网站目录统计及生成的 `dist/data.json` / `docs/data.json` 为准，目录记录不等同于新增模型；历史知识图与事件独立保留。原始数据、QA修订、覆盖缺口、许可差异与官方教程链接完整保留。详见 [CATALOG.md](CATALOG.md)；不生成价格/性能排名，不运行模型或SDK。
 
 ## 评测介绍扩充（22条版本/分片记录）
 
