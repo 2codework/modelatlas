@@ -3,6 +3,7 @@
 import json, re, shutil, datetime, copy, math, sys
 sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
 import mcp_learning
+import vendor_catalog
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -195,12 +196,13 @@ def book(data):
     lines+=['','## 来源目录']
     for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
     lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
-    return '\n'.join(line.rstrip() for line in lines)+'\n'
+    return '\n'.join(line.rstrip() for line in lines)+'\n'+(vendor_catalog.book(data['vendor_catalog']) if 'vendor_catalog' in data else '')
 def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
     bundles.append(course)
     data=normalize(bundles)
+    data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
@@ -208,6 +210,7 @@ def build():
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
     mcp_learning.publish(ROOT,out)
+    vendor_catalog.publish(ROOT,out)
     (out/'.nojekyll').touch()
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)
     print(json.dumps({'nodes':len(data['nodes']),'edges':len(data['edges']),'sources':len(data['sources']),'events':len(data['events']),'output':str(out)},ensure_ascii=False))

@@ -5042,3 +5042,7266 @@ python -m unittest discover -s tests -v
 - 模型家族逐版本教程需与模型登记表继续关联；本轮只有运行时路线，不捏造具体模型支持。
 - JEV未定义，未重复研究或臆测展开。
 - 已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。
+
+## 厂商目录记录（非全量历史，非新增模型计数）
+不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。
+null 表示未知 / 本轮未核验，不表示不存在。原始来源与修订记录逐字段保留。
+
+### gpt-6-astra
+- 深链接：?catalog=global-pen-gpt-6-astra
+- id："global-pen-gpt-6-astra"
+- type："catalog_record"
+- title："gpt-6-astra"
+- exact_id："gpt-6-astra"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："6 Astra"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录确认的API型号；固定快照与别名语义本轮未核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_catalog", "url": "https://developers.openai.com/api/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gpt", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "保留家族节点，新增版本记录"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-6-astra", "vendor": "OpenAI", "title": "gpt-6-astra", "exact_id": "gpt-6-astra", "entity_type": "api_model_id", "version": "6 Astra", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_catalog"], "source_urls": ["https://developers.openai.com/api/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。", "relations": [], "dedup_suggestions": [{"existing_id": "gpt", "relation": "member_of_family", "action": "保留家族节点，新增版本记录"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### gpt-6.1-sol
+- 深链接：?catalog=global-pen-gpt-6-1-sol
+- id："global-pen-gpt-6-1-sol"
+- type："catalog_record"
+- title："gpt-6.1-sol"
+- exact_id："gpt-6.1-sol"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："6.1 Sol"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录确认的API型号；固定快照与别名语义本轮未核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_catalog", "url": "https://developers.openai.com/api/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gpt", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "保留家族节点，新增版本记录"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-6-1-sol", "vendor": "OpenAI", "title": "gpt-6.1-sol", "exact_id": "gpt-6.1-sol", "entity_type": "api_model_id", "version": "6.1 Sol", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_catalog"], "source_urls": ["https://developers.openai.com/api/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。", "relations": [], "dedup_suggestions": [{"existing_id": "gpt", "relation": "member_of_family", "action": "保留家族节点，新增版本记录"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### gpt-6.1-terra
+- 深链接：?catalog=global-pen-gpt-6-1-terra
+- id："global-pen-gpt-6-1-terra"
+- type："catalog_record"
+- title："gpt-6.1-terra"
+- exact_id："gpt-6.1-terra"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："6.1 Terra"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录确认的API型号；固定快照与别名语义本轮未核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_catalog", "url": "https://developers.openai.com/api/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gpt", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "保留家族节点，新增版本记录"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-6-1-terra", "vendor": "OpenAI", "title": "gpt-6.1-terra", "exact_id": "gpt-6.1-terra", "entity_type": "api_model_id", "version": "6.1 Terra", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_catalog"], "source_urls": ["https://developers.openai.com/api/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。", "relations": [], "dedup_suggestions": [{"existing_id": "gpt", "relation": "member_of_family", "action": "保留家族节点，新增版本记录"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### gpt-6-luna
+- 深链接：?catalog=global-pen-gpt-6-luna
+- id："global-pen-gpt-6-luna"
+- type："catalog_record"
+- title："gpt-6-luna"
+- exact_id："gpt-6-luna"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："6 Luna"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录确认的API型号；固定快照与别名语义本轮未核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_catalog", "url": "https://developers.openai.com/api/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gpt", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "保留家族节点，新增版本记录"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-6-luna", "vendor": "OpenAI", "title": "gpt-6-luna", "exact_id": "gpt-6-luna", "entity_type": "api_model_id", "version": "6 Luna", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_catalog"], "source_urls": ["https://developers.openai.com/api/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。", "relations": [], "dedup_suggestions": [{"existing_id": "gpt", "relation": "member_of_family", "action": "保留家族节点，新增版本记录"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### GPT-Image-2.5 Sunburst
+- 深链接：?catalog=global-pen-gpt-image-2-5-sunburst
+- id："global-pen-gpt-image-2-5-sunburst"
+- type："catalog_record"
+- title："GPT-Image-2.5 Sunburst"
+- exact_id："gpt-image-2.5-sunburst"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："2.5 Sunburst"
+- inputs：null
+- outputs：["image"]
+- modality：{"input": null, "output": ["image"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："生图与编辑型号；完整输入类型待补。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_image", "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-image-2-5-sunburst", "vendor": "OpenAI", "title": "GPT-Image-2.5 Sunburst", "exact_id": "gpt-image-2.5-sunburst", "entity_type": "api_model_id", "version": "2.5 Sunburst", "modality": {"input": null, "output": ["image"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_image"], "source_urls": ["https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"], "source_checked_date": "2026-10-28", "summary_zh": "生图与编辑型号；完整输入类型待补。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### GPT-Live 1
+- 深链接：?catalog=global-pen-gpt-live-1
+- id："global-pen-gpt-live-1"
+- type："catalog_record"
+- title："GPT-Live 1"
+- exact_id："gpt-live-1"
+- entity_type："api_model_id"
+- provider："OpenAI"
+- family：null
+- version："1"
+- inputs：["text", "audio"]
+- outputs：["text", "audio"]
+- modality：{"input": ["text", "audio"], "output": ["text", "audio"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："实时双向语音，后端agent与语音模型不是同一实体。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_live", "url": "https://developers.openai.com/api/docs/models/gpt-live-1", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-live-1", "vendor": "OpenAI", "title": "GPT-Live 1", "exact_id": "gpt-live-1", "entity_type": "api_model_id", "version": "1", "modality": {"input": ["text", "audio"], "output": ["text", "audio"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_live"], "source_urls": ["https://developers.openai.com/api/docs/models/gpt-live-1"], "source_checked_date": "2026-10-28", "summary_zh": "实时双向语音，后端agent与语音模型不是同一实体。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### sora-2
+- 深链接：?catalog=global-pen-sora-2
+- id："global-pen-sora-2"
+- type："catalog_record"
+- title："sora-2"
+- exact_id："sora-2"
+- entity_type："api_alias"
+- provider："OpenAI"
+- family：null
+- version：null
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}
+- status："retired"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："保留历史记录；官方页面未给推荐替代。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_deprecations", "url": "https://developers.openai.com/api/docs/deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-sora-2", "vendor": "OpenAI", "title": "sora-2", "exact_id": "sora-2", "entity_type": "api_alias", "version": null, "modality": {"input": null, "output": null}, "lifecycle": {"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_deprecations"], "source_urls": ["https://developers.openai.com/api/docs/deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "保留历史记录；官方页面未给推荐替代。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### sora-2-2025-10-06
+- 深链接：?catalog=global-pen-sora-2-2025-10-06
+- id："global-pen-sora-2-2025-10-06"
+- type："catalog_record"
+- title："sora-2-2025-10-06"
+- exact_id："sora-2-2025-10-06"
+- entity_type："fixed_snapshot"
+- provider："OpenAI"
+- family：null
+- version：null
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}
+- status："retired"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："保留历史记录；官方页面未给推荐替代。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_deprecations", "url": "https://developers.openai.com/api/docs/deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-sora-2-2025-10-06", "vendor": "OpenAI", "title": "sora-2-2025-10-06", "exact_id": "sora-2-2025-10-06", "entity_type": "fixed_snapshot", "version": null, "modality": {"input": null, "output": null}, "lifecycle": {"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_deprecations"], "source_urls": ["https://developers.openai.com/api/docs/deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "保留历史记录；官方页面未给推荐替代。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Videos API
+- 深链接：?catalog=global-pen-videos-api
+- id："global-pen-videos-api"
+- type："catalog_record"
+- title："Videos API"
+- exact_id："Videos API"
+- entity_type："api_service"
+- provider："OpenAI"
+- family：null
+- version：null
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}
+- status："retired"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："保留历史记录；官方页面未给推荐替代。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_deprecations", "url": "https://developers.openai.com/api/docs/deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-videos-api", "vendor": "OpenAI", "title": "Videos API", "exact_id": "Videos API", "entity_type": "api_service", "version": null, "modality": {"input": null, "output": null}, "lifecycle": {"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-03-24", "retirement_date": "2026-09-24"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_deprecations"], "source_urls": ["https://developers.openai.com/api/docs/deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "保留历史记录；官方页面未给推荐替代。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### GPT-4o initial snapshot
+- 深链接：?catalog=global-pen-gpt-4o-2024-05-13
+- id："global-pen-gpt-4o-2024-05-13"
+- type："catalog_record"
+- title："GPT-4o initial snapshot"
+- exact_id："gpt-4o-2024-05-13"
+- entity_type："fixed_snapshot"
+- provider："OpenAI"
+- family：null
+- version："2024-05-13"
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": "2026-10-23"}
+- status："retired"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "openai_deprecations", "url": "https://developers.openai.com/api/docs/deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[{"type": "recommended_replacement", "target_exact_id": "gpt-5.6-sol", "source_id": "openai_deprecations", "scope": "OpenAI API", "note": "此为核验日文档建议，不宣称原始公告时即如此"}]
+- relations：[{"type": "recommended_replacement", "target_exact_id": "gpt-5.6-sol", "source_id": "openai_deprecations", "scope": "OpenAI API", "note": "此为核验日文档建议，不宣称原始公告时即如此"}]
+- source_bundle："global.json"
+- raw：{"id": "global-pen-gpt-4o-2024-05-13", "vendor": "OpenAI", "title": "GPT-4o initial snapshot", "exact_id": "gpt-4o-2024-05-13", "entity_type": "fixed_snapshot", "version": "2024-05-13", "modality": {"input": null, "output": null}, "lifecycle": {"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": "2026-10-23"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["openai_deprecations"], "source_urls": ["https://developers.openai.com/api/docs/deprecations"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [{"type": "recommended_replacement", "target_exact_id": "gpt-5.6-sol", "source_id": "openai_deprecations", "scope": "OpenAI API", "note": "此为核验日文档建议，不宣称原始公告时即如此"}], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Fable 5.1
+- 深链接：?catalog=global-nthropic-claude-fable-5-1
+- id："global-nthropic-claude-fable-5-1"
+- type："catalog_record"
+- title："Fable 5.1"
+- exact_id："claude-fable-5-1"
+- entity_type："fixed_api_version"
+- provider："Anthropic"
+- family：null
+- version："Fable 5.1"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："active"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："无日期不代表滚动别名；专门版本文档明确此代ID固定。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "claude_catalog", "url": "https://platform.claude.com/docs/en/models/overview", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_versioning", "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_deprecations", "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-nthropic-claude-fable-5-1", "vendor": "Anthropic", "title": "Fable 5.1", "exact_id": "claude-fable-5-1", "entity_type": "fixed_api_version", "version": "Fable 5.1", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["claude_catalog", "claude_versioning", "claude_deprecations"], "source_urls": ["https://platform.claude.com/docs/en/models/overview", "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "https://platform.claude.com/docs/en/about-claude/model-deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Opus 5.5
+- 深链接：?catalog=global-nthropic-claude-opus-5-5
+- id："global-nthropic-claude-opus-5-5"
+- type："catalog_record"
+- title："Opus 5.5"
+- exact_id："claude-opus-5-5"
+- entity_type："fixed_api_version"
+- provider："Anthropic"
+- family：null
+- version："Opus 5.5"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："active"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："无日期不代表滚动别名；专门版本文档明确此代ID固定。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "claude_catalog", "url": "https://platform.claude.com/docs/en/models/overview", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_versioning", "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_deprecations", "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-nthropic-claude-opus-5-5", "vendor": "Anthropic", "title": "Opus 5.5", "exact_id": "claude-opus-5-5", "entity_type": "fixed_api_version", "version": "Opus 5.5", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["claude_catalog", "claude_versioning", "claude_deprecations"], "source_urls": ["https://platform.claude.com/docs/en/models/overview", "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "https://platform.claude.com/docs/en/about-claude/model-deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Sonnet 5.5
+- 深链接：?catalog=global-nthropic-claude-sonnet-5-5
+- id："global-nthropic-claude-sonnet-5-5"
+- type："catalog_record"
+- title："Sonnet 5.5"
+- exact_id："claude-sonnet-5-5"
+- entity_type："fixed_api_version"
+- provider："Anthropic"
+- family：null
+- version："Sonnet 5.5"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："active"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："无日期不代表滚动别名；专门版本文档明确此代ID固定。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "claude_catalog", "url": "https://platform.claude.com/docs/en/models/overview", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_versioning", "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_deprecations", "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-nthropic-claude-sonnet-5-5", "vendor": "Anthropic", "title": "Sonnet 5.5", "exact_id": "claude-sonnet-5-5", "entity_type": "fixed_api_version", "version": "Sonnet 5.5", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["claude_catalog", "claude_versioning", "claude_deprecations"], "source_urls": ["https://platform.claude.com/docs/en/models/overview", "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "https://platform.claude.com/docs/en/about-claude/model-deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Haiku 5.5
+- 深链接：?catalog=global-nthropic-claude-haiku-5-5
+- id："global-nthropic-claude-haiku-5-5"
+- type："catalog_record"
+- title："Haiku 5.5"
+- exact_id："claude-haiku-5-5"
+- entity_type："fixed_api_version"
+- provider："Anthropic"
+- family：null
+- version："Haiku 5.5"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："active"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："无日期不代表滚动别名；专门版本文档明确此代ID固定。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "claude_catalog", "url": "https://platform.claude.com/docs/en/models/overview", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_versioning", "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "claude_deprecations", "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-nthropic-claude-haiku-5-5", "vendor": "Anthropic", "title": "Haiku 5.5", "exact_id": "claude-haiku-5-5", "entity_type": "fixed_api_version", "version": "Haiku 5.5", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "active", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["claude_catalog", "claude_versioning", "claude_deprecations"], "source_urls": ["https://platform.claude.com/docs/en/models/overview", "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions", "https://platform.claude.com/docs/en/about-claude/model-deprecations"], "source_checked_date": "2026-10-28", "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Claude Sonnet 4.5
+- 深链接：?catalog=global-nthropic-claude-sonnet-4-5-20250929
+- id："global-nthropic-claude-sonnet-4-5-20250929"
+- type："catalog_record"
+- title："Claude Sonnet 4.5"
+- exact_id："claude-sonnet-4-5-20250929"
+- entity_type："fixed_snapshot"
+- provider："Anthropic"
+- family：null
+- version："4.5"
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-09-30", "retirement_date": "2026-11-30"}
+- status："deprecated"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "claude_deprecations", "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "global-nthropic-claude-sonnet-5-5", "type": "recommended_replacement", "verification_status": "source_documented_relation", "note": {"type": "recommended_replacement", "target_exact_id": "claude-sonnet-5-5", "source_id": "claude_deprecations", "scope": "Anthropic-operated platforms"}}]
+- unresolved_links：[]
+- relations：[{"type": "recommended_replacement", "target_exact_id": "claude-sonnet-5-5", "source_id": "claude_deprecations", "scope": "Anthropic-operated platforms"}]
+- source_bundle："global.json"
+- raw：{"id": "global-nthropic-claude-sonnet-4-5-20250929", "vendor": "Anthropic", "title": "Claude Sonnet 4.5", "exact_id": "claude-sonnet-4-5-20250929", "entity_type": "fixed_snapshot", "version": "4.5", "modality": {"input": null, "output": null}, "lifecycle": {"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-09-30", "retirement_date": "2026-11-30"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["claude_deprecations"], "source_urls": ["https://platform.claude.com/docs/en/about-claude/model-deprecations"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [{"type": "recommended_replacement", "target_exact_id": "claude-sonnet-5-5", "source_id": "claude_deprecations", "scope": "Anthropic-operated platforms"}], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemini 4 Argon
+- 深链接：?catalog=global-oogle-gemini-4-argon
+- id："global-oogle-gemini-4-argon"
+- type："catalog_record"
+- title："Gemini 4 Argon"
+- exact_id："gemini-4-argon"
+- entity_type："api_model_id"
+- provider："Google"
+- family：null
+- version："4 Argon"
+- inputs：["text", "image", "video", "audio", "PDF"]
+- outputs：["text"]
+- modality：{"input": ["text", "image", "video", "audio", "PDF"], "output": ["text"]}
+- lifecycle：{"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："stable"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemini_argon", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gemini", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不与首代gemini-1-report报告合并"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemini-4-argon", "vendor": "Google", "title": "Gemini 4 Argon", "exact_id": "gemini-4-argon", "entity_type": "api_model_id", "version": "4 Argon", "modality": {"input": ["text", "image", "video", "audio", "PDF"], "output": ["text"]}, "lifecycle": {"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemini_argon"], "source_urls": ["https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "gemini", "relation": "member_of_family", "action": "不与首代gemini-1-report报告合并"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemini 3.8 Live
+- 深链接：?catalog=global-oogle-gemini-3-8-live
+- id："global-oogle-gemini-3-8-live"
+- type："catalog_record"
+- title："Gemini 3.8 Live"
+- exact_id："gemini-3.8-live"
+- entity_type："api_model_id"
+- provider："Google"
+- family：null
+- version："3.8"
+- inputs：["text", "image", "audio"]
+- outputs：["audio", "text_transcription"]
+- modality：{"input": ["text", "image", "audio"], "output": ["audio", "text_transcription"]}
+- lifecycle：{"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："stable"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemini_live", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gemini", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不与首代gemini-1-report报告合并"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemini-3-8-live", "vendor": "Google", "title": "Gemini 3.8 Live", "exact_id": "gemini-3.8-live", "entity_type": "api_model_id", "version": "3.8", "modality": {"input": ["text", "image", "audio"], "output": ["audio", "text_transcription"]}, "lifecycle": {"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemini_live"], "source_urls": ["https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "gemini", "relation": "member_of_family", "action": "不与首代gemini-1-report报告合并"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Nano Banana 2.1
+- 深链接：?catalog=global-oogle-gemini-nano-banana-2-1
+- id："global-oogle-gemini-nano-banana-2-1"
+- type："catalog_record"
+- title："Nano Banana 2.1"
+- exact_id："gemini-nano-banana-2.1"
+- entity_type："api_model_id"
+- provider："Google"
+- family：null
+- version："2.1"
+- inputs：["text", "image", "video", "PDF"]
+- outputs：["image", "text"]
+- modality：{"input": ["text", "image", "video", "PDF"], "output": ["image", "text"]}
+- lifecycle：{"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："stable"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemini_image", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gemini", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不与首代gemini-1-report报告合并"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemini-nano-banana-2-1", "vendor": "Google", "title": "Nano Banana 2.1", "exact_id": "gemini-nano-banana-2.1", "entity_type": "api_model_id", "version": "2.1", "modality": {"input": ["text", "image", "video", "PDF"], "output": ["image", "text"]}, "lifecycle": {"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemini_image"], "source_urls": ["https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "gemini", "relation": "member_of_family", "action": "不与首代gemini-1-report报告合并"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemini Omni Flash
+- 深链接：?catalog=global-oogle-gemini-omni-1-1-flash
+- id："global-oogle-gemini-omni-1-1-flash"
+- type："catalog_record"
+- title："Gemini Omni Flash"
+- exact_id："gemini-omni-1.1-flash"
+- entity_type："api_model_id"
+- provider："Google"
+- family：null
+- version："1.1"
+- inputs：["text", "image", "video"]
+- outputs：["video"]
+- modality：{"input": ["text", "image", "video"], "output": ["video"]}
+- lifecycle：{"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："stable"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemini_video", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "gemini", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不与首代gemini-1-report报告合并"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemini-omni-1-1-flash", "vendor": "Google", "title": "Gemini Omni Flash", "exact_id": "gemini-omni-1.1-flash", "entity_type": "api_model_id", "version": "1.1", "modality": {"input": ["text", "image", "video"], "output": ["video"]}, "lifecycle": {"status": "stable", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemini_video"], "source_urls": ["https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "gemini", "relation": "member_of_family", "action": "不与首代gemini-1-report报告合并"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemini Omni Flash preview
+- 深链接：?catalog=global-oogle-gemini-omni-flash-preview
+- id："global-oogle-gemini-omni-flash-preview"
+- type："catalog_record"
+- title："Gemini Omni Flash preview"
+- exact_id："gemini-omni-flash-preview"
+- entity_type："api_model_id"
+- provider："Google"
+- family：null
+- version："preview"
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："retired"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："页面明确shut down，具体关闭日期未核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemini_video", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemini-omni-flash-preview", "vendor": "Google", "title": "Gemini Omni Flash preview", "exact_id": "gemini-omni-flash-preview", "entity_type": "api_model_id", "version": "preview", "modality": {"input": null, "output": null}, "lifecycle": {"status": "retired", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemini_video"], "source_urls": ["https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"], "source_checked_date": "2026-10-28", "summary_zh": "页面明确shut down，具体关闭日期未核实。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemma 4
+- 深链接：?catalog=global-oogle-gemma-4
+- id："global-oogle-gemma-4"
+- type："catalog_record"
+- title："Gemma 4"
+- exact_id：null
+- entity_type："model_family"
+- provider："Google"
+- family：null
+- version："4"
+- inputs：["text", "image", "video", "audio_variant_dependent"]
+- outputs：["text"]
+- modality：{"input": ["text", "image", "video", "audio_variant_dependent"], "output": ["text"]}
+- lifecycle：{"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："open_weights_documented"
+- access："open_weights"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："家族五尺寸；音频仅E2B/E4B/12B，不能向全部变体传播。"
+- urls：{"model_card": "https://ai.google.dev/gemma/docs/core/model_card_4", "report": "https://arxiv.org/abs/2607.02770", "tutorial": null, "weights_license": "https://ai.google.dev/gemma/apache_2", "repository": null}
+- sources：[{"id": "gemma_card", "url": "https://ai.google.dev/gemma/docs/core/model_card_4", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "gemma_license", "url": "https://ai.google.dev/gemma/apache_2", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-gemma-4", "vendor": "Google", "title": "Gemma 4", "exact_id": null, "entity_type": "model_family", "version": "4", "modality": {"input": ["text", "image", "video", "audio_variant_dependent"], "output": ["text"]}, "lifecycle": {"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights", "weights_license": "Apache-2.0", "weights_license_url": "https://ai.google.dev/gemma/apache_2", "model_card_url": "https://ai.google.dev/gemma/docs/core/model_card_4", "report_url": "https://arxiv.org/abs/2607.02770", "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["gemma_card", "gemma_license"], "source_urls": ["https://ai.google.dev/gemma/docs/core/model_card_4", "https://ai.google.dev/gemma/apache_2"], "source_checked_date": "2026-10-28", "summary_zh": "家族五尺寸；音频仅E2B/E4B/12B，不能向全部变体传播。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Gemma 4 Technical Report
+- 深链接：?catalog=global-oogle-arxiv-2607-02770
+- id："global-oogle-arxiv-2607-02770"
+- type："catalog_record"
+- title："Gemma 4 Technical Report"
+- exact_id："arXiv:2607.02770"
+- entity_type："technical_report"
+- provider："Google"
+- family：null
+- version："v2"
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "published", "scope": "paper", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："published"
+- access："paper"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": "2026-07-02"}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："首投日期属于论文，不是API上线或权重发布日期。"
+- urls：{"model_card": null, "report": "https://arxiv.org/abs/2607.02770", "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "gemma_report", "url": "https://arxiv.org/abs/2607.02770", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-oogle-arxiv-2607-02770", "vendor": "Google", "title": "Gemma 4 Technical Report", "exact_id": "arXiv:2607.02770", "entity_type": "technical_report", "version": "v2", "modality": {"input": null, "output": null}, "lifecycle": {"status": "published", "scope": "paper", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "paper", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": "https://arxiv.org/abs/2607.02770", "tutorial_url": null, "tutorial_status": "not_executed", "release_date": "2026-07-02", "release_date_evidence": {"event": "paper_first_submitted", "source_id": "gemma_report"}, "source_ids": ["gemma_report"], "source_urls": ["https://arxiv.org/abs/2607.02770"], "source_checked_date": "2026-10-28", "summary_zh": "首投日期属于论文，不是API上线或权重发布日期。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Llama 4 Scout (17Bx16E)
+- 深链接：?catalog=global-eta-llama-4-scout-17bx16e
+- id："global-eta-llama-4-scout-17bx16e"
+- type："catalog_record"
+- title："Llama 4 Scout (17Bx16E)"
+- exact_id：null
+- entity_type："model_variant"
+- provider："Meta"
+- family：null
+- version："4"
+- inputs：["text", "image"]
+- outputs：["text", "code"]
+- modality：{"input": ["text", "image"], "output": ["text", "code"]}
+- lifecycle：{"status": "static_release", "scope": "gated_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："static_release"
+- access："gated_open_weights"
+- weights_license："Llama 4 Community License Agreement"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": "2025-04-05"}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "official_link_discovered_not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "report": null, "tutorial": "https://github.com/meta-llama/llama-cookbook", "weights_license": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE", "repository": null}
+- sources：[{"id": "meta_card", "url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "meta_access", "url": "https://ai.meta.com/resources/models-and-libraries/llama-downloads/", "checked_at": "2026-10-28", "status": "search_excerpt_only", "word_limit": 200}]
+- links：[{"target": "llama", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不要覆盖llama-2历史节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-eta-llama-4-scout-17bx16e", "vendor": "Meta", "title": "Llama 4 Scout (17Bx16E)", "exact_id": null, "entity_type": "model_variant", "version": "4", "modality": {"input": ["text", "image"], "output": ["text", "code"]}, "lifecycle": {"status": "static_release", "scope": "gated_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "gated_open_weights", "weights_license": "Llama 4 Community License Agreement", "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE", "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "report_url": null, "tutorial_url": "https://github.com/meta-llama/llama-cookbook", "tutorial_status": "official_link_discovered_not_executed", "release_date": "2025-04-05", "release_date_evidence": {"event": "model_release", "source_id": "meta_card"}, "source_ids": ["meta_card", "meta_access"], "source_urls": ["https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "llama", "relation": "member_of_family", "action": "不要覆盖llama-2历史节点"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Llama 4 Maverick (17Bx128E)
+- 深链接：?catalog=global-eta-llama-4-maverick-17bx128e
+- id："global-eta-llama-4-maverick-17bx128e"
+- type："catalog_record"
+- title："Llama 4 Maverick (17Bx128E)"
+- exact_id：null
+- entity_type："model_variant"
+- provider："Meta"
+- family：null
+- version："4"
+- inputs：["text", "image"]
+- outputs：["text", "code"]
+- modality：{"input": ["text", "image"], "output": ["text", "code"]}
+- lifecycle：{"status": "static_release", "scope": "gated_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："static_release"
+- access："gated_open_weights"
+- weights_license："Llama 4 Community License Agreement"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": "2025-04-05"}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "official_link_discovered_not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "report": null, "tutorial": "https://github.com/meta-llama/llama-cookbook", "weights_license": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE", "repository": null}
+- sources：[{"id": "meta_card", "url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "meta_access", "url": "https://ai.meta.com/resources/models-and-libraries/llama-downloads/", "checked_at": "2026-10-28", "status": "search_excerpt_only", "word_limit": 200}]
+- links：[{"target": "llama", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不要覆盖llama-2历史节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-eta-llama-4-maverick-17bx128e", "vendor": "Meta", "title": "Llama 4 Maverick (17Bx128E)", "exact_id": null, "entity_type": "model_variant", "version": "4", "modality": {"input": ["text", "image"], "output": ["text", "code"]}, "lifecycle": {"status": "static_release", "scope": "gated_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "gated_open_weights", "weights_license": "Llama 4 Community License Agreement", "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE", "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "report_url": null, "tutorial_url": "https://github.com/meta-llama/llama-cookbook", "tutorial_status": "official_link_discovered_not_executed", "release_date": "2025-04-05", "release_date_evidence": {"event": "model_release", "source_id": "meta_card"}, "source_ids": ["meta_card", "meta_access"], "source_urls": ["https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md", "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [{"existing_id": "llama", "relation": "member_of_family", "action": "不要覆盖llama-2历史节点"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Mistral Small 4
+- 深链接：?catalog=global-istral-mistral-small-2603
+- id："global-istral-mistral-small-2603"
+- type："catalog_record"
+- title："Mistral Small 4"
+- exact_id："mistral-small-2603"
+- entity_type："api_model_id"
+- provider："Mistral"
+- family：null
+- version："26.03"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "GA", "scope": "api_and_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："GA"
+- access："api_and_open_weights"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": "2026-03-16"}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"correction_history": [{"date": "2026-10-28", "field": "modality.input", "old_value": ["text"], "new_value": ["text", "image"], "reason_zh": "独立审计发现首版仅填写text漏掉image；官方发布文两处明确图像输入。此为整理错误更正，不是模型能力新增。", "source_id": "mistral_small_release"}], "field_evidence": {"modality.input": {"source_id": "mistral_small_release", "locator": "A new standard for multimodal, reasoning-optimized models：首段；Key architectural details：Native multimodality条目", "observed_web_lines": [31, 41], "checked_at": "2026-10-28"}}, "tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："页面同时列推理/指令/代码能力；权重仓库与许可全文URL未补齐。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "mistral_small", "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "mistral_small_release", "url": "https://mistral.ai/news/mistral-small-4/", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200, "locator": "A new standard for multimodal, reasoning-optimized models首段；Key architectural details / Native multimodality"}]
+- links：[{"target": "mistral", "type": "member_of_family", "verification_status": "editorial_learning_relation", "note": "不与mistral-7b-v0-1合并"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-istral-mistral-small-2603", "vendor": "Mistral", "title": "Mistral Small 4", "exact_id": "mistral-small-2603", "entity_type": "api_model_id", "version": "26.03", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "GA", "scope": "api_and_open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "api_and_open_weights", "weights_license": "Apache-2.0", "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": "2026-03-16", "release_date_evidence": {"event": "model_page_release_label", "source_id": "mistral_small"}, "source_ids": ["mistral_small", "mistral_small_release"], "source_urls": ["https://docs.mistral.ai/models/mistral-small-4-0-26-03", "https://mistral.ai/news/mistral-small-4/"], "source_checked_date": "2026-10-28", "summary_zh": "页面同时列推理/指令/代码能力；权重仓库与许可全文URL未补齐。", "relations": [], "dedup_suggestions": [{"existing_id": "mistral", "relation": "member_of_family", "action": "不与mistral-7b-v0-1合并"}], "unknown_fields_policy": "null表示本轮未核实，不表示不存在", "field_evidence": {"modality.input": {"source_id": "mistral_small_release", "locator": "A new standard for multimodal, reasoning-optimized models：首段；Key architectural details：Native multimodality条目", "observed_web_lines": [31, 41], "checked_at": "2026-10-28"}}, "correction_history": [{"date": "2026-10-28", "field": "modality.input", "old_value": ["text"], "new_value": ["text", "image"], "reason_zh": "独立审计发现首版仅填写text漏掉image；官方发布文两处明确图像输入。此为整理错误更正，不是模型能力新增。", "source_id": "mistral_small_release"}]}
+
+### Voxtral Mini Transcribe 3
+- 深链接：?catalog=global-istral-voxtral-mini-transcribe-3-0
+- id："global-istral-voxtral-mini-transcribe-3-0"
+- type："catalog_record"
+- title："Voxtral Mini Transcribe 3"
+- exact_id："voxtral-mini-transcribe-3-0"
+- entity_type："api_model_id"
+- provider："Mistral"
+- family：null
+- version："3.0"
+- inputs：["audio"]
+- outputs：["text"]
+- modality：{"input": ["audio"], "output": ["text"]}
+- lifecycle：{"status": "public_preview", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："public_preview"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": "2026-10-20"}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："公开预览允许静默更新；不能按版本字符串推定固定snapshot。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "mistral_audio", "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "mistral_lifecycle", "url": "https://docs.mistral.ai/inference/model-lifecycle", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-istral-voxtral-mini-transcribe-3-0", "vendor": "Mistral", "title": "Voxtral Mini Transcribe 3", "exact_id": "voxtral-mini-transcribe-3-0", "entity_type": "api_model_id", "version": "3.0", "modality": {"input": ["audio"], "output": ["text"]}, "lifecycle": {"status": "public_preview", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": "2026-10-20", "release_date_evidence": {"event": "model_page_release_label", "source_id": "mistral_audio"}, "source_ids": ["mistral_audio", "mistral_lifecycle"], "source_urls": ["https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0", "https://docs.mistral.ai/inference/model-lifecycle"], "source_checked_date": "2026-10-28", "summary_zh": "公开预览允许静默更新；不能按版本字符串推定固定snapshot。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Mistral Large 4
+- 深链接：?catalog=global-istral-mistral-large-4
+- id："global-istral-mistral-large-4"
+- type："catalog_record"
+- title："Mistral Large 4"
+- exact_id：null
+- entity_type："model_family"
+- provider："Mistral"
+- family：null
+- version："26.10"
+- inputs：null
+- outputs：null
+- modality：{"input": null, "output": null}
+- lifecycle：{"status": "catalog_listed", "scope": "open_weights_documented", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："open_weights_documented"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录列open-weight，不能据Open标签推断具体许可证。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "mistral_catalog", "url": "https://docs.mistral.ai/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-istral-mistral-large-4", "vendor": "Mistral", "title": "Mistral Large 4", "exact_id": null, "entity_type": "model_family", "version": "26.10", "modality": {"input": null, "output": null}, "lifecycle": {"status": "catalog_listed", "scope": "open_weights_documented", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights_documented", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["mistral_catalog"], "source_urls": ["https://docs.mistral.ai/models"], "source_checked_date": "2026-10-28", "summary_zh": "目录列open-weight，不能据Open标签推断具体许可证。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### command-a-plus-05-2026
+- 深链接：?catalog=global-ohere-command-a-plus-05-2026
+- id："global-ohere-command-a-plus-05-2026"
+- type："catalog_record"
+- title："command-a-plus-05-2026"
+- exact_id："command-a-plus-05-2026"
+- entity_type："api_model_id"
+- provider："Cohere"
+- family：null
+- version："A+ 05-2026"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："live"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "cohere_catalog", "url": "https://docs.cohere.com/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-ohere-command-a-plus-05-2026", "vendor": "Cohere", "title": "command-a-plus-05-2026", "exact_id": "command-a-plus-05-2026", "entity_type": "api_model_id", "version": "A+ 05-2026", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["cohere_catalog"], "source_urls": ["https://docs.cohere.com/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### command-a-03-2025
+- 深链接：?catalog=global-ohere-command-a-03-2025
+- id："global-ohere-command-a-03-2025"
+- type："catalog_record"
+- title："command-a-03-2025"
+- exact_id："command-a-03-2025"
+- entity_type："api_model_id"
+- provider："Cohere"
+- family：null
+- version："A 03-2025"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："live"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": "https://cohere.com/research/papers/command-a-technical-report.pdf", "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "cohere_catalog", "url": "https://docs.cohere.com/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-ohere-command-a-03-2025", "vendor": "Cohere", "title": "command-a-03-2025", "exact_id": "command-a-03-2025", "entity_type": "api_model_id", "version": "A 03-2025", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": "https://cohere.com/research/papers/command-a-technical-report.pdf", "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["cohere_catalog"], "source_urls": ["https://docs.cohere.com/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### command-a-vision-07-2025
+- 深链接：?catalog=global-ohere-command-a-vision-07-2025
+- id："global-ohere-command-a-vision-07-2025"
+- type："catalog_record"
+- title："command-a-vision-07-2025"
+- exact_id："command-a-vision-07-2025"
+- entity_type："api_model_id"
+- provider："Cohere"
+- family：null
+- version："A Vision 07-2025"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：{"input": ["text", "image"], "output": ["text"]}
+- lifecycle：{"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："live"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "cohere_catalog", "url": "https://docs.cohere.com/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-ohere-command-a-vision-07-2025", "vendor": "Cohere", "title": "command-a-vision-07-2025", "exact_id": "command-a-vision-07-2025", "entity_type": "api_model_id", "version": "A Vision 07-2025", "modality": {"input": ["text", "image"], "output": ["text"]}, "lifecycle": {"status": "live", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["cohere_catalog"], "source_urls": ["https://docs.cohere.com/docs/models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Command R alias
+- 深链接：?catalog=global-ohere-command-r
+- id："global-ohere-command-r"
+- type："catalog_record"
+- title："Command R alias"
+- exact_id："command-r"
+- entity_type："api_alias"
+- provider："Cohere"
+- family：null
+- version：null
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2025-09-15", "retirement_date": null, "note_zh": "弃用阻止新客户，既有用户至正式关闭前仍可使用；不能擅改为retired。"}
+- status："deprecated"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "cohere_catalog", "url": "https://docs.cohere.com/docs/models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "cohere_deprecations", "url": "https://docs.cohere.com/docs/deprecations", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[{"type": "alias_of", "target_exact_id": "command-r-03-2024", "source_id": "cohere_catalog"}]
+- relations：[{"type": "alias_of", "target_exact_id": "command-r-03-2024", "source_id": "cohere_catalog"}]
+- source_bundle："global.json"
+- raw：{"id": "global-ohere-command-r", "vendor": "Cohere", "title": "Command R alias", "exact_id": "command-r", "entity_type": "api_alias", "version": null, "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2025-09-15", "retirement_date": null, "note_zh": "弃用阻止新客户，既有用户至正式关闭前仍可使用；不能擅改为retired。"}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["cohere_catalog", "cohere_deprecations"], "source_urls": ["https://docs.cohere.com/docs/models", "https://docs.cohere.com/docs/deprecations"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [{"type": "alias_of", "target_exact_id": "command-r-03-2024", "source_id": "cohere_catalog"}], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Jamba Large alias
+- 深链接：?catalog=global-21-jamba-large
+- id："global-21-jamba-large"
+- type："catalog_record"
+- title："Jamba Large alias"
+- exact_id："jamba-large"
+- entity_type："api_alias"
+- provider："AI21"
+- family：null
+- version："1.7"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "ai21_catalog", "url": "https://docs.ai21.com/docs/jamba-foundation-models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[{"target": "global-21-jamba-large-1-7-2025-07", "type": "alias_of", "verification_status": "source_documented_relation", "note": {"type": "alias_of", "target_exact_id": "jamba-large-1.7-2025-07", "source_id": "ai21_catalog"}}]
+- unresolved_links：[]
+- relations：[{"type": "alias_of", "target_exact_id": "jamba-large-1.7-2025-07", "source_id": "ai21_catalog"}]
+- source_bundle："global.json"
+- raw：{"id": "global-21-jamba-large", "vendor": "AI21", "title": "Jamba Large alias", "exact_id": "jamba-large", "entity_type": "api_alias", "version": "1.7", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai21_catalog"], "source_urls": ["https://docs.ai21.com/docs/jamba-foundation-models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [{"type": "alias_of", "target_exact_id": "jamba-large-1.7-2025-07", "source_id": "ai21_catalog"}], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Jamba Large snapshot
+- 深链接：?catalog=global-21-jamba-large-1-7-2025-07
+- id："global-21-jamba-large-1-7-2025-07"
+- type："catalog_record"
+- title："Jamba Large snapshot"
+- exact_id："jamba-large-1.7-2025-07"
+- entity_type："fixed_snapshot"
+- provider："AI21"
+- family：null
+- version："1.7"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "ai21_catalog", "url": "https://docs.ai21.com/docs/jamba-foundation-models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-21-jamba-large-1-7-2025-07", "vendor": "AI21", "title": "Jamba Large snapshot", "exact_id": "jamba-large-1.7-2025-07", "entity_type": "fixed_snapshot", "version": "1.7", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai21_catalog"], "source_urls": ["https://docs.ai21.com/docs/jamba-foundation-models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Jamba Mini snapshot
+- 深链接：?catalog=global-21-jamba-mini-2-2026-01
+- id："global-21-jamba-mini-2-2026-01"
+- type："catalog_record"
+- title："Jamba Mini snapshot"
+- exact_id："jamba-mini-2-2026-01"
+- entity_type："fixed_snapshot"
+- provider："AI21"
+- family：null
+- version："2"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary：null
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "ai21_catalog", "url": "https://docs.ai21.com/docs/jamba-foundation-models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-21-jamba-mini-2-2026-01", "vendor": "AI21", "title": "Jamba Mini snapshot", "exact_id": "jamba-mini-2-2026-01", "entity_type": "fixed_snapshot", "version": "2", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai21_catalog"], "source_urls": ["https://docs.ai21.com/docs/jamba-foundation-models"], "source_checked_date": "2026-10-28", "summary_zh": null, "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Jamba2 3B
+- 深链接：?catalog=global-21-jamba2-3b
+- id："global-21-jamba2-3b"
+- type："catalog_record"
+- title："Jamba2 3B"
+- exact_id：null
+- entity_type："model_variant"
+- provider："AI21"
+- family：null
+- version："2"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "catalog_listed", "scope": "open_weights_documented", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："catalog_listed"
+- access："open_weights_documented"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："目录API栏N/A；HF自部署入口可见，具体仓库ID和权重许可待核实。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "ai21_catalog", "url": "https://docs.ai21.com/docs/jamba-foundation-models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "ai21_platforms", "url": "https://docs.ai21.com/docs/model-availability-across-platforms", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-21-jamba2-3b", "vendor": "AI21", "title": "Jamba2 3B", "exact_id": null, "entity_type": "model_variant", "version": "2", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "catalog_listed", "scope": "open_weights_documented", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights_documented", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai21_catalog", "ai21_platforms"], "source_urls": ["https://docs.ai21.com/docs/jamba-foundation-models", "https://docs.ai21.com/docs/model-availability-across-platforms"], "source_checked_date": "2026-10-28", "summary_zh": "目录API栏N/A；HF自部署入口可见，具体仓库ID和权重许可待核实。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Jamba Mini 1.7
+- 深链接：?catalog=global-21-jamba-mini-1-7-2025-08
+- id："global-21-jamba-mini-1-7-2025-08"
+- type："catalog_record"
+- title："Jamba Mini 1.7"
+- exact_id："jamba-mini-1.7-2025-08"
+- entity_type："fixed_snapshot"
+- provider："AI21"
+- family：null
+- version："1.7"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-02-01", "retirement_date": null}
+- status："deprecated"
+- access："hosted_api"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "not_executed"}
+- access_observations：[]
+- summary："同表snapshot列2025-07但API ID含2025-08，原样保留，不推导发布时间。"
+- urls：{"model_card": null, "report": null, "tutorial": null, "weights_license": null, "repository": null}
+- sources：[{"id": "ai21_catalog", "url": "https://docs.ai21.com/docs/jamba-foundation-models", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-21-jamba-mini-1-7-2025-08", "vendor": "AI21", "title": "Jamba Mini 1.7", "exact_id": "jamba-mini-1.7-2025-08", "entity_type": "fixed_snapshot", "version": "1.7", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "deprecated", "scope": "hosted_api", "as_of": "2026-10-28", "deprecation_date": "2026-02-01", "retirement_date": null}, "access": "hosted_api", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": null, "tutorial_url": null, "tutorial_status": "not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai21_catalog"], "source_urls": ["https://docs.ai21.com/docs/jamba-foundation-models"], "source_checked_date": "2026-10-28", "summary_zh": "同表snapshot列2025-07但API ID含2025-08，原样保留，不推导发布时间。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### allenai/Olmo-3-1025-7B
+- 深链接：?catalog=global-i2-allenai-olmo-3-1025-7b
+- id："global-i2-allenai-olmo-3-1025-7b"
+- type："catalog_record"
+- title："allenai/Olmo-3-1025-7B"
+- exact_id："allenai/Olmo-3-1025-7B"
+- entity_type："open_weight_checkpoint"
+- provider："Ai2"
+- family：null
+- version："3 base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："open_weights_documented"
+- access："open_weights"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "read_not_executed"}
+- access_observations：[]
+- summary："训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。"
+- urls：{"model_card": "https://huggingface.co/allenai/Olmo-3-1025-7B", "report": "https://allenai.org/papers/olmo3", "tutorial": "https://docs.allenai.org/models/olmo/index.html", "weights_license": "https://huggingface.co/allenai/Olmo-3-1025-7B#license", "repository": null}
+- sources：[{"id": "ai2_catalog", "url": "https://docs.allenai.org/models/olmo/index.html", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "ai2_card", "url": "https://huggingface.co/allenai/Olmo-3-1025-7B", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-i2-allenai-olmo-3-1025-7b", "vendor": "Ai2", "title": "allenai/Olmo-3-1025-7B", "exact_id": "allenai/Olmo-3-1025-7B", "entity_type": "open_weight_checkpoint", "version": "3 base", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights", "weights_license": "Apache-2.0", "weights_license_url": "https://huggingface.co/allenai/Olmo-3-1025-7B#license", "model_card_url": "https://huggingface.co/allenai/Olmo-3-1025-7B", "report_url": "https://allenai.org/papers/olmo3", "tutorial_url": "https://docs.allenai.org/models/olmo/index.html", "tutorial_status": "read_not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai2_card", "ai2_catalog"], "source_urls": ["https://huggingface.co/allenai/Olmo-3-1025-7B", "https://docs.allenai.org/models/olmo/index.html"], "source_checked_date": "2026-10-28", "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### allenai/Olmo-3-7B-Think-DPO
+- 深链接：?catalog=global-i2-allenai-olmo-3-7b-think-dpo
+- id："global-i2-allenai-olmo-3-7b-think-dpo"
+- type："catalog_record"
+- title："allenai/Olmo-3-7B-Think-DPO"
+- exact_id："allenai/Olmo-3-7B-Think-DPO"
+- entity_type："open_weight_checkpoint"
+- provider："Ai2"
+- family：null
+- version："3 DPO"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："open_weights_documented"
+- access："open_weights"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "read_not_executed"}
+- access_observations：[]
+- summary："训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。"
+- urls：{"model_card": null, "report": "https://allenai.org/papers/olmo3", "tutorial": "https://docs.allenai.org/models/olmo/index.html", "weights_license": null, "repository": null}
+- sources：[{"id": "ai2_catalog", "url": "https://docs.allenai.org/models/olmo/index.html", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "ai2_card", "url": "https://huggingface.co/allenai/Olmo-3-1025-7B", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-i2-allenai-olmo-3-7b-think-dpo", "vendor": "Ai2", "title": "allenai/Olmo-3-7B-Think-DPO", "exact_id": "allenai/Olmo-3-7B-Think-DPO", "entity_type": "open_weight_checkpoint", "version": "3 DPO", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": "https://allenai.org/papers/olmo3", "tutorial_url": "https://docs.allenai.org/models/olmo/index.html", "tutorial_status": "read_not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai2_card", "ai2_catalog"], "source_urls": ["https://huggingface.co/allenai/Olmo-3-1025-7B", "https://docs.allenai.org/models/olmo/index.html"], "source_checked_date": "2026-10-28", "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### allenai/Olmo-3-7B-Think
+- 深链接：?catalog=global-i2-allenai-olmo-3-7b-think
+- id："global-i2-allenai-olmo-3-7b-think"
+- type："catalog_record"
+- title："allenai/Olmo-3-7B-Think"
+- exact_id："allenai/Olmo-3-7B-Think"
+- entity_type："open_weight_checkpoint"
+- provider："Ai2"
+- family：null
+- version："3 RLVR"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："open_weights_documented"
+- access："open_weights"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "read_not_executed"}
+- access_observations：[]
+- summary："训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。"
+- urls：{"model_card": null, "report": "https://allenai.org/papers/olmo3", "tutorial": "https://docs.allenai.org/models/olmo/index.html", "weights_license": null, "repository": null}
+- sources：[{"id": "ai2_catalog", "url": "https://docs.allenai.org/models/olmo/index.html", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "ai2_card", "url": "https://huggingface.co/allenai/Olmo-3-1025-7B", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-i2-allenai-olmo-3-7b-think", "vendor": "Ai2", "title": "allenai/Olmo-3-7B-Think", "exact_id": "allenai/Olmo-3-7B-Think", "entity_type": "open_weight_checkpoint", "version": "3 RLVR", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": "https://allenai.org/papers/olmo3", "tutorial_url": "https://docs.allenai.org/models/olmo/index.html", "tutorial_status": "read_not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai2_card", "ai2_catalog"], "source_urls": ["https://huggingface.co/allenai/Olmo-3-1025-7B", "https://docs.allenai.org/models/olmo/index.html"], "source_checked_date": "2026-10-28", "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### allenai/Olmo-3-7B-Instruct
+- 深链接：?catalog=global-i2-allenai-olmo-3-7b-instruct
+- id："global-i2-allenai-olmo-3-7b-instruct"
+- type："catalog_record"
+- title："allenai/Olmo-3-7B-Instruct"
+- exact_id："allenai/Olmo-3-7B-Instruct"
+- entity_type："open_weight_checkpoint"
+- provider："Ai2"
+- family：null
+- version："3 RLVR"
+- inputs：["text"]
+- outputs：["text"]
+- modality：{"input": ["text"], "output": ["text"]}
+- lifecycle：{"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}
+- status："open_weights_documented"
+- access："open_weights"
+- weights_license：null
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"release_date": null}
+- checked_at："2026-10-28"
+- qa_disposition："approve_with_limits"
+- limitations：{"tutorial_status": "read_not_executed"}
+- access_observations：[]
+- summary："训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。"
+- urls：{"model_card": null, "report": "https://allenai.org/papers/olmo3", "tutorial": "https://docs.allenai.org/models/olmo/index.html", "weights_license": null, "repository": null}
+- sources：[{"id": "ai2_catalog", "url": "https://docs.allenai.org/models/olmo/index.html", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}, {"id": "ai2_card", "url": "https://huggingface.co/allenai/Olmo-3-1025-7B", "checked_at": "2026-10-28", "status": "read_primary_page", "word_limit": 200}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："global.json"
+- raw：{"id": "global-i2-allenai-olmo-3-7b-instruct", "vendor": "Ai2", "title": "allenai/Olmo-3-7B-Instruct", "exact_id": "allenai/Olmo-3-7B-Instruct", "entity_type": "open_weight_checkpoint", "version": "3 RLVR", "modality": {"input": ["text"], "output": ["text"]}, "lifecycle": {"status": "open_weights_documented", "scope": "open_weights", "as_of": "2026-10-28", "deprecation_date": null, "retirement_date": null}, "access": "open_weights", "weights_license": null, "weights_license_url": null, "model_card_url": null, "report_url": "https://allenai.org/papers/olmo3", "tutorial_url": "https://docs.allenai.org/models/olmo/index.html", "tutorial_status": "read_not_executed", "release_date": null, "release_date_evidence": null, "source_ids": ["ai2_card", "ai2_catalog"], "source_urls": ["https://huggingface.co/allenai/Olmo-3-1025-7B", "https://docs.allenai.org/models/olmo/index.html"], "source_checked_date": "2026-10-28", "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。", "relations": [], "dedup_suggestions": [], "unknown_fields_policy": "null表示本轮未核实，不表示不存在"}
+
+### Qwen/Qwen3-0.6B
+- 深链接：?catalog=asia-0a43d4e73fceebd3
+- id："asia-0a43d4e73fceebd3"
+- type："catalog_record"
+- title："Qwen/Qwen3-0.6B"
+- exact_id："Qwen/Qwen3-0.6B"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen3"
+- version："Qwen3-0.6B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen3-0.6B", "report": "https://arxiv.org/abs/2505.09388", "tutorial": "https://github.com/QwenLM/Qwen3", "weights_license": "https://github.com/QwenLM/Qwen3#license-agreement", "repository": "https://github.com/QwenLM/Qwen3"}
+- sources：[{"id": "qwen3", "url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "sourceproof_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen3-0.6B", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen3", "version": "Qwen3-0.6B", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement", "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-0.6B", "modelcardURL": "https://huggingface.co/Qwen/Qwen3-0.6B", "repositoryURL": "https://github.com/QwenLM/Qwen3", "paperURL": "https://arxiv.org/abs/2505.09388", "tutorialURL": "https://github.com/QwenLM/Qwen3", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["qwen3"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### Qwen/Qwen3-8B
+- 深链接：?catalog=asia-154cd28913eeea88
+- id："asia-154cd28913eeea88"
+- type："catalog_record"
+- title："Qwen/Qwen3-8B"
+- exact_id："Qwen/Qwen3-8B"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen3"
+- version："Qwen3-8B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen3-8B", "report": "https://arxiv.org/abs/2505.09388", "tutorial": "https://github.com/QwenLM/Qwen3", "weights_license": "https://github.com/QwenLM/Qwen3#license-agreement", "repository": "https://github.com/QwenLM/Qwen3"}
+- sources：[{"id": "qwen3", "url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "sourceproof_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen3-8B", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen3", "version": "Qwen3-8B", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement", "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-8B", "modelcardURL": "https://huggingface.co/Qwen/Qwen3-8B", "repositoryURL": "https://github.com/QwenLM/Qwen3", "paperURL": "https://arxiv.org/abs/2505.09388", "tutorialURL": "https://github.com/QwenLM/Qwen3", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["qwen3"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### Qwen/Qwen3-235B-A22B-Instruct-2507
+- 深链接：?catalog=asia-7666bdcba0ae9726
+- id："asia-7666bdcba0ae9726"
+- type："catalog_record"
+- title："Qwen/Qwen3-235B-A22B-Instruct-2507"
+- exact_id："Qwen/Qwen3-235B-A22B-Instruct-2507"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen3"
+- version："Qwen3-235B-A22B-Instruct-2507"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_scope": "family_original_report_not_version_specific", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507", "report": "https://arxiv.org/abs/2505.09388", "tutorial": "https://github.com/QwenLM/Qwen3", "weights_license": "https://github.com/QwenLM/Qwen3#license-agreement", "repository": "https://github.com/QwenLM/Qwen3"}
+- sources：[{"id": "qwen3", "url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "sourceproof_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen3-235B-A22B-Instruct-2507", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen3", "version": "Qwen3-235B-A22B-Instruct-2507", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement", "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507", "modelcardURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507", "repositoryURL": "https://github.com/QwenLM/Qwen3", "paperURL": "https://arxiv.org/abs/2505.09388", "tutorialURL": "https://github.com/QwenLM/Qwen3", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["qwen3"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen3", "locator": "Introduction / License Agreement", "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "paper_scope": "family_original_report_not_version_specific", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### deepseek-ai/DeepSeek-R1
+- 深链接：?catalog=asia-2397f40cf2976560
+- id："asia-2397f40cf2976560"
+- type："catalog_record"
+- title："deepseek-ai/DeepSeek-R1"
+- exact_id："deepseek-ai/DeepSeek-R1"
+- entity_type："model_checkpoint"
+- provider："DeepSeek"
+- family："DeepSeek-R1"
+- version："DeepSeek-R1"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT; 蒸馏基座另核"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/deepseek-ai/DeepSeek-R1", "report": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorial": "https://github.com/deepseek-ai/DeepSeek-R1", "weights_license": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "repository": "https://github.com/deepseek-ai/DeepSeek-R1"}
+- sources：[{"id": "r1", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "sourceproof_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。"}, {"target": "org-deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。"}, {"target": "deepseek-r1-2025", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-ai/DeepSeek-R1", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek-R1", "version": "DeepSeek-R1", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT; 蒸馏基座另核", "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1", "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1", "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1", "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["r1"], "sourceproof": {"url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek", "org-deepseek", "deepseek-r1-2025"], "dedup_recommendation": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。", "notes_zh": "", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### deepseek-ai/DeepSeek-R1-Zero
+- 深链接：?catalog=asia-7be0e4c0dcc2eac4
+- id："asia-7be0e4c0dcc2eac4"
+- type："catalog_record"
+- title："deepseek-ai/DeepSeek-R1-Zero"
+- exact_id："deepseek-ai/DeepSeek-R1-Zero"
+- entity_type："model_checkpoint"
+- provider："DeepSeek"
+- family："DeepSeek-R1"
+- version："DeepSeek-R1-Zero"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT; 蒸馏基座另核"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero", "report": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorial": "https://github.com/deepseek-ai/DeepSeek-R1", "weights_license": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "repository": "https://github.com/deepseek-ai/DeepSeek-R1"}
+- sources：[{"id": "r1", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "sourceproof_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-ai/DeepSeek-R1-Zero", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek-R1", "version": "DeepSeek-R1-Zero", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT; 蒸馏基座另核", "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero", "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero", "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1", "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["r1"], "sourceproof": {"url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek", "org-deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+- 深链接：?catalog=asia-f26c79e6a688dde5
+- id："asia-f26c79e6a688dde5"
+- type："catalog_record"
+- title："deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+- exact_id："deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+- entity_type："model_checkpoint"
+- provider："DeepSeek"
+- family："DeepSeek-R1"
+- version："DeepSeek-R1-Distill-Qwen-1.5B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT; 蒸馏基座另核"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "report": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorial": "https://github.com/deepseek-ai/DeepSeek-R1", "weights_license": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "repository": "https://github.com/deepseek-ai/DeepSeek-R1"}
+- sources：[{"id": "r1", "url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "sourceproof_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek-R1", "version": "DeepSeek-R1-Distill-Qwen-1.5B", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT; 蒸馏基座另核", "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE", "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B", "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1", "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf", "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["r1"], "sourceproof": {"url": "https://github.com/deepseek-ai/DeepSeek-R1", "locator": "Model Downloads / License", "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek", "org-deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### zai-org/GLM-4.5
+- 深链接：?catalog=asia-b6afd0ae26a893cc
+- id："asia-b6afd0ae26a893cc"
+- type："catalog_record"
+- title："zai-org/GLM-4.5"
+- exact_id："zai-org/GLM-4.5"
+- entity_type："model_checkpoint"
+- provider："Z.ai / 智谱"
+- family："GLM-4.5"
+- version："GLM-4.5"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT (weights)"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "模型卡MIT；仓库代码Apache不得混用。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："模型卡MIT；仓库代码Apache不得混用。"
+- urls：{"model_card": "https://huggingface.co/zai-org/GLM-4.5", "report": "https://arxiv.org/abs/2508.06471", "tutorial": "https://github.com/zai-org/GLM-4.5", "weights_license": "https://huggingface.co/zai-org/GLM-4.5", "repository": "https://github.com/zai-org/GLM-4.5"}
+- sources：[{"id": "glm", "url": "https://github.com/zai-org/GLM-4.5", "locator": "Model Downloads / GLM-4.5", "sourceproof_zh": "4.5与Air权重为MIT；不能以仓库Apache代码许可替代权重许可。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "zai-org/GLM-4.5", "vendor": "Z.ai / 智谱", "country": "CN", "family": "GLM-4.5", "version": "GLM-4.5", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT (weights)", "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5", "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5", "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5", "repositoryURL": "https://github.com/zai-org/GLM-4.5", "paperURL": "https://arxiv.org/abs/2508.06471", "tutorialURL": "https://github.com/zai-org/GLM-4.5", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["glm"], "sourceproof": {"url": "https://github.com/zai-org/GLM-4.5", "locator": "Model Downloads / GLM-4.5", "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "模型卡MIT；仓库代码Apache不得混用。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### zai-org/GLM-4.5-Air
+- 深链接：?catalog=asia-3218a3e1518041e9
+- id："asia-3218a3e1518041e9"
+- type："catalog_record"
+- title："zai-org/GLM-4.5-Air"
+- exact_id："zai-org/GLM-4.5-Air"
+- entity_type："model_checkpoint"
+- provider："Z.ai / 智谱"
+- family："GLM-4.5"
+- version："GLM-4.5-Air"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT (weights)"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "模型卡MIT；仓库代码Apache不得混用。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："模型卡MIT；仓库代码Apache不得混用。"
+- urls：{"model_card": "https://huggingface.co/zai-org/GLM-4.5-Air", "report": "https://arxiv.org/abs/2508.06471", "tutorial": "https://github.com/zai-org/GLM-4.5", "weights_license": "https://huggingface.co/zai-org/GLM-4.5-Air", "repository": "https://github.com/zai-org/GLM-4.5"}
+- sources：[{"id": "glm", "url": "https://github.com/zai-org/GLM-4.5", "locator": "Model Downloads / GLM-4.5", "sourceproof_zh": "4.5与Air权重为MIT；不能以仓库Apache代码许可替代权重许可。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "zai-org/GLM-4.5-Air", "vendor": "Z.ai / 智谱", "country": "CN", "family": "GLM-4.5", "version": "GLM-4.5-Air", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT (weights)", "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5-Air", "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5-Air", "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5-Air", "repositoryURL": "https://github.com/zai-org/GLM-4.5", "paperURL": "https://arxiv.org/abs/2508.06471", "tutorialURL": "https://github.com/zai-org/GLM-4.5", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["glm"], "sourceproof": {"url": "https://github.com/zai-org/GLM-4.5", "locator": "Model Downloads / GLM-4.5", "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "模型卡MIT；仓库代码Apache不得混用。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### Kimi-K2-Base
+- 深链接：?catalog=asia-869b695cea3fae25
+- id："asia-869b695cea3fae25"
+- type："catalog_record"
+- title："Kimi-K2-Base"
+- exact_id："Kimi-K2-Base"
+- entity_type："model_checkpoint"
+- provider："Moonshot AI"
+- family："Kimi-K2"
+- version："Kimi-K2-Base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Modified MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[{"checked_at": "2026-10-28T19:35:44Z", "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Base", "outcome": "tool_reported_not_accessible", "scope": "single_historical_attempt_not_global_availability"}, {"checked_at": "2026-10-28T19:46Z", "url": "https://huggingface.co/moonshotai/Kimi-K2-Base", "outcome": "primary_modelcard_read", "observer": "independent_audit_asia_catalog_facts", "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit", "time_precision": "minute (QA observation, not measured seconds)"}]
+- summary："初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。"
+- urls：{"model_card": "https://huggingface.co/moonshotai/Kimi-K2-Base", "report": "https://arxiv.org/abs/2507.20534", "tutorial": "https://github.com/MoonshotAI/Kimi-K2", "weights_license": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE", "repository": "https://github.com/MoonshotAI/Kimi-K2"}
+- sources：[{"id": "kimi", "url": "https://github.com/MoonshotAI/Kimi-K2", "locator": "Model Variants / License", "sourceproof_zh": "列明Base与Instruct；定制许可，不当作无条件MIT。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}, {"id": "kimi-base-card-qa", "url": "https://huggingface.co/moonshotai/Kimi-K2-Base", "locator": "header lines 40-58", "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。", "sourcecheckdate": "2026-10-28", "checked_at": "2026-10-28T19:46Z", "status": "primary_content_read_by_independent_auditor", "time_precision": "minute (raw seconds are placeholder)"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Kimi-K2-Base", "vendor": "Moonshot AI", "country": "CN", "family": "Kimi-K2", "version": "Kimi-K2-Base", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Modified MIT", "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE", "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2", "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Base", "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2", "paperURL": "https://arxiv.org/abs/2507.20534", "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["kimi", "kimi-base-card-qa"], "sourceproof": {"url": "https://github.com/MoonshotAI/Kimi-K2", "locator": "Model Variants / License", "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "access_observations": [{"checked_at": "2026-10-28T19:35:44Z", "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Base", "outcome": "tool_reported_not_accessible", "scope": "single_historical_attempt_not_global_availability"}, {"checked_at": "2026-10-28T19:46:00Z", "url": "https://huggingface.co/moonshotai/Kimi-K2-Base", "outcome": "primary_modelcard_read", "observer": "independent_audit_asia_catalog_facts", "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"}]}
+
+### Kimi-K2-Instruct
+- 深链接：?catalog=asia-77dc1f35dbea1f9a
+- id："asia-77dc1f35dbea1f9a"
+- type："catalog_record"
+- title："Kimi-K2-Instruct"
+- exact_id："Kimi-K2-Instruct"
+- entity_type："model_checkpoint"
+- provider："Moonshot AI"
+- family："Kimi-K2"
+- version："Kimi-K2-Instruct"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Modified MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[{"checked_at": "2026-10-28T19:35:44Z", "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Instruct", "outcome": "tool_reported_not_accessible", "scope": "single_historical_attempt_not_global_availability"}, {"checked_at": "2026-10-28T19:46Z", "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct", "outcome": "primary_modelcard_read", "observer": "independent_audit_asia_catalog_facts", "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit", "time_precision": "minute (QA observation, not measured seconds)"}]
+- summary："初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。"
+- urls：{"model_card": "https://huggingface.co/moonshotai/Kimi-K2-Instruct", "report": "https://arxiv.org/abs/2507.20534", "tutorial": "https://github.com/MoonshotAI/Kimi-K2", "weights_license": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE", "repository": "https://github.com/MoonshotAI/Kimi-K2"}
+- sources：[{"id": "kimi", "url": "https://github.com/MoonshotAI/Kimi-K2", "locator": "Model Variants / License", "sourceproof_zh": "列明Base与Instruct；定制许可，不当作无条件MIT。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}, {"id": "kimi-instruct-card-qa", "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct", "locator": "header lines 40-58", "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。", "sourcecheckdate": "2026-10-28", "checked_at": "2026-10-28T19:46Z", "status": "primary_content_read_by_independent_auditor", "time_precision": "minute (raw seconds are placeholder)"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Kimi-K2-Instruct", "vendor": "Moonshot AI", "country": "CN", "family": "Kimi-K2", "version": "Kimi-K2-Instruct", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Modified MIT", "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE", "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2", "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Instruct", "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2", "paperURL": "https://arxiv.org/abs/2507.20534", "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["kimi", "kimi-instruct-card-qa"], "sourceproof": {"url": "https://github.com/MoonshotAI/Kimi-K2", "locator": "Model Variants / License", "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "access_observations": [{"checked_at": "2026-10-28T19:35:44Z", "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Instruct", "outcome": "tool_reported_not_accessible", "scope": "single_historical_attempt_not_global_availability"}, {"checked_at": "2026-10-28T19:46:00Z", "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct", "outcome": "primary_modelcard_read", "observer": "independent_audit_asia_catalog_facts", "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"}]}
+
+### MiniMaxAI/MiniMax-M1-40k
+- 深链接：?catalog=asia-ed654b3f250a4f1d
+- id："asia-ed654b3f250a4f1d"
+- type："catalog_record"
+- title："MiniMaxAI/MiniMax-M1-40k"
+- exact_id："MiniMaxAI/MiniMax-M1-40k"
+- entity_type："model_checkpoint"
+- provider："MiniMax"
+- family："MiniMax-M1"
+- version："MiniMax-M1-40k"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k", "report": "https://arxiv.org/abs/2506.13585", "tutorial": "https://github.com/MiniMax-AI/MiniMax-M1", "weights_license": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k", "repository": "https://github.com/MiniMax-AI/MiniMax-M1"}
+- sources：[{"id": "minimax", "url": "https://github.com/MiniMax-AI/MiniMax-M1", "locator": "Introduction / Citation", "sourceproof_zh": "40k与80k是两个思考预算权重变体，不是发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "MiniMaxAI/MiniMax-M1-40k", "vendor": "MiniMax", "country": "CN", "family": "MiniMax-M1", "version": "MiniMax-M1-40k", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k", "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k", "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k", "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1", "paperURL": "https://arxiv.org/abs/2506.13585", "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["minimax"], "sourceproof": {"url": "https://github.com/MiniMax-AI/MiniMax-M1", "locator": "Introduction / Citation", "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### MiniMaxAI/MiniMax-M1-80k
+- 深链接：?catalog=asia-29b67137c38ae531
+- id："asia-29b67137c38ae531"
+- type："catalog_record"
+- title："MiniMaxAI/MiniMax-M1-80k"
+- exact_id："MiniMaxAI/MiniMax-M1-80k"
+- entity_type："model_checkpoint"
+- provider："MiniMax"
+- family："MiniMax-M1"
+- version："MiniMax-M1-80k"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k", "report": "https://arxiv.org/abs/2506.13585", "tutorial": "https://github.com/MiniMax-AI/MiniMax-M1", "weights_license": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k", "repository": "https://github.com/MiniMax-AI/MiniMax-M1"}
+- sources：[{"id": "minimax", "url": "https://github.com/MiniMax-AI/MiniMax-M1", "locator": "Introduction / Citation", "sourceproof_zh": "40k与80k是两个思考预算权重变体，不是发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "MiniMaxAI/MiniMax-M1-80k", "vendor": "MiniMax", "country": "CN", "family": "MiniMax-M1", "version": "MiniMax-M1-80k", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k", "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k", "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k", "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1", "paperURL": "https://arxiv.org/abs/2506.13585", "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["minimax"], "sourceproof": {"url": "https://github.com/MiniMax-AI/MiniMax-M1", "locator": "Introduction / Citation", "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### ERNIE-4.5-300B-A47B-Base
+- 深链接：?catalog=asia-dbb3da57bad96827
+- id："asia-dbb3da57bad96827"
+- type："catalog_record"
+- title："ERNIE-4.5-300B-A47B-Base"
+- exact_id："ERNIE-4.5-300B-A47B-Base"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-300B-A47B-Base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-300B-A47B-Base", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-300B-A47B-Base", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-300B-A47B
+- 深链接：?catalog=asia-85e959fa1e92ff7e
+- id："asia-85e959fa1e92ff7e"
+- type："catalog_record"
+- title："ERNIE-4.5-300B-A47B"
+- exact_id："ERNIE-4.5-300B-A47B"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-300B-A47B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-300B-A47B", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-300B-A47B", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-21B-A3B-Base
+- 深链接：?catalog=asia-4e58221600e113bc
+- id："asia-4e58221600e113bc"
+- type："catalog_record"
+- title："ERNIE-4.5-21B-A3B-Base"
+- exact_id："ERNIE-4.5-21B-A3B-Base"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-21B-A3B-Base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-21B-A3B-Base", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-21B-A3B-Base", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-21B-A3B
+- 深链接：?catalog=asia-d95e2d04e78ee3ae
+- id："asia-d95e2d04e78ee3ae"
+- type："catalog_record"
+- title："ERNIE-4.5-21B-A3B"
+- exact_id："ERNIE-4.5-21B-A3B"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-21B-A3B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-21B-A3B", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-21B-A3B", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-VL-424B-A47B-Base
+- 深链接：?catalog=asia-7dc28b014cc94234
+- id："asia-7dc28b014cc94234"
+- type："catalog_record"
+- title："ERNIE-4.5-VL-424B-A47B-Base"
+- exact_id："ERNIE-4.5-VL-424B-A47B-Base"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-VL-424B-A47B-Base"
+- inputs：["text", "image", "video"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-VL-424B-A47B-Base", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-VL-424B-A47B-Base", "entity_type": "named_model_variant", "modality": ["vlm"], "input_modalities": ["text", "image", "video"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-VL-424B-A47B
+- 深链接：?catalog=asia-6af4ae6e6436d1a0
+- id："asia-6af4ae6e6436d1a0"
+- type："catalog_record"
+- title："ERNIE-4.5-VL-424B-A47B"
+- exact_id："ERNIE-4.5-VL-424B-A47B"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-VL-424B-A47B"
+- inputs：["text", "image", "video"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-VL-424B-A47B", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-VL-424B-A47B", "entity_type": "named_model_variant", "modality": ["vlm"], "input_modalities": ["text", "image", "video"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-VL-28B-A3B-Base
+- 深链接：?catalog=asia-72834aa0c7556909
+- id："asia-72834aa0c7556909"
+- type："catalog_record"
+- title："ERNIE-4.5-VL-28B-A3B-Base"
+- exact_id："ERNIE-4.5-VL-28B-A3B-Base"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-VL-28B-A3B-Base"
+- inputs：["text", "image", "video"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-VL-28B-A3B-Base", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-VL-28B-A3B-Base", "entity_type": "named_model_variant", "modality": ["vlm"], "input_modalities": ["text", "image", "video"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-VL-28B-A3B
+- 深链接：?catalog=asia-39b51c5d773caf4a
+- id："asia-39b51c5d773caf4a"
+- type："catalog_record"
+- title："ERNIE-4.5-VL-28B-A3B"
+- exact_id："ERNIE-4.5-VL-28B-A3B"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-VL-28B-A3B"
+- inputs：["text", "image", "video"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-VL-28B-A3B", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-VL-28B-A3B", "entity_type": "named_model_variant", "modality": ["vlm"], "input_modalities": ["text", "image", "video"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-0.3B-Base
+- 深链接：?catalog=asia-4fc5dbe691fd3bfc
+- id："asia-4fc5dbe691fd3bfc"
+- type："catalog_record"
+- title："ERNIE-4.5-0.3B-Base"
+- exact_id："ERNIE-4.5-0.3B-Base"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-0.3B-Base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-0.3B-Base", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-0.3B-Base", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ERNIE-4.5-0.3B
+- 深链接：?catalog=asia-7de0fbc1535c3c28
+- id："asia-7de0fbc1535c3c28"
+- type："catalog_record"
+- title："ERNIE-4.5-0.3B"
+- exact_id："ERNIE-4.5-0.3B"
+- entity_type："named_model_variant"
+- provider："Baidu"
+- family："ERNIE 4.5"
+- version："ERNIE-4.5-0.3B"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://github.com/PaddlePaddle/ERNIE", "weights_license": "https://github.com/PaddlePaddle/ERNIE#license", "repository": "https://github.com/PaddlePaddle/ERNIE"}
+- sources：[{"id": "ernie", "url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ERNIE-4.5-0.3B", "vendor": "Baidu", "country": "CN", "family": "ERNIE 4.5", "version": "ERNIE-4.5-0.3B", "entity_type": "named_model_variant", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license", "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE", "modelcardURL": null, "repositoryURL": "https://github.com/PaddlePaddle/ERNIE", "paperURL": null, "tutorialURL": "https://github.com/PaddlePaddle/ERNIE", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["ernie"], "sourceproof": {"url": "https://github.com/PaddlePaddle/ERNIE", "locator": "ERNIE 4.5 Models", "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### ByteDance-Seed/Seed-Coder-8B-Base
+- 深链接：?catalog=asia-4250b3cf7dd89c0d
+- id："asia-4250b3cf7dd89c0d"
+- type："catalog_record"
+- title："ByteDance-Seed/Seed-Coder-8B-Base"
+- exact_id："ByteDance-Seed/Seed-Coder-8B-Base"
+- entity_type："model_checkpoint"
+- provider："ByteDance Seed"
+- family："Seed-Coder"
+- version："Seed-Coder-8B-Base"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+- urls：{"model_card": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base", "report": "https://arxiv.org/abs/2506.03524", "tutorial": "https://github.com/ByteDance-Seed/Seed-Coder", "weights_license": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "repository": "https://github.com/ByteDance-Seed/Seed-Coder"}
+- sources：[{"id": "seed", "url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "sourceproof_zh": "2025/05/08发布；Base/Instruct/Reasoning；Doubao-Coder旧称不重复计数。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ByteDance-Seed/Seed-Coder-8B-Base", "vendor": "ByteDance Seed", "country": "CN", "family": "Seed-Coder", "version": "Seed-Coder-8B-Base", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT", "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base", "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base", "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder", "paperURL": "https://arxiv.org/abs/2506.03524", "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["seed"], "sourceproof": {"url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"}, "release_dates": {"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder", "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### ByteDance-Seed/Seed-Coder-8B-Instruct
+- 深链接：?catalog=asia-fb58deda7a36c3e0
+- id："asia-fb58deda7a36c3e0"
+- type："catalog_record"
+- title："ByteDance-Seed/Seed-Coder-8B-Instruct"
+- exact_id："ByteDance-Seed/Seed-Coder-8B-Instruct"
+- entity_type："model_checkpoint"
+- provider："ByteDance Seed"
+- family："Seed-Coder"
+- version："Seed-Coder-8B-Instruct"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+- urls：{"model_card": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct", "report": "https://arxiv.org/abs/2506.03524", "tutorial": "https://github.com/ByteDance-Seed/Seed-Coder", "weights_license": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "repository": "https://github.com/ByteDance-Seed/Seed-Coder"}
+- sources：[{"id": "seed", "url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "sourceproof_zh": "2025/05/08发布；Base/Instruct/Reasoning；Doubao-Coder旧称不重复计数。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ByteDance-Seed/Seed-Coder-8B-Instruct", "vendor": "ByteDance Seed", "country": "CN", "family": "Seed-Coder", "version": "Seed-Coder-8B-Instruct", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT", "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct", "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct", "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder", "paperURL": "https://arxiv.org/abs/2506.03524", "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["seed"], "sourceproof": {"url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"}, "release_dates": {"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder", "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### ByteDance-Seed/Seed-Coder-8B-Reasoning
+- 深链接：?catalog=asia-74f57558a97b0a63
+- id："asia-74f57558a97b0a63"
+- type："catalog_record"
+- title："ByteDance-Seed/Seed-Coder-8B-Reasoning"
+- exact_id："ByteDance-Seed/Seed-Coder-8B-Reasoning"
+- entity_type："model_checkpoint"
+- provider："ByteDance Seed"
+- family："Seed-Coder"
+- version："Seed-Coder-8B-Reasoning"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+- urls：{"model_card": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning", "report": "https://arxiv.org/abs/2506.03524", "tutorial": "https://github.com/ByteDance-Seed/Seed-Coder", "weights_license": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "repository": "https://github.com/ByteDance-Seed/Seed-Coder"}
+- sources：[{"id": "seed", "url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "sourceproof_zh": "2025/05/08发布；Base/Instruct/Reasoning；Doubao-Coder旧称不重复计数。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "ByteDance-Seed/Seed-Coder-8B-Reasoning", "vendor": "ByteDance Seed", "country": "CN", "family": "Seed-Coder", "version": "Seed-Coder-8B-Reasoning", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT", "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE", "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning", "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning", "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder", "paperURL": "https://arxiv.org/abs/2506.03524", "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["seed"], "sourceproof": {"url": "https://github.com/ByteDance-Seed/Seed-Coder", "locator": "News / Quick Start", "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"}, "release_dates": {"announced": "2025-05-08", "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder", "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### HunyuanVideo
+- 深链接：?catalog=asia-8f3600124d3fcb58
+- id："asia-8f3600124d3fcb58"
+- type："catalog_record"
+- title："HunyuanVideo"
+- exact_id："HunyuanVideo"
+- entity_type："named_model_variant"
+- provider："Tencent Hunyuan"
+- family："HunyuanVideo"
+- version："HunyuanVideo"
+- inputs：["text"]
+- outputs：["video"]
+- modality：["video_generation"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Tencent custom license"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": "2024-12-03", "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": null, "report": "https://arxiv.org/abs/2412.03603", "tutorial": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "weights_license": "https://github.com/Tencent-Hunyuan/HunyuanVideo/blob/main/LICENSE.txt", "repository": "https://github.com/Tencent-Hunyuan/HunyuanVideo"}
+- sources：[{"id": "hunyuan", "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "locator": "News / Open-source Plan", "sourceproof_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "HunyuanVideo", "vendor": "Tencent Hunyuan", "country": "CN", "family": "HunyuanVideo", "version": "HunyuanVideo", "entity_type": "named_model_variant", "modality": ["video_generation"], "input_modalities": ["text"], "output_modalities": ["video"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Tencent custom license", "official_licenseURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo/blob/main/LICENSE.txt", "license_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "modelcardURL": null, "repositoryURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "paperURL": "https://arxiv.org/abs/2412.03603", "tutorialURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["hunyuan"], "sourceproof": {"url": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "locator": "News / Open-source Plan", "claim_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。"}, "release_dates": {"announced": null, "weights_released": "2024-12-03", "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo", "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### Qwen/Qwen2.5-Omni-3B
+- 深链接：?catalog=asia-c2a0fa2b13a5e771
+- id："asia-c2a0fa2b13a5e771"
+- type："catalog_record"
+- title："Qwen/Qwen2.5-Omni-3B"
+- exact_id："Qwen/Qwen2.5-Omni-3B"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen2.5-Omni"
+- version："Qwen2.5-Omni-3B"
+- inputs：["text", "image", "audio", "video"]
+- outputs：["text", "audio"]
+- modality：["llm", "vlm", "audio_understanding", "speech_generation"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license：{"identifier": "qwen-research", "evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE", "locator": "Qwen RESEARCH LICENSE AGREEMENT §§1.i, 2.a, 2.b (lines 117-136)", "commercial_use": "requires_requesting_separate_license_per_section_2b", "use_conditions": "条文§1.i定义非商用为研究或评估；§2.a许可限非商用；§2.b商用须向许可方申请。其他条件见完整权重许可，不推断授权已经获得。", "legal_terms_status": "primary_terms_read", "license_template_date_not_model_release": true}
+- code_license：{"identifier": "Apache-2.0", "url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE", "scope": "repository_code_not_model_weights"}
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": "2025-04-30", "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "QA更正：3B权重模型卡声明qwen-research；仓库代码Apache-2.0不适用于据此推断权重许可。", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："QA更正：3B权重模型卡声明qwen-research；仓库代码Apache-2.0不适用于据此推断权重许可。"
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B", "report": "https://arxiv.org/abs/2503.20215", "tutorial": "https://github.com/QwenLM/Qwen2.5-Omni", "weights_license": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE", "repository": "https://github.com/QwenLM/Qwen2.5-Omni"}
+- sources：[{"id": "omni", "url": "https://github.com/QwenLM/Qwen2.5-Omni", "locator": "News / Overview", "sourceproof_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}, {"id": "omni-3b-card-license-qa", "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B", "locator": "Model card metadata, License (line 56)", "sourceproof_zh": "3B权重模型卡许可标识为qwen-research；代码仓库Apache-2.0不能替代。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}, {"id": "omni-3b-weight-license-qa", "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE", "locator": "§§1.i, 2.a, 2.b; lines 117-136", "sourceproof_zh": "权重Qwen RESEARCH LICENSE AGREEMENT限制为非商用研究或评估；商用须申请许可。模板日期不是模型发布日期。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen2.5-Omni-3B", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen2.5-Omni", "version": "Qwen2.5-Omni-3B", "entity_type": "model_checkpoint", "modality": ["llm", "vlm", "audio_understanding", "speech_generation"], "input_modalities": ["text", "image", "audio", "video"], "output_modalities": ["text", "audio"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "qwen-research", "official_licenseURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE", "license_evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B", "modelcardURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B", "repositoryURL": "https://github.com/QwenLM/Qwen2.5-Omni", "paperURL": "https://arxiv.org/abs/2503.20215", "tutorialURL": "https://github.com/QwenLM/Qwen2.5-Omni", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["omni", "omni-3b-card-license-qa", "omni-3b-weight-license-qa"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen2.5-Omni", "locator": "News / Overview", "claim_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。"}, "release_dates": {"announced": null, "weights_released": "2025-04-30", "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/QwenLM/Qwen2.5-Omni", "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "QA更正：3B权重模型卡声明qwen-research；仓库代码Apache-2.0不适用于据此推断权重许可。", "edge": {"status": "official_family_deployment_reference", "url": "https://github.com/QwenLM/Qwen2.5-Omni#deployment-with-mnn", "note": "不是端侧性能实测，3B具体硬件门槛未复验。"}, "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "weights_license": {"identifier": "qwen-research", "evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE", "locator": "Qwen RESEARCH LICENSE AGREEMENT §§1.i, 2.a, 2.b (lines 117-136)", "commercial_use": "requires_requesting_separate_license_per_section_2b", "use_conditions": "条文§1.i定义非商用为研究或评估；§2.a许可限非商用；§2.b商用须向许可方申请。其他条件见完整权重许可，不推断授权已经获得。", "legal_terms_status": "primary_terms_read", "license_template_date_not_model_release": true}, "repository_code_license": {"identifier": "Apache-2.0", "url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE", "scope": "repository_code_not_model_weights"}}
+
+### Qwen/Qwen-Image
+- 深链接：?catalog=asia-a9f3cd7f3ecb7d19
+- id："asia-a9f3cd7f3ecb7d19"
+- type："catalog_record"
+- title："Qwen/Qwen-Image"
+- exact_id："Qwen/Qwen-Image"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen-Image"
+- version："Qwen-Image"
+- inputs：["text"]
+- outputs：["image"]
+- modality：["image_generation"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": "2025-08-04", "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen-Image", "report": "https://arxiv.org/abs/2508.02324", "tutorial": "https://github.com/QwenLM/Qwen-Image", "weights_license": null, "repository": "https://github.com/QwenLM/Qwen-Image"}
+- sources：[{"id": "image", "url": "https://github.com/QwenLM/Qwen-Image", "locator": "News", "sourceproof_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen-Image", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen-Image", "version": "Qwen-Image", "entity_type": "model_checkpoint", "modality": ["image_generation"], "input_modalities": ["text"], "output_modalities": ["image"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": null, "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image", "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image", "repositoryURL": "https://github.com/QwenLM/Qwen-Image", "paperURL": "https://arxiv.org/abs/2508.02324", "tutorialURL": "https://github.com/QwenLM/Qwen-Image", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["image"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen-Image", "locator": "News", "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"}, "release_dates": {"announced": null, "weights_released": "2025-08-04", "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image", "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "unverified", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### Qwen/Qwen-Image-2512
+- 深链接：?catalog=asia-bf318de3d637c817
+- id："asia-bf318de3d637c817"
+- type："catalog_record"
+- title："Qwen/Qwen-Image-2512"
+- exact_id："Qwen/Qwen-Image-2512"
+- entity_type："model_checkpoint"
+- provider："Alibaba/Qwen"
+- family："Qwen-Image"
+- version："Qwen-Image-2512"
+- inputs：["text"]
+- outputs：["image"]
+- modality：["image_generation"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": "2025-12-31", "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_scope": "family_original_report_not_version_specific", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/Qwen/Qwen-Image-2512", "report": "https://arxiv.org/abs/2508.02324", "tutorial": "https://github.com/QwenLM/Qwen-Image", "weights_license": "https://huggingface.co/Qwen/Qwen-Image-2512", "repository": "https://github.com/QwenLM/Qwen-Image"}
+- sources：[{"id": "image", "url": "https://github.com/QwenLM/Qwen-Image", "locator": "News", "sourceproof_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}, {"target": "org-qwen", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "Qwen/Qwen-Image-2512", "vendor": "Alibaba/Qwen", "country": "CN", "family": "Qwen-Image", "version": "Qwen-Image-2512", "entity_type": "model_checkpoint", "modality": ["image_generation"], "input_modalities": ["text"], "output_modalities": ["image"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://huggingface.co/Qwen/Qwen-Image-2512", "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image-2512", "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image-2512", "repositoryURL": "https://github.com/QwenLM/Qwen-Image", "paperURL": "https://arxiv.org/abs/2508.02324", "tutorialURL": "https://github.com/QwenLM/Qwen-Image", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["image"], "sourceproof": {"url": "https://github.com/QwenLM/Qwen-Image", "locator": "News", "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"}, "release_dates": {"announced": null, "weights_released": "2025-12-31", "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image", "existingIDs": ["qwen", "org-qwen"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "paper_scope": "family_original_report_not_version_specific", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### BAAI/bge-m3
+- 深链接：?catalog=asia-63c957bf96d4f761
+- id："asia-63c957bf96d4f761"
+- type："catalog_record"
+- title："BAAI/bge-m3"
+- exact_id："BAAI/bge-m3"
+- entity_type："model_checkpoint"
+- provider："BAAI"
+- family："BGE"
+- version："bge-m3"
+- inputs：["text"]
+- outputs：["embedding", "sparse_weights", "multi_vector"]
+- modality：["text_embedding"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："MIT"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/BAAI/bge-m3", "report": "https://arxiv.org/pdf/2402.03216.pdf", "tutorial": "https://huggingface.co/BAAI/bge-m3", "weights_license": "https://huggingface.co/BAAI/bge-m3", "repository": null}
+- sources：[{"id": "bge", "url": "https://huggingface.co/BAAI/bge-m3", "locator": "Model card / License", "sourceproof_zh": "文本嵌入模型，非聊天LLM；MIT。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "BAAI/bge-m3", "vendor": "BAAI", "country": "CN", "family": "BGE", "version": "bge-m3", "entity_type": "model_checkpoint", "modality": ["text_embedding"], "input_modalities": ["text"], "output_modalities": ["embedding", "sparse_weights", "multi_vector"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "MIT", "official_licenseURL": "https://huggingface.co/BAAI/bge-m3", "license_evidenceURL": "https://huggingface.co/BAAI/bge-m3", "modelcardURL": "https://huggingface.co/BAAI/bge-m3", "repositoryURL": null, "paperURL": "https://arxiv.org/pdf/2402.03216.pdf", "tutorialURL": "https://huggingface.co/BAAI/bge-m3", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["bge"], "sourceproof": {"url": "https://huggingface.co/BAAI/bge-m3", "locator": "Model card / License", "claim_zh": "文本嵌入模型，非聊天LLM；MIT。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "linked_primary_reference_not_full_paper_reviewed"}
+
+### sarvamai/sarvam-m
+- 深链接：?catalog=asia-4688c00a50b6d160
+- id："asia-4688c00a50b6d160"
+- type："catalog_record"
+- title："sarvamai/sarvam-m"
+- exact_id："sarvamai/sarvam-m"
+- entity_type："model_checkpoint"
+- provider："Sarvam AI"
+- family："Sarvam-M"
+- version："sarvam-m"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/sarvamai/sarvam-m", "report": null, "tutorial": "https://huggingface.co/sarvamai/sarvam-m", "weights_license": "https://huggingface.co/sarvamai/sarvam-m", "repository": null}
+- sources：[{"id": "sarvam", "url": "https://huggingface.co/sarvamai/sarvam-m", "locator": "Model Information / Quickstart", "sourceproof_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "sarvam", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "sarvamai/sarvam-m", "vendor": "Sarvam AI", "country": "IN", "family": "Sarvam-M", "version": "sarvam-m", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://huggingface.co/sarvamai/sarvam-m", "license_evidenceURL": "https://huggingface.co/sarvamai/sarvam-m", "modelcardURL": "https://huggingface.co/sarvamai/sarvam-m", "repositoryURL": null, "paperURL": null, "tutorialURL": "https://huggingface.co/sarvamai/sarvam-m", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["sarvam"], "sourceproof": {"url": "https://huggingface.co/sarvamai/sarvam-m", "locator": "Model Information / Quickstart", "claim_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["sarvam"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "", "license_url_kind": "official_declaration_or_modelcard", "paper_status": "unknown"}
+
+### LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct
+- 深链接：?catalog=asia-ec3d82de8dfd437a
+- id："asia-ec3d82de8dfd437a"
+- type："catalog_record"
+- title："LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+- exact_id："LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+- entity_type："model_checkpoint"
+- provider："LG AI Research"
+- family："EXAONE 3.5"
+- version："EXAONE-3.5-7.8B-Instruct"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："EXAONE AI Model License Agreement 1.1 - NC"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。", "legal_terms_status": "unknown_license_file_404", "license_url_status": "404_not_found", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。"
+- urls：{"model_card": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "report": "https://arxiv.org/abs/2412.04862", "tutorial": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "weights_license": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct/tree/main/LICENSE", "repository": null}
+- sources：[{"id": "exaone", "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "locator": "License / Citation", "sourceproof_zh": "EXAONE AI Model License Agreement 1.1-NC；许可文件链接404。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "vendor": "LG AI Research", "country": "KR", "family": "EXAONE 3.5", "version": "EXAONE-3.5-7.8B-Instruct", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "EXAONE AI Model License Agreement 1.1 - NC", "official_licenseURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct/tree/main/LICENSE", "license_evidenceURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "modelcardURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "repositoryURL": null, "paperURL": "https://arxiv.org/abs/2412.04862", "tutorialURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["exaone"], "sourceproof": {"url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct", "locator": "License / Citation", "claim_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。", "license_url_status": "404_not_found", "license_url_kind": "legal_text", "paper_status": "linked_primary_reference_not_full_paper_reviewed", "legal_terms_status": "unknown_license_file_404"}
+
+### llm-jp/llm-jp-3-3.7b-instruct
+- 深链接：?catalog=asia-33b1c6bac9581ea3
+- id："asia-33b1c6bac9581ea3"
+- type："catalog_record"
+- title："llm-jp/llm-jp-3-3.7b-instruct"
+- exact_id："llm-jp/llm-jp-3-3.7b-instruct"
+- entity_type："model_checkpoint"
+- provider："NII / LLM-jp"
+- family："LLM-jp 3"
+- version："llm-jp-3-3.7b-instruct"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："open_weight"
+- weights_license："Apache-2.0"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "", "paper_status": "unknown", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary：""
+- urls：{"model_card": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "report": null, "tutorial": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "weights_license": "https://www.apache.org/licenses/LICENSE-2.0", "repository": null}
+- sources：[{"id": "llmjp", "url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "locator": "Model Variants / License", "sourceproof_zh": "日本NII模型；日英文本；Apache-2.0。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "llm-jp/llm-jp-3-3.7b-instruct", "vendor": "NII / LLM-jp", "country": "JP", "family": "LLM-jp 3", "version": "llm-jp-3-3.7b-instruct", "entity_type": "model_checkpoint", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "open_weight", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "Apache-2.0", "official_licenseURL": "https://www.apache.org/licenses/LICENSE-2.0", "license_evidenceURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "modelcardURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "repositoryURL": null, "paperURL": null, "tutorialURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["llmjp"], "sourceproof": {"url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct", "locator": "Model Variants / License", "claim_zh": "日本NII模型；日英文本；Apache-2.0。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": [], "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重", "notes_zh": "", "license_url_kind": "legal_text", "paper_status": "unknown"}
+
+### deepseek-flash
+- 深链接：?catalog=asia-844ad390fca027c2
+- id："asia-844ad390fca027c2"
+- type："catalog_record"
+- title："deepseek-flash"
+- exact_id："deepseek-flash"
+- entity_type："api_alias"
+- provider："DeepSeek"
+- family："DeepSeek API"
+- version："DeepSeek-V4.1-Flash-1017"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："api_documented_weights_unknown"
+- weights_license："unknown"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。", "paper_status": "unknown", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："调用名与服务端版本分开；不由快照后缀推断发布日期。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://api-docs.deepseek.com/quick_start/pricing/", "weights_license": null, "repository": null}
+- sources：[{"id": "dsapi", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-flash", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek API", "version": "DeepSeek-V4.1-Flash-1017", "entity_type": "api_alias", "modality": ["vlm"], "input_modalities": ["text", "image"], "output_modalities": ["text"], "access": "api_documented_weights_unknown", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "unknown", "official_licenseURL": null, "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/", "modelcardURL": null, "repositoryURL": null, "paperURL": null, "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["dsapi"], "sourceproof": {"url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "license_url_kind": "unverified", "paper_status": "unknown"}
+
+### deepseek-v4-pro
+- 深链接：?catalog=asia-c69627806d423477
+- id："asia-c69627806d423477"
+- type："catalog_record"
+- title："deepseek-v4-pro"
+- exact_id："deepseek-v4-pro"
+- entity_type："api_alias"
+- provider："DeepSeek"
+- family："DeepSeek API"
+- version："DeepSeek-V4-Pro-0813"
+- inputs：["text"]
+- outputs：["text"]
+- modality：["llm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}
+- status："current_documented"
+- access："api_documented_weights_unknown"
+- weights_license："unknown"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。", "paper_status": "unknown", "resolved_snapshot": "DeepSeek-V4-Pro-0813", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："调用名与服务端版本分开；不由快照后缀推断发布日期。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://api-docs.deepseek.com/quick_start/pricing/", "weights_license": null, "repository": null}
+- sources：[{"id": "dsapi", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-v4-pro", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek API", "version": "DeepSeek-V4-Pro-0813", "entity_type": "api_alias", "modality": ["llm"], "input_modalities": ["text"], "output_modalities": ["text"], "access": "api_documented_weights_unknown", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"}, "official_license": "unknown", "official_licenseURL": null, "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/", "modelcardURL": null, "repositoryURL": null, "paperURL": null, "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["dsapi"], "sourceproof": {"url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。", "resolved_snapshot": "DeepSeek-V4-Pro-0813", "license_url_kind": "unverified", "paper_status": "unknown"}
+
+### deepseek-v4-flash
+- 深链接：?catalog=asia-03c32f2b9970c923
+- id："asia-03c32f2b9970c923"
+- type："catalog_record"
+- title："deepseek-v4-flash"
+- exact_id："deepseek-v4-flash"
+- entity_type："legacy_api_alias"
+- provider："DeepSeek"
+- family："DeepSeek API"
+- version："legacy alias"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。", "original_backing_model_status": "retired"}
+- status："current_documented"
+- access："api_redirect_alias"
+- weights_license："unknown"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。", "paper_status": "unknown", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://api-docs.deepseek.com/quick_start/pricing/", "weights_license": null, "repository": null}
+- sources：[{"id": "dsapi", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-v4-flash", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek API", "version": "legacy alias", "entity_type": "legacy_api_alias", "modality": ["vlm"], "input_modalities": ["text", "image"], "output_modalities": ["text"], "access": "api_redirect_alias", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。", "original_backing_model_status": "retired"}, "official_license": "unknown", "official_licenseURL": null, "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/", "modelcardURL": null, "repositoryURL": null, "paperURL": null, "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["dsapi"], "sourceproof": {"url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "license_url_kind": "unverified", "paper_status": "unknown"}
+
+### deepseek-v4-flash-vision-exp
+- 深链接：?catalog=asia-22273512611f9fe5
+- id："asia-22273512611f9fe5"
+- type："catalog_record"
+- title："deepseek-v4-flash-vision-exp"
+- exact_id："deepseek-v4-flash-vision-exp"
+- entity_type："legacy_api_alias"
+- provider："DeepSeek"
+- family："DeepSeek API"
+- version："legacy alias"
+- inputs：["text", "image"]
+- outputs：["text"]
+- modality：["vlm"]
+- lifecycle：{"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。", "original_backing_model_status": "retired"}
+- status："current_documented"
+- access："api_redirect_alias"
+- weights_license："unknown"
+- code_license：null
+- license_scope_note："权重许可不继承代码许可；open weights 不等于 open source；null 表示未核验。"
+- dates：{"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}
+- checked_at："2026-10-28"
+- qa_disposition："accept_with_caveats"
+- limitations：{"notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。", "paper_status": "unknown", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "tutorial_status": "official_reference_not_executed"}
+- access_observations：[]
+- summary："旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+- urls：{"model_card": null, "report": null, "tutorial": "https://api-docs.deepseek.com/quick_start/pricing/", "weights_license": null, "repository": null}
+- sources：[{"id": "dsapi", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。", "sourcecheckdate": "2026-10-28", "status": "primary_content_read"}]
+- links：[{"target": "deepseek", "type": "editorial_related", "verification_status": "editorial_learning_relation", "note": "新增精确版本，挂接既有家族；不得覆盖家族节点"}]
+- unresolved_links：[]
+- relations：[]
+- source_bundle："asia.json"
+- raw：{"exactid": "deepseek-v4-flash-vision-exp", "vendor": "DeepSeek", "country": "CN", "family": "DeepSeek API", "version": "legacy alias", "entity_type": "legacy_api_alias", "modality": ["vlm"], "input_modalities": ["text", "image"], "output_modalities": ["text"], "access": "api_redirect_alias", "lifecycle": {"access_status": "current_documented", "service_status": "unknown", "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。", "original_backing_model_status": "retired"}, "official_license": "unknown", "official_licenseURL": null, "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/", "modelcardURL": null, "repositoryURL": null, "paperURL": null, "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/", "tutorial_status": "official_reference_not_executed", "sourcecheckdate": "2026-10-28", "source_ids": ["dsapi"], "sourceproof": {"url": "https://api-docs.deepseek.com/quick_start/pricing/", "locator": "Model Details / footnote 1", "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"}, "release_dates": {"announced": null, "weights_released": null, "api_launched": null, "paper_first_submitted": null}, "date_evidenceURL": null, "existingIDs": ["deepseek"], "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点", "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。", "resolved_snapshot": "DeepSeek-V4.1-Flash-1017", "license_url_kind": "unverified", "paper_status": "unknown"}
+
+### 目录来源、覆盖、修订与接纳边界
+{
+  "bundles": [
+    {
+      "file": "global.json",
+      "sha256": "a89967e0b90308a8b581d768a1971d5bc7aa1615ab6f8f23bcab7e4d83e056d6",
+      "disposition": "approve_with_limits",
+      "raw": {
+        "schema_version": "vendor-catalog-research.r1",
+        "source_checked_date": "2026-10-28",
+        "scope": "全球代表厂商第一批，非全世界或任一厂商历史全量",
+        "status": "research_only_not_merged",
+        "record_count": 40,
+        "baseline": {
+          "path": "github-migration-r1/public/modelatlas/dist/data.json",
+          "sha256": "c9f10bed43505d5dc5e6418bc06434eff1662cb18c704d7b6dfd01a132ebe869",
+          "node_count": 148,
+          "read_only": true
+        },
+        "methodology": [
+          "只取已读官方来源明确标识；不执行SDK/模型/下载/注册/付费。",
+          "发布日期只取独立明示；ID日期、知识截止、latest update均不能充当发布日。",
+          "api_model_id表示已知ID但别名/固定语义未核实，不假装snapshot。",
+          "权重许可不继承网页/代码样例许可；null不表示闭源。",
+          "教程链接不等于教程完成，更不等于测试通过。"
+        ],
+        "coverage_matrix": [
+          {
+            "vendor": "OpenAI",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "deprecation",
+              "image model page",
+              "live model page"
+            ],
+            "not_yet_checked": [
+              "全部历史snapshot",
+              "gpt-oss许可/权重",
+              "embedding/moderation全表",
+              "每版发布公告/报告"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Anthropic",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "versioning",
+              "deprecation"
+            ],
+            "not_yet_checked": [
+              "全部旧版逐条入库",
+              "每版system card",
+              "合作云生命周期逐条核验"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Google Gemini",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "4 Argon",
+              "3.8 Live",
+              "Nano Banana 2.1",
+              "Omni Flash"
+            ],
+            "not_yet_checked": [
+              "历史Gemini/Imagen/Veo/Lyria完整目录",
+              "完整弃用日志",
+              "逐版报告"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Google Gemma",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "Gemma4 model card",
+              "Apache2页面",
+              "Gemma4 report摘要"
+            ],
+            "not_yet_checked": [
+              "五尺寸精确checkpoint",
+              "旧Gemma/3n/PaliGemma/ShieldGemma全谱系"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Meta",
+            "status": "partial",
+            "actually_read": [
+              "Llama4 model card",
+              "download entry"
+            ],
+            "not_yet_checked": [
+              "全部Llama1/2/3与Guard/PromptGuard/CodeLlama checkpoint",
+              "license正文细则",
+              "全套教程"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Mistral",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "Small4",
+              "Voxtral Mini Transcribe3",
+              "lifecycle page"
+            ],
+            "not_yet_checked": [
+              "历史模型完整列表",
+              "每版权重仓库/报告/许可证",
+              "第三方托管去重"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Cohere",
+            "status": "partial",
+            "actually_read": [
+              "catalog",
+              "deprecation page",
+              "Command A report"
+            ],
+            "not_yet_checked": [
+              "Aya/Embed/Rerank/North/Parse/Transcribe逐项录入",
+              "checkpoint许可证"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "AI21",
+            "status": "partial",
+            "actually_read": [
+              "Jamba catalog",
+              "platform matrix",
+              "docs index"
+            ],
+            "not_yet_checked": [
+              "Jurassic历史",
+              "Jamba权重许可证",
+              "全部报告与旧版状态"
+            ],
+            "complete": false
+          },
+          {
+            "vendor": "Ai2",
+            "status": "partial",
+            "actually_read": [
+              "Olmo catalog",
+              "Olmo3 base card",
+              "release notes搜索摘要"
+            ],
+            "not_yet_checked": [
+              "Olmo3.1/Hybrid/Molmo/ASR等逐条核验",
+              "所有训练checkpoint/revision",
+              "完整release notes正文"
+            ],
+            "complete": false
+          }
+        ],
+        "not_in_this_batch": [
+          "xAI",
+          "Amazon Nova/Titan",
+          "Microsoft Phi/MAI",
+          "NVIDIA Nemotron",
+          "IBM Granite",
+          "Apple",
+          "Databricks",
+          "Stability AI",
+          "Black Forest Labs",
+          "Runway",
+          "Adobe",
+          "其他地区厂商和研究机构"
+        ],
+        "sources": [
+          {
+            "id": "openai_catalog",
+            "url": "https://developers.openai.com/api/docs/models",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "openai_deprecations",
+            "url": "https://developers.openai.com/api/docs/deprecations",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "openai_image",
+            "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "openai_live",
+            "url": "https://developers.openai.com/api/docs/models/gpt-live-1",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "claude_catalog",
+            "url": "https://platform.claude.com/docs/en/models/overview",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "claude_versioning",
+            "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "claude_deprecations",
+            "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemini_catalog",
+            "url": "https://ai.google.dev/gemini-api/docs/models",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemini_argon",
+            "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemini_live",
+            "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemini_image",
+            "url": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemini_video",
+            "url": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemma_catalog",
+            "url": "https://ai.google.dev/gemma/docs",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemma_card",
+            "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemma_license",
+            "url": "https://ai.google.dev/gemma/apache_2",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "gemma_report",
+            "url": "https://arxiv.org/abs/2607.02770",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "meta_card",
+            "url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "meta_access",
+            "url": "https://ai.meta.com/resources/models-and-libraries/llama-downloads/",
+            "checked_at": "2026-10-28",
+            "status": "search_excerpt_only",
+            "word_limit": 200
+          },
+          {
+            "id": "mistral_catalog",
+            "url": "https://docs.mistral.ai/models",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "mistral_small",
+            "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "mistral_audio",
+            "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "mistral_lifecycle",
+            "url": "https://docs.mistral.ai/inference/model-lifecycle",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "cohere_catalog",
+            "url": "https://docs.cohere.com/docs/models",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "cohere_deprecations",
+            "url": "https://docs.cohere.com/docs/deprecations",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "cohere_report",
+            "url": "https://cohere.com/research/papers/command-a-technical-report.pdf",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai21_catalog",
+            "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai21_platforms",
+            "url": "https://docs.ai21.com/docs/model-availability-across-platforms",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai21_index",
+            "url": "https://docs.ai21.com/llms.txt",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai2_catalog",
+            "url": "https://docs.allenai.org/models/olmo/index.html",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai2_card",
+            "url": "https://huggingface.co/allenai/Olmo-3-1025-7B",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200
+          },
+          {
+            "id": "ai2_release",
+            "url": "https://docs.allenai.org/release_notes/olmo-release-notes/index.html",
+            "checked_at": "2026-10-28",
+            "status": "search_excerpt_only",
+            "word_limit": 200
+          },
+          {
+            "id": "mistral_small_release",
+            "url": "https://mistral.ai/news/mistral-small-4/",
+            "checked_at": "2026-10-28",
+            "status": "read_primary_page",
+            "word_limit": 200,
+            "locator": "A new standard for multimodal, reasoning-optimized models首段；Key architectural details / Native multimodality"
+          }
+        ],
+        "records": [
+          {
+            "id": "global-pen-gpt-6-astra",
+            "vendor": "OpenAI",
+            "title": "gpt-6-astra",
+            "exact_id": "gpt-6-astra",
+            "entity_type": "api_model_id",
+            "version": "6 Astra",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_catalog"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gpt",
+                "relation": "member_of_family",
+                "action": "保留家族节点，新增版本记录"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-6-1-sol",
+            "vendor": "OpenAI",
+            "title": "gpt-6.1-sol",
+            "exact_id": "gpt-6.1-sol",
+            "entity_type": "api_model_id",
+            "version": "6.1 Sol",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_catalog"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gpt",
+                "relation": "member_of_family",
+                "action": "保留家族节点，新增版本记录"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-6-1-terra",
+            "vendor": "OpenAI",
+            "title": "gpt-6.1-terra",
+            "exact_id": "gpt-6.1-terra",
+            "entity_type": "api_model_id",
+            "version": "6.1 Terra",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_catalog"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gpt",
+                "relation": "member_of_family",
+                "action": "保留家族节点，新增版本记录"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-6-luna",
+            "vendor": "OpenAI",
+            "title": "gpt-6-luna",
+            "exact_id": "gpt-6-luna",
+            "entity_type": "api_model_id",
+            "version": "6 Luna",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_catalog"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gpt",
+                "relation": "member_of_family",
+                "action": "保留家族节点，新增版本记录"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-image-2-5-sunburst",
+            "vendor": "OpenAI",
+            "title": "GPT-Image-2.5 Sunburst",
+            "exact_id": "gpt-image-2.5-sunburst",
+            "entity_type": "api_model_id",
+            "version": "2.5 Sunburst",
+            "modality": {
+              "input": null,
+              "output": [
+                "image"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_image"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "生图与编辑型号；完整输入类型待补。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-live-1",
+            "vendor": "OpenAI",
+            "title": "GPT-Live 1",
+            "exact_id": "gpt-live-1",
+            "entity_type": "api_model_id",
+            "version": "1",
+            "modality": {
+              "input": [
+                "text",
+                "audio"
+              ],
+              "output": [
+                "text",
+                "audio"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_live"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/models/gpt-live-1"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "实时双向语音，后端agent与语音模型不是同一实体。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-sora-2",
+            "vendor": "OpenAI",
+            "title": "sora-2",
+            "exact_id": "sora-2",
+            "entity_type": "api_alias",
+            "version": null,
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "retired",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2026-03-24",
+              "retirement_date": "2026-09-24"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_deprecations"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-sora-2-2025-10-06",
+            "vendor": "OpenAI",
+            "title": "sora-2-2025-10-06",
+            "exact_id": "sora-2-2025-10-06",
+            "entity_type": "fixed_snapshot",
+            "version": null,
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "retired",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2026-03-24",
+              "retirement_date": "2026-09-24"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_deprecations"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-videos-api",
+            "vendor": "OpenAI",
+            "title": "Videos API",
+            "exact_id": "Videos API",
+            "entity_type": "api_service",
+            "version": null,
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "retired",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2026-03-24",
+              "retirement_date": "2026-09-24"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_deprecations"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-pen-gpt-4o-2024-05-13",
+            "vendor": "OpenAI",
+            "title": "GPT-4o initial snapshot",
+            "exact_id": "gpt-4o-2024-05-13",
+            "entity_type": "fixed_snapshot",
+            "version": "2024-05-13",
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "retired",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": "2026-10-23"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "openai_deprecations"
+            ],
+            "source_urls": [
+              "https://developers.openai.com/api/docs/deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [
+              {
+                "type": "recommended_replacement",
+                "target_exact_id": "gpt-5.6-sol",
+                "source_id": "openai_deprecations",
+                "scope": "OpenAI API",
+                "note": "此为核验日文档建议，不宣称原始公告时即如此"
+              }
+            ],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-nthropic-claude-fable-5-1",
+            "vendor": "Anthropic",
+            "title": "Fable 5.1",
+            "exact_id": "claude-fable-5-1",
+            "entity_type": "fixed_api_version",
+            "version": "Fable 5.1",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "active",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "claude_catalog",
+              "claude_versioning",
+              "claude_deprecations"
+            ],
+            "source_urls": [
+              "https://platform.claude.com/docs/en/models/overview",
+              "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+              "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-nthropic-claude-opus-5-5",
+            "vendor": "Anthropic",
+            "title": "Opus 5.5",
+            "exact_id": "claude-opus-5-5",
+            "entity_type": "fixed_api_version",
+            "version": "Opus 5.5",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "active",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "claude_catalog",
+              "claude_versioning",
+              "claude_deprecations"
+            ],
+            "source_urls": [
+              "https://platform.claude.com/docs/en/models/overview",
+              "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+              "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-nthropic-claude-sonnet-5-5",
+            "vendor": "Anthropic",
+            "title": "Sonnet 5.5",
+            "exact_id": "claude-sonnet-5-5",
+            "entity_type": "fixed_api_version",
+            "version": "Sonnet 5.5",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "active",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "claude_catalog",
+              "claude_versioning",
+              "claude_deprecations"
+            ],
+            "source_urls": [
+              "https://platform.claude.com/docs/en/models/overview",
+              "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+              "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-nthropic-claude-haiku-5-5",
+            "vendor": "Anthropic",
+            "title": "Haiku 5.5",
+            "exact_id": "claude-haiku-5-5",
+            "entity_type": "fixed_api_version",
+            "version": "Haiku 5.5",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "active",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "claude_catalog",
+              "claude_versioning",
+              "claude_deprecations"
+            ],
+            "source_urls": [
+              "https://platform.claude.com/docs/en/models/overview",
+              "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+              "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-nthropic-claude-sonnet-4-5-20250929",
+            "vendor": "Anthropic",
+            "title": "Claude Sonnet 4.5",
+            "exact_id": "claude-sonnet-4-5-20250929",
+            "entity_type": "fixed_snapshot",
+            "version": "4.5",
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "deprecated",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2026-09-30",
+              "retirement_date": "2026-11-30"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "claude_deprecations"
+            ],
+            "source_urls": [
+              "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [
+              {
+                "type": "recommended_replacement",
+                "target_exact_id": "claude-sonnet-5-5",
+                "source_id": "claude_deprecations",
+                "scope": "Anthropic-operated platforms"
+              }
+            ],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemini-4-argon",
+            "vendor": "Google",
+            "title": "Gemini 4 Argon",
+            "exact_id": "gemini-4-argon",
+            "entity_type": "api_model_id",
+            "version": "4 Argon",
+            "modality": {
+              "input": [
+                "text",
+                "image",
+                "video",
+                "audio",
+                "PDF"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "stable",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemini_argon"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gemini",
+                "relation": "member_of_family",
+                "action": "不与首代gemini-1-report报告合并"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemini-3-8-live",
+            "vendor": "Google",
+            "title": "Gemini 3.8 Live",
+            "exact_id": "gemini-3.8-live",
+            "entity_type": "api_model_id",
+            "version": "3.8",
+            "modality": {
+              "input": [
+                "text",
+                "image",
+                "audio"
+              ],
+              "output": [
+                "audio",
+                "text_transcription"
+              ]
+            },
+            "lifecycle": {
+              "status": "stable",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemini_live"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gemini",
+                "relation": "member_of_family",
+                "action": "不与首代gemini-1-report报告合并"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemini-nano-banana-2-1",
+            "vendor": "Google",
+            "title": "Nano Banana 2.1",
+            "exact_id": "gemini-nano-banana-2.1",
+            "entity_type": "api_model_id",
+            "version": "2.1",
+            "modality": {
+              "input": [
+                "text",
+                "image",
+                "video",
+                "PDF"
+              ],
+              "output": [
+                "image",
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "stable",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemini_image"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gemini",
+                "relation": "member_of_family",
+                "action": "不与首代gemini-1-report报告合并"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemini-omni-1-1-flash",
+            "vendor": "Google",
+            "title": "Gemini Omni Flash",
+            "exact_id": "gemini-omni-1.1-flash",
+            "entity_type": "api_model_id",
+            "version": "1.1",
+            "modality": {
+              "input": [
+                "text",
+                "image",
+                "video"
+              ],
+              "output": [
+                "video"
+              ]
+            },
+            "lifecycle": {
+              "status": "stable",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemini_video"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "gemini",
+                "relation": "member_of_family",
+                "action": "不与首代gemini-1-report报告合并"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemini-omni-flash-preview",
+            "vendor": "Google",
+            "title": "Gemini Omni Flash preview",
+            "exact_id": "gemini-omni-flash-preview",
+            "entity_type": "api_model_id",
+            "version": "preview",
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "retired",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemini_video"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "页面明确shut down，具体关闭日期未核实。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-gemma-4",
+            "vendor": "Google",
+            "title": "Gemma 4",
+            "exact_id": null,
+            "entity_type": "model_family",
+            "version": "4",
+            "modality": {
+              "input": [
+                "text",
+                "image",
+                "video",
+                "audio_variant_dependent"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "open_weights_documented",
+              "scope": "open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights",
+            "weights_license": "Apache-2.0",
+            "weights_license_url": "https://ai.google.dev/gemma/apache_2",
+            "model_card_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+            "report_url": "https://arxiv.org/abs/2607.02770",
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "gemma_card",
+              "gemma_license"
+            ],
+            "source_urls": [
+              "https://ai.google.dev/gemma/docs/core/model_card_4",
+              "https://ai.google.dev/gemma/apache_2"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "家族五尺寸；音频仅E2B/E4B/12B，不能向全部变体传播。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-oogle-arxiv-2607-02770",
+            "vendor": "Google",
+            "title": "Gemma 4 Technical Report",
+            "exact_id": "arXiv:2607.02770",
+            "entity_type": "technical_report",
+            "version": "v2",
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "published",
+              "scope": "paper",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "paper",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": "https://arxiv.org/abs/2607.02770",
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": "2026-07-02",
+            "release_date_evidence": {
+              "event": "paper_first_submitted",
+              "source_id": "gemma_report"
+            },
+            "source_ids": [
+              "gemma_report"
+            ],
+            "source_urls": [
+              "https://arxiv.org/abs/2607.02770"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "首投日期属于论文，不是API上线或权重发布日期。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-eta-llama-4-scout-17bx16e",
+            "vendor": "Meta",
+            "title": "Llama 4 Scout (17Bx16E)",
+            "exact_id": null,
+            "entity_type": "model_variant",
+            "version": "4",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text",
+                "code"
+              ]
+            },
+            "lifecycle": {
+              "status": "static_release",
+              "scope": "gated_open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "gated_open_weights",
+            "weights_license": "Llama 4 Community License Agreement",
+            "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE",
+            "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+            "report_url": null,
+            "tutorial_url": "https://github.com/meta-llama/llama-cookbook",
+            "tutorial_status": "official_link_discovered_not_executed",
+            "release_date": "2025-04-05",
+            "release_date_evidence": {
+              "event": "model_release",
+              "source_id": "meta_card"
+            },
+            "source_ids": [
+              "meta_card",
+              "meta_access"
+            ],
+            "source_urls": [
+              "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+              "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "llama",
+                "relation": "member_of_family",
+                "action": "不要覆盖llama-2历史节点"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-eta-llama-4-maverick-17bx128e",
+            "vendor": "Meta",
+            "title": "Llama 4 Maverick (17Bx128E)",
+            "exact_id": null,
+            "entity_type": "model_variant",
+            "version": "4",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text",
+                "code"
+              ]
+            },
+            "lifecycle": {
+              "status": "static_release",
+              "scope": "gated_open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "gated_open_weights",
+            "weights_license": "Llama 4 Community License Agreement",
+            "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE",
+            "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+            "report_url": null,
+            "tutorial_url": "https://github.com/meta-llama/llama-cookbook",
+            "tutorial_status": "official_link_discovered_not_executed",
+            "release_date": "2025-04-05",
+            "release_date_evidence": {
+              "event": "model_release",
+              "source_id": "meta_card"
+            },
+            "source_ids": [
+              "meta_card",
+              "meta_access"
+            ],
+            "source_urls": [
+              "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+              "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "llama",
+                "relation": "member_of_family",
+                "action": "不要覆盖llama-2历史节点"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-istral-mistral-small-2603",
+            "vendor": "Mistral",
+            "title": "Mistral Small 4",
+            "exact_id": "mistral-small-2603",
+            "entity_type": "api_model_id",
+            "version": "26.03",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "GA",
+              "scope": "api_and_open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "api_and_open_weights",
+            "weights_license": "Apache-2.0",
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": "2026-03-16",
+            "release_date_evidence": {
+              "event": "model_page_release_label",
+              "source_id": "mistral_small"
+            },
+            "source_ids": [
+              "mistral_small",
+              "mistral_small_release"
+            ],
+            "source_urls": [
+              "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+              "https://mistral.ai/news/mistral-small-4/"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "页面同时列推理/指令/代码能力；权重仓库与许可全文URL未补齐。",
+            "relations": [],
+            "dedup_suggestions": [
+              {
+                "existing_id": "mistral",
+                "relation": "member_of_family",
+                "action": "不与mistral-7b-v0-1合并"
+              }
+            ],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在",
+            "field_evidence": {
+              "modality.input": {
+                "source_id": "mistral_small_release",
+                "locator": "A new standard for multimodal, reasoning-optimized models：首段；Key architectural details：Native multimodality条目",
+                "observed_web_lines": [
+                  31,
+                  41
+                ],
+                "checked_at": "2026-10-28"
+              }
+            },
+            "correction_history": [
+              {
+                "date": "2026-10-28",
+                "field": "modality.input",
+                "old_value": [
+                  "text"
+                ],
+                "new_value": [
+                  "text",
+                  "image"
+                ],
+                "reason_zh": "独立审计发现首版仅填写text漏掉image；官方发布文两处明确图像输入。此为整理错误更正，不是模型能力新增。",
+                "source_id": "mistral_small_release"
+              }
+            ]
+          },
+          {
+            "id": "global-istral-voxtral-mini-transcribe-3-0",
+            "vendor": "Mistral",
+            "title": "Voxtral Mini Transcribe 3",
+            "exact_id": "voxtral-mini-transcribe-3-0",
+            "entity_type": "api_model_id",
+            "version": "3.0",
+            "modality": {
+              "input": [
+                "audio"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "public_preview",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": "2026-10-20",
+            "release_date_evidence": {
+              "event": "model_page_release_label",
+              "source_id": "mistral_audio"
+            },
+            "source_ids": [
+              "mistral_audio",
+              "mistral_lifecycle"
+            ],
+            "source_urls": [
+              "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+              "https://docs.mistral.ai/inference/model-lifecycle"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "公开预览允许静默更新；不能按版本字符串推定固定snapshot。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-istral-mistral-large-4",
+            "vendor": "Mistral",
+            "title": "Mistral Large 4",
+            "exact_id": null,
+            "entity_type": "model_family",
+            "version": "26.10",
+            "modality": {
+              "input": null,
+              "output": null
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "open_weights_documented",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights_documented",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "mistral_catalog"
+            ],
+            "source_urls": [
+              "https://docs.mistral.ai/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录列open-weight，不能据Open标签推断具体许可证。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-ohere-command-a-plus-05-2026",
+            "vendor": "Cohere",
+            "title": "command-a-plus-05-2026",
+            "exact_id": "command-a-plus-05-2026",
+            "entity_type": "api_model_id",
+            "version": "A+ 05-2026",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "live",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "cohere_catalog"
+            ],
+            "source_urls": [
+              "https://docs.cohere.com/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-ohere-command-a-03-2025",
+            "vendor": "Cohere",
+            "title": "command-a-03-2025",
+            "exact_id": "command-a-03-2025",
+            "entity_type": "api_model_id",
+            "version": "A 03-2025",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "live",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": "https://cohere.com/research/papers/command-a-technical-report.pdf",
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "cohere_catalog"
+            ],
+            "source_urls": [
+              "https://docs.cohere.com/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-ohere-command-a-vision-07-2025",
+            "vendor": "Cohere",
+            "title": "command-a-vision-07-2025",
+            "exact_id": "command-a-vision-07-2025",
+            "entity_type": "api_model_id",
+            "version": "A Vision 07-2025",
+            "modality": {
+              "input": [
+                "text",
+                "image"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "live",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "cohere_catalog"
+            ],
+            "source_urls": [
+              "https://docs.cohere.com/docs/models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-ohere-command-r",
+            "vendor": "Cohere",
+            "title": "Command R alias",
+            "exact_id": "command-r",
+            "entity_type": "api_alias",
+            "version": null,
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "deprecated",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2025-09-15",
+              "retirement_date": null,
+              "note_zh": "弃用阻止新客户，既有用户至正式关闭前仍可使用；不能擅改为retired。"
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "cohere_catalog",
+              "cohere_deprecations"
+            ],
+            "source_urls": [
+              "https://docs.cohere.com/docs/models",
+              "https://docs.cohere.com/docs/deprecations"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [
+              {
+                "type": "alias_of",
+                "target_exact_id": "command-r-03-2024",
+                "source_id": "cohere_catalog"
+              }
+            ],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-21-jamba-large",
+            "vendor": "AI21",
+            "title": "Jamba Large alias",
+            "exact_id": "jamba-large",
+            "entity_type": "api_alias",
+            "version": "1.7",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai21_catalog"
+            ],
+            "source_urls": [
+              "https://docs.ai21.com/docs/jamba-foundation-models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [
+              {
+                "type": "alias_of",
+                "target_exact_id": "jamba-large-1.7-2025-07",
+                "source_id": "ai21_catalog"
+              }
+            ],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-21-jamba-large-1-7-2025-07",
+            "vendor": "AI21",
+            "title": "Jamba Large snapshot",
+            "exact_id": "jamba-large-1.7-2025-07",
+            "entity_type": "fixed_snapshot",
+            "version": "1.7",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai21_catalog"
+            ],
+            "source_urls": [
+              "https://docs.ai21.com/docs/jamba-foundation-models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-21-jamba-mini-2-2026-01",
+            "vendor": "AI21",
+            "title": "Jamba Mini snapshot",
+            "exact_id": "jamba-mini-2-2026-01",
+            "entity_type": "fixed_snapshot",
+            "version": "2",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai21_catalog"
+            ],
+            "source_urls": [
+              "https://docs.ai21.com/docs/jamba-foundation-models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": null,
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-21-jamba2-3b",
+            "vendor": "AI21",
+            "title": "Jamba2 3B",
+            "exact_id": null,
+            "entity_type": "model_variant",
+            "version": "2",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "catalog_listed",
+              "scope": "open_weights_documented",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights_documented",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai21_catalog",
+              "ai21_platforms"
+            ],
+            "source_urls": [
+              "https://docs.ai21.com/docs/jamba-foundation-models",
+              "https://docs.ai21.com/docs/model-availability-across-platforms"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "目录API栏N/A；HF自部署入口可见，具体仓库ID和权重许可待核实。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-21-jamba-mini-1-7-2025-08",
+            "vendor": "AI21",
+            "title": "Jamba Mini 1.7",
+            "exact_id": "jamba-mini-1.7-2025-08",
+            "entity_type": "fixed_snapshot",
+            "version": "1.7",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "deprecated",
+              "scope": "hosted_api",
+              "as_of": "2026-10-28",
+              "deprecation_date": "2026-02-01",
+              "retirement_date": null
+            },
+            "access": "hosted_api",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": null,
+            "tutorial_url": null,
+            "tutorial_status": "not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai21_catalog"
+            ],
+            "source_urls": [
+              "https://docs.ai21.com/docs/jamba-foundation-models"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "同表snapshot列2025-07但API ID含2025-08，原样保留，不推导发布时间。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-i2-allenai-olmo-3-1025-7b",
+            "vendor": "Ai2",
+            "title": "allenai/Olmo-3-1025-7B",
+            "exact_id": "allenai/Olmo-3-1025-7B",
+            "entity_type": "open_weight_checkpoint",
+            "version": "3 base",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "open_weights_documented",
+              "scope": "open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights",
+            "weights_license": "Apache-2.0",
+            "weights_license_url": "https://huggingface.co/allenai/Olmo-3-1025-7B#license",
+            "model_card_url": "https://huggingface.co/allenai/Olmo-3-1025-7B",
+            "report_url": "https://allenai.org/papers/olmo3",
+            "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+            "tutorial_status": "read_not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai2_card",
+              "ai2_catalog"
+            ],
+            "source_urls": [
+              "https://huggingface.co/allenai/Olmo-3-1025-7B",
+              "https://docs.allenai.org/models/olmo/index.html"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-i2-allenai-olmo-3-7b-think-dpo",
+            "vendor": "Ai2",
+            "title": "allenai/Olmo-3-7B-Think-DPO",
+            "exact_id": "allenai/Olmo-3-7B-Think-DPO",
+            "entity_type": "open_weight_checkpoint",
+            "version": "3 DPO",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "open_weights_documented",
+              "scope": "open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": "https://allenai.org/papers/olmo3",
+            "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+            "tutorial_status": "read_not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai2_card",
+              "ai2_catalog"
+            ],
+            "source_urls": [
+              "https://huggingface.co/allenai/Olmo-3-1025-7B",
+              "https://docs.allenai.org/models/olmo/index.html"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-i2-allenai-olmo-3-7b-think",
+            "vendor": "Ai2",
+            "title": "allenai/Olmo-3-7B-Think",
+            "exact_id": "allenai/Olmo-3-7B-Think",
+            "entity_type": "open_weight_checkpoint",
+            "version": "3 RLVR",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "open_weights_documented",
+              "scope": "open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": "https://allenai.org/papers/olmo3",
+            "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+            "tutorial_status": "read_not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai2_card",
+              "ai2_catalog"
+            ],
+            "source_urls": [
+              "https://huggingface.co/allenai/Olmo-3-1025-7B",
+              "https://docs.allenai.org/models/olmo/index.html"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          },
+          {
+            "id": "global-i2-allenai-olmo-3-7b-instruct",
+            "vendor": "Ai2",
+            "title": "allenai/Olmo-3-7B-Instruct",
+            "exact_id": "allenai/Olmo-3-7B-Instruct",
+            "entity_type": "open_weight_checkpoint",
+            "version": "3 RLVR",
+            "modality": {
+              "input": [
+                "text"
+              ],
+              "output": [
+                "text"
+              ]
+            },
+            "lifecycle": {
+              "status": "open_weights_documented",
+              "scope": "open_weights",
+              "as_of": "2026-10-28",
+              "deprecation_date": null,
+              "retirement_date": null
+            },
+            "access": "open_weights",
+            "weights_license": null,
+            "weights_license_url": null,
+            "model_card_url": null,
+            "report_url": "https://allenai.org/papers/olmo3",
+            "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+            "tutorial_status": "read_not_executed",
+            "release_date": null,
+            "release_date_evidence": null,
+            "source_ids": [
+              "ai2_card",
+              "ai2_catalog"
+            ],
+            "source_urls": [
+              "https://huggingface.co/allenai/Olmo-3-1025-7B",
+              "https://docs.allenai.org/models/olmo/index.html"
+            ],
+            "source_checked_date": "2026-10-28",
+            "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+            "relations": [],
+            "dedup_suggestions": [],
+            "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+          }
+        ],
+        "conflicts_and_cautions": [
+          {
+            "topic": "Claude alias vs fixed version",
+            "source_ids": [
+              "claude_catalog",
+              "claude_versioning"
+            ],
+            "finding_zh": "总表alias行重列当前ID；版本专页明确4.6起dateless ID固定。按专页标fixed_api_version，不套用旧alias规则。"
+          },
+          {
+            "topic": "Gemini Live output",
+            "source_ids": [
+              "gemini_live"
+            ],
+            "finding_zh": "数据类型表写Text和audio输出，迁移段说response modality仅audio；文字需output audio transcription，保留两段语义。"
+          },
+          {
+            "topic": "AI21 snapshot label",
+            "source_ids": [
+              "ai21_catalog"
+            ],
+            "finding_zh": "Mini1.7 snapshot列2025-07而API ID为2025-08；不能改写或用于发布日期。"
+          },
+          {
+            "topic": "Olmo DPO link",
+            "source_ids": [
+              "ai2_catalog",
+              "ai2_card"
+            ],
+            "finding_zh": "教程DPO段重复7B-Think final名称；模型卡列独立Think-DPO，采用模型卡标识。"
+          },
+          {
+            "topic": "OpenAI historical replacements",
+            "source_ids": [
+              "openai_deprecations"
+            ],
+            "finding_zh": "现有弃用历史的推荐替代随文档更新，记录核验日建议而不倒填原公告建议。"
+          },
+          {
+            "topic": "Hosted vendor attribution",
+            "source_ids": [
+              "mistral_catalog"
+            ],
+            "finding_zh": "Mistral目录也含第三方Z.ai/DeepSeek，托管目录不等于原创厂商。"
+          },
+          {
+            "topic": "Mistral preview mutability",
+            "source_ids": [
+              "mistral_lifecycle"
+            ],
+            "finding_zh": "Public Preview允许静默更新；带版本号仍不能视为固定权重。GA不静默更新；API退出不等于已下载权重失效。"
+          }
+        ],
+        "tutorial_plan_zh": [
+          "先教家族/版本/别名/快照/API服务/权重/论文的差异。",
+          "第二课从官方目录定位ID与输入输出；第三课读弃用表，按平台迁移。",
+          "第四课读模型卡和权重许可证，再讨论部署；保留base/SFT/DPO/RLVR阶段。",
+          "实践只设计离线核对题：识别无日期固定ID、禁止日期推断、辨别托管厂商和开发者。所有可执行步骤留待独立授权。"
+        ],
+        "validation": {
+          "json_parsed": true,
+          "unique_record_ids": 40,
+          "release_dates_all_have_explicit_evidence": true,
+          "baseline_unchanged": true,
+          "models_executed": false,
+          "sdk_executed": false,
+          "weights_downloaded": false
+        }
+      }
+    },
+    {
+      "file": "asia.json",
+      "sha256": "0992a408fe836216597e00b6a1ff9bf76a67562025f385512417cd1bc6914aa7",
+      "disposition": "accept_with_caveats",
+      "raw": {
+        "schema_version": "modelatlas.vendor_catalog_research.v1",
+        "sourcecheckdate": "2026-10-28",
+        "scope": "亚洲代表供应商精确版本候选；不是全历史全厂商目录",
+        "existing_data_path": "github-migration-r1/public/modelatlas/dist/data.json",
+        "existing_data_version": "0.2.2",
+        "records": [
+          {
+            "exactid": "Qwen/Qwen3-0.6B",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen3",
+            "version": "Qwen3-0.6B",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-0.6B",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen3-0.6B",
+            "repositoryURL": "https://github.com/QwenLM/Qwen3",
+            "paperURL": "https://arxiv.org/abs/2505.09388",
+            "tutorialURL": "https://github.com/QwenLM/Qwen3",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "qwen3"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen3",
+              "locator": "Introduction / License Agreement",
+              "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "Qwen/Qwen3-8B",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen3",
+            "version": "Qwen3-8B",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-8B",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen3-8B",
+            "repositoryURL": "https://github.com/QwenLM/Qwen3",
+            "paperURL": "https://arxiv.org/abs/2505.09388",
+            "tutorialURL": "https://github.com/QwenLM/Qwen3",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "qwen3"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen3",
+              "locator": "Introduction / License Agreement",
+              "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen3",
+            "version": "Qwen3-235B-A22B-Instruct-2507",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "repositoryURL": "https://github.com/QwenLM/Qwen3",
+            "paperURL": "https://arxiv.org/abs/2505.09388",
+            "tutorialURL": "https://github.com/QwenLM/Qwen3",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "qwen3"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen3",
+              "locator": "Introduction / License Agreement",
+              "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "paper_scope": "family_original_report_not_version_specific",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "deepseek-ai/DeepSeek-R1",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek-R1",
+            "version": "DeepSeek-R1",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT; 蒸馏基座另核",
+            "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+            "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+            "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+            "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "r1"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "locator": "Model Downloads / License",
+              "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek",
+              "org-deepseek",
+              "deepseek-r1-2025"
+            ],
+            "dedup_recommendation": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。",
+            "notes_zh": "",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "deepseek-ai/DeepSeek-R1-Zero",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek-R1",
+            "version": "DeepSeek-R1-Zero",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT; 蒸馏基座另核",
+            "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero",
+            "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero",
+            "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+            "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "r1"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "locator": "Model Downloads / License",
+              "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek",
+              "org-deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek-R1",
+            "version": "DeepSeek-R1-Distill-Qwen-1.5B",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT; 蒸馏基座另核",
+            "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+            "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+            "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+            "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "r1"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+              "locator": "Model Downloads / License",
+              "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek",
+              "org-deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "zai-org/GLM-4.5",
+            "vendor": "Z.ai / 智谱",
+            "country": "CN",
+            "family": "GLM-4.5",
+            "version": "GLM-4.5",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT (weights)",
+            "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5",
+            "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5",
+            "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5",
+            "repositoryURL": "https://github.com/zai-org/GLM-4.5",
+            "paperURL": "https://arxiv.org/abs/2508.06471",
+            "tutorialURL": "https://github.com/zai-org/GLM-4.5",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "glm"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/zai-org/GLM-4.5",
+              "locator": "Model Downloads / GLM-4.5",
+              "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "模型卡MIT；仓库代码Apache不得混用。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "zai-org/GLM-4.5-Air",
+            "vendor": "Z.ai / 智谱",
+            "country": "CN",
+            "family": "GLM-4.5",
+            "version": "GLM-4.5-Air",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT (weights)",
+            "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+            "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+            "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+            "repositoryURL": "https://github.com/zai-org/GLM-4.5",
+            "paperURL": "https://arxiv.org/abs/2508.06471",
+            "tutorialURL": "https://github.com/zai-org/GLM-4.5",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "glm"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/zai-org/GLM-4.5",
+              "locator": "Model Downloads / GLM-4.5",
+              "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "模型卡MIT；仓库代码Apache不得混用。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "Kimi-K2-Base",
+            "vendor": "Moonshot AI",
+            "country": "CN",
+            "family": "Kimi-K2",
+            "version": "Kimi-K2-Base",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Modified MIT",
+            "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE",
+            "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+            "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "paperURL": "https://arxiv.org/abs/2507.20534",
+            "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "kimi",
+              "kimi-base-card-qa"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/MoonshotAI/Kimi-K2",
+              "locator": "Model Variants / License",
+              "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+            "access_observations": [
+              {
+                "checked_at": "2026-10-28T19:35:44Z",
+                "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Base",
+                "outcome": "tool_reported_not_accessible",
+                "scope": "single_historical_attempt_not_global_availability"
+              },
+              {
+                "checked_at": "2026-10-28T19:46:00Z",
+                "url": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+                "outcome": "primary_modelcard_read",
+                "observer": "independent_audit_asia_catalog_facts",
+                "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"
+              }
+            ]
+          },
+          {
+            "exactid": "Kimi-K2-Instruct",
+            "vendor": "Moonshot AI",
+            "country": "CN",
+            "family": "Kimi-K2",
+            "version": "Kimi-K2-Instruct",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Modified MIT",
+            "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE",
+            "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+            "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "paperURL": "https://arxiv.org/abs/2507.20534",
+            "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "kimi",
+              "kimi-instruct-card-qa"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/MoonshotAI/Kimi-K2",
+              "locator": "Model Variants / License",
+              "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+            "access_observations": [
+              {
+                "checked_at": "2026-10-28T19:35:44Z",
+                "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Instruct",
+                "outcome": "tool_reported_not_accessible",
+                "scope": "single_historical_attempt_not_global_availability"
+              },
+              {
+                "checked_at": "2026-10-28T19:46:00Z",
+                "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+                "outcome": "primary_modelcard_read",
+                "observer": "independent_audit_asia_catalog_facts",
+                "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"
+              }
+            ]
+          },
+          {
+            "exactid": "MiniMaxAI/MiniMax-M1-40k",
+            "vendor": "MiniMax",
+            "country": "CN",
+            "family": "MiniMax-M1",
+            "version": "MiniMax-M1-40k",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+            "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+            "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+            "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+            "paperURL": "https://arxiv.org/abs/2506.13585",
+            "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "minimax"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+              "locator": "Introduction / Citation",
+              "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "MiniMaxAI/MiniMax-M1-80k",
+            "vendor": "MiniMax",
+            "country": "CN",
+            "family": "MiniMax-M1",
+            "version": "MiniMax-M1-80k",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+            "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+            "paperURL": "https://arxiv.org/abs/2506.13585",
+            "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "minimax"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+              "locator": "Introduction / Citation",
+              "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "ERNIE-4.5-300B-A47B-Base",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-300B-A47B-Base",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-300B-A47B",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-300B-A47B",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-21B-A3B-Base",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-21B-A3B-Base",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-21B-A3B",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-21B-A3B",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-VL-424B-A47B-Base",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-VL-424B-A47B-Base",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-VL-424B-A47B",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-VL-424B-A47B",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-VL-28B-A3B-Base",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-VL-28B-A3B-Base",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-VL-28B-A3B",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-VL-28B-A3B",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-0.3B-Base",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-0.3B-Base",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ERNIE-4.5-0.3B",
+            "vendor": "Baidu",
+            "country": "CN",
+            "family": "ERNIE 4.5",
+            "version": "ERNIE-4.5-0.3B",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+            "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+            "paperURL": null,
+            "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "ernie"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/PaddlePaddle/ERNIE",
+              "locator": "ERNIE 4.5 Models",
+              "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "ByteDance-Seed/Seed-Coder-8B-Base",
+            "vendor": "ByteDance Seed",
+            "country": "CN",
+            "family": "Seed-Coder",
+            "version": "Seed-Coder-8B-Base",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT",
+            "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+            "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+            "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "paperURL": "https://arxiv.org/abs/2506.03524",
+            "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "seed"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+              "locator": "News / Quick Start",
+              "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+            },
+            "release_dates": {
+              "announced": "2025-05-08",
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "ByteDance-Seed/Seed-Coder-8B-Instruct",
+            "vendor": "ByteDance Seed",
+            "country": "CN",
+            "family": "Seed-Coder",
+            "version": "Seed-Coder-8B-Instruct",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT",
+            "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+            "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+            "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "paperURL": "https://arxiv.org/abs/2506.03524",
+            "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "seed"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+              "locator": "News / Quick Start",
+              "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+            },
+            "release_dates": {
+              "announced": "2025-05-08",
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "ByteDance-Seed/Seed-Coder-8B-Reasoning",
+            "vendor": "ByteDance Seed",
+            "country": "CN",
+            "family": "Seed-Coder",
+            "version": "Seed-Coder-8B-Reasoning",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT",
+            "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning",
+            "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning",
+            "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "paperURL": "https://arxiv.org/abs/2506.03524",
+            "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "seed"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+              "locator": "News / Quick Start",
+              "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+            },
+            "release_dates": {
+              "announced": "2025-05-08",
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "HunyuanVideo",
+            "vendor": "Tencent Hunyuan",
+            "country": "CN",
+            "family": "HunyuanVideo",
+            "version": "HunyuanVideo",
+            "entity_type": "named_model_variant",
+            "modality": [
+              "video_generation"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "video"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Tencent custom license",
+            "official_licenseURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo/blob/main/LICENSE.txt",
+            "license_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+            "modelcardURL": null,
+            "repositoryURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+            "paperURL": "https://arxiv.org/abs/2412.03603",
+            "tutorialURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "hunyuan"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+              "locator": "News / Open-source Plan",
+              "claim_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": "2024-12-03",
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "Qwen/Qwen2.5-Omni-3B",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen2.5-Omni",
+            "version": "Qwen2.5-Omni-3B",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm",
+              "vlm",
+              "audio_understanding",
+              "speech_generation"
+            ],
+            "input_modalities": [
+              "text",
+              "image",
+              "audio",
+              "video"
+            ],
+            "output_modalities": [
+              "text",
+              "audio"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "qwen-research",
+            "official_licenseURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+            "repositoryURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+            "paperURL": "https://arxiv.org/abs/2503.20215",
+            "tutorialURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "omni",
+              "omni-3b-card-license-qa",
+              "omni-3b-weight-license-qa"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+              "locator": "News / Overview",
+              "claim_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": "2025-04-30",
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "QA更正：3B权重模型卡声明qwen-research；仓库代码Apache-2.0不适用于据此推断权重许可。",
+            "edge": {
+              "status": "official_family_deployment_reference",
+              "url": "https://github.com/QwenLM/Qwen2.5-Omni#deployment-with-mnn",
+              "note": "不是端侧性能实测，3B具体硬件门槛未复验。"
+            },
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+            "weights_license": {
+              "identifier": "qwen-research",
+              "evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+              "locator": "Qwen RESEARCH LICENSE AGREEMENT §§1.i, 2.a, 2.b (lines 117-136)",
+              "commercial_use": "requires_requesting_separate_license_per_section_2b",
+              "use_conditions": "条文§1.i定义非商用为研究或评估；§2.a许可限非商用；§2.b商用须向许可方申请。其他条件见完整权重许可，不推断授权已经获得。",
+              "legal_terms_status": "primary_terms_read",
+              "license_template_date_not_model_release": true
+            },
+            "repository_code_license": {
+              "identifier": "Apache-2.0",
+              "url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE",
+              "scope": "repository_code_not_model_weights"
+            }
+          },
+          {
+            "exactid": "Qwen/Qwen-Image",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen-Image",
+            "version": "Qwen-Image",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "image_generation"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "image"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": null,
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image",
+            "repositoryURL": "https://github.com/QwenLM/Qwen-Image",
+            "paperURL": "https://arxiv.org/abs/2508.02324",
+            "tutorialURL": "https://github.com/QwenLM/Qwen-Image",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "image"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen-Image",
+              "locator": "News",
+              "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": "2025-08-04",
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image",
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "unverified",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "Qwen/Qwen-Image-2512",
+            "vendor": "Alibaba/Qwen",
+            "country": "CN",
+            "family": "Qwen-Image",
+            "version": "Qwen-Image-2512",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "image_generation"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "image"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+            "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+            "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+            "repositoryURL": "https://github.com/QwenLM/Qwen-Image",
+            "paperURL": "https://arxiv.org/abs/2508.02324",
+            "tutorialURL": "https://github.com/QwenLM/Qwen-Image",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "image"
+            ],
+            "sourceproof": {
+              "url": "https://github.com/QwenLM/Qwen-Image",
+              "locator": "News",
+              "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": "2025-12-31",
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image",
+            "existingIDs": [
+              "qwen",
+              "org-qwen"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "paper_scope": "family_original_report_not_version_specific",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "BAAI/bge-m3",
+            "vendor": "BAAI",
+            "country": "CN",
+            "family": "BGE",
+            "version": "bge-m3",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "text_embedding"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "embedding",
+              "sparse_weights",
+              "multi_vector"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "MIT",
+            "official_licenseURL": "https://huggingface.co/BAAI/bge-m3",
+            "license_evidenceURL": "https://huggingface.co/BAAI/bge-m3",
+            "modelcardURL": "https://huggingface.co/BAAI/bge-m3",
+            "repositoryURL": null,
+            "paperURL": "https://arxiv.org/pdf/2402.03216.pdf",
+            "tutorialURL": "https://huggingface.co/BAAI/bge-m3",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "bge"
+            ],
+            "sourceproof": {
+              "url": "https://huggingface.co/BAAI/bge-m3",
+              "locator": "Model card / License",
+              "claim_zh": "文本嵌入模型，非聊天LLM；MIT。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+          },
+          {
+            "exactid": "sarvamai/sarvam-m",
+            "vendor": "Sarvam AI",
+            "country": "IN",
+            "family": "Sarvam-M",
+            "version": "sarvam-m",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://huggingface.co/sarvamai/sarvam-m",
+            "license_evidenceURL": "https://huggingface.co/sarvamai/sarvam-m",
+            "modelcardURL": "https://huggingface.co/sarvamai/sarvam-m",
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://huggingface.co/sarvamai/sarvam-m",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "sarvam"
+            ],
+            "sourceproof": {
+              "url": "https://huggingface.co/sarvamai/sarvam-m",
+              "locator": "Model Information / Quickstart",
+              "claim_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "sarvam"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "",
+            "license_url_kind": "official_declaration_or_modelcard",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+            "vendor": "LG AI Research",
+            "country": "KR",
+            "family": "EXAONE 3.5",
+            "version": "EXAONE-3.5-7.8B-Instruct",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "EXAONE AI Model License Agreement 1.1 - NC",
+            "official_licenseURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct/tree/main/LICENSE",
+            "license_evidenceURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+            "modelcardURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+            "repositoryURL": null,
+            "paperURL": "https://arxiv.org/abs/2412.04862",
+            "tutorialURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "exaone"
+            ],
+            "sourceproof": {
+              "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+              "locator": "License / Citation",
+              "claim_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。",
+            "license_url_status": "404_not_found",
+            "license_url_kind": "legal_text",
+            "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+            "legal_terms_status": "unknown_license_file_404"
+          },
+          {
+            "exactid": "llm-jp/llm-jp-3-3.7b-instruct",
+            "vendor": "NII / LLM-jp",
+            "country": "JP",
+            "family": "LLM-jp 3",
+            "version": "llm-jp-3-3.7b-instruct",
+            "entity_type": "model_checkpoint",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "open_weight",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "Apache-2.0",
+            "official_licenseURL": "https://www.apache.org/licenses/LICENSE-2.0",
+            "license_evidenceURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+            "modelcardURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "llmjp"
+            ],
+            "sourceproof": {
+              "url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+              "locator": "Model Variants / License",
+              "claim_zh": "日本NII模型；日英文本；Apache-2.0。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [],
+            "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+            "notes_zh": "",
+            "license_url_kind": "legal_text",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "deepseek-flash",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek API",
+            "version": "DeepSeek-V4.1-Flash-1017",
+            "entity_type": "api_alias",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "api_documented_weights_unknown",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "unknown",
+            "official_licenseURL": null,
+            "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "modelcardURL": null,
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "dsapi"
+            ],
+            "sourceproof": {
+              "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+              "locator": "Model Details / footnote 1",
+              "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。",
+            "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+            "license_url_kind": "unverified",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "deepseek-v4-pro",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek API",
+            "version": "DeepSeek-V4-Pro-0813",
+            "entity_type": "api_alias",
+            "modality": [
+              "llm"
+            ],
+            "input_modalities": [
+              "text"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "api_documented_weights_unknown",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+            },
+            "official_license": "unknown",
+            "official_licenseURL": null,
+            "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "modelcardURL": null,
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "dsapi"
+            ],
+            "sourceproof": {
+              "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+              "locator": "Model Details / footnote 1",
+              "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。",
+            "resolved_snapshot": "DeepSeek-V4-Pro-0813",
+            "license_url_kind": "unverified",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "deepseek-v4-flash",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek API",
+            "version": "legacy alias",
+            "entity_type": "legacy_api_alias",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "api_redirect_alias",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。",
+              "original_backing_model_status": "retired"
+            },
+            "official_license": "unknown",
+            "official_licenseURL": null,
+            "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "modelcardURL": null,
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "dsapi"
+            ],
+            "sourceproof": {
+              "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+              "locator": "Model Details / footnote 1",
+              "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。",
+            "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+            "license_url_kind": "unverified",
+            "paper_status": "unknown"
+          },
+          {
+            "exactid": "deepseek-v4-flash-vision-exp",
+            "vendor": "DeepSeek",
+            "country": "CN",
+            "family": "DeepSeek API",
+            "version": "legacy alias",
+            "entity_type": "legacy_api_alias",
+            "modality": [
+              "vlm"
+            ],
+            "input_modalities": [
+              "text",
+              "image"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "access": "api_redirect_alias",
+            "lifecycle": {
+              "access_status": "current_documented",
+              "service_status": "unknown",
+              "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。",
+              "original_backing_model_status": "retired"
+            },
+            "official_license": "unknown",
+            "official_licenseURL": null,
+            "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "modelcardURL": null,
+            "repositoryURL": null,
+            "paperURL": null,
+            "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "tutorial_status": "official_reference_not_executed",
+            "sourcecheckdate": "2026-10-28",
+            "source_ids": [
+              "dsapi"
+            ],
+            "sourceproof": {
+              "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+              "locator": "Model Details / footnote 1",
+              "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+            },
+            "release_dates": {
+              "announced": null,
+              "weights_released": null,
+              "api_launched": null,
+              "paper_first_submitted": null
+            },
+            "date_evidenceURL": null,
+            "existingIDs": [
+              "deepseek"
+            ],
+            "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+            "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。",
+            "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+            "license_url_kind": "unverified",
+            "paper_status": "unknown"
+          }
+        ],
+        "sources": [
+          {
+            "id": "qwen3",
+            "url": "https://github.com/QwenLM/Qwen3",
+            "locator": "Introduction / License Agreement",
+            "sourceproof_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "r1",
+            "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+            "locator": "Model Downloads / License",
+            "sourceproof_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "glm",
+            "url": "https://github.com/zai-org/GLM-4.5",
+            "locator": "Model Downloads / GLM-4.5",
+            "sourceproof_zh": "4.5与Air权重为MIT；不能以仓库Apache代码许可替代权重许可。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "kimi",
+            "url": "https://github.com/MoonshotAI/Kimi-K2",
+            "locator": "Model Variants / License",
+            "sourceproof_zh": "列明Base与Instruct；定制许可，不当作无条件MIT。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "minimax",
+            "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+            "locator": "Introduction / Citation",
+            "sourceproof_zh": "40k与80k是两个思考预算权重变体，不是发布日期。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "ernie",
+            "url": "https://github.com/PaddlePaddle/ERNIE",
+            "locator": "ERNIE 4.5 Models",
+            "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "seed",
+            "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+            "locator": "News / Quick Start",
+            "sourceproof_zh": "2025/05/08发布；Base/Instruct/Reasoning；Doubao-Coder旧称不重复计数。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "hunyuan",
+            "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+            "locator": "News / Open-source Plan",
+            "sourceproof_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "omni",
+            "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+            "locator": "News / Overview",
+            "sourceproof_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "image",
+            "url": "https://github.com/QwenLM/Qwen-Image",
+            "locator": "News",
+            "sourceproof_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "bge",
+            "url": "https://huggingface.co/BAAI/bge-m3",
+            "locator": "Model card / License",
+            "sourceproof_zh": "文本嵌入模型，非聊天LLM；MIT。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "sarvam",
+            "url": "https://huggingface.co/sarvamai/sarvam-m",
+            "locator": "Model Information / Quickstart",
+            "sourceproof_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "exaone",
+            "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+            "locator": "License / Citation",
+            "sourceproof_zh": "EXAONE AI Model License Agreement 1.1-NC；许可文件链接404。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "llmjp",
+            "url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+            "locator": "Model Variants / License",
+            "sourceproof_zh": "日本NII模型；日英文本；Apache-2.0。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "dsapi",
+            "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+            "locator": "Model Details / footnote 1",
+            "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "omni-3b-card-license-qa",
+            "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+            "locator": "Model card metadata, License (line 56)",
+            "sourceproof_zh": "3B权重模型卡许可标识为qwen-research；代码仓库Apache-2.0不能替代。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          },
+          {
+            "id": "kimi-base-card-qa",
+            "url": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+            "locator": "header lines 40-58",
+            "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。",
+            "sourcecheckdate": "2026-10-28",
+            "checked_at": "2026-10-28T19:46:00Z",
+            "status": "primary_content_read_by_independent_auditor"
+          },
+          {
+            "id": "kimi-instruct-card-qa",
+            "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+            "locator": "header lines 40-58",
+            "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。",
+            "sourcecheckdate": "2026-10-28",
+            "checked_at": "2026-10-28T19:46:00Z",
+            "status": "primary_content_read_by_independent_auditor"
+          },
+          {
+            "id": "omni-3b-weight-license-qa",
+            "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+            "locator": "§§1.i, 2.a, 2.b; lines 117-136",
+            "sourceproof_zh": "权重Qwen RESEARCH LICENSE AGREEMENT限制为非商用研究或评估；商用须申请许可。模板日期不是模型发布日期。",
+            "sourcecheckdate": "2026-10-28",
+            "status": "primary_content_read"
+          }
+        ],
+        "coverage_matrix": [
+          {
+            "country": "CN",
+            "vendors": [
+              "Alibaba/Qwen",
+              "BAAI",
+              "Baidu",
+              "ByteDance Seed",
+              "DeepSeek",
+              "MiniMax",
+              "Moonshot AI",
+              "Tencent Hunyuan",
+              "Z.ai / 智谱"
+            ],
+            "records": 34,
+            "coverage": "representative_not_exhaustive"
+          },
+          {
+            "country": "IN",
+            "vendors": [
+              "Sarvam AI"
+            ],
+            "records": 1,
+            "coverage": "representative_not_exhaustive"
+          },
+          {
+            "country": "KR",
+            "vendors": [
+              "LG AI Research"
+            ],
+            "records": 1,
+            "coverage": "representative_not_exhaustive"
+          },
+          {
+            "country": "JP",
+            "vendors": [
+              "NII / LLM-jp"
+            ],
+            "records": 1,
+            "coverage": "representative_not_exhaustive"
+          }
+        ],
+        "gaps": [
+          "未穷举各家所有历史、私有API、量化及派生权重；不能宣称齐全。",
+          "多数发布日期无明确证据而为null，不从版本号、论文号或git日期猜。",
+          "Kimi初次HF访问失败仅保留为历史观察，独立QA后续已读到官方卡；EXAONE许可链接404，完整条文unknown；百度AIStudio页面无有效正文，以官方repo替代。",
+          "PaperURL为null即本批未核实；licenseURL可为官方许可声明而非完整合同。",
+          "current_documented仅文档存在，非当前托管API仍支持保证；旧公开权重不因较老而标弃用。",
+          "印度/韩国/日本仅代表公开模型；亚洲其他国家未覆盖。",
+          "模型权重未下载；代码、API及教程均未执行；无性能排名。"
+        ],
+        "validation": {
+          "unique_exactids": true,
+          "existing_ids_valid": true,
+          "record_count": 37,
+          "model_records_excluding_api_aliases": 33,
+          "source_count": 19
+        },
+        "metadata_qa_revision": {
+          "date": "2026-10-28",
+          "status": "pending_independent_recheck",
+          "scope": "Kimi访问观察与来源、Omni3B权重/代码许可分离、R1报告/checkpoint实体关系、EXAONE条文unknown",
+          "changed_records": [
+            {
+              "exactid": "deepseek-ai/DeepSeek-R1",
+              "changed_fields": [
+                "dedup_recommendation"
+              ]
+            },
+            {
+              "exactid": "Kimi-K2-Base",
+              "changed_fields": [
+                "access_observations",
+                "modelcardURL",
+                "notes_zh",
+                "source_ids",
+                "sourceproof"
+              ]
+            },
+            {
+              "exactid": "Kimi-K2-Instruct",
+              "changed_fields": [
+                "access_observations",
+                "modelcardURL",
+                "notes_zh",
+                "source_ids",
+                "sourceproof"
+              ]
+            },
+            {
+              "exactid": "Qwen/Qwen2.5-Omni-3B",
+              "changed_fields": [
+                "notes_zh",
+                "official_license",
+                "official_licenseURL",
+                "repository_code_license",
+                "source_ids",
+                "weights_license"
+              ]
+            },
+            {
+              "exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+              "changed_fields": [
+                "legal_terms_status"
+              ]
+            }
+          ],
+          "all_37_record_dates_modalities_identity_access_unchanged": true,
+          "unchanged_record_count": 32
+        }
+      }
+    }
+  ],
+  "admission": {
+    "accepted": [
+      {
+        "file": "global.json",
+        "sha256": "a89967e0b90308a8b581d768a1971d5bc7aa1615ab6f8f23bcab7e4d83e056d6",
+        "disposition": "approve_with_limits",
+        "limits": "代表性第一批；非完整历史目录；来源检查非执行验证。"
+      },
+      {
+        "file": "asia.json",
+        "sha256": "0992a408fe836216597e00b6a1ff9bf76a67562025f385512417cd1bc6914aa7",
+        "disposition": "accept_with_caveats",
+        "decision_file": "asia-final-dispositions.json",
+        "decision_sha256": "9785ad00041520acc0d65a477252ac244b874f8ef668b1c93f20d4de00598b2e",
+        "limits": "最终37条accept_with_caveats；raw pending和初次访问失败是历史记录，不代表当前接纳状态。Kimi QA观察时间精度到分钟。"
+      }
+    ],
+    "held": []
+  }
+}

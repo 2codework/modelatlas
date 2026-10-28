@@ -1,0 +1,2320 @@
+{
+  "schema_version": "modelatlas.vendor_catalog_research.v1",
+  "sourcecheckdate": "2026-10-28",
+  "scope": "亚洲代表供应商精确版本候选；不是全历史全厂商目录",
+  "existing_data_path": "github-migration-r1/public/modelatlas/dist/data.json",
+  "existing_data_version": "0.2.2",
+  "records": [
+    {
+      "exactid": "Qwen/Qwen3-0.6B",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen3",
+      "version": "Qwen3-0.6B",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "repositoryURL": "https://github.com/QwenLM/Qwen3",
+      "paperURL": "https://arxiv.org/abs/2505.09388",
+      "tutorialURL": "https://github.com/QwenLM/Qwen3",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "qwen3"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen3",
+        "locator": "Introduction / License Agreement",
+        "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "Qwen/Qwen3-8B",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen3",
+      "version": "Qwen3-8B",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-8B",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen3-8B",
+      "repositoryURL": "https://github.com/QwenLM/Qwen3",
+      "paperURL": "https://arxiv.org/abs/2505.09388",
+      "tutorialURL": "https://github.com/QwenLM/Qwen3",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "qwen3"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen3",
+        "locator": "Introduction / License Agreement",
+        "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen3",
+      "version": "Qwen3-235B-A22B-Instruct-2507",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/QwenLM/Qwen3#license-agreement",
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "repositoryURL": "https://github.com/QwenLM/Qwen3",
+      "paperURL": "https://arxiv.org/abs/2505.09388",
+      "tutorialURL": "https://github.com/QwenLM/Qwen3",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "qwen3"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen3",
+        "locator": "Introduction / License Agreement",
+        "claim_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "paper_scope": "family_original_report_not_version_specific",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek-R1",
+      "version": "DeepSeek-R1",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT; 蒸馏基座另核",
+      "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+      "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "r1"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+        "locator": "Model Downloads / License",
+        "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek",
+        "deepseek-r1-2025"
+      ],
+      "dedup_recommendation": "deepseek-r1-2025是原paper-v1报告锚点，不是checkpoint同一实体；checkpoint独立建模并关联原报告与deepseek家族，不自动合并或覆盖旧节点。",
+      "notes_zh": "",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1-Zero",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek-R1",
+      "version": "DeepSeek-R1-Zero",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT; 蒸馏基座另核",
+      "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero",
+      "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Zero",
+      "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+      "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "r1"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+        "locator": "Model Downloads / License",
+        "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek-R1",
+      "version": "DeepSeek-R1-Distill-Qwen-1.5B",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT; 蒸馏基座另核",
+      "official_licenseURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "modelcardURL": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "repositoryURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "paperURL": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf",
+      "tutorialURL": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "r1"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+        "locator": "Model Downloads / License",
+        "claim_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "zai-org/GLM-4.5",
+      "vendor": "Z.ai / 智谱",
+      "country": "CN",
+      "family": "GLM-4.5",
+      "version": "GLM-4.5",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT (weights)",
+      "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5",
+      "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5",
+      "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5",
+      "repositoryURL": "https://github.com/zai-org/GLM-4.5",
+      "paperURL": "https://arxiv.org/abs/2508.06471",
+      "tutorialURL": "https://github.com/zai-org/GLM-4.5",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "glm"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/zai-org/GLM-4.5",
+        "locator": "Model Downloads / GLM-4.5",
+        "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "模型卡MIT；仓库代码Apache不得混用。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "zai-org/GLM-4.5-Air",
+      "vendor": "Z.ai / 智谱",
+      "country": "CN",
+      "family": "GLM-4.5",
+      "version": "GLM-4.5-Air",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT (weights)",
+      "official_licenseURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+      "license_evidenceURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+      "modelcardURL": "https://huggingface.co/zai-org/GLM-4.5-Air",
+      "repositoryURL": "https://github.com/zai-org/GLM-4.5",
+      "paperURL": "https://arxiv.org/abs/2508.06471",
+      "tutorialURL": "https://github.com/zai-org/GLM-4.5",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "glm"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/zai-org/GLM-4.5",
+        "locator": "Model Downloads / GLM-4.5",
+        "claim_zh": "模型卡MIT；仓库代码Apache不得混用。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "模型卡MIT；仓库代码Apache不得混用。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "Kimi-K2-Base",
+      "vendor": "Moonshot AI",
+      "country": "CN",
+      "family": "Kimi-K2",
+      "version": "Kimi-K2-Base",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Modified MIT",
+      "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE",
+      "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+      "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "paperURL": "https://arxiv.org/abs/2507.20534",
+      "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "kimi",
+        "kimi-base-card-qa"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/MoonshotAI/Kimi-K2",
+        "locator": "Model Variants / License",
+        "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+      "access_observations": [
+        {
+          "checked_at": "2026-10-28T19:35:44Z",
+          "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Base",
+          "outcome": "tool_reported_not_accessible",
+          "scope": "single_historical_attempt_not_global_availability"
+        },
+        {
+          "checked_at": "2026-10-28T19:46:00Z",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+          "outcome": "primary_modelcard_read",
+          "observer": "independent_audit_asia_catalog_facts",
+          "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"
+        }
+      ]
+    },
+    {
+      "exactid": "Kimi-K2-Instruct",
+      "vendor": "Moonshot AI",
+      "country": "CN",
+      "family": "Kimi-K2",
+      "version": "Kimi-K2-Instruct",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Modified MIT",
+      "official_licenseURL": "https://github.com/MoonshotAI/Kimi-K2/blob/main/LICENSE",
+      "license_evidenceURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "modelcardURL": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "repositoryURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "paperURL": "https://arxiv.org/abs/2507.20534",
+      "tutorialURL": "https://github.com/MoonshotAI/Kimi-K2",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "kimi",
+        "kimi-instruct-card-qa"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/MoonshotAI/Kimi-K2",
+        "locator": "Model Variants / License",
+        "claim_zh": "官方repo确认变体；初次HF访问失败为历史工具观察，独立QA已读取官方HF模型卡。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "初次访问大写MoonshotAI URL工具返回不可访问；独立QA于2026-10-28 19:46 UTC成功读取小写moonshotai官方模型卡，确认Text Generation与modified-mit，不再将初次结果描述为当前全局不可访问。",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+      "access_observations": [
+        {
+          "checked_at": "2026-10-28T19:35:44Z",
+          "url": "https://huggingface.co/MoonshotAI/Kimi-K2-Instruct",
+          "outcome": "tool_reported_not_accessible",
+          "scope": "single_historical_attempt_not_global_availability"
+        },
+        {
+          "checked_at": "2026-10-28T19:46:00Z",
+          "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+          "outcome": "primary_modelcard_read",
+          "observer": "independent_audit_asia_catalog_facts",
+          "locator": "header lines 40-58: publisher/model ID, Text Generation, License modified-mit"
+        }
+      ]
+    },
+    {
+      "exactid": "MiniMaxAI/MiniMax-M1-40k",
+      "vendor": "MiniMax",
+      "country": "CN",
+      "family": "MiniMax-M1",
+      "version": "MiniMax-M1-40k",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+      "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+      "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+      "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "paperURL": "https://arxiv.org/abs/2506.13585",
+      "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "minimax"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+        "locator": "Introduction / Citation",
+        "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "MiniMaxAI/MiniMax-M1-80k",
+      "vendor": "MiniMax",
+      "country": "CN",
+      "family": "MiniMax-M1",
+      "version": "MiniMax-M1-80k",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "license_evidenceURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "modelcardURL": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+      "repositoryURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "paperURL": "https://arxiv.org/abs/2506.13585",
+      "tutorialURL": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "minimax"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+        "locator": "Introduction / Citation",
+        "claim_zh": "40k与80k是两个思考预算权重变体，不是发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "ERNIE-4.5-300B-A47B-Base",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-300B-A47B-Base",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-300B-A47B",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-300B-A47B",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-21B-A3B-Base",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-21B-A3B-Base",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-21B-A3B",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-21B-A3B",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-424B-A47B-Base",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-VL-424B-A47B-Base",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-424B-A47B",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-VL-424B-A47B",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-28B-A3B-Base",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-VL-28B-A3B-Base",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-28B-A3B",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-VL-28B-A3B",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-0.3B-Base",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-0.3B-Base",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ERNIE-4.5-0.3B",
+      "vendor": "Baidu",
+      "country": "CN",
+      "family": "ERNIE 4.5",
+      "version": "ERNIE-4.5-0.3B",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://github.com/PaddlePaddle/ERNIE#license",
+      "license_evidenceURL": "https://github.com/PaddlePaddle/ERNIE",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/PaddlePaddle/ERNIE",
+      "paperURL": null,
+      "tutorialURL": "https://github.com/PaddlePaddle/ERNIE",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "ernie"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/PaddlePaddle/ERNIE",
+        "locator": "ERNIE 4.5 Models",
+        "claim_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "官方表格名称；PT/Paddle分发格式不另算新训练模型，具体artifact待逐一绑定。",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Base",
+      "vendor": "ByteDance Seed",
+      "country": "CN",
+      "family": "Seed-Coder",
+      "version": "Seed-Coder-8B-Base",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT",
+      "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+      "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+      "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "paperURL": "https://arxiv.org/abs/2506.03524",
+      "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "seed"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+        "locator": "News / Quick Start",
+        "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+      },
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Instruct",
+      "vendor": "ByteDance Seed",
+      "country": "CN",
+      "family": "Seed-Coder",
+      "version": "Seed-Coder-8B-Instruct",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT",
+      "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+      "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+      "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "paperURL": "https://arxiv.org/abs/2506.03524",
+      "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "seed"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+        "locator": "News / Quick Start",
+        "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+      },
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Reasoning",
+      "vendor": "ByteDance Seed",
+      "country": "CN",
+      "family": "Seed-Coder",
+      "version": "Seed-Coder-8B-Reasoning",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT",
+      "official_licenseURL": "https://github.com/ByteDance-Seed/Seed-Coder/blob/master/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning",
+      "modelcardURL": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning",
+      "repositoryURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "paperURL": "https://arxiv.org/abs/2506.03524",
+      "tutorialURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "seed"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+        "locator": "News / Quick Start",
+        "claim_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。"
+      },
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "Doubao-Coder为家族旧称；bf16为格式变体不再算独立训练模型。",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "HunyuanVideo",
+      "vendor": "Tencent Hunyuan",
+      "country": "CN",
+      "family": "HunyuanVideo",
+      "version": "HunyuanVideo",
+      "entity_type": "named_model_variant",
+      "modality": [
+        "video_generation"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "video"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Tencent custom license",
+      "official_licenseURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo/blob/main/LICENSE.txt",
+      "license_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "modelcardURL": null,
+      "repositoryURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "paperURL": "https://arxiv.org/abs/2412.03603",
+      "tutorialURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "hunyuan"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+        "locator": "News / Open-source Plan",
+        "claim_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2024-12-03",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "Qwen/Qwen2.5-Omni-3B",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen2.5-Omni",
+      "version": "Qwen2.5-Omni-3B",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm",
+        "vlm",
+        "audio_understanding",
+        "speech_generation"
+      ],
+      "input_modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "output_modalities": [
+        "text",
+        "audio"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "qwen-research",
+      "official_licenseURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+      "repositoryURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "paperURL": "https://arxiv.org/abs/2503.20215",
+      "tutorialURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "omni",
+        "omni-3b-card-license-qa",
+        "omni-3b-weight-license-qa"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+        "locator": "News / Overview",
+        "claim_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-04-30",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "QA更正：3B权重模型卡声明qwen-research；仓库代码Apache-2.0不适用于据此推断权重许可。",
+      "edge": {
+        "status": "official_family_deployment_reference",
+        "url": "https://github.com/QwenLM/Qwen2.5-Omni#deployment-with-mnn",
+        "note": "不是端侧性能实测，3B具体硬件门槛未复验。"
+      },
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+      "weights_license": {
+        "identifier": "qwen-research",
+        "evidenceURL": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+        "locator": "Qwen RESEARCH LICENSE AGREEMENT §§1.i, 2.a, 2.b (lines 117-136)",
+        "commercial_use": "requires_requesting_separate_license_per_section_2b",
+        "use_conditions": "条文§1.i定义非商用为研究或评估；§2.a许可限非商用；§2.b商用须向许可方申请。其他条件见完整权重许可，不推断授权已经获得。",
+        "legal_terms_status": "primary_terms_read",
+        "license_template_date_not_model_release": true
+      },
+      "repository_code_license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE",
+        "scope": "repository_code_not_model_weights"
+      }
+    },
+    {
+      "exactid": "Qwen/Qwen-Image",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen-Image",
+      "version": "Qwen-Image",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "image_generation"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": null,
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image",
+      "repositoryURL": "https://github.com/QwenLM/Qwen-Image",
+      "paperURL": "https://arxiv.org/abs/2508.02324",
+      "tutorialURL": "https://github.com/QwenLM/Qwen-Image",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "image"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen-Image",
+        "locator": "News",
+        "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-08-04",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image",
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "unverified",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "Qwen/Qwen-Image-2512",
+      "vendor": "Alibaba/Qwen",
+      "country": "CN",
+      "family": "Qwen-Image",
+      "version": "Qwen-Image-2512",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "image_generation"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+      "license_evidenceURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+      "modelcardURL": "https://huggingface.co/Qwen/Qwen-Image-2512",
+      "repositoryURL": "https://github.com/QwenLM/Qwen-Image",
+      "paperURL": "https://arxiv.org/abs/2508.02324",
+      "tutorialURL": "https://github.com/QwenLM/Qwen-Image",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "image"
+      ],
+      "sourceproof": {
+        "url": "https://github.com/QwenLM/Qwen-Image",
+        "locator": "News",
+        "claim_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-12-31",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": "https://github.com/QwenLM/Qwen-Image",
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "paper_scope": "family_original_report_not_version_specific",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "BAAI/bge-m3",
+      "vendor": "BAAI",
+      "country": "CN",
+      "family": "BGE",
+      "version": "bge-m3",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "text_embedding"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "embedding",
+        "sparse_weights",
+        "multi_vector"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "MIT",
+      "official_licenseURL": "https://huggingface.co/BAAI/bge-m3",
+      "license_evidenceURL": "https://huggingface.co/BAAI/bge-m3",
+      "modelcardURL": "https://huggingface.co/BAAI/bge-m3",
+      "repositoryURL": null,
+      "paperURL": "https://arxiv.org/pdf/2402.03216.pdf",
+      "tutorialURL": "https://huggingface.co/BAAI/bge-m3",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "bge"
+      ],
+      "sourceproof": {
+        "url": "https://huggingface.co/BAAI/bge-m3",
+        "locator": "Model card / License",
+        "claim_zh": "文本嵌入模型，非聊天LLM；MIT。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed"
+    },
+    {
+      "exactid": "sarvamai/sarvam-m",
+      "vendor": "Sarvam AI",
+      "country": "IN",
+      "family": "Sarvam-M",
+      "version": "sarvam-m",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://huggingface.co/sarvamai/sarvam-m",
+      "license_evidenceURL": "https://huggingface.co/sarvamai/sarvam-m",
+      "modelcardURL": "https://huggingface.co/sarvamai/sarvam-m",
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://huggingface.co/sarvamai/sarvam-m",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "sarvam"
+      ],
+      "sourceproof": {
+        "url": "https://huggingface.co/sarvamai/sarvam-m",
+        "locator": "Model Information / Quickstart",
+        "claim_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "sarvam"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "",
+      "license_url_kind": "official_declaration_or_modelcard",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "vendor": "LG AI Research",
+      "country": "KR",
+      "family": "EXAONE 3.5",
+      "version": "EXAONE-3.5-7.8B-Instruct",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "EXAONE AI Model License Agreement 1.1 - NC",
+      "official_licenseURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct/tree/main/LICENSE",
+      "license_evidenceURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "modelcardURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "repositoryURL": null,
+      "paperURL": "https://arxiv.org/abs/2412.04862",
+      "tutorialURL": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "exaone"
+      ],
+      "sourceproof": {
+        "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "locator": "License / Citation",
+        "claim_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "模型卡确认NC许可；卡片所链许可文件返回404，条文核验缺口。",
+      "license_url_status": "404_not_found",
+      "license_url_kind": "legal_text",
+      "paper_status": "linked_primary_reference_not_full_paper_reviewed",
+      "legal_terms_status": "unknown_license_file_404"
+    },
+    {
+      "exactid": "llm-jp/llm-jp-3-3.7b-instruct",
+      "vendor": "NII / LLM-jp",
+      "country": "JP",
+      "family": "LLM-jp 3",
+      "version": "llm-jp-3-3.7b-instruct",
+      "entity_type": "model_checkpoint",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "open_weight",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "Apache-2.0",
+      "official_licenseURL": "https://www.apache.org/licenses/LICENSE-2.0",
+      "license_evidenceURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+      "modelcardURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "llmjp"
+      ],
+      "sourceproof": {
+        "url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+        "locator": "Model Variants / License",
+        "claim_zh": "日本NII模型；日英文本；Apache-2.0。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [],
+      "dedup_recommendation": "新增候选；以厂商+exactid+artifact格式去重",
+      "notes_zh": "",
+      "license_url_kind": "legal_text",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "deepseek-flash",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek API",
+      "version": "DeepSeek-V4.1-Flash-1017",
+      "entity_type": "api_alias",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "api_documented_weights_unknown",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "unknown",
+      "official_licenseURL": null,
+      "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "modelcardURL": null,
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "dsapi"
+      ],
+      "sourceproof": {
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "locator": "Model Details / footnote 1",
+        "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。",
+      "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+      "license_url_kind": "unverified",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "deepseek-v4-pro",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek API",
+      "version": "DeepSeek-V4-Pro-0813",
+      "entity_type": "api_alias",
+      "modality": [
+        "llm"
+      ],
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "api_documented_weights_unknown",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。"
+      },
+      "official_license": "unknown",
+      "official_licenseURL": null,
+      "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "modelcardURL": null,
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "dsapi"
+      ],
+      "sourceproof": {
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "locator": "Model Details / footnote 1",
+        "claim_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "调用名与服务端版本分开；不由快照后缀推断发布日期。",
+      "resolved_snapshot": "DeepSeek-V4-Pro-0813",
+      "license_url_kind": "unverified",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "deepseek-v4-flash",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek API",
+      "version": "legacy alias",
+      "entity_type": "legacy_api_alias",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "api_redirect_alias",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。",
+        "original_backing_model_status": "retired"
+      },
+      "official_license": "unknown",
+      "official_licenseURL": null,
+      "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "modelcardURL": null,
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "dsapi"
+      ],
+      "sourceproof": {
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "locator": "Model Details / footnote 1",
+        "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。",
+      "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+      "license_url_kind": "unverified",
+      "paper_status": "unknown"
+    },
+    {
+      "exactid": "deepseek-v4-flash-vision-exp",
+      "vendor": "DeepSeek",
+      "country": "CN",
+      "family": "DeepSeek API",
+      "version": "legacy alias",
+      "entity_type": "legacy_api_alias",
+      "modality": [
+        "vlm"
+      ],
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "access": "api_redirect_alias",
+      "lifecycle": {
+        "access_status": "current_documented",
+        "service_status": "unknown",
+        "note_zh": "官方资料当前公开；未下载、未执行、未验证服务可用性。",
+        "original_backing_model_status": "retired"
+      },
+      "official_license": "unknown",
+      "official_licenseURL": null,
+      "license_evidenceURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "modelcardURL": null,
+      "repositoryURL": null,
+      "paperURL": null,
+      "tutorialURL": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "tutorial_status": "official_reference_not_executed",
+      "sourcecheckdate": "2026-10-28",
+      "source_ids": [
+        "dsapi"
+      ],
+      "sourceproof": {
+        "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "locator": "Model Details / footnote 1",
+        "claim_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。"
+      },
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_evidenceURL": null,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "dedup_recommendation": "新增精确版本，挂接既有家族；不得覆盖家族节点",
+      "notes_zh": "旧名称仍接受；原底层模型退役，现路由DeepSeek-V4.1-Flash-1017。",
+      "resolved_snapshot": "DeepSeek-V4.1-Flash-1017",
+      "license_url_kind": "unverified",
+      "paper_status": "unknown"
+    }
+  ],
+  "sources": [
+    {
+      "id": "qwen3",
+      "url": "https://github.com/QwenLM/Qwen3",
+      "locator": "Introduction / License Agreement",
+      "sourceproof_zh": "列明原版dense/MoE与2507变体；权重Apache-2.0，版本字符串不是发布日期。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "r1",
+      "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "locator": "Model Downloads / License",
+      "sourceproof_zh": "列明R1、R1-Zero和六种蒸馏权重；蒸馏模型还需核对基座许可。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "glm",
+      "url": "https://github.com/zai-org/GLM-4.5",
+      "locator": "Model Downloads / GLM-4.5",
+      "sourceproof_zh": "4.5与Air权重为MIT；不能以仓库Apache代码许可替代权重许可。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "kimi",
+      "url": "https://github.com/MoonshotAI/Kimi-K2",
+      "locator": "Model Variants / License",
+      "sourceproof_zh": "列明Base与Instruct；定制许可，不当作无条件MIT。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "minimax",
+      "url": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "locator": "Introduction / Citation",
+      "sourceproof_zh": "40k与80k是两个思考预算权重变体，不是发布日期。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "ernie",
+      "url": "https://github.com/PaddlePaddle/ERNIE",
+      "locator": "ERNIE 4.5 Models",
+      "sourceproof_zh": "十个变体；文本与视觉输入分列；ERNIEKit不是模型。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "seed",
+      "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "locator": "News / Quick Start",
+      "sourceproof_zh": "2025/05/08发布；Base/Instruct/Reasoning；Doubao-Coder旧称不重复计数。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "hunyuan",
+      "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "locator": "News / Open-source Plan",
+      "sourceproof_zh": "2024-12-03公开文生视频权重；不能把理解视频与生成视频混为一类。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "omni",
+      "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "locator": "News / Overview",
+      "sourceproof_zh": "3B发布日2025-04-30；文本图像音频视频输入，文本与语音输出；有MNN端侧部署说明。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "image",
+      "url": "https://github.com/QwenLM/Qwen-Image",
+      "locator": "News",
+      "sourceproof_zh": "原始权重2025-08-04；2512权重2025-12-31；两者是独立版本。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "bge",
+      "url": "https://huggingface.co/BAAI/bge-m3",
+      "locator": "Model card / License",
+      "sourceproof_zh": "文本嵌入模型，非聊天LLM；MIT。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "sarvam",
+      "url": "https://huggingface.co/sarvamai/sarvam-m",
+      "locator": "Model Information / Quickstart",
+      "sourceproof_zh": "基于Mistral-Small的文本后训练模型；Apache-2.0。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "exaone",
+      "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "locator": "License / Citation",
+      "sourceproof_zh": "EXAONE AI Model License Agreement 1.1-NC；许可文件链接404。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "llmjp",
+      "url": "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct",
+      "locator": "Model Variants / License",
+      "sourceproof_zh": "日本NII模型；日英文本；Apache-2.0。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "dsapi",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing/",
+      "locator": "Model Details / footnote 1",
+      "sourceproof_zh": "当前Flash/Pro映射及两个旧名称的重定向；旧底层模型退役不等于旧请求名拒绝。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "omni-3b-card-license-qa",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B",
+      "locator": "Model card metadata, License (line 56)",
+      "sourceproof_zh": "3B权重模型卡许可标识为qwen-research；代码仓库Apache-2.0不能替代。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    },
+    {
+      "id": "kimi-base-card-qa",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+      "locator": "header lines 40-58",
+      "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。",
+      "sourcecheckdate": "2026-10-28",
+      "checked_at": "2026-10-28T19:46:00Z",
+      "status": "primary_content_read_by_independent_auditor"
+    },
+    {
+      "id": "kimi-instruct-card-qa",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "locator": "header lines 40-58",
+      "sourceproof_zh": "官方发布者与模型ID匹配，任务为Text Generation，许可声明modified-mit。",
+      "sourcecheckdate": "2026-10-28",
+      "checked_at": "2026-10-28T19:46:00Z",
+      "status": "primary_content_read_by_independent_auditor"
+    },
+    {
+      "id": "omni-3b-weight-license-qa",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-3B/blob/main/LICENSE",
+      "locator": "§§1.i, 2.a, 2.b; lines 117-136",
+      "sourceproof_zh": "权重Qwen RESEARCH LICENSE AGREEMENT限制为非商用研究或评估；商用须申请许可。模板日期不是模型发布日期。",
+      "sourcecheckdate": "2026-10-28",
+      "status": "primary_content_read"
+    }
+  ],
+  "coverage_matrix": [
+    {
+      "country": "CN",
+      "vendors": [
+        "Alibaba/Qwen",
+        "BAAI",
+        "Baidu",
+        "ByteDance Seed",
+        "DeepSeek",
+        "MiniMax",
+        "Moonshot AI",
+        "Tencent Hunyuan",
+        "Z.ai / 智谱"
+      ],
+      "records": 34,
+      "coverage": "representative_not_exhaustive"
+    },
+    {
+      "country": "IN",
+      "vendors": [
+        "Sarvam AI"
+      ],
+      "records": 1,
+      "coverage": "representative_not_exhaustive"
+    },
+    {
+      "country": "KR",
+      "vendors": [
+        "LG AI Research"
+      ],
+      "records": 1,
+      "coverage": "representative_not_exhaustive"
+    },
+    {
+      "country": "JP",
+      "vendors": [
+        "NII / LLM-jp"
+      ],
+      "records": 1,
+      "coverage": "representative_not_exhaustive"
+    }
+  ],
+  "gaps": [
+    "未穷举各家所有历史、私有API、量化及派生权重；不能宣称齐全。",
+    "多数发布日期无明确证据而为null，不从版本号、论文号或git日期猜。",
+    "Kimi初次HF访问失败仅保留为历史观察，独立QA后续已读到官方卡；EXAONE许可链接404，完整条文unknown；百度AIStudio页面无有效正文，以官方repo替代。",
+    "PaperURL为null即本批未核实；licenseURL可为官方许可声明而非完整合同。",
+    "current_documented仅文档存在，非当前托管API仍支持保证；旧公开权重不因较老而标弃用。",
+    "印度/韩国/日本仅代表公开模型；亚洲其他国家未覆盖。",
+    "模型权重未下载；代码、API及教程均未执行；无性能排名。"
+  ],
+  "validation": {
+    "unique_exactids": true,
+    "existing_ids_valid": true,
+    "record_count": 37,
+    "model_records_excluding_api_aliases": 33,
+    "source_count": 19
+  },
+  "metadata_qa_revision": {
+    "date": "2026-10-28",
+    "status": "pending_independent_recheck",
+    "scope": "Kimi访问观察与来源、Omni3B权重/代码许可分离、R1报告/checkpoint实体关系、EXAONE条文unknown",
+    "changed_records": [
+      {
+        "exactid": "deepseek-ai/DeepSeek-R1",
+        "changed_fields": [
+          "dedup_recommendation"
+        ]
+      },
+      {
+        "exactid": "Kimi-K2-Base",
+        "changed_fields": [
+          "access_observations",
+          "modelcardURL",
+          "notes_zh",
+          "source_ids",
+          "sourceproof"
+        ]
+      },
+      {
+        "exactid": "Kimi-K2-Instruct",
+        "changed_fields": [
+          "access_observations",
+          "modelcardURL",
+          "notes_zh",
+          "source_ids",
+          "sourceproof"
+        ]
+      },
+      {
+        "exactid": "Qwen/Qwen2.5-Omni-3B",
+        "changed_fields": [
+          "notes_zh",
+          "official_license",
+          "official_licenseURL",
+          "repository_code_license",
+          "source_ids",
+          "weights_license"
+        ]
+      },
+      {
+        "exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "changed_fields": [
+          "legal_terms_status"
+        ]
+      }
+    ],
+    "all_37_record_dates_modalities_identity_access_unchanged": true,
+    "unchanged_record_count": 32
+  }
+}

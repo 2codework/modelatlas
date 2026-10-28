@@ -1,0 +1,1110 @@
+{
+  "audit_date": "2026-10-28",
+  "input_sha256": "ebc20e2559dd16ce22a1f21f3a1970b8fbcdfcbdff0ca29f2d93296a522c232b",
+  "scope": "independent source QA; no source modifications",
+  "summary": {
+    "records": 37,
+    "model_or_named_variant": 33,
+    "api_aliases": 4,
+    "vendors": 12,
+    "countries": [
+      "CN",
+      "IN",
+      "JP",
+      "KR"
+    ],
+    "dispositions": {
+      "accept_with_caveats": 37
+    },
+    "non_null_dates_checked": 7
+  },
+  "records": [
+    {
+      "exactid": "Qwen/Qwen3-0.6B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "qwen3"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen3"
+      ],
+      "checked_claims": "官方repo型号与Apache权重声明支持；null日期保留，不从2507猜日期。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "Qwen/Qwen3-8B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "qwen3"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen3"
+      ],
+      "checked_claims": "官方repo型号与Apache权重声明支持；null日期保留，不从2507猜日期。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "qwen3"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen3"
+      ],
+      "checked_claims": "官方repo型号与Apache权重声明支持；null日期保留，不从2507猜日期。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "r1"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek",
+        "deepseek-r1-2025"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family",
+        "org-deepseek": "organization",
+        "deepseek-r1-2025": "model_release"
+      },
+      "evidence_urls": [
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "checked_claims": "官方repo列出精确模型；MIT权重声明，Distill-Qwen基座另为Apache-2.0，不应统一省略基座许可。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false,
+      "initial_disposition": "revise",
+      "revision_recheck": "2026-10-28: 修订已消除许可/访问历史/实体合并阻断。"
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1-Zero",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "r1"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family",
+        "org-deepseek": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "checked_claims": "官方repo列出精确模型；MIT权重声明，Distill-Qwen基座另为Apache-2.0，不应统一省略基座许可。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "r1"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek",
+        "org-deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family",
+        "org-deepseek": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/deepseek-ai/DeepSeek-R1"
+      ],
+      "checked_claims": "官方repo列出精确模型；MIT权重声明，Distill-Qwen基座另为Apache-2.0，不应统一省略基座许可。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "zai-org/GLM-4.5",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "glm"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/zai-org/GLM-4.5"
+      ],
+      "checked_claims": "官方正文明确4.5/Air权重MIT；仓库代码Apache-2.0不能替代。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "zai-org/GLM-4.5-Air",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "glm"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/zai-org/GLM-4.5"
+      ],
+      "checked_claims": "官方正文明确4.5/Air权重MIT；仓库代码Apache-2.0不能替代。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "Kimi-K2-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "kimi",
+        "kimi-base-card-qa"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/MoonshotAI/Kimi-K2",
+        "https://huggingface.co/moonshotai/Kimi-K2-Base"
+      ],
+      "checked_claims": "官方repo型号/Modified MIT支持；本次HF独立卡片已可访问，不应延续为当前不可访问。建议checkpoint exactid补moonshotai/命名空间，原短名留alias。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false,
+      "initial_disposition": "revise",
+      "revision_recheck": "2026-10-28: 修订已消除许可/访问历史/实体合并阻断。",
+      "remaining_advisories": [
+        "可选补canonical_artifact_id=moonshotai/Kimi-K2-Base，短exactid已有vendor组合唯一。",
+        "本次QA时间仅确认到19:46分钟；checked_at的:00为格式补零，不应宣称秒精度实测。"
+      ]
+    },
+    {
+      "exactid": "Kimi-K2-Instruct",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "kimi",
+        "kimi-instruct-card-qa"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/MoonshotAI/Kimi-K2",
+        "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+      ],
+      "checked_claims": "官方repo型号/Modified MIT支持；本次HF独立卡片已可访问，不应延续为当前不可访问。建议checkpoint exactid补moonshotai/命名空间，原短名留alias。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false,
+      "initial_disposition": "revise",
+      "revision_recheck": "2026-10-28: 修订已消除许可/访问历史/实体合并阻断。",
+      "remaining_advisories": [
+        "可选补canonical_artifact_id=moonshotai/Kimi-K2-Instruct，短exactid已有vendor组合唯一。",
+        "本次QA时间仅确认到19:46分钟；checked_at的:00为格式补零，不应宣称秒精度实测。"
+      ]
+    },
+    {
+      "exactid": "MiniMaxAI/MiniMax-M1-40k",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "minimax"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/MiniMax-AI/MiniMax-M1"
+      ],
+      "checked_claims": "官方repo与两张HF模型卡确认40k/80k型号和Apache-2.0，预算不是日期。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "MiniMaxAI/MiniMax-M1-80k",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "minimax"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/MiniMax-AI/MiniMax-M1"
+      ],
+      "checked_claims": "官方repo与两张HF模型卡确认40k/80k型号和Apache-2.0，预算不是日期。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-300B-A47B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-300B-A47B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-21B-A3B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-21B-A3B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-424B-A47B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-424B-A47B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-28B-A3B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-VL-28B-A3B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-0.3B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ERNIE-4.5-0.3B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "ernie"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/PaddlePaddle/ERNIE"
+      ],
+      "checked_claims": "官方模型表支持十具名变体；VL输入text/image/video输出text，其他text→text；Apache-2.0。未验证具体分发artifact，不升级为checkpoint。ERNIEKit/FastDeploy为工具。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Base",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "seed"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/ByteDance-Seed/Seed-Coder"
+      ],
+      "checked_claims": "News明确2025/05/08；三变体支持；Doubao-Coder仅前名，不重复模型。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Instruct",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "seed"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/ByteDance-Seed/Seed-Coder"
+      ],
+      "checked_claims": "News明确2025/05/08；三变体支持；Doubao-Coder仅前名，不重复模型。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "ByteDance-Seed/Seed-Coder-8B-Reasoning",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "seed"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/ByteDance-Seed/Seed-Coder"
+      ],
+      "checked_claims": "News明确2025/05/08；三变体支持；Doubao-Coder仅前名，不重复模型。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": "2025-05-08",
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "HunyuanVideo",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "hunyuan"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://github.com/Tencent-Hunyuan/HunyuanVideo"
+      ],
+      "checked_claims": "News支持2024-12-03权重发布；原版text→video；LICENSE.txt为Tencent Hunyuan Community License，非无条件开源，包含地域限制。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2024-12-03",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "Qwen/Qwen2.5-Omni-3B",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "omni",
+        "omni-3b-card-license-qa",
+        "omni-3b-weight-license-qa"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen2.5-Omni"
+      ],
+      "checked_claims": "修订权重qwen-research，与已实际读取HF LICENSE一致；代码Apache单列；日期/模态保留。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-04-30",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false,
+      "initial_disposition": "hold",
+      "revision_recheck": "2026-10-28: 修订已消除许可/访问历史/实体合并阻断。"
+    },
+    {
+      "exactid": "Qwen/Qwen-Image",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "image"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen-Image"
+      ],
+      "checked_claims": "News明确原版2025-08-04、2512于2025-12-31权重发布；text→image，与Edit分开；Apache支持。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-08-04",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "Qwen/Qwen-Image-2512",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "image"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "qwen",
+        "org-qwen"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "qwen": "model_family",
+        "org-qwen": "organization"
+      },
+      "evidence_urls": [
+        "https://github.com/QwenLM/Qwen-Image"
+      ],
+      "checked_claims": "News明确原版2025-08-04、2512于2025-12-31权重发布；text→image，与Edit分开；Apache支持。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": "2025-12-31",
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "BAAI/bge-m3",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "bge"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://huggingface.co/BAAI/bge-m3"
+      ],
+      "checked_claims": "官方卡MIT，文本dense/sparse/multi-vector retrieval，不是聊天LLM。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "sarvamai/sarvam-m",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "sarvam"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "sarvam"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "sarvam": "model_family"
+      },
+      "evidence_urls": [
+        "https://huggingface.co/sarvamai/sarvam-m"
+      ],
+      "checked_claims": "官方卡支持Sarvam-M/Mistral-Small后训练、文本、Apache；Sarvam官方about-us支持印度归属。与Sarvam-1不同，接sarvam家族。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "exaone"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+      ],
+      "checked_claims": "官方卡确认LG AI Research及NC许可名称；所链tree/main/LICENSE本次仍404。许可条文unknown，不推出商业允许；不删除声明层许可名称。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "llm-jp/llm-jp-3-3.7b-instruct",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "llmjp"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [],
+      "existingIDs_verified": true,
+      "existing_node_types": {},
+      "evidence_urls": [
+        "https://huggingface.co/llm-jp/llm-jp-3-3.7b-instruct"
+      ],
+      "checked_claims": "官方卡确认NII/LLM-jp、日本英语文本与Apache；NII官方地址Tokyo支持JP归属。",
+      "hold_claims": [],
+      "required_changes": [],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-flash",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "dsapi"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family"
+      },
+      "evidence_urls": [
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ],
+      "checked_claims": "当前官方表/脚注支持alias映射；旧请求名仍接受，仅旧底层退役；许可和日期unknown。不得把alias数量算独立模型。",
+      "hold_claims": [],
+      "required_changes": [
+        "dedup_recommendation通用“新增精确版本”须改为alias节点/映射关系；三Flash名称共享同一resolved_snapshot，不增三个训练模型。"
+      ],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-v4-pro",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "dsapi"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family"
+      },
+      "evidence_urls": [
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ],
+      "checked_claims": "当前官方表/脚注支持alias映射；旧请求名仍接受，仅旧底层退役；许可和日期unknown。不得把alias数量算独立模型。",
+      "hold_claims": [],
+      "required_changes": [
+        "dedup_recommendation通用“新增精确版本”须改为alias节点/映射关系；三Flash名称共享同一resolved_snapshot，不增三个训练模型。"
+      ],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-v4-flash",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "dsapi"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family"
+      },
+      "evidence_urls": [
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ],
+      "checked_claims": "当前官方表/脚注支持alias映射；旧请求名仍接受，仅旧底层退役；许可和日期unknown。不得把alias数量算独立模型。",
+      "hold_claims": [],
+      "required_changes": [
+        "dedup_recommendation通用“新增精确版本”须改为alias节点/映射关系；三Flash名称共享同一resolved_snapshot，不增三个训练模型。"
+      ],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    },
+    {
+      "exactid": "deepseek-v4-flash-vision-exp",
+      "disposition": "accept_with_caveats",
+      "source_ids": [
+        "dsapi"
+      ],
+      "source_ids_resolve": true,
+      "unique_in_batch": true,
+      "existingIDs": [
+        "deepseek"
+      ],
+      "existingIDs_verified": true,
+      "existing_node_types": {
+        "deepseek": "model_family"
+      },
+      "evidence_urls": [
+        "https://api-docs.deepseek.com/quick_start/pricing/"
+      ],
+      "checked_claims": "当前官方表/脚注支持alias映射；旧请求名仍接受，仅旧底层退役；许可和日期unknown。不得把alias数量算独立模型。",
+      "hold_claims": [],
+      "required_changes": [
+        "dedup_recommendation通用“新增精确版本”须改为alias节点/映射关系；三Flash名称共享同一resolved_snapshot，不增三个训练模型。"
+      ],
+      "release_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "date_precision": "day when non-null; unknown otherwise",
+      "runtime_tested": false
+    }
+  ],
+  "initial_summary": {
+    "records": 37,
+    "model_or_named_variant": 33,
+    "api_aliases": 4,
+    "vendors": 12,
+    "countries": [
+      "CN",
+      "IN",
+      "JP",
+      "KR"
+    ],
+    "dispositions": {
+      "accept_with_caveats": 33,
+      "revise": 3,
+      "hold": 1
+    },
+    "non_null_dates_checked": 7
+  },
+  "rechecked_input_sha256": "0992a408fe836216597e00b6a1ff9bf76a67562025f385512417cd1bc6914aa7"
+}

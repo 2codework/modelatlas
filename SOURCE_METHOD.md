@@ -31,3 +31,7 @@ foundation `source_ids` / events `node_ids` 原样保留。systems 的 `node_id`
 ## 追加日期证据层
 
 历史研究包保留原字节；`timeline-dates.json` 的事件覆盖层以唯一现有ID匹配，并校验 `expected_before`。不匹配、重复补丁、身份字段改写或悬空来源使构建失败。覆盖只影响派生视图，不改写历史输入。`date` 表示所述事件日期；`available_by` 是截至该日已可用的观察上界，不能当作最早上线或GA。日期、版本、可获得范围、证据与未知时区同时保留。DeepSeek来源改版及文字冲突仍保留待核验，不据此补日期。
+
+## 厂商目录接纳
+
+目录输入按 `data/vendor-catalog/admission.json` 的最终 QA 决策及原字节 SHA-256 接纳，构建不刷新核验时间。字段映射、实体去重边界、许可证区分与观察时间精度见 [CATALOG.md](CATALOG.md)。raw 中历史 pending/首次失败不代表当前状态；派生层明确显示最终 disposition，原始记录不改写。

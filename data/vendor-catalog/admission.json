@@ -1,0 +1,19 @@
+{
+  "accepted": [
+    {
+      "file": "global.json",
+      "sha256": "a89967e0b90308a8b581d768a1971d5bc7aa1615ab6f8f23bcab7e4d83e056d6",
+      "disposition": "approve_with_limits",
+      "limits": "代表性第一批；非完整历史目录；来源检查非执行验证。"
+    },
+    {
+      "file": "asia.json",
+      "sha256": "0992a408fe836216597e00b6a1ff9bf76a67562025f385512417cd1bc6914aa7",
+      "disposition": "accept_with_caveats",
+      "decision_file": "asia-final-dispositions.json",
+      "decision_sha256": "9785ad00041520acc0d65a477252ac244b874f8ef668b1c93f20d4de00598b2e",
+      "limits": "最终37条accept_with_caveats；raw pending和初次访问失败是历史记录，不代表当前接纳状态。Kimi QA观察时间精度到分钟。"
+    }
+  ],
+  "held": []
+}

@@ -1,0 +1,2363 @@
+{
+  "schema_version": "vendor-catalog-research.r1",
+  "source_checked_date": "2026-10-28",
+  "scope": "全球代表厂商第一批，非全世界或任一厂商历史全量",
+  "status": "research_only_not_merged",
+  "record_count": 40,
+  "baseline": {
+    "path": "github-migration-r1/public/modelatlas/dist/data.json",
+    "sha256": "c9f10bed43505d5dc5e6418bc06434eff1662cb18c704d7b6dfd01a132ebe869",
+    "node_count": 148,
+    "read_only": true
+  },
+  "methodology": [
+    "只取已读官方来源明确标识；不执行SDK/模型/下载/注册/付费。",
+    "发布日期只取独立明示；ID日期、知识截止、latest update均不能充当发布日。",
+    "api_model_id表示已知ID但别名/固定语义未核实，不假装snapshot。",
+    "权重许可不继承网页/代码样例许可；null不表示闭源。",
+    "教程链接不等于教程完成，更不等于测试通过。"
+  ],
+  "coverage_matrix": [
+    {
+      "vendor": "OpenAI",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "deprecation",
+        "image model page",
+        "live model page"
+      ],
+      "not_yet_checked": [
+        "全部历史snapshot",
+        "gpt-oss许可/权重",
+        "embedding/moderation全表",
+        "每版发布公告/报告"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Anthropic",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "versioning",
+        "deprecation"
+      ],
+      "not_yet_checked": [
+        "全部旧版逐条入库",
+        "每版system card",
+        "合作云生命周期逐条核验"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Google Gemini",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "4 Argon",
+        "3.8 Live",
+        "Nano Banana 2.1",
+        "Omni Flash"
+      ],
+      "not_yet_checked": [
+        "历史Gemini/Imagen/Veo/Lyria完整目录",
+        "完整弃用日志",
+        "逐版报告"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Google Gemma",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "Gemma4 model card",
+        "Apache2页面",
+        "Gemma4 report摘要"
+      ],
+      "not_yet_checked": [
+        "五尺寸精确checkpoint",
+        "旧Gemma/3n/PaliGemma/ShieldGemma全谱系"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Meta",
+      "status": "partial",
+      "actually_read": [
+        "Llama4 model card",
+        "download entry"
+      ],
+      "not_yet_checked": [
+        "全部Llama1/2/3与Guard/PromptGuard/CodeLlama checkpoint",
+        "license正文细则",
+        "全套教程"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Mistral",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "Small4",
+        "Voxtral Mini Transcribe3",
+        "lifecycle page"
+      ],
+      "not_yet_checked": [
+        "历史模型完整列表",
+        "每版权重仓库/报告/许可证",
+        "第三方托管去重"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Cohere",
+      "status": "partial",
+      "actually_read": [
+        "catalog",
+        "deprecation page",
+        "Command A report"
+      ],
+      "not_yet_checked": [
+        "Aya/Embed/Rerank/North/Parse/Transcribe逐项录入",
+        "checkpoint许可证"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "AI21",
+      "status": "partial",
+      "actually_read": [
+        "Jamba catalog",
+        "platform matrix",
+        "docs index"
+      ],
+      "not_yet_checked": [
+        "Jurassic历史",
+        "Jamba权重许可证",
+        "全部报告与旧版状态"
+      ],
+      "complete": false
+    },
+    {
+      "vendor": "Ai2",
+      "status": "partial",
+      "actually_read": [
+        "Olmo catalog",
+        "Olmo3 base card",
+        "release notes搜索摘要"
+      ],
+      "not_yet_checked": [
+        "Olmo3.1/Hybrid/Molmo/ASR等逐条核验",
+        "所有训练checkpoint/revision",
+        "完整release notes正文"
+      ],
+      "complete": false
+    }
+  ],
+  "not_in_this_batch": [
+    "xAI",
+    "Amazon Nova/Titan",
+    "Microsoft Phi/MAI",
+    "NVIDIA Nemotron",
+    "IBM Granite",
+    "Apple",
+    "Databricks",
+    "Stability AI",
+    "Black Forest Labs",
+    "Runway",
+    "Adobe",
+    "其他地区厂商和研究机构"
+  ],
+  "sources": [
+    {
+      "id": "openai_catalog",
+      "url": "https://developers.openai.com/api/docs/models",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "openai_deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "openai_image",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "openai_live",
+      "url": "https://developers.openai.com/api/docs/models/gpt-live-1",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "claude_catalog",
+      "url": "https://platform.claude.com/docs/en/models/overview",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "claude_versioning",
+      "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "claude_deprecations",
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemini_catalog",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemini_argon",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemini_live",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemini_image",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemini_video",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemma_catalog",
+      "url": "https://ai.google.dev/gemma/docs",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemma_card",
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemma_license",
+      "url": "https://ai.google.dev/gemma/apache_2",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "gemma_report",
+      "url": "https://arxiv.org/abs/2607.02770",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "meta_card",
+      "url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "meta_access",
+      "url": "https://ai.meta.com/resources/models-and-libraries/llama-downloads/",
+      "checked_at": "2026-10-28",
+      "status": "search_excerpt_only",
+      "word_limit": 200
+    },
+    {
+      "id": "mistral_catalog",
+      "url": "https://docs.mistral.ai/models",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "mistral_small",
+      "url": "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "mistral_audio",
+      "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "mistral_lifecycle",
+      "url": "https://docs.mistral.ai/inference/model-lifecycle",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "cohere_catalog",
+      "url": "https://docs.cohere.com/docs/models",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "cohere_deprecations",
+      "url": "https://docs.cohere.com/docs/deprecations",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "cohere_report",
+      "url": "https://cohere.com/research/papers/command-a-technical-report.pdf",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai21_catalog",
+      "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai21_platforms",
+      "url": "https://docs.ai21.com/docs/model-availability-across-platforms",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai21_index",
+      "url": "https://docs.ai21.com/llms.txt",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai2_catalog",
+      "url": "https://docs.allenai.org/models/olmo/index.html",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai2_card",
+      "url": "https://huggingface.co/allenai/Olmo-3-1025-7B",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200
+    },
+    {
+      "id": "ai2_release",
+      "url": "https://docs.allenai.org/release_notes/olmo-release-notes/index.html",
+      "checked_at": "2026-10-28",
+      "status": "search_excerpt_only",
+      "word_limit": 200
+    },
+    {
+      "id": "mistral_small_release",
+      "url": "https://mistral.ai/news/mistral-small-4/",
+      "checked_at": "2026-10-28",
+      "status": "read_primary_page",
+      "word_limit": 200,
+      "locator": "A new standard for multimodal, reasoning-optimized models首段；Key architectural details / Native multimodality"
+    }
+  ],
+  "records": [
+    {
+      "id": "global-pen-gpt-6-astra",
+      "vendor": "OpenAI",
+      "title": "gpt-6-astra",
+      "exact_id": "gpt-6-astra",
+      "entity_type": "api_model_id",
+      "version": "6 Astra",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_catalog"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gpt",
+          "relation": "member_of_family",
+          "action": "保留家族节点，新增版本记录"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-6-1-sol",
+      "vendor": "OpenAI",
+      "title": "gpt-6.1-sol",
+      "exact_id": "gpt-6.1-sol",
+      "entity_type": "api_model_id",
+      "version": "6.1 Sol",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_catalog"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gpt",
+          "relation": "member_of_family",
+          "action": "保留家族节点，新增版本记录"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-6-1-terra",
+      "vendor": "OpenAI",
+      "title": "gpt-6.1-terra",
+      "exact_id": "gpt-6.1-terra",
+      "entity_type": "api_model_id",
+      "version": "6.1 Terra",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_catalog"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gpt",
+          "relation": "member_of_family",
+          "action": "保留家族节点，新增版本记录"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-6-luna",
+      "vendor": "OpenAI",
+      "title": "gpt-6-luna",
+      "exact_id": "gpt-6-luna",
+      "entity_type": "api_model_id",
+      "version": "6 Luna",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_catalog"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录确认的API型号；固定快照与别名语义本轮未核实。",
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gpt",
+          "relation": "member_of_family",
+          "action": "保留家族节点，新增版本记录"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-image-2-5-sunburst",
+      "vendor": "OpenAI",
+      "title": "GPT-Image-2.5 Sunburst",
+      "exact_id": "gpt-image-2.5-sunburst",
+      "entity_type": "api_model_id",
+      "version": "2.5 Sunburst",
+      "modality": {
+        "input": null,
+        "output": [
+          "image"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_image"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "生图与编辑型号；完整输入类型待补。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-live-1",
+      "vendor": "OpenAI",
+      "title": "GPT-Live 1",
+      "exact_id": "gpt-live-1",
+      "entity_type": "api_model_id",
+      "version": "1",
+      "modality": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text",
+          "audio"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_live"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/models/gpt-live-1"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "实时双向语音，后端agent与语音模型不是同一实体。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-sora-2",
+      "vendor": "OpenAI",
+      "title": "sora-2",
+      "exact_id": "sora-2",
+      "entity_type": "api_alias",
+      "version": null,
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-03-24",
+        "retirement_date": "2026-09-24"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_deprecations"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-sora-2-2025-10-06",
+      "vendor": "OpenAI",
+      "title": "sora-2-2025-10-06",
+      "exact_id": "sora-2-2025-10-06",
+      "entity_type": "fixed_snapshot",
+      "version": null,
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-03-24",
+        "retirement_date": "2026-09-24"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_deprecations"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-videos-api",
+      "vendor": "OpenAI",
+      "title": "Videos API",
+      "exact_id": "Videos API",
+      "entity_type": "api_service",
+      "version": null,
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-03-24",
+        "retirement_date": "2026-09-24"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_deprecations"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "保留历史记录；官方页面未给推荐替代。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-pen-gpt-4o-2024-05-13",
+      "vendor": "OpenAI",
+      "title": "GPT-4o initial snapshot",
+      "exact_id": "gpt-4o-2024-05-13",
+      "entity_type": "fixed_snapshot",
+      "version": "2024-05-13",
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": "2026-10-23"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "openai_deprecations"
+      ],
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [
+        {
+          "type": "recommended_replacement",
+          "target_exact_id": "gpt-5.6-sol",
+          "source_id": "openai_deprecations",
+          "scope": "OpenAI API",
+          "note": "此为核验日文档建议，不宣称原始公告时即如此"
+        }
+      ],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-nthropic-claude-fable-5-1",
+      "vendor": "Anthropic",
+      "title": "Fable 5.1",
+      "exact_id": "claude-fable-5-1",
+      "entity_type": "fixed_api_version",
+      "version": "Fable 5.1",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "claude_catalog",
+        "claude_versioning",
+        "claude_deprecations"
+      ],
+      "source_urls": [
+        "https://platform.claude.com/docs/en/models/overview",
+        "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-nthropic-claude-opus-5-5",
+      "vendor": "Anthropic",
+      "title": "Opus 5.5",
+      "exact_id": "claude-opus-5-5",
+      "entity_type": "fixed_api_version",
+      "version": "Opus 5.5",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "claude_catalog",
+        "claude_versioning",
+        "claude_deprecations"
+      ],
+      "source_urls": [
+        "https://platform.claude.com/docs/en/models/overview",
+        "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-nthropic-claude-sonnet-5-5",
+      "vendor": "Anthropic",
+      "title": "Sonnet 5.5",
+      "exact_id": "claude-sonnet-5-5",
+      "entity_type": "fixed_api_version",
+      "version": "Sonnet 5.5",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "claude_catalog",
+        "claude_versioning",
+        "claude_deprecations"
+      ],
+      "source_urls": [
+        "https://platform.claude.com/docs/en/models/overview",
+        "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-nthropic-claude-haiku-5-5",
+      "vendor": "Anthropic",
+      "title": "Haiku 5.5",
+      "exact_id": "claude-haiku-5-5",
+      "entity_type": "fixed_api_version",
+      "version": "Haiku 5.5",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "claude_catalog",
+        "claude_versioning",
+        "claude_deprecations"
+      ],
+      "source_urls": [
+        "https://platform.claude.com/docs/en/models/overview",
+        "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions",
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "无日期不代表滚动别名；专门版本文档明确此代ID固定。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-nthropic-claude-sonnet-4-5-20250929",
+      "vendor": "Anthropic",
+      "title": "Claude Sonnet 4.5",
+      "exact_id": "claude-sonnet-4-5-20250929",
+      "entity_type": "fixed_snapshot",
+      "version": "4.5",
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "deprecated",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-09-30",
+        "retirement_date": "2026-11-30"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "claude_deprecations"
+      ],
+      "source_urls": [
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [
+        {
+          "type": "recommended_replacement",
+          "target_exact_id": "claude-sonnet-5-5",
+          "source_id": "claude_deprecations",
+          "scope": "Anthropic-operated platforms"
+        }
+      ],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemini-4-argon",
+      "vendor": "Google",
+      "title": "Gemini 4 Argon",
+      "exact_id": "gemini-4-argon",
+      "entity_type": "api_model_id",
+      "version": "4 Argon",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "PDF"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "stable",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemini_argon"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gemini",
+          "relation": "member_of_family",
+          "action": "不与首代gemini-1-report报告合并"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemini-3-8-live",
+      "vendor": "Google",
+      "title": "Gemini 3.8 Live",
+      "exact_id": "gemini-3.8-live",
+      "entity_type": "api_model_id",
+      "version": "3.8",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "audio",
+          "text_transcription"
+        ]
+      },
+      "lifecycle": {
+        "status": "stable",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemini_live"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-live"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gemini",
+          "relation": "member_of_family",
+          "action": "不与首代gemini-1-report报告合并"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemini-nano-banana-2-1",
+      "vendor": "Google",
+      "title": "Nano Banana 2.1",
+      "exact_id": "gemini-nano-banana-2.1",
+      "entity_type": "api_model_id",
+      "version": "2.1",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "PDF"
+        ],
+        "output": [
+          "image",
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "stable",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemini_image"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gemini",
+          "relation": "member_of_family",
+          "action": "不与首代gemini-1-report报告合并"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemini-omni-1-1-flash",
+      "vendor": "Google",
+      "title": "Gemini Omni Flash",
+      "exact_id": "gemini-omni-1.1-flash",
+      "entity_type": "api_model_id",
+      "version": "1.1",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "lifecycle": {
+        "status": "stable",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemini_video"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "gemini",
+          "relation": "member_of_family",
+          "action": "不与首代gemini-1-report报告合并"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemini-omni-flash-preview",
+      "vendor": "Google",
+      "title": "Gemini Omni Flash preview",
+      "exact_id": "gemini-omni-flash-preview",
+      "entity_type": "api_model_id",
+      "version": "preview",
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemini_video"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "页面明确shut down，具体关闭日期未核实。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-gemma-4",
+      "vendor": "Google",
+      "title": "Gemma 4",
+      "exact_id": null,
+      "entity_type": "model_family",
+      "version": "4",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio_variant_dependent"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "open_weights_documented",
+        "scope": "open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights",
+      "weights_license": "Apache-2.0",
+      "weights_license_url": "https://ai.google.dev/gemma/apache_2",
+      "model_card_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "report_url": "https://arxiv.org/abs/2607.02770",
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "gemma_card",
+        "gemma_license"
+      ],
+      "source_urls": [
+        "https://ai.google.dev/gemma/docs/core/model_card_4",
+        "https://ai.google.dev/gemma/apache_2"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "家族五尺寸；音频仅E2B/E4B/12B，不能向全部变体传播。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-oogle-arxiv-2607-02770",
+      "vendor": "Google",
+      "title": "Gemma 4 Technical Report",
+      "exact_id": "arXiv:2607.02770",
+      "entity_type": "technical_report",
+      "version": "v2",
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "published",
+        "scope": "paper",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "paper",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": "https://arxiv.org/abs/2607.02770",
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": "2026-07-02",
+      "release_date_evidence": {
+        "event": "paper_first_submitted",
+        "source_id": "gemma_report"
+      },
+      "source_ids": [
+        "gemma_report"
+      ],
+      "source_urls": [
+        "https://arxiv.org/abs/2607.02770"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "首投日期属于论文，不是API上线或权重发布日期。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-eta-llama-4-scout-17bx16e",
+      "vendor": "Meta",
+      "title": "Llama 4 Scout (17Bx16E)",
+      "exact_id": null,
+      "entity_type": "model_variant",
+      "version": "4",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "code"
+        ]
+      },
+      "lifecycle": {
+        "status": "static_release",
+        "scope": "gated_open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "gated_open_weights",
+      "weights_license": "Llama 4 Community License Agreement",
+      "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE",
+      "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+      "report_url": null,
+      "tutorial_url": "https://github.com/meta-llama/llama-cookbook",
+      "tutorial_status": "official_link_discovered_not_executed",
+      "release_date": "2025-04-05",
+      "release_date_evidence": {
+        "event": "model_release",
+        "source_id": "meta_card"
+      },
+      "source_ids": [
+        "meta_card",
+        "meta_access"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+        "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "llama",
+          "relation": "member_of_family",
+          "action": "不要覆盖llama-2历史节点"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-eta-llama-4-maverick-17bx128e",
+      "vendor": "Meta",
+      "title": "Llama 4 Maverick (17Bx128E)",
+      "exact_id": null,
+      "entity_type": "model_variant",
+      "version": "4",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "code"
+        ]
+      },
+      "lifecycle": {
+        "status": "static_release",
+        "scope": "gated_open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "gated_open_weights",
+      "weights_license": "Llama 4 Community License Agreement",
+      "weights_license_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/LICENSE",
+      "model_card_url": "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+      "report_url": null,
+      "tutorial_url": "https://github.com/meta-llama/llama-cookbook",
+      "tutorial_status": "official_link_discovered_not_executed",
+      "release_date": "2025-04-05",
+      "release_date_evidence": {
+        "event": "model_release",
+        "source_id": "meta_card"
+      },
+      "source_ids": [
+        "meta_card",
+        "meta_access"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/meta-llama/llama-models/refs/heads/main/models/llama4/MODEL_CARD.md",
+        "https://ai.meta.com/resources/models-and-libraries/llama-downloads/"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "llama",
+          "relation": "member_of_family",
+          "action": "不要覆盖llama-2历史节点"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-istral-mistral-small-2603",
+      "vendor": "Mistral",
+      "title": "Mistral Small 4",
+      "exact_id": "mistral-small-2603",
+      "entity_type": "api_model_id",
+      "version": "26.03",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "GA",
+        "scope": "api_and_open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "api_and_open_weights",
+      "weights_license": "Apache-2.0",
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": "2026-03-16",
+      "release_date_evidence": {
+        "event": "model_page_release_label",
+        "source_id": "mistral_small"
+      },
+      "source_ids": [
+        "mistral_small",
+        "mistral_small_release"
+      ],
+      "source_urls": [
+        "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+        "https://mistral.ai/news/mistral-small-4/"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "页面同时列推理/指令/代码能力；权重仓库与许可全文URL未补齐。",
+      "relations": [],
+      "dedup_suggestions": [
+        {
+          "existing_id": "mistral",
+          "relation": "member_of_family",
+          "action": "不与mistral-7b-v0-1合并"
+        }
+      ],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在",
+      "field_evidence": {
+        "modality.input": {
+          "source_id": "mistral_small_release",
+          "locator": "A new standard for multimodal, reasoning-optimized models：首段；Key architectural details：Native multimodality条目",
+          "observed_web_lines": [
+            31,
+            41
+          ],
+          "checked_at": "2026-10-28"
+        }
+      },
+      "correction_history": [
+        {
+          "date": "2026-10-28",
+          "field": "modality.input",
+          "old_value": [
+            "text"
+          ],
+          "new_value": [
+            "text",
+            "image"
+          ],
+          "reason_zh": "独立审计发现首版仅填写text漏掉image；官方发布文两处明确图像输入。此为整理错误更正，不是模型能力新增。",
+          "source_id": "mistral_small_release"
+        }
+      ]
+    },
+    {
+      "id": "global-istral-voxtral-mini-transcribe-3-0",
+      "vendor": "Mistral",
+      "title": "Voxtral Mini Transcribe 3",
+      "exact_id": "voxtral-mini-transcribe-3-0",
+      "entity_type": "api_model_id",
+      "version": "3.0",
+      "modality": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "public_preview",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": "2026-10-20",
+      "release_date_evidence": {
+        "event": "model_page_release_label",
+        "source_id": "mistral_audio"
+      },
+      "source_ids": [
+        "mistral_audio",
+        "mistral_lifecycle"
+      ],
+      "source_urls": [
+        "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+        "https://docs.mistral.ai/inference/model-lifecycle"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "公开预览允许静默更新；不能按版本字符串推定固定snapshot。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-istral-mistral-large-4",
+      "vendor": "Mistral",
+      "title": "Mistral Large 4",
+      "exact_id": null,
+      "entity_type": "model_family",
+      "version": "26.10",
+      "modality": {
+        "input": null,
+        "output": null
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "open_weights_documented",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights_documented",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "mistral_catalog"
+      ],
+      "source_urls": [
+        "https://docs.mistral.ai/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录列open-weight，不能据Open标签推断具体许可证。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-ohere-command-a-plus-05-2026",
+      "vendor": "Cohere",
+      "title": "command-a-plus-05-2026",
+      "exact_id": "command-a-plus-05-2026",
+      "entity_type": "api_model_id",
+      "version": "A+ 05-2026",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "live",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "cohere_catalog"
+      ],
+      "source_urls": [
+        "https://docs.cohere.com/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-ohere-command-a-03-2025",
+      "vendor": "Cohere",
+      "title": "command-a-03-2025",
+      "exact_id": "command-a-03-2025",
+      "entity_type": "api_model_id",
+      "version": "A 03-2025",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "live",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": "https://cohere.com/research/papers/command-a-technical-report.pdf",
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "cohere_catalog"
+      ],
+      "source_urls": [
+        "https://docs.cohere.com/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-ohere-command-a-vision-07-2025",
+      "vendor": "Cohere",
+      "title": "command-a-vision-07-2025",
+      "exact_id": "command-a-vision-07-2025",
+      "entity_type": "api_model_id",
+      "version": "A Vision 07-2025",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "live",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "cohere_catalog"
+      ],
+      "source_urls": [
+        "https://docs.cohere.com/docs/models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-ohere-command-r",
+      "vendor": "Cohere",
+      "title": "Command R alias",
+      "exact_id": "command-r",
+      "entity_type": "api_alias",
+      "version": null,
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "deprecated",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2025-09-15",
+        "retirement_date": null,
+        "note_zh": "弃用阻止新客户，既有用户至正式关闭前仍可使用；不能擅改为retired。"
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "cohere_catalog",
+        "cohere_deprecations"
+      ],
+      "source_urls": [
+        "https://docs.cohere.com/docs/models",
+        "https://docs.cohere.com/docs/deprecations"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [
+        {
+          "type": "alias_of",
+          "target_exact_id": "command-r-03-2024",
+          "source_id": "cohere_catalog"
+        }
+      ],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-21-jamba-large",
+      "vendor": "AI21",
+      "title": "Jamba Large alias",
+      "exact_id": "jamba-large",
+      "entity_type": "api_alias",
+      "version": "1.7",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai21_catalog"
+      ],
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [
+        {
+          "type": "alias_of",
+          "target_exact_id": "jamba-large-1.7-2025-07",
+          "source_id": "ai21_catalog"
+        }
+      ],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-21-jamba-large-1-7-2025-07",
+      "vendor": "AI21",
+      "title": "Jamba Large snapshot",
+      "exact_id": "jamba-large-1.7-2025-07",
+      "entity_type": "fixed_snapshot",
+      "version": "1.7",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai21_catalog"
+      ],
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-21-jamba-mini-2-2026-01",
+      "vendor": "AI21",
+      "title": "Jamba Mini snapshot",
+      "exact_id": "jamba-mini-2-2026-01",
+      "entity_type": "fixed_snapshot",
+      "version": "2",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai21_catalog"
+      ],
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": null,
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-21-jamba2-3b",
+      "vendor": "AI21",
+      "title": "Jamba2 3B",
+      "exact_id": null,
+      "entity_type": "model_variant",
+      "version": "2",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "catalog_listed",
+        "scope": "open_weights_documented",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights_documented",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai21_catalog",
+        "ai21_platforms"
+      ],
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models",
+        "https://docs.ai21.com/docs/model-availability-across-platforms"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "目录API栏N/A；HF自部署入口可见，具体仓库ID和权重许可待核实。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-21-jamba-mini-1-7-2025-08",
+      "vendor": "AI21",
+      "title": "Jamba Mini 1.7",
+      "exact_id": "jamba-mini-1.7-2025-08",
+      "entity_type": "fixed_snapshot",
+      "version": "1.7",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "deprecated",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-02-01",
+        "retirement_date": null
+      },
+      "access": "hosted_api",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": null,
+      "tutorial_url": null,
+      "tutorial_status": "not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai21_catalog"
+      ],
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "同表snapshot列2025-07但API ID含2025-08，原样保留，不推导发布时间。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-i2-allenai-olmo-3-1025-7b",
+      "vendor": "Ai2",
+      "title": "allenai/Olmo-3-1025-7B",
+      "exact_id": "allenai/Olmo-3-1025-7B",
+      "entity_type": "open_weight_checkpoint",
+      "version": "3 base",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "open_weights_documented",
+        "scope": "open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights",
+      "weights_license": "Apache-2.0",
+      "weights_license_url": "https://huggingface.co/allenai/Olmo-3-1025-7B#license",
+      "model_card_url": "https://huggingface.co/allenai/Olmo-3-1025-7B",
+      "report_url": "https://allenai.org/papers/olmo3",
+      "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+      "tutorial_status": "read_not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai2_card",
+        "ai2_catalog"
+      ],
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-i2-allenai-olmo-3-7b-think-dpo",
+      "vendor": "Ai2",
+      "title": "allenai/Olmo-3-7B-Think-DPO",
+      "exact_id": "allenai/Olmo-3-7B-Think-DPO",
+      "entity_type": "open_weight_checkpoint",
+      "version": "3 DPO",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "open_weights_documented",
+        "scope": "open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": "https://allenai.org/papers/olmo3",
+      "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+      "tutorial_status": "read_not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai2_card",
+        "ai2_catalog"
+      ],
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-i2-allenai-olmo-3-7b-think",
+      "vendor": "Ai2",
+      "title": "allenai/Olmo-3-7B-Think",
+      "exact_id": "allenai/Olmo-3-7B-Think",
+      "entity_type": "open_weight_checkpoint",
+      "version": "3 RLVR",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "open_weights_documented",
+        "scope": "open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": "https://allenai.org/papers/olmo3",
+      "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+      "tutorial_status": "read_not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai2_card",
+        "ai2_catalog"
+      ],
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    },
+    {
+      "id": "global-i2-allenai-olmo-3-7b-instruct",
+      "vendor": "Ai2",
+      "title": "allenai/Olmo-3-7B-Instruct",
+      "exact_id": "allenai/Olmo-3-7B-Instruct",
+      "entity_type": "open_weight_checkpoint",
+      "version": "3 RLVR",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "lifecycle": {
+        "status": "open_weights_documented",
+        "scope": "open_weights",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "access": "open_weights",
+      "weights_license": null,
+      "weights_license_url": null,
+      "model_card_url": null,
+      "report_url": "https://allenai.org/papers/olmo3",
+      "tutorial_url": "https://docs.allenai.org/models/olmo/index.html",
+      "tutorial_status": "read_not_executed",
+      "release_date": null,
+      "release_date_evidence": null,
+      "source_ids": [
+        "ai2_card",
+        "ai2_catalog"
+      ],
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "source_checked_date": "2026-10-28",
+      "summary_zh": "训练阶段须独立记录，仓库main尚未锁定commit；并非不可变权重哈希。",
+      "relations": [],
+      "dedup_suggestions": [],
+      "unknown_fields_policy": "null表示本轮未核实，不表示不存在"
+    }
+  ],
+  "conflicts_and_cautions": [
+    {
+      "topic": "Claude alias vs fixed version",
+      "source_ids": [
+        "claude_catalog",
+        "claude_versioning"
+      ],
+      "finding_zh": "总表alias行重列当前ID；版本专页明确4.6起dateless ID固定。按专页标fixed_api_version，不套用旧alias规则。"
+    },
+    {
+      "topic": "Gemini Live output",
+      "source_ids": [
+        "gemini_live"
+      ],
+      "finding_zh": "数据类型表写Text和audio输出，迁移段说response modality仅audio；文字需output audio transcription，保留两段语义。"
+    },
+    {
+      "topic": "AI21 snapshot label",
+      "source_ids": [
+        "ai21_catalog"
+      ],
+      "finding_zh": "Mini1.7 snapshot列2025-07而API ID为2025-08；不能改写或用于发布日期。"
+    },
+    {
+      "topic": "Olmo DPO link",
+      "source_ids": [
+        "ai2_catalog",
+        "ai2_card"
+      ],
+      "finding_zh": "教程DPO段重复7B-Think final名称；模型卡列独立Think-DPO，采用模型卡标识。"
+    },
+    {
+      "topic": "OpenAI historical replacements",
+      "source_ids": [
+        "openai_deprecations"
+      ],
+      "finding_zh": "现有弃用历史的推荐替代随文档更新，记录核验日建议而不倒填原公告建议。"
+    },
+    {
+      "topic": "Hosted vendor attribution",
+      "source_ids": [
+        "mistral_catalog"
+      ],
+      "finding_zh": "Mistral目录也含第三方Z.ai/DeepSeek，托管目录不等于原创厂商。"
+    },
+    {
+      "topic": "Mistral preview mutability",
+      "source_ids": [
+        "mistral_lifecycle"
+      ],
+      "finding_zh": "Public Preview允许静默更新；带版本号仍不能视为固定权重。GA不静默更新；API退出不等于已下载权重失效。"
+    }
+  ],
+  "tutorial_plan_zh": [
+    "先教家族/版本/别名/快照/API服务/权重/论文的差异。",
+    "第二课从官方目录定位ID与输入输出；第三课读弃用表，按平台迁移。",
+    "第四课读模型卡和权重许可证，再讨论部署；保留base/SFT/DPO/RLVR阶段。",
+    "实践只设计离线核对题：识别无日期固定ID、禁止日期推断、辨别托管厂商和开发者。所有可执行步骤留待独立授权。"
+  ],
+  "validation": {
+    "json_parsed": true,
+    "unique_record_ids": 40,
+    "release_dates_all_have_explicit_evidence": true,
+    "baseline_unchanged": true,
+    "models_executed": false,
+    "sdk_executed": false,
+    "weights_downloaded": false
+  }
+}
