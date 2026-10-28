@@ -276,7 +276,7 @@ def build():
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
-    (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+    (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
     # Root BOOK.md uses the same relative image URL as the published book.
     shutil.copy2(ROOT/'web/world-model-learning.svg',ROOT/'world-model-learning.svg')
