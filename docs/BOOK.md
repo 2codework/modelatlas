@@ -639,6 +639,7 @@ Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
 - 对应实践（编辑学习关系）：[不克隆音色的配音与节奏](https://2codework.github.io/agentwork/?case=video-narration-sync)
 - 对应实践（编辑学习关系）：[视频Agent的证据型质检](https://2codework.github.io/agentwork/?case=video-qc-evidence)
 - 对应实践（编辑学习关系）：[项目归档与局部重做](https://2codework.github.io/agentwork/?case=video-archive-reproducible)
+- 对应实践（编辑学习关系）：[音频交付：双遍响度归一化与测量回执](https://2codework.github.io/agentwork/?case=creative-r2-loudness-two-pass)
 - license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
 - 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
 - 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
@@ -4642,6 +4643,142 @@ python -m unittest discover -s tests -v
 - 来源：https://modelcontextprotocol.io/specification/2026-07-28/changelog
 - 来源：https://modelcontextprotocol.io/specification/2026-07-28
 
+## FreeCAD Part Design · 参数化教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：把几何需求变成可追溯特征树，而非仅生成外观图。
+
+- ID / 类型：design-freecad-partdesign / tool
+- 生命周期：unknown
+- 版本：历史教程0.17+，当前UI/拓扑行为未实测；归档日期不代表软件停更。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[CAD：全约束草图到可改尺寸的教学零件](https://2codework.github.io/agentwork/?case=creative-r2-freecad-constrained-part)
+- license：软件/文档/零件权利分开核验；不复制教程图片，不用于工程安全认证。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：CAD：全约束草图到可改尺寸的教学零件：新建文档，切到 Part Design，创建 Body。
+- 学习步骤（未执行）：CAD：全约束草图到可改尺寸的教学零件：在 XY 平面新建闭合矩形草图；将一角约束到原点，水平/垂直及长宽约束为40和30毫米；确认自由度为0。
+- 学习步骤（未执行）：CAD：全约束草图到可改尺寸的教学零件：关闭草图，Pad 5毫米；保存基线。
+- 学习步骤（未执行）：CAD：全约束草图到可改尺寸的教学零件：在顶面新建圆，半径3毫米，圆心距草图原点20/15毫米；全约束后 Pocket 选 Through all。
+- 学习步骤（未执行）：CAD：全约束草图到可改尺寸的教学零件：另存变体，将矩形长度改为50毫米；检查孔位置和特征树错误，记录设计意图是否要求重新居中。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Creating_a_simple_part_with_PartDesign.md
+
+## OpenSCAD · 代码几何教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：先拒绝非法参数，再产生可复查几何。
+
+- ID / 类型：design-openscad / tool
+- 生命周期：unknown
+- 版本：速查表明确v2021.01；不声称最新发行版。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[CAD：带边界校验的参数化环形垫片](https://2codework.github.io/agentwork/?case=creative-r2-openscad-parameter-guard)
+- license：速查表显示CC-BY；引用链接而不复制版面；源码/输出模型与第三方库许可分开。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：CAD：带边界校验的参数化环形垫片：建立外径20、内径8、高度3三个变量，声明单位毫米。
+- 学习步骤（未执行）：CAD：带边界校验的参数化环形垫片：使用 assert 要求外径>内径>0且高度>0。
+- 学习步骤（未执行）：CAD：带边界校验的参数化环形垫片：difference 中放外圆柱；内圆柱向下偏移0.1毫米且高度增加0.2毫米，避免共面边界。
+- 学习步骤（未执行）：CAD：带边界校验的参数化环形垫片：先预览，再完整渲染；检查孔贯通、轮廓连续；本轮不运行。
+- 学习步骤（未执行）：CAD：带边界校验的参数化环形垫片：对内径8、12、22建立参数表：22必须拒绝；保存源码和预期，不送打印。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://openscad.org/cheatsheet/
+
+## Godot · 3D资产与碰撞教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：验证网格、纹理和尺度在跨工具交接中未丢失。；避免用渲染网格的外观代替碰撞行为验证。
+
+- ID / 类型：design-godot-asset-pipeline / tool
+- 生命周期：unknown
+- 版本：stable滚动文档；正式实践固定Godot与导出器版本。；菜单以stable文档为依据；没有帧率或物理稳定性测量。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[3D：从美术源文件到游戏 glTF 交接](https://2codework.github.io/agentwork/?case=creative-r2-gltf-handoff)
+- 对应实践（编辑学习关系）：[游戏资产：静态场景与动态道具碰撞分别验收](https://2codework.github.io/agentwork/?case=creative-r2-game-collision)
+- license：仅原创几何与纹理；引擎许可不授予第三方模型/字体权利。；使用原创几何，不使用文档中的第三方椅子模型。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：3D：从美术源文件到游戏 glTF 交接：建立资产清单：主文件、纹理、参考尺寸、材质名。
+- 学习步骤（未执行）：3D：从美术源文件到游戏 glTF 交接：把GLB或GLTF+BIN+纹理完整复制到空白项目专用目录。
+- 学习步骤（未执行）：3D：从美术源文件到游戏 glTF 交接：等待导入；选资源打开 Import/Advanced，检查根节点类型与缩放。
+- 学习步骤（未执行）：3D：从美术源文件到游戏 glTF 交接：对照参考检查尺寸、朝向、法线与贴图；不要用OBJ承载骨骼动画。
+- 学习步骤（未执行）：3D：从美术源文件到游戏 glTF 交接：另存使用该资产的Godot场景；变更源文件后再导入并比较清单。
+- 学习步骤（未执行）：游戏资产：静态场景与动态道具碰撞分别验收：导入两件原创简模并打开Advanced Import Settings。
+- 学习步骤（未执行）：游戏资产：静态场景与动态道具碰撞分别验收：对地板节点启用Generate > Physics，Body Type选Static；按需求选Trimesh。
+- 学习步骤（未执行）：游戏资产：静态场景与动态道具碰撞分别验收：对动态道具选Dynamic并选原始/凸形状，不将Trimesh用于动态体。
+- 学习步骤（未执行）：游戏资产：静态场景与动态道具碰撞分别验收：在隔离测试场景预览碰撞形状，人工比对边界和穿透风险。
+- 学习步骤（未执行）：游戏资产：静态场景与动态道具碰撞分别验收：未来运行掉落试验，保存接触/穿透结果；若失败先简化碰撞形状，不直接发布。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html
+- 来源：https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html
+- 来源：https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/advanced_import_settings.html
+
+## Godot SpriteFrames · 逐帧动画教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：把逐格美术转成可调帧率的动画资源。
+
+- ID / 类型：design-godot-spriteframes / tool
+- 生命周期：unknown
+- 版本：Godot4命名AnimatedSprite2D；旧版本类名和界面需迁移。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[动画：原创精灵表切帧与循环验收](https://2codework.github.io/agentwork/?case=creative-r2-sprite-sheet)
+- license：不下载官方教程示例素材；自绘，不模仿受保护角色。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：动画：原创精灵表切帧与循环验收：在空白场景添加AnimatedSprite2D，新建SpriteFrames资源。
+- 学习步骤（未执行）：动画：原创精灵表切帧与循环验收：打开资源，选Add frames from a Sprite Sheet并指定原创图片。
+- 学习步骤（未执行）：动画：原创精灵表切帧与循环验收：设置横4纵1，按顺序选帧；命名idle。
+- 学习步骤（未执行）：动画：原创精灵表切帧与循环验收：设8FPS与循环，预览首尾衔接；记录透明边缘和角色锚点是否跳动。
+- 学习步骤（未执行）：动画：原创精灵表切帧与循环验收：增加第二个动作时另建动画名；保留原帧序与FPS记录，不通过加速掩盖漏帧。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html
+
+## LibreOffice Impress · 演示交付教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：统一视觉层级而不误覆盖特殊页面。；把投影稿、学员讲义与内部备注明确分离。
+
+- ID / 类型：design-libreoffice-impress / tool
+- 生命周期：unknown
+- 版本：访问页显示26.8 Help；不同平台菜单名称可能有差异。；26.8帮助；打印对话框/输出文件能力依OS变化。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[演示设计：母版变更的局部与全局影响控制](https://2codework.github.io/agentwork/?case=creative-r2-impress-master)
+- 对应实践（编辑学习关系）：[演示交付：讲义与讲者备注分版防泄漏](https://2codework.github.io/agentwork/?case=creative-r2-impress-handouts)
+- license：自制模板及可用字体；帮助文本MPL2.0不等于所有模板许可相同。；不分发模板字体或第三方插图；讲义版权与软件版权独立。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：演示设计：母版变更的局部与全局影响控制：复制源演示建立工作副本；标出5页常规页与1页特殊页。
+- 学习步骤（未执行）：演示设计：母版变更的局部与全局影响控制：View > Master Slide设置共用标题样式和背景元素，退出母版视图。
+- 学习步骤（未执行）：演示设计：母版变更的局部与全局影响控制：选常规页，使用Change Slide Master/Load加载自制母版；先仅对当前页应用。
+- 学习步骤（未执行）：演示设计：母版变更的局部与全局影响控制：确认无溢出后再有意选择全局替换；特殊页保留单独母版或单页重设。
+- 学习步骤（未执行）：演示设计：母版变更的局部与全局影响控制：逐页检查标题、页脚、文本边界和对比；保存变更清单与原稿。
+- 学习步骤（未执行）：演示交付：讲义与讲者备注分版防泄漏：创建交付清单，区分学员版与讲者版。
+- 学习步骤（未执行）：演示交付：讲义与讲者备注分版防泄漏：File > Print中Document选Handouts，设每页3张；先只预览不发送。
+- 学习步骤（未执行）：演示交付：讲义与讲者备注分版防泄漏：在Handout视图配置Notes and Handouts的页眉页脚，标注学员版并Apply to All。
+- 学习步骤（未执行）：演示交付：讲义与讲者备注分版防泄漏：另一次选择Notes制作讲者版预览，检查备注可见性；不要混为学员讲义。
+- 学习步骤（未执行）：演示交付：讲义与讲者备注分版防泄漏：人工检查页序、字号及是否含备注；只在确认本地打印到文件能力后未来另存两个文件，否则记录阻塞。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://help.libreoffice.org/latest/en-US/text/simpress/01/03150000.html
+- 来源：https://help.libreoffice.org/latest/en-US/text/simpress/guide/masterpage.html
+- 来源：https://help.libreoffice.org/latest/en-US/text/simpress/guide/printing.html
+
+## Audacity · 频谱编辑教学工具
+
+普通创作软件/组件的文档核验教学入口，不是AI模型或自主Agent。覆盖：仅处理定位到的窄带干扰，不把降噪当作万能人声恢复。
+
+- ID / 类型：music-audacity-spectral / tool
+- 生命周期：unknown
+- 版本：Development Manual不等于已安装版本；先核对效果菜单。
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[音频后期：窄带嗡声的最小破坏修复](https://2codework.github.io/agentwork/?case=creative-r2-spectral-hum)
+- license：只用原创测试信号；录音授权、软件与插件许可分别核验。
+- cost：未执行；安装、素材与计算预算执行前确认。
+- historical_context：文档版本/归档状态不等于软件生命周期；实际兼容性未测。
+- 学习步骤（未执行）：音频后期：窄带嗡声的最小破坏修复：保存未处理副本，记录轨道和项目采样率。
+- 学习步骤（未执行）：音频后期：窄带嗡声的最小破坏修复：切到Spectrogram并启用Spectral Selection。
+- 学习步骤（未执行）：音频后期：窄带嗡声的最小破坏修复：圈定嗡声所在时间和窄频带，记下上下频率；保持在轨道Nyquist内。
+- 学习步骤（未执行）：音频后期：窄带嗡声的最小破坏修复：使用专用Spectral edit效果预览处理；不要用普通Delete代替频带编辑。
+- 学习步骤（未执行）：音频后期：窄带嗡声的最小破坏修复：在相同监听电平比较前后，检查目标频带及邻近内容；损伤明显则撤销并缩小范围。
+- 注意：步骤和验收是待执行教学设计，不是产品实测或自动Agent能力。
+- 来源：https://manual.audacityteam.org/man/spectral_selection.html
+
 ## MMMU
 
 跨学科图文理解；不同split不得混成一个成绩。 任务：多学科视觉问答。版本：original; snapshot 2026-10-28；分片：dev / validation / test。访问：公开介绍 / 官方任务入口。规模：150 samples（dev；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）；900 samples（validation；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）；10500 samples（test；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）
@@ -5692,6 +5829,18 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - course-mcp-june · https://modelcontextprotocol.io/specification/2025-06-18/changelog · 核验 2026-10-28 · 移除batching；加入structured output
 - course-skills-extension · https://modelcontextprotocol.io/extensions/skills/overview · 核验 2026-10-28 · 扩展、检索与激活区别、逐 skill 批准、server/discover 声明
 - course-skills-working-group · https://modelcontextprotocol.io/community/working-groups/skills-over-mcp · 核验 2026-10-28 · SEP-2640 Final；宿主支持不可推定
+- r2-freecad · https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Creating_a_simple_part_with_PartDesign.md · 核验 2026-10-28 · 原始来源页面
+- r2-openscad · https://openscad.org/cheatsheet/ · 核验 2026-10-28 · 原始来源页面
+- r2-godot-formats · https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html · 核验 2026-10-28 · 原始来源页面
+- r2-godot-config · https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/import_configuration.html · 核验 2026-10-28 · 原始来源页面
+- r2-godot-advanced · https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/advanced_import_settings.html · 核验 2026-10-28 · 原始来源页面
+- r2-godot-sprite · https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html · 核验 2026-10-28 · 原始来源页面
+- r2-impress-master · https://help.libreoffice.org/latest/en-US/text/simpress/01/03150000.html · 核验 2026-10-28 · 原始来源页面
+- r2-impress-change · https://help.libreoffice.org/latest/en-US/text/simpress/guide/masterpage.html · 核验 2026-10-28 · 原始来源页面
+- r2-impress-handout · https://help.libreoffice.org/latest/en-US/text/simpress/guide/printing.html · 核验 2026-10-28 · 原始来源页面
+- r2-audacity-spectral · https://manual.audacityteam.org/man/spectral_selection.html · 核验 2026-10-28 · 原始来源页面
+- r2-ffmpeg-loudnorm · https://ffmpeg.org/ffmpeg-filters.html#loudnorm · 核验 2026-10-28 · 原始来源页面
+- r2-ffmpeg-license · https://ffmpeg.org/legal.html · 核验 2026-10-28 · 原始来源页面
 - bench-src-mmmu-1 · https://github.com/MMMU-Benchmark/MMMU · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
 - bench-src-mmmu-2 · https://huggingface.co/datasets/MMMU/MMMU · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
 - bench-src-mmmu-3 · https://arxiv.org/abs/2311.16502 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
@@ -5792,6 +5941,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 模型家族逐版本教程需与模型登记表继续关联；本轮只有运行时路线，不捏造具体模型支持。
 - JEV未定义，未重复研究或臆测展开。
 - 已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。
+- 本轮创意增量为九个未执行教学设计；实际CAD、物理、动画、印刷及音频验收仍未执行。
 - 评测新增22条记录/15个家族，不代表完整覆盖。公开入口不等于匿名下载、完整标签或商用许可；没有新增成绩。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）

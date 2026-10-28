@@ -4,6 +4,7 @@ import json, re, shutil, datetime, copy, math, sys
 sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
 import asset_versions
 import mcp_learning
+import creative_workflows
 import vendor_catalog
 import benchmark_catalog
 from pathlib import Path
@@ -211,6 +212,8 @@ def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
     bundles.append(course)
+    _, creative_bundle = creative_workflows.load(ROOT)
+    bundles.append(creative_bundle)
     bundles.append(benchmark_catalog.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
@@ -221,6 +224,7 @@ def build():
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
     mcp_learning.publish(ROOT,out)
+    creative_workflows.publish(ROOT,out)
     vendor_catalog.publish(ROOT,out)
     benchmark_catalog.publish(ROOT,out)
     (out/'.nojekyll').touch()
