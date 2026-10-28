@@ -14,5 +14,13 @@ function search(nodes, views, filters){return nodes.filter(n=>{
  return (!filters.query||text.includes(filters.query.trim().toLocaleLowerCase()))&&['type','category'].every(k=>!filters[k]||n[k]===filters[k])&&['availability','vendor'].every(k=>!filters[k]||v[k]===filters[k]);
 });}
 function deepLinkID(search,hash,ids){let id=new URLSearchParams(search).get('node');if(!id&&hash.startsWith('#node=')){try{id=decodeURIComponent(hash.slice(6));}catch{}}return ids.has(id)?id:null;}
-const api={safeURL,parseProgress,search,deepLinkID};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
+// Legacy display-text compatibility only, not a complete availability-status schema.
+// A false result never means a service/account/region has been verified available.
+function hasExplicitUnknownAvailability(value){
+ if(value===null||value===undefined)return true;
+ if(typeof value!=='string')return false;
+ const label=value.trim();
+ return label===''||label==='未核验'||/^unknown\b/i.test(label);
+}
+const api={safeURL,parseProgress,search,deepLinkID,hasExplicitUnknownAvailability};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

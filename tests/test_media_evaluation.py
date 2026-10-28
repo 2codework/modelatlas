@@ -28,5 +28,5 @@ class MediaTests(unittest.TestCase):
   for r in self.raw['records']:
    s='\n'.join(M.book(r));self.assertIn('never-run',s);self.assertIn(r['entity_kind'],s);self.assertIn(r['version'],s);self.assertIn('access_semantics',s);self.assertIn('license_evidence',s)
  def test_generated_registry_counts(self):
-  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual(len(d['nodes']),237);self.assertEqual(len(d['dataset_benchmark_registry']),33);self.assertEqual(len(d['media_evaluation_registry']),11)
+  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual(len(d['nodes']),242);self.assertEqual(len(d['dataset_benchmark_registry']),33);self.assertEqual(len(d['media_evaluation_registry']),11)
 if __name__=='__main__':unittest.main()

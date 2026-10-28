@@ -30,7 +30,7 @@ class MediaTimelineTests(unittest.TestCase):
  def test_shared_paper_and_migration(self):
   es=M.adapt(self.p,self.q)['events'];paper=next(e for e in es if '2410-19168-v1' in e['id']);self.assertEqual(len(paper['node_ids']),2);migration=next(e for e in es if e['event_type']=='platform_migration');self.assertEqual(migration['node_ids'],['bench-mmau-v051525-test'])
  def test_actual_generated_counts_and_book(self):
-  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual(len(d['events']),166);self.assertEqual(sum(bool(e['date']) for e in d['events']),91);self.assertEqual(len(d['nodes']),237);self.assertEqual(len(d['media_evaluation_registry']),11)
+  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual(len(d['events']),166);self.assertEqual(sum(bool(e['date']) for e in d['events']),91);self.assertEqual(len(d['nodes']),242);self.assertEqual(len(d['media_evaluation_registry']),11)
   book=(ROOT/'BOOK.md').read_text()
   for e in M.adapt(self.p,self.q)['events']:
    self.assertIn(e['evidence_locator'],book);self.assertIn(e['source_urls'][0],book);self.assertIn(e['observation_scope_zh'],book)

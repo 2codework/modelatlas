@@ -5,6 +5,7 @@ sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
 import asset_versions
 import mcp_learning
 import creative_workflows
+import creative_gaps
 import office_agents
 import assistant_workspace
 import regional_office
@@ -251,7 +252,7 @@ def book(data):
     lines+=['','## 来源目录']
     for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
     lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
-    return '\n'.join(line.rstrip() for line in lines)+'\n'+(vendor_catalog.book(data['vendor_catalog']) if 'vendor_catalog' in data else '')
+    return '\n'.join(line.rstrip() for line in lines)+'\n'+(vendor_catalog.book(data['vendor_catalog']) if 'vendor_catalog' in data else '')+(creative_gaps.book(data['creative_learning_registry']) if 'creative_learning_registry' in data else '')
 def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
@@ -266,7 +267,11 @@ def build():
     bundles.append(media_timeline.load(ROOT))
     bundles.append(assistant_workspace.load(ROOT))
     bundles.append(regional_office.load(ROOT))
+    gap_bundle, gap_registry = creative_gaps.load(ROOT)
+    bundles.append(gap_bundle)
     data=normalize(bundles)
+    data['creative_learning_registry']=gap_registry
+    creative_gaps.validate_registry(data)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
@@ -286,6 +291,7 @@ def build():
     media_timeline.publish(ROOT,out)
     assistant_workspace.publish(ROOT,out)
     regional_office.publish(ROOT,out)
+    creative_gaps.publish(ROOT,out,gap_registry,data['sources'])
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

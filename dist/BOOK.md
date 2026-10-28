@@ -7344,6 +7344,111 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - 来源：https://cloud.tencent.cn/document/product/1759/122574
 - 来源：https://cloud.tencent.cn/document/product/1759/105796
 
+## Descript Underlord
+
+既有FilmAgent/ViMax为研究编排，HKUDS VideoAgent与Kdenlive案例不覆盖商用会话剪辑的积分/回滚。 这是官方agentic应用功能，不是某单一模型。仅UI学习设计；本轮不调用API/MCP、不上传、不支付、不克隆声音、不发布。 恢复操作也是有副作用的项目修改，须先核对范围；本轮未执行Revert、Undo或Restore，也不保证无限历史保留。
+
+- ID / 类型：creative-underlord / application_feature
+- 生命周期：unknown
+- 版本：以2026-10-28核验的帮助页为依据，非固定产品安装快照
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：服务条款而非开源模型许可；素材/人物同意/输出权利单独核验，不声称输出天然无版权风险。
+- cost：Descript账户与计划；Free有限Underlord，付费能力/高阶模型不同；每次推理+工具均可能计费，同提示成本不固定。
+- 学习步骤（未执行）：打开已有授权项目的Underlord侧栏
+- 学习步骤（未执行）：给明确剪辑目标、禁止改动和长度约束
+- 学习步骤（未执行）：对照转录稿逐处检查编辑：当前session可在对应Underlord响应下Revert；刷新或关闭项目后改用File > Version history。先预览所选历史版本，核对整个项目全部compositions/files及协作者变更；确认恢复影响获准后才Restore Version。
+- 注意：六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+- 注意：帮助页当前Beta；v2历史公告日期未知，旧Labs开关与模型名不保留为现行操作。
+- 注意：首发日期unknown；文档日期不是产品发布日期。
+- 来源：https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript
+- 来源：https://www.descript.com/underlord
+- 来源：https://feedback.descript.com/changelog/announcingunderlord-v2
+- 来源：https://help.descript.com/ai-assistant/revert
+- 来源：https://www.descript.com/terms
+- 来源：https://help.descript.com/working-in-projects/version-history
+
+## Adobe Express AI Assistant
+
+不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。 称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。
+
+- ID / 类型：creative-express-ai-assistant / application_feature
+- 生命周期：unknown
+- 版本：以2026-10-28核验的帮助页为依据，非固定产品安装快照
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。
+- cost：个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。
+- 学习步骤（未执行）：在主页用提示生成虚构活动海报并补齐占位信息
+- 学习步骤（未执行）：选择候选后只修改指定文字/元素，保留其余布局
+- 学习步骤（未执行）：需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿
+- 注意：六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+- 注意：2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。
+- 注意：首发日期unknown；文档日期不是产品发布日期。
+- 来源：https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html
+- 来源：https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html
+- 来源：https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant
+- 来源：https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html
+
+## Ableton Live comping / linked-track editing
+
+现有生成、分轨、混音、母带与频谱修复未讲真实多录次选段。 普通DAW编辑功能，不是音乐Agent或生成模型；未证实API自治控制，不运行产品。
+
+- ID / 类型：creative-ableton-live / tool
+- 生命周期：unknown
+- 版本：以2026-10-28核验的帮助页为依据，非固定产品安装快照
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：软件许可不授予录音、采样、插件素材再分发权；确切EULA条款未完整复核。
+- cost：付费许可/授权软件；在线授权需要Ableton账户，亦有离线路径。Comping支持Intro/Standard/Suite，联动轨编辑限Standard/Suite；不泛化到Lite。
+- 学习步骤（未执行）：Arrangement View显示Take Lanes；Automation Mode时先退出
+- 学习步骤（未执行）：在Draw Mode将录次选段编入主轨
+- 学习步骤（未执行）：需要多麦同步编辑时核对Standard/Suite的linked-track能力
+- 注意：六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+- 注意：官方FAQ称自Live 11起提供comping；首发日期unknown。
+- 注意：首发日期unknown；文档日期不是产品发布日期。
+- 来源：https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ
+- 来源：https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online
+- 来源：https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ
+
+## MuseScore Studio Parts
+
+现有音乐案例偏音频，缺少排练/演奏所需的可读分谱交付。 排版软件，不是生成音乐模型/Agent；只做手册UI流程，不宣称插件/CLI已核验。
+
+- ID / 类型：creative-musescore-studio / tool
+- 生命周期：unknown
+- 版本：以2026-10-28核验的帮助页为依据，非固定产品安装快照
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：Studio代码GPL 3.0；乐谱著作权、字体和音源单独许可，不自动继承GPL。
+- cost：官方下载Studio免费且无需账户/订阅；不把MuseScore.com乐谱服务或额外音源混同桌面软件。
+- 学习步骤（未执行）：Parts打开默认或自定义分谱
+- 学习步骤（未执行）：File Export选择各分谱并决定分开或合并
+- 学习步骤（未执行）：输出PDF供排练前人工审阅
+- 注意：六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+- 注意：Parts页明确MuseScore 4，日期未知；不混用旧版File Export Parts菜单。
+- 注意：首发日期unknown；文档日期不是产品发布日期。
+- 来源：https://handbook.musescore.org/basics/parts
+- 来源：https://handbook.musescore.org/en_gb/introduction/download-and-installation
+- 来源：https://github.com/musescore/MuseScore
+
+## Adobe InDesign Package / Preflight
+
+已有演示、海报和C2PA；缺少印刷源文件交接的缺链、字体与隐藏资产泄露检查。 排版交付软件，不是设计Agent；不使用脚本/API/Server，不自动发印厂。
+
+- ID / 类型：creative-indesign / tool
+- 生命周期：unknown
+- 版本：以2026-10-28核验的帮助页为依据，非固定产品安装快照
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：Adobe Fonts文件不可拷贝移动；其他字体依各EULA与收件方许可。Package按钮不是再分发授权。
+- cost：Creative Cloud会员与Adobe账户；官方试用7日不取消转收费。本研究未注册试用、订阅或付款。
+- 学习步骤（未执行）：File Package检查摘要，有错返回Window Output Preflight
+- 学习步骤（未执行）：只选择需交付的链接/IDML/PDF等，不默认包含隐藏非打印素材
+- 学习步骤（未执行）：核查字体许可后生成待审批包与报告
+- 注意：六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+- 注意：打包帮助更新2026-06-02、字体说明2025-11-12；首发unknown，不将旧CS手册当现行。
+- 注意：首发日期unknown；文档日期不是产品发布日期。
+- 来源：https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html
+- 来源：https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html
+- 来源：https://www.adobe.com/products/indesign/free-trial-download.html
+- 来源：https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -7909,6 +8014,29 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - regional-src-bailian-international · https://www.alibabacloud.com/help/zh/model-studio/application-introduction · 核验 2026-10-28 · Page updated 2026-10-11: Singapore pre-2025-04-21 application customers restriction; Agent 1.0/workflow preview warning.；核验：opened；限制：This is international/legacy application scope, not evidence every China/Agent Studio feature has identical restrictions.
 - regional-src-tencent-permissions · https://cloud.tencent.cn/document/product/1759/122574 · 核验 2026-10-28 · 2026-07-10 update; workspace user/role permissions are unioned; new members have defaults; data and publish controls supported.；核验：opened；限制：
 - regional-src-tencent-lifecycle · https://cloud.tencent.cn/document/product/1759/105796 · 核验 2026-10-28 · 2025-08-17 migration notice; product formerly 大模型知识引擎.；核验：search-excerpt；限制：Historical permission guidance; do not blindly grant legacy broad-access policy.
+- creative-gap-src-ableton-comp · https://help.ableton.com/hc/en-us/articles/360019092580-Comping-in-Live-FAQ · 核验 2026-10-28 · Comping自Live 11起；Take Lanes/Draw Mode；Intro/Standard/Suite支持comping，linked-track editing限Standard/Suite。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-ableton-auth · https://help.ableton.com/hc/en-us/articles/209773585-Authorizing-Live-Online · 核验 2026-10-28 · 需授权；在线登录账户选择许可证，亦有离线授权路径。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-ableton-buy · https://help.ableton.com/hc/en-us/articles/209772965-Buying-Live-FAQ · 核验 2026-10-28 · 购买和升级价格依许可/账户；不引用价格。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-muse-parts · https://handbook.musescore.org/basics/parts · 核验 2026-10-28 · MuseScore 4默认乐器分谱，Parts选择，File Export分开/合并输出，默认PDF。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-muse-install · https://handbook.musescore.org/en_gb/introduction/download-and-installation · 核验 2026-10-28 · 官方下载免费且无需账户或订阅；可选生态服务不能据此推定免费。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-muse-license · https://github.com/musescore/MuseScore · 核验 2026-10-28 · README明确Studio GPL version 3.0；不等于乐谱、字体、音色均GPL。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-kden-proxy · https://docs.kdenlive.org/en/user_interface/menu/media_menu.html · 核验 2026-10-28 · 26.08手册：启用项目代理后创建Proxy Clip；P标记；最终渲染使用原素材。；原观察 opened_primary；独立QA opened_primary；限制 文档版本标签不是本机版本，也不是发布日期。
+- creative-gap-src-kden-license · https://github.com/KDE/kdenlive · 核验 2026-10-28 · KDE官方镜像说明免费开源；仓库显示GPL-3.0，主开发在KDE Invent。；原观察 opened_primary；独立QA opened_primary；限制 分发二进制及各组件仍须核查对应版本许可证。
+- creative-gap-src-kden-broken · https://docs.kdenlive.org/en/project_and_asset_management/project_bin/proxy_clips.html · 核验 2026-10-28 · 无事实依赖；原观察 tool_open_error；独立QA not_retried_prior_failure；限制 web open Internal Error；改用已打开官方Media Menu，不认定产品不可用。
+- creative-gap-src-indesign-package · https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html · 核验 2026-10-28 · File Package前预检；可包含链接、IDML、PDF；Adobe Fonts激活字体不拷入；隐藏非打印资产有可选包含项。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-font-rights · https://helpx.adobe.com/fonts/web/getting-and-using-fonts/package-font-files.html · 核验 2026-10-28 · 字体传输依具体EULA；Adobe Fonts不可拷贝移动；收件人可能须独立许可。；原观察 opened_primary；独立QA tool_open_error；限制
+- creative-gap-src-indesign-pay · https://www.adobe.com/products/indesign/free-trial-download.html · 核验 2026-10-28 · Creative Cloud会员；7日试用不取消会转收费，不执行注册或试用。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-underlord-help · https://help.descript.com/getting-started/underlord-beta-your-ai-co-editor-in-descript · 核验 2026-10-28 · Beta co-editor；项目右侧入口；可选底层模型；提示推理及工具均计积分，成本非确定。；原观察 opened_primary；独立QA opened_primary；限制 旧hc文章URL重定向至本页；不冻结模型选择器列表。
+- creative-gap-src-underlord-product · https://www.descript.com/underlord · 核验 2026-10-28 · 官方称agentic video co-editor；Free有限使用，付费分级。；原观察 opened_primary；独立QA opened_primary；限制 营销能力不是实测质量；本包不复制动态价格和额度。
+- creative-gap-src-underlord-v2 · https://feedback.descript.com/changelog/announcingunderlord-v2 · 核验 2026-10-28 · 历史v2公告讲计划/自纠正/模型选择；旧Labs退出开关是临时说明。；原观察 opened_primary；独立QA opened_primary；限制 页面未显示可靠绝对发布日期，date保持null；不把旧模型表或临时开关当现行。
+- creative-gap-src-underlord-revert · https://help.descript.com/ai-assistant/revert · 核验 2026-10-28 · 响应Revert checkpoint仅当前session；刷新/关闭项目后使用Version History，另有单步Undo。；原观察 opened_primary；独立QA opened_primary；限制 不推出永久checkpoint、无限保留或积分退款。
+- creative-gap-src-underlord-terms · https://www.descript.com/terms · 核验 2026-10-28 · 用户需拥有上传/分享权；生成输出权利限法律可保护范围；外部自动化不能由本研究推定授权。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-express-overview · https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-overview.html · 核验 2026-10-28 · Beta会话设计/局部调整；个人Free/Premium渐进开放，桌面web；不支持Teams/Enterprise/Education；地区与语言有限。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-express-how · https://helpx.adobe.com/express/web/ai-assistant/get-started-with-the-adobe-express-ai-assistant.html · 核验 2026-10-28 · 主页提示、补信息、四候选、对话修改/手工编辑/Download；Chats不共享给协作者。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-express-history · https://news.adobe.com/news/2025/10/adobe-max-2025-express-ai-assistant · 核验 2026-10-28 · 官方2025-10-28宣布beta；未来企业功能描述不是现行可用证据。；原观察 opened_primary；独立QA opened_primary；限制
+- creative-gap-src-express-faq-redirect · https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html · 核验 2026-10-28 · 搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。；原观察 redirect_with_search_body_conflict；独立QA not_retried_prior_redirect_conflict；限制 不得将缓存的每日次数/积分豁免直接纳入现行指南。
+- creative-gap-src-font-licensing-faq-independent · https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html · 核验 2026-10-28 · 不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。；原观察 independently_opened_primary；独立QA opened_primary；限制 独立来源；不能将它的成功记作另一个URL成功。
+- creative-gap-src-underlord-history-independent · https://help.descript.com/working-in-projects/version-history · 核验 2026-10-28 · 可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。；原观察 independently_opened_primary；独立QA opened_primary；限制 独立来源；不能将它的成功记作另一个URL成功。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
@@ -7960,6 +8088,7 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - 媒体评测仅补充11个代表知识实体（6 benchmark、3 metric、1 harness、1 dataset）；不代表完整目录，不导入成绩或形成统一榜单。
 - 通用助手/研究工作区已有8项有限文档补包；功能、工作区、历史执行表面不是8个模型或8个自主Agent。账号可用性、实际效果和更广市场仍未覆盖。
 - 7条区域办公平台/功能文档补包，不是7个模型，也不是全球市场完整清单；价格、租户资格与实际权限拒绝效果未实测。
+- 六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。
@@ -15223,3 +15352,196 @@ null 表示未知 / 本轮未核验，不表示不存在。原始来源与修订
     "held": []
   }
 }
+
+## 创意学习工作台 · 六项未执行练习
+
+六项代表性教学，不是全集。资料核验≠产品效果；所有练习never-run。两项AI应用能力不是基础模型；另四项普通创作软件不是Agent。通过稳定案例ID关联AgentWork的对应练习。
+
+### 视频Agent：Underlord粗剪的差异审查与回滚
+- 类型：agentic_application_feature
+- 产品节点：creative-underlord
+- case ID：gap-underlord-review
+- 状态：documentation-only / never-run
+- 为什么补：既有FilmAgent/ViMax为研究编排，HKUDS VideoAgent与Kdenlive案例不覆盖商用会话剪辑的积分/回滚。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. 打开已有授权项目的Underlord侧栏
+2. 给明确剪辑目标、禁止改动和长度约束
+3. 对照转录稿逐处检查编辑：当前session可在对应Underlord响应下Revert；刷新或关闭项目后改用File > Version history。先预览所选历史版本，核对整个项目全部compositions/files及协作者变更；确认恢复影响获准后才Restore Version。
+#### 原创练习验收（预期，未观察）
+- 先设计原始稿/剪后稿差异表，关键事实零删改
+- 检查断句、画面跳切与字幕同步；不以工具自述判成功
+- 记录提示前后Usage，达到自定预算即停；未经批准不发布
+- 设计两个恢复分支：当前会话Revert，以及刷新/关闭后Version History；不得把checkpoint写成永久存在。
+- Version History恢复影响全项目全部compositions/files，不只当前片段；先预览并审查协作者变化，再批准Restore。恢复后逐项核对，不能凭按钮点击或助手自述判成功；不承诺积分退回。
+- 账号与费用：Descript账户与计划；Free有限Underlord，付费能力/高阶模型不同；每次推理+工具均可能计费，同提示成本不固定。
+- 许可与权利：服务条款而非开源模型许可；素材/人物同意/输出权利单独核验，不声称输出天然无版权风险。
+- 权限与自动化边界：这是官方agentic应用功能，不是某单一模型。仅UI学习设计；本轮不调用API/MCP、不上传、不支付、不克隆声音、不发布。 恢复操作也是有副作用的项目修改，须先核对范围；本轮未执行Revert、Undo或Restore，也不保证无限历史保留。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+用一份自写90秒科普讲解及对应自录素材设计45秒粗剪；三项核心事实标为不可删除，不采用声线克隆、生成配音或外部素材。
+1. 在纸面台账列原片段时间、事实句与允许删掉的重复语，保留未编辑副本。
+2. 写出仅压缩重复内容的受限请求及自定积分上限；待有授权再导入产品，不将本课当授权。
+3. 对每个拟删片段记录理由及可接受/拒绝决定；禁止因助手自述而跳过声音和画面复核。
+4. 设计当前session Revert与关闭后Version History两条恢复路径；后者先列全项目影响和协作者修改再审批。
+- 预期交付物：原片/粗剪差异表；不变量检查清单；Usage前后记录模板；项目级恢复审批单
+- 停止条件：不可删除事实被改动；预算不明或达到上限；历史版本含未批准的协作者变化；人物或媒体权利不明
+- 历史与版本：帮助页当前Beta；v2历史公告日期未知，旧Labs开关与模型名不保留为现行操作。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-underlord-review)
+
+### 设计AI助手：局部修改与人工接管
+- 类型：conversational_ai_assistant
+- 产品节点：creative-express-ai-assistant
+- case ID：gap-express-targeted
+- 状态：documentation-only / never-run
+- 为什么补：不同于已覆盖Firefly图像API、Photoshop API和Canva模板填充；补会话中保持设计不变量与手工接管。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. 在主页用提示生成虚构活动海报并补齐占位信息
+2. 选择候选后只修改指定文字/元素，保留其余布局
+3. 需要时Open in editor并关闭AI Assistant转手工编辑；只准备下载审稿
+#### 原创练习验收（预期，未观察）
+- 把日期/地址/品牌色列为不变量并逐项对照
+- 检查字体、对比度、文字溢出与非目标区变化
+- 协作者不能看到私有Chats，因此交付独立变更说明，而非假设聊天会共享
+- 账号与费用：个人Free/Premium、桌面web、渐进Beta；Teams/Enterprise/Education不支持。现行页排除中国等地区，支持English/Bahasa Indonesia/Brazilian Portuguese/Hindi，未列中文。具体积分规则本次未确认。
+- 许可与权利：Adobe服务与素材/字体规则另核；本轮未核完全部生成与Stock许可，商业再分发资格unknown，不替代法务审查。
+- 权限与自动化边界：称会话AI助手，不称基础模型或无限自治Agent。只设计受控提示和人工审批；不承诺跨应用自动化/API。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+为虚构社区读书会设计海报，只把时间从周六14:00改为周日15:00；书名、地点与自定品牌色必须保留。
+1. 在纸上列活动字段、允许修改区与三项不变量；先确认地区、账户与语言资格，不能访问则停留在离线练习。
+2. 写一条生成请求和一条局部修改请求，分开审查，不让修改要求扩展成整页重做。
+3. 设计对话编辑与手工接管对照表：哪些变化接受，哪些需Open in editor进一步修正。
+4. 准备独立变更说明供协作者阅读；Chats私有不能作为交付依据。
+- 预期交付物：结构化活动字段表；修改前后不变量表；图像/字体权利台账；不依赖私有Chats的交付说明
+- 停止条件：账户/地区不支持；费用规则不清且下一步可能收费；非目标文字、色彩或图层被改变；字体或Stock素材许可未知
+- 历史与版本：2025-10-28 beta公告仅作历史；2026-10-22现行帮助页仍Beta。旧FAQ缓存计费表与直接打开结果冲突。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-express-targeted)
+
+### 音乐制作：多录次拼接与联动编辑验收
+- 类型：deterministic_software_workflow
+- 产品节点：creative-ableton-live
+- case ID：gap-ableton-comp
+- 状态：documentation-only / never-run
+- 为什么补：现有生成、分轨、混音、母带与频谱修复未讲真实多录次选段。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. Arrangement View显示Take Lanes；Automation Mode时先退出
+2. 在Draw Mode将录次选段编入主轨
+3. 需要多麦同步编辑时核对Standard/Suite的linked-track能力
+#### 原创练习验收（预期，未观察）
+- 原创8小节两次录音只是自定练习，不是厂商建议
+- 保留全部原始录次与选段表
+- 逐个接点试听爆音/呼吸截断，多麦对照相位与同步
+- 账号与费用：付费许可/授权软件；在线授权需要Ableton账户，亦有离线路径。Comping支持Intro/Standard/Suite，联动轨编辑限Standard/Suite；不泛化到Lite。
+- 许可与权利：软件许可不授予录音、采样、插件素材再分发权；确切EULA条款未完整复核。
+- 权限与自动化边界：普通DAW编辑功能，不是音乐Agent或生成模型；未证实API自治控制，不运行产品。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+用原创8小节旋律的两次演奏设计拼接，分别标出节奏最稳与表情最佳的片段；这不是AI自动选优。
+1. 给两次录音命名并记录同一节拍基准，原文件只读保留。
+2. 绘制Take Lanes到主轨的选段表，每次拼接保留来源录次与小节范围。
+3. 把多麦场景单独列为Standard/Suite联动编辑扩展，不给Intro/Lite假设相同权限。
+4. 安排接点试听、单声道对照和恢复原录次检查；未监听则只提交待验收设计。
+- 预期交付物：录次来源清单；逐小节选段表；接点试听记录模板；同步/相位待查项
+- 停止条件：版本不含所需联动功能；原始录次丢失；接点爆音或呼吸截断未复核；采样或插件素材来源不明
+- 历史与版本：官方FAQ称自Live 11起提供comping；首发日期unknown。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-ableton-comp)
+
+### 音乐交付：总谱到演奏分谱
+- 类型：deterministic_software_workflow
+- 产品节点：creative-musescore-studio
+- case ID：gap-muse-parts
+- 状态：documentation-only / never-run
+- 为什么补：现有音乐案例偏音频，缺少排练/演奏所需的可读分谱交付。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. Parts打开默认或自定义分谱
+2. File Export选择各分谱并决定分开或合并
+3. 输出PDF供排练前人工审阅
+#### 原创练习验收（预期，未观察）
+- 原创四声部短曲，逐谱核对乐器名/小节数/休止
+- 人工检查翻页、断行与碰撞，不将自动生成等同可演奏
+- 保存源文件和分谱清单并区分音频试听与纸面谱面验收
+- 账号与费用：官方下载Studio免费且无需账户/订阅；不把MuseScore.com乐谱服务或额外音源混同桌面软件。
+- 许可与权利：Studio代码GPL 3.0；乐谱著作权、字体和音源单独许可，不自动继承GPL。
+- 权限与自动化边界：排版软件，不是生成音乐模型/Agent；只做手册UI流程，不宣称插件/CLI已核验。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+为自写四声部16小节练习设计总谱和四份分谱的交付目录，另留一份缺乐器名的反例作人工校验。
+1. 列四声部名称、目标文件名、小节数以及各谱应包含的乐段。
+2. 设计Parts选择与单独/合并PDF导出分支，不混用旧版Export Parts菜单。
+3. 人工逐谱核对乐器名、小节、休止、翻页与碰撞；音频播放不能替代谱面审阅。
+4. 将总谱源文件、分谱目录与导出清单对应，保留可编辑版本以便下一次修订。
+- 预期交付物：总谱/分谱映射表；PDF导出命名清单；翻页与可读性审查单
+- 停止条件：原曲或编曲权限未知；分谱声部遗漏；版面碰撞或翻页不可用；把在线乐谱订阅误当Studio必要条件
+- 历史与版本：Parts页明确MuseScore 4，日期未知；不混用旧版File Export Parts菜单。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-muse-parts)
+
+### 视频剪辑：代理预览与原片交付验证
+- 类型：deterministic_software_workflow
+- 产品节点：vid-kdenlive
+- case ID：gap-kden-proxy
+- 状态：documentation-only / never-run
+- 为什么补：既有Kdenlive节点覆盖转录字幕；没有代理编辑与原片渲染身份检查。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. 项目设置启用代理
+2. 素材箱选择Proxy Clip，观察P标记
+3. 保留原素材；最终渲染按文档使用原文件
+#### 原创练习验收（预期，未观察）
+- 自有高分辨率短片制作代理与源片映射清单
+- 对比切点、时长与帧率；代理低清不是导出质量验收
+- 设计源文件缺失的失败场景：不得把代理静默冒充交付，停止并恢复源文件
+- 账号与费用：免费开源本地编辑器；所选工作流不涉及付费云服务/模型key。无账户步骤出现在所核UI文档，账号要求推断限此流程。
+- 许可与权利：官方仓库显示GPL-3.0，组件许可按具体版本核验；软件许可不授予素材/编码专利权。
+- 权限与自动化边界：普通确定性编辑流程，不是视频Agent；未验证外部编排接口。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+以三段自有高分辨率素材设计20秒短片，另设一次原片临时不可访问的失败情景；不得把代理文件当最终原片交付。
+1. 记录每段原片与拟生成代理的文件身份、时长、帧率与位置，不移动真实素材。
+2. 纸面安排项目代理开关、素材箱P标记及时间线切点检查。
+3. 将代理预览质量与最终原片渲染验收分开，设计源片在线/缺失两组测试。
+4. 若源片缺失则停止交付，恢复映射后重新核对切点、字幕与导出分辨率；不声称本轮已恢复。
+- 预期交付物：原片—代理映射表；切点与帧率检查单；源片缺失恢复计划
+- 停止条件：原片不可访问；代理与原片对应不明；时长或帧率不一致；导出仍未通过人工观看
+- 历史与版本：当前读取26.08手册；这是版本标签非发布时间；旧猜测代理路径工具打开报错不等于功能停用。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-kden-proxy)
+
+### 设计交付：印前预检、打包与字体授权隔离
+- 类型：deterministic_software_workflow
+- 产品节点：creative-indesign
+- case ID：gap-indesign-preflight
+- 状态：documentation-only / never-run
+- 为什么补：已有演示、海报和C2PA；缺少印刷源文件交接的缺链、字体与隐藏资产泄露检查。
+- 原创输入：只用原创/授权且无个人敏感信息的合成教学素材
+#### 文档操作路径（不是执行结果）
+1. File Package检查摘要，有错返回Window Output Preflight
+2. 只选择需交付的链接/IDML/PDF等，不默认包含隐藏非打印素材
+3. 核查字体许可后生成待审批包与报告
+#### 原创练习验收（预期，未观察）
+- 设计自有海报并设置缺图/缺字体反例，先阻断再修复
+- 审查隐藏层、非打印内容、联系信息是否应出包
+- 分离嵌入PDF与字体文件再分发；指定收件方须自行许可的字体
+- IDML兼容仍需实际重开渲染，不能凭勾选判成功
+- 账号与费用：Creative Cloud会员与Adobe账户；官方试用7日不取消转收费。本研究未注册试用、订阅或付款。
+- 许可与权利：Adobe Fonts文件不可拷贝移动；其他字体依各EULA与收件方许可。Package按钮不是再分发授权。
+- 权限与自动化边界：排版交付软件，不是设计Agent；不使用脚本/API/Server，不自动发印厂。
+#### 原创操作练习（未执行）
+以下时长、数量、颜色和验收目标都是原创合成练习设定，不是厂商推荐或已经实现的产品结果。
+为虚构展览设计两页印刷交付包的检查清单；设置缺链接图片、未获转发许可字体、隐藏内部备注三种反例。
+1. 列明印厂需要的源文件、PDF、IDML和链接，不预设必须交付所有资产。
+2. 设计File Package摘要检查与返回Preflight处理问题的分支；发现错误不能直接忽略。
+3. 逐项判定字体是否能传、是否由收件方自行许可；正确嵌入PDF不等于允许复制字体文件。
+4. 排除不应外发的隐藏/非打印内容，先审查包清单再批准发送；IDML重开和印刷效果仍待实测。
+- 预期交付物：打包资产清单；缺链/字体问题清单；隐藏内容与联系方式审查表；收件方字体许可说明
+- 停止条件：Preflight关键错误未解决；字体文件不可再分发；隐藏内容含不应外发信息；收件方/印刷要求未确认
+- 历史与版本：打包帮助更新2026-06-02、字体说明2025-11-12；首发unknown，不将旧CS手册当现行。
+- 精确首发日期：unknown
+- [对应AgentWork练习](https://2codework.github.io/agentwork/?case=gap-indesign-preflight)
