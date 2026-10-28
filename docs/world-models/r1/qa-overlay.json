@@ -1,0 +1,338 @@
+{
+  "audit_id": "world-model-qa-r1",
+  "checked_at": "2026-10-28",
+  "scope": "Independent bounded source and consistency audit; not globally comprehensive history or reproduction",
+  "overall": "accept_with_nonblocking_provenance_and_presentation_improvements",
+  "records": [
+    {
+      "id": "wm-world-models-2018",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept compressed spatial/temporal environment representation and policy-learning summary.",
+      "paper_first_submitted": "2018-03-27",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-world",
+          "url": "https://arxiv.org/abs/1803.10122"
+        }
+      ]
+    },
+    {
+      "id": "wm-planet",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept learned latent dynamics plus online planning; submission is 2018, not conference year.",
+      "paper_first_submitted": "2018-11-12",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-planet",
+          "url": "https://arxiv.org/abs/1811.04551"
+        }
+      ]
+    },
+    {
+      "id": "wm-dreamer",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept behavior learning through latent imagination; not synonymous with per-step online search.",
+      "paper_first_submitted": "2019-12-03",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-dreamer",
+          "url": "https://arxiv.org/abs/1912.01603"
+        }
+      ]
+    },
+    {
+      "id": "wm-dreamerv2",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept discrete latent world model and 2020 submission. ICLR 2021 year is separate from submission.",
+      "paper_first_submitted": "2020-10-05",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-dreamerv2",
+          "url": "https://arxiv.org/abs/2010.02193"
+        }
+      ]
+    },
+    {
+      "id": "wm-jepa-concept",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept concept, not one checkpoint; 2022 is supported by official Meta retrospective only. Original OpenReview remains blocked and was not retried.",
+      "paper_first_submitted": null,
+      "date_audit": "year-only official retrospective; original concept paper not accessed",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only.",
+        "Original proposal day/month and primary-paper details remain blocked."
+      ],
+      "sources": [
+        {
+          "id": "vjepa-blog",
+          "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/"
+        },
+        {
+          "id": "paper-ijepa",
+          "url": "https://arxiv.org/abs/2301.08243"
+        }
+      ]
+    },
+    {
+      "id": "wm-dreamerv3",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept stable cross-domain algorithm summary and 2023 submission; do not merge later revisions/publications.",
+      "paper_first_submitted": "2023-01-10",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-dreamerv3",
+          "url": "https://arxiv.org/abs/2301.04104"
+        }
+      ]
+    },
+    {
+      "id": "wm-ijepa",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept static representation prediction, January submission and June announcement/checkpoint claim. License file states CC-BY-NC-4.0; third-party and checkpoint scope remains unaudited.",
+      "paper_first_submitted": "2023-01-19",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-ijepa",
+          "url": "https://arxiv.org/abs/2301.08243"
+        },
+        {
+          "id": "ijepa-blog",
+          "url": "https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/"
+        },
+        {
+          "id": "ijepa-repo",
+          "url": "https://github.com/facebookresearch/ijepa"
+        },
+        {
+          "id": "ijepa-license",
+          "url": "https://github.com/facebookresearch/ijepa/blob/main/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "wm-vjepa",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept actionless video feature-prediction summary and February 15 submission shown by arXiv despite 2404 identifier. Noncommercial announcement is not unrestricted open source.",
+      "paper_first_submitted": "2024-02-15",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-vjepa",
+          "url": "https://arxiv.org/abs/2404.08471"
+        },
+        {
+          "id": "vjepa-blog",
+          "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/"
+        },
+        {
+          "id": "vjepa-repo",
+          "url": "https://github.com/facebookresearch/jepa"
+        }
+      ]
+    },
+    {
+      "id": "wm-genie",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept 2024 research-system identity, unlabelled-video interactive environments and paper-reported 11B; not later Genie releases.",
+      "paper_first_submitted": "2024-02-23",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-genie",
+          "url": "https://arxiv.org/abs/2402.15391"
+        }
+      ]
+    },
+    {
+      "id": "wm-openvla",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept action policy, not world-state predictor. Official card says MIT checkpoints/code, but dataset rights stay separate. Preserve 7B naming versus 8B automatic tensor statistic; not a resolved numerical parameter count.",
+      "paper_first_submitted": "2024-06-13",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-openvla",
+          "url": "https://arxiv.org/abs/2406.09246"
+        },
+        {
+          "id": "openvla-repo",
+          "url": "https://github.com/openvla/openvla"
+        },
+        {
+          "id": "openvla-card",
+          "url": "https://huggingface.co/openvla/openvla-7b"
+        }
+      ]
+    },
+    {
+      "id": "wm-cosmos-2025",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept initial platform scope, not a single checkpoint. January 6 announcement and NVIDIA publication-page date differ from January 7 arXiv submission. NVIDIA open model license wording is not a version-specific legal audit.",
+      "paper_first_submitted": "2025-01-07",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-cosmos",
+          "url": "https://arxiv.org/abs/2501.03575"
+        },
+        {
+          "id": "cosmos-news",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development"
+        },
+        {
+          "id": "cosmos-publication",
+          "url": "https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai"
+        }
+      ]
+    },
+    {
+      "id": "wm-vjepa2",
+      "verdict": "accept_with_explicit_unknowns",
+      "accepted": "Accept actionless versus 2-AC distinction. Preserve June 11 announcement/paper versus June 25 current README label. Do not infer timezone or release-history explanation; 2.1 is excluded.",
+      "paper_first_submitted": "2025-06-11",
+      "date_audit": "independently matches arXiv primary page",
+      "fixes": [],
+      "unknowns": [
+        "Unfilled event dates remain unverified, not evidence of non-release.",
+        "No model, checkpoint, data, or robot execution; availability claims are documentation-only."
+      ],
+      "sources": [
+        {
+          "id": "paper-vjepa2",
+          "url": "https://arxiv.org/abs/2506.09985"
+        },
+        {
+          "id": "vjepa2-blog",
+          "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/"
+        },
+        {
+          "id": "vjepa2-repo",
+          "url": "https://github.com/facebookresearch/vjepa2"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "candidate_count": 12,
+    "unique_candidate_ids": true,
+    "canonical_count": 182,
+    "canonical_sha256_matches_recorded": true,
+    "canonical_id_collisions": [],
+    "source_evidence_equals_embedded_sources": true,
+    "unknowns_equals_embedded_unknowns": true,
+    "all_node_and_event_refs_resolve": true,
+    "reading_paths_resolve": true
+  },
+  "improvements": [
+    {
+      "priority": "recommended_before_integration",
+      "target": "dates.weights_first_available for I-JEPA, V-JEPA, Cosmos, V-JEPA 2",
+      "change": "Display as official dated availability claim, not independently proven first-ever file availability. Preserve status qualifier in UI; optionally rename event to weights_availability_announcement.",
+      "reason": "Dated release prose supports availability assertion but not exhaustive timestamp history."
+    },
+    {
+      "priority": "recommended_before_integration",
+      "target": "license and parameter provenance on live repository URLs",
+      "change": "Carry checked_at and ideally commit/revision IDs; do not project current main-branch license or model tables backward onto all historical versions.",
+      "reason": "Current pages include later releases, including V-JEPA 2.1."
+    },
+    {
+      "priority": "minor",
+      "target": "world-model-research-r1.zh.md / 验证范围",
+      "change": "Replace future-tense 会本地检查 with actual completed structural checks, separately from not-run model tests.",
+      "reason": "validation.json already reports completed checks."
+    },
+    {
+      "priority": "optional_schema",
+      "target": "all nodes category=world-models-embodied",
+      "change": "Keep broad collection label but expose semantic subtype (world model, representation predictor, action policy, platform, concept); retain OpenVLA warning.",
+      "reason": "The collection category must not be interpreted as all entries being predictive world models."
+    }
+  ],
+  "additional_unknowns": [
+    "I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.",
+    "README date conflict and parameter-count scope conflicts intentionally unresolved.",
+    "No exact license-version or full dependency/data-rights audit performed."
+  ],
+  "blockers": [
+    {
+      "action": "Read original JEPA concept paper",
+      "target": "https://openreview.net/forum?id=BZ5a1r-kVsf",
+      "reason": "Prior browser verification block; parent explicitly forbids retry or bypass",
+      "status": "blocked_inherited_not_retried",
+      "alternative": "Existing official Meta retrospective supports year only; no alternate transport to denied content attempted."
+    }
+  ],
+  "boundaries": {
+    "research_pack_modified": false,
+    "canonical_modified": false,
+    "weights_or_datasets_downloaded": false,
+    "model_or_robot_execution": false,
+    "accounts_or_credentials_used": false
+  },
+  "input_sha256": {
+    "world-model-research-r1.json": "debdae41bd06d091f58de4ab199788f761086b9045ec55590c7dc810cd3d8eea",
+    "source-evidence.json": "9dbe041f6edc86babee891dba4bc632ed8aa150d9bf6d855a4ca450b31cf6f51",
+    "unknowns.json": "884c122370a516779611ad892cfa9937ed4921b6cdbc055f67dc12d293b52efa",
+    "world-model-research-r1.zh.md": "23df78c9febc2d9552ec643cf992632393e437874ac8a6baf6b5c2d93ae2e623",
+    "validation.json": "62df59414ecd10820488fc5fc3748dbaccb40ead17b76251e1dd7de4d0dc1e61"
+  }
+}

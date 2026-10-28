@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+<title id="title">Three educational prediction interfaces</title><desc id="desc">Original conceptual diagram, not reproduced research architecture or execution evidence. World model predicts later state, representation predictor predicts target features, action policy predicts actions.</desc>
+<rect width="900" height="360" fill="#f5f7fb"/>
+<g font-family="sans-serif" font-size="19" fill="#16243b"><text x="28" y="35">Original teaching schematic · not an experimental result</text>
+<rect x="25" y="60" width="850" height="70" rx="12" fill="#dce9fc"/><text x="42" y="90">World model</text><text x="42" y="116">state / observation + action → dynamics predictor → next state / features</text>
+<rect x="25" y="145" width="850" height="70" rx="12" fill="#dcefe7"/><text x="42" y="175">Representation predictor</text><text x="42" y="201">visible context → encoder + predictor → target features (not necessarily pixels)</text>
+<rect x="25" y="230" width="850" height="70" rx="12" fill="#f5e6cf"/><text x="42" y="260">Action policy</text><text x="42" y="286">observation + instruction → policy → action (not a next-state prediction)</text>
+<text x="28" y="337">Paper-only exercise. No weights, external data, model calls or robot control.</text></g></svg>

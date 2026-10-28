@@ -4,3 +4,5 @@
 pre { max-width:100%; overflow-x:auto; white-space:pre; padding:1rem; line-height:1.5; } pre code { white-space:pre; overflow-wrap:normal; }
 
 #catalog-filters{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}#catalog-filters label{display:grid;gap:.4rem}#catalog-results{list-style:none;padding:0}#catalog-results button{width:100%;text-align:left}#catalog-results small{display:block}#catalog-detail pre,#catalog-evidence pre,#catalog-relations pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:32rem;overflow:auto}#catalog-detail dd{white-space:pre-wrap;overflow-wrap:anywhere}#catalog-results{max-height:46rem;overflow:auto}#catalog-graph{width:100%}
+
+.world-model-diagram{max-width:100%;height:auto;}

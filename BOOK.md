@@ -32,6 +32,18 @@ sys-promptcontracts → sys-skills → sys-mcp → sys-miniagent → sys-swebenc
 完整教程与合成输入输出；不是 SDK 兼容或真实效果认证。
 mcp-lab-roles-tutorial → mcp-lab-initialize-tutorial → mcp-lab-tools-tutorial → mcp-lab-resources-prompts-tutorial → mcp-lab-errors-tutorial → mcp-lab-cancel-tutorial → mcp-lab-scope-tutorial → mcp-lab-injection-tutorial → mcp-lab-skill-tutorial → mcp-lab-debug-tutorial → mcp-lab-migration-tutorial → mcp-lab-modern-tutorial
 
+### 从压缩环境表征到在线规划与想象策略学习。
+编辑阅读顺序，不是历史因果；纯离线教学练习未执行。
+wm-world-models-2018 → wm-planet → wm-dreamer → wm-dreamerv2 → wm-dreamerv3
+
+### 比较表征预测、动作条件世界模型、动作策略三类对象。
+编辑阅读顺序，不是历史因果；纯离线教学练习未执行。
+wm-jepa-concept → wm-ijepa → wm-vjepa → wm-vjepa2 → wm-openvla
+
+### 认识可交互环境与视频基础模型平台的异同。
+编辑阅读顺序，不是历史因果；纯离线教学练习未执行。
+wm-genie → wm-cosmos-2025
+
 ## Figma MCP设计上下文与写画布
 
 供外部agent读取设计结构并执行受控写入的接口，不是独立模型。
@@ -5453,6 +5465,358 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 来源：https://arxiv.org/abs/2311.12983
 - 来源：https://huggingface.co/spaces/gaia-benchmark/leaderboard
 
+## World Models
+
+压缩视觉/时间表征并在模型内学习策略。
+
+- ID / 类型：wm-world-models-2018 / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：VAE、RNN、强化学习
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：画出视觉编码器、记忆模型、控制器三块及数据流。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/1803.10122
+- 事件：paper_submission · 2018-03-27 · World Models · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/1803.10122
+- 事件：report_publication · 未知 / 待核验 · World Models · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · World Models · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · World Models · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · World Models · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## PlaNet
+
+由像素学习潜在动态并在线规划动作。
+
+- ID / 类型：wm-planet / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：状态空间、变分推断、模型预测控制
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：用三步状态表比较两条候选动作的预测回报。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/1811.04551
+- 事件：paper_submission · 2018-11-12 · PlaNet · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/1811.04551
+- 事件：report_publication · 未知 / 待核验 · PlaNet · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · PlaNet · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · PlaNet · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · PlaNet · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## Dreamer
+
+在潜在想象轨迹上学习行为，不等同每一步在线搜索。
+
+- ID / 类型：wm-dreamer / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：PlaNet、actor-critic、梯度
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：手绘模型学习、想象轨迹、策略更新三个循环。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/1912.01603
+- 事件：paper_submission · 2019-12-03 · Dreamer · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/1912.01603
+- 事件：report_publication · 未知 / 待核验 · Dreamer · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · Dreamer · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · Dreamer · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · Dreamer · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## DreamerV2
+
+采用离散潜在表征的世界模型与行为学习。
+
+- ID / 类型：wm-dreamerv2 / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：Dreamer、类别分布
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：把连续隐状态和 one-hot 类别示意对照；不拟造跑分。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2010.02193
+- 事件：paper_submission · 2020-10-05 · DreamerV2 · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2010.02193
+- 事件：report_publication · 2021 · DreamerV2 · 出版记录（来源限定） · 精度 year · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.publication; arxiv_comments_state_ICLR_2021 · 来源 https://arxiv.org/abs/2010.02193
+- 事件：announcement · 未知 / 待核验 · DreamerV2 · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · DreamerV2 · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · DreamerV2 · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## JEPA（架构概念）
+
+预测目标表征而非必须重建像素；不是一款统一权重模型。
+
+- ID / 类型：wm-jepa-concept / concept
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：architecture_concept
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：自监督学习、编码器、表征空间
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：写下同一目标的像素误差与表征误差各关注什么。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：architecture_concept
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 注意：Original proposal day/month and primary-paper details remain blocked.
+- 来源：https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+- 来源：https://arxiv.org/abs/2301.08243
+- 事件：paper_submission · 未知 / 待核验 · JEPA（架构概念） · 论文首次投稿 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.paper_first_submitted; unknown_not_inferred · 来源
+- 事件：report_publication · 未知 / 待核验 · JEPA（架构概念） · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · JEPA（架构概念） · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · JEPA（架构概念） · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · JEPA（架构概念） · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+- 事件：announcement · 2022 · JEPA（架构概念） · 概念年份（官方回顾，非精确首发） · 精度 year · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.concept_proposed; verified_source_date · 来源 https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+
+## DreamerV3
+
+强调跨领域学习稳定性与统一配置的算法研究。
+
+- ID / 类型：wm-dreamerv3 / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：DreamerV2、归一化、奖励尺度
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：给奖励乘常数，讨论归一化前后学习目标的可比性。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2301.04104
+- 事件：paper_submission · 2023-01-10 · DreamerV3 · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2301.04104
+- 事件：report_publication · 未知 / 待核验 · DreamerV3 · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · DreamerV3 · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · DreamerV3 · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · DreamerV3 · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## I-JEPA
+
+图像区域之间的潜在表征预测；静态空间任务不等于动作条件动态模型。
+
+- ID / 类型：wm-ijepa / model_release
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：static_representation_predictor
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown_scope_not_fully_audited; repository LICENSE includes CC-BY-NC-4.0', 'weights': 'unknown', 'data': 'unknown', 'source_ids': ['wm-src-ijepa-license']}
+- 学习步骤（未执行）：前置概念：JEPA、Vision Transformer、masking
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：手绘 4×4 图块，指定 context 与 target；列出泄漏风险。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：static_representation_predictor
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 注意：I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.
+- 来源：https://arxiv.org/abs/2301.08243
+- 来源：https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/
+- 来源：https://github.com/facebookresearch/ijepa
+- 来源：https://github.com/facebookresearch/ijepa/blob/main/LICENSE
+- 事件：paper_submission · 2023-01-19 · I-JEPA · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2301.08243
+- 事件：report_publication · 未知 / 待核验 · I-JEPA · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 2023-06-13 · I-JEPA · 官方公告 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.announcement; verified_source_date · 来源 https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/
+- 事件：documentation_update · 未知 / 待核验 · I-JEPA · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 2023-06-13 · I-JEPA · 官方权重可用性公告（非独立核实首次文件时间） · 精度 day · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; official_dated_availability_claim_not_download_test · 来源 https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/
+
+## V-JEPA
+
+视频时空区域的特征预测，无动作条件预训练。
+
+- ID / 类型：wm-vjepa / model_release
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：video_representation_predictor
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'Creative Commons NonCommercial per announcement; exact variant not checked', 'data': 'unknown', 'source_ids': ['wm-src-vjepa-blog']}
+- 学习步骤（未执行）：前置概念：I-JEPA、视频时空 patch
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：用自己画的四帧运动图标出时间遮挡，区分识别与动作反事实。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：video_representation_predictor
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2404.08471
+- 来源：https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+- 来源：https://github.com/facebookresearch/jepa
+- 事件：paper_submission · 2024-02-15 · V-JEPA · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2404.08471
+- 事件：report_publication · 未知 / 待核验 · V-JEPA · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 2024-02-15 · V-JEPA · 官方公告 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.announcement; verified_source_date · 来源 https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+- 事件：documentation_update · 未知 / 待核验 · V-JEPA · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 2024-02-15 · V-JEPA · 官方权重可用性公告（非独立核实首次文件时间） · 精度 day · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; official_dated_availability_claim_not_download_test · 来源 https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+
+## Genie（2024 研究系统）
+
+从无动作标注视频学习潜在动作与可交互环境。
+
+- ID / 类型：wm-genie / research_system
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_model_research_system
+- 参数与口径：{'value': '11B', 'status': 'paper_reported', 'source_ids': ['wm-src-paper-genie']}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'unknown', 'data': 'unknown', 'source_ids': []}
+- 学习步骤（未执行）：前置概念：视频 tokenizer、动态模型、潜在动作
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：给四帧方块移动序列列出两个可能潜在动作编码；说明不可辨识性。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_model_research_system
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2402.15391
+- 事件：paper_submission · 2024-02-23 · Genie（2024 研究系统） · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2402.15391
+- 事件：report_publication · 未知 / 待核验 · Genie（2024 研究系统） · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · Genie（2024 研究系统） · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 未知 / 待核验 · Genie（2024 研究系统） · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · Genie（2024 研究系统） · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## OpenVLA 7B（具身策略对照）
+
+视觉语言动作策略；输出动作不等于预测下一世界状态。
+
+- ID / 类型：wm-openvla / model_release
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：action_policy_not_world_state_predictor
+- 参数与口径：{'value': '7B paper label; 8B HF automatic file statistic', 'status': 'counting_scope_unresolved', 'source_ids': ['wm-src-paper-openvla', 'wm-src-openvla-card']}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'MIT', 'weights': 'MIT per official card', 'data': 'unknown_separate_datasets', 'source_ids': ['wm-src-openvla-repo', 'wm-src-openvla-card']}
+- 学习步骤（未执行）：前置概念：VLM、行为克隆、动作单位与坐标系
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：纸上检查七维动作字段、单位和归一化元数据；绝不连接执行器。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：action_policy_not_world_state_predictor
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2406.09246
+- 来源：https://github.com/openvla/openvla
+- 来源：https://huggingface.co/openvla/openvla-7b
+- 事件：paper_submission · 2024-06-13 · OpenVLA 7B（具身策略对照） · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2406.09246
+- 事件：report_publication · 未知 / 待核验 · OpenVLA 7B（具身策略对照） · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 未知 / 待核验 · OpenVLA 7B（具身策略对照） · 官方公告 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.announcement; unknown_not_inferred · 来源
+- 事件：documentation_update · 2024-06-13 · OpenVLA 7B（具身策略对照） · 仓库初始发布记录 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.repo_initial_release; verified_source_date · 来源 https://github.com/openvla/openvla
+- 事件：announcement · 未知 / 待核验 · OpenVLA 7B（具身策略对照） · 官方权重可用性公告（非独立核实首次文件时间） · 精度 unknown · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; unknown_not_inferred · 来源
+
+## Cosmos（2025 初始平台）
+
+含世界基础模型、视频 tokenizer 与数据处理的发布平台，不是单一 checkpoint。
+
+- ID / 类型：wm-cosmos-2025 / model_release
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：world_foundation_model_platform
+- 参数与口径：{'value': None, 'status': 'unknown_or_configuration_dependent'}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'unknown', 'weights': 'NVIDIA Open Model License, announcement wording; exact terms/version not audited', 'data': 'unknown', 'source_ids': ['wm-src-cosmos-news']}
+- 学习步骤（未执行）：前置概念：视频生成、条件建模、合成数据评估
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：设计合成/真实测试集隔离表；列出物理不一致检查项。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：world_foundation_model_platform
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2501.03575
+- 来源：https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development
+- 来源：https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai
+- 事件：paper_submission · 2025-01-07 · Cosmos（2025 初始平台） · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2501.03575
+- 事件：report_publication · 2025-01-06 · Cosmos（2025 初始平台） · 出版记录（来源限定） · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.publication; verified_source_date · 来源 https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai
+- 事件：announcement · 2025-01-06 · Cosmos（2025 初始平台） · 官方公告 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.announcement; verified_source_date · 来源 https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development
+- 事件：documentation_update · 未知 / 待核验 · Cosmos（2025 初始平台） · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 2025-01-06 · Cosmos（2025 初始平台） · 官方权重可用性公告（非独立核实首次文件时间） · 精度 day · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; official_dated_availability_claim_not_download_test · 来源 https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development
+
+## V-JEPA 2 / 2-AC
+
+区分无动作视频表征模型与经动作条件后训练的 2-AC。
+
+- ID / 类型：wm-vjepa2 / model_release
+- 生命周期：unknown
+- 版本：本节点限定原始研究/初始发布；非当前整个系列
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 语义子类：video_predictor_and_action_conditioned_variant
+- 参数与口径：{'value': 'encoder variants 300M/600M/1B; announcement describes 1.2B system', 'status': 'different_scopes_do_not_merge', 'source_ids': ['wm-src-vjepa2-repo', 'wm-src-vjepa2-blog']}
+- 原创教学示意，不是论文原图或实测架构复原；箭头是教学数据流。
+![原创世界模型教学对照](world-model-learning.svg)
+- license：{'code': 'majority MIT; specified files Apache-2.0', 'weights': 'unknown', 'data': 'unknown', 'source_ids': ['wm-src-vjepa2-repo']}
+- 学习步骤（未执行）：前置概念：V-JEPA、动作条件预测、MPC
+- 学习步骤（未执行）：纯离线纸面练习（未执行）：纸上对两条动作序列的预测目标距离评分；注明仅教学假值。
+- 学习步骤（未执行）：验收：标清输入、输出、假设与未知；不把教学假值记作跑分，不连接机器人。
+- 注意：集合名称不代表所有节点都是世界状态预测器；语义子类：video_predictor_and_action_conditioned_variant
+- 注意：可用性公告不是独立核实首次权重文件时间；unknown 不表示从未发布。
+- 注意：当前仓库许可/参数页面未固定 revision，不追溯套用至全部历史版本。
+- 注意：Unfilled event dates remain unverified, not evidence of non-release.
+- 注意：No model, checkpoint, data, or robot execution; availability claims are documentation-only.
+- 来源：https://arxiv.org/abs/2506.09985
+- 来源：https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
+- 来源：https://github.com/facebookresearch/vjepa2
+- 事件：paper_submission · 2025-06-11 · V-JEPA 2 / 2-AC · 论文首次投稿 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.paper_first_submitted; verified_source_date · 来源 https://arxiv.org/abs/2506.09985
+- 事件：report_publication · 未知 / 待核验 · V-JEPA 2 / 2-AC · 出版记录（来源限定） · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.publication; unknown_not_inferred · 来源
+- 事件：announcement · 2025-06-11 · V-JEPA 2 / 2-AC · 官方公告 · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方来源日期；不推断同日其他事件。 · 证据 research dates.announcement; verified_source_date · 来源 https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
+- 事件：documentation_update · 未知 / 待核验 · V-JEPA 2 / 2-AC · 仓库初始发布记录 · 精度 unknown · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 未核验；不是从未发布。 · 证据 research dates.repo_initial_release; unknown_not_inferred · 来源
+- 事件：announcement · 2025-06-11 · V-JEPA 2 / 2-AC · 官方权重可用性公告（非独立核实首次文件时间） · 精度 day · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; official_dated_availability_claim_not_download_test · 来源 https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
+- 事件：documentation_update · 2025-06-25 · V-JEPA 2 / 2-AC · 当前 README 发布标签（与公告分开） · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 当前 README 标签与 2025-06-11 公告并列；原因与时区未知，不静默合并。 · 证据 research dates.repo_release_label; verified_source_date · 来源 https://github.com/facebookresearch/vjepa2
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -5674,6 +6038,19 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - bench-visualwebarena → extends_environment → bench-webarena · primary_metadata_reviewed_not_executed · bench-src-visualwebarena-1, bench-src-visualwebarena-2, bench-src-visualwebarena-3
 - bench-workarena-plusplus → composes_tasks_from → bench-workarena-l1 · primary_metadata_reviewed_not_executed · bench-src-workarena-plusplus-1, bench-src-workarena-plusplus-2, bench-src-workarena-plusplus-3
 - bench-weblinx-1-1 → derived_version → bench-weblinx-1-0 · primary_metadata_reviewed_not_executed · bench-src-weblinx-1-1-1, bench-src-weblinx-1-1-2, bench-src-weblinx-1-1-3
+- wm-world-models-2018 → editorial_learning_order → wm-planet · editorial_learning_relation · wm-src-paper-planet
+- wm-planet → editorial_learning_order → wm-dreamer · editorial_learning_relation · wm-src-paper-dreamer
+- wm-dreamer → editorial_learning_order → wm-dreamerv2 · editorial_learning_relation · wm-src-paper-dreamerv2
+- wm-dreamerv2 → editorial_learning_order → wm-dreamerv3 · editorial_learning_relation · wm-src-paper-dreamerv3
+- wm-jepa-concept → editorial_learning_order → wm-ijepa · editorial_learning_relation · wm-src-paper-ijepa, wm-src-ijepa-blog, wm-src-ijepa-repo, wm-src-ijepa-license
+- wm-ijepa → editorial_learning_order → wm-vjepa · editorial_learning_relation · wm-src-paper-vjepa, wm-src-vjepa-blog, wm-src-vjepa-repo
+- wm-vjepa → editorial_learning_order → wm-vjepa2 · editorial_learning_relation · wm-src-paper-vjepa2, wm-src-vjepa2-blog, wm-src-vjepa2-repo
+- wm-vjepa2 → editorial_learning_order → wm-openvla · editorial_learning_relation · wm-src-paper-openvla, wm-src-openvla-repo, wm-src-openvla-card
+- wm-genie → editorial_learning_order → wm-cosmos-2025 · editorial_learning_relation · wm-src-paper-cosmos, wm-src-cosmos-news, wm-src-cosmos-publication
+- embeddings → editorial_learning_order → wm-jepa-concept · editorial_learning_relation · wm-src-vjepa-blog, wm-src-paper-ijepa
+- transformer → editorial_learning_order → wm-ijepa · editorial_learning_relation · wm-src-paper-ijepa, wm-src-ijepa-blog, wm-src-ijepa-repo, wm-src-ijepa-license
+- multimodal → editorial_learning_order → wm-openvla · editorial_learning_relation · wm-src-paper-openvla, wm-src-openvla-repo, wm-src-openvla-card
+- agents → editorial_learning_order → wm-dreamer · editorial_learning_relation · wm-src-paper-dreamer
 
 ## 来源目录
 - design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
@@ -5909,12 +6286,34 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - bench-src-gaia-1 · https://huggingface.co/datasets/gaia-benchmark/GAIA · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
 - bench-src-gaia-2 · https://arxiv.org/abs/2311.12983 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
 - bench-src-gaia-3 · https://huggingface.co/spaces/gaia-benchmark/leaderboard · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- wm-src-paper-world · https://arxiv.org/abs/1803.10122 · 核验 2026-10-28 · World Models；arXiv 页面首次投稿日期 2018-03-27。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-planet · https://arxiv.org/abs/1811.04551 · 核验 2026-10-28 · Learning Latent Dynamics for Planning from Pixels；arXiv 页面首次投稿日期 2018-11-12。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-dreamer · https://arxiv.org/abs/1912.01603 · 核验 2026-10-28 · Dream to Control；arXiv 页面首次投稿日期 2019-12-03。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-dreamerv2 · https://arxiv.org/abs/2010.02193 · 核验 2026-10-28 · Mastering Atari with Discrete World Models；arXiv 页面首次投稿日期 2020-10-05。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-dreamerv3 · https://arxiv.org/abs/2301.04104 · 核验 2026-10-28 · Mastering Diverse Domains through World Models；arXiv 页面首次投稿日期 2023-01-10。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-ijepa · https://arxiv.org/abs/2301.08243 · 核验 2026-10-28 · I-JEPA；arXiv 页面首次投稿日期 2023-01-19。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-vjepa · https://arxiv.org/abs/2404.08471 · 核验 2026-10-28 · Revisiting Feature Prediction；arXiv 页面首次投稿日期 2024-02-15。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-genie · https://arxiv.org/abs/2402.15391 · 核验 2026-10-28 · Genie；arXiv 页面首次投稿日期 2024-02-23。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-openvla · https://arxiv.org/abs/2406.09246 · 核验 2026-10-28 · OpenVLA；arXiv 页面首次投稿日期 2024-06-13。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-cosmos · https://arxiv.org/abs/2501.03575 · 核验 2026-10-28 · Cosmos；arXiv 页面首次投稿日期 2025-01-07。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-paper-vjepa2 · https://arxiv.org/abs/2506.09985 · 核验 2026-10-28 · V-JEPA 2；arXiv 页面首次投稿日期 2025-06-11。这是 submission，不自动等于同行评议出版、公告或权重开放日。
+- wm-src-ijepa-blog · https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/ · 核验 2026-10-28 · 页面日期 2023-06-13；当天公开训练代码和 checkpoints；632M 视觉 transformer 是文中具体实例，不是所有变体统一参数。
+- wm-src-vjepa-blog · https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/ · 核验 2026-10-28 · 页面日期 2024-02-15；公开模型，声明 Creative Commons NonCommercial；回顾 JEPA 于 2022 年提出。
+- wm-src-vjepa2-blog · https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/ · 核验 2026-10-28 · 页面日期 2025-06-11；声明代码/checkpoints 可用于研究和商业；区分无动作预训练和动作条件后训练；写 1.2B 参数。
+- wm-src-ijepa-repo · https://github.com/facebookresearch/ijepa · 核验 2026-10-28 · 官方 README 列出预训练 checkpoint；仓库标注 2024-08-01 归档；空间表征预测不是原生像素生成。
+- wm-src-ijepa-license · https://github.com/facebookresearch/ijepa/blob/main/LICENSE · 核验 2026-10-28 · 许可文件包含 CC Attribution-NonCommercial 4.0 International；不据此将所有第三方素材权利合并。
+- wm-src-vjepa-repo · https://github.com/facebookresearch/jepa · 核验 2026-10-28 · 官方 README 模型库有 ViT-L/H checkpoints；表征预测，像素可视化依赖另训 decoder。
+- wm-src-vjepa2-repo · https://github.com/facebookresearch/vjepa2 · 核验 2026-10-28 · README 写 2025-06-25 V-JEPA 2 released，另写 2026-03-16 V-JEPA 2.1；V2 encoder 300M/600M/1B；多数代码 MIT，列出的少数文件 Apache-2.0。公告日期与此 release 标签不能静默合并。
+- wm-src-openvla-repo · https://github.com/openvla/openvla · 核验 2026-10-28 · 更新记录 2024-06-13 Initial release；代码 MIT；官方故障排查强调数据覆盖、推理管线与训练指标一致性，不能推出任意机器人泛化。
+- wm-src-openvla-card · https://huggingface.co/openvla/openvla-7b · 核验 2026-10-28 · 模型卡声明 checkpoints 与代码 MIT；输入图像/语言，输出归一化动作；明确未见具身/场景不保证零样本泛化。论文/名称 7B，页面自动 tensor 大小显示 8B，口径待核。
+- wm-src-cosmos-news · https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development · 核验 2026-10-28 · 2025-01-06 公告；Availability 段表示 WFMs 当时在 HF/NGC 可用，NVIDIA open model license；不能映射所有后续 Cosmos 产品。
+- wm-src-cosmos-publication · https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai · 核验 2026-10-28 · NVIDIA 研究页 Publication Date 为 2025-01-06，与 arXiv 2025-01-07 首投是不同事件。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
 - Inkscape官网教程与许可页面403；使用维护指南验证描摹功能，软件许可仍unknown
 - Canva直接猜测autofill路径不可访问，已通过官方文档链接定位正确指南
-- 未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题
+- CAD、3D资产与动画已有代表性未执行教学案例；更多工业设计、字体生成与印前色彩管理仍待补充，不代表完整覆盖。
 - 价格、区域可用性、账号权限和具体输出法律地位不由通用文档完整确定
 - 未进行真实生成/试听/时延或音质评测
 - 未验证账户、地区可用性、价格和购买条件
@@ -5928,7 +6327,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 早期统计NLP、HMM/CRF、RNN/LSTM原始论文仍需单列
 - 日本、韩国、东南亚、非洲、拉丁美洲以及其他欧洲研究生态覆盖不足
 - 未系统枚举2025—2026最新版本；家族与具体权重/服务快照需持续补录
-- 视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。
+- 视频、音乐及CAD/3D/动画已有代表性节点或教程；世界模型、JEPA与具身对照已增加12个有限节点，机器人系统与各家完整系列仍不齐全，不代表全领域覆盖。
 - 许可证/商用条款、参数、训练数据与开放程度应按具体版本另行核验
 - JEV待用户确认，不映射JEPA
 - 不提供当前价格、排行榜、无条件性能优越声明
@@ -5943,6 +6342,19 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。
 - 本轮创意增量为九个未执行教学设计；实际CAD、物理、动画、印刷及音频验收仍未执行。
 - 评测新增22条记录/15个家族，不代表完整覆盖。公开入口不等于匿名下载、完整标签或商用许可；没有新增成绩。
+- 本轮已增加12个世界模型/JEPA/具身对照节点；旧研究包缺口保留为历史记录，不能解读为当前零覆盖。
+- 不是全球全模态全历史完成版：本包只补 12 个代表节点。
+- JEV 继续保持用户术语未确认；未建立 JEV=JEPA 别名或同义边。
+- 更早的 Dyna / 神经世界模型历史，MuZero、RT 系列、Octo、后续 Genie 与 Cosmos 各版本未覆盖。
+- 官方 README 已出现 V-JEPA 2.1（2026-03-16），本轮未单独研究其论文/变体/许可。
+- 多数研究系统的首次代码开放、checkpoint 历史、同行评议出版日期尚未验证；null 不代表从未发布。
+- V-JEPA 2 的 6月11日公告与 6月25日 README release 标签保留并列；不猜测时区或原因。
+- OpenVLA 7B/8B、V-JEPA 2 encoder/system 参数口径必须保留。
+- OpenReview 原概念论文访问遇验证页面；未登录、未绕过，概念年份只使用官方 Meta 回顾证据。
+- 配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。
+- I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.
+- README date conflict and parameter-count scope conflicts intentionally unresolved.
+- No exact license-version or full dependency/data-rights audit performed.
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。

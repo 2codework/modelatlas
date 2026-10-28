@@ -1,0 +1,21 @@
+{
+  "passed": [
+    "12 unique candidate IDs",
+    "no canonical ID collisions",
+    "all node/event source references resolve",
+    "explicit type labels",
+    "all events retain precision and no invented time"
+  ],
+  "not_run": [
+    "model execution",
+    "weight verification by download",
+    "robot execution",
+    "external asset rights audit"
+  ],
+  "files": [
+    "world-model-research-r1.json",
+    "source-evidence.json",
+    "unknowns.json",
+    "world-model-research-r1.zh.md"
+  ]
+}

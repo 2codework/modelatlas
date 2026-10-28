@@ -7,6 +7,7 @@ import mcp_learning
 import creative_workflows
 import vendor_catalog
 import benchmark_catalog
+import world_models
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +26,19 @@ def date_ok(value, precision):
         if precision=='year': return bool(re.fullmatch(r'\d{4}',value)) and 1<=int(value)<=9999
     except (ValueError,TypeError): pass
     return False
+
+# Current display only; retained research bundles remain historical evidence.
+COVERAGE_DISPLAY_OVERLAYS = {
+ '未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题': 'CAD、3D资产与动画已有代表性未执行教学案例；更多工业设计、字体生成与印前色彩管理仍待补充，不代表完整覆盖。',
+ '视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。': '视频、音乐及CAD/3D/动画已有代表性节点或教程；世界模型、JEPA与具身对照已增加12个有限节点，机器人系统与各家完整系列仍不齐全，不代表全领域覆盖。',
+}
+def current_coverage_display(gaps, node_ids):
+    enabled=set()
+    if {'design-freecad-partdesign','design-godot-asset-pipeline','design-godot-spriteframes'} <= node_ids:
+        enabled.add('未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题')
+    if world_models.EXPECTED <= node_ids:
+        enabled.add('视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。')
+    return [COVERAGE_DISPLAY_OVERLAYS[g] if isinstance(g,str) and g in enabled else g for g in gaps]
 
 def normalize(bundles):
     result={'schema_version':'modelatlas.site.v1','version':'0.2.2','checked_at':'2026-10-28','nodes':[],'edges':[],'sources':[],'events':[],'research_bundles':bundles,'coverage_gaps':[]}
@@ -148,6 +162,7 @@ def normalize(bundles):
         if snap.get('node_id'): require(snap['node_id'] in sets['nodes'],'dangling evaluation node')
     result['coverage_gaps']=[('已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。' if '尚未导入可比' in str(g) else g) for g in result['coverage_gaps']]
     result['coverage_gaps']=[('视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。' if g=='视频、音乐、3D、机器人和世界模型仅有类别位置，缺独立系列' else g) for g in result['coverage_gaps']]
+    result['coverage_gaps']=current_coverage_display(result['coverage_gaps'],sets['nodes'])
     # Derived view fields are separate; source records remain byte-equivalent in research/.
     org_edges={e['source']:e['target'] for e in result['edges'] if e['type'] in ('developed_by','introduced_by')}
     byid={n['id']:n for n in result['nodes']}
@@ -176,6 +191,9 @@ def book(data):
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
         if 'tutorial_markdown' in n: lines += [n['tutorial_markdown']]
+        if 'world_model_learning' in n:
+            w=n['world_model_learning']
+            lines += ['- 语义子类：'+w['semantic_subtype'],'- 参数与口径：'+str(w['parameters']),'- '+w['diagram_note'],'![原创世界模型教学对照](world-model-learning.svg)']
         for x in n.get('agentwork_links',[]): lines+=['- 对应实践（编辑学习关系）：['+x['title']+']('+x['url']+')']
         for key in ['license','license_notes','cost','cost_notes','historical_context']:
             if key in n: lines+=['- '+key+'：'+str(n[key])]
@@ -215,6 +233,7 @@ def build():
     _, creative_bundle = creative_workflows.load(ROOT)
     bundles.append(creative_bundle)
     bundles.append(benchmark_catalog.load(ROOT))
+    bundles.append(world_models.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -227,6 +246,7 @@ def build():
     creative_workflows.publish(ROOT,out)
     vendor_catalog.publish(ROOT,out)
     benchmark_catalog.publish(ROOT,out)
+    world_models.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

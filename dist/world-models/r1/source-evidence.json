@@ -1,0 +1,178 @@
+[
+  {
+    "id": "paper-world",
+    "url": "https://arxiv.org/abs/1803.10122",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "World Models；arXiv 页面首次投稿日期 2018-03-27。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-planet",
+    "url": "https://arxiv.org/abs/1811.04551",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Learning Latent Dynamics for Planning from Pixels；arXiv 页面首次投稿日期 2018-11-12。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-dreamer",
+    "url": "https://arxiv.org/abs/1912.01603",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Dream to Control；arXiv 页面首次投稿日期 2019-12-03。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-dreamerv2",
+    "url": "https://arxiv.org/abs/2010.02193",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Mastering Atari with Discrete World Models；arXiv 页面首次投稿日期 2020-10-05。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-dreamerv3",
+    "url": "https://arxiv.org/abs/2301.04104",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Mastering Diverse Domains through World Models；arXiv 页面首次投稿日期 2023-01-10。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-ijepa",
+    "url": "https://arxiv.org/abs/2301.08243",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "I-JEPA；arXiv 页面首次投稿日期 2023-01-19。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-vjepa",
+    "url": "https://arxiv.org/abs/2404.08471",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Revisiting Feature Prediction；arXiv 页面首次投稿日期 2024-02-15。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-genie",
+    "url": "https://arxiv.org/abs/2402.15391",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Genie；arXiv 页面首次投稿日期 2024-02-23。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-openvla",
+    "url": "https://arxiv.org/abs/2406.09246",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "OpenVLA；arXiv 页面首次投稿日期 2024-06-13。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-cosmos",
+    "url": "https://arxiv.org/abs/2501.03575",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "Cosmos；arXiv 页面首次投稿日期 2025-01-07。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "paper-vjepa2",
+    "url": "https://arxiv.org/abs/2506.09985",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "V-JEPA 2；arXiv 页面首次投稿日期 2025-06-11。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "ijepa-blog",
+    "url": "https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "页面日期 2023-06-13；当天公开训练代码和 checkpoints；632M 视觉 transformer 是文中具体实例，不是所有变体统一参数。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "vjepa-blog",
+    "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "页面日期 2024-02-15；公开模型，声明 Creative Commons NonCommercial；回顾 JEPA 于 2022 年提出。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "vjepa2-blog",
+    "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "页面日期 2025-06-11；声明代码/checkpoints 可用于研究和商业；区分无动作预训练和动作条件后训练；写 1.2B 参数。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "ijepa-repo",
+    "url": "https://github.com/facebookresearch/ijepa",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "官方 README 列出预训练 checkpoint；仓库标注 2024-08-01 归档；空间表征预测不是原生像素生成。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "ijepa-license",
+    "url": "https://github.com/facebookresearch/ijepa/blob/main/LICENSE",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "许可文件包含 CC Attribution-NonCommercial 4.0 International；不据此将所有第三方素材权利合并。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "vjepa-repo",
+    "url": "https://github.com/facebookresearch/jepa",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "官方 README 模型库有 ViT-L/H checkpoints；表征预测，像素可视化依赖另训 decoder。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "vjepa2-repo",
+    "url": "https://github.com/facebookresearch/vjepa2",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "README 写 2025-06-25 V-JEPA 2 released，另写 2026-03-16 V-JEPA 2.1；V2 encoder 300M/600M/1B；多数代码 MIT，列出的少数文件 Apache-2.0。公告日期与此 release 标签不能静默合并。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "openvla-repo",
+    "url": "https://github.com/openvla/openvla",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "更新记录 2024-06-13 Initial release；代码 MIT；官方故障排查强调数据覆盖、推理管线与训练指标一致性，不能推出任意机器人泛化。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "openvla-card",
+    "url": "https://huggingface.co/openvla/openvla-7b",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "模型卡声明 checkpoints 与代码 MIT；输入图像/语言，输出归一化动作；明确未见具身/场景不保证零样本泛化。论文/名称 7B，页面自动 tensor 大小显示 8B，口径待核。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "cosmos-news",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "2025-01-06 公告；Availability 段表示 WFMs 当时在 HF/NGC 可用，NVIDIA open model license；不能映射所有后续 Cosmos 产品。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  },
+  {
+    "id": "cosmos-publication",
+    "url": "https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai",
+    "kind": "primary",
+    "checked_at": "2026-10-28",
+    "evidence_zh": "NVIDIA 研究页 Publication Date 为 2025-01-06，与 arXiv 2025-01-07 首投是不同事件。",
+    "capture": "web tool page text; paraphrased evidence, not full-page archive"
+  }
+]

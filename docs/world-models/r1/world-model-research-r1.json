@@ -1,0 +1,1349 @@
+{
+  "schema_version": "modelatlas.world-model-research.v1",
+  "pack_id": "world-model-research-r1",
+  "checked_at": "2026-10-28",
+  "scope": "bounded historical educational source pack; not complete global coverage",
+  "canonical_inspection": {
+    "path": "/workspace/scratch/6fb8d22046cb/github-migration-r1/public/modelatlas/docs/data.json",
+    "node_count": 182,
+    "sha256": "b898833d317fef89f7a93a639a8ec8f2fa353640506134d62104f17ecf39c223",
+    "duplicate_candidate_ids": [],
+    "preserved_ambiguous_node": "jev"
+  },
+  "nodes": [
+    {
+      "id": "wm-world-models-2018",
+      "title": "World Models",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "压缩视觉/时间表征并在模型内学习策略。",
+      "source_ids": [
+        "paper-world"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2018-03-27",
+          "precision": "day",
+          "source_ids": [
+            "paper-world"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "VAE",
+        "RNN",
+        "强化学习"
+      ],
+      "offline_exercise_zh": "画出视觉编码器、记忆模型、控制器三块及数据流。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-planet",
+      "title": "PlaNet",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "由像素学习潜在动态并在线规划动作。",
+      "source_ids": [
+        "paper-planet"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2018-11-12",
+          "precision": "day",
+          "source_ids": [
+            "paper-planet"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "状态空间",
+        "变分推断",
+        "模型预测控制"
+      ],
+      "offline_exercise_zh": "用三步状态表比较两条候选动作的预测回报。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-dreamer",
+      "title": "Dreamer",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "在潜在想象轨迹上学习行为，不等同每一步在线搜索。",
+      "source_ids": [
+        "paper-dreamer"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2019-12-03",
+          "precision": "day",
+          "source_ids": [
+            "paper-dreamer"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "PlaNet",
+        "actor-critic",
+        "梯度"
+      ],
+      "offline_exercise_zh": "手绘模型学习、想象轨迹、策略更新三个循环。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-dreamerv2",
+      "title": "DreamerV2",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "采用离散潜在表征的世界模型与行为学习。",
+      "source_ids": [
+        "paper-dreamerv2"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2020-10-05",
+          "precision": "day",
+          "source_ids": [
+            "paper-dreamerv2"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": "2021",
+          "precision": "year",
+          "source_ids": [
+            "paper-dreamerv2"
+          ],
+          "status": "arxiv_comments_state_ICLR_2021",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "Dreamer",
+        "类别分布"
+      ],
+      "offline_exercise_zh": "把连续隐状态和 one-hot 类别示意对照；不拟造跑分。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-jepa-concept",
+      "title": "JEPA（架构概念）",
+      "type": "concept",
+      "category": "world-models-embodied",
+      "summary_zh": "预测目标表征而非必须重建像素；不是一款统一权重模型。",
+      "source_ids": [
+        "vjepa-blog",
+        "paper-ijepa"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "concept_proposed": {
+          "date": "2022",
+          "precision": "year",
+          "source_ids": [
+            "vjepa-blog"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "not_applicable_concept",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "自监督学习",
+        "编码器",
+        "表征空间"
+      ],
+      "offline_exercise_zh": "写下同一目标的像素误差与表征误差各关注什么。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-dreamerv3",
+      "title": "DreamerV3",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "强调跨领域学习稳定性与统一配置的算法研究。",
+      "source_ids": [
+        "paper-dreamerv3"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2023-01-10",
+          "precision": "day",
+          "source_ids": [
+            "paper-dreamerv3"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "DreamerV2",
+        "归一化",
+        "奖励尺度"
+      ],
+      "offline_exercise_zh": "给奖励乘常数，讨论归一化前后学习目标的可比性。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-ijepa",
+      "title": "I-JEPA",
+      "type": "model_release",
+      "category": "world-models-embodied",
+      "summary_zh": "图像区域之间的潜在表征预测；静态空间任务不等于动作条件动态模型。",
+      "source_ids": [
+        "paper-ijepa",
+        "ijepa-blog",
+        "ijepa-repo",
+        "ijepa-license"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2023-01-19",
+          "precision": "day",
+          "source_ids": [
+            "paper-ijepa"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": "2023-06-13",
+          "precision": "day",
+          "source_ids": [
+            "ijepa-blog"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": "2023-06-13",
+          "precision": "day",
+          "source_ids": [
+            "ijepa-blog"
+          ],
+          "status": "official_dated_availability_claim_not_download_test",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown_scope_not_fully_audited; repository LICENSE includes CC-BY-NC-4.0",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": [
+          "ijepa-license"
+        ]
+      },
+      "weights_availability": {
+        "status": "official_available_claim_not_downloaded",
+        "source_ids": [
+          "ijepa-blog",
+          "ijepa-repo"
+        ],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "JEPA",
+        "Vision Transformer",
+        "masking"
+      ],
+      "offline_exercise_zh": "手绘 4×4 图块，指定 context 与 target；列出泄漏风险。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      },
+      "lifecycle_note": "Official repository archived 2024-08-01; historical model remains educationally relevant."
+    },
+    {
+      "id": "wm-vjepa",
+      "title": "V-JEPA",
+      "type": "model_release",
+      "category": "world-models-embodied",
+      "summary_zh": "视频时空区域的特征预测，无动作条件预训练。",
+      "source_ids": [
+        "paper-vjepa",
+        "vjepa-blog",
+        "vjepa-repo"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2024-02-15",
+          "precision": "day",
+          "source_ids": [
+            "paper-vjepa"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": "2024-02-15",
+          "precision": "day",
+          "source_ids": [
+            "vjepa-blog"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": "2024-02-15",
+          "precision": "day",
+          "source_ids": [
+            "vjepa-blog"
+          ],
+          "status": "official_dated_availability_claim_not_download_test",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "Creative Commons NonCommercial per announcement; exact variant not checked",
+        "data": "unknown",
+        "source_ids": [
+          "vjepa-blog"
+        ]
+      },
+      "weights_availability": {
+        "status": "official_available_claim_not_downloaded",
+        "source_ids": [
+          "vjepa-blog",
+          "vjepa-repo"
+        ],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "I-JEPA",
+        "视频时空 patch"
+      ],
+      "offline_exercise_zh": "用自己画的四帧运动图标出时间遮挡，区分识别与动作反事实。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-genie",
+      "title": "Genie（2024 研究系统）",
+      "type": "research_system",
+      "category": "world-models-embodied",
+      "summary_zh": "从无动作标注视频学习潜在动作与可交互环境。",
+      "source_ids": [
+        "paper-genie"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2024-02-23",
+          "precision": "day",
+          "source_ids": [
+            "paper-genie"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": "11B",
+        "status": "paper_reported",
+        "source_ids": [
+          "paper-genie"
+        ]
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": []
+      },
+      "weights_availability": {
+        "status": "unknown_not_downloaded",
+        "source_ids": [],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "视频 tokenizer",
+        "动态模型",
+        "潜在动作"
+      ],
+      "offline_exercise_zh": "给四帧方块移动序列列出两个可能潜在动作编码；说明不可辨识性。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-openvla",
+      "title": "OpenVLA 7B（具身策略对照）",
+      "type": "model_release",
+      "category": "world-models-embodied",
+      "summary_zh": "视觉语言动作策略；输出动作不等于预测下一世界状态。",
+      "source_ids": [
+        "paper-openvla",
+        "openvla-repo",
+        "openvla-card"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2024-06-13",
+          "precision": "day",
+          "source_ids": [
+            "paper-openvla"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": "2024-06-13",
+          "precision": "day",
+          "source_ids": [
+            "openvla-repo"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": "7B paper label; 8B HF automatic file statistic",
+        "status": "counting_scope_unresolved",
+        "source_ids": [
+          "paper-openvla",
+          "openvla-card"
+        ]
+      },
+      "license": {
+        "code": "MIT",
+        "weights": "MIT per official card",
+        "data": "unknown_separate_datasets",
+        "source_ids": [
+          "openvla-repo",
+          "openvla-card"
+        ]
+      },
+      "weights_availability": {
+        "status": "model_card_available_not_downloaded",
+        "source_ids": [
+          "openvla-card"
+        ],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "VLM",
+        "行为克隆",
+        "动作单位与坐标系"
+      ],
+      "offline_exercise_zh": "纸上检查七维动作字段、单位和归一化元数据；绝不连接执行器。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-cosmos-2025",
+      "title": "Cosmos（2025 初始平台）",
+      "type": "model_release",
+      "category": "world-models-embodied",
+      "summary_zh": "含世界基础模型、视频 tokenizer 与数据处理的发布平台，不是单一 checkpoint。",
+      "source_ids": [
+        "paper-cosmos",
+        "cosmos-news",
+        "cosmos-publication"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2025-01-07",
+          "precision": "day",
+          "source_ids": [
+            "paper-cosmos"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": "2025-01-06",
+          "precision": "day",
+          "source_ids": [
+            "cosmos-publication"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": "2025-01-06",
+          "precision": "day",
+          "source_ids": [
+            "cosmos-news"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": "2025-01-06",
+          "precision": "day",
+          "source_ids": [
+            "cosmos-news"
+          ],
+          "status": "official_dated_availability_claim_not_download_test",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": null,
+        "status": "unknown_or_configuration_dependent"
+      },
+      "license": {
+        "code": "unknown",
+        "weights": "NVIDIA Open Model License, announcement wording; exact terms/version not audited",
+        "data": "unknown",
+        "source_ids": [
+          "cosmos-news"
+        ]
+      },
+      "weights_availability": {
+        "status": "official_available_claim_not_downloaded",
+        "source_ids": [
+          "cosmos-news"
+        ],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "视频生成",
+        "条件建模",
+        "合成数据评估"
+      ],
+      "offline_exercise_zh": "设计合成/真实测试集隔离表；列出物理不一致检查项。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    },
+    {
+      "id": "wm-vjepa2",
+      "title": "V-JEPA 2 / 2-AC",
+      "type": "model_release",
+      "category": "world-models-embodied",
+      "summary_zh": "区分无动作视频表征模型与经动作条件后训练的 2-AC。",
+      "source_ids": [
+        "paper-vjepa2",
+        "vjepa2-blog",
+        "vjepa2-repo"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "dates": {
+        "paper_first_submitted": {
+          "date": "2025-06-11",
+          "precision": "day",
+          "source_ids": [
+            "paper-vjepa2"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "publication": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "announcement": {
+          "date": "2025-06-11",
+          "precision": "day",
+          "source_ids": [
+            "vjepa2-blog"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        },
+        "repo_initial_release": {
+          "date": null,
+          "precision": "unknown",
+          "source_ids": [],
+          "status": "unknown_not_inferred",
+          "time": null,
+          "timezone": null
+        },
+        "weights_first_available": {
+          "date": "2025-06-11",
+          "precision": "day",
+          "source_ids": [
+            "vjepa2-blog"
+          ],
+          "status": "official_dated_availability_claim_not_download_test",
+          "time": null,
+          "timezone": null
+        },
+        "repo_release_label": {
+          "date": "2025-06-25",
+          "precision": "day",
+          "source_ids": [
+            "vjepa2-repo"
+          ],
+          "status": "verified_source_date",
+          "time": null,
+          "timezone": null
+        }
+      },
+      "parameters": {
+        "value": "encoder variants 300M/600M/1B; announcement describes 1.2B system",
+        "status": "different_scopes_do_not_merge",
+        "source_ids": [
+          "vjepa2-repo",
+          "vjepa2-blog"
+        ]
+      },
+      "license": {
+        "code": "majority MIT; specified files Apache-2.0",
+        "weights": "unknown",
+        "data": "unknown",
+        "source_ids": [
+          "vjepa2-repo"
+        ]
+      },
+      "weights_availability": {
+        "status": "official_available_claim_not_downloaded",
+        "source_ids": [
+          "vjepa2-blog",
+          "vjepa2-repo"
+        ],
+        "observed_on": "2026-10-28"
+      },
+      "prerequisites_zh": [
+        "V-JEPA",
+        "动作条件预测",
+        "MPC"
+      ],
+      "offline_exercise_zh": "纸上对两条动作序列的预测目标距离评分；注明仅教学假值。",
+      "exercise_status": "original_conceptual_exercise_not_executed",
+      "image_plan": {
+        "kind": "original_schematic",
+        "asset_status": "not_created",
+        "reuse_external_images": false
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "paper-world",
+      "url": "https://arxiv.org/abs/1803.10122",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "World Models；arXiv 页面首次投稿日期 2018-03-27。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-planet",
+      "url": "https://arxiv.org/abs/1811.04551",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Learning Latent Dynamics for Planning from Pixels；arXiv 页面首次投稿日期 2018-11-12。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-dreamer",
+      "url": "https://arxiv.org/abs/1912.01603",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Dream to Control；arXiv 页面首次投稿日期 2019-12-03。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-dreamerv2",
+      "url": "https://arxiv.org/abs/2010.02193",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Mastering Atari with Discrete World Models；arXiv 页面首次投稿日期 2020-10-05。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-dreamerv3",
+      "url": "https://arxiv.org/abs/2301.04104",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Mastering Diverse Domains through World Models；arXiv 页面首次投稿日期 2023-01-10。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-ijepa",
+      "url": "https://arxiv.org/abs/2301.08243",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "I-JEPA；arXiv 页面首次投稿日期 2023-01-19。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-vjepa",
+      "url": "https://arxiv.org/abs/2404.08471",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Revisiting Feature Prediction；arXiv 页面首次投稿日期 2024-02-15。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-genie",
+      "url": "https://arxiv.org/abs/2402.15391",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Genie；arXiv 页面首次投稿日期 2024-02-23。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-openvla",
+      "url": "https://arxiv.org/abs/2406.09246",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "OpenVLA；arXiv 页面首次投稿日期 2024-06-13。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-cosmos",
+      "url": "https://arxiv.org/abs/2501.03575",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "Cosmos；arXiv 页面首次投稿日期 2025-01-07。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "paper-vjepa2",
+      "url": "https://arxiv.org/abs/2506.09985",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "V-JEPA 2；arXiv 页面首次投稿日期 2025-06-11。这是 submission，不自动等于同行评议出版、公告或权重开放日。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "ijepa-blog",
+      "url": "https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "页面日期 2023-06-13；当天公开训练代码和 checkpoints；632M 视觉 transformer 是文中具体实例，不是所有变体统一参数。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "vjepa-blog",
+      "url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "页面日期 2024-02-15；公开模型，声明 Creative Commons NonCommercial；回顾 JEPA 于 2022 年提出。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "vjepa2-blog",
+      "url": "https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "页面日期 2025-06-11；声明代码/checkpoints 可用于研究和商业；区分无动作预训练和动作条件后训练；写 1.2B 参数。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "ijepa-repo",
+      "url": "https://github.com/facebookresearch/ijepa",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "官方 README 列出预训练 checkpoint；仓库标注 2024-08-01 归档；空间表征预测不是原生像素生成。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "ijepa-license",
+      "url": "https://github.com/facebookresearch/ijepa/blob/main/LICENSE",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "许可文件包含 CC Attribution-NonCommercial 4.0 International；不据此将所有第三方素材权利合并。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "vjepa-repo",
+      "url": "https://github.com/facebookresearch/jepa",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "官方 README 模型库有 ViT-L/H checkpoints；表征预测，像素可视化依赖另训 decoder。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "vjepa2-repo",
+      "url": "https://github.com/facebookresearch/vjepa2",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "README 写 2025-06-25 V-JEPA 2 released，另写 2026-03-16 V-JEPA 2.1；V2 encoder 300M/600M/1B；多数代码 MIT，列出的少数文件 Apache-2.0。公告日期与此 release 标签不能静默合并。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "openvla-repo",
+      "url": "https://github.com/openvla/openvla",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "更新记录 2024-06-13 Initial release；代码 MIT；官方故障排查强调数据覆盖、推理管线与训练指标一致性，不能推出任意机器人泛化。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "openvla-card",
+      "url": "https://huggingface.co/openvla/openvla-7b",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "模型卡声明 checkpoints 与代码 MIT；输入图像/语言，输出归一化动作；明确未见具身/场景不保证零样本泛化。论文/名称 7B，页面自动 tensor 大小显示 8B，口径待核。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "cosmos-news",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "2025-01-06 公告；Availability 段表示 WFMs 当时在 HF/NGC 可用，NVIDIA open model license；不能映射所有后续 Cosmos 产品。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    },
+    {
+      "id": "cosmos-publication",
+      "url": "https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai",
+      "kind": "primary",
+      "checked_at": "2026-10-28",
+      "evidence_zh": "NVIDIA 研究页 Publication Date 为 2025-01-06，与 arXiv 2025-01-07 首投是不同事件。",
+      "capture": "web tool page text; paraphrased evidence, not full-page archive"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "world-model-rl",
+      "nodes": [
+        "wm-world-models-2018",
+        "wm-planet",
+        "wm-dreamer",
+        "wm-dreamerv2",
+        "wm-dreamerv3"
+      ],
+      "goal_zh": "从压缩环境表征到在线规划与想象策略学习。"
+    },
+    {
+      "id": "jepa-to-embodied",
+      "nodes": [
+        "wm-jepa-concept",
+        "wm-ijepa",
+        "wm-vjepa",
+        "wm-vjepa2",
+        "wm-openvla"
+      ],
+      "goal_zh": "比较表征预测、动作条件世界模型、动作策略三类对象。"
+    },
+    {
+      "id": "generative-environments",
+      "nodes": [
+        "wm-genie",
+        "wm-cosmos-2025"
+      ],
+      "goal_zh": "认识可交互环境与视频基础模型平台的异同。"
+    }
+  ],
+  "best_practices_zh": [
+    "固定模型版本、数据划分、评估协议和随机种子；不把演示当通用性能证明。",
+    "分离表征质量、预测误差、规划回报与真实安全性；每项各自需要验证。",
+    "防止相邻视频帧泄漏到训练/测试两侧；保留来源与授权。",
+    "潜在滚动预测误差可能累积；在纸上加入误差项检查长时规划脆弱性。",
+    "动作策略离线检查需区分坐标、尺度与归一化；本包不执行实际机器人。",
+    "先审许可、第三方依赖与数据权利，再决定是否下载或运行；本轮无权重/数据下载。"
+  ],
+  "unknowns": [
+    "不是全球全模态全历史完成版：本包只补 12 个代表节点。",
+    "JEV 继续保持用户术语未确认；未建立 JEV=JEPA 别名或同义边。",
+    "更早的 Dyna / 神经世界模型历史，MuZero、RT 系列、Octo、后续 Genie 与 Cosmos 各版本未覆盖。",
+    "官方 README 已出现 V-JEPA 2.1（2026-03-16），本轮未单独研究其论文/变体/许可。",
+    "多数研究系统的首次代码开放、checkpoint 历史、同行评议出版日期尚未验证；null 不代表从未发布。",
+    "V-JEPA 2 的 6月11日公告与 6月25日 README release 标签保留并列；不猜测时区或原因。",
+    "OpenVLA 7B/8B、V-JEPA 2 encoder/system 参数口径必须保留。",
+    "OpenReview 原概念论文访问遇验证页面；未登录、未绕过，概念年份只使用官方 Meta 回顾证据。",
+    "配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。"
+  ],
+  "execution_boundary": {
+    "weights_downloaded": false,
+    "datasets_downloaded": false,
+    "models_executed": false,
+    "robot_execution": false,
+    "canonical_modified": false,
+    "credentials_used": false,
+    "paid_api_used": false
+  },
+  "blockers": [
+    {
+      "action": "OpenReview original concept paper read",
+      "target": "https://openreview.net/forum?id=BZ5a1r-kVsf",
+      "reason": "browser verification page",
+      "status": "blocked_no_bypass"
+    },
+    {
+      "action": "mkdir staging folder",
+      "target": "/workspace/shared/world-model-research-r1",
+      "reason": "filesystem returned Read-only file system",
+      "status": "blocked; used authorized cwd output instead"
+    }
+  ]
+}

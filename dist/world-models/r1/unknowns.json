@@ -1,0 +1,27 @@
+{
+  "unknowns": [
+    "不是全球全模态全历史完成版：本包只补 12 个代表节点。",
+    "JEV 继续保持用户术语未确认；未建立 JEV=JEPA 别名或同义边。",
+    "更早的 Dyna / 神经世界模型历史，MuZero、RT 系列、Octo、后续 Genie 与 Cosmos 各版本未覆盖。",
+    "官方 README 已出现 V-JEPA 2.1（2026-03-16），本轮未单独研究其论文/变体/许可。",
+    "多数研究系统的首次代码开放、checkpoint 历史、同行评议出版日期尚未验证；null 不代表从未发布。",
+    "V-JEPA 2 的 6月11日公告与 6月25日 README release 标签保留并列；不猜测时区或原因。",
+    "OpenVLA 7B/8B、V-JEPA 2 encoder/system 参数口径必须保留。",
+    "OpenReview 原概念论文访问遇验证页面；未登录、未绕过，概念年份只使用官方 Meta 回顾证据。",
+    "配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。"
+  ],
+  "blockers": [
+    {
+      "action": "OpenReview original concept paper read",
+      "target": "https://openreview.net/forum?id=BZ5a1r-kVsf",
+      "reason": "browser verification page",
+      "status": "blocked_no_bypass"
+    },
+    {
+      "action": "mkdir staging folder",
+      "target": "/workspace/shared/world-model-research-r1",
+      "reason": "filesystem returned Read-only file system",
+      "status": "blocked; used authorized cwd output instead"
+    }
+  ]
+}
