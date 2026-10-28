@@ -7,6 +7,7 @@ import mcp_learning
 import creative_workflows
 import office_agents
 import assistant_workspace
+import regional_office
 import media_evaluation
 import media_timeline
 import vendor_catalog
@@ -204,12 +205,16 @@ def book(data):
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
         if 'tutorial_markdown' in n: lines += [n['tutorial_markdown']]
         if 'media_evaluation' in n: lines += media_evaluation.book(n['media_evaluation'])
-        if 'office_agent' in n or 'assistant_workspace' in n:
-            w=n.get('office_agent',n.get('assistant_workspace'))
+        if 'office_agent' in n or 'assistant_workspace' in n or 'regional_office' in n:
+            w=n.get('office_agent',n.get('assistant_workspace',n.get('regional_office')))
             lines += ['### 办公系统 · 权限与未执行实践']
             for key in ('entity_type','platform_family_id','execution_status','proof_level','permission_boundary','confirmation_boundary','lifecycle_note','synthetic_input','expected_not_observed'):
                 lines += ['- '+key+'：'+str(w[key])]
             for note in w['source_notes']: lines += ['- '+note]
+            if 'regional_office' in n:
+                lines += ['- 租户与连接器：'+w['tenant_requirements']]
+                lines += ['- 失败风险：'+x for x in w['failure_risks']]
+                lines += ['- 未知：'+x for x in w['unknowns']]
         if 'world_model_learning' in n:
             w=n['world_model_learning']
             lines += ['- 语义子类：'+w['semantic_subtype'],'- 参数与口径：'+str(w['parameters']),'- '+w['diagram_note'],'![原创世界模型教学对照](world-model-learning.svg)']
@@ -260,6 +265,7 @@ def build():
     bundles.append(media_evaluation.load(ROOT))
     bundles.append(media_timeline.load(ROOT))
     bundles.append(assistant_workspace.load(ROOT))
+    bundles.append(regional_office.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -279,6 +285,7 @@ def build():
     media_evaluation.publish(ROOT,out)
     media_timeline.publish(ROOT,out)
     assistant_workspace.publish(ROOT,out)
+    regional_office.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

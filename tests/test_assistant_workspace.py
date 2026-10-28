@@ -33,7 +33,7 @@ class AssistantTests(unittest.TestCase):
   self.s[0]['url']='https://u:p@example.org'
   with self.assertRaises(ValueError):A.adapt(self.r,self.s)
  def test_derived_book_links_and_counts(self):
-  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual((len(d['nodes']),len(d['events']),len(d['media_evaluation_registry']),len(d['dataset_benchmark_registry']),len(d['vendor_catalog']['records'])),(230,166,11,33,77));self.assertEqual(len([n for n in d['nodes'] if 'office_agent' in n]),11)
+  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual((len(d['nodes']),len(d['events']),len(d['media_evaluation_registry']),len(d['dataset_benchmark_registry']),len(d['vendor_catalog']['records'])),(237,166,11,33,77));self.assertEqual(len([n for n in d['nodes'] if 'office_agent' in n]),11)
   for n in [n for n in d['nodes'] if n['id'] in A.EXPECTED]:
    self.assertEqual(n['agentwork_links'][0]['id'],'assistant-case-'+n['id'].removeprefix('assistant-'));self.assertIn(n['title'],(ROOT/'BOOK.md').read_text());self.assertEqual(n['assistant_workspace']['execution_status'],'never-run')
 if __name__=='__main__':unittest.main()

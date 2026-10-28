@@ -92,3 +92,7 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 `data/benchmarks/raw/` 原字节保留历史研究；`overlay.json` 明确访问修订，`admission.json` 固定SHA-256。DocVQA下载账户/条款未知；MathVista test标签不公开；WorkArena运行实例需审批；GAIA门控且禁止可爬重发；OCRBench v2仅研究非商业。任何公开入口都不自动等于匿名下载、完整本地复现或商用许可。下游下载未逐项测试。
 
 网站与书稿同源生成；没有据核验日期添加发布日期或外部配图。未执行benchmark、登录、下载受限包或访问真实设备。
+
+## 区域办公平台补包
+
+[7条区域办公平台与人监督练习](REGIONAL_OFFICE.md)：Dify、Coze Studio、飞书 aily 企业工作伙伴、钉钉宜搭 AI 助理、Zoho Zia Agents、百炼智能体应用、腾讯云智能体开发平台。均为 documentation-only / never-run；保留许可、地域/租户条件、命名关系未知及较弱来源说明，不是7个基础模型。原始包与独立QA位于 `learning/regional-office/r1/`。
