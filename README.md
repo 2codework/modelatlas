@@ -67,3 +67,16 @@ BOOK.md           同源生成的中文书稿
 ## 日期证据
 
 87 条事件中 50 条有日期、37 条日期未知。`timeline-dates.json` 是追加式证据覆盖层；构建时核对 `expected_before`，不重写历史研究包。BLOOM API 的 `available_by=2022-07-12` 只说明截至该日可用，不替代精确首发日期。GPT-3 API 限 private beta，Gemini 1.0 Pro / Pro Vision 限 Vertex AI Preview，不标作 GA。时区未声明则保留 null。
+
+## MCP、Skill 与提示词 · 十二课候选
+
+新增 12 个原创深教程：角色、历史初始化、工具调用、资源与模板、错误、取消、权限、提示注入、Skill、调试、迁移与现行消息。每课在网站和同源书稿中完整保留目标、前置、输入输出、提示词、步骤、验收、错误、权限、来源与版本。MCP 2025-11-25 的 initialize 是历史教学；2026-07-28 对照采用逐请求元数据。Skills 扩展已发布、SEP-2640 Final；具体宿主支持仍待逐版本验证。
+
+`learning/mcp/raw/` 原字节保留研究采集历史；`overlay.json` 是经核验的补充说明。页面默认展示显式适配后的教学正文，而非内部状态。ZIP 下载内含原包与 `VERIFIED-OVERLAY.json`；请同时阅读。只有原创标准库模拟契约经过测试，不是 MCP SDK、真实服务器、OAuth、模型或行业效果验证。没有安装、账号、付费或真实调用。
+
+```sh
+python learning/mcp/raw/validate.py
+python -m unittest discover -s learning/mcp/raw/tests -v
+```
+
+不新增未经核验的版本事件或模型能力断言。保留全部旧案例、节点、日期覆盖层与互链；源网页的权利与适用条件不因本教程而改变。此目录是待独立审阅的候选，不能据此推定线上已发布。

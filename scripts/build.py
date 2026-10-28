@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Dependency-free, fail-closed research normalizer and static book builder."""
-import json, re, shutil, datetime, copy, math
+import json, re, shutil, datetime, copy, math, sys
+sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
+import mcp_learning
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -169,6 +171,7 @@ def book(data):
     for p in data['learning_paths']: lines += ['','### '+p['title'],p['note'],' → '.join(p['node_ids'])]
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
+        if 'tutorial_markdown' in n: lines += [n['tutorial_markdown']]
         for x in n.get('agentwork_links',[]): lines+=['- 对应实践（编辑学习关系）：['+x['title']+']('+x['url']+')']
         for key in ['license','license_notes','cost','cost_notes','historical_context']:
             if key in n: lines+=['- '+key+'：'+str(n[key])]
@@ -195,6 +198,8 @@ def book(data):
     return '\n'.join(line.rstrip() for line in lines)+'\n'
 def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
+    _, _, course = mcp_learning.load(ROOT)
+    bundles.append(course)
     data=normalize(bundles)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
@@ -202,6 +207,7 @@ def build():
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
+    mcp_learning.publish(ROOT,out)
     (out/'.nojekyll').touch()
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)
     print(json.dumps({'nodes':len(data['nodes']),'edges':len(data['edges']),'sources':len(data['sources']),'events':len(data['events']),'output':str(out)},ensure_ascii=False))

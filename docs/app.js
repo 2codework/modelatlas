@@ -20,6 +20,7 @@
  function choose(id,scroll=false){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const text of [n.type,n.category,n.verification_status])tags.append(el('span',text,'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));const dl=el('dl');
  const fields={'版本 / 快照':n.version,'最后核验':n.checked_at,'机构':v.vendor,'可获得性':v.availability,'许可证':n.license||n.license_notes||v.license,'费用与预算':n.cost||n.cost_notes,'生命周期':v.lifecycle||'unknown','适用版本':n.lifecycle?.applicable_version||n.applicable_versions||n.version,'输入模态':n.input_modalities,'输出模态':n.output_modalities};
  for(const [k,value] of Object.entries(fields)){dl.append(el('dt',k),el('dd',display(value)));}root.append(dl);
+ if(n.tutorial_markdown){root.append(markdownDOM(n.tutorial_markdown));const a=link('https://2codework.github.io/modelatlas/mcp-offline-labs.zip','下载原创离线课程包（ZIP；不自动执行）');a.href='mcp-offline-labs.zip';a.removeAttribute('target');a.download='mcp-offline-labs.zip';root.append(a);}
  if(n.modality_note)root.append(el('p',n.modality_note,'muted'));
  const pitfalls=n.misconceptions||n.pitfalls||[];if(pitfalls.length){const box=section(root,'容易混淆的地方'),ul=el('ul');for(const p of pitfalls)ul.append(el('li',p));box.append(ul);}
  if(n.prerequisites?.length){const box=section(root,'先修知识 · 编辑建议');for(const i of n.prerequisites)box.append(button(nodes.get(i).title,()=>choose(i)));}
