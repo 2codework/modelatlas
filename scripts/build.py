@@ -5,6 +5,7 @@ sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
 import asset_versions
 import mcp_learning
 import creative_workflows
+import office_agents
 import vendor_catalog
 import benchmark_catalog
 import world_models
@@ -193,6 +194,12 @@ def book(data):
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
         if 'tutorial_markdown' in n: lines += [n['tutorial_markdown']]
+        if 'office_agent' in n:
+            w=n['office_agent']
+            lines += ['### 办公系统 · 权限与未执行实践']
+            for key in ('entity_type','platform_family_id','execution_status','proof_level','permission_boundary','confirmation_boundary','lifecycle_note','synthetic_input','expected_not_observed'):
+                lines += ['- '+key+'：'+str(w[key])]
+            for note in w['source_notes']: lines += ['- '+note]
         if 'world_model_learning' in n:
             w=n['world_model_learning']
             lines += ['- 语义子类：'+w['semantic_subtype'],'- 参数与口径：'+str(w['parameters']),'- '+w['diagram_note'],'![原创世界模型教学对照](world-model-learning.svg)']
@@ -236,6 +243,8 @@ def build():
     bundles.append(creative_bundle)
     bundles.append(benchmark_catalog.load(ROOT))
     bundles.append(world_models.load(ROOT))
+    _, office_bundle = office_agents.load(ROOT)
+    bundles.append(office_bundle)
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -251,6 +260,7 @@ def build():
     vendor_catalog.publish(ROOT,out)
     benchmark_catalog.publish(ROOT,out)
     world_models.publish(ROOT,out)
+    office_agents.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

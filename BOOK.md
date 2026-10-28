@@ -5817,6 +5817,393 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - 事件：announcement · 2025-06-11 · V-JEPA 2 / 2-AC · 官方权重可用性公告（非独立核实首次文件时间） · 精度 day · 时区 未知 · 范围 official_dated_availability_claim · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。 · 证据 research dates.weights_first_available; official_dated_availability_claim_not_download_test · 来源 https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
 - 事件：documentation_update · 2025-06-25 · V-JEPA 2 / 2-AC · 当前 README 发布标签（与公告分开） · 精度 day · 时区 未知 · 范围 source_specific_event · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 当前 README 标签与 2025-06-11 公告并列；原因与时区未知，不静默合并。 · 证据 research dates.repo_release_label; verified_source_date · 来源 https://github.com/facebookresearch/vjepa2
 
+## AI by Zapier（agentic step）
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：在 Zap 中进行分类、推理、工具调用和结构化输出。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-ai-by-zapier / workflow_agent_component
+- 生命周期：unknown
+- 版本：现行迁移目标；不等于底层模型
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：workflow_agent_component
+- platform_family_id：zapier
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：通过连接账户操作；管理员可禁用 agentic/tool calling。
+- confirmation_boundary：逐工具 Require approval before running 需主动开启；默认不暂停确认。发布审批与运行审批不同。
+- lifecycle_note：现行迁移目标；不等于底层模型
+- synthetic_input：虚构工单 T-41：要求修改收货备注
+- expected_not_observed：分类 delivery_change；提出改动，不自动对真实订单写入
+- 文档：Migrating from Agents to AI by Zapier；Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[AI by Zapier（agentic step）：人监督合成练习](https://2codework.github.io/agentwork/?case=office-ai-by-zapier-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：任务制计费已记录；金额与账户额度未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：先列读写工具并使用虚构输入
+- 学习步骤（未执行）：写工具开启逐次审批，检查输出字段
+- 学习步骤（未执行）：人工比较工具参数后决定是否运行；上线另行授权
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：迁移不拆分工具为独立 Zap 步骤
+- 注意：旧 Agent 与新 Zap 同时启用可能重复执行
+- 注意：全 Zap 测试也消耗任务；本研究不测试
+- 注意：仅指可选择并调用工具的 agentic 配置；普通 Zap 或单次 AI 转换不自动属于 Agent。
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier
+
+## Zapier Agents
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：按触发器或交互执行连接应用动作；查询连接知识源。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-zapier-agents / hosted_agent_service
+- 生命周期：unknown
+- 版本：迁移中历史入口；官方未给停用日期，不能标成已关闭
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：hosted_agent_service
+- platform_family_id：zapier
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：只使用提供给 Agent 的工具及账户连接；不得把指令视为连接权限。
+- confirmation_boundary：旧文档支持在指令中加入暂停征求确认，并配置消息动作；不把自然语言指令当独立强制安全控制。
+- lifecycle_note：迁移中历史入口；官方未给停用日期，不能标成已关闭
+- synthetic_input：虚构客户问发票状态
+- expected_not_observed：查阅样例状态，生成待审核回复
+- 文档：Build an agent in Zapier Agents；Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+- 文档：Add approval steps to your agent’s instructions；Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+- 文档：Migrating from Agents to AI by Zapier；Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Zapier Agents：人监督合成练习](https://2codework.github.io/agentwork/?case=office-zapier-agents-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：盘点旧 Agent 触发器、知识源与工具
+- 学习步骤（未执行）：用合成工单写暂停检查点
+- 学习步骤（未执行）：评估迁移差异，保留人工审批；不直接双跑生产
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：当前迁移目标为 AI by Zapier
+- 注意：不能假设旧版全部功能迁移等价
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://help.zapier.com/hc/en-us/articles/24393442652557-Build-an-agent-in-Zapier-Agents
+- 来源：https://help.zapier.com/hc/en-us/articles/41776074420493-Add-approval-steps-to-your-agent-s-instructions
+- 来源：https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier
+
+## Make AI Agents (New)
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：在场景中选择模块、子场景、MCP 与子 Agent 工具；处理输入文件并返回结构化结果。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-make-ai-agents-new / hosted_workflow_agent_platform
+- 生命周期：unknown
+- 版本：New，官方发布页仍标 open beta；不要混入旧版教程
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：hosted_workflow_agent_platform
+- platform_family_id：make
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：Agent 只能调用启用的工具；工具背后连接权限须单独审查。
+- confirmation_boundary：已读文档未证明统一逐工具强制审批开关；采用禁用写工具、先输出建议、人工另行执行的教学边界。
+- lifecycle_note：New，官方发布页仍标 open beta；不要混入旧版教程
+- synthetic_input：三条虚构项目进展记录
+- expected_not_observed：输出 risk、owner、next_action，缺失 owner 标未知
+- 文档：Meet the new Make AI Agents app；New；页面标记 open beta；证据读取：official_documentation
+- 文档：Create your first AI agent；Make AI Agent (New)；滚动文档；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Make AI Agents (New)：人监督合成练习](https://2codework.github.io/agentwork/?case=office-make-ai-agents-new-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：官方称所有套餐可用 Make AI Provider，自带 provider 连接需付费套餐；金额未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：新建未启用的场景并填写合成请求
+- 学习步骤（未执行）：添加只读工具和少量知识文件，禁用写工具
+- 学习步骤（未执行）：检查执行步骤与结构化结果，人工处理后续变更
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：聊天测试会调用工具，不是无副作用预览
+- 注意：子 Agent 嵌套只支持一层
+- 注意：知识上传也会消耗 tokens
+- 注意：仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。
+- 注意：通用审批机制未由本次来源确认
+- 注意：未实测；open beta 功能与价格会变化
+- 来源：https://help.make.com/meet-the-new-make-ai-agents-app
+- 来源：https://help.make.com/create-your-first-ai-agent
+
+## Relevance AI Agents
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：构建工具驱动的 Agent 与多 Agent 团队；分类、查询与受监督的跨工具工作流。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-relevance-ai / low_no_code_agent_platform
+- 生命周期：unknown
+- 版本：当前官方文档可访问；版本未标
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：low_no_code_agent_platform
+- platform_family_id：relevance-ai
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：为 Agent 显式连接工具；各工具账户权限和审批模式需要分别设置。
+- confirmation_boundary：每个工具可设 Autopilot 或 Human-in-the-Loop；后者要求显式批准才能使用。
+- lifecycle_note：当前官方文档可访问；版本未标
+- synthetic_input：虚构采购请求 Q-12 缺少数量
+- expected_not_observed：要求补充数量，不建立真实采购单
+- 文档：Relevance AI Introduction；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 文档：Approval Mode；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Relevance AI Agents：人监督合成练习](https://2codework.github.io/agentwork/?case=office-relevance-ai-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：设计虚构供应商问题分流 Agent
+- 学习步骤（未执行）：连接最少工具，将写入工具设 HITL
+- 学习步骤（未执行）：检查拟执行工具并批准/拒绝，再审结果
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：审批配置不等于结果正确或合规认证
+- 注意：不同界面版本命名需现场核对
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://relevanceai.com/docs/get-started/introduction
+- 来源：https://relevanceai.com/docs/build/agents/give-your-agent-tasks/approval-mode
+
+## Notion Custom Agents
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：按触发器、计划进行页面/数据库整理；跨授权 Notion 与连接工具生成团队更新。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-notion-custom-agents / workspace_agent_service
+- 生命周期：unknown
+- 版本：当前文档；与按需 Notion Agent 分开
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：workspace_agent_service
+- platform_family_id：notion
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：拥有独立资源权限，不继承触发者权限；使用者可能经 Agent 读取或编辑自己无直接访问权的资源。
+- confirmation_boundary：已读来源未证明所有写入逐次确认；授权资源和共享 Agent 本身都是风险边界。教学只授只读源，产出由人审核。
+- lifecycle_note：当前文档；与按需 Notion Agent 分开
+- synthetic_input：虚构 A/B 项目页各两项状态
+- expected_not_observed：周报草稿，未注明日期的项列为待核实
+- 文档：Custom Agents in Notion；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 文档：Custom Agents sharing and permissions；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Notion Custom Agents：人监督合成练习](https://2codework.github.io/agentwork/?case=office-notion-custom-agents-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：创建仅自己可用的 Agent
+- 学习步骤（未执行）：Tools and Access 只加入虚构项目页，先不启用计划
+- 学习步骤（未执行）：运行整理要求，检查输出及分享对象后人工保存/共享
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：共享 Agent 可扩大可见性；删掉个人页面权限不一定阻止经 Agent 获取
+- 注意：不能用当前用户权限继承的表述
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://www.notion.com/help/custom-agents
+- 来源：https://www.notion.com/en-gb/help/custom-agents-sharing-and-permissions
+
+## Glean Workflow agents
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：检索上下文后创建工单/文档并分享链接；查询指标并组织项目更新。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-glean-workflow-agents / enterprise_workflow_agent_service
+- 生命周期：unknown
+- 版本：当前官方工具文档；与 Assistant、Autonomous Agents 分开
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：enterprise_workflow_agent_service
+- platform_family_id：glean
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：管理员启用并认证工具，构建者选择流程工具；依赖配置的应用身份权限。
+- confirmation_boundary：文档中个人 Always allow/Needs approval 设置明确适用于 Glean Assistant；不能直接宣称覆盖所有 Workflow/Autonomous Agent。流程写入审批需具体配置核验。
+- lifecycle_note：当前官方工具文档；与 Assistant、Autonomous Agents 分开
+- synthetic_input：虚构 Jira 事项 DEMO-1 与状态说明
+- expected_not_observed：项目更新草稿和建议跟进项
+- 文档：Overview and concepts: tools；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation_search_full_text; direct_open_empty
+- 对应实践（编辑学习关系）：[Glean Workflow agents：人监督合成练习](https://2codework.github.io/agentwork/?case=office-glean-workflow-agents-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：管理员确认允许的只读工具和身份
+- 学习步骤（未执行）：构建读取样例进展→产出草稿流程
+- 学习步骤（未执行）：不启用未核验的写步骤；人工检查后写入目标系统
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：索引 connector 不等于实时执行 tool
+- 注意：个人 Assistant 审批设置不能外推为自动 Agent 默认
+- 注意：Workflow agent 各触发方式的强制审批边界需专项核验
+- 注意：价格、地区与租户功能未知；未实测
+- 来源：https://docs.glean.com/agents/actions/introduction-to-actions
+
+## Microsoft Copilot Studio custom agents
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：通过配置的知识、工具和主题编排业务对话；将请求路由到连接器或工作流。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-copilot-studio / low_code_agent_platform
+- 生命周期：unknown
+- 版本：当前 custom agent 工具文档；不是 Copilot 模型
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：low_code_agent_platform
+- platform_family_id：microsoft-copilot-studio
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：工具可用 End user 或 Maker-provided 身份，不能假定总是用户权限；管理员治理另计。
+- confirmation_boundary：Ask the end user before running 默认 No；必须为敏感工具显式开启。该选项描述的是终端用户聊天体验。
+- lifecycle_note：当前 custom agent 工具文档；不是 Copilot 模型
+- synthetic_input：虚构设备支持申请，部门未填
+- expected_not_observed：补问部门后生成工单建议，确认前不提交
+- 文档：Add tools to custom agents；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 文档：Configure user authentication for tools；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Microsoft Copilot Studio custom agents：人监督合成练习](https://2codework.github.io/agentwork/?case=office-copilot-studio-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：为虚构服务申请建立 Agent 和输入字段
+- 学习步骤（未执行）：选择最终用户身份并开启敏感工具确认
+- 学习步骤（未执行）：核对申请对象和字段，拒绝错误参数；异步触发另核验
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：聊天确认不能自动外推到所有自治触发
+- 注意：Maker-provided 凭证可能扩大执行身份范围
+- 注意：本次工具文档面向 standard-harness agents/agent flows，不推广到所有 harness。
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent
+- 来源：https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication
+
+## Airtable Omni
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：多步整理/修改数据与构建应用；分析文档、解释自动化失败。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-airtable-omni / workspace_agent_assistant
+- 生命周期：unknown
+- 版本：当前官方滚动文档；当前绝对更新时间未知，保留历史显示与 QA 相对日期观察差异
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：workspace_agent_assistant
+- platform_family_id：airtable
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：镜像交互用户在 base/interface 的权限，字段和表权限仍约束修改。
+- confirmation_boundary：官方文档称删除记录、表或页面前均确认；读取 base 外内容（如网页/搜索结果）后修改 base 前确认。发布 interface 和启用 automation 留给用户；不能推断所有写入均需确认。
+- lifecycle_note：当前官方滚动文档；当前绝对更新时间未知，保留历史显示与 QA 相对日期观察差异
+- synthetic_input：虚构任务 A 已完成、B 延迟两日
+- expected_not_observed：状态汇总，B 标为需人工跟进
+- 文档：Using Omni AI in Airtable；本次独立 QA 显示 Last updated 1 day ago；当前绝对更新时间未知，不从相对时间推算；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Airtable Omni：人监督合成练习](https://2codework.github.io/agentwork/?case=office-airtable-omni-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：所有套餐可访问；完整使用需要 AI credits 与启用 AI；金额未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：使用隔离的虚构项目 base
+- 学习步骤（未执行）：请 Omni 汇总数据并说明拟改字段
+- 学习步骤（未执行）：人核验记录和权限，再决定变更；不要自动发布共享界面
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：不能配置 workspace/base 权限或导出数据
+- 注意：撤销有范围限制，不能依赖全量回滚
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable
+
+## Lindy
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：收件箱草稿、会议准备、团队研究和例行任务。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-lindy / hosted_personal_team_agent_service
+- 生命周期：unknown
+- 版本：当前文档；旧 Academy action-configuration 已重定向
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：hosted_personal_team_agent_service
+- platform_family_id：lindy
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：个人连接仅本人用；团队连接以被共享账户身份工作。连接开通时其动作整体启用。
+- confirmation_boundary：集成 guardrails 只覆盖共享 Slack 线程写操作；不覆盖读取、Web chat、Slack DM、iMessage/SMS。个人 Email Drafting 例程另规定草稿由用户审改发送。
+- lifecycle_note：当前文档；旧 Academy action-configuration 已重定向
+- synthetic_input：虚构客户希望改期，未给时区
+- expected_not_observed：草稿询问时区，不直接发送会议邀请
+- 文档：What is Lindy?；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 文档：Integrations；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 文档：Email Drafting；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Lindy：人监督合成练习](https://2codework.github.io/agentwork/?case=office-lindy-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：选择 Email Drafting 例程而非泛化发送任务
+- 学习步骤（未执行）：用虚构来信确定语气和升级规则
+- 学习步骤（未执行）：审核 drafts 文件夹中收件人、事实和正文；由人发送
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：不能把共享线程 guardrail 说成全渠道安全网
+- 注意：集成级规则不能区分同一集成的不同账户
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://docs.lindy.ai/
+- 来源：https://docs.lindy.ai/integrations/overview
+- 来源：https://docs.lindy.ai/features/inbox-management/email-drafting
+
+## n8n AI Agent node + human review
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：工具驱动工作流，选择性人工审批；处理分类结果并拟议写入操作。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-n8n-ai-agent / workflow_orchestration_component
+- 生命周期：unknown
+- 版本：当前滚动文档；运行软件版本未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：workflow_orchestration_component
+- platform_family_id：n8n
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：节点使用配置的凭证；须最小化工具与审批渠道权限。
+- confirmation_boundary：工具接到 human review 节点后执行前暂停；Approve 用模型给定输入执行，Deny 取消该操作并通知 AI；只保护接入的工具。
+- lifecycle_note：当前滚动文档；运行软件版本未核验
+- synthetic_input：虚构 T-9 建议状态 resolved 但证据不足
+- expected_not_observed：审核者拒绝，目标状态不变
+- 文档：Human-in-the-loop for tools；旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[n8n AI Agent node + human review：人监督合成练习](https://2codework.github.io/agentwork/?case=office-n8n-ai-agent-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需要配置 n8n、模型及工具/审批渠道连接；部署方式、许可及总成本未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：创建合成工单输入及 Agent 节点
+- 学习步骤（未执行）：将写工具接入 human review 并展示 tool name/parameters
+- 学习步骤（未执行）：人工拒绝错误目标，确认拒绝不写入后再评估上线
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：批准输入不等于输入正确
+- 注意：必须明确拒绝后的行为；真实暂停/取消未实测
+- 注意：仅登记明确的 Agent 配置，不把普通确定性工作流整体统计为 Agent。
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md
+
+## Atlassian Rovo agents in Slack
+
+命名办公 Agent 系统/组件/客户端面，不是基础模型。文档支持：在 Slack 检索与整理上下文；拟创建/更新 Jira、发布 Confluence 或调用连接工具。代表性有限批次；无真实成效验证。
+
+- ID / 类型：office-rovo-slack / workspace_agent_client_surface
+- 生命周期：unknown
+- 版本：当前 Slack app 文档；不等同底层模型
+- 核验：2026-10-28 · source_reviewed_not_replicated
+### 办公系统 · 权限与未执行实践
+- entity_type：workspace_agent_client_surface
+- platform_family_id：atlassian-rovo
+- execution_status：never-run
+- proof_level：documentation-only
+- permission_boundary：DM/私密回复按用户权限；公开回复按 Rovo 自身访问范围；行动按用户权限。
+- confirmation_boundary：创建/更新 Jira、发布 Confluence 或第三方动作前预览并要求确认；即使公开线程，动作向用户私下确认。
+- lifecycle_note：当前 Slack app 文档；不等同底层模型
+- synthetic_input：虚构入职事项：测试账户未开通
+- expected_not_observed：工单预览，负责人缺失时先补问
+- 文档：Use the Rovo app for Slack；未显示文档发布日期/版本；以访问日为准；证据读取：official_documentation
+- 对应实践（编辑学习关系）：[Atlassian Rovo agents in Slack：人监督合成练习](https://2codework.github.io/agentwork/?case=office-rovo-slack-lab)
+- license：本批未核验产品许可/合同，不推定开源或免费。
+- cost：需授权账户/连接；具体套餐、区域可用性及价格未核验
+- historical_context：文档更新时间不等于产品发布日期；逐条来源时间与提取边界见办公系统专项说明。
+- 学习步骤（未执行）：先在私密回复中请求虚构事项摘要
+- 学习步骤（未执行）：要求起草 DEMO 工单，核对项目与负责人
+- 学习步骤（未执行）：确认正确动作后才允许提交；公开分享另行检查
+- 注意：该平台不保证所有动作默认请求确认；以具体渠道、身份、工具设置为准。
+- 注意：11 实体/10 家族；不是全球完整目录；练习和产品均未执行。
+- 注意：更改 Agent 权限不会撤回已发回复
+- 注意：Slack 语义不能外推到所有 Rovo 客户端
+- 注意：未登录核验、未执行真实任务；吞吐、质量、成本及权限实现未实测
+- 来源：https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -6308,6 +6695,24 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - wm-src-openvla-card · https://huggingface.co/openvla/openvla-7b · 核验 2026-10-28 · 模型卡声明 checkpoints 与代码 MIT；输入图像/语言，输出归一化动作；明确未见具身/场景不保证零样本泛化。论文/名称 7B，页面自动 tensor 大小显示 8B，口径待核。
 - wm-src-cosmos-news · https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development · 核验 2026-10-28 · 2025-01-06 公告；Availability 段表示 WFMs 当时在 HF/NGC 可用，NVIDIA open model license；不能映射所有后续 Cosmos 产品。
 - wm-src-cosmos-publication · https://research.nvidia.com/publication/2025-01_cosmos-world-foundation-model-platform-physical-ai · 核验 2026-10-28 · NVIDIA 研究页 Publication Date 为 2025-01-06，与 arXiv 2025-01-07 首投是不同事件。
+- office-src-zap-migrate · https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier · 核验 2026-10-28 · Updated October 01, 2026 08:00；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；documentation-only
+- office-src-zap-approval · https://help.zapier.com/hc/en-us/articles/41776074420493-Add-approval-steps-to-your-agent-s-instructions · 核验 2026-10-28 · Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；documentation-only
+- office-src-zap-build · https://help.zapier.com/hc/en-us/articles/24393442652557-Build-an-agent-in-Zapier-Agents · 核验 2026-10-28 · Updated October 01, 2026 07:59；时区未知；仅文档更新时间，不是产品发布日期；official_documentation；documentation-only
+- office-src-make-new · https://help.make.com/meet-the-new-make-ai-agents-app · 核验 2026-10-28 · New；页面标记 open beta；official_documentation；documentation-only
+- office-src-make-create · https://help.make.com/create-your-first-ai-agent · 核验 2026-10-28 · Make AI Agent (New)；滚动文档；official_documentation；documentation-only
+- office-src-rel-intro · https://relevanceai.com/docs/get-started/introduction · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-rel-approval · https://relevanceai.com/docs/build/agents/give-your-agent-tasks/approval-mode · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-notion-custom · https://www.notion.com/help/custom-agents · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-notion-perm · https://www.notion.com/en-gb/help/custom-agents-sharing-and-permissions · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-glean-tools · https://docs.glean.com/agents/actions/introduction-to-actions · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation_search_full_text; direct_open_empty；documentation-only
+- office-src-copilot-tools · https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-tools-custom-agent · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-copilot-auth · https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-enduser-authentication · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-omni · https://support.airtable.com/articles/1744327578-using-omni-ai-in-airtable · 核验 2026-10-28 · 本次独立 QA 显示 Last updated 1 day ago；当前绝对更新时间未知，不从相对时间推算；official_documentation；documentation-only
+- office-src-lindy-home · https://docs.lindy.ai/ · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-lindy-integrations · https://docs.lindy.ai/integrations/overview · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-lindy-drafts · https://docs.lindy.ai/features/inbox-management/email-drafting · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
+- office-src-n8n-hitl · https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools.md · 核验 2026-10-28 · 旧 URL advanced-ai/human-in-the-loop-tools/ 重定向到此页；official_documentation；documentation-only
+- office-src-rovo-slack · https://support.atlassian.com/rovo/docs/using-the-atlassian-rovo-slack-app/ · 核验 2026-10-28 · 未显示文档发布日期/版本；以访问日为准；official_documentation；documentation-only
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
@@ -6355,6 +6760,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.
 - README date conflict and parameter-count scope conflicts intentionally unresolved.
 - No exact license-version or full dependency/data-rights audit performed.
+- 办公 Agent 系统已有11命名实体/10家族代表批次；OpenAI、Anthropic及更多地区平台仍待专项核验，未覆盖全球全部服务或版本。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。
