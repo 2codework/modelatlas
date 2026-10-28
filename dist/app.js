@@ -8,12 +8,12 @@
  let D, catalogController;
  try{const r=await fetch('data.json');if(!r.ok)throw Error('HTTP '+r.status);D=await r.json();}catch(e){$('stats').textContent='数据载入失败：请通过 HTTP 静态服务器打开；同源书稿仍可下载。';$('stats').className='error';return;}
  const nodes=new Map(D.nodes.map(n=>[n.id,n])), views=new Map(D.view_nodes.map(n=>[n.id,n])),sources=new Map(D.sources.map(s=>[s.id,s]));
- const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;
+ const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;let importGeneration=0,progressRevision=0;
  const eventLabels={paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布'};
  const display=value=>value===null||value===undefined||value===''?'未核验':typeof value==='object'?JSON.stringify(value):String(value);
  $('stats').textContent=`${D.nodes.length} 节点 · ${D.edges.length} 关联 · ${D.sources.length} 登记来源 · 核验 ${D.checked_at}`;
  try{const raw=localStorage.getItem('modelatlas.progress');if(raw)completed=C.parseProgress(raw,allIds);}catch{$('progress-status').textContent='本地进度不可用或已损坏；本次会话仍可使用，导出可备份。';}
- function save(){try{localStorage.setItem('modelatlas.progress',JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]}));$('progress-status').textContent='已在此浏览器保存';}catch{$('progress-status').textContent='浏览器不允许持久保存；请导出备份。';}renderPaths();}
+ function save(){progressRevision++;let persisted=true;try{localStorage.setItem('modelatlas.progress',JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]}));$('progress-status').textContent='已在此浏览器保存';}catch{persisted=false;$('progress-status').textContent='浏览器不允许持久保存；请导出备份。';}renderPaths();return persisted;}
  function sourceList(parent,item){const urls=new Set(item.source_urls||[]);for(const id of item.source_ids||[]){const s=sources.get(id);if(s)urls.add(s.url);}const ul=el('ul');for(const u of urls)ul.append(el('li'));[...urls].forEach((u,i)=>ul.children[i].append(link(u)));if(!urls.size)ul.append(el('li','没有已核验来源；不能视为技术事实。'));parent.append(ul);}
  for(const key of ['type','category','vendor','availability']){const values=new Set(D.nodes.map(n=>key==='type'||key==='category'?n[key]:views.get(n.id)[key]));for(const v of [...values].sort()){const o=el('option',v);o.value=v;$(key).append(o);}}
  for(const key of Object.keys(eventLabels)){const o=el('option',eventLabels[key]);o.value=key;$('event-type').append(o);}
@@ -58,7 +58,19 @@
  $('event-type').addEventListener('change',renderEvents);
  function renderPaths(){$('paths').replaceChildren();for(const p of D.learning_paths){const card=el('article',undefined,'path');card.append(el('h3',p.title),el('p',p.note,'muted'));const ol=el('ol');for(const id of p.node_ids){const li=el('li'),label=el('label'),check=el('input');check.type='checkbox';check.checked=completed.has(id);check.setAttribute('aria-label',nodes.get(id).title+' 已读');check.addEventListener('change',()=>{check.checked?completed.add(id):completed.delete(id);save();if(selected===id)choose(id);});label.append(check,button(nodes.get(id).title,()=>choose(id,true)));li.append(label);ol.append(li);}card.append(ol);$('paths').append(card);}$('progress-count').textContent=`已标记 ${completed.size} / ${D.nodes.length} 个节点`;}
  $('export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download='modelatlas-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('progress-status').textContent='已生成下载；请检查浏览器下载记录。';});
- $('import').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>1000000)throw Error('文件过大');const next=C.parseProgress(await file.text(),allIds);completed=next;save();if(selected)choose(selected);$('progress-status').textContent='导入成功；未知节点 ID 已忽略。';}catch(err){$('progress-status').textContent='导入失败，原进度未改动：'+err.message;}finally{e.target.value='';}});
+ $('import').addEventListener('change',async e=>{
+  const file=e.target.files[0];if(!file)return;
+  const generation=++importGeneration,revision=progressRevision;
+  const current=()=>generation===importGeneration&&revision===progressRevision;
+  try{
+   if(file.size>1000000)throw Error('文件过大');
+   const text=await file.text();if(!current())return;
+   const next=C.parseProgress(text,allIds);completed=next;const persisted=save();
+   if(selected)choose(selected);
+   $('progress-status').textContent=persisted?'导入成功；未知节点 ID 已忽略。':'导入仅在本页内存中生效；浏览器无法持久保存，刷新可能恢复旧记录，请导出备份。';
+  }catch(err){if(current())$('progress-status').textContent='导入失败，原进度未改动：'+err.message;}
+  finally{if(generation===importGeneration)e.target.value='';}
+ });
  $('clear').addEventListener('click',()=>{if(window.confirm('清空此浏览器的已读记录？建议先导出备份。')){completed.clear();save();if(selected)choose(selected);}});
  for(const snap of D.evaluation_snapshots||[]){const card=el('article',undefined,'path');card.append(el('h3',snap.title||snap.model),el('p',`${snap.benchmark} · ${snap.metric}: ${snap.value} ${snap.unit||''}`),el('p',snap.limitations_zh,'muted'));const dl=el('dl');for(const key of ['model','model_version','model_version_note','benchmark','benchmark_version','benchmark_version_note','split','split_note','shot','shot_note','prompt','harness','harness_note','sampling','report_date','report_date_note','report_first_published_date','report_version','reported_by','evidence_type','verification_status','checked_at'])dl.append(el('dt',key),el('dd',display(snap[key])));card.append(dl,el('p',snap.evidence_locator),link(snap.source_url,'原始报告与表格 ↗'));const raw=el('details');raw.append(el('summary','全部口径与证据字段'),el('pre',JSON.stringify(snap,null,2)));card.append(raw);if(snap.node_id&&nodes.has(snap.node_id))card.append(button('查看关联知识',()=>choose(snap.node_id,true)));$('evaluation-snapshots').append(card);}
  if(!(D.evaluation_snapshots||[]).length)$('evaluation-snapshots').append(el('p','报告成绩快照仍在核验；不填入默认分数。'));

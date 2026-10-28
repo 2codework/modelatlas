@@ -1,0 +1,62 @@
+{
+  "schema_version": "benchmark-access-overlay.v1",
+  "checked_at": "2026-10-28",
+  "policy": "derived-only corrections; never infer anonymous download from public",
+  "default_access": {
+    "label_zh": "公开介绍 / 官方任务入口",
+    "public_metadata": true,
+    "official_dataset_entrypoint": true,
+    "download_access": "not_end_to_end_verified",
+    "requires_account": "unknown",
+    "full_local_scoring_access": "not_verified",
+    "note_zh": "仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。"
+  },
+  "records": {
+    "bench-docvqa-2020-task1": {
+      "label_zh": "公开介绍 / 下载条件待核验",
+      "download_access": "unknown",
+      "requires_account": "unknown",
+      "download_terms_verified": false,
+      "full_local_scoring_access": "unknown",
+      "note_zh": "官方下载入口已确认；下载账户要求及条款待核验，RRC公开页面抓取超时。"
+    },
+    "bench-mathvista-test": {
+      "label_zh": "试题入口公开 / test答案未公开",
+      "task_access": "public",
+      "test_answer_access": "not_public_per_official_statement",
+      "full_local_scoring_access": false,
+      "note_zh": "官方声明test标签不公开；不可当作完整本地评测包。"
+    },
+    "bench-gaia": {
+      "label_zh": "公开介绍 / 数据门控",
+      "download_access": "gated_terms",
+      "requires_account": true,
+      "test_answer_metadata_access": "private",
+      "crawlable_redistribution_allowed": false,
+      "note_zh": "数据文件需同意HF条款；禁止可爬重发；未申请、登录或下载。"
+    },
+    "bench-ocrbench-v2": {
+      "label_zh": "公开入口 / 仅研究非商业",
+      "commercial_use_allowed": false,
+      "note_zh": "官方版权声明仅研究、非商业；公开入口不是商用授权。"
+    },
+    "bench-workarena-l1": {
+      "label_zh": "源码公开 / 运行实例需审批",
+      "code_access": "public",
+      "download_access": "gated_approval",
+      "runtime_instance_access": "gated_approval",
+      "requires_account": true,
+      "terms_acceptance_required": true,
+      "note_zh": "运行实例须申请、接受条款并等待批准；未申请或登录。"
+    },
+    "bench-workarena-plusplus": {
+      "label_zh": "源码公开 / 运行实例需审批",
+      "code_access": "public",
+      "download_access": "gated_approval",
+      "runtime_instance_access": "gated_approval",
+      "requires_account": true,
+      "terms_acceptance_required": true,
+      "note_zh": "运行实例须申请、接受条款并等待批准；未申请或登录。"
+    }
+  }
+}

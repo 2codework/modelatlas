@@ -4,6 +4,7 @@ import json, re, shutil, datetime, copy, math, sys
 sys.path.insert(0,str(__import__("pathlib").Path(__file__).resolve().parent))
 import mcp_learning
 import vendor_catalog
+import benchmark_catalog
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -178,7 +179,15 @@ def book(data):
             if key in n: lines+=['- '+key+'：'+str(n[key])]
         for step in n.get('steps_zh',[]): lines+=['- 学习步骤（未执行）：'+step]
         for row in data['dataset_benchmark_registry']:
-            if row['node_id']==n['id']: lines+=['- 评测/数据集登记：'+json.dumps(row,ensure_ascii=False)]
+            if row['node_id']==n['id']:
+                if row.get('access_semantics'):
+                    lines+=['### 评测介绍与官方入口']
+                    for key in ('split','availability','access_application_note','metric','protocol','harness','contamination','reproducibility'):
+                        lines+=['- '+key+'：'+str(row.get(key,'未核验'))]
+                    for label,url in row['official_links'].items():
+                        if url: lines+=['- ['+label+' · 官方入口]('+url+')']
+                    lines+=['- '+row['display_policy'],'- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。']
+                else: lines+=['- 评测/数据集登记：'+json.dumps(row,ensure_ascii=False)]
         for pit in n.get('misconceptions',n.get('pitfalls',[])): lines+=['- 注意：'+pit]
         urls=list(n.get('source_urls',[]))
         for sid in n.get('source_ids',[]):
@@ -201,6 +210,7 @@ def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
     bundles.append(course)
+    bundles.append(benchmark_catalog.load(ROOT))
     data=normalize(bundles)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
@@ -211,6 +221,7 @@ def build():
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
     mcp_learning.publish(ROOT,out)
     vendor_catalog.publish(ROOT,out)
+    benchmark_catalog.publish(ROOT,out)
     (out/'.nojekyll').touch()
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)
     print(json.dumps({'nodes':len(data['nodes']),'edges':len(data['edges']),'sources':len(data['sources']),'events':len(data['events']),'output':str(out)},ensure_ascii=False))

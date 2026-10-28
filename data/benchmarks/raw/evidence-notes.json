@@ -1,0 +1,75 @@
+{
+  "checked_at": "2026-10-28",
+  "kind": "original_metadata_paraphrases_only",
+  "evidence": [
+    {
+      "source": "https://github.com/MMMU-Benchmark/MMMU",
+      "observations": [
+        "README Evaluation lists dev150/val900/test10500",
+        "MMMU-Pro uses filtered questions/options/vision-only design",
+        "test answers now released; data card dates release 2026-02-12"
+      ]
+    },
+    {
+      "source": "https://github.com/lupantech/MathVista",
+      "observations": [
+        "Data Downloading lists testmini1000/test5141",
+        "README says test answer labels not public",
+        "third-party EvalScope warns no score parity report"
+      ]
+    },
+    {
+      "source": "https://www.docvqa.org/challenges/2020",
+      "observations": [
+        "Task1 ANLS, case insensitive, space sensitive",
+        "Task2 retrieval MAP is distinct; not included in Task1 record"
+      ]
+    },
+    {
+      "source": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2",
+      "observations": [
+        "10000 QA pairs; English/Chinese",
+        "eval.py followed by get_score.py",
+        "Copyright Statement: research only, not commercial"
+      ]
+    },
+    {
+      "source": "https://github.com/NVIDIA/RULER",
+      "observations": [
+        "main README marks old requirements/evaluation deprecated",
+        "points to rulerv1-ns and rulerv2-ns; those branches not reviewed"
+      ]
+    },
+    {
+      "source": "https://github.com/xlang-ai/OSWorld",
+      "observations": [
+        "2025-07-28 Verified update",
+        "README explicitly tells readers to compare new-version results with new benchmark results"
+      ]
+    },
+    {
+      "source": "https://github.com/ServiceNow/WorkArena",
+      "observations": [
+        "Getting Started requires gated WorkArena-Instances application and approval",
+        "L1 current README: 33 atomic tasks,19912 instances; ++682 templates",
+        "current README counts may differ from original paper; record snapshot date retained"
+      ]
+    },
+    {
+      "source": "https://github.com/McGill-NLP/weblinx",
+      "observations": [
+        "1.1 removes some demonstrations, adds no demonstrations",
+        "evaluated steps substantially change including tab actions",
+        "authors request WebLINX-1.1/BG reporting"
+      ]
+    },
+    {
+      "source": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "observations": [
+        "gated access and no crawlable resharing",
+        "test answers and metadata private",
+        "October2025 format update to Parquet does not create a new benchmark score cohort"
+      ]
+    }
+  ]
+}

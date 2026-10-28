@@ -1,0 +1,2124 @@
+{
+  "schema_version": "benchmark-research-r1.1",
+  "checked_at": "2026-10-28",
+  "status": "research_candidate_requires_parent_QA",
+  "baseline": {
+    "path": "vendor-catalog-integration-r1/modelatlas/docs/data.json",
+    "sha256": "625b4aea18eed56cf7514e87a0c7eb934d9649ef71a1a86acff073fa8f40246e",
+    "registry_count": 11,
+    "preserved_node_ids": [
+      "sys-fineweb",
+      "sys-dolma",
+      "sys-stack",
+      "sys-c4",
+      "sys-mmlu",
+      "sys-gsm8k",
+      "sys-humaneval",
+      "sys-swebench",
+      "sys-livecodebench",
+      "sys-gpqa",
+      "sys-frontiermath"
+    ]
+  },
+  "policy": {
+    "metadata_only": true,
+    "questions_or_answers_collected": false,
+    "restricted_files_downloaded": false,
+    "code_or_models_executed": false,
+    "device_or_account_accessed": false,
+    "scores_imported": false
+  },
+  "availability_vocabulary": {
+    "public": "公开题/任务或生成器入口；不代表所有标签或运行资源公开，见access note",
+    "gated": "至少完整访问或运行资源需账户/同意条款/审批",
+    "private_described": "仅公开描述，完整集不公开",
+    "results_only": "只有公开结果，无可核实数据入口"
+  },
+  "records": [
+    {
+      "node_id": "bench-mmmu",
+      "name": "MMMU",
+      "family": "MMMU",
+      "record_kind": "benchmark_metadata",
+      "version": "original; snapshot 2026-10-28",
+      "split": "dev / validation / test",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "多学科视觉问答",
+      "description_zh": "跨学科图文理解；不同split不得混成一个成绩。",
+      "availability": "public",
+      "access_url": "https://huggingface.co/datasets/MMMU/MMMU",
+      "access_application_url": null,
+      "access_application_note": "test答案已于2026-02-12公开；仍不在本站镜像。",
+      "license": "Apache-2.0（数据卡声明；原始素材权利另核）",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/MMMU-Benchmark/MMMU",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "Apache-2.0（数据卡声明；原始素材权利另核）",
+          "source_url": "https://huggingface.co/datasets/MMMU/MMMU",
+          "status": "official_statement_observed"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2311.16502",
+        "repo": "https://github.com/MMMU-Benchmark/MMMU",
+        "data": "https://huggingface.co/datasets/MMMU/MMMU",
+        "leaderboard": "https://mmmu-benchmark.github.io/"
+      },
+      "metric": "accuracy",
+      "scoring": {
+        "description_zh": "accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定学科聚合、答案解析、few-shot与图片处理",
+      "harness": {
+        "url": "https://github.com/MMMU-Benchmark/MMMU",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "test答案已于2026-02-12公开；仍不在本站镜像。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 150,
+          "split": "dev",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/MMMU-Benchmark/MMMU"
+        },
+        {
+          "value": 900,
+          "split": "validation",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/MMMU-Benchmark/MMMU"
+        },
+        {
+          "value": 10500,
+          "split": "test",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/MMMU-Benchmark/MMMU"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/MMMU-Benchmark/MMMU",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://huggingface.co/datasets/MMMU/MMMU",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-mmmu"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mmmu-benchmark.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-mmmu-pro",
+      "name": "MMMU-Pro",
+      "family": "MMMU",
+      "record_kind": "benchmark_metadata",
+      "version": "Pro",
+      "split": "standard / vision-only；配置须分别标记",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "增强多模态推理",
+      "description_zh": "去除可只靠文本回答的问题并加强选项及纯视觉设置，不能与MMMU直接比较。",
+      "availability": "public",
+      "access_url": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+      "access_application_url": null,
+      "access_application_note": "公开数据卡；未获取文件。",
+      "license": "Apache-2.0（数据卡声明）",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/MMMU-Benchmark/MMMU",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "Apache-2.0（数据卡声明）",
+          "source_url": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+          "status": "official_statement_observed"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2409.02813",
+        "repo": "https://github.com/MMMU-Benchmark/MMMU",
+        "data": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+        "leaderboard": "https://mmmu-benchmark.github.io/"
+      },
+      "metric": "accuracy",
+      "scoring": {
+        "description_zh": "accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "明确standard/vision-only配置及选项设置",
+      "harness": {
+        "url": "https://github.com/MMMU-Benchmark/MMMU",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开数据卡；未获取文件。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "derived_from",
+          "target_node_id": "bench-mmmu",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/MMMU-Benchmark/MMMU",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://huggingface.co/datasets/MMMU/MMMU_Pro",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-mmmu-pro"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mmmu-benchmark.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-mathvista-testmini",
+      "name": "MathVista testmini",
+      "family": "MathVista",
+      "record_kind": "benchmark_metadata",
+      "version": "original",
+      "split": "testmini",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "视觉数学推理",
+      "description_zh": "小规模开发验证分片，不能当作完整test成绩。",
+      "availability": "public",
+      "access_url": "https://github.com/lupantech/MathVista#data-downloading",
+      "access_application_url": null,
+      "access_application_note": "可公开获取；只登记入口。",
+      "license": "unknown；多来源素材不可由仓库许可推定统一授权",
+      "license_evidence": {
+        "code": {
+          "statement": "CC-BY-SA-4.0（仓库标记）",
+          "source_url": "https://github.com/lupantech/MathVista",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；多来源素材不可由仓库许可推定统一授权",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": "https://github.com/lupantech/MathVista",
+        "data": "https://github.com/lupantech/MathVista#data-downloading",
+        "leaderboard": "https://mathvista.github.io/"
+      },
+      "metric": "accuracy",
+      "scoring": {
+        "description_zh": "accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "记录答案抽取器及模型、数值精度、工具与CoT；第三方解析器不保证与官方等价",
+      "harness": {
+        "url": "https://github.com/lupantech/MathVista",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "可公开获取；只登记入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 1000,
+          "split": "testmini",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/lupantech/MathVista"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/lupantech/MathVista",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-mathvista-testmini"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mathvista.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-mathvista-test",
+      "name": "MathVista test",
+      "family": "MathVista",
+      "record_kind": "benchmark_metadata",
+      "version": "original",
+      "split": "test",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "视觉数学推理",
+      "description_zh": "标准评测分片；官方说明test标签不公开，不能声称可完整本地复现。",
+      "availability": "public",
+      "access_url": "https://github.com/lupantech/MathVista#data-downloading",
+      "access_application_url": null,
+      "access_application_note": "问题公开，test答案非公开；仅公开metadata和结果入口。",
+      "license": "unknown；多来源素材另核",
+      "license_evidence": {
+        "code": {
+          "statement": "CC-BY-SA-4.0（仓库标记）",
+          "source_url": "https://github.com/lupantech/MathVista",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；多来源素材另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": "https://github.com/lupantech/MathVista",
+        "data": "https://github.com/lupantech/MathVista#data-downloading",
+        "leaderboard": "https://mathvista.github.io/"
+      },
+      "metric": "accuracy",
+      "scoring": {
+        "description_zh": "accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "答案提取与提交评分流程须固定；不使用testmini替代",
+      "harness": {
+        "url": "https://github.com/lupantech/MathVista",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "问题公开，test答案非公开；仅公开metadata和结果入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 5141,
+          "split": "test",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/lupantech/MathVista"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "sibling_split",
+          "target_node_id": "bench-mathvista-testmini",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/lupantech/MathVista",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-mathvista-test"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mathvista.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-docvqa-2020-task1",
+      "name": "DocVQA（单文档）",
+      "family": "DocVQA",
+      "record_kind": "benchmark_metadata",
+      "version": "2020 Challenge Task 1",
+      "split": "train / validation / test；分片量未复核",
+      "modality": [
+        "document_image",
+        "text"
+      ],
+      "task_zh": "单页文档问答",
+      "description_zh": "从文档图像回答问题；不混同文档集合检索或2026新挑战。",
+      "availability": "public",
+      "access_url": "https://www.docvqa.org/datasets/docvqa",
+      "access_application_url": null,
+      "access_application_note": "官方提供RRC下载入口；账户/下载条款未实测，不声称匿名下载。",
+      "license": "unknown",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown",
+          "source_url": "https://www.docvqa.org/datasets/docvqa",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": null,
+        "data": "https://www.docvqa.org/datasets/docvqa",
+        "leaderboard": "https://www.docvqa.org/challenges/2020"
+      },
+      "metric": "ANLS",
+      "scoring": {
+        "description_zh": "ANLS",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "大小写不敏感、空格敏感；固定OCR、答案格式及RRC规则",
+      "harness": {
+        "url": "https://www.docvqa.org/datasets/docvqa",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "官方提供RRC下载入口；账户/下载条款未实测，不声称匿名下载。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 50000,
+          "split": "all; 官方约数50K",
+          "unit": "questions",
+          "as_of": "2026-10-28",
+          "source_url": "https://www.docvqa.org/datasets/docvqa"
+        },
+        {
+          "value": 12000,
+          "split": "all; 官方约数12K",
+          "unit": "images",
+          "as_of": "2026-10-28",
+          "source_url": "https://www.docvqa.org/datasets/docvqa"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://www.docvqa.org/datasets/docvqa",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://www.docvqa.org/challenges/2020",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-docvqa-2020-task1"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://www.docvqa.org/challenges/2020"
+      }
+    },
+    {
+      "node_id": "bench-chartqa",
+      "name": "ChartQA",
+      "family": "ChartQA",
+      "record_kind": "benchmark_metadata",
+      "version": "full with annotations",
+      "split": "train / val / test；human / augmented",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "图表问答",
+      "description_zh": "图表视觉与逻辑推理，需区分人工和机器生成题及是否提供表格。",
+      "availability": "public",
+      "access_url": "https://github.com/vis-nlp/ChartQA#chartqa-dataset",
+      "access_application_url": null,
+      "access_application_note": "仓库列出初版与含标注完整版入口。",
+      "license": "unknown；不能据代码GPL推定全部图表素材许可",
+      "license_evidence": {
+        "code": {
+          "statement": "GPL-3.0（仓库标记）",
+          "source_url": "https://github.com/vis-nlp/ChartQA",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；不能据代码GPL推定全部图表素材许可",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://aclanthology.org/2022.findings-acl.177/",
+        "repo": "https://github.com/vis-nlp/ChartQA",
+        "data": "https://github.com/vis-nlp/ChartQA#chartqa-dataset",
+        "leaderboard": null
+      },
+      "metric": "官方任务评测；具体容差本轮未逐行核验",
+      "scoring": {
+        "description_zh": "官方任务评测；具体容差本轮未逐行核验",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定human/augmented子集、图像/表格输入与答案归一化；评分实现需二次锁定",
+      "harness": {
+        "url": "https://github.com/vis-nlp/ChartQA",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "仓库列出初版与含标注完整版入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/vis-nlp/ChartQA",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-chartqa"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": null
+      }
+    },
+    {
+      "node_id": "bench-ocrbench",
+      "name": "OCRBench",
+      "family": "OCRBench",
+      "record_kind": "benchmark_metadata",
+      "version": "v1",
+      "split": "OCRBench；非Full Test",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "OCR综合评测",
+      "description_zh": "文字识别、文档问答等五类能力；不要将论文Full Test和OCRBench子集混用。",
+      "availability": "public",
+      "access_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench#data",
+      "access_application_url": null,
+      "access_application_note": "公开下载链接；不下载题库。",
+      "license": "unknown；底层多来源数据权利另核",
+      "license_evidence": {
+        "code": {
+          "statement": "MIT（根仓库标记）",
+          "source_url": "https://github.com/Yuliang-Liu/MultimodalOCR",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；底层多来源数据权利另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench",
+        "data": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench#data",
+        "leaderboard": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench"
+      },
+      "metric": "官方OCRBench分数；细项匹配规则待锁定",
+      "scoring": {
+        "description_zh": "官方OCRBench分数；细项匹配规则待锁定",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "采用官方scripts；第三方VLMEvalKit/lmms-eval须标revision和评分差异",
+      "harness": {
+        "url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开下载链接；不下载题库。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 1000,
+          "split": "OCRBench v1",
+          "unit": "QA pairs",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://github.com/Yuliang-Liu/MultimodalOCR",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-ocrbench"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench"
+      }
+    },
+    {
+      "node_id": "bench-ocrbench-v2",
+      "name": "OCRBench v2",
+      "family": "OCRBench",
+      "record_kind": "benchmark_metadata",
+      "version": "v2",
+      "split": "EN_part / CN_part",
+      "modality": [
+        "image",
+        "text"
+      ],
+      "task_zh": "文字定位与推理",
+      "description_zh": "中英双语文字密集视觉任务，扩展定位、版面及复杂推理。",
+      "availability": "public",
+      "access_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#data",
+      "access_application_url": null,
+      "access_application_note": "公开下载入口不等于可商用。",
+      "license": "研究用途、非商业；子目录Copyright Statement，非标准SPDX",
+      "license_evidence": {
+        "code": {
+          "statement": "MIT（根仓库标记）",
+          "source_url": "https://github.com/Yuliang-Liu/MultimodalOCR",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "研究用途、非商业；子目录Copyright Statement，非标准SPDX",
+          "source_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2",
+          "status": "official_statement_observed"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2501.00321",
+        "repo": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2",
+        "data": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#data",
+        "leaderboard": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#leaderboard"
+      },
+      "metric": "0–100总分；分任务指标由官方eval_scripts聚合",
+      "scoring": {
+        "description_zh": "0–100总分；分任务指标由官方eval_scripts聚合",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "eval.py逐样本评分后get_score.py聚合；固定中英文子集",
+      "harness": {
+        "url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开下载入口不等于可商用。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 10000,
+          "split": "v2 all; EN+CN",
+          "unit": "QA pairs",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "successor_version",
+          "target_node_id": "bench-ocrbench",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://github.com/Yuliang-Liu/MultimodalOCR",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-ocrbench-v2"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#leaderboard"
+      }
+    },
+    {
+      "node_id": "bench-longbench",
+      "name": "LongBench",
+      "family": "LongBench",
+      "record_kind": "benchmark_metadata",
+      "version": "v1",
+      "split": "21 task test splits；不混LongBench-E",
+      "modality": [
+        "text",
+        "code"
+      ],
+      "task_zh": "长上下文理解",
+      "description_zh": "中英问答、摘要、少样本、合成与补全任务的集合；各任务评分不同。",
+      "availability": "public",
+      "access_url": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md#load-data",
+      "access_application_url": null,
+      "access_application_note": "公开数据集入口。",
+      "license": "unknown；混合任务数据来源需分别核权",
+      "license_evidence": {
+        "code": {
+          "statement": "MIT（根仓库标记）",
+          "source_url": "https://github.com/THUDM/LongBench",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；混合任务数据来源需分别核权",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://aclanthology.org/2024.acl-long.172",
+        "repo": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md",
+        "data": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md#load-data",
+        "leaderboard": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md"
+      },
+      "metric": "按任务自动评分，分类均值；非统一accuracy",
+      "scoring": {
+        "description_zh": "按任务自动评分，分类均值；非统一accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定任务清单、模板、输出上限与中间截断策略",
+      "harness": {
+        "url": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开数据集入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 4750,
+          "split": "v1 all test tasks",
+          "unit": "samples",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://github.com/THUDM/LongBench",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-longbench"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://github.com/THUDM/LongBench/blob/main/LongBench/README.md"
+      }
+    },
+    {
+      "node_id": "bench-longbench-v2",
+      "name": "LongBench v2",
+      "family": "LongBench",
+      "record_kind": "benchmark_metadata",
+      "version": "v2",
+      "split": "HF train（用于评测，不代表训练授权）",
+      "modality": [
+        "text",
+        "code"
+      ],
+      "task_zh": "长上下文推理",
+      "description_zh": "更长上下文的多项选择任务；直接回答、CoT、RAG不可混算。",
+      "availability": "public",
+      "access_url": "https://huggingface.co/datasets/zai-org/LongBench-v2",
+      "access_application_url": null,
+      "access_application_note": "官方README旧THUDM数据链接重定向zai-org。",
+      "license": "unknown；本轮未核验数据卡许可正文",
+      "license_evidence": {
+        "code": {
+          "statement": "MIT（仓库标记）",
+          "source_url": "https://github.com/THUDM/LongBench",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；本轮未核验数据卡许可正文",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2412.15204",
+        "repo": "https://github.com/THUDM/LongBench",
+        "data": "https://huggingface.co/datasets/zai-org/LongBench-v2",
+        "leaderboard": "https://longbench2.github.io/"
+      },
+      "metric": "multiple-choice accuracy",
+      "scoring": {
+        "description_zh": "multiple-choice accuracy",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定cot/no_context/rag开关、上下文长度及结果导出器",
+      "harness": {
+        "url": "https://github.com/THUDM/LongBench",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "官方README旧THUDM数据链接重定向zai-org。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 503,
+          "split": "v2 evaluation; HF train",
+          "unit": "questions",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/THUDM/LongBench"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "successor_version",
+          "target_node_id": "bench-longbench",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/THUDM/LongBench",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-longbench-v2"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://longbench2.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-ruler-v1-legacy",
+      "name": "RULER（历史pipeline）",
+      "family": "RULER",
+      "record_kind": "benchmark_metadata",
+      "version": "v1 legacy main pipeline",
+      "split": "synthetic；按任务与上下文长度生成",
+      "modality": [
+        "text"
+      ],
+      "task_zh": "有效长上下文测量",
+      "description_zh": "用多类合成任务观察长度退化；官方已将原pipeline标为deprecated，历史保留。",
+      "availability": "public",
+      "access_url": "https://github.com/NVIDIA/RULER",
+      "access_application_url": null,
+      "access_application_note": "旧pipeline deprecated；官方另指rulerv1-ns/rulerv2-ns，新版需另行核验。",
+      "license": "unknown；外部语料条款另核",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown",
+          "source_url": "https://github.com/NVIDIA/RULER",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；外部语料条款另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": "https://github.com/NVIDIA/RULER",
+        "data": "https://github.com/NVIDIA/RULER",
+        "leaderboard": "https://github.com/NVIDIA/RULER"
+      },
+      "metric": "按任务/长度得分与平均分；有效长度依阈值",
+      "scoring": {
+        "description_zh": "按任务/长度得分与平均分；有效长度依阈值",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定生成seed、tokenizer、长度、任务复杂度、one-shot设置；勿把配置窗口当实测能力",
+      "harness": {
+        "url": "https://github.com/NVIDIA/RULER",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "旧pipeline deprecated；官方另指rulerv1-ns/rulerv2-ns，新版需另行核验。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "deprecated_pipeline",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/NVIDIA/RULER",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-ruler-v1-legacy"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://github.com/NVIDIA/RULER"
+      }
+    },
+    {
+      "node_id": "bench-mbpp",
+      "name": "MBPP",
+      "family": "MBPP",
+      "record_kind": "benchmark_metadata",
+      "version": "original + sanitized variant described",
+      "split": "test IDs 11–510；prompt 1–10；val 511–600；train 601–974",
+      "modality": [
+        "text",
+        "code"
+      ],
+      "task_zh": "基础Python程序合成",
+      "description_zh": "入门编程任务；手工校验sanitized版本不是同一测试集合。",
+      "availability": "public",
+      "access_url": "https://github.com/google-research/google-research/tree/master/mbpp",
+      "access_application_url": null,
+      "access_application_note": "公开仓库；不复制题目或参考代码。",
+      "license": "unknown",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown",
+          "source_url": "https://github.com/google-research/google-research/tree/master/mbpp",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": null,
+        "repo": "https://github.com/google-research/google-research/tree/master/mbpp",
+        "data": "https://github.com/google-research/google-research/tree/master/mbpp",
+        "leaderboard": null
+      },
+      "metric": "测试用例通过情况；pass@k实现本轮未审计",
+      "scoring": {
+        "description_zh": "测试用例通过情况；pass@k实现本轮未审计",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "原论文three-shot使用IDs 2/3/4；固定原始或sanitized、采样与隔离测试环境",
+      "harness": {
+        "url": "https://github.com/google-research/google-research/tree/master/mbpp",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "纯模型、OCR、检索、代码或其他工具增强设置须分列；不假定工具默认允许。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开仓库；不复制题目或参考代码。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/google-research/google-research/tree/master/mbpp",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-mbpp"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": null
+      }
+    },
+    {
+      "node_id": "bench-osworld-original",
+      "name": "OSWorld（原版）",
+      "family": "OSWorld",
+      "record_kind": "benchmark_metadata",
+      "version": "2024 original",
+      "split": "原始论文任务；锁定旧revision",
+      "modality": [
+        "screenshot",
+        "text",
+        "accessibility_tree"
+      ],
+      "task_zh": "桌面GUI多步任务",
+      "description_zh": "真实桌面环境中的开放式任务，执行式验收；历史版本不能混入Verified榜单。",
+      "availability": "public",
+      "access_url": "https://github.com/xlang-ai/OSWorld",
+      "access_application_url": null,
+      "access_application_note": "公开环境与任务定义；运行需要隔离VM及资源，本轮未运行。",
+      "license": "unknown；应用及素材条款独立",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/xlang-ai/OSWorld",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；应用及素材条款独立",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2404.07972",
+        "repo": "https://github.com/xlang-ai/OSWorld",
+        "data": "https://github.com/xlang-ai/OSWorld",
+        "leaderboard": "https://os-world.github.io/"
+      },
+      "metric": "execution-based task success",
+      "scoring": {
+        "description_zh": "execution-based task success",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定VM镜像、初始状态、动作空间、步数、观察方式、重试与评测器",
+      "harness": {
+        "url": "https://github.com/xlang-ai/OSWorld",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开环境与任务定义；运行需要隔离VM及资源，本轮未运行。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 369,
+          "split": "original paper benchmark; arXiv v2 2024-05-30",
+          "unit": "tasks",
+          "as_of": "2026-10-28",
+          "source_url": "https://arxiv.org/abs/2404.07972"
+        }
+      ],
+      "lifecycle": {
+        "status": "historical_variant",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/xlang-ai/OSWorld",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2404.07972",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-osworld-original"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://os-world.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-osworld-verified",
+      "name": "OSWorld-Verified",
+      "family": "OSWorld",
+      "record_kind": "benchmark_metadata",
+      "version": "2025-07-28 Verified update",
+      "split": "Verified任务与修订评测器",
+      "modality": [
+        "screenshot",
+        "text",
+        "accessibility_tree"
+      ],
+      "task_zh": "桌面GUI多步任务",
+      "description_zh": "修订任务及验收器的版本；应与同版本结果比较，而非原版横向排名。",
+      "availability": "public",
+      "access_url": "https://github.com/xlang-ai/OSWorld",
+      "access_application_url": null,
+      "access_application_note": "代码环境公开；不授权访问用户真实机器或账户。",
+      "license": "unknown；应用素材独立",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0（对应官方仓库）",
+          "source_url": "https://github.com/xlang-ai/OSWorld",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；应用素材独立",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2404.07972",
+        "repo": "https://github.com/xlang-ai/OSWorld",
+        "data": "https://github.com/xlang-ai/OSWorld",
+        "leaderboard": "https://os-world.github.io/"
+      },
+      "metric": "execution-based task success",
+      "scoring": {
+        "description_zh": "execution-based task success",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "锁定Verified revision、镜像、动作预算与判分实现；记录失败原因和重复实验",
+      "harness": {
+        "url": "https://xlang.ai/blog/osworld-verified",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "代码环境公开；不授权访问用户真实机器或账户。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "revised_version_of",
+          "target_node_id": "bench-osworld-original",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://xlang.ai/blog/osworld-verified",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://github.com/xlang-ai/OSWorld",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "访问/许可/版本/评分元数据"
+        }
+      ],
+      "source_ids": [
+        "bench-src-osworld-verified"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://os-world.github.io/"
+      }
+    },
+    {
+      "node_id": "bench-androidworld",
+      "name": "AndroidWorld",
+      "family": "AndroidWorld",
+      "record_kind": "benchmark_metadata",
+      "version": "original; current README snapshot",
+      "split": "参数化tasks；seed实例",
+      "modality": [
+        "screenshot",
+        "text",
+        "accessibility_tree"
+      ],
+      "task_zh": "Android代理操作",
+      "description_zh": "模拟器中参数化任务；116是任务模板数，不是唯一可运行实例数。",
+      "availability": "public",
+      "access_url": "https://github.com/google-research/android_world",
+      "access_application_url": null,
+      "access_application_note": "需Android模拟器；不使用真实设备或账户。",
+      "license": "unknown；app许可另核",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/google-research/android_world",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；app许可另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2405.14573",
+        "repo": "https://github.com/google-research/android_world",
+        "data": "https://github.com/google-research/android_world",
+        "leaderboard": "https://google-research.github.io/android_world/"
+      },
+      "metric": "task success / reward",
+      "scoring": {
+        "description_zh": "task success / reward",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定随机参数seed、20 apps版本、模拟器API与动作预算",
+      "harness": {
+        "url": "https://github.com/google-research/android_world",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "需Android模拟器；不使用真实设备或账户。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 116,
+          "split": "built-in benchmark",
+          "unit": "task templates",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/google-research/android_world"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/google-research/android_world",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2405.14573",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-androidworld"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://google-research.github.io/android_world/"
+      }
+    },
+    {
+      "node_id": "bench-webarena",
+      "name": "WebArena",
+      "family": "WebArena",
+      "record_kind": "benchmark_metadata",
+      "version": "v0.2.0 annotation baseline",
+      "split": "canonical tasks；环境快照固定",
+      "modality": [
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "网页代理操作",
+      "description_zh": "可自托管的真实风格网站任务；评测终态，不只比较文本答案。",
+      "availability": "public",
+      "access_url": "https://github.com/web-arena-x/webarena",
+      "access_application_url": null,
+      "access_application_note": "推荐AgentLab/BrowserGym不等于改变原始benchmark版本。",
+      "license": "unknown；站点内容与镜像条款另核",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/web-arena-x/webarena",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；站点内容与镜像条款另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2307.13854",
+        "repo": "https://github.com/web-arena-x/webarena",
+        "data": "https://github.com/web-arena-x/webarena",
+        "leaderboard": "https://webarena.dev/"
+      },
+      "metric": "execution-based success",
+      "scoring": {
+        "description_zh": "execution-based success",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "记录网站/容器版本、URL映射、状态reset、观察/动作空间、步数与harness",
+      "harness": {
+        "url": "https://github.com/web-arena-x/webarena",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "推荐AgentLab/BrowserGym不等于改变原始benchmark版本。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/web-arena-x/webarena",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2307.13854",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-webarena"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://webarena.dev/"
+      }
+    },
+    {
+      "node_id": "bench-visualwebarena",
+      "name": "VisualWebArena",
+      "family": "VisualWebArena",
+      "record_kind": "benchmark_metadata",
+      "version": "2024 original",
+      "split": "full tasks",
+      "modality": [
+        "image",
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "视觉网页代理",
+      "description_zh": "引入视觉信息依赖的网页操作，沿用执行式验收思路；独立于WebArena计分。",
+      "availability": "public",
+      "access_url": "https://github.com/web-arena-x/visualwebarena",
+      "access_application_url": null,
+      "access_application_note": "公开任务和自托管环境入口。",
+      "license": "unknown；第三方图像及站点内容另核",
+      "license_evidence": {
+        "code": {
+          "statement": "MIT",
+          "source_url": "https://github.com/web-arena-x/visualwebarena",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；第三方图像及站点内容另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2401.13649",
+        "repo": "https://github.com/web-arena-x/visualwebarena",
+        "data": "https://github.com/web-arena-x/visualwebarena",
+        "leaderboard": "https://jykoh.com/vwa"
+      },
+      "metric": "execution-based success",
+      "scoring": {
+        "description_zh": "execution-based success",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定截图、caption/SoM等额外工具、网页状态、评测器与步数",
+      "harness": {
+        "url": "https://github.com/web-arena-x/visualwebarena",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开任务和自托管环境入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 910,
+          "split": "full VWA tasks; README 2024-03-08 update",
+          "unit": "tasks",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/web-arena-x/visualwebarena"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "extends_environment",
+          "target_node_id": "bench-webarena",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/web-arena-x/visualwebarena",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2401.13649",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-visualwebarena"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://jykoh.com/vwa"
+      }
+    },
+    {
+      "node_id": "bench-workarena-l1",
+      "name": "WorkArena L1",
+      "family": "WorkArena",
+      "record_kind": "benchmark_metadata",
+      "version": "L1 atomic",
+      "split": "33 task types；实例采样",
+      "modality": [
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "知识工作网页任务",
+      "description_zh": "ServiceNow日常工作原子任务；源码公开不表示托管实例可自由使用。",
+      "availability": "gated",
+      "access_url": "https://github.com/ServiceNow/WorkArena",
+      "access_application_url": "https://huggingface.co/datasets/ServiceNow/WorkArena-Instances",
+      "access_application_note": "运行实例须HF申请、接受条款并等待批准；源码公开。",
+      "license": "unknown；实例使用条款需批准",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown；仓库自定义License待全文审阅",
+          "source_url": "https://github.com/ServiceNow/WorkArena",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；实例使用条款需批准",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2403.07718",
+        "repo": "https://github.com/ServiceNow/WorkArena",
+        "data": "https://github.com/ServiceNow/WorkArena",
+        "leaderboard": "https://servicenow.github.io/WorkArena/"
+      },
+      "metric": "task success（BrowserGym reward）",
+      "scoring": {
+        "description_zh": "task success（BrowserGym reward）",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定实例版本、seed、任务清单与AgentLab/BrowserGym revision",
+      "harness": {
+        "url": "https://github.com/ServiceNow/WorkArena",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "运行实例须HF申请、接受条款并等待批准；源码公开。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 33,
+          "split": "L1",
+          "unit": "task types",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/ServiceNow/WorkArena"
+        },
+        {
+          "value": 19912,
+          "split": "L1",
+          "unit": "unique instances",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/ServiceNow/WorkArena"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/ServiceNow/WorkArena",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2403.07718",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-workarena-l1"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://servicenow.github.io/WorkArena/"
+      }
+    },
+    {
+      "node_id": "bench-workarena-plusplus",
+      "name": "WorkArena++",
+      "family": "WorkArena",
+      "record_kind": "benchmark_metadata",
+      "version": "compositional 2024",
+      "split": "组合任务；固定level与curriculum",
+      "modality": [
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "规划推理知识工作",
+      "description_zh": "将原子任务组合成更长工作流程，不能与L1原子成功率直接比较。",
+      "availability": "gated",
+      "access_url": "https://github.com/ServiceNow/WorkArena",
+      "access_application_url": "https://huggingface.co/datasets/ServiceNow/WorkArena-Instances",
+      "access_application_note": "同WorkArena运行实例审批，不提交申请或登录。",
+      "license": "unknown；实例使用条款需批准",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown；自定义License待全文审阅",
+          "source_url": "https://github.com/ServiceNow/WorkArena",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；实例使用条款需批准",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2407.05291",
+        "repo": "https://github.com/ServiceNow/WorkArena",
+        "data": "https://github.com/ServiceNow/WorkArena",
+        "leaderboard": "https://servicenow.github.io/WorkArena/"
+      },
+      "metric": "task success（BrowserGym reward）",
+      "scoring": {
+        "description_zh": "task success（BrowserGym reward）",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "记录level、curriculum、seed、预算及ServiceNow实例版本",
+      "harness": {
+        "url": "https://github.com/ServiceNow/WorkArena",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "同WorkArena运行实例审批，不提交申请或登录。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [
+        {
+          "value": 682,
+          "split": "WorkArena++",
+          "unit": "task templates",
+          "as_of": "2026-10-28",
+          "source_url": "https://github.com/ServiceNow/WorkArena"
+        }
+      ],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "composes_tasks_from",
+          "target_node_id": "bench-workarena-l1",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/ServiceNow/WorkArena",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2407.05291",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-workarena-plusplus"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://servicenow.github.io/WorkArena/"
+      }
+    },
+    {
+      "node_id": "bench-weblinx-1-0",
+      "name": "WebLINX 1.0",
+      "family": "WebLINX",
+      "record_kind": "benchmark_metadata",
+      "version": "1.0 initial release",
+      "split": "原版划分；需固定split",
+      "modality": [
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "对话式网页导航（离线）",
+      "description_zh": "基于记录的操作演示评测下一步，不等同在线端到端成功率。",
+      "availability": "public",
+      "access_url": "https://github.com/McGill-NLP/weblinx",
+      "access_application_url": null,
+      "access_application_note": "公开数据入口；初版仍保留用于历史比较。",
+      "license": "unknown；演示和网页素材许可另核",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/McGill-NLP/weblinx",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；演示和网页素材许可另核",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2402.05930",
+        "repo": "https://github.com/McGill-NLP/weblinx",
+        "data": "https://github.com/McGill-NLP/weblinx",
+        "leaderboard": "https://mcgill-nlp.github.io/weblinx/"
+      },
+      "metric": "离线动作评测；具体指标实现待锁定",
+      "scoring": {
+        "description_zh": "离线动作评测；具体指标实现待锁定",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定动作类型、元素定位、分片和原版评测器；不混1.1",
+      "harness": {
+        "url": "https://github.com/McGill-NLP/weblinx",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开数据入口；初版仍保留用于历史比较。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "historical_variant",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/McGill-NLP/weblinx",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2402.05930",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-weblinx-1-0"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mcgill-nlp.github.io/weblinx/"
+      }
+    },
+    {
+      "node_id": "bench-weblinx-1-1",
+      "name": "WebLINX 1.1 / BrowserGym",
+      "family": "WebLINX",
+      "record_kind": "benchmark_metadata",
+      "version": "1.1",
+      "split": "BrowserGym评测steps；新增tab动作",
+      "modality": [
+        "text",
+        "DOM",
+        "screenshot"
+      ],
+      "task_zh": "对话式网页导航（离线）",
+      "description_zh": "由1.0派生，移除少量演示并改变评测steps；官方要求以1.1/BG单独报分。",
+      "availability": "public",
+      "access_url": "https://github.com/McGill-NLP/weblinx",
+      "access_application_url": null,
+      "access_application_note": "公开派生数据入口；未新增演示并不意味着评测等价。",
+      "license": "unknown；数据卡许可尚未单独核验",
+      "license_evidence": {
+        "code": {
+          "statement": "Apache-2.0",
+          "source_url": "https://github.com/McGill-NLP/weblinx",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；数据卡许可尚未单独核验",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2402.05930",
+        "repo": "https://github.com/McGill-NLP/weblinx",
+        "data": "https://github.com/McGill-NLP/weblinx",
+        "leaderboard": "https://mcgill-nlp.github.io/weblinx/"
+      },
+      "metric": "离线动作评测；不能标作在线任务完成率",
+      "scoring": {
+        "description_zh": "离线动作评测；不能标作在线任务完成率",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "固定weblinx-browsergym revision、动作集合、分片；与1.0严格分列",
+      "harness": {
+        "url": "https://github.com/McGill-NLP/weblinx",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "环境内交互；截图/DOM/无障碍树等观察方式必须披露，额外代码/API权限不可默认等价。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "公开派生数据入口；未新增演示并不意味着评测等价。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [
+        {
+          "type": "derived_version",
+          "target_node_id": "bench-weblinx-1-0",
+          "score_comparable": false
+        }
+      ],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://github.com/McGill-NLP/weblinx",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        },
+        {
+          "url": "https://arxiv.org/abs/2402.05930",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "论文任务定义与评测设计；未导入成绩"
+        }
+      ],
+      "source_ids": [
+        "bench-src-weblinx-1-1"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://mcgill-nlp.github.io/weblinx/"
+      }
+    },
+    {
+      "node_id": "bench-gaia",
+      "name": "GAIA",
+      "family": "GAIA",
+      "record_kind": "benchmark_metadata",
+      "version": "2023 benchmark; 2025-10 parquet format",
+      "split": "validation / test；level 1/2/3",
+      "modality": [
+        "text",
+        "image",
+        "audio",
+        "document"
+      ],
+      "task_zh": "通用助理工具任务",
+      "description_zh": "任务要求不同程度的工具与自主性；test答案和metadata非公开。",
+      "availability": "gated",
+      "access_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "access_application_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "access_application_note": "需同意HF信息分享；禁止在可爬页面重发validation/test；本轮未接受条款。",
+      "license": "unknown；gating/不重发条件已明确",
+      "license_evidence": {
+        "code": {
+          "statement": "unknown",
+          "source_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+          "scope": "repository; not an automatic grant for underlying content"
+        },
+        "data": {
+          "statement": "unknown；gating/不重发条件已明确",
+          "source_url": null,
+          "status": "unknown"
+        }
+      },
+      "official_links": {
+        "paper": "https://arxiv.org/abs/2311.12983",
+        "repo": null,
+        "data": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+        "leaderboard": "https://huggingface.co/spaces/gaia-benchmark/leaderboard"
+      },
+      "metric": "答案正确性；标准化细节待榜单规则锁定",
+      "scoring": {
+        "description_zh": "答案正确性；标准化细节待榜单规则锁定",
+        "implementation_verified": false,
+        "note_zh": "仅阅读官方描述，未执行或逐行审计评分器；具体公式不推定。"
+      },
+      "protocol": "声明搜索、浏览、代码和文件工具，预算、运行日期及level；动态网络会影响复现",
+      "harness": {
+        "url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+        "revision": null,
+        "status": "official_entrypoint_only; exact commit not pinned"
+      },
+      "tool_access": {
+        "policy_zh": "搜索/浏览/代码/文件工具须披露。",
+        "executed": false
+      },
+      "contamination": "公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。",
+      "reproducibility": "需同意HF信息分享；禁止在可爬页面重发validation/test；本轮未接受条款。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。",
+      "dataset_sizes": [],
+      "lifecycle": {
+        "status": "documented",
+        "note_zh": "保留历史版本，不以新版本覆盖。"
+      },
+      "relations": [],
+      "checked_at": "2026-10-28",
+      "sources": [
+        {
+          "url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+          "publisher_type": "benchmark_author",
+          "checked_at": "2026-10-28",
+          "checked_via": "web",
+          "evidence_scope": "公开README/项目页/数据卡元数据，不包含试题或答案"
+        }
+      ],
+      "source_ids": [
+        "bench-src-gaia"
+      ],
+      "display_policy": "只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。",
+      "results_preview": {
+        "scores": [],
+        "status": "not_imported",
+        "reason_zh": "未取得严格同版本、shot、harness、日期和预算的可比成绩证据；不复制榜单名次。",
+        "official_results_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard"
+      }
+    }
+  ],
+  "coverage_gaps": [
+    "未宣称覆盖所有公开或非公开评测；非公开项目只能登记运营方公开说明。",
+    "HumanEval/LiveCodeBench/SWE-bench等已有registry节点本轮不覆盖或重复新增。",
+    "无成绩快照；部分metric细则、许可和commit保留unknown/待核验。",
+    "ScreenSpot拟定仓库URL抓取cache miss，未据此录入；未重试GPQA。",
+    "ChartQA官方ACL论文PDF抓取timeout；未重试，精确评分容差保留未核验；论文landing与官方repo已读取。"
+  ]
+}

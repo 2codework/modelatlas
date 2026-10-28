@@ -4642,6 +4642,680 @@ python -m unittest discover -s tests -v
 - 来源：https://modelcontextprotocol.io/specification/2026-07-28/changelog
 - 来源：https://modelcontextprotocol.io/specification/2026-07-28
 
+## MMMU
+
+跨学科图文理解；不同split不得混成一个成绩。 任务：多学科视觉问答。版本：original; snapshot 2026-10-28；分片：dev / validation / test。访问：公开介绍 / 官方任务入口。规模：150 samples（dev；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）；900 samples（validation；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）；10500 samples（test；核验 2026-10-28；https://github.com/MMMU-Benchmark/MMMU）
+
+- ID / 类型：bench-mmmu / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：original; snapshot 2026-10-28
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：Apache-2.0（数据卡声明；原始素材权利另核）
+### 评测介绍与官方入口
+- split：dev / validation / test
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 test答案已于2026-02-12公开；仍不在本站镜像。
+- metric：accuracy
+- protocol：固定学科聚合、答案解析、few-shot与图片处理
+- harness：官方入口：https://github.com/MMMU-Benchmark/MMMU；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：test答案已于2026-02-12公开；仍不在本站镜像。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2311.16502)
+- [repo · 官方入口](https://github.com/MMMU-Benchmark/MMMU)
+- [data · 官方入口](https://huggingface.co/datasets/MMMU/MMMU)
+- [leaderboard · 官方入口](https://mmmu-benchmark.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/MMMU-Benchmark/MMMU
+- 来源：https://huggingface.co/datasets/MMMU/MMMU
+- 来源：https://arxiv.org/abs/2311.16502
+- 来源：https://mmmu-benchmark.github.io/
+
+## MMMU-Pro
+
+去除可只靠文本回答的问题并加强选项及纯视觉设置，不能与MMMU直接比较。 任务：增强多模态推理。版本：Pro；分片：standard / vision-only；配置须分别标记。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-mmmu-pro / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：Pro
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：Apache-2.0（数据卡声明）
+### 评测介绍与官方入口
+- split：standard / vision-only；配置须分别标记
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开数据卡；未获取文件。
+- metric：accuracy
+- protocol：明确standard/vision-only配置及选项设置
+- harness：官方入口：https://github.com/MMMU-Benchmark/MMMU；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开数据卡；未获取文件。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2409.02813)
+- [repo · 官方入口](https://github.com/MMMU-Benchmark/MMMU)
+- [data · 官方入口](https://huggingface.co/datasets/MMMU/MMMU_Pro)
+- [leaderboard · 官方入口](https://mmmu-benchmark.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/MMMU-Benchmark/MMMU
+- 来源：https://huggingface.co/datasets/MMMU/MMMU_Pro
+- 来源：https://arxiv.org/abs/2409.02813
+- 来源：https://mmmu-benchmark.github.io/
+
+## MathVista testmini
+
+小规模开发验证分片，不能当作完整test成绩。 任务：视觉数学推理。版本：original；分片：testmini。访问：公开介绍 / 官方任务入口。规模：1000 samples（testmini；核验 2026-10-28；https://github.com/lupantech/MathVista）
+
+- ID / 类型：bench-mathvista-testmini / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：original
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；多来源素材不可由仓库许可推定统一授权
+### 评测介绍与官方入口
+- split：testmini
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 可公开获取；只登记入口。
+- metric：accuracy
+- protocol：记录答案抽取器及模型、数值精度、工具与CoT；第三方解析器不保证与官方等价
+- harness：官方入口：https://github.com/lupantech/MathVista；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：可公开获取；只登记入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [repo · 官方入口](https://github.com/lupantech/MathVista)
+- [data · 官方入口](https://github.com/lupantech/MathVista#data-downloading)
+- [leaderboard · 官方入口](https://mathvista.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/lupantech/MathVista
+- 来源：https://github.com/lupantech/MathVista#data-downloading
+- 来源：https://mathvista.github.io/
+
+## MathVista test
+
+标准评测分片；官方说明test标签不公开，不能声称可完整本地复现。 任务：视觉数学推理。版本：original；分片：test。访问：试题入口公开 / test答案未公开。规模：5141 samples（test；核验 2026-10-28；https://github.com/lupantech/MathVista）
+
+- ID / 类型：bench-mathvista-test / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：original
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；多来源素材另核
+### 评测介绍与官方入口
+- split：test
+- availability：试题入口公开 / test答案未公开
+- access_application_note：官方声明test标签不公开；不可当作完整本地评测包。 问题公开，test答案非公开；仅公开metadata和结果入口。
+- metric：accuracy
+- protocol：答案提取与提交评分流程须固定；不使用testmini替代
+- harness：官方入口：https://github.com/lupantech/MathVista；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：问题公开，test答案非公开；仅公开metadata和结果入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [repo · 官方入口](https://github.com/lupantech/MathVista)
+- [data · 官方入口](https://github.com/lupantech/MathVista#data-downloading)
+- [leaderboard · 官方入口](https://mathvista.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：官方声明test标签不公开；不可当作完整本地评测包。
+- 来源：https://github.com/lupantech/MathVista
+- 来源：https://github.com/lupantech/MathVista#data-downloading
+- 来源：https://mathvista.github.io/
+
+## DocVQA（单文档）
+
+从文档图像回答问题；不混同文档集合检索或2026新挑战。 任务：单页文档问答。版本：2020 Challenge Task 1；分片：train / validation / test；分片量未复核。访问：公开介绍 / 下载条件待核验。规模：50000 questions（all; 官方约数50K；核验 2026-10-28；https://www.docvqa.org/datasets/docvqa）；12000 images（all; 官方约数12K；核验 2026-10-28；https://www.docvqa.org/datasets/docvqa）
+
+- ID / 类型：bench-docvqa-2020-task1 / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：2020 Challenge Task 1
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown
+### 评测介绍与官方入口
+- split：train / validation / test；分片量未复核
+- availability：公开介绍 / 下载条件待核验
+- access_application_note：官方下载入口已确认；下载账户要求及条款待核验，RRC公开页面抓取超时。 官方提供RRC下载入口；账户/下载条款未实测，不声称匿名下载。
+- metric：ANLS
+- protocol：大小写不敏感、空格敏感；固定OCR、答案格式及RRC规则
+- harness：官方入口：https://www.docvqa.org/datasets/docvqa；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：官方提供RRC下载入口；账户/下载条款未实测，不声称匿名下载。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [data · 官方入口](https://www.docvqa.org/datasets/docvqa)
+- [leaderboard · 官方入口](https://www.docvqa.org/challenges/2020)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：官方下载入口已确认；下载账户要求及条款待核验，RRC公开页面抓取超时。
+- 来源：https://www.docvqa.org/datasets/docvqa
+- 来源：https://www.docvqa.org/challenges/2020
+
+## ChartQA
+
+图表视觉与逻辑推理，需区分人工和机器生成题及是否提供表格。 任务：图表问答。版本：full with annotations；分片：train / val / test；human / augmented。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-chartqa / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：full with annotations
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；不能据代码GPL推定全部图表素材许可
+### 评测介绍与官方入口
+- split：train / val / test；human / augmented
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 仓库列出初版与含标注完整版入口。
+- metric：官方任务评测；具体容差本轮未逐行核验
+- protocol：固定human/augmented子集、图像/表格输入与答案归一化；评分实现需二次锁定
+- harness：官方入口：https://github.com/vis-nlp/ChartQA；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：仓库列出初版与含标注完整版入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://aclanthology.org/2022.findings-acl.177/)
+- [repo · 官方入口](https://github.com/vis-nlp/ChartQA)
+- [data · 官方入口](https://github.com/vis-nlp/ChartQA#chartqa-dataset)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/vis-nlp/ChartQA
+- 来源：https://aclanthology.org/2022.findings-acl.177/
+- 来源：https://github.com/vis-nlp/ChartQA#chartqa-dataset
+
+## OCRBench
+
+文字识别、文档问答等五类能力；不要将论文Full Test和OCRBench子集混用。 任务：OCR综合评测。版本：v1；分片：OCRBench；非Full Test。访问：公开介绍 / 官方任务入口。规模：1000 QA pairs（OCRBench v1；核验 2026-10-28；https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench）
+
+- ID / 类型：bench-ocrbench / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v1
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；底层多来源数据权利另核
+### 评测介绍与官方入口
+- split：OCRBench；非Full Test
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开下载链接；不下载题库。
+- metric：官方OCRBench分数；细项匹配规则待锁定
+- protocol：采用官方scripts；第三方VLMEvalKit/lmms-eval须标revision和评分差异
+- harness：官方入口：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开下载链接；不下载题库。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [repo · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench)
+- [data · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench#data)
+- [leaderboard · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench#data
+
+## OCRBench v2
+
+中英双语文字密集视觉任务，扩展定位、版面及复杂推理。 任务：文字定位与推理。版本：v2；分片：EN_part / CN_part。访问：公开入口 / 仅研究非商业。规模：10000 QA pairs（v2 all; EN+CN；核验 2026-10-28；https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2）
+
+- ID / 类型：bench-ocrbench-v2 / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v2
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：研究用途、非商业；子目录Copyright Statement，非标准SPDX
+### 评测介绍与官方入口
+- split：EN_part / CN_part
+- availability：公开入口 / 仅研究非商业
+- access_application_note：官方版权声明仅研究、非商业；公开入口不是商用授权。 公开下载入口不等于可商用。
+- metric：0–100总分；分任务指标由官方eval_scripts聚合
+- protocol：eval.py逐样本评分后get_score.py聚合；固定中英文子集
+- harness：官方入口：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开下载入口不等于可商用。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2501.00321)
+- [repo · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2)
+- [data · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#data)
+- [leaderboard · 官方入口](https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#leaderboard)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：官方版权声明仅研究、非商业；公开入口不是商用授权。
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR
+- 来源：https://arxiv.org/abs/2501.00321
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#data
+- 来源：https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#leaderboard
+
+## LongBench
+
+中英问答、摘要、少样本、合成与补全任务的集合；各任务评分不同。 任务：长上下文理解。版本：v1；分片：21 task test splits；不混LongBench-E。访问：公开介绍 / 官方任务入口。规模：4750 samples（v1 all test tasks；核验 2026-10-28；https://github.com/THUDM/LongBench/blob/main/LongBench/README.md）
+
+- ID / 类型：bench-longbench / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v1
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；混合任务数据来源需分别核权
+### 评测介绍与官方入口
+- split：21 task test splits；不混LongBench-E
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开数据集入口。
+- metric：按任务自动评分，分类均值；非统一accuracy
+- protocol：固定任务清单、模板、输出上限与中间截断策略
+- harness：官方入口：https://github.com/THUDM/LongBench/blob/main/LongBench/README.md；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开数据集入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://aclanthology.org/2024.acl-long.172)
+- [repo · 官方入口](https://github.com/THUDM/LongBench/blob/main/LongBench/README.md)
+- [data · 官方入口](https://github.com/THUDM/LongBench/blob/main/LongBench/README.md#load-data)
+- [leaderboard · 官方入口](https://github.com/THUDM/LongBench/blob/main/LongBench/README.md)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/THUDM/LongBench/blob/main/LongBench/README.md
+- 来源：https://github.com/THUDM/LongBench
+- 来源：https://aclanthology.org/2024.acl-long.172
+- 来源：https://github.com/THUDM/LongBench/blob/main/LongBench/README.md#load-data
+
+## LongBench v2
+
+更长上下文的多项选择任务；直接回答、CoT、RAG不可混算。 任务：长上下文推理。版本：v2；分片：HF train（用于评测，不代表训练授权）。访问：公开介绍 / 官方任务入口。规模：503 questions（v2 evaluation; HF train；核验 2026-10-28；https://github.com/THUDM/LongBench）
+
+- ID / 类型：bench-longbench-v2 / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v2
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；本轮未核验数据卡许可正文
+### 评测介绍与官方入口
+- split：HF train（用于评测，不代表训练授权）
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 官方README旧THUDM数据链接重定向zai-org。
+- metric：multiple-choice accuracy
+- protocol：固定cot/no_context/rag开关、上下文长度及结果导出器
+- harness：官方入口：https://github.com/THUDM/LongBench；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：官方README旧THUDM数据链接重定向zai-org。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2412.15204)
+- [repo · 官方入口](https://github.com/THUDM/LongBench)
+- [data · 官方入口](https://huggingface.co/datasets/zai-org/LongBench-v2)
+- [leaderboard · 官方入口](https://longbench2.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/THUDM/LongBench
+- 来源：https://arxiv.org/abs/2412.15204
+- 来源：https://huggingface.co/datasets/zai-org/LongBench-v2
+- 来源：https://longbench2.github.io/
+
+## RULER（历史pipeline）
+
+用多类合成任务观察长度退化；官方已将原pipeline标为deprecated，历史保留。 任务：有效长上下文测量。版本：v1 legacy main pipeline；分片：synthetic；按任务与上下文长度生成。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-ruler-v1-legacy / benchmark
+- 生命周期：{'status': 'deprecated', 'note_zh': '原始状态：deprecated_pipeline；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v1 legacy main pipeline
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；外部语料条款另核
+### 评测介绍与官方入口
+- split：synthetic；按任务与上下文长度生成
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 旧pipeline deprecated；官方另指rulerv1-ns/rulerv2-ns，新版需另行核验。
+- metric：按任务/长度得分与平均分；有效长度依阈值
+- protocol：固定生成seed、tokenizer、长度、任务复杂度、one-shot设置；勿把配置窗口当实测能力
+- harness：官方入口：https://github.com/NVIDIA/RULER；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：旧pipeline deprecated；官方另指rulerv1-ns/rulerv2-ns，新版需另行核验。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [repo · 官方入口](https://github.com/NVIDIA/RULER)
+- [data · 官方入口](https://github.com/NVIDIA/RULER)
+- [leaderboard · 官方入口](https://github.com/NVIDIA/RULER)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/NVIDIA/RULER
+
+## MBPP
+
+入门编程任务；手工校验sanitized版本不是同一测试集合。 任务：基础Python程序合成。版本：original + sanitized variant described；分片：test IDs 11–510；prompt 1–10；val 511–600；train 601–974。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-mbpp / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：original + sanitized variant described
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown
+### 评测介绍与官方入口
+- split：test IDs 11–510；prompt 1–10；val 511–600；train 601–974
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开仓库；不复制题目或参考代码。
+- metric：测试用例通过情况；pass@k实现本轮未审计
+- protocol：原论文three-shot使用IDs 2/3/4；固定原始或sanitized、采样与隔离测试环境
+- harness：官方入口：https://github.com/google-research/google-research/tree/master/mbpp；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开仓库；不复制题目或参考代码。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [repo · 官方入口](https://github.com/google-research/google-research/tree/master/mbpp)
+- [data · 官方入口](https://github.com/google-research/google-research/tree/master/mbpp)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/google-research/google-research/tree/master/mbpp
+
+## OSWorld（原版）
+
+真实桌面环境中的开放式任务，执行式验收；历史版本不能混入Verified榜单。 任务：桌面GUI多步任务。版本：2024 original；分片：原始论文任务；锁定旧revision。访问：公开介绍 / 官方任务入口。规模：369 tasks（original paper benchmark; arXiv v2 2024-05-30；核验 2026-10-28；https://arxiv.org/abs/2404.07972）
+
+- ID / 类型：bench-osworld-original / benchmark
+- 生命周期：{'status': 'historical', 'note_zh': '原始状态：historical_variant；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：2024 original
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；应用及素材条款独立
+### 评测介绍与官方入口
+- split：原始论文任务；锁定旧revision
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开环境与任务定义；运行需要隔离VM及资源，本轮未运行。
+- metric：execution-based task success
+- protocol：固定VM镜像、初始状态、动作空间、步数、观察方式、重试与评测器
+- harness：官方入口：https://github.com/xlang-ai/OSWorld；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开环境与任务定义；运行需要隔离VM及资源，本轮未运行。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2404.07972)
+- [repo · 官方入口](https://github.com/xlang-ai/OSWorld)
+- [data · 官方入口](https://github.com/xlang-ai/OSWorld)
+- [leaderboard · 官方入口](https://os-world.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/xlang-ai/OSWorld
+- 来源：https://arxiv.org/abs/2404.07972
+- 来源：https://os-world.github.io/
+
+## OSWorld-Verified
+
+修订任务及验收器的版本；应与同版本结果比较，而非原版横向排名。 任务：桌面GUI多步任务。版本：2025-07-28 Verified update；分片：Verified任务与修订评测器。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-osworld-verified / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：2025-07-28 Verified update
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；应用素材独立
+### 评测介绍与官方入口
+- split：Verified任务与修订评测器
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 代码环境公开；不授权访问用户真实机器或账户。
+- metric：execution-based task success
+- protocol：锁定Verified revision、镜像、动作预算与判分实现；记录失败原因和重复实验
+- harness：官方入口：https://xlang.ai/blog/osworld-verified；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：代码环境公开；不授权访问用户真实机器或账户。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2404.07972)
+- [repo · 官方入口](https://github.com/xlang-ai/OSWorld)
+- [data · 官方入口](https://github.com/xlang-ai/OSWorld)
+- [leaderboard · 官方入口](https://os-world.github.io/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://xlang.ai/blog/osworld-verified
+- 来源：https://github.com/xlang-ai/OSWorld
+- 来源：https://arxiv.org/abs/2404.07972
+- 来源：https://os-world.github.io/
+
+## AndroidWorld
+
+模拟器中参数化任务；116是任务模板数，不是唯一可运行实例数。 任务：Android代理操作。版本：original; current README snapshot；分片：参数化tasks；seed实例。访问：公开介绍 / 官方任务入口。规模：116 task templates（built-in benchmark；核验 2026-10-28；https://github.com/google-research/android_world）
+
+- ID / 类型：bench-androidworld / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：original; current README snapshot
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；app许可另核
+### 评测介绍与官方入口
+- split：参数化tasks；seed实例
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 需Android模拟器；不使用真实设备或账户。
+- metric：task success / reward
+- protocol：固定随机参数seed、20 apps版本、模拟器API与动作预算
+- harness：官方入口：https://github.com/google-research/android_world；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：需Android模拟器；不使用真实设备或账户。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2405.14573)
+- [repo · 官方入口](https://github.com/google-research/android_world)
+- [data · 官方入口](https://github.com/google-research/android_world)
+- [leaderboard · 官方入口](https://google-research.github.io/android_world/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/google-research/android_world
+- 来源：https://arxiv.org/abs/2405.14573
+- 来源：https://google-research.github.io/android_world/
+
+## WebArena
+
+可自托管的真实风格网站任务；评测终态，不只比较文本答案。 任务：网页代理操作。版本：v0.2.0 annotation baseline；分片：canonical tasks；环境快照固定。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-webarena / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：v0.2.0 annotation baseline
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；站点内容与镜像条款另核
+### 评测介绍与官方入口
+- split：canonical tasks；环境快照固定
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 推荐AgentLab/BrowserGym不等于改变原始benchmark版本。
+- metric：execution-based success
+- protocol：记录网站/容器版本、URL映射、状态reset、观察/动作空间、步数与harness
+- harness：官方入口：https://github.com/web-arena-x/webarena；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：推荐AgentLab/BrowserGym不等于改变原始benchmark版本。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2307.13854)
+- [repo · 官方入口](https://github.com/web-arena-x/webarena)
+- [data · 官方入口](https://github.com/web-arena-x/webarena)
+- [leaderboard · 官方入口](https://webarena.dev/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/web-arena-x/webarena
+- 来源：https://arxiv.org/abs/2307.13854
+- 来源：https://webarena.dev/
+
+## VisualWebArena
+
+引入视觉信息依赖的网页操作，沿用执行式验收思路；独立于WebArena计分。 任务：视觉网页代理。版本：2024 original；分片：full tasks。访问：公开介绍 / 官方任务入口。规模：910 tasks（full VWA tasks; README 2024-03-08 update；核验 2026-10-28；https://github.com/web-arena-x/visualwebarena）
+
+- ID / 类型：bench-visualwebarena / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：2024 original
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；第三方图像及站点内容另核
+### 评测介绍与官方入口
+- split：full tasks
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开任务和自托管环境入口。
+- metric：execution-based success
+- protocol：固定截图、caption/SoM等额外工具、网页状态、评测器与步数
+- harness：官方入口：https://github.com/web-arena-x/visualwebarena；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开任务和自托管环境入口。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2401.13649)
+- [repo · 官方入口](https://github.com/web-arena-x/visualwebarena)
+- [data · 官方入口](https://github.com/web-arena-x/visualwebarena)
+- [leaderboard · 官方入口](https://jykoh.com/vwa)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/web-arena-x/visualwebarena
+- 来源：https://arxiv.org/abs/2401.13649
+- 来源：https://jykoh.com/vwa
+
+## WorkArena L1
+
+ServiceNow日常工作原子任务；源码公开不表示托管实例可自由使用。 任务：知识工作网页任务。版本：L1 atomic；分片：33 task types；实例采样。访问：源码公开 / 运行实例需审批。规模：33 task types（L1；核验 2026-10-28；https://github.com/ServiceNow/WorkArena）；19912 unique instances（L1；核验 2026-10-28；https://github.com/ServiceNow/WorkArena）
+
+- ID / 类型：bench-workarena-l1 / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：L1 atomic
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；实例使用条款需批准
+### 评测介绍与官方入口
+- split：33 task types；实例采样
+- availability：源码公开 / 运行实例需审批
+- access_application_note：运行实例须申请、接受条款并等待批准；未申请或登录。 运行实例须HF申请、接受条款并等待批准；源码公开。
+- metric：task success（BrowserGym reward）
+- protocol：固定实例版本、seed、任务清单与AgentLab/BrowserGym revision
+- harness：官方入口：https://github.com/ServiceNow/WorkArena；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：运行实例须HF申请、接受条款并等待批准；源码公开。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2403.07718)
+- [repo · 官方入口](https://github.com/ServiceNow/WorkArena)
+- [data · 官方入口](https://github.com/ServiceNow/WorkArena)
+- [leaderboard · 官方入口](https://servicenow.github.io/WorkArena/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：运行实例须申请、接受条款并等待批准；未申请或登录。
+- 来源：https://github.com/ServiceNow/WorkArena
+- 来源：https://arxiv.org/abs/2403.07718
+- 来源：https://servicenow.github.io/WorkArena/
+
+## WorkArena++
+
+将原子任务组合成更长工作流程，不能与L1原子成功率直接比较。 任务：规划推理知识工作。版本：compositional 2024；分片：组合任务；固定level与curriculum。访问：源码公开 / 运行实例需审批。规模：682 task templates（WorkArena++；核验 2026-10-28；https://github.com/ServiceNow/WorkArena）
+
+- ID / 类型：bench-workarena-plusplus / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：compositional 2024
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；实例使用条款需批准
+### 评测介绍与官方入口
+- split：组合任务；固定level与curriculum
+- availability：源码公开 / 运行实例需审批
+- access_application_note：运行实例须申请、接受条款并等待批准；未申请或登录。 同WorkArena运行实例审批，不提交申请或登录。
+- metric：task success（BrowserGym reward）
+- protocol：记录level、curriculum、seed、预算及ServiceNow实例版本
+- harness：官方入口：https://github.com/ServiceNow/WorkArena；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：同WorkArena运行实例审批，不提交申请或登录。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2407.05291)
+- [repo · 官方入口](https://github.com/ServiceNow/WorkArena)
+- [data · 官方入口](https://github.com/ServiceNow/WorkArena)
+- [leaderboard · 官方入口](https://servicenow.github.io/WorkArena/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：运行实例须申请、接受条款并等待批准；未申请或登录。
+- 来源：https://github.com/ServiceNow/WorkArena
+- 来源：https://arxiv.org/abs/2407.05291
+- 来源：https://servicenow.github.io/WorkArena/
+
+## WebLINX 1.0
+
+基于记录的操作演示评测下一步，不等同在线端到端成功率。 任务：对话式网页导航（离线）。版本：1.0 initial release；分片：原版划分；需固定split。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-weblinx-1-0 / benchmark
+- 生命周期：{'status': 'historical', 'note_zh': '原始状态：historical_variant；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：1.0 initial release
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；演示和网页素材许可另核
+### 评测介绍与官方入口
+- split：原版划分；需固定split
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开数据入口；初版仍保留用于历史比较。
+- metric：离线动作评测；具体指标实现待锁定
+- protocol：固定动作类型、元素定位、分片和原版评测器；不混1.1
+- harness：官方入口：https://github.com/McGill-NLP/weblinx；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开数据入口；初版仍保留用于历史比较。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2402.05930)
+- [repo · 官方入口](https://github.com/McGill-NLP/weblinx)
+- [data · 官方入口](https://github.com/McGill-NLP/weblinx)
+- [leaderboard · 官方入口](https://mcgill-nlp.github.io/weblinx/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/McGill-NLP/weblinx
+- 来源：https://arxiv.org/abs/2402.05930
+- 来源：https://mcgill-nlp.github.io/weblinx/
+
+## WebLINX 1.1 / BrowserGym
+
+由1.0派生，移除少量演示并改变评测steps；官方要求以1.1/BG单独报分。 任务：对话式网页导航（离线）。版本：1.1；分片：BrowserGym评测steps；新增tab动作。访问：公开介绍 / 官方任务入口。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-weblinx-1-1 / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：1.1
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；数据卡许可尚未单独核验
+### 评测介绍与官方入口
+- split：BrowserGym评测steps；新增tab动作
+- availability：公开介绍 / 官方任务入口
+- access_application_note：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。 公开派生数据入口；未新增演示并不意味着评测等价。
+- metric：离线动作评测；不能标作在线任务完成率
+- protocol：固定weblinx-browsergym revision、动作集合、分片；与1.0严格分列
+- harness：官方入口：https://github.com/McGill-NLP/weblinx；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：公开派生数据入口；未新增演示并不意味着评测等价。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2402.05930)
+- [repo · 官方入口](https://github.com/McGill-NLP/weblinx)
+- [data · 官方入口](https://github.com/McGill-NLP/weblinx)
+- [leaderboard · 官方入口](https://mcgill-nlp.github.io/weblinx/)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：仅核验公开介绍与官方入口；不承诺匿名下载、完整标签或完整本地复现。
+- 来源：https://github.com/McGill-NLP/weblinx
+- 来源：https://arxiv.org/abs/2402.05930
+- 来源：https://mcgill-nlp.github.io/weblinx/
+
+## GAIA
+
+任务要求不同程度的工具与自主性；test答案和metadata非公开。 任务：通用助理工具任务。版本：2023 benchmark; 2025-10 parquet format；分片：validation / test；level 1/2/3。访问：公开介绍 / 数据门控。规模：聚合规模未核验，不推测样本量。
+
+- ID / 类型：bench-gaia / benchmark
+- 生命周期：{'status': 'unknown', 'note_zh': '原始状态：documented；保留历史版本，不以新版本覆盖。 仅按来源状态映射，不由名称推断。核验日期不是发布日期。', 'replacement_node_ids': []}
+- 版本：2023 benchmark; 2025-10 parquet format
+- 核验：2026-10-28 · primary_metadata_reviewed_not_executed
+- license：unknown；gating/不重发条件已明确
+### 评测介绍与官方入口
+- split：validation / test；level 1/2/3
+- availability：公开介绍 / 数据门控
+- access_application_note：数据文件需同意HF条款；禁止可爬重发；未申请、登录或下载。 需同意HF信息分享；禁止在可爬页面重发validation/test；本轮未接受条款。
+- metric：答案正确性；标准化细节待榜单规则锁定
+- protocol：声明搜索、浏览、代码和文件工具，预算、运行日期及level；动态网络会影响复现
+- harness：官方入口：https://huggingface.co/datasets/gaia-benchmark/GAIA；精确revision未固定，未执行评测。
+- contamination：公开题或源材料可能进入训练；报告模型训练截止、数据revision及去重检查。未检出不代表零污染；私有标签也不保证题目未泄漏。
+- reproducibility：需同意HF信息分享；禁止在可爬页面重发validation/test；本轮未接受条款。 运行还须固定模型精确版本、prompt、shot、采样、预算、harness与环境。本轮仅metadata调研。
+- [paper · 官方入口](https://arxiv.org/abs/2311.12983)
+- [data · 官方入口](https://huggingface.co/datasets/gaia-benchmark/GAIA)
+- [leaderboard · 官方入口](https://huggingface.co/spaces/gaia-benchmark/leaderboard)
+- 只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 原始元数据：benchmarks/raw/records.json；访问修订：benchmarks/overlay.json。
+- 注意：只展示原创公开介绍、评测口径、metadata及官方跳转链接；不镜像试题、答案、受限包。
+- 注意：公开入口不等于完整可复现或可商用。不同版本/分片不得合并成绩。
+- 注意：数据文件需同意HF条款；禁止可爬重发；未申请、登录或下载。
+- 来源：https://huggingface.co/datasets/gaia-benchmark/GAIA
+- 来源：https://arxiv.org/abs/2311.12983
+- 来源：https://huggingface.co/spaces/gaia-benchmark/leaderboard
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -4855,6 +5529,14 @@ python -m unittest discover -s tests -v
 - sys-mcp → learning_prerequisite → mcp-lab-migration-tutorial · editorial_learning_relation ·
 - sys-skills → learning_prerequisite → mcp-lab-migration-tutorial · editorial_learning_relation ·
 - sys-mcp → learning_prerequisite → mcp-lab-modern-tutorial · editorial_learning_relation ·
+- bench-mmmu-pro → derived_from → bench-mmmu · primary_metadata_reviewed_not_executed · bench-src-mmmu-pro-1, bench-src-mmmu-pro-2, bench-src-mmmu-pro-3, bench-src-mmmu-pro-4
+- bench-mathvista-test → sibling_split → bench-mathvista-testmini · primary_metadata_reviewed_not_executed · bench-src-mathvista-test-1, bench-src-mathvista-test-2, bench-src-mathvista-test-3
+- bench-ocrbench-v2 → successor_version → bench-ocrbench · primary_metadata_reviewed_not_executed · bench-src-ocrbench-v2-1, bench-src-ocrbench-v2-2, bench-src-ocrbench-v2-3, bench-src-ocrbench-v2-4, bench-src-ocrbench-v2-5
+- bench-longbench-v2 → successor_version → bench-longbench · primary_metadata_reviewed_not_executed · bench-src-longbench-v2-1, bench-src-longbench-v2-2, bench-src-longbench-v2-3, bench-src-longbench-v2-4
+- bench-osworld-verified → revised_version_of → bench-osworld-original · primary_metadata_reviewed_not_executed · bench-src-osworld-verified-1, bench-src-osworld-verified-2, bench-src-osworld-verified-3, bench-src-osworld-verified-4
+- bench-visualwebarena → extends_environment → bench-webarena · primary_metadata_reviewed_not_executed · bench-src-visualwebarena-1, bench-src-visualwebarena-2, bench-src-visualwebarena-3
+- bench-workarena-plusplus → composes_tasks_from → bench-workarena-l1 · primary_metadata_reviewed_not_executed · bench-src-workarena-plusplus-1, bench-src-workarena-plusplus-2, bench-src-workarena-plusplus-3
+- bench-weblinx-1-1 → derived_version → bench-weblinx-1-0 · primary_metadata_reviewed_not_executed · bench-src-weblinx-1-1-1, bench-src-weblinx-1-1-2, bench-src-weblinx-1-1-3
 
 ## 来源目录
 - design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
@@ -5010,6 +5692,74 @@ python -m unittest discover -s tests -v
 - course-mcp-june · https://modelcontextprotocol.io/specification/2025-06-18/changelog · 核验 2026-10-28 · 移除batching；加入structured output
 - course-skills-extension · https://modelcontextprotocol.io/extensions/skills/overview · 核验 2026-10-28 · 扩展、检索与激活区别、逐 skill 批准、server/discover 声明
 - course-skills-working-group · https://modelcontextprotocol.io/community/working-groups/skills-over-mcp · 核验 2026-10-28 · SEP-2640 Final；宿主支持不可推定
+- bench-src-mmmu-1 · https://github.com/MMMU-Benchmark/MMMU · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-2 · https://huggingface.co/datasets/MMMU/MMMU · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-3 · https://arxiv.org/abs/2311.16502 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-4 · https://mmmu-benchmark.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-pro-1 · https://github.com/MMMU-Benchmark/MMMU · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-pro-2 · https://huggingface.co/datasets/MMMU/MMMU_Pro · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-pro-3 · https://arxiv.org/abs/2409.02813 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mmmu-pro-4 · https://mmmu-benchmark.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-testmini-1 · https://github.com/lupantech/MathVista · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-testmini-2 · https://github.com/lupantech/MathVista#data-downloading · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-testmini-3 · https://mathvista.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-test-1 · https://github.com/lupantech/MathVista · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-test-2 · https://github.com/lupantech/MathVista#data-downloading · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mathvista-test-3 · https://mathvista.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-docvqa-2020-task1-1 · https://www.docvqa.org/datasets/docvqa · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-docvqa-2020-task1-2 · https://www.docvqa.org/challenges/2020 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-chartqa-1 · https://github.com/vis-nlp/ChartQA · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-chartqa-2 · https://aclanthology.org/2022.findings-acl.177/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-chartqa-3 · https://github.com/vis-nlp/ChartQA#chartqa-dataset · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-1 · https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-2 · https://github.com/Yuliang-Liu/MultimodalOCR · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-3 · https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench#data · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-v2-1 · https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-v2-2 · https://github.com/Yuliang-Liu/MultimodalOCR · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-v2-3 · https://arxiv.org/abs/2501.00321 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-v2-4 · https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#data · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ocrbench-v2-5 · https://github.com/Yuliang-Liu/MultimodalOCR/tree/main/OCRBench_v2#leaderboard · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-1 · https://github.com/THUDM/LongBench/blob/main/LongBench/README.md · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-2 · https://github.com/THUDM/LongBench · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-3 · https://aclanthology.org/2024.acl-long.172 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-4 · https://github.com/THUDM/LongBench/blob/main/LongBench/README.md#load-data · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-v2-1 · https://github.com/THUDM/LongBench · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-v2-2 · https://arxiv.org/abs/2412.15204 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-v2-3 · https://huggingface.co/datasets/zai-org/LongBench-v2 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-longbench-v2-4 · https://longbench2.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-ruler-v1-legacy-1 · https://github.com/NVIDIA/RULER · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-mbpp-1 · https://github.com/google-research/google-research/tree/master/mbpp · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-original-1 · https://github.com/xlang-ai/OSWorld · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-original-2 · https://arxiv.org/abs/2404.07972 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-original-3 · https://os-world.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-verified-1 · https://xlang.ai/blog/osworld-verified · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-verified-2 · https://github.com/xlang-ai/OSWorld · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-verified-3 · https://arxiv.org/abs/2404.07972 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-osworld-verified-4 · https://os-world.github.io/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-androidworld-1 · https://github.com/google-research/android_world · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-androidworld-2 · https://arxiv.org/abs/2405.14573 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-androidworld-3 · https://google-research.github.io/android_world/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-webarena-1 · https://github.com/web-arena-x/webarena · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-webarena-2 · https://arxiv.org/abs/2307.13854 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-webarena-3 · https://webarena.dev/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-visualwebarena-1 · https://github.com/web-arena-x/visualwebarena · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-visualwebarena-2 · https://arxiv.org/abs/2401.13649 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-visualwebarena-3 · https://jykoh.com/vwa · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-l1-1 · https://github.com/ServiceNow/WorkArena · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-l1-2 · https://arxiv.org/abs/2403.07718 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-l1-3 · https://servicenow.github.io/WorkArena/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-plusplus-1 · https://github.com/ServiceNow/WorkArena · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-plusplus-2 · https://arxiv.org/abs/2407.05291 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-workarena-plusplus-3 · https://servicenow.github.io/WorkArena/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-0-1 · https://github.com/McGill-NLP/weblinx · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-0-2 · https://arxiv.org/abs/2402.05930 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-0-3 · https://mcgill-nlp.github.io/weblinx/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-1-1 · https://github.com/McGill-NLP/weblinx · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-1-2 · https://arxiv.org/abs/2402.05930 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-weblinx-1-1-3 · https://mcgill-nlp.github.io/weblinx/ · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-gaia-1 · https://huggingface.co/datasets/gaia-benchmark/GAIA · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-gaia-2 · https://arxiv.org/abs/2311.12983 · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
+- bench-src-gaia-3 · https://huggingface.co/spaces/gaia-benchmark/leaderboard · 核验 2026-10-28 · 公开介绍、版本与聚合元数据；不代表所有下游文件或许可逐一审计。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
@@ -5042,6 +5792,7 @@ python -m unittest discover -s tests -v
 - 模型家族逐版本教程需与模型登记表继续关联；本轮只有运行时路线，不捏造具体模型支持。
 - JEV未定义，未重复研究或臆测展开。
 - 已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。
+- 评测新增22条记录/15个家族，不代表完整覆盖。公开入口不等于匿名下载、完整标签或商用许可；没有新增成绩。
 
 ## 厂商目录记录（非全量历史，非新增模型计数）
 不生成价格或性能排名；来源自报不可直接横比；教程链接未执行。

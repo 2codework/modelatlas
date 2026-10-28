@@ -1,0 +1,19 @@
+{
+  "status": "PASS_LOCAL_STRUCTURE_NOT_INDEPENDENT_REVIEW",
+  "record_count": 22,
+  "baseline_preserved_count": 11,
+  "availability_counts": {
+    "public": 19,
+    "gated": 3
+  },
+  "families_count": 15,
+  "schema_validation": "pass; jsonschema Draft202012Validator",
+  "production_mutated": false,
+  "scores_imported": 0,
+  "questions_answers_saved": 0,
+  "known_fetch_gaps": [
+    "ScreenSpot candidate URL cache miss; excluded",
+    "ChartQA paper PDF timeout; metric detail unverified; not retried"
+  ],
+  "ready_for_parent_QA": true
+}

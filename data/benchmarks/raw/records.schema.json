@@ -1,0 +1,531 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "baseline": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "registry_count": {
+          "type": "integer"
+        },
+        "preserved_node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "registry_count",
+        "preserved_node_ids"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "metadata_only": {
+          "type": "boolean"
+        },
+        "questions_or_answers_collected": {
+          "type": "boolean"
+        },
+        "restricted_files_downloaded": {
+          "type": "boolean"
+        },
+        "code_or_models_executed": {
+          "type": "boolean"
+        },
+        "device_or_account_accessed": {
+          "type": "boolean"
+        },
+        "scores_imported": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "metadata_only",
+        "questions_or_answers_collected",
+        "restricted_files_downloaded",
+        "code_or_models_executed",
+        "device_or_account_accessed",
+        "scores_imported"
+      ],
+      "additionalProperties": false
+    },
+    "availability_vocabulary": {
+      "type": "object",
+      "properties": {
+        "public": {
+          "type": "string"
+        },
+        "gated": {
+          "type": "string"
+        },
+        "private_described": {
+          "type": "string"
+        },
+        "results_only": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "public",
+        "gated",
+        "private_described",
+        "results_only"
+      ],
+      "additionalProperties": false
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "split": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "tool_access": {
+            "type": "object",
+            "properties": {
+              "policy_zh": {
+                "type": "string"
+              },
+              "executed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "policy_zh",
+              "executed"
+            ],
+            "additionalProperties": false
+          },
+          "dataset_sizes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "integer"
+                },
+                "split": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "as_of": {
+                  "type": "string"
+                },
+                "source_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "split",
+                "unit",
+                "as_of",
+                "source_url"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "scoring": {
+            "type": "object",
+            "properties": {
+              "description_zh": {
+                "type": "string"
+              },
+              "implementation_verified": {
+                "type": "boolean"
+              },
+              "note_zh": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "description_zh",
+              "implementation_verified",
+              "note_zh"
+            ],
+            "additionalProperties": false
+          },
+          "record_kind": {
+            "type": "string"
+          },
+          "access_application_url": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "availability": {
+            "enum": [
+              "public",
+              "gated",
+              "private_described",
+              "results_only"
+            ]
+          },
+          "license_evidence": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "object",
+                "properties": {
+                  "statement": {
+                    "type": "string"
+                  },
+                  "source_url": {
+                    "type": "string"
+                  },
+                  "scope": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "statement",
+                  "source_url",
+                  "scope"
+                ],
+                "additionalProperties": false
+              },
+              "data": {
+                "type": "object",
+                "properties": {
+                  "statement": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "source_url": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "source_url",
+                  "statement",
+                  "status"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "code",
+              "data"
+            ],
+            "additionalProperties": false
+          },
+          "access_url": {
+            "type": "string"
+          },
+          "lifecycle": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string"
+              },
+              "note_zh": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "status",
+              "note_zh"
+            ],
+            "additionalProperties": false
+          },
+          "checked_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "description_zh": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "display_policy": {
+            "type": "string"
+          },
+          "harness": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "revision": {
+                "type": "null"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "url",
+              "revision",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "results_preview": {
+            "type": "object",
+            "properties": {
+              "reason_zh": {
+                "type": "string"
+              },
+              "scores": {
+                "type": "array",
+                "maxItems": 0
+              },
+              "status": {
+                "type": "string"
+              },
+              "official_results_url": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "official_results_url",
+              "reason_zh",
+              "scores",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "access_application_note": {
+            "type": "string"
+          },
+          "node_id": {
+            "type": "string"
+          },
+          "family": {
+            "type": "string"
+          },
+          "contamination": {
+            "type": "string"
+          },
+          "official_links": {
+            "type": "object",
+            "properties": {
+              "leaderboard": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "data": {
+                "type": "string"
+              },
+              "paper": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "repo": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "data",
+              "leaderboard",
+              "paper",
+              "repo"
+            ],
+            "additionalProperties": false
+          },
+          "metric": {
+            "type": "string"
+          },
+          "relations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "target_node_id": {
+                  "type": "string"
+                },
+                "score_comparable": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "type",
+                "target_node_id",
+                "score_comparable"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "publisher_type": {
+                  "type": "string"
+                },
+                "checked_at": {
+                  "type": "string"
+                },
+                "checked_via": {
+                  "type": "string"
+                },
+                "evidence_scope": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "url",
+                "publisher_type",
+                "checked_at",
+                "checked_via",
+                "evidence_scope"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "modality": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "task_zh": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "reproducibility": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "access_application_note",
+          "access_application_url",
+          "access_url",
+          "availability",
+          "checked_at",
+          "contamination",
+          "dataset_sizes",
+          "description_zh",
+          "display_policy",
+          "family",
+          "harness",
+          "license",
+          "license_evidence",
+          "lifecycle",
+          "metric",
+          "modality",
+          "name",
+          "node_id",
+          "official_links",
+          "protocol",
+          "record_kind",
+          "relations",
+          "reproducibility",
+          "results_preview",
+          "scoring",
+          "source_ids",
+          "sources",
+          "split",
+          "task_zh",
+          "tool_access",
+          "version"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "coverage_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "checked_at",
+    "status",
+    "baseline",
+    "policy",
+    "availability_vocabulary",
+    "records",
+    "coverage_gaps"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ModelAtlas benchmark metadata research candidate r1"
+}
