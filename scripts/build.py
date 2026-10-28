@@ -29,6 +29,7 @@ def date_ok(value, precision):
 
 # Current display only; retained research bundles remain historical evidence.
 COVERAGE_DISPLAY_OVERLAYS = {
+ '配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。': '原创教学SVG已制作，用于三类预测接口对照；不是论文原图或实测架构复原，未复制论文图片；外部图权利仍未核查。',
  '未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题': 'CAD、3D资产与动画已有代表性未执行教学案例；更多工业设计、字体生成与印前色彩管理仍待补充，不代表完整覆盖。',
  '视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。': '视频、音乐及CAD/3D/动画已有代表性节点或教程；世界模型、JEPA与具身对照已增加12个有限节点，机器人系统与各家完整系列仍不齐全，不代表全领域覆盖。',
 }
@@ -37,6 +38,7 @@ def current_coverage_display(gaps, node_ids):
     if {'design-freecad-partdesign','design-godot-asset-pipeline','design-godot-spriteframes'} <= node_ids:
         enabled.add('未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题')
     if world_models.EXPECTED <= node_ids:
+        enabled.add('配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。')
         enabled.add('视频与音乐已初步纳入相关技术节点；更多独立系列、版本与教程仍待补充。3D、机器人和世界模型仍缺独立系列；不代表全领域覆盖。')
     return [COVERAGE_DISPLAY_OVERLAYS[g] if isinstance(g,str) and g in enabled else g for g in gaps]
 

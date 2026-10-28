@@ -44,7 +44,9 @@ def adapt(raw,qa):
    note='官方来源日期；不推断同日其他事件。' if date else '未核验；不是从未发布。'
    if key=='weights_first_available':note='官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。'
    if key=='repo_release_label':note='当前 README 标签与 2025-06-11 公告并列；原因与时区未知，不静默合并。'
+   if date:require(all(next(s['checked_at'] for s in r['sources'] if s['id']==raw_sid)==r['checked_at'] for raw_sid in e['source_ids']),'event source checked_at mismatch')
    events.append(dict(id=nid+'-'+key.replace('_','-'),node_ids=[nid],event_type=typ,title=n['title']+' · '+label,date=date,date_precision=precision,source_ids=sid,time=None,timezone=None,verification_status='source_reviewed_not_replicated' if date else 'not_checked',evidence_locator='research dates.'+key+'; '+e['status'],note_zh=note,availability_scope='official_dated_availability_claim' if key=='weights_first_available' else 'source_specific_event',raw_event_key=key))
+   if date:events[-1]['checked_at']=r['checked_at']
   for field in ['parameters','license','weights_availability']:
    if 'source_ids' in n[field]:n[field]['source_ids']=refs(n[field]['source_ids'])
   for event in n['dates'].values():event['source_ids']=refs(event['source_ids'])

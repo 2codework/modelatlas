@@ -20745,7 +20745,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-world-models-2018-publication",
@@ -20837,7 +20838,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-planet-publication",
@@ -20929,7 +20931,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-dreamer-publication",
@@ -21021,7 +21024,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-dreamerv2-publication",
@@ -21041,7 +21045,8 @@
       "evidence_locator": "research dates.publication; arxiv_comments_state_ICLR_2021",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "publication"
+      "raw_event_key": "publication",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-dreamerv2-announcement",
@@ -21205,7 +21210,8 @@
       "evidence_locator": "research dates.concept_proposed; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "concept_proposed"
+      "raw_event_key": "concept_proposed",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-dreamerv3-paper-first-submitted",
@@ -21225,7 +21231,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-dreamerv3-publication",
@@ -21317,7 +21324,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-ijepa-publication",
@@ -21355,7 +21363,8 @@
       "evidence_locator": "research dates.announcement; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "announcement"
+      "raw_event_key": "announcement",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-ijepa-repo-initial-release",
@@ -21393,7 +21402,8 @@
       "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
       "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
       "availability_scope": "official_dated_availability_claim",
-      "raw_event_key": "weights_first_available"
+      "raw_event_key": "weights_first_available",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa-paper-first-submitted",
@@ -21413,7 +21423,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa-publication",
@@ -21451,7 +21462,8 @@
       "evidence_locator": "research dates.announcement; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "announcement"
+      "raw_event_key": "announcement",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa-repo-initial-release",
@@ -21489,7 +21501,8 @@
       "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
       "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
       "availability_scope": "official_dated_availability_claim",
-      "raw_event_key": "weights_first_available"
+      "raw_event_key": "weights_first_available",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-genie-paper-first-submitted",
@@ -21509,7 +21522,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-genie-publication",
@@ -21601,7 +21615,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-openvla-publication",
@@ -21657,7 +21672,8 @@
       "evidence_locator": "research dates.repo_initial_release; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "repo_initial_release"
+      "raw_event_key": "repo_initial_release",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-openvla-weights-first-available",
@@ -21695,7 +21711,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-cosmos-2025-publication",
@@ -21715,7 +21732,8 @@
       "evidence_locator": "research dates.publication; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "publication"
+      "raw_event_key": "publication",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-cosmos-2025-announcement",
@@ -21735,7 +21753,8 @@
       "evidence_locator": "research dates.announcement; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "announcement"
+      "raw_event_key": "announcement",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-cosmos-2025-repo-initial-release",
@@ -21773,7 +21792,8 @@
       "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
       "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
       "availability_scope": "official_dated_availability_claim",
-      "raw_event_key": "weights_first_available"
+      "raw_event_key": "weights_first_available",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa2-paper-first-submitted",
@@ -21793,7 +21813,8 @@
       "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "paper_first_submitted"
+      "raw_event_key": "paper_first_submitted",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa2-publication",
@@ -21831,7 +21852,8 @@
       "evidence_locator": "research dates.announcement; verified_source_date",
       "note_zh": "官方来源日期；不推断同日其他事件。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "announcement"
+      "raw_event_key": "announcement",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa2-repo-initial-release",
@@ -21869,7 +21891,8 @@
       "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
       "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
       "availability_scope": "official_dated_availability_claim",
-      "raw_event_key": "weights_first_available"
+      "raw_event_key": "weights_first_available",
+      "checked_at": "2026-10-28"
     },
     {
       "id": "wm-vjepa2-repo-release-label",
@@ -21889,7 +21912,8 @@
       "evidence_locator": "research dates.repo_release_label; verified_source_date",
       "note_zh": "当前 README 标签与 2025-06-11 公告并列；原因与时区未知，不静默合并。",
       "availability_scope": "source_specific_event",
-      "raw_event_key": "repo_release_label"
+      "raw_event_key": "repo_release_label",
+      "checked_at": "2026-10-28"
     }
   ],
   "research_bundles": [
@@ -51986,7 +52010,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-world-models-2018-publication",
@@ -52078,7 +52103,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-planet-publication",
@@ -52170,7 +52196,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-dreamer-publication",
@@ -52262,7 +52289,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-dreamerv2-publication",
@@ -52282,7 +52310,8 @@
           "evidence_locator": "research dates.publication; arxiv_comments_state_ICLR_2021",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "publication"
+          "raw_event_key": "publication",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-dreamerv2-announcement",
@@ -52446,7 +52475,8 @@
           "evidence_locator": "research dates.concept_proposed; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "concept_proposed"
+          "raw_event_key": "concept_proposed",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-dreamerv3-paper-first-submitted",
@@ -52466,7 +52496,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-dreamerv3-publication",
@@ -52558,7 +52589,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-ijepa-publication",
@@ -52596,7 +52628,8 @@
           "evidence_locator": "research dates.announcement; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "announcement"
+          "raw_event_key": "announcement",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-ijepa-repo-initial-release",
@@ -52634,7 +52667,8 @@
           "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
           "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
           "availability_scope": "official_dated_availability_claim",
-          "raw_event_key": "weights_first_available"
+          "raw_event_key": "weights_first_available",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa-paper-first-submitted",
@@ -52654,7 +52688,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa-publication",
@@ -52692,7 +52727,8 @@
           "evidence_locator": "research dates.announcement; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "announcement"
+          "raw_event_key": "announcement",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa-repo-initial-release",
@@ -52730,7 +52766,8 @@
           "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
           "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
           "availability_scope": "official_dated_availability_claim",
-          "raw_event_key": "weights_first_available"
+          "raw_event_key": "weights_first_available",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-genie-paper-first-submitted",
@@ -52750,7 +52787,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-genie-publication",
@@ -52842,7 +52880,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-openvla-publication",
@@ -52898,7 +52937,8 @@
           "evidence_locator": "research dates.repo_initial_release; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "repo_initial_release"
+          "raw_event_key": "repo_initial_release",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-openvla-weights-first-available",
@@ -52936,7 +52976,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-cosmos-2025-publication",
@@ -52956,7 +52997,8 @@
           "evidence_locator": "research dates.publication; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "publication"
+          "raw_event_key": "publication",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-cosmos-2025-announcement",
@@ -52976,7 +53018,8 @@
           "evidence_locator": "research dates.announcement; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "announcement"
+          "raw_event_key": "announcement",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-cosmos-2025-repo-initial-release",
@@ -53014,7 +53057,8 @@
           "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
           "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
           "availability_scope": "official_dated_availability_claim",
-          "raw_event_key": "weights_first_available"
+          "raw_event_key": "weights_first_available",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa2-paper-first-submitted",
@@ -53034,7 +53078,8 @@
           "evidence_locator": "research dates.paper_first_submitted; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "paper_first_submitted"
+          "raw_event_key": "paper_first_submitted",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa2-publication",
@@ -53072,7 +53117,8 @@
           "evidence_locator": "research dates.announcement; verified_source_date",
           "note_zh": "官方来源日期；不推断同日其他事件。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "announcement"
+          "raw_event_key": "announcement",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa2-repo-initial-release",
@@ -53110,7 +53156,8 @@
           "evidence_locator": "research dates.weights_first_available; official_dated_availability_claim_not_download_test",
           "note_zh": "官方当日可用性声明，未下载验证，也未穷尽首次文件历史；不是首次权重时间的独立结论。",
           "availability_scope": "official_dated_availability_claim",
-          "raw_event_key": "weights_first_available"
+          "raw_event_key": "weights_first_available",
+          "checked_at": "2026-10-28"
         },
         {
           "id": "wm-vjepa2-repo-release-label",
@@ -53130,7 +53177,8 @@
           "evidence_locator": "research dates.repo_release_label; verified_source_date",
           "note_zh": "当前 README 标签与 2025-06-11 公告并列；原因与时区未知，不静默合并。",
           "availability_scope": "source_specific_event",
-          "raw_event_key": "repo_release_label"
+          "raw_event_key": "repo_release_label",
+          "checked_at": "2026-10-28"
         }
       ],
       "edges": [
@@ -55342,7 +55390,7 @@
     "V-JEPA 2 的 6月11日公告与 6月25日 README release 标签保留并列；不猜测时区或原因。",
     "OpenVLA 7B/8B、V-JEPA 2 encoder/system 参数口径必须保留。",
     "OpenReview 原概念论文访问遇验证页面；未登录、未绕过，概念年份只使用官方 Meta 回顾证据。",
-    "配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。",
+    "原创教学SVG已制作，用于三类预测接口对照；不是论文原图或实测架构复原，未复制论文图片；外部图权利仍未核查。",
     "I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.",
     "README date conflict and parameter-count scope conflicts intentionally unresolved.",
     "No exact license-version or full dependency/data-rights audit performed."

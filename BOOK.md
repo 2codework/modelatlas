@@ -6351,7 +6351,7 @@ ServiceNow日常工作原子任务；源码公开不表示托管实例可自由�
 - V-JEPA 2 的 6月11日公告与 6月25日 README release 标签保留并列；不猜测时区或原因。
 - OpenVLA 7B/8B、V-JEPA 2 encoder/system 参数口径必须保留。
 - OpenReview 原概念论文访问遇验证页面；未登录、未绕过，概念年份只使用官方 Meta 回顾证据。
-- 配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。
+- 原创教学SVG已制作，用于三类预测接口对照；不是论文原图或实测架构复原，未复制论文图片；外部图权利仍未核查。
 - I-JEPA venue metadata differs between current arXiv comments (ICCV 2023) and official blog/repository (CVPR 2023). Existing null publication is safe; resolve with proceedings before filling it.
 - README date conflict and parameter-count scope conflicts intentionally unresolved.
 - No exact license-version or full dependency/data-rights audit performed.

@@ -47,7 +47,7 @@ class WorldModels(unittest.TestCase):
   original=list(B.COVERAGE_DISPLAY_OVERLAYS)+['其他缺口保持原样',{'scope':'structured gap'}]
   before=copy.deepcopy(original);ids=set(W.EXPECTED)|{'design-freecad-partdesign','design-godot-asset-pipeline','design-godot-spriteframes'}
   current=B.current_coverage_display(original,ids)
-  self.assertEqual(original,before);self.assertEqual(current[-2:],original[-2:]);self.assertEqual(current[:2],list(B.COVERAGE_DISPLAY_OVERLAYS.values()))
+  self.assertEqual(original,before);self.assertEqual(current[-2:],original[-2:]);self.assertEqual(current[:-2],list(B.COVERAGE_DISPLAY_OVERLAYS.values()))
  def test_coverage_overlay_requires_actual_nodes(self):
   import build as B
   gaps=list(B.COVERAGE_DISPLAY_OVERLAYS);self.assertEqual(B.current_coverage_display(gaps,set()),gaps)
@@ -57,3 +57,17 @@ class WorldModels(unittest.TestCase):
   for stale in B.COVERAGE_DISPLAY_OVERLAYS:self.assertNotIn(stale,d['coverage_gaps'])
   self.assertIn('未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题',raw)
   self.assertIn('视频、音乐、3D、机器人和世界模型仅有类别位置，缺独立系列',raw)
+
+ def test_dated_event_checkdate_uses_research_and_sources_not_build_clock(self):
+  b=W.adapt(self.r,self.q);sources={s['id']:s for s in self.r['sources']}
+  for event in b['events']:
+   if event['date']:
+    self.assertEqual(event['checked_at'],self.r['checked_at'])
+    for sid in event['source_ids']:self.assertEqual(event['checked_at'],sources[sid.removeprefix('wm-src-')]['checked_at'])
+  historical=copy.deepcopy(self.r);historical['checked_at']='2026-09-01'
+  for source in historical['sources']:source['checked_at']='2026-09-01'
+  self.assertTrue(all(e['checked_at']=='2026-09-01' for e in W.adapt(historical,self.q)['events'] if e['date']))
+ def test_created_svg_gap_overlays_current_only(self):
+  import build as B
+  stale='配图仅提供原创示意方案，未制作或复制论文图片；外部图权利尚未核查。'
+  d=json.loads((ROOT/'docs/data.json').read_text());self.assertNotIn(stale,d['coverage_gaps']);self.assertIn(stale,json.dumps(d['research_bundles'],ensure_ascii=False));self.assertIn(B.COVERAGE_DISPLAY_OVERLAYS[stale],d['coverage_gaps']);self.assertIn('不是论文原图或实测架构',B.COVERAGE_DISPLAY_OVERLAYS[stale]);self.assertEqual(B.current_coverage_display([stale],set()),[stale])
