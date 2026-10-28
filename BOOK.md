@@ -1,6 +1,6 @@
 # ModelAtlas · 大模型知识地图
 
-> v0.1 代表性研究首版；不是全厂商、全版本目录。最后核验：2026-10-28。来源核验不是独立复现实验。
+> v0.2 创作专题候选（r1 已上线；本候选尚未发布）；不是全厂商、全版本目录。最后核验：2026-10-28。来源核验不是独立复现实验。
 
 ## 阅读路径
 
@@ -27,6 +27,725 @@ sys-fineweb → sys-vectorsearch → sys-pgvector → sys-rag → sys-memory
 ### 从提示契约到受控coding agent
 任务、权限、工具日志、补丁、测试和预算齐全；未经批准不执行外部副作用。
 sys-promptcontracts → sys-skills → sys-mcp → sys-miniagent → sys-swebench
+
+## Figma MCP设计上下文与写画布
+
+供外部agent读取设计结构并执行受控写入的接口，不是独立模型。
+
+- ID / 类型：design-figma-mcp / tool_interface
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'rolling remote MCP; write beta', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-figma', 'design-src-figma-access']}
+- 版本：rolling remote MCP; write beta
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[预约界面从需求到可验收原型](https://2codework.github.io/agentwork/?case=design-ui-flow)
+- 对应实践（编辑学习关系）：[组件感知的设计到代码交接](https://2codework.github.io/agentwork/?case=design-design-code)
+- license：{'status': 'source_reviewed', 'details': 'proprietary service; complete contractual license unknown'}
+- cost：{'status': 'partially_verified', 'details': '部分写入beta免费，正式计费将变化；草稿外写入有Full seat条件，具体额度unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：MCP工具可用不代表批准改写全部设计文件。
+- 来源：https://developers.figma.com/docs/figma-mcp-server/
+- 来源：https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/
+
+## Firefly图像生成与编辑
+
+图像能力服务；agent负责选择输入、检查约束与失败恢复。
+
+- ID / 类型：design-firefly-image / model_service
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'Image5 / rolling API', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-firefly', 'design-src-adobe-rights']}
+- 版本：Image5 / rolling API
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[虚构品牌视觉方向与权利清单](https://2codework.github.io/agentwork/?case=design-brand-kit)
+- 对应实践（编辑学习关系）：[产品合成背景与保真验收](https://2codework.github.io/agentwork/?case=design-product-composite)
+- 对应实践（编辑学习关系）：[局部图像修补与非目标区保护](https://2codework.github.io/agentwork/?case=design-image-repair)
+- license：{'status': 'source_reviewed', 'details': 'proprietary; output rights depend on applicable terms'}
+- cost：{'status': 'partially_verified', 'details': '商业API计费与合同unknown；本轮零调用', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：生成的产品外观与字样需要人工验证，不能直接当实拍。
+- 来源：https://developer.adobe.com/firefly-services/docs/firefly-api/
+- 来源：https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html
+
+## Photoshop API v2确定性编辑编排
+
+模板、图层及智能对象工作流的服务节点；不是全部操作都由生成模型完成。
+
+- ID / 类型：design-photoshop-v2 / tool_service
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'v2 GA', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-photoshop', 'design-src-ps-migration']}
+- 版本：v2 GA
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[产品合成背景与保真验收](https://2codework.github.io/agentwork/?case=design-product-composite)
+- 对应实践（编辑学习关系）：[局部图像修补与非目标区保护](https://2codework.github.io/agentwork/?case=design-image-repair)
+- 对应实践（编辑学习关系）：[历史PSD批处理到v2迁移练习](https://2codework.github.io/agentwork/?case=design-ps-legacy-migrate)
+- license：{'status': 'source_reviewed', 'details': 'proprietary service; complete license unknown'}
+- cost：{'status': 'partially_verified', 'details': '商业服务合同与单价unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：linked资源失效会破坏模板，不能只保存PSD而忽略依赖。
+- 来源：https://developer.adobe.com/firefly-services/docs/photoshop/
+- 来源：https://developer.adobe.com/firefly-services/docs/photoshop/guides/
+
+## Photoshop API v1历史工作流
+
+保留旧模板和接口迁移知识，不作为新接入首选。
+
+- ID / 类型：design-photoshop-v1 / historical_tool
+- 生命周期：{'status': 'deprecated', 'as_of': '2026-10-28', 'applicable_version': 'v1 deprecated; announced EOL 2026-07-31', 'replacement_node_ids': ['design-photoshop-v2'], 'note_zh': '核验日已过官方EOL日期；仅历史迁移参考，不测试服务响应。', 'source_ids': ['design-src-ps-migration', 'design-src-ps-eol']}
+- 版本：v1 deprecated; announced EOL 2026-07-31
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[历史PSD批处理到v2迁移练习](https://2codework.github.io/agentwork/?case=design-ps-legacy-migrate)
+- license：{'status': 'unknown', 'details': 'unknown'}
+- cost：{'status': 'partially_verified', 'details': '历史合同unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：不能把旧教程原样用于v2。
+- 来源：https://developer.adobe.com/firefly-services/docs/photoshop/guides/
+- 来源：https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/
+
+## Canva模板数据填充与导出
+
+结构化模板自动化；内容规划和审校是agent层职责。
+
+- ID / 类型：design-canva-template / tool_service
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'unified SDK / REST rolling docs', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-canva', 'design-src-canva-autofill', 'design-src-canva-rights']}
+- 版本：unified SDK / REST rolling docs
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[虚构品牌视觉方向与权利清单](https://2codework.github.io/agentwork/?case=design-brand-kit)
+- 对应实践（编辑学习关系）：[多语种海报变体与模板填充](https://2codework.github.io/agentwork/?case=design-poster-localize)
+- 对应实践（编辑学习关系）：[资产权利与内容凭证交付](https://2codework.github.io/agentwork/?case=design-asset-provenance)
+- license：{'status': 'source_reviewed', 'details': 'Canva content license by asset category; API terms unknown'}
+- cost：{'status': 'partially_verified', 'details': '账号、模板资格、商业计划与单价unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：设计导出成功不代表每种素材都能再分发或用于logo。
+- 来源：https://www.canva.dev/docs/apps/rest-apis/
+- 来源：https://www.canva.dev/docs/apps/rest-apis/autofill-guide/
+- 来源：https://www.canva.com/policies/content-license-agreement/
+
+## DTCG设计token交换
+
+跨设计工具与代码的语义变量交换；不是模型或agent。
+
+- ID / 类型：design-dtcg / specification
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '2025.10 final', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-tokens', 'design-src-tokens-draft']}
+- 版本：2025.10 final
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[品牌token规范化与双主题](https://2codework.github.io/agentwork/?case=design-tokens-migration)
+- license：{'status': 'source_reviewed', 'details': 'W3C Community Final Specification Agreement; not W3C Standard'}
+- cost：{'status': 'partially_verified', 'details': '公开阅读；工程集成成本unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：旧draft URL会漂移，不可当稳定实现契约。
+- 来源：https://www.designtokens.org/TR/2025.10/format/
+- 来源：https://www.designtokens.org/tr/drafts/format/
+
+## WCAG 2.2验收标准
+
+界面验收约束；模型可以辅助发现问题而不能认证合规。
+
+- ID / 类型：design-wcag / standard
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'WCAG 2.2 Recommendation 2024-12-12', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-wcag']}
+- 版本：WCAG 2.2 Recommendation 2024-12-12
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[预约界面从需求到可验收原型](https://2codework.github.io/agentwork/?case=design-ui-flow)
+- 对应实践（编辑学习关系）：[品牌token规范化与双主题](https://2codework.github.io/agentwork/?case=design-tokens-migration)
+- 对应实践（编辑学习关系）：[表单可访问性审校](https://2codework.github.io/agentwork/?case=design-a11y-audit)
+- 对应实践（编辑学习关系）：[从事实表到可编辑演示](https://2codework.github.io/agentwork/?case=design-slides-story)
+- license：{'status': 'source_reviewed', 'details': 'W3C document rules; not asset license'}
+- cost：{'status': 'partially_verified', 'details': '公开阅读；审计人力成本unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：无自动错误不等于完整通过，仍需键盘和辅助技术检查。
+- 来源：https://www.w3.org/TR/WCAG22/
+
+## Inkscape位图描摹
+
+经典矢量化流程，可被agent安排但本身无自主规划。
+
+- ID / 类型：design-inkscape-trace / ordinary_tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'guide 1.3; installed version unknown', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-inkscape']}
+- 版本：guide 1.3; installed version unknown
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[经典剪影矢量化与节点清理](https://2codework.github.io/agentwork/?case=design-vector-trace)
+- license：{'status': 'unknown', 'details': 'unknown'}
+- cost：{'status': 'partially_verified', 'details': '本轮未安装；发布包费用unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：描摹不是原始曲线恢复，复杂照片不适合直接转logo。
+- 来源：https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html
+
+## Google Slides结构化排版
+
+把批准内容写入可编辑页面元素；API不是审美决策模型。
+
+- ID / 类型：design-slides-api / tool_interface
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'API v1', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-slides']}
+- 版本：API v1
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[从事实表到可编辑演示](https://2codework.github.io/agentwork/?case=design-slides-story)
+- license：{'status': 'source_reviewed', 'details': 'proprietary service; asset rights separate'}
+- cost：{'status': 'partially_verified', 'details': '配额、账号与收费unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：文本框写入成功不表示无溢出，必须检查渲染结果。
+- 来源：https://developers.google.com/workspace/slides/api/guides/overview
+
+## Playwright视觉回归
+
+基线截图对比帮助检测布局变化，不负责定义哪版更好。
+
+- ID / 类型：design-visual-regression / evaluation_tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'rolling docs; release unknown', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-playwright', 'design-src-pw-license']}
+- 版本：rolling docs; release unknown
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[组件感知的设计到代码交接](https://2codework.github.io/agentwork/?case=design-design-code)
+- 对应实践（编辑学习关系）：[响应式视觉回归与差异分流](https://2codework.github.io/agentwork/?case=design-visual-qa)
+- license：{'status': 'source_reviewed', 'details': 'Apache-2.0'}
+- cost：{'status': 'partially_verified', 'details': 'Apache-2.0软件；CI/浏览器运行成本unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：不得用自动更新基线掩盖缺陷。
+- 来源：https://playwright.dev/docs/test-snapshots
+- 来源：https://github.com/microsoft/playwright/blob/main/LICENSE
+
+## Storybook组件可访问性检查
+
+在组件状态中检查可访问性问题，结合手工状态覆盖。
+
+- ID / 类型：design-storybook-a11y / evaluation_tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': 'docs 10.6', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-storybook', 'design-src-sb-license']}
+- 版本：docs 10.6
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[表单可访问性审校](https://2codework.github.io/agentwork/?case=design-a11y-audit)
+- license：{'status': 'source_reviewed', 'details': 'MIT'}
+- cost：{'status': 'partially_verified', 'details': 'MIT软件；托管增值服务价格unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：默认状态通过不代表弹窗、错误态、加载态通过。
+- 来源：https://storybook.js.org/docs/writing-tests/accessibility-testing
+- 来源：https://github.com/storybookjs/storybook/blob/next/LICENSE
+
+## C2PA素材来源链
+
+记录可验证来源与编辑声明，辅助资产交付审计。
+
+- ID / 类型：design-c2pa / specification
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '2.5 October 2026', 'replacement_node_ids': [], 'note_zh': '文档状态不等于运行验证；具体账号与版本另验。', 'source_ids': ['design-src-c2pa']}
+- 版本：2.5 October 2026
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[资产权利与内容凭证交付](https://2codework.github.io/agentwork/?case=design-asset-provenance)
+- license：{'status': 'source_reviewed', 'details': '规范条款与实现许可分开; exact implementation license unknown'}
+- cost：{'status': 'partially_verified', 'details': '公开规范；签名证书/服务成本unknown', 'exact_price': 'unknown'}
+- 学习步骤（未执行）：固定输入、权限与版本
+- 学习步骤（未执行）：草稿生成后按案例rubric检查
+- 学习步骤（未执行）：保留原件、差异与失败记录
+- 注意：凭证缺失不自动等于伪造；签名有效不等于版权可用。
+- 注意：来源凭证本身不能证明内容真实、准确或符合事实。
+- 来源：https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html
+- 来源：https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html
+
+## MusicGen v1
+
+离散音频 token 自回归音乐生成，学习文本和旋律条件。
+
+- ID / 类型：music-musicgen / model
+- 生命周期：historical
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[无歌词配乐草图](https://2codework.github.io/agentwork/?case=music-musicgen-sketch)
+- license：代码 MIT / 权重 CC-BY-NC 4.0；仅按许可允许的非商业研究使用
+- license_notes：代码 MIT / 权重 CC-BY-NC 4.0；仅按许可允许的非商业研究使用
+- historical_context：固定旧版用于理解方法；不因过时删除
+- 来源：https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md
+
+## JASCO v1
+
+Flow Matching 加入时间局部和弦、鼓与旋律控制。
+
+- ID / 类型：music-jasco / model
+- 生命周期：historical
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[和弦与节奏约束编曲](https://2codework.github.io/agentwork/?case=music-jasco-arrangement)
+- license：代码 MIT / 权重 CC-BY-NC 4.0
+- license_notes：代码 MIT / 权重 CC-BY-NC 4.0
+- historical_context：固定旧版用于理解方法；不因过时删除
+- 来源：https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md
+- 来源：https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md
+
+## Stable Audio Open 1.0
+
+开放权重音效与音频生成；不等同于当前云服务版本。
+
+- ID / 类型：music-stable-audio-open / model
+- 生命周期：historical
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- license：Stable Audio Open 1.0 的 LICENSE.md 标 2024-07-05 Community License；商业使用须注册，关联实体合计年收入超过 100 万美元触发另行许可要求；分发有归属声明等义务。仍需就具体部署完整审阅，不是无条件商用。
+- license_notes：Stable Audio Open 1.0 的 LICENSE.md 标 2024-07-05 Community License；商业使用须注册，关联实体合计年收入超过 100 万美元触发另行许可要求；分发有归属声明等义务。仍需就具体部署完整审阅，不是无条件商用。
+- historical_context：固定旧版用于理解方法；不因过时删除
+- 来源：https://stability.ai/news-updates/stable-audio-open-research-paper
+- 来源：https://huggingface.co/stabilityai/stable-audio-open-1.0/blob/main/LICENSE.md
+
+## HTDemucs v4
+
+波形/频谱混合模型分离人声、鼓、贝斯及其他。
+
+- ID / 类型：music-demucs / model
+- 生命周期：historical
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[原创混合音轨分轨诊断](https://2codework.github.io/agentwork/?case=music-stem-separation)
+- license：需复核模型与依赖许可；分轨不消除原曲权利
+- license_notes：需复核模型与依赖许可；分轨不消除原曲权利
+- historical_context：固定旧版用于理解方法；不因过时删除
+- 来源：https://github.com/facebookresearch/demucs
+
+## Whisper
+
+多语种 ASR、语音翻译与语言识别。
+
+- ID / 类型：music-whisper / model
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[Whisper 离线转写与人工校对](https://2codework.github.io/agentwork/?case=music-speech-transcript)
+- license：代码与权重 MIT；语料录音仍需同意
+- license_notes：代码与权重 MIT；语料录音仍需同意
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://github.com/openai/whisper
+
+## gpt-4o-transcribe-diarize
+
+说话人标签转写的旧 API 专用模型。
+
+- ID / 类型：music-diarize / model
+- 生命周期：deprecated
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[旧说话人分离接口迁移审阅](https://2codework.github.io/agentwork/?case=music-diarization-migrate)
+- license：API 计费；上传前取得录音/数据处理许可
+- license_notes：API 计费；上传前取得录音/数据处理许可
+- historical_context：固定旧版用于理解方法；不因过时删除
+- 来源：https://developers.openai.com/api/docs/guides/speech-to-text
+
+## Lyria 3.5 / Clip
+
+Gemini API 音乐生成；Clip 预览与完整歌曲模型区分。
+
+- ID / 类型：music-lyria / model
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[原创歌词到完整歌曲结构](https://2codework.github.io/agentwork/?case=music-lyria-song)
+- license：云 API 额度与服务条款；输出权利不等于版权登记保证
+- license_notes：云 API 额度与服务条款；输出权利不等于版权登记保证
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://ai.google.dev/gemini-api/docs/music-generation
+
+## Suno generation service
+
+歌曲/歌词/编曲产品入口，底层版本与下载政策需分开记。
+
+- ID / 类型：music-suno / tool
+- 生命周期：unknown
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[歌词辅助与发行资格台账](https://2codework.github.io/agentwork/?case=music-suno-lyrics)
+- license：付费/免费和生成/下载日期分列，发行前确认现行条款与权益
+- license_notes：付费/免费和生成/下载日期分列，发行前确认现行条款与权益
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://www.suno.com/blog/suno-updates-tos
+- 来源：https://help.suno.com/en/articles/2410177
+
+## Neutron 5 Mix Assistant
+
+轨道混音建议与处理，供人类监听修改。
+
+- ID / 类型：music-neutron / tool
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[混音助手的 A/B 实验](https://2codework.github.io/agentwork/?case=music-mix-assistant)
+- license：商业插件；未购买/未安装；参考素材须有权
+- license_notes：商业插件；未购买/未安装；参考素材须有权
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://www.izotope.com/products/neutron/
+
+## Ozone 12 Master Assistant
+
+母带处理建议和信号链，不替代听感判断。
+
+- ID / 类型：music-ozone / tool
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[母带助手不等于一键发布](https://2codework.github.io/agentwork/?case=music-master-assistant)
+- license：商业插件；不承诺固定价格；禁止盗版
+- license_notes：商业插件；不承诺固定价格；禁止盗版
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://docs.izotope.com/ozone12/en/index-en.html
+
+## Auphonic multitrack
+
+语音多轨自适应后期和混音输出。
+
+- ID / 类型：music-auphonic / tool
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[双主持播客多轨后期](https://2codework.github.io/agentwork/?case=music-podcast-post)
+- license：按服务额度/时长核账；上传受隐私与合同限制
+- license_notes：按服务额度/时长核账；上传受隐私与合同限制
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://us1.auphonic.com/help/algorithms/multitrack.html
+
+## ElevenLabs SFX
+
+文本描述生成音效，含时长与循环控制。
+
+- ID / 类型：music-eleven-sfx / model
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[虚构游戏音效变体与循环](https://2codework.github.io/agentwork/?case=music-sfx-foley)
+- license：按时长/credits 预算；素材/发行权另审
+- license_notes：按时长/credits 预算；素材/发行权另审
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://elevenlabs.io/docs/overview/capabilities/sound-effects
+
+## ElevenLabs TTS
+
+文字到语音；仅使用有合法授权的产品内置或设计声线。
+
+- ID / 类型：music-eleven-tts / model
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[合法合成声线的原创微播客](https://2codework.github.io/agentwork/?case=music-tts-podcast)
+- license：付费额度与声线使用条件复核；不克隆、冒充真人
+- license_notes：付费额度与声线使用条件复核；不克隆、冒充真人
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://elevenlabs.io/docs/overview/capabilities/text-to-speech
+
+## Accessible captions QA
+
+同步语音和必要非语音文字信息；自动输出需人工核对。
+
+- ID / 类型：music-captions / standard
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[可访问性字幕从 ASR 到人工验收](https://2codework.github.io/agentwork/?case=music-accessible-captions)
+- license：人工校对成本；录音和转写均需最小化访问
+- license_notes：人工校对成本；录音和转写均需最小化访问
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://www.w3.org/WAI/media/av/captions/
+
+## Magenta RealTime 2
+
+交互式实时音乐生成；v1 为 legacy 分支。
+
+- ID / 类型：music-mrt2 / model
+- 生命周期：current
+- 版本：未核验
+- 核验：2026-10-28 · source_reviewed_not_replicated
+- 对应实践（编辑学习关系）：[实时音乐控制的状态机演练](https://2codework.github.io/agentwork/?case=music-mrt-live)
+- license：代码 Apache-2.0；权重许可未完成独立审查，商用待确认
+- license_notes：代码 Apache-2.0；权重许可未完成独立审查，商用待确认
+- historical_context：当前仅确认官方文档陈述，未证明账号/地区实际可用
+- 来源：https://github.com/magenta/magenta-realtime
+
+## Wan2.2 文/图/音驱动视频
+
+生成镜头的模型家族，不负责项目权限、预算、剪辑交付或事实核验。
+
+- ID / 类型：vid-wan22 / model_family
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-wan']}
+- 版本：2.2
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[虚构产品15秒图生视频演示](https://2codework.github.io/agentwork/?case=video-product-i2v)
+- 对应实践（编辑学习关系）：[原创动画角色跨镜头一致性](https://2codework.github.io/agentwork/?case=video-character-continuity)
+- 对应实践（编辑学习关系）：[不克隆音色的配音与节奏](https://2codework.github.io/agentwork/?case=video-narration-sync)
+- 对应实践（编辑学习关系）：[历史视频微调迁移教学](https://2codework.github.io/agentwork/?case=video-historical-edit-migration)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/Wan-Video/Wan2.2
+
+## LTX-Video 历史入口
+
+维护者已把主要开发入口转至LTX-2；旧版用于版本迁移教学。
+
+- ID / 类型：vid-ltx-video / model_family
+- 生命周期：{'status': 'superseded_per_maintainer', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': ['vid-ltx2'], 'source_ids': ['vid-src-ltxv']}
+- 版本：LTX-Video legacy
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[历史视频微调迁移教学](https://2codework.github.io/agentwork/?case=video-historical-edit-migration)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/Lightricks/LTX-Video
+
+## LTX-2 音视频生成
+
+音视频生成与训练实现，后端、权重许可和资源要求需逐版本固定。
+
+- ID / 类型：vid-ltx2 / model_family
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-ltx2']}
+- 版本：LTX-2 family; revision not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[原创动画角色跨镜头一致性](https://2codework.github.io/agentwork/?case=video-character-continuity)
+- 对应实践（编辑学习关系）：[不克隆音色的配音与节奏](https://2codework.github.io/agentwork/?case=video-narration-sync)
+- 对应实践（编辑学习关系）：[历史视频微调迁移教学](https://2codework.github.io/agentwork/?case=video-historical-edit-migration)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/Lightricks/LTX-2
+
+## CogVideoX
+
+视频扩散Transformer路线；代码与不同规模权重的许可边界须分开。
+
+- ID / 类型：vid-cogvideox / model_family
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-cog', 'vid-src-cogpaper']}
+- 版本：CogVideoX-2B/5B / v3 2025-03-26
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/zai-org/CogVideo
+- 来源：https://arxiv.org/abs/2408.06072
+
+## AnimateDiff 运动模块
+
+在图像扩散基础上引入运动模块的历史代表方法；不是退役断言。
+
+- ID / 类型：vid-animatediff / method
+- 生命周期：{'status': 'historical_pinned_specification', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-animatediff', 'vid-src-animatepaper']}
+- 版本：revision unknown / v2 2024-02-08
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[无对白教育动画循环](https://2codework.github.io/agentwork/?case=video-silent-animation-loop)
+- 对应实践（编辑学习关系）：[历史视频微调迁移教学](https://2codework.github.io/agentwork/?case=video-historical-edit-migration)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/guoyww/AnimateDiff
+- 来源：https://arxiv.org/abs/2307.04725
+
+## Tune-A-Video 单视频微调
+
+历史单视频微调研究；与免训练图生视频是不同成本/控制路线。
+
+- ID / 类型：vid-tune-a-video / method
+- 生命周期：{'status': 'historical_pinned_specification', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-tune', 'vid-src-tunepaper']}
+- 版本：ICCV 2023 implementation / v2 2023-03-17
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[历史视频微调迁移教学](https://2codework.github.io/agentwork/?case=video-historical-edit-migration)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/showlab/Tune-A-Video
+- 来源：https://arxiv.org/abs/2212.11565
+
+## ComfyUI 图式运行时
+
+节点图连接模型和处理步骤；增加目标、状态、反馈及权限控制才构成本文Agent设计。
+
+- ID / 类型：vid-comfyui / runtime
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-comfy']}
+- 版本：revision not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[虚构产品15秒图生视频演示](https://2codework.github.io/agentwork/?case=video-product-i2v)
+- 对应实践（编辑学习关系）：[项目归档与局部重做](https://2codework.github.io/agentwork/?case=video-archive-reproducible)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/Comfy-Org/ComfyUI
+
+## Whisper 语音识别
+
+用于字幕初稿，不生成声音；逐字与时间码仍需校对。
+
+- ID / 类型：vid-whisper / model_family
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-whisper']}
+- 版本：revision not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[十分钟培训课拆成可维护章节](https://2codework.github.io/agentwork/?case=video-training-chapters)
+- 对应实践（编辑学习关系）：[双语字幕与无障碍版本](https://2codework.github.io/agentwork/?case=video-caption-accessibility)
+- 对应实践（编辑学习关系）：[视频Agent的证据型质检](https://2codework.github.io/agentwork/?case=video-qc-evidence)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/openai/whisper
+
+## WhisperX 对齐流程
+
+识别与时间对齐工具；说话人编号不证明真实身份。
+
+- ID / 类型：vid-whisperx / tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-whisperx']}
+- 版本：revision not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[双语字幕与无障碍版本](https://2codework.github.io/agentwork/?case=video-caption-accessibility)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/m-bain/whisperX
+
+## FFmpeg 媒体处理
+
+按明确输入参数执行剪裁、混流、编码，不自主决定叙事。
+
+- ID / 类型：vid-ffmpeg / tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-ffmpeg']}
+- 版本：online documentation; local binary unknown
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[虚构产品15秒图生视频演示](https://2codework.github.io/agentwork/?case=video-product-i2v)
+- 对应实践（编辑学习关系）：[无对白教育动画循环](https://2codework.github.io/agentwork/?case=video-silent-animation-loop)
+- 对应实践（编辑学习关系）：[原素材重剪为30秒科普预告](https://2codework.github.io/agentwork/?case=video-edit-original-footage)
+- 对应实践（编辑学习关系）：[不克隆音色的配音与节奏](https://2codework.github.io/agentwork/?case=video-narration-sync)
+- 对应实践（编辑学习关系）：[视频Agent的证据型质检](https://2codework.github.io/agentwork/?case=video-qc-evidence)
+- 对应实践（编辑学习关系）：[项目归档与局部重做](https://2codework.github.io/agentwork/?case=video-archive-reproducible)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://ffmpeg.org/ffmpeg.html
+
+## OpenTimelineIO 时间线交换
+
+序列化编辑决策与素材引用；素材归档和渲染另做。
+
+- ID / 类型：vid-otio / standard_or_format
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-otio']}
+- 版本：revision not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[从一分钟原创短故事到可拍分镜](https://2codework.github.io/agentwork/?case=video-brief-storyboard)
+- 对应实践（编辑学习关系）：[十分钟培训课拆成可维护章节](https://2codework.github.io/agentwork/?case=video-training-chapters)
+- 对应实践（编辑学习关系）：[原创短片的长叙事预演](https://2codework.github.io/agentwork/?case=video-long-film-previs)
+- 对应实践（编辑学习关系）：[原素材重剪为30秒科普预告](https://2codework.github.io/agentwork/?case=video-edit-original-footage)
+- 对应实践（编辑学习关系）：[项目归档与局部重做](https://2codework.github.io/agentwork/?case=video-archive-reproducible)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/AcademySoftwareFoundation/OpenTimelineIO
+
+## Kdenlive 字幕与转录剪辑
+
+依据配置的识别引擎制作字幕与选片，人工保留最终剪辑决定。
+
+- ID / 类型：vid-kdenlive / tool
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-kdenlive']}
+- 版本：26.08 manual
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[十分钟培训课拆成可维护章节](https://2codework.github.io/agentwork/?case=video-training-chapters)
+- 对应实践（编辑学习关系）：[双语字幕与无障碍版本](https://2codework.github.io/agentwork/?case=video-caption-accessibility)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html
+
+## FilmAgent 虚拟制片研究
+
+多角色在受限3D虚拟环境协作，需与实际电影拍摄能力区分。
+
+- ID / 类型：vid-filmagent / agent_system
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-filmagent']}
+- 版本：research project page
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[从一分钟原创短故事到可拍分镜](https://2codework.github.io/agentwork/?case=video-brief-storyboard)
+- 对应实践（编辑学习关系）：[原创短片的长叙事预演](https://2codework.github.io/agentwork/?case=video-long-film-previs)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://filmagent.github.io/
+
+## ViMax 制片编排
+
+把策划、角色、镜头和生成连接起来；API配置示例不保证本地无付费互换。
+
+- ID / 类型：vid-vimax / agent_system
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-vimax']}
+- 版本：v1.2.0 announcement; head not pinned
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[从一分钟原创短故事到可拍分镜](https://2codework.github.io/agentwork/?case=video-brief-storyboard)
+- 对应实践（编辑学习关系）：[原创动画角色跨镜头一致性](https://2codework.github.io/agentwork/?case=video-character-continuity)
+- 对应实践（编辑学习关系）：[原创短片的长叙事预演](https://2codework.github.io/agentwork/?case=video-long-film-previs)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/HKUDS/ViMax
+
+## VideoAgent 编辑框架（HKUDS）
+
+多Agent编辑研究系统，不等于同名2024长视频问答项目。
+
+- ID / 类型：vid-videoagent-edit / agent_system
+- 生命周期：{'status': 'current_documentation_reviewed', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-videoagent', 'vid-src-videoagentpaper']}
+- 版本：head not pinned / v1 metadata reviewed
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[原素材重剪为30秒科普预告](https://2codework.github.io/agentwork/?case=video-edit-original-footage)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://github.com/HKUDS/VideoAgent
+- 来源：https://arxiv.org/abs/2606.23327
+
+## VideoAgent 长视频理解（2024）
+
+检索视觉证据进行问答的研究系统，不应列作视频生成模型。
+
+- ID / 类型：vid-videoagent-understand / agent_system
+- 生命周期：{'status': 'historical_pinned_specification', 'as_of': '2026-10-28', 'applicable_version': '仅上述来源快照；部署前固定commit与权重SHA256', 'replacement_node_ids': [], 'source_ids': ['vid-src-understand']}
+- 版本：paper metadata reviewed
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- 对应实践（编辑学习关系）：[视频Agent的证据型质检](https://2codework.github.io/agentwork/?case=video-qc-evidence)
+- license：代码、权重、输入素材、字体音乐、插件分别核验；未完成法律/商用审核
+- 学习步骤（未执行）：先阅读版本和许可，保存配置与来源。
+- 学习步骤（未执行）：只用原创合成输入建立小样与人工真值。
+- 学习步骤（未执行）：计量成本，逐镜头审查，保存失败，不以演示代替复现。
+- 注意：公开仓库不等于免费运行、权重无条件商用、生产可靠或自主Agent。
+- 来源：https://arxiv.org/abs/2403.10517
 
 ## 自然语言处理 NLP
 
@@ -1552,6 +2271,20 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - node_id：sys-gsm8k
 
 ## 关系索引（教学建议不代表历史因果）
+- design-dtcg → provides_design_context → design-figma-mcp · editorial_learning_relation_not_vendor_integration_claim · design-src-figma, design-src-figma-access, design-src-tokens, design-src-tokens-draft
+- design-wcag → guides_evaluation → design-storybook-a11y · editorial_learning_relation_not_vendor_integration_claim · design-src-sb-license, design-src-storybook, design-src-wcag
+- design-photoshop-v1 → superseded_by → design-photoshop-v2 · editorial_learning_relation_not_vendor_integration_claim · design-src-ps-migration, design-src-photoshop
+- design-c2pa → audits_provenance → design-firefly-image · editorial_learning_relation_not_vendor_integration_claim · design-src-c2pa, design-src-firefly, design-src-adobe-rights
+- design-visual-regression → evaluates_output → design-figma-mcp · editorial_learning_relation_not_vendor_integration_claim · design-src-pw-license, design-src-figma, design-src-playwright, design-src-figma-access
+- vid-whisperx → uses → vid-whisper · primary_sources_reviewed_not_executed · vid-src-whisperx
+- vid-ltx-video → superseded_by → vid-ltx2 · primary_sources_reviewed_not_executed · vid-src-ltxv
+- vid-vimax → learning_path → vid-wan22 · editorial_learning_relation · 
+- vid-filmagent → learning_path → vid-otio · editorial_learning_relation · 
+- vid-videoagent-edit → learning_path → vid-ffmpeg · editorial_learning_relation · 
+- vid-comfyui → learning_path → vid-otio · editorial_learning_relation · 
+- vid-wan22 → learning_path → vid-whisper · editorial_learning_relation · 
+- vid-whisper → learning_path → vid-kdenlive · editorial_learning_relation · 
+- vid-kdenlive → learning_path → vid-otio · editorial_learning_relation · 
 - llama-2 → version_of → llama · primary_source_checked · found-src-026
 - llama → developed_by → org-llama · primary_source_checked · found-src-026
 - qwen-2023 → version_of → qwen · primary_source_checked · found-src-027
@@ -1638,6 +2371,65 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - rag → extends → sys-rag · editorial_cross_module · sys-src-rag
 
 ## 来源目录
+- design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-figma-access · https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-firefly · https://developer.adobe.com/firefly-services/docs/firefly-api/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-photoshop · https://developer.adobe.com/firefly-services/docs/photoshop/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-ps-migration · https://developer.adobe.com/firefly-services/docs/photoshop/guides/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-canva · https://www.canva.dev/docs/apps/rest-apis/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-canva-autofill · https://www.canva.dev/docs/apps/rest-apis/autofill-guide/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-canva-rights · https://www.canva.com/policies/content-license-agreement/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-tokens · https://www.designtokens.org/TR/2025.10/format/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-tokens-draft · https://www.designtokens.org/tr/drafts/format/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-wcag · https://www.w3.org/TR/WCAG22/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-inkscape · https://inkscape-manuals.readthedocs.io/en/latest/tracing-an-image.html · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-slides · https://developers.google.com/workspace/slides/api/guides/overview · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-playwright · https://playwright.dev/docs/test-snapshots · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-storybook · https://storybook.js.org/docs/writing-tests/accessibility-testing · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-c2pa · https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-adobe-rights · https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-pw-license · https://github.com/microsoft/playwright/blob/main/LICENSE · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-sb-license · https://github.com/storybookjs/storybook/blob/next/LICENSE · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
+- design-src-ps-eol · https://developer.adobe.com/firefly-services/docs/photoshop/getting-started/deprecation-announcement/ · 核验 2026-10-28 · 独立审查反馈后实际打开核验；未执行服务。
+- design-src-c2pa-explainer · https://c2pa.org/specifications/specifications/2.2/explainer/Explainer.html · 核验 2026-10-28 · 独立审查反馈后实际打开核验；未执行服务。
+- music-src-musicgen · https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md · 核验 2026-10-28 · 原始来源页面
+- music-src-jasco · https://github.com/facebookresearch/audiocraft/blob/main/docs/JASCO.md · 核验 2026-10-28 · 原始来源页面
+- music-src-jasco-card · https://github.com/facebookresearch/audiocraft/blob/main/model_cards/JASCO_MODEL_CARD.md · 核验 2026-10-28 · 原始来源页面
+- music-src-stable · https://stability.ai/news-updates/stable-audio-open-research-paper · 核验 2026-10-28 · 原始来源页面
+- music-src-stable-license · https://huggingface.co/stabilityai/stable-audio-open-1.0/blob/main/LICENSE.md · 核验 2026-10-28 · 原始来源页面
+- music-src-demucs · https://github.com/facebookresearch/demucs · 核验 2026-10-28 · 原始来源页面
+- music-src-whisper · https://github.com/openai/whisper · 核验 2026-10-28 · 原始来源页面
+- music-src-asr · https://developers.openai.com/api/docs/guides/speech-to-text · 核验 2026-10-28 · 原始来源页面
+- music-src-lyria · https://ai.google.dev/gemini-api/docs/music-generation · 核验 2026-10-28 · 原始来源页面
+- music-src-suno-new · https://www.suno.com/blog/suno-updates-tos · 核验 2026-10-28 · 原始来源页面
+- music-src-suno-old · https://help.suno.com/en/articles/2410177 · 核验 2026-10-28 · 原始来源页面
+- music-src-neutron · https://www.izotope.com/products/neutron/ · 核验 2026-10-28 · 原始来源页面
+- music-src-ozone · https://docs.izotope.com/ozone12/en/index-en.html · 核验 2026-10-28 · 原始来源页面
+- music-src-auphonic · https://us1.auphonic.com/help/algorithms/multitrack.html · 核验 2026-10-28 · 原始来源页面
+- music-src-sfx · https://elevenlabs.io/docs/overview/capabilities/sound-effects · 核验 2026-10-28 · 原始来源页面
+- music-src-tts · https://elevenlabs.io/docs/overview/capabilities/text-to-speech · 核验 2026-10-28 · 原始来源页面
+- music-src-captions · https://www.w3.org/WAI/media/av/captions/ · 核验 2026-10-28 · 原始来源页面
+- music-src-mrt · https://github.com/magenta/magenta-realtime · 核验 2026-10-28 · 原始来源页面
+- vid-src-wan · https://github.com/Wan-Video/Wan2.2 · 核验 2026-10-28 · 官方公开推理代码与权重；5B TI2V示例24GB显存，A14B I2V及S2V示例80GB；这是指定配置的门槛，不是所有流程的成本。
+- vid-src-ltxv · https://github.com/Lightricks/LTX-Video · 核验 2026-10-28 · 维护者声明LTX-2是主要开发入口；保留旧流程用于历史比较，迁移必须重核权重和接口。
+- vid-src-ltx2 · https://github.com/Lightricks/LTX-2 · 核验 2026-10-28 · 官方音视频生成与LoRA训练仓库；存在多份许可，不能从开放代码推断全部权重无条件商用。
+- vid-src-cog · https://github.com/zai-org/CogVideo · 核验 2026-10-28 · 旧THUDM URL跳转此官方仓库；2B与5B权重许可不同，代码Apache-2.0并不覆盖所有权重。
+- vid-src-cogpaper · https://arxiv.org/abs/2408.06072 · 核验 2026-10-28 · 视频时空VAE和扩散Transformer方法；论文版本性能不等于每个历史权重规格。
+- vid-src-animatediff · https://github.com/guoyww/AnimateDiff · 核验 2026-10-28 · 运动模块框架，不是完整制片Agent；基础图像权重与LoRA许可另查。
+- vid-src-animatepaper · https://arxiv.org/abs/2307.04725 · 核验 2026-10-28 · 为同一基础图像模型家族增加可迁移运动模块；历史方法教学保留，不声称官方弃用。
+- vid-src-tune · https://github.com/showlab/Tune-A-Video · 核验 2026-10-28 · 单视频微调研究实现；不能默认兼容最新环境。
+- vid-src-tunepaper · https://arxiv.org/abs/2212.11565 · 核验 2026-10-28 · 单视频微调与结构引导的历史路线。
+- vid-src-comfy · https://github.com/Comfy-Org/ComfyUI · 核验 2026-10-28 · 图式推理编排工具；自定义节点是代码供应链边界，图本身不等于自主Agent。
+- vid-src-whisper · https://github.com/openai/whisper · 核验 2026-10-28 · 自动语音识别工具/模型；不是配音或音色克隆。
+- vid-src-whisperx · https://github.com/m-bain/whisperX · 核验 2026-10-28 · 支持对齐流程；重叠语音及字典外内容有局限；说话人分离路径需要额外模型协议和令牌，本任务不启用。
+- vid-src-ffmpeg · https://ffmpeg.org/ffmpeg.html · 核验 2026-10-28 · 媒体处理工具；使用前核验构建参数和编码器许可。
+- vid-src-otio · https://github.com/AcademySoftwareFoundation/OpenTimelineIO · 核验 2026-10-28 · 剪辑时间线交换数据与API，不是视频渲染器。
+- vid-src-kdenlive · https://docs.kdenlive.org/en/effects_and_filters/speech_to_text.html · 核验 2026-10-28 · 官方文档描述转录、字幕和按转录选片；功能需先配置识别引擎与模型。
+- vid-src-filmagent · https://filmagent.github.io/ · 核验 2026-10-28 · 虚拟3D空间的多角色制片研究；不能外推为任意实拍场景或免费端到端电影制作。
+- vid-src-vimax · https://github.com/HKUDS/ViMax · 核验 2026-10-28 · Agent编排脚本分镜及生成；示例要求LLM/图像/视频API配置，不能等同已支持无账号本地免费替代。
+- vid-src-videoagent · https://github.com/HKUDS/VideoAgent · 核验 2026-10-28 · 视频理解、编辑、重制Agent框架；仅核验文档，无独立复现。
+- vid-src-videoagentpaper · https://arxiv.org/abs/2606.23327 · 核验 2026-10-28 · 编辑Agent研究；不导入作者成绩为通用质量承诺。
+- vid-src-understand · https://arxiv.org/abs/2403.10517 · 核验 2026-10-28 · 长视频理解问答Agent，与HKUDS编辑框架同名但不是同一项目。
 - found-src-001 · https://web.stanford.edu/~jurafsky/slp3/ · 核验 2026-10-28 · official_page
 - found-src-002 · https://arxiv.org/abs/1301.3781 · 核验 2026-10-28 · metadata_and_abstract
 - found-src-003 · https://arxiv.org/abs/1409.3215 · 核验 2026-10-28 · metadata_and_abstract
@@ -1709,6 +2501,20 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - sys-src-mini · https://github.com/SWE-agent/mini-swe-agent · 核验 2026-10-28 · 仅元数据与原创摘要；未下载或执行项目。
 
 ## 覆盖缺口
+- 未比较真实生成质量、成本、速度或生产部署效果
+- Inkscape官网教程与许可页面403；使用维护指南验证描摹功能，软件许可仍unknown
+- Canva直接猜测autofill路径不可访问，已通过官方文档链接定位正确指南
+- 未覆盖3D/CAD/工业设计/字体生成/印前色彩管理等后续专题
+- 价格、区域可用性、账号权限和具体输出法律地位不由通用文档完整确定
+- 未进行真实生成/试听/时延或音质评测
+- 未验证账户、地区可用性、价格和购买条件
+- 未覆盖全部 DAW、唱声合成、空间音频、乐谱 OCR、音频修复产品
+- Stable Audio 精确商业许可证适用与 Suno 冲突条款需要发行前专项复核
+- 没有镜像模型权重、训练音频或版权歌词
+- 未实测任何生成、编辑、转录或Agent原生链路；未安装第三方代码或下载权重。
+- 未核实全量模型具体许可证条款、价格与各操作系统兼容性；Blender官方手册抓取返回402，未引用其具体功能。
+- Runway、Veo、Sora等付费/账号服务未执行；不以本轮检索暗示全行业覆盖。
+- 未实测任何长片角色一致性、口型、完整版权清理或无障碍标准合规。
 - 早期统计NLP、HMM/CRF、RNN/LSTM原始论文仍需单列
 - 日本、韩国、东南亚、非洲、拉丁美洲以及其他欧洲研究生态覆盖不足
 - 未系统枚举2025—2026最新版本；家族与具体权重/服务快照需持续补录
@@ -1724,4 +2530,4 @@ Common Crawl加工语料家族；此处使用Ai2托管数据卡，需区分英�
 - 尚未系统收录多模态/语音/机器人、安全与医学等专用评测。
 - 模型家族逐版本教程需与模型登记表继续关联；本轮只有运行时路线，不捏造具体模型支持。
 - JEV未定义，未重复研究或臆测展开。
-- 尚未导入可比的模型成绩快照；结果展示目前为官方结果入口，非伪造空白分数为零。
+- 已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。

@@ -13,5 +13,6 @@ function search(nodes, views, filters){return nodes.filter(n=>{
  const v=views.get(n.id)||{};const text=[n.title,n.description_zh,n.summary_zh,n.id,n.category,...(n.tags||[])].join(' ').toLocaleLowerCase();
  return (!filters.query||text.includes(filters.query.trim().toLocaleLowerCase()))&&['type','category'].every(k=>!filters[k]||n[k]===filters[k])&&['availability','vendor'].every(k=>!filters[k]||v[k]===filters[k]);
 });}
-const api={safeURL,parseProgress,search};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
+function deepLinkID(search,hash,ids){let id=new URLSearchParams(search).get('node');if(!id&&hash.startsWith('#node=')){try{id=decodeURIComponent(hash.slice(6));}catch{}}return ids.has(id)?id:null;}
+const api={safeURL,parseProgress,search,deepLinkID};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

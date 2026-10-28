@@ -17,10 +17,10 @@ class Integrity(unittest.TestCase):
   self.bs[0]['nodes'][0]['source_ids']=['missing']
   with self.assertRaisesRegex(ValueError,'missing source'): B.normalize(self.bs)
  def test_dated_requires_source(self):
-  e=self.bs[0]['events'][0];e['source_ids']=[];e['source_urls']=[]
+  e=next(b for b in self.bs if b.get('events'))['events'][0];e['source_ids']=[];e['source_urls']=[]
   with self.assertRaisesRegex(ValueError,'without source'): B.normalize(self.bs)
  def test_invalid_date(self):
-  self.bs[0]['events'][0]['date']='2025-02-30'
+  next(b for b in self.bs if b.get('events'))['events'][0]['date']='2025-02-30'
   with self.assertRaisesRegex(ValueError,'invalid date'): B.normalize(self.bs)
  def test_unknown_does_not_invent_date(self):
   d=B.normalize(self.bs);unknown=[e for e in d['events'] if e['date'] is None]
@@ -53,10 +53,10 @@ class Integrity(unittest.TestCase):
     url=next(s['url'] for s in d['sources'] if s['id']==sid)
     self.assertIn('- 来源：'+url,fragment)
  def test_registry_unsafe_url(self):
-  self.bs[1]['dataset_benchmark_registry'][0]['access_url']='javascript:alert(1)'
+  next(b for b in self.bs if b.get('dataset_benchmark_registry'))['dataset_benchmark_registry'][0]['access_url']='javascript:alert(1)'
   with self.assertRaisesRegex(ValueError,'unsafe'):B.normalize(self.bs)
  def test_score_import_disabled(self):
-  self.bs[1]['dataset_benchmark_registry'][0]['results_preview']['scores']=[99]
+  next(b for b in self.bs if b.get('dataset_benchmark_registry'))['dataset_benchmark_registry'][0]['results_preview']['scores']=[99]
   with self.assertRaisesRegex(ValueError,'score import unsupported'):B.normalize(self.bs)
  def test_bad_source_checked_date(self):
   self.bs[0]['sources'][0]['checked_at']='2024-02-30'

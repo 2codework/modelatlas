@@ -21,10 +21,27 @@ def date_ok(value, precision):
     return False
 
 def normalize(bundles):
-    result={'schema_version':'modelatlas.site.v1','version':'0.1.0','checked_at':'2026-10-28','nodes':[],'edges':[],'sources':[],'events':[],'research_bundles':bundles,'coverage_gaps':[]}
+    result={'schema_version':'modelatlas.site.v1','version':'0.2.0-candidate','checked_at':'2026-10-28','nodes':[],'edges':[],'sources':[],'events':[],'research_bundles':bundles,'coverage_gaps':[]}
     for b in bundles:
         for k in ('nodes','edges','sources','events'): result[k].extend(copy.deepcopy(b.get(k,[])))
         result['coverage_gaps'].extend(b.get('coverage_gaps',[]))
+    # Creative source records are preserved in research_bundles. Only derived views adapt aliases.
+    case_ids=set()
+    for bundle in bundles:
+        for case in bundle.get('cases',[]):
+            require(case['id'] not in case_ids,'duplicate cross-repo case ID')
+            case_ids.add(case['id'])
+            for nid in case.get('modelatlas_node_ids',[]):
+                node=next((n for n in result['nodes'] if n['id']==nid),None)
+                require(node is not None,'dangling cross-repo node')
+                node.setdefault('agentwork_links',[]).append({'id':case['id'],'title':case['title'],'url':'https://2codework.github.io/agentwork/?case='+case['id']})
+        if bundle.get('schema_version','').startswith('creative'):
+            for raw in bundle.get('nodes',[]):
+                node=next(n for n in result['nodes'] if n['id']==raw['id'])
+                node.setdefault('type',node.get('kind','tool'))
+                node.setdefault('category','creative-music')
+                node.setdefault('checked_at',bundle['checked_at'])
+                node.setdefault('license',node.get('license_notes','未核验'))
     # Adapt explicitly declared source schema without mutating retained research bundles.
     aliases={'paper_first_submitted':'paper_submission','technical_report':'report_publication','announced':'announcement','weights_released':'weights_release','api_launched':'api_launch'}
     for e in result['events']:
@@ -104,6 +121,7 @@ def normalize(bundles):
         require(snap.get('reported_by') and snap.get('verification_status'),'evaluation requires attribution and evidence status')
         require(snap.get('limitations_zh'),'evaluation requires limitations')
         if snap.get('node_id'): require(snap['node_id'] in sets['nodes'],'dangling evaluation node')
+    result['coverage_gaps']=[('已收录 3 条历史自报成绩快照；不是独立复现或可比榜单，不生成排名。' if '尚未导入可比' in str(g) else g) for g in result['coverage_gaps']]
     # Derived view fields are separate; source records remain byte-equivalent in research/.
     org_edges={e['source']:e['target'] for e in result['edges'] if e['type'] in ('developed_by','introduced_by')}
     byid={n['id']:n for n in result['nodes']}
@@ -127,10 +145,13 @@ def normalize(bundles):
     return result
 
 def book(data):
-    lines=['# ModelAtlas · 大模型知识地图','', '> v0.1 代表性研究首版；不是全厂商、全版本目录。最后核验：'+data['checked_at']+'。来源核验不是独立复现实验。','', '## 阅读路径']
+    lines=['# ModelAtlas · 大模型知识地图','', '> v0.2 创作专题候选（r1 已上线；本候选尚未发布）；不是全厂商、全版本目录。最后核验：'+data['checked_at']+'。来源核验不是独立复现实验。','', '## 阅读路径']
     for p in data['learning_paths']: lines += ['','### '+p['title'],p['note'],' → '.join(p['node_ids'])]
     for n in data['nodes']:
         lines+=['','## '+n['title'],'',n.get('description_zh',n.get('summary_zh','')),'','- ID / 类型：'+n['id']+' / '+n['type'],'- 生命周期：'+str(n.get('lifecycle','unknown')),'- 版本：'+str(n.get('version') or '未核验'),'- 核验：'+str(n.get('checked_at','未核验'))+' · '+str(n.get('verification_status','未核验'))]
+        for x in n.get('agentwork_links',[]): lines+=['- 对应实践（编辑学习关系）：['+x['title']+']('+x['url']+')']
+        for key in ['license','license_notes','cost','cost_notes','historical_context']:
+            if key in n: lines+=['- '+key+'：'+str(n[key])]
         for step in n.get('steps_zh',[]): lines+=['- 学习步骤（未执行）：'+step]
         for row in data['dataset_benchmark_registry']:
             if row['node_id']==n['id']: lines+=['- 评测/数据集登记：'+json.dumps(row,ensure_ascii=False)]
@@ -162,6 +183,7 @@ def build():
     (ROOT/'BOOK.md').write_text(book(data)); shutil.copy2(ROOT/'BOOK.md',out/'BOOK.md')
     shutil.copytree(ROOT/'data/research',out/'research',dirs_exist_ok=True)
     (out/'.nojekyll').touch()
+    shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)
     print(json.dumps({'nodes':len(data['nodes']),'edges':len(data['edges']),'sources':len(data['sources']),'events':len(data['events']),'output':str(out)},ensure_ascii=False))
     return data
 if __name__=='__main__': build()
