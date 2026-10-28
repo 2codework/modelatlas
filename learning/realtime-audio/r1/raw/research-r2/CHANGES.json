@@ -1,0 +1,10 @@
+{
+  "F01": "Added Voxtral paper v2 event, no weights-release inference",
+  "F02": "Added official BF16/vLLM single GPU >=16GB configuration; absolute minimum remains unknown",
+  "F03": "Scoped target delay/configuration/summary/end-to-end latency separately; no numeric-only contradiction claim",
+  "F04": "Separated legacy snapshot and 2.1 pricing/lifecycle version_records",
+  "F05": "Added unresearched GPT-Realtime-2 predecessor coverage gap",
+  "F06": "Separated bidirectional streaming transport from conversational speech-to-speech",
+  "Moshi-scope": "Family dates separated from reviewed checkpoint variant; first upload stays unknown",
+  "source-history": "Preserved every original check including failed and partial; rechecks appended"
+}

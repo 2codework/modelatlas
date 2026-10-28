@@ -104,3 +104,13 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 原始R1/R2研究与独立QA完整保留于 `learning/knowledge-graph-links/r1/raw/`，仍为研究时 `candidate_only_not_applied`；`admission.json` 固定字节与来源对象哈希，派生 `knowledge_graph_links_application` / `knowledge-graph-links/application.json` 单独记录接纳到本地构建。151边、72孤立、108弱连通分量只统计D.edges内部图，不计实践、AgentWork跨站及网页导航链接；孤立不等于网页无链接，不表示知识覆盖完整或准确性提升。未运行产品或发布本候选。
 
 维护边界：本批采用整份基线顶层对象哈希的 fail-closed 接纳，不是自动兼容未来目录增量的通用适配器。后续任何模块改变基线对象都会阻断构建，须重新审核并更新 admission 中的基线对象哈希及适配器固定 admission SHA，再完整复跑保真与负面门禁；不可跳过校验或覆盖原始研究状态。
+
+## 实时语音模型 · 有限样本 r1
+
+[可读学习页](https://2codework.github.io/modelatlas/realtime-audio.html) / [专题书稿](REALTIME_AUDIO.md)：Moshi家族、CSM 1B、Voxtral Realtime 2602、GPT-Realtime分版本家族。只有4个新模型实体，不把托管API、演示客户端或量化后端另算模型；不代表全球完整音频模型史。新节点无新增关系边。
+
+后置 `realtime_audio.apply` 在固定r1知识图接纳之后执行，**未修改旧graph adapter/admission**。其封存输入仍为242节点、151边；当前全站246节点、151边、373来源、182事件（107有日期、75未知）。旧知识图 application.after 只表示历史接纳阶段；当前全图76孤点/112弱分量，不等于网站无链接。
+
+`learning/realtime-audio/r1/`封存R1/R2及两轮独立QA原字节；新admission严格检查旧顶层对象完整哈希、新ID、对象哈希及来源清单。测试在验证封闭增量后才向旧模块测试提供独立封存旧阶段，旧fixture及断言不削弱。GPT2前代历史仍是覆盖缺口；2.1无已证实首发日期，不补事件；2027停用仅为指定旧ID的未来计划，列表和详情显著标记。
+
+所有模型均never-run；没有登录、权重下载、SDK执行、收费或设备访问。新的离线DOM测试只验证自编展示程序，不是浏览器渲染或语音性能测试。

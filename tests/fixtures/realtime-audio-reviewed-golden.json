@@ -1,0 +1,1435 @@
+{
+  "nodes": [
+    {
+      "id": "speech-moshi",
+      "title": "Moshi / Moshiko BF16",
+      "type": "model_family",
+      "category": "realtime-audio",
+      "description_zh": "开放权重语音对话家族；并行语音流支持对话双工，家族日期不代表精确checkpoint上传。",
+      "version": "Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "lifecycle": "unknown",
+      "availability": "open_weights；账号/地区实际可用性未验证",
+      "license": "weights: CC-BY-4.0；python: MIT；rust: Apache-2.0",
+      "cost": "公开模型卡；未测试权重下载或账号要求。自托管需自备算力；演示站不是托管API SLA。",
+      "input_modalities": [
+        "audio"
+      ],
+      "output_modalities": [
+        "audio",
+        "aligned_text"
+      ],
+      "source_ids": [
+        "audio-src-moshi-repo",
+        "audio-src-moshi-card",
+        "audio-src-moshi-paper",
+        "audio-src-moshi-intro",
+        "audio-src-moshi-release",
+        "audio-src-kyutai-index"
+      ],
+      "realtime_audio": {
+        "id": "speech-moshi",
+        "title": "Moshi / Moshiko BF16",
+        "organization": "Kyutai",
+        "entity_kind": "model_family",
+        "exact_version": null,
+        "revision_sha": null,
+        "access": "open_weights",
+        "inputs": [
+          "audio"
+        ],
+        "outputs": [
+          "audio",
+          "aligned_text"
+        ],
+        "streaming": {
+          "input": true,
+          "output": true,
+          "full_duplex": true,
+          "condition_zh": "模型并行建模用户和自身语音流；不是ASR→LLM→TTS串联。"
+        },
+        "dates": [
+          {
+            "kind": "announcement",
+            "date": "2024-07-03",
+            "source_ids": [
+              "moshi-intro"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "paper_v1",
+            "date": "2024-09-17",
+            "source_ids": [
+              "moshi-paper"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "open_release_announcement",
+            "date": "2024-09-18",
+            "source_ids": [
+              "moshi-release"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "paper_v2",
+            "date": "2024-10-02",
+            "source_ids": [
+              "moshi-paper"
+            ],
+            "note_zh": ""
+          }
+        ],
+        "weights_first_upload_date": null,
+        "license": {
+          "weights": "CC-BY-4.0",
+          "python": "MIT",
+          "rust": "Apache-2.0"
+        },
+        "runtime_zh": "官方PyTorch路径要求较大显存，README给24GB；Python>=3.10建议3.12。未执行，不保证所有GPU实时。",
+        "account_cost_zh": "公开模型卡；未测试权重下载或账号要求。自托管需自备算力；演示站不是托管API SLA。",
+        "latency_zh": "官方自报理论160ms、L4约200ms；非本轮独立测速。",
+        "separate_entities": [
+          "Mimi音频编解码器",
+          "moshi.chat演示客户端",
+          "推理服务器"
+        ],
+        "learning_source_ids": [
+          "moshi-repo",
+          "moshi-card",
+          "moshi-paper"
+        ],
+        "source_ids": [
+          "moshi-repo",
+          "moshi-card",
+          "moshi-paper",
+          "moshi-intro",
+          "moshi-release",
+          "kyutai-index"
+        ],
+        "reviewed_variants": [
+          {
+            "exact_id": "kyutai/moshiko-pytorch-bf16",
+            "parent_family": "Moshi",
+            "revision_sha": null,
+            "first_weights_upload_date": null,
+            "source_ids": [
+              "moshi-card"
+            ]
+          }
+        ],
+        "date_scope_zh": "dates为Moshi家族公告/论文事件，不是所列Moshiko BF16 checkpoint首次上传或独立发布日。"
+      },
+      "misconceptions": [
+        "模型、托管API与演示客户端不是同一实体。",
+        "来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。"
+      ],
+      "learning_url": "realtime-audio.html#speech-moshi"
+    },
+    {
+      "id": "speech-csm-1b",
+      "title": "CSM 1B",
+      "type": "model",
+      "category": "realtime-audio",
+      "description_zh": "精确1B上下文语音生成模型；不是Sesame完整对话产品，开放权重仍有访问条件。",
+      "version": "sesame/csm-1b",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "lifecycle": "unknown",
+      "availability": "gated_open_weights；账号/地区实际可用性未验证",
+      "license": "weights: Apache-2.0；code: Apache-2.0；dependencies: Llama-3.2-1B访问及其独立条款需另核",
+      "cost": "HF卡明确门控：登录并同意分享账户信息；官方代码另要求Llama-3.2-1B访问。没有登录或下载。自托管算力收费自理。",
+      "input_modalities": [
+        "text",
+        "audio_context"
+      ],
+      "output_modalities": [
+        "audio"
+      ],
+      "source_ids": [
+        "audio-src-csm-card",
+        "audio-src-csm-repo",
+        "audio-src-csm-post"
+      ],
+      "realtime_audio": {
+        "id": "speech-csm-1b",
+        "title": "CSM 1B",
+        "organization": "Sesame",
+        "entity_kind": "model",
+        "exact_version": "sesame/csm-1b",
+        "revision_sha": null,
+        "access": "gated_open_weights",
+        "inputs": [
+          "text",
+          "audio_context"
+        ],
+        "outputs": [
+          "audio"
+        ],
+        "streaming": {
+          "input": null,
+          "output": null,
+          "full_duplex": null,
+          "condition_zh": "已核资料证明上下文语音生成，未证明开放1B checkpoint提供实时双工会话。"
+        },
+        "dates": [
+          {
+            "kind": "technical_blog",
+            "date": "2025-02-27",
+            "source_ids": [
+              "csm-post"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "weights_release_announcement",
+            "date": "2025-03-13",
+            "source_ids": [
+              "csm-repo"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "transformers_integration_announcement",
+            "date": "2025-05-20",
+            "source_ids": [
+              "csm-card"
+            ],
+            "note_zh": "Transformers 4.52.1，不是模型首发"
+          }
+        ],
+        "paper_date": null,
+        "weights_first_upload_date": null,
+        "license": {
+          "weights": "Apache-2.0",
+          "code": "Apache-2.0",
+          "dependencies": "Llama-3.2-1B访问及其独立条款需另核"
+        },
+        "runtime_zh": "官方CUDA兼容GPU；测试CUDA12.4/12.6，建议Python3.10，部分音频操作需要ffmpeg；显存最低值未知。",
+        "account_cost_zh": "HF卡明确门控：登录并同意分享账户信息；官方代码另要求Llama-3.2-1B访问。没有登录或下载。自托管算力收费自理。",
+        "latency_zh": "未登记实时延迟，也不以demo表现替代开放权重性能。",
+        "separate_entities": [
+          "Sesame交互语音产品使用微调变体",
+          "HF Space演示",
+          "Mimi codec"
+        ],
+        "learning_source_ids": [
+          "csm-card",
+          "csm-repo",
+          "csm-post"
+        ],
+        "source_ids": [
+          "csm-card",
+          "csm-repo",
+          "csm-post"
+        ]
+      },
+      "misconceptions": [
+        "模型、托管API与演示客户端不是同一实体。",
+        "来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。"
+      ],
+      "learning_url": "realtime-audio.html#speech-csm-1b"
+    },
+    {
+      "id": "speech-voxtral-realtime-2602",
+      "title": "Voxtral Mini 4B Realtime 2602",
+      "type": "model",
+      "category": "realtime-audio",
+      "description_zh": "精确2602实时语音识别模型：音频流输入、文本转写输出；不是语音回答生成器。",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "lifecycle": "unknown",
+      "availability": "open_weights；账号/地区实际可用性未验证",
+      "license": "weights: Apache-2.0",
+      "cost": "开放权重自托管与付费API分开。API旧2602需key，模型页0.006 USD/min（核查日）；账号/地区/额度实际未验证。",
+      "input_modalities": [
+        "audio"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "source_ids": [
+        "audio-src-vox-card",
+        "audio-src-vox-release",
+        "audio-src-vox-paper",
+        "audio-src-vox-api-model",
+        "audio-src-vox-api-guide",
+        "audio-src-vox-paper-html"
+      ],
+      "realtime_audio": {
+        "id": "speech-voxtral-realtime-2602",
+        "title": "Voxtral Mini 4B Realtime 2602",
+        "organization": "Mistral AI",
+        "entity_kind": "model",
+        "exact_version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "revision_sha": null,
+        "access": "open_weights",
+        "inputs": [
+          "audio"
+        ],
+        "outputs": [
+          "text"
+        ],
+        "streaming": {
+          "input": true,
+          "output": true,
+          "condition_zh": "论文A.2的full-duplex是流式音频输入/转写文本输出传输，不是会说话的双工对话模型；2602托管旧接口不兼容diarize。",
+          "transport_bidirectional_streaming": true,
+          "conversational_speech_to_speech": false,
+          "source_ids": [
+            "vox-paper-html",
+            "vox-api-guide"
+          ]
+        },
+        "dates": [
+          {
+            "kind": "announcement",
+            "date": "2026-02-04",
+            "source_ids": [
+              "vox-release"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "weights_release_announcement",
+            "date": "2026-02-04",
+            "source_ids": [
+              "vox-release"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "paper_v1",
+            "date": "2026-02-11",
+            "source_ids": [
+              "vox-paper"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "paper_v2",
+            "date": "2026-02-21",
+            "timestamp_utc": "2026-02-21T00:06:15Z",
+            "source_ids": [
+              "vox-paper"
+            ],
+            "note_zh": "arXiv submission history；不是新权重发布"
+          },
+          {
+            "kind": "paper_v3",
+            "date": "2026-04-06",
+            "source_ids": [
+              "vox-paper"
+            ],
+            "note_zh": ""
+          }
+        ],
+        "weights_first_upload_date": null,
+        "license": {
+          "weights": "Apache-2.0"
+        },
+        "runtime_zh": "官方模型卡Serve章节：BF16/vLLM可在单GPU>=16GB显存运行；这是官方部署配置条件，非独立实测或绝对最低显存。另支持Transformers>=5.2.0；部署版本、吞吐、批量和会话长度会影响资源，均未实测。",
+        "account_cost_zh": "开放权重自托管与付费API分开。API旧2602需key，模型页0.006 USD/min（核查日）；账号/地区/额度实际未验证。",
+        "latency_zh": "分别记录目标转写延迟、卡片推荐值及营销摘要；不把算法/目标delay当端到端时延。240ms摘要与80ms配置下限不能单凭数字不同判为同作用域矛盾；精确摘要口径关系未建立。",
+        "separate_entities": [
+          "API id voxtral-mini-transcribe-realtime-2602",
+          "Voxtral Mini Transcribe V2 batch",
+          "Voxtral Mini Transcribe 3",
+          "Mistral Studio playground"
+        ],
+        "learning_source_ids": [
+          "vox-card",
+          "vox-api-guide",
+          "vox-paper"
+        ],
+        "source_ids": [
+          "vox-card",
+          "vox-release",
+          "vox-paper",
+          "vox-api-model",
+          "vox-api-guide",
+          "vox-paper-html"
+        ],
+        "absolute_minimum_vram_gb": null,
+        "official_deployment_configuration": {
+          "precision": "BF16",
+          "runtime": "vLLM",
+          "gpu_count": 1,
+          "gpu_memory_gb_at_least": 16,
+          "source_ids": [
+            "vox-card"
+          ],
+          "section": "Usage / vLLM / Serve",
+          "verified_by_execution": false
+        },
+        "latency_evidence": [
+          {
+            "scope": "model_card_summary",
+            "value": "240ms–2.4s",
+            "source_ids": [
+              "vox-card"
+            ]
+          },
+          {
+            "scope": "model_card_features",
+            "value": "80ms–2.4s",
+            "source_ids": [
+              "vox-card"
+            ]
+          },
+          {
+            "scope": "model_card_recommended_configuration",
+            "value": "480ms recommended; transcription_delay_ms: multiples of 80ms from 80 through 1200 plus 2400",
+            "source_ids": [
+              "vox-card"
+            ]
+          },
+          {
+            "scope": "paper_v3_section_3_2_training_target_delay",
+            "value": "80–2400ms in 80ms steps; delay conditioning",
+            "source_ids": [
+              "vox-paper-html"
+            ]
+          },
+          {
+            "scope": "announcement_marketing",
+            "value": "sub-200ms configurable",
+            "source_ids": [
+              "vox-release"
+            ]
+          },
+          {
+            "scope": "end_to_end_observed_latency",
+            "value": null,
+            "note_zh": "没有测试；论文区分理论delay与batch/concurrency/network开销。80ms帧步长和lookahead/目标delay不等于保证每个用户80ms见字。",
+            "source_ids": [
+              "vox-paper-html"
+            ]
+          }
+        ]
+      },
+      "misconceptions": [
+        "模型、托管API与演示客户端不是同一实体。",
+        "来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。"
+      ],
+      "learning_url": "realtime-audio.html#speech-voxtral-realtime-2602"
+    },
+    {
+      "id": "speech-gpt-realtime-family",
+      "title": "GPT-Realtime family (2025-08-28 / 2.1)",
+      "type": "model_family",
+      "category": "realtime-audio",
+      "description_zh": "托管语音模型家族的有限版本对照；旧快照与2.1的生命周期、价格分开，非完整版本史。",
+      "version": "gpt-realtime-2025-08-28 / gpt-realtime-2.1 (分别见版本表)",
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "lifecycle": "unknown",
+      "availability": "hosted_api_only；账号/地区实际可用性未验证",
+      "license": "weights: not publicly released in reviewed sources；service: proprietary API terms; no open-weight license",
+      "cost": "版本特定价格和生命周期见version_records，不向family继承；账号、地区、额度与收费未实际验证。",
+      "input_modalities": [
+        "audio",
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "audio",
+        "text"
+      ],
+      "source_ids": [
+        "audio-src-gpt-release",
+        "audio-src-gpt-old-card",
+        "audio-src-gpt-deprecations",
+        "audio-src-gpt-current-card",
+        "audio-src-gpt-guide"
+      ],
+      "realtime_audio": {
+        "id": "speech-gpt-realtime-family",
+        "title": "GPT-Realtime family (2025-08-28 / 2.1)",
+        "organization": "OpenAI",
+        "entity_kind": "model_family",
+        "exact_version": [
+          "gpt-realtime-2025-08-28",
+          "gpt-realtime-2.1"
+        ],
+        "revision_sha": null,
+        "access": "hosted_api_only",
+        "inputs": [
+          "audio",
+          "text",
+          "image"
+        ],
+        "outputs": [
+          "audio",
+          "text"
+        ],
+        "streaming": {
+          "input": true,
+          "output": true,
+          "full_duplex": null,
+          "condition_zh": "Realtime协议可双向音频及打断；通用Streaming字段原值Not supported另存，不视为同接口冲突。不能据此宣称GPT-Live独立后端式full-duplex。"
+        },
+        "dates": [
+          {
+            "kind": "model_announcement",
+            "date": "2025-08-28",
+            "source_ids": [
+              "gpt-release"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "realtime_api_ga",
+            "date": "2025-08-28",
+            "source_ids": [
+              "gpt-release"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "old_snapshot_deprecation_announced",
+            "date": "2026-07-20",
+            "source_ids": [
+              "gpt-deprecations"
+            ],
+            "note_zh": ""
+          },
+          {
+            "kind": "old_snapshot_scheduled_shutdown",
+            "date": "2027-01-20",
+            "source_ids": [
+              "gpt-deprecations"
+            ],
+            "note_zh": "未来计划，非已停用"
+          }
+        ],
+        "current_2_1_release_date": null,
+        "paper_date": null,
+        "weights_release_date": null,
+        "license": {
+          "weights": "not publicly released in reviewed sources",
+          "service": "proprietary API terms; no open-weight license"
+        },
+        "runtime_zh": "模型运行在托管服务；客户端WebRTC/WebSocket，SIP另有指南。无本地GPU需求证据。",
+        "account_cost_zh": "版本特定价格和生命周期见version_records，不向family继承；账号、地区、额度与收费未实际验证。",
+        "latency_zh": "未量化测速；2.1官方注明更高reasoning effort可增加时延和输出token。",
+        "lifecycle_zh": "仅以version_records判断，不标整个family/API弃用。",
+        "separate_entities": [
+          "Realtime API传输/会话服务",
+          "ChatGPT语音客户端",
+          "GPT-Live不同架构"
+        ],
+        "learning_source_ids": [
+          "gpt-guide",
+          "gpt-current-card",
+          "gpt-deprecations"
+        ],
+        "source_ids": [
+          "gpt-release",
+          "gpt-old-card",
+          "gpt-deprecations",
+          "gpt-current-card",
+          "gpt-guide"
+        ],
+        "version_records": [
+          {
+            "exact_id": "gpt-realtime-2025-08-28",
+            "related_alias": "gpt-realtime",
+            "announcement_date": "2025-08-28",
+            "deprecation_announced": "2026-07-20",
+            "scheduled_shutdown": "2027-01-20",
+            "lifecycle_as_of": "2026-10-28",
+            "status": "deprecated_not_yet_scheduled_shutdown",
+            "inputs": [
+              "text",
+              "audio",
+              "image"
+            ],
+            "outputs": [
+              "text",
+              "audio"
+            ],
+            "pricing_per_million_tokens_usd": {
+              "text_input": 4,
+              "text_output": 16,
+              "audio_input": 32,
+              "audio_output": 64
+            },
+            "source_ids": [
+              "gpt-old-card",
+              "gpt-release",
+              "gpt-deprecations"
+            ]
+          },
+          {
+            "exact_id": "gpt-realtime-2.1",
+            "immutable_dated_snapshot": null,
+            "release_date": null,
+            "status": "current_guide_example_not_marked_deprecated_in_reviewed_sources",
+            "lifecycle_as_of": "2026-10-28",
+            "inputs": [
+              "text",
+              "audio",
+              "image"
+            ],
+            "outputs": [
+              "text",
+              "audio"
+            ],
+            "pricing_per_million_tokens_usd": {
+              "text_input": 4,
+              "text_output": 24,
+              "audio_input": 32,
+              "audio_output": 64
+            },
+            "free_tier": "not supported",
+            "source_ids": [
+              "gpt-current-card",
+              "gpt-guide"
+            ]
+          }
+        ]
+      },
+      "misconceptions": [
+        "模型、托管API与演示客户端不是同一实体。",
+        "来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。"
+      ],
+      "learning_url": "realtime-audio.html#speech-gpt-realtime-family"
+    }
+  ],
+  "sources": [
+    {
+      "id": "audio-src-moshi-repo",
+      "url": "https://github.com/kyutai-labs/moshi",
+      "title": "moshi-repo",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "moshi-repo",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "moshi-repo",
+        "url": "https://github.com/kyutai-labs/moshi",
+        "final_url": "https://github.com/kyutai-labs/moshi",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-moshi-card",
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "title": "moshi-card",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "精确仓库标识、BF16、英语、CC-BY-4.0。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "moshi-card",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "moshi-card",
+        "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+        "final_url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "精确仓库标识、BF16、英语、CC-BY-4.0。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-moshi-paper",
+      "url": "https://arxiv.org/abs/2410.00037",
+      "title": "moshi-paper",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "moshi-paper",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "moshi-paper",
+        "url": "https://arxiv.org/abs/2410.00037",
+        "final_url": "https://arxiv.org/abs/2410.00037",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-moshi-intro",
+      "url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+      "title": "moshi-intro",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "只解析出标题、2024-07-03日期和导航，正文未提供。",
+      "verification_status": "partially_accessible",
+      "research_source_id": "moshi-intro",
+      "access_status": "opened_partial",
+      "raw_record": {
+        "id": "moshi-intro",
+        "url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+        "final_url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+        "status": "opened_partial",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "只解析出标题、2024-07-03日期和导航，正文未提供。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-moshi-release",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+      "title": "moshi-release",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。",
+      "verification_status": "partially_accessible",
+      "research_source_id": "moshi-release",
+      "access_status": "opened_partial",
+      "raw_record": {
+        "id": "moshi-release",
+        "url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+        "final_url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+        "status": "opened_partial",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-kyutai-index",
+      "url": "https://kyutai.org/blog/",
+      "title": "kyutai-index",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "索引区分7月介绍和9月开放发布。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "kyutai-index",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "kyutai-index",
+        "url": "https://kyutai.org/blog/",
+        "final_url": "https://kyutai.org/blog/",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "索引区分7月介绍和9月开放发布。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-moshi-failed",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi",
+      "title": "moshi-failed",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。",
+      "verification_status": "not_accessible",
+      "research_source_id": "moshi-failed",
+      "access_status": "failed",
+      "raw_record": {
+        "id": "moshi-failed",
+        "url": "https://kyutai.org/blog/2024-09-18-moshi",
+        "final_url": "https://kyutai.org/blog/2024-09-18-moshi",
+        "status": "failed",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-csm-repo",
+      "url": "https://github.com/SesameAILabs/csm",
+      "title": "csm-repo",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "csm-repo",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "csm-repo",
+        "url": "https://github.com/SesameAILabs/csm",
+        "final_url": "https://github.com/SesameAILabs/csm",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-csm-card",
+      "url": "https://huggingface.co/sesame/csm-1b",
+      "title": "csm-card",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "csm-card",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "csm-card",
+        "url": "https://huggingface.co/sesame/csm-1b",
+        "final_url": "https://huggingface.co/sesame/csm-1b",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-csm-post",
+      "url": "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+      "title": "csm-post",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "技术介绍2025-02-27；早于1B权重发布。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "csm-post",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "csm-post",
+        "url": "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+        "final_url": "https://www.sesame.com/journal/crossing-the-uncanny-valley-of-voice",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "技术介绍2025-02-27；早于1B权重发布。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-card",
+      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "title": "vox-card",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-card",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-card",
+        "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "final_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-release",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "title": "vox-release",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-release",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-release",
+        "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+        "final_url": "https://mistral.ai/news/voxtral-transcribe-2/",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-paper",
+      "url": "https://arxiv.org/abs/2602.11298",
+      "title": "vox-paper",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "v1 2026-02-11；当前v3 2026-04-06。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-paper",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-paper",
+        "url": "https://arxiv.org/abs/2602.11298",
+        "final_url": "https://arxiv.org/abs/2602.11298",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "v1 2026-02-11；当前v3 2026-04-06。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-api-model",
+      "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+      "title": "vox-api-model",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-api-model",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-api-model",
+        "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+        "final_url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-api-guide",
+      "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "title": "vox-api-guide",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-api-guide",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-api-guide",
+        "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+        "final_url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-gpt-release",
+      "url": "https://openai.com/index/introducing-gpt-realtime/",
+      "title": "gpt-release",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "gpt-release",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "gpt-release",
+        "url": "https://openai.com/index/introducing-gpt-realtime/",
+        "final_url": "https://openai.com/index/introducing-gpt-realtime/",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-gpt-old-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+      "title": "gpt-old-card",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "gpt-old-card",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "gpt-old-card",
+        "url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+        "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-gpt-deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "title": "gpt-deprecations",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "gpt-deprecations",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "gpt-deprecations",
+        "url": "https://developers.openai.com/api/docs/deprecations",
+        "final_url": "https://developers.openai.com/api/docs/deprecations",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-gpt-current-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "title": "gpt-current-card",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "gpt-current-card",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "gpt-current-card",
+        "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+        "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-gpt-guide",
+      "url": "https://developers.openai.com/api/docs/guides/realtime",
+      "title": "gpt-guide",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "gpt-guide",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "gpt-guide",
+        "url": "https://developers.openai.com/api/docs/guides/realtime",
+        "final_url": "https://developers.openai.com/api/docs/guides/realtime",
+        "status": "opened",
+        "method": "web.run open/click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。",
+        "primary": true
+      }
+    },
+    {
+      "id": "audio-src-vox-paper-html",
+      "url": "https://arxiv.org/html/2602.11298v3",
+      "title": "vox-paper-html",
+      "checked_at": "2026-10-28",
+      "evidence_scope": "§3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。",
+      "verification_status": "primary_source_opened",
+      "research_source_id": "vox-paper-html",
+      "access_status": "opened",
+      "raw_record": {
+        "id": "vox-paper-html",
+        "url": "https://arxiv.org/html/2602.11298v3",
+        "final_url": "https://arxiv.org/html/2602.11298v3",
+        "status": "opened",
+        "method": "web.run click/find",
+        "checked_at": "2026-10-28",
+        "evidence_note_zh": "§3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。",
+        "primary": true
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "audio-event-speech-moshi-announcement",
+      "node_ids": [
+        "speech-moshi"
+      ],
+      "event_type": "announcement",
+      "research_event_kind": "announcement",
+      "date": "2024-07-03",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Moshi / Moshiko BF16 · 介绍公告",
+      "source_ids": [
+        "audio-src-moshi-intro"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; moshi-intro",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-moshi-paper_v1",
+      "node_ids": [
+        "speech-moshi"
+      ],
+      "event_type": "paper_submission",
+      "research_event_kind": "paper_v1",
+      "date": "2024-09-17",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Moshi / Moshiko BF16 · 论文首次提交",
+      "source_ids": [
+        "audio-src-moshi-paper"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; moshi-paper",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-moshi-open_release_announcement",
+      "node_ids": [
+        "speech-moshi"
+      ],
+      "event_type": "announcement",
+      "research_event_kind": "open_release_announcement",
+      "date": "2024-09-18",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Moshi / Moshiko BF16 · 家族开放发布公告（非checkpoint首次上传）",
+      "source_ids": [
+        "audio-src-moshi-release"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; moshi-release",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-moshi-paper_v2",
+      "node_ids": [
+        "speech-moshi"
+      ],
+      "event_type": "paper_revision",
+      "research_event_kind": "paper_v2",
+      "date": "2024-10-02",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Moshi / Moshiko BF16 · 论文v2修订",
+      "source_ids": [
+        "audio-src-moshi-paper"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; moshi-paper",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-csm-1b-technical_blog",
+      "node_ids": [
+        "speech-csm-1b"
+      ],
+      "event_type": "report_publication",
+      "research_event_kind": "technical_blog",
+      "date": "2025-02-27",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "CSM 1B · 技术文章公开",
+      "source_ids": [
+        "audio-src-csm-post"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "sesame/csm-1b",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; csm-post",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-csm-1b-weights_release_announcement",
+      "node_ids": [
+        "speech-csm-1b"
+      ],
+      "event_type": "weights_release",
+      "research_event_kind": "weights_release_announcement",
+      "date": "2025-03-13",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "CSM 1B · 权重发布公告（非首次上传时间核验）",
+      "source_ids": [
+        "audio-src-csm-repo"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "sesame/csm-1b",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; csm-repo",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-csm-1b-transformers_integration_announcement",
+      "node_ids": [
+        "speech-csm-1b"
+      ],
+      "event_type": "documentation_update",
+      "research_event_kind": "transformers_integration_announcement",
+      "date": "2025-05-20",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "CSM 1B · Transformers原生支持公告",
+      "source_ids": [
+        "audio-src-csm-card"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "sesame/csm-1b",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "Transformers 4.52.1，不是模型首发",
+      "evidence_locator": "research-r2/raw-models.json dates; csm-card",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-voxtral-realtime-2602-announcement",
+      "node_ids": [
+        "speech-voxtral-realtime-2602"
+      ],
+      "event_type": "announcement",
+      "research_event_kind": "announcement",
+      "date": "2026-02-04",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Voxtral Mini 4B Realtime 2602 · 介绍公告",
+      "source_ids": [
+        "audio-src-vox-release"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; vox-release",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-voxtral-realtime-2602-weights_release_announcement",
+      "node_ids": [
+        "speech-voxtral-realtime-2602"
+      ],
+      "event_type": "weights_release",
+      "research_event_kind": "weights_release_announcement",
+      "date": "2026-02-04",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Voxtral Mini 4B Realtime 2602 · 权重发布公告（非首次上传时间核验）",
+      "source_ids": [
+        "audio-src-vox-release"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; vox-release",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-voxtral-realtime-2602-paper_v1",
+      "node_ids": [
+        "speech-voxtral-realtime-2602"
+      ],
+      "event_type": "paper_submission",
+      "research_event_kind": "paper_v1",
+      "date": "2026-02-11",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Voxtral Mini 4B Realtime 2602 · 论文首次提交",
+      "source_ids": [
+        "audio-src-vox-paper"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; vox-paper",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-voxtral-realtime-2602-paper_v2",
+      "node_ids": [
+        "speech-voxtral-realtime-2602"
+      ],
+      "event_type": "paper_revision",
+      "research_event_kind": "paper_v2",
+      "date": "2026-02-21",
+      "date_precision": "day",
+      "timezone": "UTC",
+      "title": "Voxtral Mini 4B Realtime 2602 · 论文v2修订",
+      "source_ids": [
+        "audio-src-vox-paper"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "arXiv submission history；不是新权重发布",
+      "evidence_locator": "research-r2/raw-models.json dates; vox-paper",
+      "realtime_audio_event": true,
+      "timestamp_utc": "2026-02-21T00:06:15Z"
+    },
+    {
+      "id": "audio-event-speech-voxtral-realtime-2602-paper_v3",
+      "node_ids": [
+        "speech-voxtral-realtime-2602"
+      ],
+      "event_type": "paper_revision",
+      "research_event_kind": "paper_v3",
+      "date": "2026-04-06",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "Voxtral Mini 4B Realtime 2602 · 论文v3修订",
+      "source_ids": [
+        "audio-src-vox-paper"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; vox-paper",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-gpt-realtime-family-model_announcement",
+      "node_ids": [
+        "speech-gpt-realtime-family"
+      ],
+      "event_type": "announcement",
+      "research_event_kind": "model_announcement",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "GPT-Realtime family (2025-08-28 / 2.1) · 旧版模型发布公告",
+      "source_ids": [
+        "audio-src-gpt-release"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "gpt-realtime / gpt-realtime-2025-08-28",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; gpt-release",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-gpt-realtime-family-realtime_api_ga",
+      "node_ids": [
+        "speech-gpt-realtime-family"
+      ],
+      "event_type": "api_launch",
+      "research_event_kind": "realtime_api_ga",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "GPT-Realtime family (2025-08-28 / 2.1) · Realtime API GA（服务事件）",
+      "source_ids": [
+        "audio-src-gpt-release"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "gpt-realtime / gpt-realtime-2025-08-28",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; gpt-release",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-gpt-realtime-family-old_snapshot_deprecation_announced",
+      "node_ids": [
+        "speech-gpt-realtime-family"
+      ],
+      "event_type": "documentation_update",
+      "research_event_kind": "old_snapshot_deprecation_announced",
+      "date": "2026-07-20",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "GPT-Realtime family (2025-08-28 / 2.1) · 旧版快照弃用公告（尚未到停用日）",
+      "source_ids": [
+        "audio-src-gpt-deprecations"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "documented",
+      "version": "gpt-realtime / gpt-realtime-2025-08-28",
+      "availability_scope": "仅本事件类型/精确版本；来源核验不代表实际账号可用。",
+      "note_zh": "事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。",
+      "evidence_locator": "research-r2/raw-models.json dates; gpt-deprecations",
+      "realtime_audio_event": true
+    },
+    {
+      "id": "audio-event-speech-gpt-realtime-family-old_snapshot_scheduled_shutdown",
+      "node_ids": [
+        "speech-gpt-realtime-family"
+      ],
+      "event_type": "scheduled_shutdown",
+      "research_event_kind": "old_snapshot_scheduled_shutdown",
+      "date": "2027-01-20",
+      "date_precision": "day",
+      "timezone": null,
+      "title": "GPT-Realtime family (2025-08-28 / 2.1) · 【计划·尚未发生】旧快照计划停止服务",
+      "source_ids": [
+        "audio-src-gpt-deprecations"
+      ],
+      "checked_at": "2026-10-28",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "status": "planned",
+      "version": "gpt-realtime / gpt-realtime-2025-08-28",
+      "availability_scope": "计划停用，尚未发生；不能外推2.1或Realtime API整体。",
+      "note_zh": "未来计划，非已停用",
+      "evidence_locator": "research-r2/raw-models.json dates; gpt-deprecations",
+      "realtime_audio_event": true
+    }
+  ],
+  "view_nodes": [
+    {
+      "id": "speech-moshi",
+      "lifecycle": "unknown",
+      "vendor": "Kyutai",
+      "availability": "open_weights；账号/地区实际可用性未验证",
+      "license": "weights: CC-BY-4.0；python: MIT；rust: Apache-2.0"
+    },
+    {
+      "id": "speech-csm-1b",
+      "lifecycle": "unknown",
+      "vendor": "Sesame",
+      "availability": "gated_open_weights；账号/地区实际可用性未验证",
+      "license": "weights: Apache-2.0；code: Apache-2.0；dependencies: Llama-3.2-1B访问及其独立条款需另核"
+    },
+    {
+      "id": "speech-voxtral-realtime-2602",
+      "lifecycle": "unknown",
+      "vendor": "Mistral AI",
+      "availability": "open_weights；账号/地区实际可用性未验证",
+      "license": "weights: Apache-2.0"
+    },
+    {
+      "id": "speech-gpt-realtime-family",
+      "lifecycle": "unknown",
+      "vendor": "OpenAI",
+      "availability": "hosted_api_only；账号/地区实际可用性未验证",
+      "license": "weights: not publicly released in reviewed sources；service: proprietary API terms; no open-weight license"
+    }
+  ]
+}

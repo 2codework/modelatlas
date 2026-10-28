@@ -1,0 +1,138 @@
+{
+  "schema_version": "realtime-audio-model-qa.v1",
+  "as_of": "2026-10-28",
+  "overall": "fix_before_claiming_complete_or_integrating",
+  "models": [
+    {
+      "id": "speech-moshi",
+      "verdict": "accept_with_scope_guard",
+      "accept": [
+        "模型语音输入、音频/对齐文本输出、并行双语音流及full_duplex有论文/官方仓库支持。",
+        "2024-07-03介绍、2024-09-17论文v1、2024-09-18开放发布公告、2024-10-02论文v2分开准确。",
+        "权重CC-BY-4.0、Python MIT、Rust Apache许可区分正确。"
+      ],
+      "fix": [
+        "家族实体与精确Moshiko BF16 checkpoint保持父子/variant关系；不得把家族公告日宣称该checkpoint首次上传日。"
+      ],
+      "unknown": [
+        "权重首次上传日期、revision SHA、全部Moshika/Moshiko量化/后端变体发布史未穷尽。"
+      ],
+      "sources": [
+        "moshi-repo",
+        "moshi-card",
+        "moshi-paper",
+        "kyutai-index"
+      ]
+    },
+    {
+      "id": "speech-csm-1b",
+      "verdict": "accept",
+      "accept": [
+        "sesame/csm-1b为上下文语音生成模型，文本/音频上下文输入和音频输出正确；不等于完整Sesame交互产品。",
+        "2025-02-27技术博客、03-13权重发布公告、05-20 Transformers 4.52.1支持公告分别准确。",
+        "Apache-2.0与HF门控账户同意并存；Llama依赖访问另计。"
+      ],
+      "fix": [],
+      "unknown": [
+        "实时输入/输出及双工未证实，保持null。",
+        "独立论文日期、实际首次权重上传、绝对最低硬件、用户实际权限未验证。"
+      ],
+      "sources": [
+        "csm-repo",
+        "csm-card",
+        "csm-post"
+      ]
+    },
+    {
+      "id": "speech-voxtral-realtime-2602",
+      "verdict": "fix",
+      "accept": [
+        "精确开放权重ID及API id区分正确；流式音频转写为文本，不是生成回答语音的双工对话。",
+        "2026-02-04发布/权重公告、02-11论文v1、04-06论文v3准确；Apache-2.0不等于免key/免费托管API。",
+        "vLLM推荐与Transformers>=5.2.0段落并存，旧only-vLLM句不能覆盖后段显式版本支持；ExecuTorch/社区支持标Untested。",
+        "旧2602 API不支持diarize仅适用于旧版指南，不能外推Transcribe3。"
+      ],
+      "fix": [
+        "F01 补论文v2=2026-02-21（00:06:15 UTC），不得声称论文历史版本齐全而漏中间版本。",
+        "F02 runtime补官方BF16/vLLM单GPU>=16GB部署条件；绝对最低显存仍unknown，不是独立测速。",
+        "F03 论文v3 §3.2明确target delay为80–2400ms、80ms步长；§4明确实际部署受batch/concurrency/network影响。HF摘要240ms下界与该范围关系未解释，但不能认定同口径矛盾；不是端到端测速保证。",
+        "F06 full_duplex:false字段歧义需拆分：v3 §4.2/4.3与A.2支持vLLM transport_bidirectional_streaming=true；conversational_speech_to_speech=false。转写不是对话双工，但不可否定协议全双工。"
+      ],
+      "unknown": [
+        "首次权重上传、revision SHA、独立最低显存、端到端延迟、当前用户API访问条件未验证。"
+      ],
+      "sources": [
+        "vox-card",
+        "vox-release",
+        "vox-paper",
+        "vox-api-model",
+        "vox-api-guide",
+        "vox-paper-v3-html"
+      ]
+    },
+    {
+      "id": "speech-gpt-realtime-family",
+      "verdict": "fix_for_integration",
+      "accept": [
+        "旧gpt-realtime及gpt-realtime-2025-08-28于2026-07-20宣布弃用，2027-01-20为未来计划停用，不是已停用。",
+        "2.1当前卡/指南有效，不能随旧别名标Deprecated；文本/音频双向、图片只输入正确。",
+        "generic Streaming=Not supported与Realtime WebRTC/WebSocket属于不同接口/字段范围，不自动构成冲突；双向传输/打断不证明独立后端式full-duplex。",
+        "2025-08-28模型发布与Realtime API GA分开准确；托管模型无公开权重许可，API凭据/费用另计。"
+      ],
+      "fix": [
+        "F04 合入需将旧别名/2025快照与2.1结构化为独立版本对象，日期、生命周期、价格均绑精确版本。旧版文本输出$16/百万token，2.1为$24；原2.1标注本身正确，禁止family字段继承误用。",
+        "F05 不应以两条版本代表完整GPT-Realtime家族史：当前2.1卡明确为GPT-Realtime-2更新，应把该前代列coverage gap，不能发明其发布日期。"
+      ],
+      "unknown": [
+        "2.1发布日、全部历史版本、独立论文、任何权重公开日期、账号实际权限/延迟未核定。"
+      ],
+      "sources": [
+        "gpt-release",
+        "gpt-old-card",
+        "gpt-deprecations",
+        "gpt-current-card",
+        "gpt-guide"
+      ]
+    }
+  ],
+  "scope": "四家四模型/家族抽样QA；不证明全球音频模型、历史版本、配图或时间轴齐全。",
+  "source_count": 21,
+  "independently_opened_sources": 18,
+  "original_failed_or_partial_preserved": [
+    "moshi-intro",
+    "moshi-release",
+    "moshi-failed"
+  ],
+  "dedup": {
+    "canonical_sha256": "08b1dc2ab60f1eda3e64a65aee0034487506af8108cf44bfeec98aa8b97ef578",
+    "nodes": 242,
+    "vendor_records": 77,
+    "matches": [
+      {
+        "id": "global-istral-voxtral-mini-transcribe-3-0",
+        "title": "Voxtral Mini Transcribe 3",
+        "exact_id": "voxtral-mini-transcribe-3-0"
+      }
+    ],
+    "decision": "Voxtral Mini Transcribe 3与Realtime2602不同模型/版本，不合并；未发现其他同名canonical node。"
+  },
+  "execution": {
+    "models_run": false,
+    "weights_downloaded": false,
+    "login": false,
+    "api_calls": false,
+    "payment": false,
+    "device_or_mac_access": false
+  },
+  "public_evaluation_content": "仅名称/元数据/链接；未复制题目、音频或参考答案。",
+  "input_hashes": {
+    "realtime-audio-model-research-r1/REPORT.zh.md": "c4294eab70a2c6c22506f5e6bfc37c1116ee72d5a268c5d83390771d2d5bfcb7",
+    "realtime-audio-model-research-r1/SHA256SUMS": "e8c96eb8b4b9f04e2a98de7f1436a25201b801b76518f579bcaaba4555a9f480",
+    "realtime-audio-model-research-r1/VALIDATION.json": "4ec332344460a05137fa6482aaf6a8b939ff1c44585895ff4f28a27d9bbd7f6d",
+    "realtime-audio-model-research-r1/build_research.py": "c11921040fe060d84cdb269aa047f358a86ff2d5e0581eb1d948bd2c9f51e701",
+    "realtime-audio-model-research-r1/dedup-and-date-evidence.json": "ef36468f89d372569cc97e66d733b6c67fe9f4a85af92a129bb1b6bfd07c58ec",
+    "realtime-audio-model-research-r1/raw-models.json": "8e211155ecb3609c181aa7d677729ce42a338a7547614df1b8387a352b35438c",
+    "realtime-audio-model-research-r1/source-checks.json": "1acdc4838de950a31d5e620078d2a3aa1c26482bd60b8b67fb99df0c72fab88c",
+    "github-migration-r1/public/modelatlas/docs/data.json": "08b1dc2ab60f1eda3e64a65aee0034487506af8108cf44bfeec98aa8b97ef578"
+  }
+}

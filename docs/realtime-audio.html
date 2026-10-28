@@ -1,0 +1,337 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时语音模型 · ModelAtlas</title><link rel="stylesheet" href="style.css"></head><body><main><h1>实时语音模型 · 四个有限样本</h1><p><a href="index.html">返回知识地图</a> · <a href="REALTIME_AUDIO.md">专题书稿</a></p><p>来源审阅 / never-run；模型、API和客户端分开。不是全球完整目录。</p><p>四家四模型/家族有限样本；不是全球完整版本史。原knowledge_graph_links_application.after为r1接纳阶段统计，不是当前全图。</p><nav aria-label="模型目录">
+<a href="#speech-moshi">Moshi / Moshiko BF16</a> ·
+<a href="#speech-csm-1b">CSM 1B</a> ·
+<a href="#speech-voxtral-realtime-2602">Voxtral Mini 4B Realtime 2602</a> ·
+<a href="#speech-gpt-realtime-family">GPT-Realtime family (2025-08-28 / 2.1)</a> ·
+</nav>
+<article id="speech-moshi"><h2>Moshi / Moshiko BF16</h2><p>开放权重语音对话家族；并行语音流支持对话双工，家族日期不代表精确checkpoint上传。</p><p>类型：model_family；精确版本：Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16</p><p><a href="index.html?node=speech-moshi">模型详情与事件</a></p>
+<h3>精确版本（家族与checkpoint分开）</h3><pre>未知（未证实，不补日期）</pre>
+<h3>已核变体</h3><pre>[
+  {
+    &quot;exact_id&quot;: &quot;kyutai/moshiko-pytorch-bf16&quot;,
+    &quot;parent_family&quot;: &quot;Moshi&quot;,
+    &quot;revision_sha&quot;: null,
+    &quot;first_weights_upload_date&quot;: null,
+    &quot;source_ids&quot;: [
+      &quot;moshi-card&quot;
+    ]
+  }
+]</pre>
+<h3>日期作用域</h3><pre>dates为Moshi家族公告/论文事件，不是所列Moshiko BF16 checkpoint首次上传或独立发布日。</pre>
+<h3>输入模态</h3><pre>[
+  &quot;audio&quot;
+]</pre>
+<h3>输出模态</h3><pre>[
+  &quot;audio&quot;,
+  &quot;aligned_text&quot;
+]</pre>
+<h3>流式与双向的条件</h3><pre>{
+  &quot;input&quot;: true,
+  &quot;output&quot;: true,
+  &quot;full_duplex&quot;: true,
+  &quot;condition_zh&quot;: &quot;模型并行建模用户和自身语音流；不是ASR→LLM→TTS串联。&quot;
+}</pre>
+<h3>许可分层</h3><pre>{
+  &quot;weights&quot;: &quot;CC-BY-4.0&quot;,
+  &quot;python&quot;: &quot;MIT&quot;,
+  &quot;rust&quot;: &quot;Apache-2.0&quot;
+}</pre>
+<h3>运行与硬件</h3><pre>官方PyTorch路径要求较大显存，README给24GB；Python&gt;=3.10建议3.12。未执行，不保证所有GPU实时。</pre>
+<h3>账号与费用</h3><pre>公开模型卡；未测试权重下载或账号要求。自托管需自备算力；演示站不是托管API SLA。</pre>
+<h3>延迟口径</h3><pre>官方自报理论160ms、L4约200ms；非本轮独立测速。</pre>
+<h3>权重首次上传日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>固定修订SHA</h3><pre>未知（未证实，不补日期）</pre>
+<h3>不能混同的服务与客户端</h3><pre>[
+  &quot;Mimi音频编解码器&quot;,
+  &quot;moshi.chat演示客户端&quot;,
+  &quot;推理服务器&quot;
+]</pre>
+<h3>日期证据 · 公告/权重/论文不同事件</h3><ul>
+<li><strong>2024-07-03 · Moshi / Moshiko BF16 · 介绍公告</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2024-09-17 · Moshi / Moshiko BF16 · 论文首次提交</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2024-09-18 · Moshi / Moshiko BF16 · 家族开放发布公告（非checkpoint首次上传）</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2024-10-02 · Moshi / Moshiko BF16 · 论文v2修订</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+</ul><h3>官方入口及实际打开状态</h3><ul>
+<li><a href="https://github.com/kyutai-labs/moshi" rel="noopener noreferrer">moshi-repo</a> · opened</li>
+<li><a href="https://huggingface.co/kyutai/moshiko-pytorch-bf16" rel="noopener noreferrer">moshi-card</a> · opened</li>
+<li><a href="https://arxiv.org/abs/2410.00037" rel="noopener noreferrer">moshi-paper</a> · opened</li>
+<li><a href="https://kyutai.org/blog/2024-07-03-meet-moshi/" rel="noopener noreferrer">moshi-intro</a> · opened_partial</li>
+<li><a href="https://kyutai.org/blog/2024-09-18-moshi-release/" rel="noopener noreferrer">moshi-release</a> · opened_partial</li>
+<li><a href="https://kyutai.org/blog/" rel="noopener noreferrer">kyutai-index</a> · opened</li>
+</ul><h3>未执行学习练习</h3><ol><li>将模型、传输协议、客户端分成三栏。</li><li>对比公告、论文、权重发布与未知上传日期。</li><li>设计经同意合成音频的测试表；未获批不调用模型、设备或收费服务。</li><li>若将来获批，固定修订/硬件，区分目标delay和端到端P50/P95，不复制作者成绩。</li></ol></article>
+<article id="speech-csm-1b"><h2>CSM 1B</h2><p>精确1B上下文语音生成模型；不是Sesame完整对话产品，开放权重仍有访问条件。</p><p>类型：model；精确版本：sesame/csm-1b</p><p><a href="index.html?node=speech-csm-1b">模型详情与事件</a></p>
+<h3>精确版本（家族与checkpoint分开）</h3><pre>sesame/csm-1b</pre>
+<h3>输入模态</h3><pre>[
+  &quot;text&quot;,
+  &quot;audio_context&quot;
+]</pre>
+<h3>输出模态</h3><pre>[
+  &quot;audio&quot;
+]</pre>
+<h3>流式与双向的条件</h3><pre>{
+  &quot;input&quot;: null,
+  &quot;output&quot;: null,
+  &quot;full_duplex&quot;: null,
+  &quot;condition_zh&quot;: &quot;已核资料证明上下文语音生成，未证明开放1B checkpoint提供实时双工会话。&quot;
+}</pre>
+<h3>许可分层</h3><pre>{
+  &quot;weights&quot;: &quot;Apache-2.0&quot;,
+  &quot;code&quot;: &quot;Apache-2.0&quot;,
+  &quot;dependencies&quot;: &quot;Llama-3.2-1B访问及其独立条款需另核&quot;
+}</pre>
+<h3>运行与硬件</h3><pre>官方CUDA兼容GPU；测试CUDA12.4/12.6，建议Python3.10，部分音频操作需要ffmpeg；显存最低值未知。</pre>
+<h3>账号与费用</h3><pre>HF卡明确门控：登录并同意分享账户信息；官方代码另要求Llama-3.2-1B访问。没有登录或下载。自托管算力收费自理。</pre>
+<h3>延迟口径</h3><pre>未登记实时延迟，也不以demo表现替代开放权重性能。</pre>
+<h3>权重首次上传日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>固定修订SHA</h3><pre>未知（未证实，不补日期）</pre>
+<h3>独立论文日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>不能混同的服务与客户端</h3><pre>[
+  &quot;Sesame交互语音产品使用微调变体&quot;,
+  &quot;HF Space演示&quot;,
+  &quot;Mimi codec&quot;
+]</pre>
+<h3>日期证据 · 公告/权重/论文不同事件</h3><ul>
+<li><strong>2025-02-27 · CSM 1B · 技术文章公开</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2025-03-13 · CSM 1B · 权重发布公告（非首次上传时间核验）</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2025-05-20 · CSM 1B · Transformers原生支持公告</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 Transformers 4.52.1，不是模型首发</p></li>
+</ul><h3>官方入口及实际打开状态</h3><ul>
+<li><a href="https://huggingface.co/sesame/csm-1b" rel="noopener noreferrer">csm-card</a> · opened</li>
+<li><a href="https://github.com/SesameAILabs/csm" rel="noopener noreferrer">csm-repo</a> · opened</li>
+<li><a href="https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice" rel="noopener noreferrer">csm-post</a> · opened</li>
+</ul><h3>未执行学习练习</h3><ol><li>将模型、传输协议、客户端分成三栏。</li><li>对比公告、论文、权重发布与未知上传日期。</li><li>设计经同意合成音频的测试表；未获批不调用模型、设备或收费服务。</li><li>若将来获批，固定修订/硬件，区分目标delay和端到端P50/P95，不复制作者成绩。</li></ol></article>
+<article id="speech-voxtral-realtime-2602"><h2>Voxtral Mini 4B Realtime 2602</h2><p>精确2602实时语音识别模型：音频流输入、文本转写输出；不是语音回答生成器。</p><p>类型：model；精确版本：mistralai/Voxtral-Mini-4B-Realtime-2602</p><p><a href="index.html?node=speech-voxtral-realtime-2602">模型详情与事件</a></p>
+<h3>精确版本（家族与checkpoint分开）</h3><pre>mistralai/Voxtral-Mini-4B-Realtime-2602</pre>
+<h3>输入模态</h3><pre>[
+  &quot;audio&quot;
+]</pre>
+<h3>输出模态</h3><pre>[
+  &quot;text&quot;
+]</pre>
+<h3>流式与双向的条件</h3><pre>{
+  &quot;input&quot;: true,
+  &quot;output&quot;: true,
+  &quot;condition_zh&quot;: &quot;论文A.2的full-duplex是流式音频输入/转写文本输出传输，不是会说话的双工对话模型；2602托管旧接口不兼容diarize。&quot;,
+  &quot;transport_bidirectional_streaming&quot;: true,
+  &quot;conversational_speech_to_speech&quot;: false,
+  &quot;source_ids&quot;: [
+    &quot;vox-paper-html&quot;,
+    &quot;vox-api-guide&quot;
+  ]
+}</pre>
+<h3>许可分层</h3><pre>{
+  &quot;weights&quot;: &quot;Apache-2.0&quot;
+}</pre>
+<h3>运行与硬件</h3><pre>官方模型卡Serve章节：BF16/vLLM可在单GPU&gt;=16GB显存运行；这是官方部署配置条件，非独立实测或绝对最低显存。另支持Transformers&gt;=5.2.0；部署版本、吞吐、批量和会话长度会影响资源，均未实测。</pre>
+<h3>官方配置（非实测最低）</h3><pre>{
+  &quot;precision&quot;: &quot;BF16&quot;,
+  &quot;runtime&quot;: &quot;vLLM&quot;,
+  &quot;gpu_count&quot;: 1,
+  &quot;gpu_memory_gb_at_least&quot;: 16,
+  &quot;source_ids&quot;: [
+    &quot;vox-card&quot;
+  ],
+  &quot;section&quot;: &quot;Usage / vLLM / Serve&quot;,
+  &quot;verified_by_execution&quot;: false
+}</pre>
+<h3>账号与费用</h3><pre>开放权重自托管与付费API分开。API旧2602需key，模型页0.006 USD/min（核查日）；账号/地区/额度实际未验证。</pre>
+<h3>延迟口径</h3><pre>分别记录目标转写延迟、卡片推荐值及营销摘要；不把算法/目标delay当端到端时延。240ms摘要与80ms配置下限不能单凭数字不同判为同作用域矛盾；精确摘要口径关系未建立。</pre>
+<h3>目标配置与端到端证据</h3><pre>[
+  {
+    &quot;scope&quot;: &quot;model_card_summary&quot;,
+    &quot;value&quot;: &quot;240ms–2.4s&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-card&quot;
+    ]
+  },
+  {
+    &quot;scope&quot;: &quot;model_card_features&quot;,
+    &quot;value&quot;: &quot;80ms–2.4s&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-card&quot;
+    ]
+  },
+  {
+    &quot;scope&quot;: &quot;model_card_recommended_configuration&quot;,
+    &quot;value&quot;: &quot;480ms recommended; transcription_delay_ms: multiples of 80ms from 80 through 1200 plus 2400&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-card&quot;
+    ]
+  },
+  {
+    &quot;scope&quot;: &quot;paper_v3_section_3_2_training_target_delay&quot;,
+    &quot;value&quot;: &quot;80–2400ms in 80ms steps; delay conditioning&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-paper-html&quot;
+    ]
+  },
+  {
+    &quot;scope&quot;: &quot;announcement_marketing&quot;,
+    &quot;value&quot;: &quot;sub-200ms configurable&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-release&quot;
+    ]
+  },
+  {
+    &quot;scope&quot;: &quot;end_to_end_observed_latency&quot;,
+    &quot;value&quot;: null,
+    &quot;note_zh&quot;: &quot;没有测试；论文区分理论delay与batch/concurrency/network开销。80ms帧步长和lookahead/目标delay不等于保证每个用户80ms见字。&quot;,
+    &quot;source_ids&quot;: [
+      &quot;vox-paper-html&quot;
+    ]
+  }
+]</pre>
+<h3>权重首次上传日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>固定修订SHA</h3><pre>未知（未证实，不补日期）</pre>
+<h3>不能混同的服务与客户端</h3><pre>[
+  &quot;API id voxtral-mini-transcribe-realtime-2602&quot;,
+  &quot;Voxtral Mini Transcribe V2 batch&quot;,
+  &quot;Voxtral Mini Transcribe 3&quot;,
+  &quot;Mistral Studio playground&quot;
+]</pre>
+<h3>日期证据 · 公告/权重/论文不同事件</h3><ul>
+<li><strong>2026-02-04 · Voxtral Mini 4B Realtime 2602 · 介绍公告</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2026-02-04 · Voxtral Mini 4B Realtime 2602 · 权重发布公告（非首次上传时间核验）</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2026-02-11 · Voxtral Mini 4B Realtime 2602 · 论文首次提交</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2026-02-21 · Voxtral Mini 4B Realtime 2602 · 论文v2修订</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 arXiv submission history；不是新权重发布</p></li>
+<li><strong>2026-04-06 · Voxtral Mini 4B Realtime 2602 · 论文v3修订</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+</ul><h3>官方入口及实际打开状态</h3><ul>
+<li><a href="https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602" rel="noopener noreferrer">vox-card</a> · opened</li>
+<li><a href="https://mistral.ai/news/voxtral-transcribe-2/" rel="noopener noreferrer">vox-release</a> · opened</li>
+<li><a href="https://arxiv.org/abs/2602.11298" rel="noopener noreferrer">vox-paper</a> · opened</li>
+<li><a href="https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02" rel="noopener noreferrer">vox-api-model</a> · opened</li>
+<li><a href="https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription" rel="noopener noreferrer">vox-api-guide</a> · opened</li>
+<li><a href="https://arxiv.org/html/2602.11298v3" rel="noopener noreferrer">vox-paper-html</a> · opened</li>
+</ul><h3>未执行学习练习</h3><ol><li>将模型、传输协议、客户端分成三栏。</li><li>对比公告、论文、权重发布与未知上传日期。</li><li>设计经同意合成音频的测试表；未获批不调用模型、设备或收费服务。</li><li>若将来获批，固定修订/硬件，区分目标delay和端到端P50/P95，不复制作者成绩。</li></ol></article>
+<article id="speech-gpt-realtime-family"><h2>GPT-Realtime family (2025-08-28 / 2.1)</h2><p>托管语音模型家族的有限版本对照；旧快照与2.1的生命周期、价格分开，非完整版本史。</p><p>类型：model_family；精确版本：gpt-realtime-2025-08-28 / gpt-realtime-2.1 (分别见版本表)</p><p><a href="index.html?node=speech-gpt-realtime-family">模型详情与事件</a></p>
+<h3>精确版本（家族与checkpoint分开）</h3><pre>[
+  &quot;gpt-realtime-2025-08-28&quot;,
+  &quot;gpt-realtime-2.1&quot;
+]</pre>
+<h3>输入模态</h3><pre>[
+  &quot;audio&quot;,
+  &quot;text&quot;,
+  &quot;image&quot;
+]</pre>
+<h3>输出模态</h3><pre>[
+  &quot;audio&quot;,
+  &quot;text&quot;
+]</pre>
+<h3>流式与双向的条件</h3><pre>{
+  &quot;input&quot;: true,
+  &quot;output&quot;: true,
+  &quot;full_duplex&quot;: null,
+  &quot;condition_zh&quot;: &quot;Realtime协议可双向音频及打断；通用Streaming字段原值Not supported另存，不视为同接口冲突。不能据此宣称GPT-Live独立后端式full-duplex。&quot;
+}</pre>
+<h3>许可分层</h3><pre>{
+  &quot;weights&quot;: &quot;not publicly released in reviewed sources&quot;,
+  &quot;service&quot;: &quot;proprietary API terms; no open-weight license&quot;
+}</pre>
+<h3>运行与硬件</h3><pre>模型运行在托管服务；客户端WebRTC/WebSocket，SIP另有指南。无本地GPU需求证据。</pre>
+<h3>账号与费用</h3><pre>版本特定价格和生命周期见version_records，不向family继承；账号、地区、额度与收费未实际验证。</pre>
+<h3>延迟口径</h3><pre>未量化测速；2.1官方注明更高reasoning effort可增加时延和输出token。</pre>
+<h3>精确版本、价格与生命周期表</h3><pre>[
+  {
+    &quot;exact_id&quot;: &quot;gpt-realtime-2025-08-28&quot;,
+    &quot;related_alias&quot;: &quot;gpt-realtime&quot;,
+    &quot;announcement_date&quot;: &quot;2025-08-28&quot;,
+    &quot;deprecation_announced&quot;: &quot;2026-07-20&quot;,
+    &quot;scheduled_shutdown&quot;: &quot;2027-01-20&quot;,
+    &quot;lifecycle_as_of&quot;: &quot;2026-10-28&quot;,
+    &quot;status&quot;: &quot;deprecated_not_yet_scheduled_shutdown&quot;,
+    &quot;inputs&quot;: [
+      &quot;text&quot;,
+      &quot;audio&quot;,
+      &quot;image&quot;
+    ],
+    &quot;outputs&quot;: [
+      &quot;text&quot;,
+      &quot;audio&quot;
+    ],
+    &quot;pricing_per_million_tokens_usd&quot;: {
+      &quot;text_input&quot;: 4,
+      &quot;text_output&quot;: 16,
+      &quot;audio_input&quot;: 32,
+      &quot;audio_output&quot;: 64
+    },
+    &quot;source_ids&quot;: [
+      &quot;gpt-old-card&quot;,
+      &quot;gpt-release&quot;,
+      &quot;gpt-deprecations&quot;
+    ]
+  },
+  {
+    &quot;exact_id&quot;: &quot;gpt-realtime-2.1&quot;,
+    &quot;immutable_dated_snapshot&quot;: null,
+    &quot;release_date&quot;: null,
+    &quot;status&quot;: &quot;current_guide_example_not_marked_deprecated_in_reviewed_sources&quot;,
+    &quot;lifecycle_as_of&quot;: &quot;2026-10-28&quot;,
+    &quot;inputs&quot;: [
+      &quot;text&quot;,
+      &quot;audio&quot;,
+      &quot;image&quot;
+    ],
+    &quot;outputs&quot;: [
+      &quot;text&quot;,
+      &quot;audio&quot;
+    ],
+    &quot;pricing_per_million_tokens_usd&quot;: {
+      &quot;text_input&quot;: 4,
+      &quot;text_output&quot;: 24,
+      &quot;audio_input&quot;: 32,
+      &quot;audio_output&quot;: 64
+    },
+    &quot;free_tier&quot;: &quot;not supported&quot;,
+    &quot;source_ids&quot;: [
+      &quot;gpt-current-card&quot;,
+      &quot;gpt-guide&quot;
+    ]
+  }
+]</pre>
+<h3>2.1首发日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>固定修订SHA</h3><pre>未知（未证实，不补日期）</pre>
+<h3>独立论文日期</h3><pre>未知（未证实，不补日期）</pre>
+<h3>不能混同的服务与客户端</h3><pre>[
+  &quot;Realtime API传输/会话服务&quot;,
+  &quot;ChatGPT语音客户端&quot;,
+  &quot;GPT-Live不同架构&quot;
+]</pre>
+<h3>日期证据 · 公告/权重/论文不同事件</h3><ul>
+<li><strong>2025-08-28 · GPT-Realtime family (2025-08-28 / 2.1) · 旧版模型发布公告</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2025-08-28 · GPT-Realtime family (2025-08-28 / 2.1) · Realtime API GA（服务事件）</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2026-07-20 · GPT-Realtime family (2025-08-28 / 2.1) · 旧版快照弃用公告（尚未到停用日）</strong><p>仅本事件类型/精确版本；来源核验不代表实际账号可用。 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。</p></li>
+<li><strong>2027-01-20 · GPT-Realtime family (2025-08-28 / 2.1) · 【计划·尚未发生】旧快照计划停止服务</strong><p>计划停用，尚未发生；不能外推2.1或Realtime API整体。 未来计划，非已停用</p></li>
+</ul><h3>官方入口及实际打开状态</h3><ul>
+<li><a href="https://openai.com/index/introducing-gpt-realtime/" rel="noopener noreferrer">gpt-release</a> · opened</li>
+<li><a href="https://developers.openai.com/api/docs/models/gpt-realtime" rel="noopener noreferrer">gpt-old-card</a> · opened</li>
+<li><a href="https://developers.openai.com/api/docs/deprecations" rel="noopener noreferrer">gpt-deprecations</a> · opened</li>
+<li><a href="https://developers.openai.com/api/docs/models/gpt-realtime-2.1" rel="noopener noreferrer">gpt-current-card</a> · opened</li>
+<li><a href="https://developers.openai.com/api/docs/guides/realtime" rel="noopener noreferrer">gpt-guide</a> · opened</li>
+</ul><h3>未执行学习练习</h3><ol><li>将模型、传输协议、客户端分成三栏。</li><li>对比公告、论文、权重发布与未知上传日期。</li><li>设计经同意合成音频的测试表；未获批不调用模型、设备或收费服务。</li><li>若将来获批，固定修订/硬件，区分目标delay和端到端P50/P95，不复制作者成绩。</li></ol></article>
+<h2>覆盖缺口</h2><pre>[
+  {
+    &quot;entity&quot;: &quot;GPT-Realtime-2&quot;,
+    &quot;reason_zh&quot;: &quot;2.1模型卡提及其前代；本轮未研究该前代精确发布、快照、许可/生命周期，不将两条版本说成完整家族史。&quot;,
+    &quot;source_ids&quot;: [
+      &quot;gpt-current-card&quot;
+    ]
+  },
+  {
+    &quot;entity&quot;: &quot;Moshi backend/quantization variants&quot;,
+    &quot;reason_zh&quot;: &quot;未穷尽Moshika/Moshiko所有后端、量化及checkpoint历史。&quot;,
+    &quot;source_ids&quot;: [
+      &quot;moshi-repo&quot;
+    ]
+  }
+]</pre><h2>图统计作用域</h2><p>r1接纳阶段是242节点/151边/72孤点/108弱分量；下列为当前全图，不代表覆盖完整。</p><pre>{
+  &quot;nodes&quot;: 246,
+  &quot;edges&quot;: 151,
+  &quot;isolated&quot;: 76,
+  &quot;weak_components&quot;: 112,
+  &quot;graph_scope&quot;: &quot;D.nodes / D.edges only; undirected degree and weak components&quot;,
+  &quot;excluded_links&quot;: [
+    &quot;practice registry / learning_paths&quot;,
+    &quot;AgentWork cross-site links / agentwork_links&quot;,
+    &quot;source URLs / Markdown links / site navigation&quot;
+  ],
+  &quot;interpretation_zh&quot;: &quot;内部图孤立不等于网页没有链接；边数不证明准确性提升或厂商集成。&quot;
+}</pre><p>封存研究与独立QA：<a href="realtime-audio/admission.json">精确接纳清单</a> · <a href="realtime-audio/raw/research-r2/source-checks.json">打开/失败记录</a></p></main></body></html>

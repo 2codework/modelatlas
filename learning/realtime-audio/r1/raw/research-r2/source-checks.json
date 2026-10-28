@@ -1,0 +1,230 @@
+{
+  "checked_at": "2026-10-28",
+  "checks": [
+    {
+      "id": "moshi-repo",
+      "url": "https://github.com/kyutai-labs/moshi",
+      "final_url": "https://github.com/kyutai-labs/moshi",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。",
+      "primary": true
+    },
+    {
+      "id": "moshi-card",
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "final_url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "精确仓库标识、BF16、英语、CC-BY-4.0。",
+      "primary": true
+    },
+    {
+      "id": "moshi-paper",
+      "url": "https://arxiv.org/abs/2410.00037",
+      "final_url": "https://arxiv.org/abs/2410.00037",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。",
+      "primary": true
+    },
+    {
+      "id": "moshi-intro",
+      "url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+      "final_url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+      "status": "opened_partial",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "只解析出标题、2024-07-03日期和导航，正文未提供。",
+      "primary": true
+    },
+    {
+      "id": "moshi-release",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+      "final_url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+      "status": "opened_partial",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。",
+      "primary": true
+    },
+    {
+      "id": "kyutai-index",
+      "url": "https://kyutai.org/blog/",
+      "final_url": "https://kyutai.org/blog/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "索引区分7月介绍和9月开放发布。",
+      "primary": true
+    },
+    {
+      "id": "moshi-failed",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi",
+      "final_url": "https://kyutai.org/blog/2024-09-18-moshi",
+      "status": "failed",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。",
+      "primary": true
+    },
+    {
+      "id": "csm-repo",
+      "url": "https://github.com/SesameAILabs/csm",
+      "final_url": "https://github.com/SesameAILabs/csm",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+      "primary": true
+    },
+    {
+      "id": "csm-card",
+      "url": "https://huggingface.co/sesame/csm-1b",
+      "final_url": "https://huggingface.co/sesame/csm-1b",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+      "primary": true
+    },
+    {
+      "id": "csm-post",
+      "url": "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+      "final_url": "https://www.sesame.com/journal/crossing-the-uncanny-valley-of-voice",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "技术介绍2025-02-27；早于1B权重发布。",
+      "primary": true
+    },
+    {
+      "id": "vox-card",
+      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "final_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+      "primary": true
+    },
+    {
+      "id": "vox-release",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "final_url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。",
+      "primary": true
+    },
+    {
+      "id": "vox-paper",
+      "url": "https://arxiv.org/abs/2602.11298",
+      "final_url": "https://arxiv.org/abs/2602.11298",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "v1 2026-02-11；当前v3 2026-04-06。",
+      "primary": true
+    },
+    {
+      "id": "vox-api-model",
+      "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+      "final_url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。",
+      "primary": true
+    },
+    {
+      "id": "vox-api-guide",
+      "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "final_url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+      "primary": true
+    },
+    {
+      "id": "gpt-release",
+      "url": "https://openai.com/index/introducing-gpt-realtime/",
+      "final_url": "https://openai.com/index/introducing-gpt-realtime/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。",
+      "primary": true
+    },
+    {
+      "id": "gpt-old-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。",
+      "primary": true
+    },
+    {
+      "id": "gpt-deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "final_url": "https://developers.openai.com/api/docs/deprecations",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。",
+      "primary": true
+    },
+    {
+      "id": "gpt-current-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。",
+      "primary": true
+    },
+    {
+      "id": "gpt-guide",
+      "url": "https://developers.openai.com/api/docs/guides/realtime",
+      "final_url": "https://developers.openai.com/api/docs/guides/realtime",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。",
+      "primary": true
+    },
+    {
+      "id": "vox-paper-html",
+      "url": "https://arxiv.org/html/2602.11298v3",
+      "final_url": "https://arxiv.org/html/2602.11298v3",
+      "status": "opened",
+      "method": "web.run click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "§3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。",
+      "primary": true
+    }
+  ],
+  "search_policy": "检索摘要只发现入口；采纳证据均实际open/click primary source；不采纳社区帖子与第三方榜单",
+  "rechecks": [
+    {
+      "source_id": "vox-card",
+      "method": "web.run open/find",
+      "checked_at": "2026-10-28",
+      "result": "Serve >=16GB; Key Features and Recommended Settings scopes confirmed"
+    },
+    {
+      "source_id": "vox-paper",
+      "method": "web.run open/find",
+      "checked_at": "2026-10-28",
+      "result": "v2 submission confirmed"
+    }
+  ]
+}

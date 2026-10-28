@@ -1,0 +1,9 @@
+{
+  "status": "frozen",
+  "as_of": "2026-10-28",
+  "mutability": "new revision required for any change",
+  "qa_basis": "realtime-audio-model-qa-r1",
+  "all_qa_feedback_received": true,
+  "sha256_manifest": "SHA256SUMS",
+  "manifest_self_hash": "provided in handoff, excluded from self-referential manifest"
+}

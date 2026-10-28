@@ -1,0 +1,9 @@
+{
+  "json_parse": "passed",
+  "models": 4,
+  "organizations": 4,
+  "source_checks": 20,
+  "source_references": "passed",
+  "canonical_modified": false,
+  "execution": "never-run"
+}

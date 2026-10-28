@@ -1,0 +1,218 @@
+[
+  {
+    "id": "moshi-repo",
+    "url": "https://github.com/kyutai-labs/moshi",
+    "original_status": "opened",
+    "original_note": "README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn270view7",
+    "checked_at": "2026-10-28",
+    "record_sha256": "3319d4086563ffc0b86cd9f1ee7e8eed8924504befccf41708bd463436ad5e08"
+  },
+  {
+    "id": "moshi-card",
+    "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+    "original_status": "opened",
+    "original_note": "精确仓库标识、BF16、英语、CC-BY-4.0。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn270view0",
+    "checked_at": "2026-10-28",
+    "record_sha256": "c1a9432a7876d6e0a4abfc9deb103ad5bc8406a8be475394caf9c360f69bf26d"
+  },
+  {
+    "id": "moshi-paper",
+    "url": "https://arxiv.org/abs/2410.00037",
+    "original_status": "opened",
+    "original_note": "v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn267view3",
+    "checked_at": "2026-10-28",
+    "record_sha256": "2ef3c005b819ff1af9585579f15b02d2cdfcc785fd174363743e12a52c982456"
+  },
+  {
+    "id": "moshi-intro",
+    "url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+    "original_status": "opened_partial",
+    "original_note": "只解析出标题、2024-07-03日期和导航，正文未提供。",
+    "qa_status": "not_retried_original_status_preserved",
+    "qa_web_reference": null,
+    "checked_at": "2026-10-28",
+    "record_sha256": "38c3f70a3674512782cffd3e354c0195a670b694af135eba13fca1d09fdae03f"
+  },
+  {
+    "id": "moshi-release",
+    "url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+    "original_status": "opened_partial",
+    "original_note": "只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。",
+    "qa_status": "not_retried_original_status_preserved",
+    "qa_web_reference": null,
+    "checked_at": "2026-10-28",
+    "record_sha256": "fb8f78e421c8c9a3a8e8f86e3acbe4850d7ca34f982c536a24e41ab39eac6887"
+  },
+  {
+    "id": "kyutai-index",
+    "url": "https://kyutai.org/blog/",
+    "original_status": "opened",
+    "original_note": "索引区分7月介绍和9月开放发布。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn269view7",
+    "checked_at": "2026-10-28",
+    "record_sha256": "c73274af57fa0246d7c8d717e041742e223aa0f1480cb9e5cb3722bf78f62e4e"
+  },
+  {
+    "id": "moshi-failed",
+    "url": "https://kyutai.org/blog/2024-09-18-moshi",
+    "original_status": "failed",
+    "original_note": "工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。",
+    "qa_status": "not_retried_original_status_preserved",
+    "qa_web_reference": null,
+    "checked_at": "2026-10-28",
+    "record_sha256": "74ee6cabfaa456e8685a1ed2daebce35cad9266018db16865b768cfc99ee7082"
+  },
+  {
+    "id": "csm-repo",
+    "url": "https://github.com/SesameAILabs/csm",
+    "original_status": "opened",
+    "original_note": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn269view5",
+    "checked_at": "2026-10-28",
+    "record_sha256": "f73c83084b81e10eb1eab79a6988bc1fb75cd0d404a619313c790d920ab33237"
+  },
+  {
+    "id": "csm-card",
+    "url": "https://huggingface.co/sesame/csm-1b",
+    "original_status": "opened",
+    "original_note": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn271view2",
+    "checked_at": "2026-10-28",
+    "record_sha256": "cd8eb4acc471fc2cf1fa2152e56b899e981995e5a514052e0e4113311d7bc554"
+  },
+  {
+    "id": "csm-post",
+    "url": "https://www.sesame.com/journal/crossing-the-uncanny-valley-of-voice",
+    "original_status": "opened",
+    "original_note": "技术介绍2025-02-27；早于1B权重发布。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn269view2",
+    "checked_at": "2026-10-28",
+    "record_sha256": "a5ca843b178ce359406180176bb05f18cd0b19445b51de9ddb0a3e7277533ccf"
+  },
+  {
+    "id": "vox-card",
+    "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+    "original_status": "opened",
+    "original_note": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn268view6",
+    "checked_at": "2026-10-28",
+    "record_sha256": "02caf4e9ca5ed9bfea43c501cce836faaf2abe5c5c1ae5af697bddb8060d64c5"
+  },
+  {
+    "id": "vox-release",
+    "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+    "original_status": "opened",
+    "original_note": "2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn269view1",
+    "checked_at": "2026-10-28",
+    "record_sha256": "1fb7c222a956d82bb41ef084d32db79808e20d6ce119b881cfb04f2357a4ff48"
+  },
+  {
+    "id": "vox-paper",
+    "url": "https://arxiv.org/abs/2602.11298",
+    "original_status": "opened",
+    "original_note": "v1 2026-02-11；当前v3 2026-04-06。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn269view4",
+    "checked_at": "2026-10-28",
+    "record_sha256": "52a00648a7c3842654951d32b0cffc3fd5ea9357395fb66cbb98759d623d3d94"
+  },
+  {
+    "id": "vox-api-model",
+    "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+    "original_status": "opened",
+    "original_note": "API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn270view1",
+    "checked_at": "2026-10-28",
+    "record_sha256": "c8e740a9ea5590b45706f4fa12ec1207b372654dc22e5e040ff871775638fe74"
+  },
+  {
+    "id": "vox-api-guide",
+    "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+    "original_status": "opened",
+    "original_note": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn271view3",
+    "checked_at": "2026-10-28",
+    "record_sha256": "3e9da610863b002afa90f08a63275cfa5e58350926d94695784e4bd366859844"
+  },
+  {
+    "id": "gpt-release",
+    "url": "https://openai.com/index/introducing-gpt-realtime/",
+    "original_status": "opened",
+    "original_note": "2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn270view3",
+    "checked_at": "2026-10-28",
+    "record_sha256": "7cceaf51348ca02a426e0ec4176d6aca331965d3732cc8861d5a8dcfc168a42b"
+  },
+  {
+    "id": "gpt-old-card",
+    "url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+    "original_status": "opened",
+    "original_note": "gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn271view1",
+    "checked_at": "2026-10-28",
+    "record_sha256": "ff98e70c5982b3fb1367bdf8e5b914648ac59f6e82498ced91a09957323a597f"
+  },
+  {
+    "id": "gpt-deprecations",
+    "url": "https://developers.openai.com/api/docs/deprecations",
+    "original_status": "opened",
+    "original_note": "2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn268view4",
+    "checked_at": "2026-10-28",
+    "record_sha256": "145e8a7b4c0878cbb8a21aece0415cfc9a2b8eb3f68f63e9fd2fea9c976cc021"
+  },
+  {
+    "id": "gpt-current-card",
+    "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+    "original_status": "opened",
+    "original_note": "精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn271view0",
+    "checked_at": "2026-10-28",
+    "record_sha256": "f71120364b7d62ad230312e8d44683463b7757d6a6e85d2da02fe00a79ed5759"
+  },
+  {
+    "id": "gpt-guide",
+    "url": "https://developers.openai.com/api/docs/guides/realtime",
+    "original_status": "opened",
+    "original_note": "指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。",
+    "qa_status": "independently_opened",
+    "qa_web_reference": "turn270view5",
+    "checked_at": "2026-10-28",
+    "record_sha256": "a3dc92a23044fbc0bc12d3f5537a30f51d70b71d686e912044ba42b1b4dcb762"
+  },
+  {
+    "id": "vox-paper-v3-html",
+    "url": "https://arxiv.org/html/2602.11298v3",
+    "original_status": "additional_qa_source",
+    "qa_status": "independently_opened",
+    "checked_at": "2026-10-28",
+    "locations": [
+      "3.2 Delay Sampling",
+      "4 Inference and Serving",
+      "4.2",
+      "4.3",
+      "A.2"
+    ],
+    "note": "Target delay与实际服务时延分开；vLLM双向流式协议不等于语音对话。",
+    "record_sha256": "90204c38fc113978e3d1a04ff0905ac6a3a2bb026341aa24569a1f63d54f12c4"
+  }
+]

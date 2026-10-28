@@ -7449,6 +7449,94 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - 来源：https://www.adobe.com/products/indesign/free-trial-download.html
 - 来源：https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html
 
+## Moshi / Moshiko BF16
+
+开放权重语音对话家族；并行语音流支持对话双工，家族日期不代表精确checkpoint上传。
+
+- ID / 类型：speech-moshi / model_family
+- 生命周期：unknown
+- 版本：Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- license：weights: CC-BY-4.0；python: MIT；rust: Apache-2.0
+- cost：公开模型卡；未测试权重下载或账号要求。自托管需自备算力；演示站不是托管API SLA。
+- 注意：模型、托管API与演示客户端不是同一实体。
+- 注意：来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。
+- 来源：https://github.com/kyutai-labs/moshi
+- 来源：https://huggingface.co/kyutai/moshiko-pytorch-bf16
+- 来源：https://arxiv.org/abs/2410.00037
+- 来源：https://kyutai.org/blog/2024-07-03-meet-moshi/
+- 来源：https://kyutai.org/blog/2024-09-18-moshi-release/
+- 来源：https://kyutai.org/blog/
+- 事件：announcement · 2024-07-03 · Moshi / Moshiko BF16 · 介绍公告 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; moshi-intro · 来源 https://kyutai.org/blog/2024-07-03-meet-moshi/
+- 事件：paper_submission · 2024-09-17 · Moshi / Moshiko BF16 · 论文首次提交 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; moshi-paper · 来源 https://arxiv.org/abs/2410.00037
+- 事件：announcement · 2024-09-18 · Moshi / Moshiko BF16 · 家族开放发布公告（非checkpoint首次上传） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; moshi-release · 来源 https://kyutai.org/blog/2024-09-18-moshi-release/
+- 事件：paper_revision · 2024-10-02 · Moshi / Moshiko BF16 · 论文v2修订 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 Moshi family; reviewed variant kyutai/moshiko-pytorch-bf16 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; moshi-paper · 来源 https://arxiv.org/abs/2410.00037
+
+## CSM 1B
+
+精确1B上下文语音生成模型；不是Sesame完整对话产品，开放权重仍有访问条件。
+
+- ID / 类型：speech-csm-1b / model
+- 生命周期：unknown
+- 版本：sesame/csm-1b
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- license：weights: Apache-2.0；code: Apache-2.0；dependencies: Llama-3.2-1B访问及其独立条款需另核
+- cost：HF卡明确门控：登录并同意分享账户信息；官方代码另要求Llama-3.2-1B访问。没有登录或下载。自托管算力收费自理。
+- 注意：模型、托管API与演示客户端不是同一实体。
+- 注意：来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。
+- 来源：https://huggingface.co/sesame/csm-1b
+- 来源：https://github.com/SesameAILabs/csm
+- 来源：https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice
+- 事件：report_publication · 2025-02-27 · CSM 1B · 技术文章公开 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 sesame/csm-1b · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; csm-post · 来源 https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice
+- 事件：weights_release · 2025-03-13 · CSM 1B · 权重发布公告（非首次上传时间核验） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 sesame/csm-1b · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; csm-repo · 来源 https://github.com/SesameAILabs/csm
+- 事件：documentation_update · 2025-05-20 · CSM 1B · Transformers原生支持公告 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 sesame/csm-1b · 截至已可用（非首发） 无独立观察 · 说明 Transformers 4.52.1，不是模型首发 · 证据 research-r2/raw-models.json dates; csm-card · 来源 https://huggingface.co/sesame/csm-1b
+
+## Voxtral Mini 4B Realtime 2602
+
+精确2602实时语音识别模型：音频流输入、文本转写输出；不是语音回答生成器。
+
+- ID / 类型：speech-voxtral-realtime-2602 / model
+- 生命周期：unknown
+- 版本：mistralai/Voxtral-Mini-4B-Realtime-2602
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- license：weights: Apache-2.0
+- cost：开放权重自托管与付费API分开。API旧2602需key，模型页0.006 USD/min（核查日）；账号/地区/额度实际未验证。
+- 注意：模型、托管API与演示客户端不是同一实体。
+- 注意：来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。
+- 来源：https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602
+- 来源：https://mistral.ai/news/voxtral-transcribe-2/
+- 来源：https://arxiv.org/abs/2602.11298
+- 来源：https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02
+- 来源：https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription
+- 来源：https://arxiv.org/html/2602.11298v3
+- 事件：announcement · 2026-02-04 · Voxtral Mini 4B Realtime 2602 · 介绍公告 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 mistralai/Voxtral-Mini-4B-Realtime-2602 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; vox-release · 来源 https://mistral.ai/news/voxtral-transcribe-2/
+- 事件：weights_release · 2026-02-04 · Voxtral Mini 4B Realtime 2602 · 权重发布公告（非首次上传时间核验） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 mistralai/Voxtral-Mini-4B-Realtime-2602 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; vox-release · 来源 https://mistral.ai/news/voxtral-transcribe-2/
+- 事件：paper_submission · 2026-02-11 · Voxtral Mini 4B Realtime 2602 · 论文首次提交 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 mistralai/Voxtral-Mini-4B-Realtime-2602 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; vox-paper · 来源 https://arxiv.org/abs/2602.11298
+- 事件：paper_revision · 2026-02-21 · Voxtral Mini 4B Realtime 2602 · 论文v2修订 · 精度 day · 时区 UTC · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 mistralai/Voxtral-Mini-4B-Realtime-2602 · 截至已可用（非首发） 无独立观察 · 说明 arXiv submission history；不是新权重发布 · 证据 research-r2/raw-models.json dates; vox-paper · 来源 https://arxiv.org/abs/2602.11298
+- 事件：paper_revision · 2026-04-06 · Voxtral Mini 4B Realtime 2602 · 论文v3修订 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 mistralai/Voxtral-Mini-4B-Realtime-2602 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; vox-paper · 来源 https://arxiv.org/abs/2602.11298
+
+## GPT-Realtime family (2025-08-28 / 2.1)
+
+托管语音模型家族的有限版本对照；旧快照与2.1的生命周期、价格分开，非完整版本史。
+
+- ID / 类型：speech-gpt-realtime-family / model_family
+- 生命周期：unknown
+- 版本：gpt-realtime-2025-08-28 / gpt-realtime-2.1 (分别见版本表)
+- 核验：2026-10-28 · primary_sources_reviewed_not_executed
+- license：weights: not publicly released in reviewed sources；service: proprietary API terms; no open-weight license
+- cost：版本特定价格和生命周期见version_records，不向family继承；账号、地区、额度与收费未实际验证。
+- 注意：模型、托管API与演示客户端不是同一实体。
+- 注意：来源审阅不是模型执行；发布、论文、权重上传及核验日期分开。
+- 来源：https://openai.com/index/introducing-gpt-realtime/
+- 来源：https://developers.openai.com/api/docs/models/gpt-realtime
+- 来源：https://developers.openai.com/api/docs/deprecations
+- 来源：https://developers.openai.com/api/docs/models/gpt-realtime-2.1
+- 来源：https://developers.openai.com/api/docs/guides/realtime
+- 事件：announcement · 2025-08-28 · GPT-Realtime family (2025-08-28 / 2.1) · 旧版模型发布公告 · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; gpt-release · 来源 https://openai.com/index/introducing-gpt-realtime/
+- 事件：api_launch · 2025-08-28 · GPT-Realtime family (2025-08-28 / 2.1) · Realtime API GA（服务事件） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; gpt-release · 来源 https://openai.com/index/introducing-gpt-realtime/
+- 事件：documentation_update · 2026-07-20 · GPT-Realtime family (2025-08-28 / 2.1) · 旧版快照弃用公告（尚未到停用日） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; gpt-deprecations · 来源 https://developers.openai.com/api/docs/deprecations
+- 事件：scheduled_shutdown · 2027-01-20 · GPT-Realtime family (2025-08-28 / 2.1) · 【计划·尚未发生】旧快照计划停止服务 · 精度 day · 时区 未知 · 范围 计划停用，尚未发生；不能外推2.1或Realtime API整体。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 未来计划，非已停用 · 证据 research-r2/raw-models.json dates; gpt-deprecations · 来源 https://developers.openai.com/api/docs/deprecations
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -7798,6 +7886,10 @@ creative-indesign → design-c2pa
 - 来源 creative-gap-src-indesign-package：https://helpx.adobe.com/indesign/desktop/print/preflight/package-files-for-output.html · body lines 1414–1439
 - 来源 creative-gap-src-font-licensing-faq-independent：https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html · lines 116–117,128–130,137–152
 - 来源 design-src-c2pa：https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html · C2PA Specification 2.5: claims, assertions, signatures, validation
+
+## 实时语音模型专题（有限样本，未执行）
+完整可读版本表、输入输出、许可/硬件/费用与时间证据见 [实时语音学习页](realtime-audio.html) 和 [同源专题书稿](REALTIME_AUDIO.md)。
+旧12边知识图接纳章节中的242节点/72孤点/108弱分量仅是r1接纳阶段统计；本批零新边，当前全图246节点/151边/76孤点/112弱分量。
 
 ## 来源目录
 - design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
@@ -8152,6 +8244,27 @@ creative-indesign → design-c2pa
 - creative-gap-src-express-faq-redirect · https://helpx.adobe.com/express/web/ai-assistant/adobe-express-ai-assistant-faq.html · 核验 2026-10-28 · 搜索缓存有10月5日额度细则，但打开重定向overview且无credits文本，未确认额度。；原观察 redirect_with_search_body_conflict；独立QA not_retried_prior_redirect_conflict；限制 不得将缓存的每日次数/积分豁免直接纳入现行指南。
 - creative-gap-src-font-licensing-faq-independent · https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html · 核验 2026-10-28 · 不同官方页面独立支持：Adobe Fonts文件不能转移/打包；直接编辑需收件人自有许可；正确嵌入PDF与传递字体文件不同；本地其他字体依各自EULA。不是失败原页成功。；原观察 independently_opened_primary；独立QA opened_primary；限制 独立来源；不能将它的成功记作另一个URL成功。
 - creative-gap-src-underlord-history-independent · https://help.descript.com/working-in-projects/version-history · 核验 2026-10-28 · 可预览版本，Restore出现协作者冲突确认；恢复影响项目所有compositions/files，必须先审查协作者变更。；原观察 independently_opened_primary；独立QA opened_primary；限制 独立来源；不能将它的成功记作另一个URL成功。
+- audio-src-moshi-repo · https://github.com/kyutai-labs/moshi · 核验 2026-10-28 · README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。
+- audio-src-moshi-card · https://huggingface.co/kyutai/moshiko-pytorch-bf16 · 核验 2026-10-28 · 精确仓库标识、BF16、英语、CC-BY-4.0。
+- audio-src-moshi-paper · https://arxiv.org/abs/2410.00037 · 核验 2026-10-28 · v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。
+- audio-src-moshi-intro · https://kyutai.org/blog/2024-07-03-meet-moshi/ · 核验 2026-10-28 · 只解析出标题、2024-07-03日期和导航，正文未提供。
+- audio-src-moshi-release · https://kyutai.org/blog/2024-09-18-moshi-release/ · 核验 2026-10-28 · 只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。
+- audio-src-kyutai-index · https://kyutai.org/blog/ · 核验 2026-10-28 · 索引区分7月介绍和9月开放发布。
+- audio-src-moshi-failed · https://kyutai.org/blog/2024-09-18-moshi · 核验 2026-10-28 · 工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。
+- audio-src-csm-repo · https://github.com/SesameAILabs/csm · 核验 2026-10-28 · 1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。
+- audio-src-csm-card · https://huggingface.co/sesame/csm-1b · 核验 2026-10-28 · Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。
+- audio-src-csm-post · https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice · 核验 2026-10-28 · 技术介绍2025-02-27；早于1B权重发布。
+- audio-src-vox-card · https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602 · 核验 2026-10-28 · BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。
+- audio-src-vox-release · https://mistral.ai/news/voxtral-transcribe-2/ · 核验 2026-10-28 · 2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。
+- audio-src-vox-paper · https://arxiv.org/abs/2602.11298 · 核验 2026-10-28 · v1 2026-02-11；当前v3 2026-04-06。
+- audio-src-vox-api-model · https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02 · 核验 2026-10-28 · API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。
+- audio-src-vox-api-guide · https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription · 核验 2026-10-28 · 旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。
+- audio-src-gpt-release · https://openai.com/index/introducing-gpt-realtime/ · 核验 2026-10-28 · 2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。
+- audio-src-gpt-old-card · https://developers.openai.com/api/docs/models/gpt-realtime · 核验 2026-10-28 · gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。
+- audio-src-gpt-deprecations · https://developers.openai.com/api/docs/deprecations · 核验 2026-10-28 · 2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。
+- audio-src-gpt-current-card · https://developers.openai.com/api/docs/models/gpt-realtime-2.1 · 核验 2026-10-28 · 精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。
+- audio-src-gpt-guide · https://developers.openai.com/api/docs/guides/realtime · 核验 2026-10-28 · 指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。
+- audio-src-vox-paper-html · https://arxiv.org/html/2602.11298v3 · 核验 2026-10-28 · §3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果

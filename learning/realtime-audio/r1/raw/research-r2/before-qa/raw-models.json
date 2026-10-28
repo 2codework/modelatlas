@@ -1,0 +1,560 @@
+{
+  "schema_version": "realtime-audio-research.v1",
+  "checked_at": "2026-10-28",
+  "scope": "四家四个模型/家族的有限深查，不是全球穷尽；只研究不合入",
+  "verification_status": "primary_sources_reviewed_not_executed",
+  "models": [
+    {
+      "id": "speech-moshi",
+      "title": "Moshi / Moshiko BF16",
+      "organization": "Kyutai",
+      "entity_kind": "model_family",
+      "exact_version": "kyutai/moshiko-pytorch-bf16",
+      "revision_sha": null,
+      "access": "open_weights",
+      "inputs": [
+        "audio"
+      ],
+      "outputs": [
+        "audio",
+        "aligned_text"
+      ],
+      "streaming": {
+        "input": true,
+        "output": true,
+        "full_duplex": true,
+        "condition_zh": "模型并行建模用户和自身语音流；不是ASR→LLM→TTS串联。"
+      },
+      "dates": [
+        {
+          "kind": "announcement",
+          "date": "2024-07-03",
+          "source_ids": [
+            "moshi-intro"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v1",
+          "date": "2024-09-17",
+          "source_ids": [
+            "moshi-paper"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "open_release_announcement",
+          "date": "2024-09-18",
+          "source_ids": [
+            "moshi-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v2",
+          "date": "2024-10-02",
+          "source_ids": [
+            "moshi-paper"
+          ],
+          "note_zh": ""
+        }
+      ],
+      "weights_first_upload_date": null,
+      "license": {
+        "weights": "CC-BY-4.0",
+        "python": "MIT",
+        "rust": "Apache-2.0"
+      },
+      "runtime_zh": "官方PyTorch路径要求较大显存，README给24GB；Python>=3.10建议3.12。未执行，不保证所有GPU实时。",
+      "account_cost_zh": "公开模型卡；未测试权重下载或账号要求。自托管需自备算力；演示站不是托管API SLA。",
+      "latency_zh": "官方自报理论160ms、L4约200ms；非本轮独立测速。",
+      "separate_entities": [
+        "Mimi音频编解码器",
+        "moshi.chat演示客户端",
+        "推理服务器"
+      ],
+      "learning_source_ids": [
+        "moshi-repo",
+        "moshi-card",
+        "moshi-paper"
+      ],
+      "source_ids": [
+        "moshi-repo",
+        "moshi-card",
+        "moshi-paper",
+        "moshi-intro",
+        "moshi-release",
+        "kyutai-index"
+      ]
+    },
+    {
+      "id": "speech-csm-1b",
+      "title": "CSM 1B",
+      "organization": "Sesame",
+      "entity_kind": "model",
+      "exact_version": "sesame/csm-1b",
+      "revision_sha": null,
+      "access": "gated_open_weights",
+      "inputs": [
+        "text",
+        "audio_context"
+      ],
+      "outputs": [
+        "audio"
+      ],
+      "streaming": {
+        "input": null,
+        "output": null,
+        "full_duplex": null,
+        "condition_zh": "已核资料证明上下文语音生成，未证明开放1B checkpoint提供实时双工会话。"
+      },
+      "dates": [
+        {
+          "kind": "technical_blog",
+          "date": "2025-02-27",
+          "source_ids": [
+            "csm-post"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "weights_release_announcement",
+          "date": "2025-03-13",
+          "source_ids": [
+            "csm-repo"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "transformers_integration_announcement",
+          "date": "2025-05-20",
+          "source_ids": [
+            "csm-card"
+          ],
+          "note_zh": "Transformers 4.52.1，不是模型首发"
+        }
+      ],
+      "paper_date": null,
+      "weights_first_upload_date": null,
+      "license": {
+        "weights": "Apache-2.0",
+        "code": "Apache-2.0",
+        "dependencies": "Llama-3.2-1B访问及其独立条款需另核"
+      },
+      "runtime_zh": "官方CUDA兼容GPU；测试CUDA12.4/12.6，建议Python3.10，部分音频操作需要ffmpeg；显存最低值未知。",
+      "account_cost_zh": "HF卡明确门控：登录并同意分享账户信息；官方代码另要求Llama-3.2-1B访问。没有登录或下载。自托管算力收费自理。",
+      "latency_zh": "未登记实时延迟，也不以demo表现替代开放权重性能。",
+      "separate_entities": [
+        "Sesame交互语音产品使用微调变体",
+        "HF Space演示",
+        "Mimi codec"
+      ],
+      "learning_source_ids": [
+        "csm-card",
+        "csm-repo",
+        "csm-post"
+      ],
+      "source_ids": [
+        "csm-card",
+        "csm-repo",
+        "csm-post"
+      ]
+    },
+    {
+      "id": "speech-voxtral-realtime-2602",
+      "title": "Voxtral Mini 4B Realtime 2602",
+      "organization": "Mistral AI",
+      "entity_kind": "model",
+      "exact_version": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "revision_sha": null,
+      "access": "open_weights",
+      "inputs": [
+        "audio"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "streaming": {
+        "input": true,
+        "output": true,
+        "full_duplex": false,
+        "condition_zh": "原生流式语音识别；输出转写文本，不生成回答语音。旧2602托管接口不兼容diarize。"
+      },
+      "dates": [
+        {
+          "kind": "announcement",
+          "date": "2026-02-04",
+          "source_ids": [
+            "vox-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "weights_release_announcement",
+          "date": "2026-02-04",
+          "source_ids": [
+            "vox-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v1",
+          "date": "2026-02-11",
+          "source_ids": [
+            "vox-paper"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v3",
+          "date": "2026-04-06",
+          "source_ids": [
+            "vox-paper"
+          ],
+          "note_zh": ""
+        }
+      ],
+      "weights_first_upload_date": null,
+      "license": {
+        "weights": "Apache-2.0"
+      },
+      "runtime_zh": "BF16；官方推荐vLLM，模型卡另记Transformers>=5.2.0。最低硬件/显存未核定，不把edge营销词当硬件保证。",
+      "account_cost_zh": "开放权重自托管与付费API分开。API旧2602需key，模型页0.006 USD/min（核查日）；账号/地区/额度实际未验证。",
+      "latency_zh": "卡写240ms–2.4s可配置；公告写sub-200ms。两者口径/版本未解释，不合成最低时延保证，不独立测速。",
+      "separate_entities": [
+        "API id voxtral-mini-transcribe-realtime-2602",
+        "Voxtral Mini Transcribe V2 batch",
+        "Voxtral Mini Transcribe 3",
+        "Mistral Studio playground"
+      ],
+      "learning_source_ids": [
+        "vox-card",
+        "vox-api-guide",
+        "vox-paper"
+      ],
+      "source_ids": [
+        "vox-card",
+        "vox-release",
+        "vox-paper",
+        "vox-api-model",
+        "vox-api-guide"
+      ]
+    },
+    {
+      "id": "speech-gpt-realtime-family",
+      "title": "GPT-Realtime family (2025-08-28 / 2.1)",
+      "organization": "OpenAI",
+      "entity_kind": "model_family",
+      "exact_version": [
+        "gpt-realtime-2025-08-28",
+        "gpt-realtime-2.1"
+      ],
+      "revision_sha": null,
+      "access": "hosted_api_only",
+      "inputs": [
+        "audio",
+        "text",
+        "image"
+      ],
+      "outputs": [
+        "audio",
+        "text"
+      ],
+      "streaming": {
+        "input": true,
+        "output": true,
+        "full_duplex": null,
+        "condition_zh": "Realtime协议可双向音频及打断；通用Streaming字段原值Not supported另存，不视为同接口冲突。不能据此宣称GPT-Live独立后端式full-duplex。"
+      },
+      "dates": [
+        {
+          "kind": "model_announcement",
+          "date": "2025-08-28",
+          "source_ids": [
+            "gpt-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "realtime_api_ga",
+          "date": "2025-08-28",
+          "source_ids": [
+            "gpt-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "old_snapshot_deprecation_announced",
+          "date": "2026-07-20",
+          "source_ids": [
+            "gpt-deprecations"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "old_snapshot_scheduled_shutdown",
+          "date": "2027-01-20",
+          "source_ids": [
+            "gpt-deprecations"
+          ],
+          "note_zh": "未来计划，非已停用"
+        }
+      ],
+      "current_2_1_release_date": null,
+      "paper_date": null,
+      "weights_release_date": null,
+      "license": {
+        "weights": "not publicly released in reviewed sources",
+        "service": "proprietary API terms; no open-weight license"
+      },
+      "runtime_zh": "模型运行在托管服务；客户端WebRTC/WebSocket，SIP另有指南。无本地GPU需求证据。",
+      "account_cost_zh": "需授权API/临时客户端凭据；2.1 Free tier不支持。每百万token：文字输入$4输出$24，音频输入$32输出$64；不是每分钟价格。账号/区域/收费未实测。",
+      "latency_zh": "未量化测速；2.1官方注明更高reasoning effort可增加时延和输出token。",
+      "lifecycle_zh": "仅gpt-realtime与2025-08-28快照已宣布弃用；2.1为当前指南示例。不可外推整个Realtime API弃用。",
+      "separate_entities": [
+        "Realtime API传输/会话服务",
+        "ChatGPT语音客户端",
+        "GPT-Live不同架构"
+      ],
+      "learning_source_ids": [
+        "gpt-guide",
+        "gpt-current-card",
+        "gpt-deprecations"
+      ],
+      "source_ids": [
+        "gpt-release",
+        "gpt-old-card",
+        "gpt-deprecations",
+        "gpt-current-card",
+        "gpt-guide"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "moshi-repo",
+      "url": "https://github.com/kyutai-labs/moshi",
+      "final_url": "https://github.com/kyutai-labs/moshi",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "README：双工架构、PyTorch显存24GB；Python部分MIT、Rust Apache、权重CC-BY。",
+      "primary": true
+    },
+    {
+      "id": "moshi-card",
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "final_url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "精确仓库标识、BF16、英语、CC-BY-4.0。",
+      "primary": true
+    },
+    {
+      "id": "moshi-paper",
+      "url": "https://arxiv.org/abs/2410.00037",
+      "final_url": "https://arxiv.org/abs/2410.00037",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "v1 2024-09-17；v2 2024-10-02。并行用户/模型语音流。",
+      "primary": true
+    },
+    {
+      "id": "moshi-intro",
+      "url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+      "final_url": "https://kyutai.org/blog/2024-07-03-meet-moshi/",
+      "status": "opened_partial",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "只解析出标题、2024-07-03日期和导航，正文未提供。",
+      "primary": true
+    },
+    {
+      "id": "moshi-release",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+      "final_url": "https://kyutai.org/blog/2024-09-18-moshi-release/",
+      "status": "opened_partial",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "只解析出开放发布标题、2024-09-18日期和导航；博客索引交叉支持开放发布。",
+      "primary": true
+    },
+    {
+      "id": "kyutai-index",
+      "url": "https://kyutai.org/blog/",
+      "final_url": "https://kyutai.org/blog/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "索引区分7月介绍和9月开放发布。",
+      "primary": true
+    },
+    {
+      "id": "moshi-failed",
+      "url": "https://kyutai.org/blog/2024-09-18-moshi",
+      "final_url": "https://kyutai.org/blog/2024-09-18-moshi",
+      "status": "failed",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "工具返回Internal Error/not accessible；经官方索引找到正确-release路径，无规避。",
+      "primary": true
+    },
+    {
+      "id": "csm-repo",
+      "url": "https://github.com/SesameAILabs/csm",
+      "final_url": "https://github.com/SesameAILabs/csm",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "1B发布2025-03-13；CUDA12.4/12.6测试，Python3.10建议；依赖模型访问。",
+      "primary": true
+    },
+    {
+      "id": "csm-card",
+      "url": "https://huggingface.co/sesame/csm-1b",
+      "final_url": "https://huggingface.co/sesame/csm-1b",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "Apache-2.0；需HF登录接受分享信息条件；Transformers4.52.1原生支持公告2025-05-20。",
+      "primary": true
+    },
+    {
+      "id": "csm-post",
+      "url": "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+      "final_url": "https://www.sesame.com/journal/crossing-the-uncanny-valley-of-voice",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "技术介绍2025-02-27；早于1B权重发布。",
+      "primary": true
+    },
+    {
+      "id": "vox-card",
+      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "final_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "BF16 Apache-2.0；原生流式ASR；13语言；vLLM与Transformers章节；配置延迟不是独立实测。",
+      "primary": true
+    },
+    {
+      "id": "vox-release",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "final_url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2026-02-04公告：实时权重开放；batch Mini Transcribe V2是另一个模型。",
+      "primary": true
+    },
+    {
+      "id": "vox-paper",
+      "url": "https://arxiv.org/abs/2602.11298",
+      "final_url": "https://arxiv.org/abs/2602.11298",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "v1 2026-02-11；当前v3 2026-04-06。",
+      "primary": true
+    },
+    {
+      "id": "vox-api-model",
+      "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+      "final_url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-26-02",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "API id voxtral-mini-transcribe-realtime-2602；GA；0.006 USD/min；context未给。",
+      "primary": true
+    },
+    {
+      "id": "vox-api-guide",
+      "url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "final_url": "https://docs.mistral.ai/studio/audio/deprecated/speech_to_text/realtime_transcription",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "旧版指南：WebSocket、API key、PCM16 16kHz示例；实时不兼容diarize；不能外推第三代。",
+      "primary": true
+    },
+    {
+      "id": "gpt-release",
+      "url": "https://openai.com/index/introducing-gpt-realtime/",
+      "final_url": "https://openai.com/index/introducing-gpt-realtime/",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2025-08-28：gpt-realtime及Realtime API GA；模型与API发布分别登记。",
+      "primary": true
+    },
+    {
+      "id": "gpt-old-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "gpt-realtime-2025-08-28标Deprecated；text/audio双向、image输入；通用Streaming字段Not supported不能外推实时协议。",
+      "primary": true
+    },
+    {
+      "id": "gpt-deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "final_url": "https://developers.openai.com/api/docs/deprecations",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "2026-07-20弃用公告；gpt-realtime和2025-08-28快照计划2027-01-20停用，建议2.1。",
+      "primary": true
+    },
+    {
+      "id": "gpt-current-card",
+      "url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "final_url": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。",
+      "primary": true
+    },
+    {
+      "id": "gpt-guide",
+      "url": "https://developers.openai.com/api/docs/guides/realtime",
+      "final_url": "https://developers.openai.com/api/docs/guides/realtime",
+      "status": "opened",
+      "method": "web.run open/click/find",
+      "checked_at": "2026-10-28",
+      "evidence_note_zh": "指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。",
+      "primary": true
+    }
+  ],
+  "execution": {
+    "models_run": false,
+    "weights_downloaded": false,
+    "login": false,
+    "api_calls": false,
+    "payment": false,
+    "device_or_mac_access": false
+  },
+  "benchmark_metadata": [
+    {
+      "name": "FLEURS",
+      "usage": "Voxtral作者转写评测",
+      "source_ids": [
+        "vox-card",
+        "vox-release"
+      ],
+      "independent": false,
+      "raw_tasks_copied": false
+    }
+  ],
+  "source_scope_notes": [
+    "HF与GitHub主分支为动态文档；未锁定commit或权重hash，发布前不得声称可复现部署。",
+    "API当前文档不证明用户账号实际可用。",
+    "Voxtral卡only-vLLM旧句与后段Transformers>=5.2.0并存；保留后段明确版本，不据旧句排除支持。"
+  ]
+}

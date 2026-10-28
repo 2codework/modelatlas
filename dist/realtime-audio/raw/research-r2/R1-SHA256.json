@@ -1,0 +1,9 @@
+{
+  "raw-models.json": "8e211155ecb3609c181aa7d677729ce42a338a7547614df1b8387a352b35438c",
+  "VALIDATION.json": "4ec332344460a05137fa6482aaf6a8b939ff1c44585895ff4f28a27d9bbd7f6d",
+  "REPORT.zh.md": "c4294eab70a2c6c22506f5e6bfc37c1116ee72d5a268c5d83390771d2d5bfcb7",
+  "build_research.py": "c11921040fe060d84cdb269aa047f358a86ff2d5e0581eb1d948bd2c9f51e701",
+  "source-checks.json": "1acdc4838de950a31d5e620078d2a3aa1c26482bd60b8b67fb99df0c72fab88c",
+  "dedup-and-date-evidence.json": "ef36468f89d372569cc97e66d733b6c67fe9f4a85af92a129bb1b6bfd07c58ec",
+  "SHA256SUMS": "e8c96eb8b4b9f04e2a98de7f1436a25201b801b76518f579bcaaba4555a9f480"
+}

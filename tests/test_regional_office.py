@@ -1,3 +1,4 @@
+from audio_contract import legacy_view
 import copy,json,sys,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
@@ -32,7 +33,7 @@ class RegionalTests(unittest.TestCase):
   self.r['entities'][0]['source_ids']=['absent']
   with self.assertRaises(ValueError):R.adapt(self.r)
  def test_derived_book_links_counts(self):
-  d=json.loads((ROOT/'docs/data.json').read_text());self.assertEqual((len(d['nodes']),len(d['events']),len(d['vendor_catalog']['records']),len(d['dataset_benchmark_registry']),len(d['media_evaluation_registry'])),(242,166,77,33,11))
+  d=legacy_view(json.loads((ROOT/'docs/data.json').read_text()));self.assertEqual((len(d['nodes']),len(d['events']),len(d['vendor_catalog']['records']),len(d['dataset_benchmark_registry']),len(d['media_evaluation_registry'])),(242,166,77,33,11))
   book=(ROOT/'BOOK.md').read_text()
   for n in d['nodes']:
    if n['id'] not in R.EXPECTED:continue

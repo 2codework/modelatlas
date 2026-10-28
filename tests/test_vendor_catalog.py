@@ -1,3 +1,4 @@
+from audio_contract import legacy_view
 import copy,hashlib,json,sys,tempfile,unittest,shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
@@ -5,7 +6,7 @@ import vendor_catalog as V
 class CatalogTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.data=json.loads((ROOT/'dist/data.json').read_text());cls.catalog=V.load(ROOT,cls.data['nodes'])
+  cls.data=legacy_view(json.loads((ROOT/'dist/data.json').read_text()));cls.catalog=V.load(ROOT,cls.data['nodes'])
  def mutate(self,fn,rehash=True):
   tmp=tempfile.TemporaryDirectory();self.addCleanup(tmp.cleanup);p=Path(tmp.name);shutil.copytree(ROOT/'data/vendor-catalog',p/'data/vendor-catalog');f=p/'data/vendor-catalog/global.json';b=json.loads(f.read_text());fn(b);f.write_text(json.dumps(b));m=p/'data/vendor-catalog/admission.json';a=json.loads(m.read_text())
   if rehash:a['accepted'][0]['sha256']=V.digest(f);m.write_text(json.dumps(a))

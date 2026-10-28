@@ -1,0 +1,20 @@
+{
+  "json_parse": "passed",
+  "source_refs": "passed",
+  "r1_all_bytes_preserved": true,
+  "models": 4,
+  "organizations": 4,
+  "source_checks": 21,
+  "all_qa_findings_addressed": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "Moshi-scope",
+    "source-history"
+  ],
+  "canonical_modified": false,
+  "models_run": false
+}

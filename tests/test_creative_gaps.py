@@ -1,3 +1,4 @@
+from audio_contract import legacy_view
 import copy,importlib.util,json,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -48,7 +49,7 @@ class CreativeGapTests(unittest.TestCase):
  def test_baseline_objects_and_registries_unchanged(self):
   import hashlib
   h=lambda x:hashlib.sha256(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
-  frozen=json.loads((ROOT/'learning/creative-gaps/baseline-object-hashes.json').read_text());actual=json.loads((ROOT/'dist/data.json').read_text())
+  frozen=json.loads((ROOT/'learning/creative-gaps/baseline-object-hashes.json').read_text());actual=legacy_view(json.loads((ROOT/'dist/data.json').read_text()))
   self.assertEqual(len(frozen['nodes']),237);self.assertEqual(len(actual['nodes']),242)
   for kind in ['nodes','sources']:
    current={x['id']:x for x in actual[kind]}
@@ -71,4 +72,4 @@ class CreativeGapTests(unittest.TestCase):
     self.assertIn(html.escape(phrase),text)
    self.assertIn('不是厂商推荐',c['exercise_plan_note'])
  def test_final_registry_includes_external_mapping_without_node_mutation(self):
-  d=json.loads((ROOT/'dist/data.json').read_text());G.validate_registry(d);old=json.loads((ROOT/'learning/creative-gaps/baseline-object-hashes.json').read_text());self.assertIn('vid-kdenlive',old['nodes']);self.assertEqual(len(d['creative_learning_registry']['node_to_cases']),6)
+  d=legacy_view(json.loads((ROOT/'dist/data.json').read_text()));G.validate_registry(d);old=json.loads((ROOT/'learning/creative-gaps/baseline-object-hashes.json').read_text());self.assertIn('vid-kdenlive',old['nodes']);self.assertEqual(len(d['creative_learning_registry']['node_to_cases']),6)

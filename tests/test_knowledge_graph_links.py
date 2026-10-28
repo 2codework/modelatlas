@@ -1,3 +1,4 @@
+from audio_contract import legacy_view
 import copy, json, pathlib, sys, unittest
 from unittest.mock import patch
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
@@ -5,7 +6,7 @@ import knowledge_graph_links as K
 class KnowledgeLinks(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.applied=json.loads((ROOT/'dist/data.json').read_text());cls.base=copy.deepcopy(cls.applied);cls.base['edges']=cls.base['edges'][:139];cls.base.pop('knowledge_graph_links_application');cls.admission,cls.raw=K.load(ROOT)
+  cls.applied=legacy_view(json.loads((ROOT/'dist/data.json').read_text()));cls.base=copy.deepcopy(cls.applied);cls.base['edges']=cls.base['edges'][:139];cls.base.pop('knowledge_graph_links_application');cls.admission,cls.raw=K.load(ROOT)
  def test_exact_preservation(self):
   d=copy.deepcopy(self.base);K.apply(d,ROOT)
   for k in self.base:

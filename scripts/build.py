@@ -15,10 +15,11 @@ import vendor_catalog
 import benchmark_catalog
 import world_models
 import knowledge_graph_links
+import realtime_audio
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
-EVENT_TYPES = {'paper_submission','report_publication','announcement','weights_release','api_launch','documentation_update','standard_publication','benchmark_release','paper_revision','platform_migration'}
+EVENT_TYPES = {'paper_submission','report_publication','announcement','weights_release','api_launch','documentation_update','standard_publication','benchmark_release','paper_revision','platform_migration','scheduled_shutdown'}
 def require(ok, message):
     if not ok: raise ValueError(message)
 def url_ok(url):
@@ -251,6 +252,7 @@ def book(data):
     lines+=['','## 关系索引（教学建议不代表历史因果）']
     for e in data['edges']: lines+=['- '+e['source']+' → '+e['type']+' → '+e['target']+' · '+str(e.get('verification_status',e.get('evidence_type','未核验')))+' · '+', '.join(e.get('source_ids',[]))]
     lines+=knowledge_graph_links.book(data)
+    lines+=realtime_audio.book(data)
     lines+=['','## 来源目录']
     for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
     lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
@@ -276,6 +278,7 @@ def build():
     creative_gaps.validate_registry(data)
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     knowledge_graph_links.apply(data,ROOT)
+    realtime_audio.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
@@ -296,6 +299,7 @@ def build():
     regional_office.publish(ROOT,out)
     creative_gaps.publish(ROOT,out,gap_registry,data['sources'])
     knowledge_graph_links.publish(ROOT,out,data)
+    realtime_audio.publish(ROOT,out,data)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

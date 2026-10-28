@@ -1,0 +1,190 @@
+{
+  "dedup": {
+    "canonical_nodes": 242,
+    "canonical_vendor_records": 77,
+    "canonical_file": "github-migration-r1/public/modelatlas/docs/data.json",
+    "canonical_sha256": "08b1dc2ab60f1eda3e64a65aee0034487506af8108cf44bfeec98aa8b97ef578",
+    "parent_reported_head": "4b959116b01b7879fc164a4ad64d0885defc389d",
+    "local_git_head_status": "git -C github-migration-r1 rev-parse HEAD failed: directory is not git repository",
+    "matches": {
+      "moshi": {
+        "nodes": [],
+        "vendors": []
+      },
+      "moshiko": {
+        "nodes": [],
+        "vendors": []
+      },
+      "csm": {
+        "nodes": [],
+        "vendors": []
+      },
+      "sesame": {
+        "nodes": [],
+        "vendors": []
+      },
+      "voxtral": {
+        "nodes": [],
+        "vendors": [
+          "global-istral-voxtral-mini-transcribe-3-0"
+        ]
+      },
+      "gpt-realtime": {
+        "nodes": [],
+        "vendors": []
+      }
+    },
+    "decision_zh": "四模型家族无同名模型node；Voxtral vendor仅Transcribe3，不是Realtime2602。creative-music.json的Whisper与Magenta实时音乐不重复。"
+  },
+  "date_evidence": [
+    {
+      "model_id": "speech-moshi",
+      "events": [
+        {
+          "kind": "announcement",
+          "date": "2024-07-03",
+          "source_ids": [
+            "moshi-intro"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v1",
+          "date": "2024-09-17",
+          "source_ids": [
+            "moshi-paper"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "open_release_announcement",
+          "date": "2024-09-18",
+          "source_ids": [
+            "moshi-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v2",
+          "date": "2024-10-02",
+          "source_ids": [
+            "moshi-paper"
+          ],
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "model_id": "speech-csm-1b",
+      "events": [
+        {
+          "kind": "technical_blog",
+          "date": "2025-02-27",
+          "source_ids": [
+            "csm-post"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "weights_release_announcement",
+          "date": "2025-03-13",
+          "source_ids": [
+            "csm-repo"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "transformers_integration_announcement",
+          "date": "2025-05-20",
+          "source_ids": [
+            "csm-card"
+          ],
+          "note_zh": "Transformers 4.52.1，不是模型首发"
+        }
+      ]
+    },
+    {
+      "model_id": "speech-voxtral-realtime-2602",
+      "events": [
+        {
+          "kind": "announcement",
+          "date": "2026-02-04",
+          "source_ids": [
+            "vox-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "weights_release_announcement",
+          "date": "2026-02-04",
+          "source_ids": [
+            "vox-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v1",
+          "date": "2026-02-11",
+          "source_ids": [
+            "vox-paper"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "paper_v2",
+          "date": "2026-02-21",
+          "timestamp_utc": "2026-02-21T00:06:15Z",
+          "source_ids": [
+            "vox-paper"
+          ],
+          "note_zh": "arXiv submission history；不是新权重发布"
+        },
+        {
+          "kind": "paper_v3",
+          "date": "2026-04-06",
+          "source_ids": [
+            "vox-paper"
+          ],
+          "note_zh": ""
+        }
+      ]
+    },
+    {
+      "model_id": "speech-gpt-realtime-family",
+      "events": [
+        {
+          "kind": "model_announcement",
+          "date": "2025-08-28",
+          "source_ids": [
+            "gpt-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "realtime_api_ga",
+          "date": "2025-08-28",
+          "source_ids": [
+            "gpt-release"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "old_snapshot_deprecation_announced",
+          "date": "2026-07-20",
+          "source_ids": [
+            "gpt-deprecations"
+          ],
+          "note_zh": ""
+        },
+        {
+          "kind": "old_snapshot_scheduled_shutdown",
+          "date": "2027-01-20",
+          "source_ids": [
+            "gpt-deprecations"
+          ],
+          "note_zh": "未来计划，非已停用"
+        }
+      ]
+    }
+  ]
+}
