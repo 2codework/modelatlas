@@ -80,7 +80,7 @@ def book(registry):
 def publish(root,out,registry,sources):
  shutil.copytree(root/'learning/creative-gaps',out/'creative-learning-evidence',dirs_exist_ok=True)
  esc=html.escape
- parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'none\'; style-src \'self\'; img-src \'self\'; object-src \'none\'; base-uri \'none\'; form-action \'none\'"><title>创意学习工作台 · ModelAtlas</title><link rel="stylesheet" href="style.css"></head><body><a href="index.html">返回ModelAtlas</a><main><h1>创意学习工作台</h1><p>'+esc(NOTICE)+'</p><nav aria-label="六项练习">']
+ parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\'; style-src \'self\'; img-src \'self\'; object-src \'none\'; base-uri \'none\'; form-action \'none\'"><title>创意学习工作台 · ModelAtlas</title><link rel="stylesheet" href="style.css"><script src="topic.js" defer></script></head><body class="topic-page"><a href="index.html">返回ModelAtlas</a><main><h1>创意学习工作台</h1><p>'+esc(NOTICE)+'</p><nav aria-label="六项练习">']
  for c in registry['cases']:parts.append('<p><a href="#'+c['id']+'">'+esc(c['title'])+'</a></p>')
  parts.append('</nav>');sm={s['id']:s for s in sources}
  for c in registry['cases']:

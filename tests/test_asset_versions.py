@@ -20,6 +20,15 @@ class AssetVersions(unittest.TestCase):
    u=urlsplit(url);self.assertFalse(u.scheme or u.netloc);self.assertFalse(u.path.startswith('/'))
    self.assertEqual(parse_qs(u.query),{'v':[hashlib.sha256((output/u.path).read_bytes()).hexdigest()]})
   self.assertEqual((output/'index.html').read_bytes(),(ROOT/'docs/index.html').read_bytes())
+ def test_topic_assets_are_pinned_and_page_policy_is_local_only(self):
+  for name in ['realtime-audio.html','creative-learning.html']:
+   text=(ROOT/'dist'/name).read_text();tags=Tags();tags.feed(text)
+   self.assertTrue(any(urlsplit(u).path=='topic.js' for u in tags.urls))
+   for url in tags.urls:
+    u=urlsplit(url);self.assertEqual(parse_qs(u.query),{'v':[hashlib.sha256((ROOT/'dist'/u.path).read_bytes()).hexdigest()]})
+   self.assertEqual((ROOT/'dist'/name).read_bytes(),(ROOT/'docs'/name).read_bytes())
+  creative=(ROOT/'dist/creative-learning.html').read_text()
+  self.assertIn("script-src 'self'",creative);self.assertNotIn('unsafe-inline',creative);self.assertNotIn('unsafe-eval',creative)
  def test_pin_idempotent_and_rekeys_changed_bytes(self):
   with tempfile.TemporaryDirectory() as t:
    p=Path(t)

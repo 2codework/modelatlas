@@ -1,3 +1,4 @@
+const {findNode,collectPages}=require('./paged-ui.js');
 // Self-written offline DOM test of production coverage rendering; no network, browser or model runs.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.join(__dirname,'..'),data=JSON.parse(fs.readFileSync(path.join(root,'dist/data.json'),'utf8'));
@@ -37,7 +38,7 @@ test('production regional count is seven, legacy unknown subtotal preserved and 
 test('production detail preserves every regional availability/license/tenant string and data bytes',async()=>{
  const p=path.join(root,'dist/data.json'),before=fs.readFileSync(p),snapshot=JSON.stringify(data),ui=await boot();
  for(const node of data.nodes.filter(n=>n.category==='regional-office-platforms')){
-  const target=ui.ids.get('results').querySelectorAll('button').find(b=>text(b).includes(node.title));
+  const target=findNode(ui.ids,node.id);
   assert.ok(target,node.id);target.events.click();
   const detail=text(ui.ids.get('detail'));
   for(const field of [node.availability,node.license,node.regional_office.tenant_requirements,'never-run'])assert.ok(detail.includes(field),node.id+': '+field);

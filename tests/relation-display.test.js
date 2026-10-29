@@ -45,7 +45,7 @@ test('synthetic edge semantics remain verbatim text; source links, SVG classes a
  assert.equal(list.querySelectorAll('p').filter(e=>e.textContent===payload).length,2);assert.equal(list.querySelectorAll('img').length,0);assert.equal(list.querySelectorAll('a')[0].href,'https://example.test/evidence');
  assert.deepEqual(h.ids.get('graph').querySelectorAll('line').map(e=>e.attrs.class),['edge editorial','edge documented','edge unknown']);
  assert.ok(h.ids.get('graph').querySelectorAll('line').every(e=>e.attrs['aria-label'].includes('非')));
- list.querySelectorAll('button').find(e=>e.textContent===data.nodes.find(n=>n.id===b).title).events.click();assert.equal(h.url().search,'?node='+b);h.back();assert.equal(h.url().search,'?node='+a);assert.match(text(h.ids.get('relations')),/编辑学习对照/);
+ list.querySelectorAll('button').find(e=>e.textContent===data.nodes.find(n=>n.id===b).title).events.click();assert.equal(h.url().searchParams.get('node'),b);h.back();assert.equal(h.url().searchParams.get('node'),a);assert.match(text(h.ids.get('relations')),/编辑学习对照/);
 });
 
 test('12 admitted relations classified independently without upgrading source review',()=>{
@@ -56,6 +56,6 @@ test('12 admitted relations classified independently without upgrading source re
 test('actual migration and editorial nodes retain limits and sources through repeated navigation',async()=>{
  const h=await boot('https://example.test/modelatlas/?node=office-zapier-agents');
  let list=h.ids.get('relations');assert.match(text(list),/官方文档关系，非运行核验/);assert.match(text(list),/未定 Agents 停用日/);assert.match(text(list),/on-demand/);assert.ok(list.querySelectorAll('a').some(x=>x.href.includes('Migrating-from-Agents-to-AI-by-Zapier')));
- h.click('node','assistant-chatgpt-deep-research');list=h.ids.get('relations');assert.match(text(list),/编辑学习对照，非厂商集成/);assert.match(text(list),/不推定同一模型/);assert.ok(list.querySelectorAll('a').length>=2);
- h.back();assert.equal(h.url().search,'?node=office-zapier-agents');assert.match(text(h.ids.get('relations')),/工具默认不暂停/);h.forward();assert.equal(h.url().search,'?node=assistant-chatgpt-deep-research');
+ h.hash('assistant-chatgpt-deep-research');list=h.ids.get('relations');assert.match(text(list),/编辑学习对照，非厂商集成/);assert.match(text(list),/不推定同一模型/);assert.ok(list.querySelectorAll('a').length>=2);
+ h.back();assert.equal(h.url().searchParams.get('node'),'office-zapier-agents');assert.match(text(h.ids.get('relations')),/工具默认不暂停/);h.forward();assert.equal(h.url().searchParams.get('node'),'assistant-chatgpt-deep-research');
 });

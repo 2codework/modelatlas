@@ -68,7 +68,7 @@ def publish(root,out,data):
  p=root/REL;shutil.copytree(p,out/'realtime-audio',dirs_exist_ok=True)
  text=markdown(data);(root/'REALTIME_AUDIO.md').write_text(text);(out/'REALTIME_AUDIO.md').write_text(text)
  esc=lambda x:html.escape(readable(x),quote=True)
- parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时语音模型 · ModelAtlas</title><link rel="stylesheet" href="style.css"></head><body><main><h1>实时语音模型 · 四个有限样本</h1><p><a href="index.html">返回知识地图</a> · <a href="REALTIME_AUDIO.md">专题书稿</a></p><p>来源审阅 / never-run；模型、API和客户端分开。不是全球完整目录。</p><p>'+esc(data['realtime_audio_registry']['scope_zh'])+'</p><nav aria-label="模型目录">']
+ parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时语音模型 · ModelAtlas</title><link rel="stylesheet" href="style.css"><script src="topic.js" defer></script></head><body class="topic-page"><main><h1>实时语音模型 · 四个有限样本</h1><p><a href="index.html">返回知识地图</a> · <a href="REALTIME_AUDIO.md">专题书稿</a></p><p>来源审阅 / never-run；模型、API和客户端分开。不是全球完整目录。</p><p>'+esc(data['realtime_audio_registry']['scope_zh'])+'</p><nav aria-label="模型目录">']
  for n in data['nodes']:
   if 'realtime_audio' in n:parts+=['<a href="#'+esc(n['id'])+'">'+esc(n['title'])+'</a> ·']
  parts+=['</nav>']
@@ -84,5 +84,5 @@ def publish(root,out,data):
   for sid in n['source_ids']:
    s=next(x for x in data['sources'] if x['id']==sid);parts+=['<li><a href="'+esc(s['url'])+'" rel="noopener noreferrer">'+esc(s['research_source_id'])+'</a> · '+esc(s['access_status'])+'</li>']
   parts+=['</ul><h3>未执行学习练习</h3><ol><li>将模型、传输协议、客户端分成三栏。</li><li>对比公告、论文、权重发布与未知上传日期。</li><li>设计经同意合成音频的测试表；未获批不调用模型、设备或收费服务。</li><li>若将来获批，固定修订/硬件，区分目标delay和端到端P50/P95，不复制作者成绩。</li></ol></article>']
- parts+=['<h2>覆盖缺口</h2><pre>'+esc(data['realtime_audio_registry']['coverage_gaps'])+'</pre><h2>图统计作用域</h2><p>r1接纳阶段是242节点/151边/72孤点/108弱分量；下列为当前全图，不代表覆盖完整。</p><pre>'+esc(data['realtime_audio_registry']['graph_statistics_current'])+'</pre><p>封存研究与独立QA：<a href="realtime-audio/admission.json">精确接纳清单</a> · <a href="realtime-audio/raw/research-r2/source-checks.json">打开/失败记录</a></p></main></body></html>']
+ parts+=['<details class="topic-evidence"><summary>覆盖缺口、图统计与封存证据</summary><h2>覆盖缺口</h2><pre>'+esc(data['realtime_audio_registry']['coverage_gaps'])+'</pre><h2>图统计作用域</h2><p>r1接纳阶段是242节点/151边/72孤点/108弱分量；下列为当前全图，不代表覆盖完整。</p><pre>'+esc(data['realtime_audio_registry']['graph_statistics_current'])+'</pre><p>封存研究与独立QA：<a href="realtime-audio/admission.json">精确接纳清单</a> · <a href="realtime-audio/raw/research-r2/source-checks.json">打开/失败记录</a></p></details></main></body></html>']
  (out/'realtime-audio.html').write_text('\n'.join(parts))
