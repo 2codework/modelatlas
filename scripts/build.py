@@ -204,6 +204,28 @@ def normalize(bundles):
             result['learning_paths'].append({'title':p['title'],'note':p.get('acceptance','原创建议；未执行教程'),'node_ids':ids})
     return result
 
+# Frozen admitted registry. Python bool is not an accepted replacement for an int.
+EARLY_NLP_ADMITTED_REGISTRY = {'schema_version': 'early-nlp.registry.r1', 'scope_zh': '早期NLP有限补充：4历史概念、14来源、5书目事件；不代表NLP史完整。旧coverage及阶段计数保留，非当前全图统计。零关系边、零厂商目录新增。', 'source_counts': {'metadata_readable': 7, 'selected_page_pdfs': 2, 'other_failed_or_not_retried': 5, 'total': 14, 'full_papers_verified': 0}, 'expected_counts': {'nodes': 254, 'sources': 405, 'events': 211, 'edges': 151, 'catalog_records': 77}, 'node_ids': ['early-nlp-hmm', 'early-nlp-crf', 'early-nlp-rnn', 'early-nlp-lstm'], 'new_edges': [], 'new_catalog_records': [], 'original_bundle_sha256sums_sha256': 'a03b78b1fc42a4a6bc5d1ff20d0fcdfa8d797eaa9a224f11f0e4aabf67d1ad44'}
+
+def accepted_early_nlp_registry(value):
+    def equal(a,b):
+        if type(a) in (int,float) and type(b) in (int,float): return a==b
+        if type(a) is not type(b): return False
+        if isinstance(b,dict): return a.keys()==b.keys() and all(equal(a[k],b[k]) for k in b)
+        if isinstance(b,list): return len(a)==len(b) and all(equal(x,y) for x,y in zip(a,b))
+        return a==b
+    return equal(value,EARLY_NLP_ADMITTED_REGISTRY)
+
+def coverage_gap_lines(data):
+    lines=[]
+    registry=data.get('early_nlp_registry',{})
+    for gap in data['coverage_gaps']:
+        if gap=='早期统计NLP、HMM/CRF、RNN/LSTM原始论文仍需单列' and accepted_early_nlp_registry(registry):
+            lines += ['- 历史研究包缺口记录（原文）：'+gap, '  '+registry['scope_zh'], '  本批已补4个历史概念及代表书目、5个书目事件；不是NLP全史。整篇全文核验：0（full_papers_verified）；不等于全文复核。', '  [查看书目/选页核验范围](early-nlp/SOURCE_SCOPE.md)']
+        else:
+            lines.append('- '+str(gap))
+    return lines
+
 def book(data):
     lines=['# ModelAtlas · 大模型知识地图','', '> v0.2.2 · 代表性知识地图；不是全厂商、全版本目录。最后核验：'+data['checked_at']+'。来源核验不是独立复现实验。','', '## 阅读路径']
     for p in data['learning_paths']: lines += ['','### '+p['title'],p['note'],' → '.join(p['node_ids'])]
@@ -261,7 +283,7 @@ def book(data):
     lines += ["", "## 端侧多模态有限样本", "精确身份、参数/许可边界及原始来源见 [来源范围说明](edge-multimodal/SOURCE_SCOPE.md)。18来源=17可读+1历史失败；24日期槽=15已知+9未知。本批零目录新增、零关系新增；来源审阅不是运行验证。"]
     lines+=['','## 来源目录']
     for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
-    lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
+    lines+=['','## 覆盖缺口']+coverage_gap_lines(data)
     return '\n'.join(line.rstrip() for line in lines)+'\n'+(vendor_catalog.book(data['vendor_catalog']) if 'vendor_catalog' in data else '')+(creative_gaps.book(data['creative_learning_registry']) if 'creative_learning_registry' in data else '')
 def build():
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
