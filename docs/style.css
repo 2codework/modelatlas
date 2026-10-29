@@ -54,3 +54,13 @@ pre { max-width:100%; overflow-x:auto; white-space:pre; padding:1rem; line-heigh
 @media(max-width:760px){.atlas-workspace #detail h2,.atlas-workspace #detail h3{scroll-margin-top:190px}}
 .atlas-workspace .prerequisite-strip{background:#f0f3e9;padding:16px;border-left:3px solid #8ca67e}.atlas-workspace .prerequisite-strip p{font-size:14px;margin:0 0 10px}.atlas-workspace .prerequisite-strip button{font-size:13px;margin:4px 6px 0 0}
 .atlas-workspace .path-prerequisites{padding:12px;background:#eef2e7;margin:12px 0}.atlas-workspace .path-prerequisites strong{display:block;font-size:12px;font-weight:600;margin-bottom:6px}.atlas-workspace .path-prerequisites button{font-size:13px;margin:3px 8px 3px 0;text-decoration:underline;text-underline-offset:3px}
+
+/* Edge record reading: scoped so legacy nodes retain their layout. */
+.edge-record-reader{font-size:16px;line-height:1.65;min-width:0;overflow-wrap:anywhere}
+.edge-record-reader details{margin:12px 0;border-top:1px solid var(--line,#d7dfe8);padding:12px 0}
+.edge-record-reader summary{font-size:16px;font-weight:650;cursor:pointer}
+.edge-record-reader dl{grid-template-columns:minmax(120px,1fr) minmax(0,3fr);margin:14px 0}
+.edge-record-reader dd{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.edge-original{display:block;color:var(--muted,#526174);font-size:14px;line-height:1.5;margin-top:4px}
+.edge-reading-guide{border-left:3px solid #397a73;padding-left:12px}
+@media(max-width:600px){.edge-record-reader dl{display:block}.edge-record-reader dt{margin-top:12px}.edge-record-reader dd{margin-left:0}.edge-record-reader{width:100%}}

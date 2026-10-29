@@ -24,6 +24,19 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  try{const raw=localStorage.getItem('modelatlas.progress');if(raw)completed=C.parseProgress(raw,allIds);}catch{$('progress-status').textContent='本地进度不可用或已损坏；本次会话仍可使用，导出可备份。';}
  function save(){progressRevision++;let persisted=true;try{localStorage.setItem('modelatlas.progress',JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]}));$('progress-status').textContent='已在此浏览器保存';}catch{persisted=false;$('progress-status').textContent='浏览器不允许持久保存；请导出备份。';}renderPaths();return persisted;}
  function sourceList(parent,item){const urls=new Set(item.source_urls||[]);for(const id of item.source_ids||[]){const s=sources.get(id);if(s)urls.add(s.url);}const ul=el('ul');for(const u of urls)ul.append(el('li'));[...urls].forEach((u,i)=>ul.children[i].append(link(u)));if(!urls.size)ul.append(el('li','没有已核验来源；不能视为技术事实。'));parent.append(ul);}
+ function renderEdgeRecord(root,n){
+  const record=C.projectEdgeRecord(n);if(!record)return;
+  const box=section(root,'端侧模型 · 怎么看这份模型记录');box.className='edge-record-reader';
+  box.append(el('p','先确认精确身份和输入输出，再看参数分母、许可、运行条件。官方自报不等于独立实测；unknown 保持未知。这里只读来源，未下载或运行模型。','edge-reading-guide'));
+  for(const [index,group] of record.groups.entries()){
+   const part=el(index===0?'div':'details');if(index>0)part.append(el('summary',group.title));
+   const dl=el('dl');for(const row of group.rows){const dd=el('dd',row.text);if(typeof row.original==='string'&&row.text!==row.original)dd.append(el('small','原文：'+row.original,'edge-original'));dl.append(el('dt',row.label),dd);}part.append(dl);box.append(part);
+  }
+  const provenance=el('details');provenance.append(el('summary','已核验来源链接与阅读范围'));
+  const verified=record.source_ids.filter(id=>sources.has(id)&&sources.get(id).verification_status==='primary_source_opened');sourceList(provenance,{source_ids:verified});
+  if(record.source_attempt_ids.length)provenance.append(el('p','仅尝试、不能用作事实支持：'+record.source_attempt_ids.join('、')));
+  if(record.learning_url==='edge-multimodal/SOURCE_SCOPE.md'){const a=el('a','来源范围 SOURCE_SCOPE · 原始审阅边界');a.href=record.learning_url;provenance.append(a);}box.append(provenance);
+ }
  // Media evaluation records are typed knowledge entities, not a uniform dataset list.
  function renderMediaEvaluation(root,record){
   const kinds={benchmark:'基准（benchmark）',metric:'指标（metric）',harness:'评测工具／套件（harness）',dataset:'数据集（dataset）'},box=section(root,'媒体评测 · 类型化元数据（未运行）');box.className='media-evaluation-detail';
@@ -65,7 +78,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
   if(route.get(kind)===id&&!route.has(kind==='node'?'catalog':'node')&&!location.hash){reveal();detailTOC($(kind==='node'?'detail':'catalog-detail'));return;}
   route.delete(kind==='node'?'catalog':'node');route.set(kind,id);if(!route.has('view'))route.set('view',kind==='catalog'?'vendor-catalog':'explore');commit(mode);reveal();detailTOC($(kind==='node'?'detail':'catalog-detail'));window.scrollTo?.(0,0);$('close-detail').focus?.();
  }
- function choose(id,scroll=false,historyMode='push'){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const [value,kind] of [[n.type,'type'],[n.category,'category'],[n.verification_status,'evidence']])tags.append(el('span',C.displayLabel(value,kind),'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));if(n.prerequisites?.length){const box=section(root,'先修知识 · 编辑建议');box.className='prerequisite-strip';box.append(el('p','不熟悉这些概念？先打开阅读。已读不等于掌握；本条不是无先修入门课。'));for(const i of n.prerequisites)if(nodes.has(i))box.append(button(nodes.get(i).title,()=>choose(i)));}else root.append(el('p','本条未登记先修要求；内容是知识介绍，不代表完整课程。','muted'));const dl=el('dl');
+ function choose(id,scroll=false,historyMode='push'){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const [value,kind] of [[n.type,'type'],[n.category,'category'],[n.verification_status,'evidence']])tags.append(el('span',C.displayLabel(value,kind),'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));if(n.edge_multimodal)renderEdgeRecord(root,n);if(n.prerequisites?.length){const box=section(root,'先修知识 · 编辑建议');box.className='prerequisite-strip';box.append(el('p','不熟悉这些概念？先打开阅读。已读不等于掌握；本条不是无先修入门课。'));for(const i of n.prerequisites)if(nodes.has(i))box.append(button(nodes.get(i).title,()=>choose(i)));}else root.append(el('p','本条未登记先修要求；内容是知识介绍，不代表完整课程。','muted'));const dl=el('dl');
  const fields={'版本 / 快照':n.version,'最后核验':n.checked_at,'机构':v.vendor,'可获得性':v.availability,'许可证':n.license||n.license_notes||v.license,'费用与预算':n.cost||n.cost_notes,'生命周期':v.lifecycle||'unknown','适用版本':n.lifecycle?.applicable_version||n.applicable_versions||n.version,'输入模态':n.input_modalities,'输出模态':n.output_modalities};
  for(const [k,value] of Object.entries(fields)){dl.append(el('dt',k),el('dd',display(value)));}root.append(dl);
  if(n.realtime_audio){const m=n.realtime_audio,box=section(root,'实时语音模型 · 版本与未执行边界');for(const [key,label] of [['runtime_zh','运行与硬件'],['account_cost_zh','账号与费用'],['latency_zh','延迟口径'],['streaming','流式条件'],['version_records','各版本价格与生命周期'],['reviewed_variants','已核变体'],['current_2_1_release_date','2.1发布日期'],['weights_first_upload_date','权重首次上传日期']])if(Object.hasOwn(m,key))box.append(el('h5',label),el('pre',display(m[key])));const a=el('a','完整语音学习页 · 许可、未知与官方入口');a.href='realtime-audio.html#'+encodeURIComponent(n.id);box.append(a);box.append(el('p','模型未运行；GPT家族无统一弃用态，旧ID的计划停用不能继承到2.1。'));}
@@ -78,7 +91,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
 
  const replacements=n.lifecycle?.replacement_node_ids||n.replaced_by||[];if(replacements.length){const box=section(root,'替代 / 后继');for(const i of replacements)if(nodes.has(i))box.append(button(nodes.get(i).title,()=>choose(i)));}
  if(n.lifecycle?.note_zh)root.append(el('p',n.lifecycle.note_zh,'muted'));
- if(n.steps_zh?.length){const box=section(root,'操作学习步骤 · 原创建议，未执行'),ol=el('ol');for(const step of n.steps_zh)ol.append(el('li',step));box.append(ol);}
+ if(n.steps_zh?.length&&!n.edge_multimodal){const box=section(root,'操作学习步骤 · 原创建议，未执行'),ol=el('ol');for(const step of n.steps_zh)ol.append(el('li',step));box.append(ol);}
  if(n.best_practice_path){const box=section(root,'最佳实践检查路径');box.append(el('pre',JSON.stringify(n.best_practice_path,null,2)));}
  const mediaRecord=(Array.isArray(D.media_evaluation_registry)?D.media_evaluation_registry:[]).find(r=>r.node_id===id);if(mediaRecord)renderMediaEvaluation(root,mediaRecord);
  const registry=D.dataset_benchmark_registry.find(r=>r.node_id===id);
