@@ -1,0 +1,9 @@
+{
+  "schema": "modelatlas.foundations-admission.v1",
+  "accepted_at": "2026-10-29",
+  "source_sha256": "8c8fe93cac66423d12bea51f03d1e110bd056a8e6f21be79d234cf1b7ada1053",
+  "independent_review": "INDEPENDENT-QA.md",
+  "scope": "Six original synthetic paper-exercise introductory lessons; source review and manual paper reasoning only.",
+  "not_verified": ["real model execution", "MCP SDK behavior", "real Agent effects", "browser visual acceptance"],
+  "integration": "Static escaped HTML, one lesson per hash; native browser history; no mutation of research data, original BOOK, or modelatlas.progress.v1. Frozen draft provenance remains unchanged."
+}

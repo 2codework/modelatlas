@@ -108,3 +108,21 @@ test('all real default card badges and filter labels are readable while IDs and 
 test('detail badges use display labels but advanced raw research retains original enums exactly',async()=>{
  const h=await boot('https://example.test/modelatlas/?node='+n1),n=data.nodes.find(n=>n.id===n1),C=require('../web/core.js'),detail=h.ids.get('detail'),tags=detail.children.find(e=>e.className==='tags');assert.deepEqual(tags.children.map(e=>e.textContent),[C.displayLabel(n.type,'type'),C.displayLabel(n.category,'category'),C.displayLabel(n.verification_status,'evidence')]);const raw=detail.querySelectorAll('pre').find(e=>{try{return JSON.parse(e.textContent).id===n1;}catch{return false;}});assert.ok(raw);assert.deepEqual(JSON.parse(raw.textContent),n);
 });
+
+test('learning desk is instructional only at unfiltered first page and never obscures a search',async()=>{
+ const h=await boot();assert.equal(h.ids.get('learning-desk').hidden,false);assert.equal(h.stored.size,0);
+ h.ids.get('query').value='Transformer';h.ids.get('filters').events.input();assert.equal(h.ids.get('learning-desk').hidden,true);
+ h.ids.get('filters').events.reset({preventDefault(){}});assert.equal(h.ids.get('learning-desk').hidden,false);
+ h.ids.get('node-pagination').children.at(-1).events.click();assert.equal(h.ids.get('learning-desk').hidden,true);h.back();assert.equal(h.ids.get('learning-desk').hidden,false);
+});
+test('continuous learning derives from existing explicit read schema, not inferred mastery',async()=>{
+ const h=await boot();const start=h.ids.get('continue-learning').querySelectorAll('button')[0];assert.match(start.textContent,/开始读/);start.events.click();assert.equal(h.url().searchParams.get('node'),'nlp');assert.equal(h.stored.size,0);
+ const read=h.ids.get('detail').querySelectorAll('button').find(b=>b.textContent==='标记为已读');read.events.click();assert.deepEqual(JSON.parse(h.stored.get('modelatlas.progress')), {schema:'modelatlas.progress.v1',completed:['nlp']});
+ const next=h.ids.get('continue-learning').querySelectorAll('button')[0];assert.match(next.textContent,/接着读/);next.events.click();assert.equal(h.url().searchParams.get('node'),'tokenization');
+ const onward=h.ids.get('detail').querySelectorAll('button').find(b=>b.textContent.startsWith('下一站：'));assert.ok(onward);onward.events.click();assert.equal(h.url().searchParams.get('node'),'embeddings');h.back();assert.equal(h.url().searchParams.get('node'),'tokenization');
+});
+test('each learning path exposes unfulfilled ordering prerequisites without mutating research',async()=>{
+ const h=await boot('https://example.test/modelatlas/?view=learn');
+ for(const p of data.learning_paths){const card=h.ids.get('paths').children.find(c=>c.children[0]?.textContent===p.title);assert.ok(card);const earlier=new Set(),needed=new Set();for(const id of p.node_ids){for(const pre of data.nodes.find(n=>n.id===id).prerequisites||[])if(!p.node_ids.includes(pre))needed.add(pre);earlier.add(id);}const pre=card.children.find(c=>c.className==='path-prerequisites');if(needed.size){assert.ok(pre);for(const id of needed)assert.ok(pre.querySelectorAll('button').some(b=>b.textContent===nodeTitle(id)));}}
+ assert.equal(h.stored.size,0);
+});

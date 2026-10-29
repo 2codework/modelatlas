@@ -281,6 +281,8 @@ def build():
     knowledge_graph_links.apply(data,ROOT)
     realtime_audio.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
+    import build_foundations
+    build_foundations.render(ROOT)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')

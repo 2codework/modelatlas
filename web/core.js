@@ -59,5 +59,12 @@ function displayLabel(value,kind){
  if(!knownKind||['category','type','evidence'].includes(kind)||/^[a-z][a-z0-9]*(?:_[a-z0-9]+)+$/.test(text))return '未收录中文标签 · '+text.replace(/[_-]+/g,' ');
  return text;
 }
-const api={displayLabel,displayLabels,relationDisplay,safeURL,parseProgress,search,deepLinkID,hasExplicitUnknownAvailability};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
+// Stable topological order is an editorial display only; source paths stay untouched.
+function learningOrder(path,nodeMap){
+ const original=[...path.node_ids],inside=new Set(original),done=new Set(),ordered=[],external=new Set();
+ for(const id of original)for(const pre of nodeMap.get(id)?.prerequisites||[])if(!inside.has(pre)&&nodeMap.has(pre))external.add(pre);
+ while(ordered.length<original.length){const next=original.find(id=>!done.has(id)&&(nodeMap.get(id)?.prerequisites||[]).every(pre=>!inside.has(pre)||done.has(pre)));if(next===undefined)return {node_ids:original,external:[...external],cyclic:true};done.add(next);ordered.push(next);}
+ return {node_ids:ordered,external:[...external],cyclic:false};
+}
+const api={learningOrder,displayLabel,displayLabels,relationDisplay,safeURL,parseProgress,search,deepLinkID,hasExplicitUnknownAvailability};root.ModelAtlasCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
