@@ -1,0 +1,204 @@
+[
+  {
+    "name": "old node",
+    "path": [
+      "nodes",
+      0,
+      "title"
+    ],
+    "action": "set",
+    "value": "drift"
+  },
+  {
+    "name": "old event date",
+    "path": [
+      "events",
+      0,
+      "date"
+    ],
+    "action": "set",
+    "value": "2099-01-01"
+  },
+  {
+    "name": "old edge",
+    "path": [
+      "edges",
+      0,
+      "target"
+    ],
+    "action": "set",
+    "value": "creative-chatgpt-web-images"
+  },
+  {
+    "name": "old catalog",
+    "path": [
+      "vendor_catalog",
+      "records",
+      0,
+      "title"
+    ],
+    "action": "set",
+    "value": "drift"
+  },
+  {
+    "name": "unregistered source",
+    "path": [
+      "sources"
+    ],
+    "action": "append",
+    "value": {
+      "id": "unregistered-source"
+    }
+  },
+  {
+    "name": "unregistered node",
+    "path": [
+      "nodes"
+    ],
+    "action": "append",
+    "value": {
+      "id": "unregistered-node"
+    }
+  },
+  {
+    "name": "unknown top key",
+    "path": [
+      "extra_stage"
+    ],
+    "action": "set",
+    "value": {}
+  },
+  {
+    "name": "duplicate source id",
+    "path": [
+      "sources",
+      426,
+      "id"
+    ],
+    "action": "set",
+    "value": "cgw-src-generation"
+  },
+  {
+    "name": "duplicate node id",
+    "path": [
+      "nodes",
+      258,
+      "id"
+    ],
+    "action": "set",
+    "value": "transformer"
+  },
+  {
+    "name": "unknown backend upgraded",
+    "path": [
+      "nodes",
+      258,
+      "exact_backend_model"
+    ],
+    "action": "set",
+    "value": "Sunburst"
+  },
+  {
+    "name": "unknown date upgraded",
+    "path": [
+      "nodes",
+      258,
+      "first_feature_release_date"
+    ],
+    "action": "set",
+    "value": "2026-10-29"
+  },
+  {
+    "name": "new reference changed",
+    "path": [
+      "nodes",
+      258,
+      "source_ids"
+    ],
+    "action": "set",
+    "value": [
+      "cgw-src-api-sunburst"
+    ]
+  },
+  {
+    "name": "new source URL changed",
+    "path": [
+      "sources",
+      421,
+      "url"
+    ],
+    "action": "set",
+    "value": "https://example.com/"
+  },
+  {
+    "name": "missing registry",
+    "path": [
+      "chatgpt_images_feature_registry"
+    ],
+    "action": "delete"
+  },
+  {
+    "name": "wrong registry",
+    "path": [
+      "chatgpt_images_feature_registry",
+      "runtime_verified"
+    ],
+    "action": "set",
+    "value": true
+  },
+  {
+    "name": "missing historical bundles",
+    "path": [
+      "research_bundles"
+    ],
+    "action": "delete"
+  },
+  {
+    "name": "wrong historical bundles",
+    "path": [
+      "research_bundles"
+    ],
+    "action": "set",
+    "value": []
+  },
+  {
+    "name": "new unauthorized bundle",
+    "path": [
+      "research_bundles"
+    ],
+    "action": "append",
+    "value": {
+      "id": "unknown"
+    }
+  },
+  {
+    "name": "array ordering",
+    "path": [
+      "nodes"
+    ],
+    "action": "reverse",
+    "value": null
+  },
+  {
+    "name": "unknown own __proto__ top key",
+    "path": [
+      "__proto__"
+    ],
+    "action": "set",
+    "value": {
+      "injected": true
+    }
+  },
+  {
+    "name": "unknown own __proto__ source key",
+    "path": [
+      "sources",
+      421,
+      "__proto__"
+    ],
+    "action": "set",
+    "value": {
+      "injected": true
+    }
+  }
+]

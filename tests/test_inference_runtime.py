@@ -6,7 +6,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import inference_runtime as I
 class RuntimeAdmission(unittest.TestCase):
  @classmethod
- def setUpClass(cls):cls.live=json.loads((ROOT/'dist/data.json').read_text())
+ def setUpClass(cls):
+  from images_contract import legacy_view as images_legacy_view
+  cls.live=images_legacy_view(json.loads((ROOT/'dist/data.json').read_text()))
  def test_live_and_complete_old_stage(self):validate(self.live);self.assertEqual(legacy_view(self.live),baseline())
  def test_production(self):validate(I.apply(baseline(),ROOT))
  def test_exact_counts(self):self.assertEqual([len(self.live[k]) for k in ['nodes','sources','events','edges']],[258,421,211,151])

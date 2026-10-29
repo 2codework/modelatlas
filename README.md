@@ -6,15 +6,17 @@
 
 ## 本地使用
 
-需要 Python 3.10+；前端无需依赖安装。Node 18+ 仅用于纯函数测试。
+需要 Python 3.10+；前端无需依赖安装。Node 18+ 用于离线 JavaScript 语法与回归测试。
 
 ```sh
 python scripts/build.py
 python -m unittest discover -s tests -v
-node --check web/app.js
-node --test tests/core.test.js
+find web tests -type f -name '*.js' -print0 | xargs -0 -r -n 1 node --check
+node --test --test-concurrency=1 tests/*.test.js
 python -m http.server 8000 --directory dist
 ```
+
+JavaScript 全套测试的正式本地与 CI 命令显式使用 `--test-concurrency=1`：全部测试文件和断言仍执行，不跳过、不自动回退、不修改 timeout。此云环境无参数并发曾多次出现进程被外部 `SIGKILL` 终止；原因未确定，不能声称已证 OOM 或无参数模式已修好。采用有界串行使测试资源使用更可预测；任何断言失败仍直接失败。
 
 然后在浏览器打开 `http://localhost:8000`。不要直接双击 HTML（浏览器可能阻止本地 fetch）。
 构建不联网、不安装第三方代码。`dist/` 是静态站点；项目路径相对资源适合 GitHub Pages。

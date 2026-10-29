@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "id": "creative-chatgpt-web-images",
+      "title": "ChatGPT 网页图片创建与编辑",
+      "type": "application_feature",
+      "category": "creative-design",
+      "vendor": "OpenAI",
+      "description_zh": "ChatGPT网页中的图片创建与参考图编辑功能；可以用自然语言说明修改和保留内容，但不是像素锁定或原生分层设计编辑器。与托管Image API型号分开。",
+      "checked_at": "2026-10-29",
+      "version": "rolling web feature; exact backend model unknown",
+      "verification_status": "source_reviewed_not_replicated",
+      "lifecycle": "current",
+      "lifecycle_scope": "current_documented_web_feature_as_of_2026-10-29_not_account_availability",
+      "availability": "网页入口依账户、套餐、工作区设置及支持地区而定；未登录检查实际权限。",
+      "cost": "按ChatGPT可用额度；不保证固定免费次数，不采用Image API价格或Codex倍率推算网页费用。",
+      "license": "服务与输入素材权利需另核，不保证商业全面清权。",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "image"
+      ],
+      "exact_backend_model": null,
+      "first_feature_release_date": null,
+      "weights_release_date": null,
+      "architecture": null,
+      "source_ids": [
+        "cgw-src-generation",
+        "cgw-src-inputs",
+        "cgw-src-images-help-reused",
+        "cgw-src-free-reused",
+        "cgw-src-regions-reused"
+      ],
+      "capabilities_zh": [
+        "用自然语言请求创建图片",
+        "将已有图片作为参考并要求编辑",
+        "说明局部改动与保留内容；页面支持时可选择区域指导修改"
+      ],
+      "limitations_zh": [
+        "选区可能不精确，修改可能扩展到区外",
+        "指定宽高、品牌色和逐像素不变是验收目标，不是已证保证",
+        "未证明提供可编辑文字层、SVG/PSD原生图层或印刷级精确输出",
+        "图片分析输入不等于编辑结果，文字自评不等于检查通过"
+      ],
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "related_agentwork_workflow_id": "poster-change-time"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cgw-src-generation",
+      "title": "cgw-src-generation",
+      "url": "https://learn.chatgpt.com/docs/image-generation",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_page_read",
+      "evidence_scope": "网页创建/参考图编辑、按plan/workspace可用、定向修改提示",
+      "evidence_mode": "fresh_official_web_read",
+      "unknown_boundary": "页面混合Codex/desktop/web语境；gpt-image-2与3–5x倍率不外推web型号或费率"
+    },
+    {
+      "id": "cgw-src-inputs",
+      "title": "cgw-src-inputs",
+      "url": "https://learn.chatgpt.com/docs/image-inputs",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_page_read",
+      "evidence_scope": "网页图片输入入口；分析与创建/编辑能力分开",
+      "evidence_mode": "fresh_official_web_read",
+      "unknown_boundary": "Codex格式列表不直接当网页格式保证"
+    },
+    {
+      "id": "cgw-src-api-sunburst",
+      "title": "cgw-src-api-sunburst",
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_page_read",
+      "evidence_scope": "API型号确实支持text/image输入和image输出",
+      "evidence_mode": "fresh_official_web_read",
+      "unknown_boundary": "不证明ChatGPT网页当前底层型号；快照后缀不等于首次公告日期"
+    },
+    {
+      "id": "cgw-src-images-help-reused",
+      "title": "cgw-src-images-help-reused",
+      "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+      "checked_at": "2026-10-29",
+      "verification_status": "reused_qa_reviewed_source_record",
+      "evidence_scope": "uploaded-image editing, selection/direct prompting, imprecise selection boundary, Save",
+      "evidence_mode": "reused_local_qa_reviewed_official_source_record_not_fresh_web_open",
+      "unknown_boundary": "not pixel/size/layer preservation guarantee"
+    },
+    {
+      "id": "cgw-src-free-reused",
+      "title": "cgw-src-free-reused",
+      "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+      "checked_at": "2026-10-29",
+      "verification_status": "reused_qa_reviewed_source_record",
+      "evidence_scope": "separate tool limits",
+      "evidence_mode": "reused_local_qa_reviewed_official_source_record_not_fresh_web_open",
+      "unknown_boundary": "no precise per-task quota or cost promise"
+    },
+    {
+      "id": "cgw-src-regions-reused",
+      "title": "cgw-src-regions-reused",
+      "url": "https://help.openai.com/en/articles/7947663-chatgpt-supported-countries",
+      "checked_at": "2026-10-29",
+      "verification_status": "reused_qa_reviewed_source_record",
+      "evidence_scope": "use only listed supported territories; mainland China not listed",
+      "evidence_mode": "reused_local_qa_reviewed_official_source_record_not_fresh_web_open",
+      "unknown_boundary": "not every Chinese-language reader eligible"
+    }
+  ],
+  "events": [],
+  "edges": [],
+  "view_nodes": [
+    {
+      "id": "creative-chatgpt-web-images",
+      "lifecycle": "current",
+      "vendor": "OpenAI",
+      "availability": "网页入口依账户、套餐、工作区设置及支持地区而定；未登录检查实际权限。",
+      "license": "服务与输入素材权利需另核，不保证商业全面清权。"
+    }
+  ]
+}

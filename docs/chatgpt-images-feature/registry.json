@@ -1,0 +1,26 @@
+{
+  "schema": "chatgpt-images-feature-registry/1",
+  "node_ids": [
+    "creative-chatgpt-web-images"
+  ],
+  "entity_scope": "application_feature_not_model_or_api",
+  "checked_at": "2026-10-29",
+  "verification_scope": "documented_web_feature_not_account_availability",
+  "execution_status": "never-run",
+  "runtime_verified": false,
+  "source_evidence_partition": {
+    "fresh_official_web_read": [
+      "cgw-src-generation",
+      "cgw-src-inputs",
+      "cgw-src-api-sunburst"
+    ],
+    "reused_qa_reviewed_not_fresh_web_open": [
+      "cgw-src-images-help-reused",
+      "cgw-src-free-reused",
+      "cgw-src-regions-reused"
+    ]
+  },
+  "api_source_scope": "API distinction only; not web backend proof",
+  "added_events": 0,
+  "added_implementation_edges": 0
+}

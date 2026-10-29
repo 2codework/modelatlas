@@ -8003,6 +8003,22 @@ r2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的
 - 来源：https://github.com/openvinotoolkit/openvino.genai
 - 来源：https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0
 
+## ChatGPT 网页图片创建与编辑
+
+ChatGPT网页中的图片创建与参考图编辑功能；可以用自然语言说明修改和保留内容，但不是像素锁定或原生分层设计编辑器。与托管Image API型号分开。
+
+- ID / 类型：creative-chatgpt-web-images / application_feature
+- 生命周期：current
+- 版本：rolling web feature; exact backend model unknown
+- 核验：2026-10-29 · source_reviewed_not_replicated
+- license：服务与输入素材权利需另核，不保证商业全面清权。
+- cost：按ChatGPT可用额度；不保证固定免费次数，不采用Image API价格或Codex倍率推算网页费用。
+- 来源：https://learn.chatgpt.com/docs/image-generation
+- 来源：https://learn.chatgpt.com/docs/image-inputs
+- 来源：https://help.openai.com/en/articles/11084440-images-in-chatgpt
+- 来源：https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq
+- 来源：https://help.openai.com/en/articles/7947663-chatgpt-supported-countries
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -8786,6 +8802,12 @@ creative-indesign → design-c2pa
 - irt-src-trt-release · https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；r2_reverified
 - irt-src-ort-release · https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
 - irt-src-ov-release · https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- cgw-src-generation · https://learn.chatgpt.com/docs/image-generation · 核验 2026-10-29 · 网页创建/参考图编辑、按plan/workspace可用、定向修改提示
+- cgw-src-inputs · https://learn.chatgpt.com/docs/image-inputs · 核验 2026-10-29 · 网页图片输入入口；分析与创建/编辑能力分开
+- cgw-src-api-sunburst · https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst · 核验 2026-10-29 · API型号确实支持text/image输入和image输出
+- cgw-src-images-help-reused · https://help.openai.com/en/articles/11084440-images-in-chatgpt · 核验 2026-10-29 · uploaded-image editing, selection/direct prompting, imprecise selection boundary, Save
+- cgw-src-free-reused · https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq · 核验 2026-10-29 · separate tool limits
+- cgw-src-regions-reused · https://help.openai.com/en/articles/7947663-chatgpt-supported-countries · 核验 2026-10-29 · use only listed supported territories; mainland China not listed
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果

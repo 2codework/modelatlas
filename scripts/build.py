@@ -20,6 +20,7 @@ import edge_multimodal
 import early_nlp
 import inference_runtime
 import audio_diagram
+import chatgpt_images_feature
 from pathlib import Path
 from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
@@ -289,6 +290,7 @@ def book(data):
 def build():
     import build_api_local
     build_api_local.preflight(ROOT)
+    chatgpt_images_feature.preflight(ROOT)
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
     bundles.append(course)
@@ -314,6 +316,7 @@ def build():
     edge_multimodal.apply(data,ROOT)
     early_nlp.apply(data,ROOT)
     inference_runtime.apply(data,ROOT)
+    chatgpt_images_feature.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     import build_foundations
     build_foundations.render(ROOT)
@@ -346,6 +349,7 @@ def build():
     early_nlp.publish(ROOT,out)
     inference_runtime.publish(ROOT,out)
     audio_diagram.publish(ROOT,out)
+    chatgpt_images_feature.publish(ROOT,out)
     build_api_local.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
