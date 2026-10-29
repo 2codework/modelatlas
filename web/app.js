@@ -32,7 +32,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;let importGeneration=0,progressRevision=0;
  const eventLabels={paper_publication:'论文发表（书目日期）',paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布',paper_revision:'论文修订（截至核验快照）',platform_migration:'平台迁移公告',scheduled_shutdown:'计划停用（尚未发生）'};
  const display=value=>value===null||value===undefined||value===''?'未核验':typeof value==='object'?JSON.stringify(value):String(value);
- $('stats').textContent=`${D.nodes.length} 节点 · ${D.edges.length} 关联 · ${D.sources.length} 登记来源 · 核验 ${D.checked_at}`;
+ $('stats').textContent=`${D.nodes.length} 节点 · ${D.edges.length} 关联 · ${D.sources.length} 登记来源 · 各条核验范围与日期见详情`;
  try{const raw=localStorage.getItem('modelatlas.progress');if(raw)completed=C.parseProgress(raw,allIds);}catch{$('progress-status').textContent='本地进度不可用或已损坏；本次会话仍可使用，导出可备份。';}
  function save(){progressRevision++;let persisted=true;try{localStorage.setItem('modelatlas.progress',JSON.stringify({schema:'modelatlas.progress.v1',completed:[...completed]}));$('progress-status').textContent='已在此浏览器保存';}catch{persisted=false;$('progress-status').textContent='浏览器不允许持久保存；请导出备份。';}renderPaths();return persisted;}
  function sourceList(parent,item){const urls=new Set(item.source_urls||[]);for(const id of item.source_ids||[]){const s=sources.get(id);if(s)urls.add(s.url);}const ul=el('ul');for(const u of urls)ul.append(el('li'));[...urls].forEach((u,i)=>ul.children[i].append(link(u)));if(!urls.size)ul.append(el('li','没有已核验来源；不能视为技术事实。'));parent.append(ul);}

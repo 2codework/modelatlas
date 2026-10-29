@@ -1,0 +1,179 @@
+{
+  "access_date_utc": "2026-10-29",
+  "method": "web tool open/find, official primary sources only",
+  "date_scope": "Access date, not publication date. Rolling docs not pinned releases. Runtime version untested.",
+  "sources": [
+    {
+      "id": "A1",
+      "url": "https://developers.openai.com/api/docs/quickstart",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "API key and environment variable workflow; no SDK installed"
+    },
+    {
+      "id": "A2",
+      "url": "https://developers.openai.com/api/docs/guides/text?api-mode=responses",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "POST endpoint, JSON input, Authorization, typed output traversal"
+    },
+    {
+      "id": "A3",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "snapshot gpt-5.4-mini-2026-03-17; Responses; reasoning none; free tier unsupported"
+    },
+    {
+      "id": "A4",
+      "url": "https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Separate billing; eligible subscriptions may offer promotional API credits"
+    },
+    {
+      "id": "A5",
+      "url": "https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Key safety, individual keys, expiry, not browser/client exposure"
+    },
+    {
+      "id": "A6",
+      "url": "https://developers.openai.com/api/docs/guides/migrate-to-responses",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "store false disables response storage; typed output not choices"
+    },
+    {
+      "id": "A7",
+      "url": "https://developers.openai.com/api/docs/guides/reasoning",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "max_output_tokens; incomplete status; usage"
+    },
+    {
+      "id": "A8",
+      "url": "https://developers.openai.com/api/docs/guides/error-codes",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "401, 429 distinct codes, Retry-After, quota not repaired by retries"
+    },
+    {
+      "id": "L1",
+      "url": "https://ollama.com/download/mac",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Official manual download entry; no installer downloaded"
+    },
+    {
+      "id": "L2",
+      "url": "https://docs.ollama.com/macos",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "macOS 14+, M-series CPU/GPU vs x86 CPU; DMG install; path and uninstall scope"
+    },
+    {
+      "id": "L3",
+      "url": "https://ollama.com/library/qwen3:0.6b",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "tag run/payload; short ID 7df6b6e09427; 523MB; Q4_K_M; Apache-2.0 label"
+    },
+    {
+      "id": "L4",
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Original author card; Apache-2.0; /no_think soft switch, no execution"
+    },
+    {
+      "id": "L5",
+      "url": "https://docs.ollama.com/cli",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "pull, ls, ps, stop, rm commands"
+    },
+    {
+      "id": "L6",
+      "url": "https://docs.ollama.com/api/chat",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "model/messages/stream/options/keep_alive and response fields"
+    },
+    {
+      "id": "L7",
+      "url": "https://docs.ollama.com/modelfile",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "num_predict maximum generation token parameter"
+    },
+    {
+      "id": "L8",
+      "url": "https://github.com/ollama/ollama/blob/main/LICENSE",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "current main MIT software license, not model license"
+    },
+    {
+      "id": "L9",
+      "url": "https://docs.ollama.com/faq",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "default loopback 127.0.0.1 port 11434; memory vs loaded model"
+    },
+    {
+      "id": "R1",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Rejected: currently marked Deprecated"
+    },
+    {
+      "id": "R2",
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "Rejected: currently marked Deprecated"
+    },
+    {
+      "id": "L10",
+      "url": "https://curl.se/docs/manpage.html",
+      "kind": "official_primary",
+      "read_status": "readable",
+      "supports": "--disable as first curl parameter disables default config file; prevents inherited .curlrc request expansion"
+    }
+  ],
+  "read_failures": [
+    {
+      "url": "https://platform.openai.com/docs/api-reference/responses/create",
+      "error": "web content length >4194305",
+      "resolution": "Readable official text/reasoning/migration/model guides support all request fields; not claimed full reference read"
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+      "error": "web content length >4194305",
+      "resolution": "same as above"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini.md",
+      "error": "unsupported text/markdown content type",
+      "resolution": "HTML model page readable; model rejected"
+    },
+    {
+      "url": "https://docs.ollama.com/api/version",
+      "error": "404",
+      "resolution": "not used; user records app About/version, no invented endpoint"
+    }
+  ],
+  "unsupported_claims_not_made": [
+    "minimum RAM/VRAM",
+    "speed",
+    "SDK compatibility",
+    "successful real response",
+    "downloaded full digest",
+    "runtime version guarantee",
+    "zero retention",
+    "unlimited subscription API"
+  ]
+}

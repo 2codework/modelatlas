@@ -287,6 +287,8 @@ def book(data):
     lines+=['','## 覆盖缺口']+coverage_gap_lines(data)
     return '\n'.join(line.rstrip() for line in lines)+'\n'+(vendor_catalog.book(data['vendor_catalog']) if 'vendor_catalog' in data else '')+(creative_gaps.book(data['creative_learning_registry']) if 'creative_learning_registry' in data else '')
 def build():
+    import build_api_local
+    build_api_local.preflight(ROOT)
     bundles=[json.loads(p.read_text()) for p in sorted((ROOT/'data/research').glob('*.json'))]
     _, _, course = mcp_learning.load(ROOT)
     bundles.append(course)
@@ -319,6 +321,7 @@ def build():
     build_beginner.render(ROOT)
     import build_connections
     build_connections.render(ROOT)
+    build_api_local.render(ROOT)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
@@ -343,6 +346,7 @@ def build():
     early_nlp.publish(ROOT,out)
     inference_runtime.publish(ROOT,out)
     audio_diagram.publish(ROOT,out)
+    build_api_local.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

@@ -1,0 +1,25 @@
+{
+  "schema": "modelatlas.optional-practice-projection.v1",
+  "admitted_manifest_sha256": "d97213641811aaa9dec82ccbef5bd1dc259a5fb5db5a24a3cb5837ab8ec061c8",
+  "raw_archive": "learning/api-local/r1/raw",
+  "published_files_sha256": {
+    "FIRST_API.zh-CN.md": "70511698541247c4612f60810167929fb0a939c0a5658cb279251d72842fa463",
+    "FIRST_LOCAL.zh-CN.md": "da2f9b83b8031a7907dabc2e56772a6443d047f9d908e980b89864abb6b7df4c",
+    "first_request.py": "10838181aab8df8fae709488ed609c795b3719250ad3ffbb73a6b199191b6b04",
+    "local_request.sh": "88fca2dfc4b0036ffa9a139432592da322d5034f4085c46365e1b3cd172e3d7b",
+    "source-ledger.json": "bd92b8527bd1ba7f046e7bb32aa9bb712c1f7a67a29f3008be016f392eeae67f"
+  },
+  "omitted_files": {
+    "README.zh-CN.md": "internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher",
+    "integration-notes.json": "internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher",
+    "secondary-source-ledger.json": "internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher",
+    "validate.py": "internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher",
+    "validation.json": "internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher"
+  },
+  "source_binding": {
+    "practice-api.html": "FIRST_API.zh-CN.md",
+    "practice-local.html": "FIRST_LOCAL.zh-CN.md"
+  },
+  "runtime_execution": "never-run",
+  "scope": "closed static projection; no new graph nodes, events or license grant"
+}
