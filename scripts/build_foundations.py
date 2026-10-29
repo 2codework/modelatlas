@@ -1,5 +1,6 @@
 """Render accepted original paper exercises without changing the research graph or progress schema."""
 import json, hashlib
+import foundation_self_checks
 from pathlib import Path
 from html import escape
 from urllib.parse import urlsplit
@@ -10,13 +11,14 @@ def render(root):
  data=json.loads(source.read_text());h=lambda x:escape(str(x),quote=True)
  lessons=data['lessons']; sources={s['id']:s for s in data['sources']}
  nav=''.join(f'<a href="#{h(l["id"])}"><span>{i:02}</span>{h(l["title"])}</a>' for i,l in enumerate(lessons,1))
- head='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="description" content="六节有例子、纸面练习和答案的大模型零基础导读；无需账号、代码或付费。"><title>零基础六课 · ModelAtlas</title><link rel="stylesheet" href="foundations.css"><script src="foundations.js" defer></script></head><body><a class="skip" href="#course-main">跳至正文</a><aside><a class="course-brand" href="index.html">M◎DEL ATLAS<small>零基础阅读室</small></a><nav aria-label="六课目录">'''+nav+'''</nav><a class="back-map" href="foundations.html">六课导读说明</a><a class="back-map" href="index.html">← 返回知识地图</a><a class="back-map" href="BOOK.md">完整技术书稿 ↗</a></aside><main id="course-main"><p id="course-status" role="status" aria-live="polite"></p><header id="course-intro"><p class="kicker">FOUNDATIONS / 从常识开始</p><h1>先理解，再动手。</h1><p>六个小问题，建立大模型与 Agent 的基本判断。</p><div class="course-contract"><strong>无需账号、代码或付费</strong><span>你会带走：术语区分、任务契约和一份可核对的纸面草稿。</span><span>常识导读 → 原创新例 → 纸面练习 → 答案理由</span></div><p class="boundary">'''+h(data['scope'])+''' 不以阅读次数或练习答案宣称掌握，不写入原知识节点的已读进度。</p><p class="admission">六课内容已于 2026-10-29 通过独立来源与纸面推演审查；不是模型、SDK、产品效果或浏览器实测。<a href="foundations-source.json">原始课程记录</a>与本次接纳范围分开保留，不将内容审查改写为执行证据。</p></header>'''
+ head='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="description" content="六节有例子、纸面练习和答案的大模型零基础导读；无需账号、代码或付费。"><title>零基础六课 · ModelAtlas</title><link rel="stylesheet" href="foundations.css"><script src="foundations.js" defer></script><script src="foundation-self-checks.js" defer></script></head><body><a class="skip" href="#course-main">跳至正文</a><aside><a class="course-brand" href="index.html">M◎DEL ATLAS<small>零基础阅读室</small></a><nav aria-label="六课目录">'''+nav+'''</nav><a class="back-map" href="foundations.html">六课导读说明</a><a class="back-map" href="index.html">← 返回知识地图</a><a class="back-map" href="BOOK.md">完整技术书稿 ↗</a></aside><main id="course-main"><p id="course-status" role="status" aria-live="polite"></p><header id="course-intro"><p class="kicker">FOUNDATIONS / 从常识开始</p><h1>先理解，再动手。</h1><p>六个小问题，建立大模型与 Agent 的基本判断。</p><div class="course-contract"><strong>无需账号、代码或付费</strong><span>你会带走：术语区分、任务契约和一份可核对的纸面草稿。</span><span>常识导读 → 原创新例 → 纸面练习 → 答案理由</span></div><p class="boundary">'''+h(data['scope'])+''' 不以阅读次数或练习答案宣称掌握，不写入原知识节点的已读进度。</p><p class="admission">六课内容已于 2026-10-29 通过独立来源与纸面推演审查；不是模型、SDK、产品效果或浏览器实测。<a href="foundations-source.json">原始课程记录</a>与本次接纳范围分开保留，不将内容审查改写为执行证据。</p></header>'''
  parts=[head]
  for i,l in enumerate(lessons):
   parts.append(f'<article id="{h(l["id"])}"><div class="lesson-number">第 {i+1:02} 课 / 06 · 常识导读</div><h2>{h(l["title"])}</h2><p class="lesson-status">作者原创合成 · 纸面练习 · 无真实模型或 Agent 执行</p>')
   for label,text in l['sections'].items():
    if label=='答案理由':parts.append(f'<details class="answer"><summary>完成纸面练习后，展开答案与理由</summary><p>{h(text)}</p></details>')
    else:parts.append(f'<section class="{ "exercise" if label=="纸面练习" else "lesson-section" }"><h3>{h(label)}</h3><p>{h(text)}</p></section>')
+  parts.append(foundation_self_checks.render(i,l['id']))
   parts.append('<details class="evidence"><summary>来源、适用范围与技术延伸</summary><p>以下来源支持概念依据；例子、练习与答案是作者原创，不是来源中的实测结果。</p><ul>')
   for sid in l['source_ids']:
    s=sources[sid];assert urlsplit(s['url']).scheme=='https'
