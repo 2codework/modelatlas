@@ -38,3 +38,9 @@ python scripts/check_pages.py
 ## 媒体评测时间轴补包 r1
 
 新增17条事件：10论文首发、5个截至来源核验快照的末次论文修订、1基准发布、1平台迁移公告；并非完整修订历史。paper_revision / platform_migration显式区分，日期day精度、时区未知；核验日不当事件日。已审核原提案及QA保存在`learning/media-evaluation-timeline/r1/`。
+
+## 早期 NLP 有限历史补充
+
+当前补入 HMM/CRF/RNN/LSTM 四个历史方法概念（非商业模型），保留旧覆盖缺口与旧阶段统计。当前254节点、405登记来源、211事件；151边、77目录不变。本批只接纳5个书目日期，不将候选日级日期或first_release未知值补造。
+
+14来源=7可读metadata+2选页PDF+5其他失败/未重试；全文核验0。公开研究是派生投影，非私有包完整字节镜像；范围、原包hash与第二人复核归属见`learning/early-nlp/r1/SOURCE_SCOPE.md`。本次自动化是自编离线契约测试，不是浏览器视觉检查或独立论文内容复核。

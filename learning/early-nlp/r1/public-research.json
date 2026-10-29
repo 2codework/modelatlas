@@ -1,0 +1,738 @@
+{
+  "schema_version": "early-nlp.derived-public-projection.r1",
+  "projection_policy": "derived public projection; not a byte-identical publication of the private research bundle; private coordination fields omitted. Accepted content/date facts unchanged.",
+  "original_bundle_sha256sums_sha256": "a03b78b1fc42a4a6bc5d1ff20d0fcdfa8d797eaa9a224f11f0e4aabf67d1ad44",
+  "original_file_sha256": {
+    "research.json": "2c944c300f7b9987f5d980b3ceafa6dfe4fd88434dfef93ab6ff44c57b956825",
+    "source-audit.json": "545df3027bd3d41a39d32599e98fd26a9059b2976e80947ecac4ffde9a8e67b5",
+    "date-evidence.json": "4afd06687287dece4289b7f60b36317802cdff16ce69ead88f8e85e95227f7e0"
+  },
+  "nodes": [
+    {
+      "id": "early-nlp-hmm",
+      "title": "隐马尔可夫模型 HMM（历史概念）",
+      "description_zh": "HMM用隐藏状态及其概率性观测描述序列；观测序列似然计算、状态序列推断和模型参数估计是不同问题。",
+      "why_before_llm_zh": "理解概率建模假设与序列解码，不把序列学习等同于神经网络。",
+      "representative_paper": {
+        "title": "A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition",
+        "authors": [
+          "Lawrence R. Rabiner"
+        ],
+        "venue": "Proceedings of the IEEE 77(2), 257–286",
+        "year": 1989,
+        "official_url": "https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf",
+        "version": "1989 journal tutorial; author-hosted copy",
+        "role": "tutorial_not_invention_paper",
+        "affiliations_at_publication": [
+          {
+            "author": "Lawrence R. Rabiner",
+            "institution": "AT&T Bell Laboratories",
+            "place": "Murray Hill, New Jersey",
+            "verification": "author_hosted_article_pdf_page1_affiliation_line_visually_verified"
+          }
+        ],
+        "affiliation_note_zh": "由作者公开论文PDF第1页署名行支持，不由当前UCSB主页推断。",
+        "abstract_support_zh": "第1页顶部、底部与第2页顶部可见区域独立像素核验；支持教程身份、有限模型概括及三个问题区分，非完整定义或全文算法核验。"
+      },
+      "dates": [
+        {
+          "kind": "representative_paper_publication",
+          "value": "1989-02",
+          "precision": "month",
+          "source_ids": [
+            "hmm-author-list",
+            "hmm-author-pdf"
+          ],
+          "status": "primary_metadata_verified",
+          "note_zh": "",
+          "admitted": true
+        }
+      ],
+      "history_zh": "1989教程不是HMM首次提出。Baum–Petrie 1966论文为待补证早期文献，不确定唯一first_release。",
+      "pending_historical_papers": [
+        {
+          "title": "Statistical Inference for Probabilistic Functions of Finite State Markov Chains",
+          "authors": [
+            "Leonard E. Baum",
+            "Ted Petrie"
+          ],
+          "year_candidate": 1966,
+          "official_url": "https://doi.org/10.1214/aoms/1177699147",
+          "verification": "pending_primary_readable_metadata",
+          "affiliations": null
+        }
+      ],
+      "learning_links": [
+        {
+          "target": "attention",
+          "relationship": "curated_comparison_not_causal",
+          "reason_zh": "对照隐藏状态推断与可学习信息选择；二者不等价。"
+        }
+      ],
+      "illustration_zh": "原创两行三时刻简图：上行为隐藏标签圆点，相邻状态箭头；下行为观测方框，各状态向对应观测连线。",
+      "type": "historical_method_concept",
+      "category": "foundations",
+      "checked_at": "2026-10-29",
+      "first_release": null,
+      "arxiv_first_submitted": null,
+      "arxiv_migration_date": null,
+      "code_release_date": null,
+      "implementation_version": null,
+      "execution_status": "never-run",
+      "admission_status": "accept_metadata_only",
+      "image_rights": "original_diagram_spec_only_no_paper_image_copy",
+      "lifecycle": "historical_reference_retained_not_claimed_obsolete",
+      "full_paper_verified": false,
+      "content_evidence_level": "selected_page_regions_original_text_verified_not_full_paper",
+      "selected_page_evidence": {
+        "id": "hmm-author-pdf",
+        "url": "https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf",
+        "pdf_physical_pages": [
+          1,
+          2
+        ],
+        "viewed_regions": [
+          "page 1 top",
+          "page 1 bottom",
+          "page 2 top"
+        ],
+        "observed_printed_page": {
+          "1": "257",
+          "2": null
+        },
+        "accepted_claims_zh": [
+          "第1页题名及Rabiner署名、教程定位",
+          "第1页页脚1989年2月、Proceedings of the IEEE 77(2)",
+          "第1页署名AT&T Bell Laboratories, Murray Hill, NJ",
+          "第2页顶部将似然计算、最佳状态序列确定、模型参数调整区分为不同问题；组织说明指出观测是隐藏状态的概率函数"
+        ],
+        "limits_zh": "未核完整数学定义、后续求解算法、起源唯一归属或实验。"
+      }
+    },
+    {
+      "id": "early-nlp-crf",
+      "title": "条件随机场 CRF（历史概念）",
+      "description_zh": "对给定输入下的结构化输出建模；在序列标注情形，联合评价标签序列并作全局归一化。",
+      "why_before_llm_zh": "认识结构化预测、条件训练和全局归一化，与现代表示模型的输出层设计对照。",
+      "representative_paper": {
+        "title": "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data",
+        "authors": [
+          "John Lafferty",
+          "Andrew McCallum",
+          "Fernando Pereira"
+        ],
+        "venue": "ICML 2001",
+        "year": 2001,
+        "official_url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps",
+        "version": "author-linked original PostScript; content not parsed",
+        "role": "original_method_paper_author_identified",
+        "affiliations_at_publication": null,
+        "affiliation_note_zh": "原文索引显示WhizBang! Labs、CMU、University of Pennsylvania，但一手正文未能重开，具体作者对应机构待核。当前作者主页不可代替2001署名。",
+        "abstract_support_zh": "可读作者书目支持条件训练、序列/结构数据、全局归一化和原论文身份；label bias及实验结论本包不升格为已核验。"
+      },
+      "dates": [
+        {
+          "kind": "representative_paper_publication",
+          "value": "2001",
+          "precision": "year",
+          "source_ids": [
+            "crf-mccallum-list",
+            "crf-lafferty-list"
+          ],
+          "status": "primary_metadata_verified",
+          "note_zh": "",
+          "admitted": true
+        }
+      ],
+      "history_zh": "作者标识为原始CRF论文；2001是会议年，不冒充开源日。机构库转载封面的6月28日可能与会议/记录有关，本轮不采用。",
+      "learning_links": [
+        {
+          "target": "transformer",
+          "relationship": "curated_comparison_not_causal",
+          "reason_zh": "对照输入表示学习与输出标签结构约束，不声称CRF导致Transformer。"
+        }
+      ],
+      "best_practice_zh": "作者后来在书目页面建议BFGS而不是原论文iterative scaling；这是作者建议，不是原论文实验证明，也不是本轮实测。实现库/版本/优化器仍待核。",
+      "illustration_zh": "原创标签链连接全句输入的示意图，标记p(标签序列|输入)，不复制论文图。",
+      "type": "historical_method_concept",
+      "category": "foundations",
+      "checked_at": "2026-10-29",
+      "first_release": null,
+      "arxiv_first_submitted": null,
+      "arxiv_migration_date": null,
+      "code_release_date": null,
+      "implementation_version": null,
+      "execution_status": "never-run",
+      "admission_status": "accept_metadata_only",
+      "image_rights": "original_diagram_spec_only_no_paper_image_copy",
+      "lifecycle": "historical_reference_retained_not_claimed_obsolete",
+      "full_paper_verified": false,
+      "content_evidence_level": "author_summary_only"
+    },
+    {
+      "id": "early-nlp-rnn",
+      "title": "循环神经网络 RNN（以Elman 1990为入口）",
+      "description_zh": "以Elman简单循环网络为例，隐藏状态回馈使当前计算结合先前内部状态，形成随任务变化的动态记忆。",
+      "why_before_llm_zh": "理解序列记忆如何进入网络计算，与一次访问多个位置的注意力机制作学习对照。",
+      "representative_paper": {
+        "title": "Finding Structure in Time",
+        "authors": [
+          "Jeffrey L. Elman"
+        ],
+        "venue": "Cognitive Science 14(2), 179–211",
+        "year": 1990,
+        "official_url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1",
+        "version": "1990 journal article; publisher DOI 10.1207/s15516709cog1402_1",
+        "role": "representative_simple_recurrent_network_paper_not_rnn_first_invention",
+        "affiliations_at_publication": [
+          {
+            "author": "Jeffrey L. Elman",
+            "institution": "University of California, San Diego",
+            "country": "United States"
+          }
+        ],
+        "abstract_support_zh": "动态记忆、隐藏状态回馈、时间XOR及词语句法/语义特征实验；摘要明确承接Jordan (1986)。不推出普适语言理解或全RNN起源归属。"
+      },
+      "dates": [
+        {
+          "kind": "representative_paper_publication",
+          "value": "1990-03",
+          "precision": "month",
+          "source_ids": [
+            "rnn-publisher"
+          ],
+          "status": "primary_metadata_verified",
+          "note_zh": "",
+          "admitted": true
+        },
+        {
+          "kind": "earlier_technical_report",
+          "value": null,
+          "precision": null,
+          "source_ids": [
+            "rnn-author-list"
+          ],
+          "status": "date_unknown",
+          "note_zh": "CRL Technical Report 8801；不要从编号推定年份/月份/日期。",
+          "admitted": false
+        }
+      ],
+      "history_zh": "Jordan (1986) 为原文明确承认的前驱；本轮未另核Jordan原论文，不对更早循环网络史作唯一发明人裁决。",
+      "learning_links": [
+        {
+          "target": "attention",
+          "relationship": "curated_comparison_not_causal",
+          "reason_zh": "对比逐步状态记忆与按需访问表示。"
+        },
+        {
+          "target": "seq2seq",
+          "relationship": "curated_learning_path_not_causal",
+          "reason_zh": "先认识递归状态，再理解编码器和解码器的序列处理。"
+        }
+      ],
+      "illustration_zh": "原创三时刻展开图，各时刻复用同一网络单元，用h上一时刻→h当前时刻表示状态传递。",
+      "type": "historical_method_concept",
+      "category": "foundations",
+      "checked_at": "2026-10-29",
+      "first_release": null,
+      "arxiv_first_submitted": null,
+      "arxiv_migration_date": null,
+      "code_release_date": null,
+      "implementation_version": null,
+      "execution_status": "never-run",
+      "admission_status": "accept_metadata_only",
+      "image_rights": "original_diagram_spec_only_no_paper_image_copy",
+      "lifecycle": "historical_reference_retained_not_claimed_obsolete",
+      "full_paper_verified": false,
+      "content_evidence_level": "publisher_abstract_only"
+    },
+    {
+      "id": "early-nlp-lstm",
+      "title": "长短期记忆 LSTM（1997期刊版）",
+      "description_zh": "1997期刊版LSTM旨在缓解循环网络长时延学习中的误差回传困难，通过特殊单元维持恒定误差流，并以乘法门控制访问。",
+      "why_before_llm_zh": "帮助理解长期依赖问题及已有2014 LSTM seq2seq节点的组成，而不是把所有序列模型都当Transformer。",
+      "representative_paper": {
+        "title": "Long Short-Term Memory",
+        "authors": [
+          "Sepp Hochreiter",
+          "Jürgen Schmidhuber"
+        ],
+        "venue": "Neural Computation 9(8), 1735–1780",
+        "year": 1997,
+        "official_url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+        "version": "1997 journal version; distinct earlier technical report FKI-207-95 (August 1995)",
+        "role": "journal_version_metadata_verified_not_first_release_claim",
+        "affiliations_at_publication": [
+          {
+            "author": "Sepp Hochreiter",
+            "institution": "Technische Universität München",
+            "place": "München, Germany",
+            "verification": "author_copy_pdf_page1_attributed_affiliation_visually_verified"
+          },
+          {
+            "author": "Jürgen Schmidhuber",
+            "institution": "IDSIA",
+            "place": "Lugano, Switzerland",
+            "verification": "author_copy_pdf_page1_attributed_affiliation_visually_verified"
+          }
+        ],
+        "abstract_support_zh": "作者副本PDF第1页摘要/引言及第2页顶部的选定区域支持长时延误差回传困难、恒定误差流和乘法门控制访问；不核后续方程、实验或现代忘记门。",
+        "affiliation_note_zh": "机构为作者公开副本第1页署名区所载，已核像素；未独立认证任职履历或出版社原版排版。",
+        "version_caution_zh": "仅作者公开副本选定区域；未认证与出版社1997排版逐字相同；PDF页1/2不映射期刊1735/1736；现代忘记门、完整架构、公式、实验证明和日级日期未核。"
+      },
+      "dates": [
+        {
+          "kind": "representative_paper_publication",
+          "value": "1997",
+          "precision": "year",
+          "status": "primary_metadata_verified",
+          "source_ids": [
+            "lstm-schmidhuber-list",
+            "lstm-jku-list",
+            "lstm-author-pdf"
+          ],
+          "admitted": true
+        },
+        {
+          "kind": "earlier_technical_report",
+          "value": "1995-08",
+          "precision": "month",
+          "status": "primary_metadata_verified_report_date_not_first_release",
+          "source_ids": [
+            "lstm-schmidhuber-list",
+            "lstm-jku-list"
+          ],
+          "admitted": true,
+          "note_zh": "Schmidhuber作者onlinepub明确August 1995，JKU确认1995报告；月精度由前者支持。报告书目日期不等于已证明首次公众可得。"
+        },
+        {
+          "kind": "publication",
+          "value": null,
+          "unaccepted_candidate": "1997-11-15",
+          "status": "unknown_pending_readable_primary_confirmation",
+          "source_ids": [
+            "lstm-publisher"
+          ],
+          "precision": null,
+          "admitted": false,
+          "candidate_precision": "day"
+        },
+        {
+          "kind": "manuscript_received",
+          "value": null,
+          "unaccepted_candidate": "1995-08-28",
+          "status": "unknown_pending_readable_primary_confirmation",
+          "source_ids": [
+            "lstm-publisher"
+          ],
+          "precision": null,
+          "admitted": false,
+          "candidate_precision": "day"
+        },
+        {
+          "kind": "manuscript_accepted",
+          "value": null,
+          "unaccepted_candidate": "1997-02-24",
+          "status": "unknown_pending_readable_primary_confirmation",
+          "source_ids": [
+            "lstm-publisher"
+          ],
+          "precision": null,
+          "admitted": false,
+          "candidate_precision": "day"
+        }
+      ],
+      "history_zh": "可读作者书目与JKU书目确认1997期刊版及更早FKI-207-95技术报告；Schmidhuber书目给出报告月份1995-08。这不是仅1995收稿日期。报告月份不证明first_release；三项期刊日级候选仍未接纳。不得将1997版等同所有现代LSTM库变体。",
+      "learning_links": [
+        {
+          "target": "seq2seq",
+          "relationship": "curated_learning_path_not_causal",
+          "reason_zh": "已有节点明确为多层LSTM的2014序列到序列论文；只补其概念入口。"
+        }
+      ],
+      "illustration_zh": "原创黑箱记忆单元：写入控制、内部记忆、读出控制；注明概念图并非现代库完整门结构。",
+      "type": "historical_method_concept",
+      "category": "foundations",
+      "checked_at": "2026-10-29",
+      "first_release": null,
+      "arxiv_first_submitted": null,
+      "arxiv_migration_date": null,
+      "code_release_date": null,
+      "implementation_version": null,
+      "execution_status": "never-run",
+      "admission_status": "accept_metadata_only",
+      "image_rights": "original_diagram_spec_only_no_paper_image_copy",
+      "lifecycle": "historical_reference_retained_not_claimed_obsolete",
+      "full_paper_verified": false,
+      "content_evidence_level": "selected_page_regions_original_text_verified_not_full_paper",
+      "earlier_technical_report": {
+        "title": "Long Short-Term Memory",
+        "report_number": "FKI-207-95",
+        "authors": [
+          "Sepp Hochreiter",
+          "Jürgen Schmidhuber"
+        ],
+        "date": "1995-08",
+        "date_precision": "month",
+        "date_kind": "technical_report_bibliographic_date_not_first_public_release",
+        "source_ids": [
+          "lstm-schmidhuber-list",
+          "lstm-jku-list"
+        ],
+        "month_support_source_ids": [
+          "lstm-schmidhuber-list"
+        ],
+        "year_support_source_ids": [
+          "lstm-schmidhuber-list",
+          "lstm-jku-list"
+        ],
+        "full_text_verified": false
+      },
+      "selected_page_evidence": {
+        "id": "lstm-author-pdf",
+        "url": "https://people.idsia.ch/~juergen/lstm1997-2024head.pdf",
+        "pdf_physical_pages": [
+          1,
+          2
+        ],
+        "viewed_regions": [
+          "page 1 top",
+          "page 1 bottom",
+          "page 2 top"
+        ],
+        "observed_printed_page": {
+          "1": "1 (author copy)",
+          "2": null
+        },
+        "accepted_claims_zh": [
+          "第1页标题下期刊行1997、卷9期8及期刊页范围1735–1780",
+          "第1页双作者署名和对应机构：Hochreiter—Technische Universität München；Schmidhuber—IDSIA",
+          "第1页摘要说明长期时延训练的误差回传困难、特殊单元的恒定误差流和控制访问的乘法门",
+          "第2页顶部定位完整架构及实验在后续未核章节"
+        ],
+        "limits_zh": "仅作者公开副本选定区域；未认证与出版社1997排版逐字相同；PDF页1/2不映射期刊1735/1736；现代忘记门、完整架构、公式、实验证明和日级日期未核。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "hmm-author-list",
+      "url": "https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/publications.html",
+      "access_status": "readable",
+      "support_scope_zh": "作者书目第275条：论文题名、作者、期刊卷页与 February 1989。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "readable_html_reopened",
+      "r1_access_status": "readable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "hmm-author-pdf",
+      "url": "https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf",
+      "access_status": "pdf_fetched_text_unavailable",
+      "support_scope_zh": "30页PDF已返回，文本0行；截图调用未提供可检视图片，不声称通读。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "pdf_reopened_text_unusable_no_image_observed",
+      "r1_access_status": "pdf_fetched_text_unavailable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only",
+      "selected_page_visual_status": "local_screenshot_pixels_independently_inspected",
+      "selected_page_visual_scope": [
+        "PDF physical page 1 top/bottom",
+        "PDF physical page 2 top"
+      ],
+      "full_paper_verified": false
+    },
+    {
+      "id": "hmm-baum-petrie",
+      "url": "https://doi.org/10.1214/aoms/1177699147",
+      "access_status": "unreadable",
+      "support_scope_zh": "DOI工具不可访问；Project Euclid正式地址仅返回iframe。1966条目待一手正文/元数据补证。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "not_retried_inherited_limitation",
+      "r1_access_status": "unreadable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "rnn-author-list",
+      "url": "https://jeffelman.ucsd.edu/research/publications/",
+      "access_status": "readable",
+      "support_scope_zh": "1990论文与更早CRL Technical Report 8801；作者说明旧报告不可用且被期刊版取代。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "readable_html_reopened",
+      "r1_access_status": "readable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "rnn-publisher",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1",
+      "access_status": "readable",
+      "support_scope_zh": "题名、作者、UC San Diego机构；First published March 1990；摘要明言承接Jordan 1986。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "readable_html_reopened",
+      "r1_access_status": "readable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "rnn-author-pdf",
+      "url": "https://crl.ucsd.edu/~elman/Papers/fsit.pdf",
+      "access_status": "404",
+      "support_scope_zh": "作者书目直接链接404；不绕过。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "not_retried_inherited_limitation",
+      "r1_access_status": "404",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "lstm-publisher",
+      "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+      "access_status": "search_metadata_only_open_403",
+      "support_scope_zh": "官方搜索命中含题名、作者、机构、1997-11-15、received 1995-08-28、accepted 1997-02-24和摘要；重新打开403。精确日期待正式可读证据。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "not_retried_inherited_limitation",
+      "r1_access_status": "search_metadata_only_open_403",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "lstm-author-pdf",
+      "url": "https://people.idsia.ch/~juergen/lstm1997-2024head.pdf",
+      "access_status": "pdf_fetched_text_garbled",
+      "support_scope_zh": "32页PDF已返回，解析文字乱码；文件名2024head不能当作论文发表年或arXiv版本日期。搜索索引可见1997题名作者机构和摘要；不声称通读。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "pdf_reopened_text_unusable_no_image_observed",
+      "r1_access_status": "pdf_fetched_text_garbled",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only",
+      "selected_page_visual_status": "local_screenshot_pixels_independently_inspected",
+      "selected_page_visual_scope": [
+        "PDF physical page 1 top/bottom",
+        "PDF physical page 2 top"
+      ],
+      "full_paper_verified": false
+    },
+    {
+      "id": "crf-institution-repository",
+      "url": "https://repository.upenn.edu/cis_papers/159",
+      "access_status": "403",
+      "support_scope_zh": "机构库403；转载封面上的2001-06-28不提升为一手已核验日期。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "not_retried_inherited_limitation",
+      "r1_access_status": "403",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "crf-mccallum-list",
+      "url": "https://people.cs.umass.edu/~mccallum/pubs.html",
+      "access_status": "readable",
+      "support_scope_zh": "2001段确认题名、三作者、ICML-2001；作者称original CRF paper，条件训练与全局归一化；实现建议BFGS而非原版iterative scaling。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "readable_html_reopened",
+      "r1_access_status": "readable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "crf-author-original",
+      "url": "https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps",
+      "access_status": "unsupported_content_type",
+      "support_scope_zh": "从作者书目链接实际打开；web工具不支持application/postscript，未执行或转换。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "not_retried_inherited_limitation",
+      "r1_access_status": "unsupported_content_type",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "crf-lafferty-list",
+      "url": "https://www.cs.cmu.edu/afs/cs/usr/lafferty/www/publications.html",
+      "access_status": "readable",
+      "support_scope_zh": "2001段确认题名、John Lafferty / Andrew McCallum / Fernando Pereira、ICML 2001。",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "independent_qa_status": "readable_html_reopened",
+      "r1_access_status": "readable",
+      "access_status_scope": "inherited_r1_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "lstm-schmidhuber-list",
+      "url": "https://people.idsia.ch/~juergen/onlinepub.html",
+      "access_status": "readable_html_independently_opened",
+      "locator": "Journal publications item 14 (web lines 127–128); Technical reports item 24 (359–360)",
+      "supports": [
+        "1997 journal bibliographic identity, two authors, volume 9(8), pages 1735–1780",
+        "Separate FKI-207-95 technical report dated August 1995"
+      ],
+      "does_not_support": [
+        "exact publication day",
+        "first public availability",
+        "full paper verification"
+      ],
+      "r1_access_status": null,
+      "independent_qa_status": "readable_html_newly_opened",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "access_status_scope": "independent_qa_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    },
+    {
+      "id": "lstm-jku-list",
+      "url": "https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/",
+      "access_status": "readable_html_independently_opened",
+      "locator": "Long Short-Term Memory journal entry lines 210–214; technical report entry 256–260",
+      "supports": [
+        "1997 journal identity, two authors, volume and pages",
+        "1995 FKI-207-95 report"
+      ],
+      "does_not_support": [
+        "exact publication day",
+        "historical affiliations",
+        "full paper verification"
+      ],
+      "r1_access_status": null,
+      "independent_qa_status": "readable_html_newly_opened",
+      "checked_at": "2026-10-29",
+      "primary": true,
+      "execution_status": "never-run",
+      "access_status_scope": "independent_qa_observation",
+      "r2_access_status": "not_reopened_revision_only",
+      "r3_access_status": "no_network_reopen_local_evidence_review_only"
+    }
+  ],
+  "date_evidence": [
+    {
+      "node": "early-nlp-hmm",
+      "kind": "representative_paper_publication",
+      "value": "1989-02",
+      "precision": "month",
+      "status": "primary_metadata_verified",
+      "source_ids": [
+        "hmm-author-list"
+      ]
+    },
+    {
+      "node": "early-nlp-crf",
+      "kind": "representative_paper_publication",
+      "value": "2001",
+      "precision": "year",
+      "status": "primary_metadata_verified",
+      "source_ids": [
+        "crf-mccallum-list",
+        "crf-lafferty-list"
+      ]
+    },
+    {
+      "node": "early-nlp-rnn",
+      "kind": "representative_paper_publication",
+      "value": "1990-03",
+      "precision": "month",
+      "status": "primary_metadata_verified",
+      "source_ids": [
+        "rnn-publisher",
+        "rnn-author-list"
+      ]
+    },
+    {
+      "node": "early-nlp-lstm",
+      "kind": "representative_paper_publication",
+      "value": "1997",
+      "precision": "year",
+      "status": "primary_metadata_verified",
+      "source_ids": [
+        "lstm-schmidhuber-list",
+        "lstm-jku-list"
+      ]
+    },
+    {
+      "node": "early-nlp-lstm",
+      "kind": "earlier_technical_report",
+      "value": "1995-08",
+      "precision": "month",
+      "status": "primary_metadata_verified_report_date_not_first_release",
+      "source_ids": [
+        "lstm-schmidhuber-list",
+        "lstm-jku-list"
+      ]
+    },
+    {
+      "node": "early-nlp-rnn",
+      "kind": "earlier_technical_report",
+      "value": null,
+      "status": "unknown"
+    },
+    {
+      "node": "early-nlp-lstm",
+      "kind": "publication",
+      "value": null,
+      "unaccepted_candidate": "1997-11-15",
+      "status": "unknown_pending_readable_primary_confirmation"
+    },
+    {
+      "node": "early-nlp-lstm",
+      "kind": "manuscript_received",
+      "value": null,
+      "unaccepted_candidate": "1995-08-28",
+      "status": "unknown_pending_readable_primary_confirmation"
+    },
+    {
+      "node": "early-nlp-lstm",
+      "kind": "manuscript_accepted",
+      "value": null,
+      "unaccepted_candidate": "1997-02-24",
+      "status": "unknown_pending_readable_primary_confirmation"
+    }
+  ],
+  "scope_zh": "四条有限历史概念；书目元数据已核，HMM/LSTM仅指定页面区域原文证据，CRF作者摘要级，RNN出版社摘要级；全文核验0篇。",
+  "coverage_gaps": [
+    "HMM最早历史文献、完整数学定义与算法",
+    "CRF正文及2001作者机构",
+    "RNN Jordan原始论文与更早谱系",
+    "LSTM完整架构、方程、现代忘记门及实验",
+    "LSTM三项日级日期、首次公众可得、1995报告正文",
+    "作者副本与出版社排版一致性；实现、代码与arXiv历史"
+  ],
+  "full_papers_read": 0
+}

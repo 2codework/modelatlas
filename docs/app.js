@@ -18,7 +18,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  const nodes=new Map(D.nodes.map(n=>[n.id,n])), views=new Map(D.view_nodes.map(n=>[n.id,n])),sources=new Map(D.sources.map(s=>[s.id,s]));
  const displayPaths=D.learning_paths.map(p=>({...p,...C.learningOrder(p,nodes)}));
  const allIds=new Set(nodes.keys());let completed=new Set(),selected=null;let importGeneration=0,progressRevision=0;
- const eventLabels={paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布',paper_revision:'论文修订（截至核验快照）',platform_migration:'平台迁移公告',scheduled_shutdown:'计划停用（尚未发生）'};
+ const eventLabels={paper_publication:'论文发表（书目日期）',paper_submission:'论文首次提交',report_publication:'技术报告公开',announcement:'正式公告',weights_release:'权重开放',api_launch:'API 上线',documentation_update:'文档更新',standard_publication:'标准发布',benchmark_release:'评测发布',paper_revision:'论文修订（截至核验快照）',platform_migration:'平台迁移公告',scheduled_shutdown:'计划停用（尚未发生）'};
  const display=value=>value===null||value===undefined||value===''?'未核验':typeof value==='object'?JSON.stringify(value):String(value);
  $('stats').textContent=`${D.nodes.length} 节点 · ${D.edges.length} 关联 · ${D.sources.length} 登记来源 · 核验 ${D.checked_at}`;
  try{const raw=localStorage.getItem('modelatlas.progress');if(raw)completed=C.parseProgress(raw,allIds);}catch{$('progress-status').textContent='本地进度不可用或已损坏；本次会话仍可使用，导出可备份。';}

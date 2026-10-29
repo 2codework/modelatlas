@@ -3,9 +3,10 @@ from unittest.mock import patch
 from edge_contract import ROOT,baseline,read,research,dates,validate,legacy_view
 sys.path.insert(0,str(ROOT/'scripts'))
 import edge_multimodal as E
+from early_nlp_contract import legacy_view as early_nlp_legacy
 class EdgeAdmission(unittest.TestCase):
  @classmethod
- def setUpClass(cls):cls.live=read(ROOT/'dist/data.json')
+ def setUpClass(cls):cls.live=early_nlp_legacy(read(ROOT/'dist/data.json'))
  def reject(self,fn,pattern):
   d=copy.deepcopy(self.live);fn(d)
   with self.assertRaisesRegex(ValueError,pattern):validate(d)

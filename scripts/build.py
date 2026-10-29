@@ -17,6 +17,7 @@ import world_models
 import knowledge_graph_links
 import realtime_audio
 import edge_multimodal
+import early_nlp
 import audio_diagram
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -255,6 +256,7 @@ def book(data):
     for e in data['edges']: lines+=['- '+e['source']+' → '+e['type']+' → '+e['target']+' · '+str(e.get('verification_status',e.get('evidence_type','未核验')))+' · '+', '.join(e.get('source_ids',[]))]
     lines+=knowledge_graph_links.book(data)
     lines += ["", "以下实时语音段落中的全图数字仅指其封存的246节点历史阶段；当前端侧多模态阶段为250节点、151边、77目录记录。"]
+    lines += ["", "早期NLP有限补充后当前为254节点、405来源、211事件；关系151、目录77不变。4历史概念、14来源、5书目日期并非完整NLP史。7可读metadata、2选页PDF、5其他失败/未重试；全文核验0。公开研究为derived public projection，私有原包hash及投影边界见early-nlp/public-research.json。"]
     lines+=realtime_audio.book(data)
     lines += ["", "## 端侧多模态有限样本", "精确身份、参数/许可边界及原始来源见 [来源范围说明](edge-multimodal/SOURCE_SCOPE.md)。18来源=17可读+1历史失败；24日期槽=15已知+9未知。本批零目录新增、零关系新增；来源审阅不是运行验证。"]
     lines+=['','## 来源目录']
@@ -285,6 +287,7 @@ def build():
     realtime_audio.apply(data,ROOT)
     audio_stage=copy.deepcopy(data)
     edge_multimodal.apply(data,ROOT)
+    early_nlp.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     import build_foundations
     build_foundations.render(ROOT)
@@ -309,6 +312,7 @@ def build():
     knowledge_graph_links.publish(ROOT,out,data)
     realtime_audio.publish(ROOT,out,audio_stage)
     edge_multimodal.publish(ROOT,out)
+    early_nlp.publish(ROOT,out)
     audio_diagram.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)

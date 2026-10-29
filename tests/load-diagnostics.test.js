@@ -1,7 +1,7 @@
 const {findNode,collectPages}=require('./paged-ui.js');
 // Offline DOM model only: no browser, network, product execution, or asset retry.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
-const root=path.join(__dirname,'..'),data=JSON.parse(fs.readFileSync(path.join(root,'dist/data.json'))),catalog=require('../web/catalog.js');
+const root=path.join(__dirname,'..'),data=require("./early-nlp-contract.js").validate(JSON.parse(fs.readFileSync(path.join(root,'dist/data.json')))),catalog=require('../web/catalog.js');
 const legacyData=require('./audio-contract.js').validate(data);
 class E{constructor(tag){this.tag=tag;this.children=[];this.events={};this.dataset={};this.attrs={};this.value='';this.textContent='';}append(...xs){this.children.push(...xs);}replaceChildren(...xs){this.children=xs;this.textContent='';}setAttribute(k,v){this.attrs[k]=v;}addEventListener(k,f){this.events[k]=f;}scrollIntoView(){}querySelectorAll(tag){return this.children.flatMap(x=>[...(x.tag===tag?[x]:[]),...(x.querySelectorAll?.(tag)||[])]);}}
 async function boot(options={}){const html=fs.readFileSync(path.join(root,'web/index.html'),'utf8'),ids=new Map([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new E('div')]));

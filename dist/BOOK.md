@@ -7642,6 +7642,89 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - 事件：weights_release · 未知 / 待核验 · edge-phi4-multimodal-instruct · weights_first_uploaded · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明 未查实首个权重上传，不能用论文/公告/更新替代 · 证据 research-r2/date-evidence.json · weights_first_uploaded · 来源
 - 事件：documentation_update · 未知 / 待核验 · edge-phi4-multimodal-instruct · repo_first_public · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · repo_first_public · 来源
 
+## 隐马尔可夫模型 HMM（历史概念）
+
+HMM用隐藏状态及其概率性观测描述序列；观测序列似然计算、状态序列推断和模型参数估计是不同问题。
+
+- ID / 类型：early-nlp-hmm / historical_method_concept
+- 生命周期：{'status': 'historical', 'note_zh': '1989教程不是HMM首次提出。Baum–Petrie 1966论文为待补证早期文献，不确定唯一first_release。'}
+- 版本：1989 journal tutorial; author-hosted copy
+- 核验：2026-10-29 · bibliographic_selected_pages_not_full_text
+- historical_context：1989教程不是HMM首次提出。Baum–Petrie 1966论文为待补证早期文献，不确定唯一first_release。
+- 学习步骤（未执行）：代表书目：A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition；Lawrence R. Rabiner；Proceedings of the IEEE 77(2), 257–286；1989 journal tutorial; author-hosted copy
+- 学习步骤（未执行）：阅读边界：第1页顶部、底部与第2页顶部可见区域独立像素核验；支持教程身份、有限模型概括及三个问题区分，非完整定义或全文算法核验。
+- 学习步骤（未执行）：学习目的：理解概率建模假设与序列解码，不把序列学习等同于神经网络。
+- 学习步骤（未执行）：编辑学习入口（非历史因果）：attention — 对照隐藏状态推断与可学习信息选择；二者不等价。
+- 注意：1989教程不是HMM首次提出。Baum–Petrie 1966论文为待补证早期文献，不确定唯一first_release。
+- 注意：书目/选页核验·非全文；不证明首次公开、完整算法、现代库实现或性能。
+- 注意：第1页顶部、底部与第2页顶部可见区域独立像素核验；支持教程身份、有限模型概括及三个问题区分，非完整定义或全文算法核验。
+- 来源：https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/publications.html
+- 来源：https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf
+- 事件：paper_publication · 1989-02 · 隐马尔可夫模型 HMM（历史概念） · 代表论文发表（非发明日） · 精度 month · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/publications.html, https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf
+
+## 条件随机场 CRF（历史概念）
+
+对给定输入下的结构化输出建模；在序列标注情形，联合评价标签序列并作全局归一化。
+
+- ID / 类型：early-nlp-crf / historical_method_concept
+- 生命周期：{'status': 'historical', 'note_zh': '作者标识为原始CRF论文；2001是会议年，不冒充开源日。机构库转载封面的6月28日可能与会议/记录有关，本轮不采用。'}
+- 版本：author-linked original PostScript; content not parsed
+- 核验：2026-10-29 · bibliographic_selected_pages_not_full_text
+- historical_context：作者标识为原始CRF论文；2001是会议年，不冒充开源日。机构库转载封面的6月28日可能与会议/记录有关，本轮不采用。
+- 学习步骤（未执行）：代表书目：Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data；John Lafferty, Andrew McCallum, Fernando Pereira；ICML 2001；author-linked original PostScript; content not parsed
+- 学习步骤（未执行）：阅读边界：可读作者书目支持条件训练、序列/结构数据、全局归一化和原论文身份；label bias及实验结论本包不升格为已核验。
+- 学习步骤（未执行）：学习目的：认识结构化预测、条件训练和全局归一化，与现代表示模型的输出层设计对照。
+- 学习步骤（未执行）：编辑学习入口（非历史因果）：transformer — 对照输入表示学习与输出标签结构约束，不声称CRF导致Transformer。
+- 注意：作者标识为原始CRF论文；2001是会议年，不冒充开源日。机构库转载封面的6月28日可能与会议/记录有关，本轮不采用。
+- 注意：书目/选页核验·非全文；不证明首次公开、完整算法、现代库实现或性能。
+- 注意：可读作者书目支持条件训练、序列/结构数据、全局归一化和原论文身份；label bias及实验结论本包不升格为已核验。
+- 来源：https://people.cs.umass.edu/~mccallum/pubs.html
+- 来源：https://www.cs.cmu.edu/afs/cs/usr/lafferty/www/publications.html
+- 事件：paper_publication · 2001 · 条件随机场 CRF（历史概念） · 代表论文发表（非发明日） · 精度 year · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://people.cs.umass.edu/~mccallum/pubs.html, https://www.cs.cmu.edu/afs/cs/usr/lafferty/www/publications.html
+
+## 循环神经网络 RNN（以Elman 1990为入口）
+
+以Elman简单循环网络为例，隐藏状态回馈使当前计算结合先前内部状态，形成随任务变化的动态记忆。
+
+- ID / 类型：early-nlp-rnn / historical_method_concept
+- 生命周期：{'status': 'historical', 'note_zh': 'Jordan (1986) 为原文明确承认的前驱；本轮未另核Jordan原论文，不对更早循环网络史作唯一发明人裁决。'}
+- 版本：1990 journal article; publisher DOI 10.1207/s15516709cog1402_1
+- 核验：2026-10-29 · bibliographic_selected_pages_not_full_text
+- historical_context：Jordan (1986) 为原文明确承认的前驱；本轮未另核Jordan原论文，不对更早循环网络史作唯一发明人裁决。
+- 学习步骤（未执行）：代表书目：Finding Structure in Time；Jeffrey L. Elman；Cognitive Science 14(2), 179–211；1990 journal article; publisher DOI 10.1207/s15516709cog1402_1
+- 学习步骤（未执行）：阅读边界：动态记忆、隐藏状态回馈、时间XOR及词语句法/语义特征实验；摘要明确承接Jordan (1986)。不推出普适语言理解或全RNN起源归属。
+- 学习步骤（未执行）：学习目的：理解序列记忆如何进入网络计算，与一次访问多个位置的注意力机制作学习对照。
+- 学习步骤（未执行）：编辑学习入口（非历史因果）：attention — 对比逐步状态记忆与按需访问表示。
+- 学习步骤（未执行）：编辑学习入口（非历史因果）：seq2seq — 先认识递归状态，再理解编码器和解码器的序列处理。
+- 注意：Jordan (1986) 为原文明确承认的前驱；本轮未另核Jordan原论文，不对更早循环网络史作唯一发明人裁决。
+- 注意：书目/选页核验·非全文；不证明首次公开、完整算法、现代库实现或性能。
+- 注意：动态记忆、隐藏状态回馈、时间XOR及词语句法/语义特征实验；摘要明确承接Jordan (1986)。不推出普适语言理解或全RNN起源归属。
+- 来源：https://jeffelman.ucsd.edu/research/publications/
+- 来源：https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1
+- 事件：paper_publication · 1990-03 · 循环神经网络 RNN（以Elman 1990为入口） · 代表论文发表（非发明日） · 精度 month · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1
+
+## 长短期记忆 LSTM（1997期刊版）
+
+1997期刊版LSTM旨在缓解循环网络长时延学习中的误差回传困难，通过特殊单元维持恒定误差流，并以乘法门控制访问。
+
+- ID / 类型：early-nlp-lstm / historical_method_concept
+- 生命周期：{'status': 'historical', 'note_zh': '可读作者书目与JKU书目确认1997期刊版及更早FKI-207-95技术报告；Schmidhuber书目给出报告月份1995-08。这不是仅1995收稿日期。报告月份不证明first_release；三项期刊日级候选仍未接纳。不得将1997版等同所有现代LSTM库变体。'}
+- 版本：1997 journal version; distinct earlier technical report FKI-207-95 (August 1995)
+- 核验：2026-10-29 · bibliographic_selected_pages_not_full_text
+- historical_context：可读作者书目与JKU书目确认1997期刊版及更早FKI-207-95技术报告；Schmidhuber书目给出报告月份1995-08。这不是仅1995收稿日期。报告月份不证明first_release；三项期刊日级候选仍未接纳。不得将1997版等同所有现代LSTM库变体。
+- 学习步骤（未执行）：代表书目：Long Short-Term Memory；Sepp Hochreiter, Jürgen Schmidhuber；Neural Computation 9(8), 1735–1780；1997 journal version; distinct earlier technical report FKI-207-95 (August 1995)
+- 学习步骤（未执行）：阅读边界：作者副本PDF第1页摘要/引言及第2页顶部的选定区域支持长时延误差回传困难、恒定误差流和乘法门控制访问；不核后续方程、实验或现代忘记门。
+- 学习步骤（未执行）：学习目的：帮助理解长期依赖问题及已有2014 LSTM seq2seq节点的组成，而不是把所有序列模型都当Transformer。
+- 学习步骤（未执行）：编辑学习入口（非历史因果）：seq2seq — 已有节点明确为多层LSTM的2014序列到序列论文；只补其概念入口。
+- 注意：可读作者书目与JKU书目确认1997期刊版及更早FKI-207-95技术报告；Schmidhuber书目给出报告月份1995-08。这不是仅1995收稿日期。报告月份不证明first_release；三项期刊日级候选仍未接纳。不得将1997版等同所有现代LSTM库变体。
+- 注意：书目/选页核验·非全文；不证明首次公开、完整算法、现代库实现或性能。
+- 注意：仅作者公开副本选定区域；未认证与出版社1997排版逐字相同；PDF页1/2不映射期刊1735/1736；现代忘记门、完整架构、公式、实验证明和日级日期未核。
+- 来源：https://people.idsia.ch/~juergen/lstm1997-2024head.pdf
+- 来源：https://people.idsia.ch/~juergen/onlinepub.html
+- 来源：https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/
+- 事件：paper_publication · 1997 · 长短期记忆 LSTM（1997期刊版） · 代表论文发表（非发明日） · 精度 year · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://people.idsia.ch/~juergen/onlinepub.html, https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/, https://people.idsia.ch/~juergen/lstm1997-2024head.pdf
+- 事件：report_publication · 1995-08 · 长短期记忆 LSTM（1997期刊版） · FKI-207-95 技术报告书目日期 · 精度 month · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 Schmidhuber作者onlinepub明确August 1995，JKU确认1995报告；月精度由前者支持。报告书目日期不等于已证明首次公众可得。 书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://people.idsia.ch/~juergen/onlinepub.html, https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -7993,6 +8076,8 @@ creative-indesign → design-c2pa
 - 来源 design-src-c2pa：https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html · C2PA Specification 2.5: claims, assertions, signatures, validation
 
 以下实时语音段落中的全图数字仅指其封存的246节点历史阶段；当前端侧多模态阶段为250节点、151边、77目录记录。
+
+早期NLP有限补充后当前为254节点、405来源、211事件；关系151、目录77不变。4历史概念、14来源、5书目日期并非完整NLP史。7可读metadata、2选页PDF、5其他失败/未重试；全文核验0。公开研究为derived public projection，私有原包hash及投影边界见early-nlp/public-research.json。
 
 ## 实时语音模型专题（有限样本，未执行）
 完整可读版本表、输入输出、许可/硬件/费用与时间证据见 [实时语音学习页](realtime-audio.html) 和 [同源专题书稿](REALTIME_AUDIO.md)。
@@ -8393,6 +8478,20 @@ creative-indesign → design-c2pa
 - edge-src-phi-launch · https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/ · 核验 2026-10-29 · 2025-02-26公告称Phi-4-multimodal已在HF等入口可用；5.6B官方自报；不以该日期证明权重首次上传时间。
 - edge-src-phi-paper · https://arxiv.org/abs/2503.01743 · 核验 2026-10-29 · Phi-4-Mini Technical Report包含multimodal与Mixture-of-LoRAs；v1 2025-03-03，v2 2025-03-07。
 - edge-src-phi-onnx · https://huggingface.co/microsoft/Phi-4-multimodal-instruct-onnx · 核验 2026-10-29 · 官方INT4 ONNX转换，CUDA及DirectML例程；CPU现成包未承诺，页称待续或自行转换；不能泛化成手机支持。
+- early-nlp-src-hmm-author-list · https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/publications.html · 核验 2026-10-29 · 作者书目第275条：论文题名、作者、期刊卷页与 February 1989。
+- early-nlp-src-hmm-author-pdf · https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf · 核验 2026-10-29 · 30页PDF已返回，文本0行；截图调用未提供可检视图片，不声称通读。 后续仅核PDF物理第1页顶/底、第2页顶；非全文。
+- early-nlp-src-hmm-baum-petrie · https://doi.org/10.1214/aoms/1177699147 · 核验 2026-10-29 · DOI工具不可访问；Project Euclid正式地址仅返回iframe。1966条目待一手正文/元数据补证。
+- early-nlp-src-rnn-author-list · https://jeffelman.ucsd.edu/research/publications/ · 核验 2026-10-29 · 1990论文与更早CRL Technical Report 8801；作者说明旧报告不可用且被期刊版取代。
+- early-nlp-src-rnn-publisher · https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1 · 核验 2026-10-29 · 题名、作者、UC San Diego机构；First published March 1990；摘要明言承接Jordan 1986。
+- early-nlp-src-rnn-author-pdf · https://crl.ucsd.edu/~elman/Papers/fsit.pdf · 核验 2026-10-29 · 作者书目直接链接404；不绕过。
+- early-nlp-src-lstm-publisher · https://doi.org/10.1162/neco.1997.9.8.1735 · 核验 2026-10-29 · 官方搜索命中含题名、作者、机构、1997-11-15、received 1995-08-28、accepted 1997-02-24和摘要；重新打开403。精确日期待正式可读证据。
+- early-nlp-src-lstm-author-pdf · https://people.idsia.ch/~juergen/lstm1997-2024head.pdf · 核验 2026-10-29 · 32页PDF已返回，解析文字乱码；文件名2024head不能当作论文发表年或arXiv版本日期。搜索索引可见1997题名作者机构和摘要；不声称通读。 后续仅核PDF物理第1页顶/底、第2页顶；非全文。
+- early-nlp-src-crf-institution-repository · https://repository.upenn.edu/cis_papers/159 · 核验 2026-10-29 · 机构库403；转载封面上的2001-06-28不提升为一手已核验日期。
+- early-nlp-src-crf-mccallum-list · https://people.cs.umass.edu/~mccallum/pubs.html · 核验 2026-10-29 · 2001段确认题名、三作者、ICML-2001；作者称original CRF paper，条件训练与全局归一化；实现建议BFGS而非原版iterative scaling。
+- early-nlp-src-crf-author-original · https://people.cs.umass.edu/~mccallum/papers/crf-icml01.ps · 核验 2026-10-29 · 从作者书目链接实际打开；web工具不支持application/postscript，未执行或转换。
+- early-nlp-src-crf-lafferty-list · https://www.cs.cmu.edu/afs/cs/usr/lafferty/www/publications.html · 核验 2026-10-29 · 2001段确认题名、John Lafferty / Andrew McCallum / Fernando Pereira、ICML 2001。
+- early-nlp-src-lstm-schmidhuber-list · https://people.idsia.ch/~juergen/onlinepub.html · 核验 2026-10-29 · ["1997 journal bibliographic identity, two authors, volume 9(8), pages 1735–1780", "Separate FKI-207-95 technical report dated August 1995"]
+- early-nlp-src-lstm-jku-list · https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/ · 核验 2026-10-29 · ["1997 journal identity, two authors, volume and pages", "1995 FKI-207-95 report"]
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果

@@ -1,6 +1,6 @@
 // Self-written offline DOM test of production timeline filtering; no network, browser or model runs.
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
-const root=path.join(__dirname,'..'),data=JSON.parse(fs.readFileSync(path.join(root,'dist/data.json'),'utf8'));
+const root=path.join(__dirname,'..'),data=require("./early-nlp-contract.js").validate(JSON.parse(fs.readFileSync(path.join(root,'dist/data.json'),'utf8')));
 const legacyData=require('./audio-contract.js').validate(data);
 class E{constructor(tag){this.tag=tag;this.children=[];this.events={};this.dataset={};this.attrs={};this.value='';this.textContent='';}append(...xs){this.children.push(...xs);}replaceChildren(...xs){this.children=xs;this.textContent='';}setAttribute(k,v){this.attrs[k]=v;}addEventListener(k,f){this.events[k]=f;}scrollIntoView(){}querySelectorAll(tag){return this.children.flatMap(x=>[...(x.tag===tag?[x]:[]),...(x.querySelectorAll?.(tag)||[])]);}}
 const text=e=>(e.textContent||'')+' '+(e.children||[]).map(text).join(' ');

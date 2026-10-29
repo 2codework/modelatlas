@@ -1,0 +1,109 @@
+{
+  "schema_version": "early-nlp.admission.r1",
+  "base_object_sha256": {
+    "schema_version": "1954610e2829b5b69c6136e604a4f4c83e8d7f258ed0ec314ca2a7fe92aaf1c4",
+    "version": "49d0595b4d00f126d07172522b7fc795353d4b12b86bea8577497c92991b8829",
+    "checked_at": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f",
+    "nodes": "91d6bad918230cf41ee6263aa9c0aa6e5c1a30214cd5d2abd09650a33ea4c1b4",
+    "edges": "15ac0aab613aec3aab7606fe01ca41c59e5b6112bf2a0899affcabff59f56307",
+    "sources": "5ef03e686070ec6b16a17e8ed23930f8f589bca5abacec0e4700fb697b5a535c",
+    "events": "430b7a3c1dc0f256ca5c0af870f6442b91a2e2fe71b2cb8712ebd7a97c632206",
+    "research_bundles": "9a7929ec56acdf93f828a1e51d0f5039a50a6a13967c0e50b1dda092bfeb7815",
+    "coverage_gaps": "af0a292b74c7802acf48f45872825a33cfe765d1aaf10dc69f5588fddc015de9",
+    "evaluation_snapshots": "91e4537d8d62e59061a7c8ab985412f549b4a396002e703f389d398de916ad1c",
+    "dataset_benchmark_registry": "39e12e0a86858cd4415619213818acc03d08e4b5742b955cbedeace87c005843",
+    "media_evaluation_registry": "ea8d882e5c7bfe0b66e261fb9ea36e677c7f504c8356483f54b30953e06e1f9a",
+    "view_nodes": "17c8883aa913ec510766de6fa9b7f4ae06764664f2630f34b6d80045620f6bd5",
+    "learning_paths": "1a103036024eb7ed72f0bc964daa56a4aa42fe98c68ee8edb8e54d7c0e74b497",
+    "creative_learning_registry": "83a660442124a32b96f865b1898db70ae0f8daface00e691ac46d7dfd4897877",
+    "vendor_catalog": "155440c06a9f18edd91e0317136c1d2c5d0d88b42b965e95ce3f9a6f97835218",
+    "knowledge_graph_links_application": "b6349af4a79a59219e5ed6525164e3396f1c9cac66d5e967628bb45ba49de211",
+    "realtime_audio_registry": "3b46468505af9a7850f846b9c45b5c64cdd49558f0d693354e2f84fabeb0fb95",
+    "edge_multimodal_registry": "027fa0a41694788fc2c07f21a184e11ea3d24bdf231fd8a323b94fb55a354887"
+  },
+  "expected_ids": {
+    "nodes": [
+      "early-nlp-hmm",
+      "early-nlp-crf",
+      "early-nlp-rnn",
+      "early-nlp-lstm"
+    ],
+    "sources": [
+      "early-nlp-src-hmm-author-list",
+      "early-nlp-src-hmm-author-pdf",
+      "early-nlp-src-hmm-baum-petrie",
+      "early-nlp-src-rnn-author-list",
+      "early-nlp-src-rnn-publisher",
+      "early-nlp-src-rnn-author-pdf",
+      "early-nlp-src-lstm-publisher",
+      "early-nlp-src-lstm-author-pdf",
+      "early-nlp-src-crf-institution-repository",
+      "early-nlp-src-crf-mccallum-list",
+      "early-nlp-src-crf-author-original",
+      "early-nlp-src-crf-lafferty-list",
+      "early-nlp-src-lstm-schmidhuber-list",
+      "early-nlp-src-lstm-jku-list"
+    ],
+    "events": [
+      "early-nlp-hmm-representative_paper_publication",
+      "early-nlp-crf-representative_paper_publication",
+      "early-nlp-rnn-representative_paper_publication",
+      "early-nlp-lstm-representative_paper_publication",
+      "early-nlp-lstm-earlier_technical_report"
+    ],
+    "view_nodes": [
+      "early-nlp-hmm",
+      "early-nlp-crf",
+      "early-nlp-rnn",
+      "early-nlp-lstm"
+    ]
+  },
+  "expected_object_sha256": {
+    "nodes": {
+      "early-nlp-hmm": "6f5165c4349a709cf199412dc862b2b24ed31dcd1359f2baa2280bf7525b7e44",
+      "early-nlp-crf": "3ef7343996d634b02df55043a4bc901fcbd2f523543fcda3740a76c19a69dc67",
+      "early-nlp-rnn": "ce69e19863e893378f221194ce8bd386b2e2d5054ff594d22fcbaf5549b98c9e",
+      "early-nlp-lstm": "c053998d43227bb94c208d2c50e53357cb684ef4d84ba1878ff78f0a4a191180"
+    },
+    "sources": {
+      "early-nlp-src-hmm-author-list": "29f0c5ba91667fb05ea5445dbdf7029f39765d1b2ef08f9d479f1bd0d49ba29b",
+      "early-nlp-src-hmm-author-pdf": "c1fa0921966a328375ee77d0dd55b0808e736084280eeac9fac06fe814ced921",
+      "early-nlp-src-hmm-baum-petrie": "9acfbdc51c909fe40b8c0246b93f7b9ddabbf0aebd0fbd4a405c7a3ab3143fe2",
+      "early-nlp-src-rnn-author-list": "26c5faa222fa35e668ec19d1953bcc7da9a0ccbee98df121b2ce7e28e07d6fd6",
+      "early-nlp-src-rnn-publisher": "2bcd1d36420ac4709b0198bcaa2fc03449e05822c5edae676aa2a0830c7b8747",
+      "early-nlp-src-rnn-author-pdf": "333ed90de34c1cf93a0368cfe17dbcbef7e951012ab6aae6ef691a7b4cb0cd0e",
+      "early-nlp-src-lstm-publisher": "2b590865235caf40a628f503ae9a7fed3a8e4d2686d526ccfaa1a391686d5221",
+      "early-nlp-src-lstm-author-pdf": "2d953e7738354433a7cf8e8e13aae2e14fcec0e59a0e12fa198696c44f1c4a3f",
+      "early-nlp-src-crf-institution-repository": "75b4d2e9ba66ad8c736f351cfc32cadc8898a533bbb1cc5f6fd68de29d2f93d2",
+      "early-nlp-src-crf-mccallum-list": "fda43a576ec1bde7a545463c0ced94fd90941dfe8bf1dff0e034db52b161e844",
+      "early-nlp-src-crf-author-original": "7431cb2e84df90a8e4a46ab7453e02a8ee53698781ab2e67b5e1db14248f939d",
+      "early-nlp-src-crf-lafferty-list": "2b9e93fff7bc99105077a8425fac19bc5cc632c3944d3d4605cf7b34cd277822",
+      "early-nlp-src-lstm-schmidhuber-list": "944049634369198cf984de158958df2564cb57a3567321e247d0f9468e2422b6",
+      "early-nlp-src-lstm-jku-list": "03e3fe742918ad618f5a6389f6e08c55972b208bb0a5e49d1541ae2244321ae9"
+    },
+    "events": {
+      "early-nlp-hmm-representative_paper_publication": "f1f91e5abe03836c7fb18032bbe5185053c6a714c3734193ccb2a0f820358931",
+      "early-nlp-crf-representative_paper_publication": "6d6c8049c4ee26302a72e7c1d88b96dc2035ad05b4615abc14776189fdfaf672",
+      "early-nlp-rnn-representative_paper_publication": "b7b92aad97d51fa155479d700fef6c3b0e0797d9518717ace4d21392d5560048",
+      "early-nlp-lstm-representative_paper_publication": "6e1e42938b11fac8cee9308b69cb5eff07376403144fda53dcea0de66aaa2cbd",
+      "early-nlp-lstm-earlier_technical_report": "8f9e23b14050e4649543d1a6e93fd15613295540a019fdee6b4a1247b82428a2"
+    },
+    "view_nodes": {
+      "early-nlp-hmm": "ae8dfdcdbba8895d8ba7fd2c38fd20970ee326ac5020d2b9078d02ac78ef8af6",
+      "early-nlp-crf": "e03246d94b9a9cebc311d80c0315e647994ab3bac2c576255769ce10b7d3314d",
+      "early-nlp-rnn": "53ae2fb8f22c1434045f5b9688ba83ef156a38771ba57b3b0a52144779ee026f",
+      "early-nlp-lstm": "75f1c3691a02e3bbcfc4d3920d640666b0504362c6c3af1416e0e37fc77b96d0"
+    }
+  },
+  "expected_counts": {
+    "nodes": 254,
+    "sources": 405,
+    "events": 211,
+    "edges": 151
+  },
+  "files_sha256": {
+    "overlay.json": "1946fd50c9c186efa8b8628ed731cf1c05d98ed5f6efbf6bf7e4e7f614c4a7ab",
+    "public-research.json": "127d560fc3f2ca625b72be1860d2383a47c78fa78913c349d95e93d28f43c218",
+    "registry.json": "9f1ff5208b4b2683cb77d7532edb71a265b01264737f2d72e17795e4a5de1c06"
+  }
+}

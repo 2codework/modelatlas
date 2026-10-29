@@ -21,6 +21,9 @@ def baseline():return pinned('edge-multimodal-baseline.json',BASE_SHA)
 def research():return pinned('edge-multimodal-research-r2.json','0d42b558e49640d5b0aa6f142e08956b820edcb698baafb154332f2da9a1c0a5')
 def dates():return pinned('edge-multimodal-dates-r2.json','b04b993da945ca7fe27d2556fb590a4a479d743bfd8082ddf93ee2bfe9f3da85')['events']
 def validate(data):
+ if "early_nlp_registry" in data:
+  from early_nlp_contract import legacy_view
+  data=legacy_view(data)
  b=baseline();r=research();ds=dates()
  need(set(data)==set(b)|{'edge_multimodal_registry'},'top-level fields')
  extras={'nodes':NODE_IDS,'sources':SOURCE_IDS,'events':['edge-event-'+e['model_id']+'-'+e['event'] for e in ds],'view_nodes':NODE_IDS}

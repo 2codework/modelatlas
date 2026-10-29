@@ -1,0 +1,27 @@
+{
+  "schema_version": "early-nlp.registry.r1",
+  "scope_zh": "早期NLP有限补充：4历史概念、14来源、5书目事件；不代表NLP史完整。旧coverage及阶段计数保留，非当前全图统计。零关系边、零厂商目录新增。",
+  "source_counts": {
+    "metadata_readable": 7,
+    "selected_page_pdfs": 2,
+    "other_failed_or_not_retried": 5,
+    "total": 14,
+    "full_papers_verified": 0
+  },
+  "expected_counts": {
+    "nodes": 254,
+    "sources": 405,
+    "events": 211,
+    "edges": 151,
+    "catalog_records": 77
+  },
+  "node_ids": [
+    "early-nlp-hmm",
+    "early-nlp-crf",
+    "early-nlp-rnn",
+    "early-nlp-lstm"
+  ],
+  "new_edges": [],
+  "new_catalog_records": [],
+  "original_bundle_sha256sums_sha256": "a03b78b1fc42a4a6bc5d1ff20d0fcdfa8d797eaa9a224f11f0e4aabf67d1ad44"
+}
