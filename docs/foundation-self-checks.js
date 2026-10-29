@@ -13,6 +13,7 @@
     const selected=inputs.find(input=>input.checked);
     const result=evaluate(selected?selected.value:null,box.dataset.correct,inputs.map(input=>input.value),box.dataset.explanation);
     feedback.textContent=result.message;feedback.dataset.result=result.status;
+    feedback.scrollIntoView({block:'nearest',behavior:'auto'});
    });
    box.querySelector('[data-clear]').addEventListener('click',()=>{
     for(const input of inputs)input.checked=false;

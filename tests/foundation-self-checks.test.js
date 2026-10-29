@@ -15,7 +15,7 @@ test('all six admitted exercises exhaust every option with explanatory feedback'
 });
 function makeBox(correct='1'){
  const inputs=['0','1','2'].map(value=>({value,checked:false,events:{},addEventListener(k,fn){this.events[k]=fn;}}));
- const feedback={textContent:'',dataset:{}};
+ const feedback={textContent:'',dataset:{},scrolls:[],scrollIntoView(options){this.scrolls.push({options,text:this.textContent,status:this.dataset.result});}};
  const button=()=>({events:{},addEventListener(k,fn){this.events[k]=fn;}}),check=button(),clear=button();
  return {hidden:true,dataset:{correct,explanation:'原理说明：只按授权与原文核对，不补编事实。'},inputs,feedback,check,clear,querySelectorAll(){return inputs;},querySelector(q){return q==='[data-check]'?check:q==='[data-clear]'?clear:feedback;}};
 }
@@ -37,4 +37,22 @@ test('optional DOM checks require explicit choice, clear safely, never auto-chec
 test('helper has no networking, persistence, history or progress mutation',()=>{
  const js=fs.readFileSync(__dirname+'/../web/foundation-self-checks.js','utf8');
  for(const forbidden of [/fetch\s*\(/,/XMLHttpRequest/,/localStorage/,/sessionStorage/,/sendBeacon/,/location\./,/history\./,/\.focus\(/])assert.doesNotMatch(js,forbidden);
+});
+
+test('only explicit checks reveal their written feedback with nearest nonanimated scroll',()=>{
+ const box=makeBox();init({querySelectorAll:()=>[box]});
+ assert.equal(box.feedback.scrolls.length,0);
+ for(const [choice,status] of [[null,'unanswered'],['0','incorrect'],['1','correct'],['1','correct']]){
+  for(const input of box.inputs)input.checked=input.value===choice;
+  const count=box.feedback.scrolls.length;
+  box.inputs[0].events.change();assert.equal(box.feedback.scrolls.length,count);
+  box.check.events.click();assert.equal(box.feedback.scrolls.length,count+1);
+  const scroll=box.feedback.scrolls.at(-1);
+  assert.deepEqual(scroll.options,{block:'nearest',behavior:'auto'});
+  assert.equal(scroll.status,status);assert.ok(scroll.text.length>0);
+ }
+ const count=box.feedback.scrolls.length;
+ box.hidden=true;box.hidden=false;assert.equal(box.feedback.scrolls.length,count);
+ box.clear.events.click();assert.equal(box.feedback.scrolls.length,count);
+ box.inputs[0].events.change();assert.equal(box.feedback.scrolls.length,count);
 });

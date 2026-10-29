@@ -1,7 +1,7 @@
 {
-  "version": "foundation-self-checks-r1",
+  "version": "foundation-self-checks-r2",
   "checked_at": "2026-10-29",
-  "baseline_commit": "c76640ce2fb02549d54109f687e7a43a827b851a",
+  "baseline_commit": "c1d3ea01c83a781db3073da0107e8752a5a7b57c",
   "counts": {
     "nodes": 250,
     "edges": 151,
@@ -26,19 +26,15 @@
     "interpretation_zh": "内部图孤立不等于网页没有链接；边数不证明准确性提升或厂商集成。"
   },
   "verification": {
-    "python_unittest": {
-      "passed": 332
-    },
-    "node_test": {
-      "passed": 130,
-      "log": "../node-tests.log"
-    },
-    "javascript_syntax": "passed",
-    "check_pages": "passed",
-    "double_build": "byte-identical inventory",
-    "checkpoint": "passed: 989 files; consistency only, not evidence authenticity",
-    "browser": "blocked: Chromium process_singleton socket Operation not permitted; no real browser assertions executed",
-    "no_cua_or_mac": true
+    "python_unittest_passed": 332,
+    "node_test_passed": 131,
+    "js_syntax": "passed",
+    "pages": "297 files parity; 362 strict JSON; 8 HTML",
+    "double_build": "byte-identical full inventory",
+    "checkpoint": "passed 989 files; consistency only",
+    "diff_check": "passed",
+    "browser": "not attempted; root owns live browser verification",
+    "scope": "Only explicit check feedback scroll; no focus change; no question/answer/reader/data change"
   },
   "manifest_scope": "all repo files excluding .git, caches, pyc and this VALIDATION.json",
   "sha256": {
@@ -203,10 +199,10 @@
     "dist/edge-multimodal/raw/research-r2/dedup.json": "3066146904008e78dfdabd27d40f92c78c959b22da53506f045b74739af02106",
     "dist/edge-multimodal/raw/research-r2/research.json": "0d42b558e49640d5b0aa6f142e08956b820edcb698baafb154332f2da9a1c0a5",
     "dist/edge-multimodal/raw/research-r2/source-checks.json": "da5e5399c7010644a0ea23339b080fa6753319ab43f7f8e1343f54b5f7e0efe0",
-    "dist/foundation-self-checks.js": "8d46675f47f11368abf64890517d6fa8427ce5af7734ee2706fe0f6d66041808",
+    "dist/foundation-self-checks.js": "84095b56ba6ecd2388fc84665c0e036fe8786aefafe41d90b39c036e93fe5156",
     "dist/foundations-source.json": "8c8fe93cac66423d12bea51f03d1e110bd056a8e6f21be79d234cf1b7ada1053",
     "dist/foundations.css": "ef70bd3ca9b7efc0362471a15905b81e1aaeeab82bd64c513173c0261611554c",
-    "dist/foundations.html": "86ffbea1e2c91ef07cf6a375f325919a0d0533f67d83e1b17d2338093adf3c32",
+    "dist/foundations.html": "131e5c071716a59295f70ad7d64acb5d23787316d7bdf8c15d2c5aea93f8b4b4",
     "dist/foundations.js": "c27040e75672543ebb0fb90a2ad7496bbe4d7b63291ef360a119b2dc8c76d8ca",
     "dist/index.html": "a371da15639441153cde9945556c9a0a8e53992875905be52e512b9ba1095529",
     "dist/knowledge-graph-links/admission.json": "eb489097baa065a20c2b239e76b0b7801b2a01cfcfb97ce590b1e478a7ec6846",
@@ -501,10 +497,10 @@
     "docs/edge-multimodal/raw/research-r2/dedup.json": "3066146904008e78dfdabd27d40f92c78c959b22da53506f045b74739af02106",
     "docs/edge-multimodal/raw/research-r2/research.json": "0d42b558e49640d5b0aa6f142e08956b820edcb698baafb154332f2da9a1c0a5",
     "docs/edge-multimodal/raw/research-r2/source-checks.json": "da5e5399c7010644a0ea23339b080fa6753319ab43f7f8e1343f54b5f7e0efe0",
-    "docs/foundation-self-checks.js": "8d46675f47f11368abf64890517d6fa8427ce5af7734ee2706fe0f6d66041808",
+    "docs/foundation-self-checks.js": "84095b56ba6ecd2388fc84665c0e036fe8786aefafe41d90b39c036e93fe5156",
     "docs/foundations-source.json": "8c8fe93cac66423d12bea51f03d1e110bd056a8e6f21be79d234cf1b7ada1053",
     "docs/foundations.css": "ef70bd3ca9b7efc0362471a15905b81e1aaeeab82bd64c513173c0261611554c",
-    "docs/foundations.html": "86ffbea1e2c91ef07cf6a375f325919a0d0533f67d83e1b17d2338093adf3c32",
+    "docs/foundations.html": "131e5c071716a59295f70ad7d64acb5d23787316d7bdf8c15d2c5aea93f8b4b4",
     "docs/foundations.js": "c27040e75672543ebb0fb90a2ad7496bbe4d7b63291ef360a119b2dc8c76d8ca",
     "docs/index.html": "a371da15639441153cde9945556c9a0a8e53992875905be52e512b9ba1095529",
     "docs/knowledge-graph-links/admission.json": "eb489097baa065a20c2b239e76b0b7801b2a01cfcfb97ce590b1e478a7ec6846",
@@ -977,7 +973,7 @@
     "tests/fixtures/realtime-audio-baseline.json": "08b1dc2ab60f1eda3e64a65aee0034487506af8108cf44bfeec98aa8b97ef578",
     "tests/fixtures/realtime-audio-research-r2.json": "a05361a48710722d564d18757e5404ddb8d7103ca9541d28078429a723f2f9c2",
     "tests/fixtures/realtime-audio-reviewed-golden.json": "246db58481bd5179dbd52d7e22aca3f5458b5d7f66b758616ead34e893b72246",
-    "tests/foundation-self-checks.test.js": "b44e6e39cfe149f9b93ec4ba1895b0d18a002c1fdaa77c6a109a685c5b8e7e9a",
+    "tests/foundation-self-checks.test.js": "07460e6595dc42e3d291878430ab7a7292f847ad6a7bbaa3f20abf4438a89d9a",
     "tests/foundations-ui.test.js": "19cf5c29f5b6d6aca25833aad6904817efb477d16172cca5ce012aa16b920d7c",
     "tests/learning-order.test.js": "5c9572863eadb4a1d64a214bebb03b9826812d9c8f0240daa21972e625dca029",
     "tests/load-diagnostics.test.js": "8edea6d5f9dd08f4496d5b81b91c14a4df8933368a5fc6841ca0c1de26fb0498",
@@ -1020,7 +1016,7 @@
     "web/app.js": "adc5b634e4db3b21f34db84bee5e2fdac6b66d0b001351638cdbebdb0f7d2a6d",
     "web/catalog.js": "8a5705b4ee081f6edd9514bc2521a0d4150d8193db3fedd24e4ffbe1c9dc0048",
     "web/core.js": "7d263bd99423d917da205970da72850a9b31156926b790cb0d5e262447d91674",
-    "web/foundation-self-checks.js": "8d46675f47f11368abf64890517d6fa8427ce5af7734ee2706fe0f6d66041808",
+    "web/foundation-self-checks.js": "84095b56ba6ecd2388fc84665c0e036fe8786aefafe41d90b39c036e93fe5156",
     "web/foundations-source.json": "8c8fe93cac66423d12bea51f03d1e110bd056a8e6f21be79d234cf1b7ada1053",
     "web/foundations.css": "ef70bd3ca9b7efc0362471a15905b81e1aaeeab82bd64c513173c0261611554c",
     "web/foundations.html": "ba92a6f0a763875a20a9fac0c54bea9ca502a224dec66f9d49c142cddd4cec62",
