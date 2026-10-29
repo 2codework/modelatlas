@@ -8,13 +8,13 @@ class E{
  setAttribute(k,v){this.attrs[k]=v;}removeAttribute(k){delete this.attrs[k];}addEventListener(k,f){this.events[k]=f;}
  scrollIntoView(){this.scrolled=true;}querySelectorAll(tag){return this.children.flatMap(x=>[...(x.tag===tag?[x]:[]),...(x.querySelectorAll?.(tag)||[])]);}
 }
-async function boot(start='https://example.test/modelatlas/',omitCatalog=false){
+async function boot(start='https://example.test/modelatlas/?view=explore',omitCatalog=false,includeEntry=false){
  const ids=new Map([...fs.readFileSync(path.join(root,'web/index.html'),'utf8').matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new E('div')]));
  const entries=[start],writes=[],listeners={},stored=new Map();let index=0,url=new URL(start);
  const location={get search(){return url.search;},get hash(){return url.hash;}};
  function write(mode,next){url=new URL(next,url);if(mode==='push'){entries.splice(++index);entries.push(url.href);}else entries[index]=url.href;writes.push(mode);}
- const ctx={document:{getElementById:id=>ids.get(id),createElement:t=>new E(t),createTextNode:t=>({textContent:t}),createElementNS:(_,t)=>new E(t),querySelectorAll:()=>ids.get('results').querySelectorAll('button')},URL,URLSearchParams,Blob,location,history:{pushState:(_,__,s)=>write('push',s),replaceState:(_,__,s)=>write('replace',s)},localStorage:{getItem:k=>stored.get(k)||null,setItem:(k,v)=>stored.set(k,v)},addEventListener:(k,f)=>(listeners[k]??=[]).push(f),fetch:async()=>({ok:true,json:async()=>structuredClone(data)}),setTimeout:fn=>fn(),confirm:()=>true};ctx.window=ctx;vm.createContext(ctx);
- for(const name of ['core','reader','catalog','app'])if(!(omitCatalog&&name==='catalog'))await vm.runInContext(fs.readFileSync(path.join(root,'web',name+'.js'),'utf8'),ctx);
+ const ctx={document:{body:{classList:{toggle(){}}},getElementById:id=>ids.get(id),createElement:t=>new E(t),createTextNode:t=>({textContent:t}),createElementNS:(_,t)=>new E(t),querySelectorAll:()=>ids.get('results').querySelectorAll('button')},URL,URLSearchParams,Blob,location,history:{pushState:(_,__,s)=>write('push',s),replaceState:(_,__,s)=>write('replace',s)},localStorage:{getItem:k=>stored.get(k)||null,setItem:(k,v)=>stored.set(k,v)},addEventListener:(k,f)=>(listeners[k]??=[]).push(f),fetch:async()=>({ok:true,json:async()=>structuredClone(data)}),setTimeout:fn=>fn(),confirm:()=>true};ctx.window=ctx;vm.createContext(ctx);
+ for(const name of [...(includeEntry?['entry']:[]),'core','reader','catalog','app'])if(!(omitCatalog&&name==='catalog'))await vm.runInContext(fs.readFileSync(path.join(root,'web',name+'.js'),'utf8'),ctx);
  assert.notEqual(ids.get('catalog-load-status').dataset.state,'initialization-error');
  const fire=k=>(listeners[k]||[]).forEach(f=>f());
  const click=(kind,id)=>{const b=ids.get(kind==='node'?'results':'catalog-results').querySelectorAll('button').find(b=>b.dataset.id===id);assert.ok(b,id);b.events.click();};
@@ -126,3 +126,5 @@ test('each learning path exposes unfulfilled ordering prerequisites without muta
  for(const p of data.learning_paths){const card=h.ids.get('paths').children.find(c=>c.children[0]?.textContent===p.title);assert.ok(card);const earlier=new Set(),needed=new Set();for(const id of p.node_ids){for(const pre of data.nodes.find(n=>n.id===id).prerequisites||[])if(!p.node_ids.includes(pre))needed.add(pre);earlier.add(id);}const pre=card.children.find(c=>c.className==='path-prerequisites');if(needed.size){assert.ok(pre);for(const id of needed)assert.ok(pre.querySelectorAll('button').some(b=>b.textContent===nodeTitle(id)));}}
  assert.equal(h.stored.size,0);
 });
+
+test('actual entry plus async app initialization and Back/Forward keep home current, never the library',async()=>{const h=await boot('https://example.test/modelatlas/',false,true);const home=()=>{assert.equal(h.ids.get('nav-start').attrs['aria-current'],'page');assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'false');assert.equal(h.ids.get('start-here').hidden,false);};home();h.ids.get('nav-explore').events.click({preventDefault(){}});assert.equal(h.ids.get('nav-start').attrs['aria-current'],'false');assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'true');assert.equal(h.ids.get('start-here').hidden,true);h.back();home();h.forward();assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'true');h.back();home();});

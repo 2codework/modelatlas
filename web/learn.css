@@ -2,3 +2,5 @@
 .chapter-menu{border:0;padding:0;margin:0}.chapter-menu>summary{font-size:13px;color:var(--muted);margin-bottom:14px}.lesson-next>details{flex-basis:100%;margin:0}.lesson-next{flex-wrap:wrap}@media(max-width:760px){aside nav{grid-template-columns:1fr}.chapter-menu{background:#fff;border:1px solid var(--line);padding:12px 16px}.chapter-menu>summary{margin:0}.chapter-menu[open]>summary{margin-bottom:12px}}
 
 @media print{header,aside,.skip,.lesson-next,button,#lesson-status,#connection-status{display:none!important}.learn-layout{display:block;padding:0}article{break-before:page;border:0;padding:0}[data-lesson][hidden],[data-route][hidden]{display:block!important}body{background:#fff}details{break-inside:avoid}}
+/* Keep live navigation announcements available without repeating the visible chapter label. */
+.reader-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}

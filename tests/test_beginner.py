@@ -49,3 +49,20 @@ class Beginner(unittest.TestCase):
    self.assertIn('<noscript>',html)
   self.assertIn('aria-label="入门步骤与选读"',(ROOT/'web/learn.html').read_text())
   css=(ROOT/'web/learn.css').read_text();self.assertIn('@media print',css);self.assertIn('[data-lesson][hidden],[data-route][hidden]{display:block!important}',css)
+
+ def test_setup_is_one_preparation_phase_not_a_missing_prompt(self):
+  html=(ROOT/'web/learn.html').read_text();body=re.search(r'<article id="step-3"[^>]*>(.*?)</article>',html,re.S).group(1)
+  self.assertEqual(body.count('class="setup-primary"'),1)
+  for phrase in ['下方样例','现在就做','此刻的默认选择','提交后等待','现成聊天应用</h2>']:self.assertNotIn(phrase,body)
+  self.assertIn('现在不用输入或提交内容',body)
+  self.assertIn('href="#step-2">工具已打开，去复制练习',body)
+  self.assertIn('只看示例，不登录也能继续',body)
+  route=json.loads((ROOT/'learning/task-first/connections.json').read_text())['routes'][0]
+  from html import escape
+  for key in ['accounts_cost','minimum_access']:self.assertEqual(body.count(escape(route[key])),1)
+  self.assertEqual(body.count('class="route-option"'),2)
+  self.assertNotIn('<pre',body)
+ def test_header_explicitly_resets_sidebar_and_subtitle(self):
+  css=(ROOT/'web/start.css').read_text();self.assertIn('flex-direction:row;align-items:center;justify-content:space-between',css)
+  self.assertIn('display:block;color:#586a67;font-size:13px',css)
+  self.assertIn('nav a[aria-current=page]',css)
