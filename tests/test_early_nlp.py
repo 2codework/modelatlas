@@ -6,7 +6,7 @@ sys.path.insert(0,str(ROOT/'scripts'))
 import early_nlp as E
 class EarlyNLP(unittest.TestCase):
  @classmethod
- def setUpClass(cls):cls.live=json.loads((ROOT/'dist/data.json').read_text())
+ def setUpClass(cls):cls.live=__import__('runtime_contract').legacy_view(json.loads((ROOT/'dist/data.json').read_text()))
  def reject(self,fn):
   d=copy.deepcopy(self.live);fn(d)
   with self.assertRaises(ValueError):validate(d)

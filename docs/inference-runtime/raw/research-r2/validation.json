@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "errors": [],
+  "node_count": 4,
+  "source_count": 16,
+  "reverified_pages_r2": 3,
+  "inherited_pages_r1": 13,
+  "unknown_first_release_dates": 4,
+  "unknown_full_release_dates": 4,
+  "unknown_metric_fields": 16,
+  "schema_validation": "passed using preinstalled jsonschema",
+  "input_files_present_and_unchanged": 16,
+  "structural_check_not_runtime_test": true,
+  "inference_runs": 0
+}

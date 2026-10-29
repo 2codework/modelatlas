@@ -1,0 +1,21 @@
+{
+  "files": {
+    "inference-runtime-research-r1/README.zh-CN.md": "fbcb256ec1da83a5cfbb8f47c4511fbe1038ffe5e6b538f9692dfe686a60b761",
+    "inference-runtime-research-r1/SHA256SUMS": "2d2e88e99ae99e51e9fd45c325b93556187a9ce87dca17f46360d7d9a33ab34b",
+    "inference-runtime-research-r1/build_bundle.py": "cc50fc8bbf4936f3d0f9f81ba12c919a864d0311efd40ba45eb61a18e5d6c3b2",
+    "inference-runtime-research-r1/date-evidence.json": "85ee23bde73396d1999ba5bcc9dda4d6d4754dce6dbc0784661874015d9eae0d",
+    "inference-runtime-research-r1/dedup.json": "dfbdad9099d526c67f85911765571c19ee4cca4107e749554dddb58d08300a08",
+    "inference-runtime-research-r1/runtime-learning.json": "ad9376f6f507726974b509df4f052bbb12d7eb4eb19402c4c0ca76b41c818938",
+    "inference-runtime-research-r1/schema.json": "aabfaeaaf5c457a9c72078807d731b87468f9c1525c351c9c5ed411e160b596c",
+    "inference-runtime-research-r1/source-checks.json": "d515695cc3f097e33a06f9fed09a7b9a700fb2a9710408cb77b832dfea32b193",
+    "inference-runtime-research-r1/validate.py": "6ca39af36bdf383e011e22d256a63bacc5074cc3c19019fea9dab21c0b6247e0",
+    "inference-runtime-research-r1/validation.json": "9266da372c0c19aab904ff66352c6afd99f3ab7df9405f7e48d193f3a5ca45f3",
+    "inference-runtime-independent-qa-r1/REPORT.zh-CN.txt": "a3ed2eaf79cb19eec5dfd41f09a1641358483036b1b70d0376509efb6be56b39",
+    "inference-runtime-independent-qa-r1/SHA256SUMS": "49452b90cbcf5b363e7507fad5443d10cd50b1b416cdf305d0f5d08d3df44c8f",
+    "inference-runtime-independent-qa-r1/date-verification.json": "c9c15733d939e9ac49fd3dc2d30e7aca9e3c717a6a07746e9137bd871593335e",
+    "inference-runtime-independent-qa-r1/license-verification.json": "42e9814bf74f1f8fb6c4634e83caddb36d03e3b1d03f47a97935a761f345cd8e",
+    "inference-runtime-independent-qa-r1/qa-report.json": "5e654b778db2fe2b0b2fce91ca6f1a25a626e6cd4192d6b36fa167e8f4cef89b",
+    "inference-runtime-independent-qa-r1/source-verification.json": "562b73e8fd47e71b79a4a313256d7bcdd484ffc6adacd3da38b542e36f527264"
+  },
+  "policy": "r1 and independent QA read only; hashes captured before r2 construction"
+}

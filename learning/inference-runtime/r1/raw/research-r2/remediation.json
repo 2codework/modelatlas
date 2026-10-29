@@ -1,0 +1,31 @@
+{
+  "status": "implemented_pending_parent_independent_QA",
+  "changes": [
+    {
+      "node_id": "irt-trt-llm",
+      "resolution": "Exact directory exception in rolling main license, separate from historical v0.18.0 platform statement",
+      "source_ids": [
+        "irt-src-trt-license",
+        "irt-src-trt-release"
+      ]
+    },
+    {
+      "node_id": "irt-ort-core",
+      "resolution": "Source-scoped sustained engineering and language-section-specific WinML recommendation, not backported to v1.22.0",
+      "source_ids": [
+        "irt-src-ort-install"
+      ]
+    }
+  ],
+  "preserved": {
+    "runtime_families": 4,
+    "sources": 16,
+    "unknown_first_releases": 4,
+    "unknown_full_release_dates": 4,
+    "unknown_metrics": 16
+  },
+  "blockers": [],
+  "prohibited_actions_performed": [],
+  "canonical_modified": false,
+  "pushed": false
+}

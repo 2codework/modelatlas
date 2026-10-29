@@ -1,0 +1,16 @@
+推理运行时独立增量 QA r2 — 2026-10-29
+结论：accept。两条精度建议已落实；独立 stdlib 校验 40 项全部通过，无阻断问题。
+
+TensorRT-LLM：main LICENSE 的 LTX-2 例外准确限于 tensorrt_llm/_torch/visual_gen/models/ltx2/。这是滚动 main 观察，不是 v0.18.0 许可证快照。v0.18.0 Windows 弃用事实单列为历史平台说明，不外推当前所有版本。
+https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE
+https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0
+ORT：安装页 DirectML sustained engineering 范围准确；Python 新 Windows 项目建议考虑 WinML，C#/C/C++ 段建议使用 WinML。没有声称已删除 DirectML，也没有回填到 v1.22.0。
+https://onnxruntime.ai/docs/install/
+
+保留验证：4 个原家族、16 个原来源身份/URL，4 个首次日期、4 个完整发布日期和 16 个性能字段仍未知。SGLang/OpenVINO 节点完全不变；其余节点仅许可/平台范围字段变更。日期、去重和 r1 来源历史逐字节保持。
+阅读账本：r2 3 页重读、13 页继承，分区不重叠、覆盖完整。作者所报 3 次调用/8 操作算术成立，但本 QA 未得到作者完整工具序列，不能声称独立重算其调用记录。本 QA 自行执行 2 次 web 调用，3 open + 3 find，共 6 操作、3 个唯一正文页面；网络请求数/HTTP 状态未知。一次 find 的“consider WinML”因链接分隔未匹配，同页正文 L241 已直接验证，不是正文访问失败。
+
+完整性：r1、r2、前次独立 QA 三包的全部文件清单与 SHA256SUMS 均一致，r2 的 16 项输入快照摘要全部一致；输入文件在本 QA 前后不变。仅运行自写 validate_delta.py，没有执行作者 validator/build 或官网示例。QA 输出是新目录，发布后不原位编辑，后续更改应另建版本。哈希不是远端提交固定证据。
+
+边界：无安装、下载、模型/SDK/推理运行、Mac/CUA、账号/付费/许可接受、canonical 写入或 push。此前 4 个 release API not accessible 记录仅继承，不重试、不换入口；没有新相关证据支持重试。完整日期获取仍未解决，但不是本次精度修订的阻断项。
+本次 blocker=[]；pending=[]；uncertain=[作者原工具序列独立复算、HTTP/网络请求数、运行效果、未知日期/性能]。本报告不能替代运行或法律审核。

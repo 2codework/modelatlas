@@ -15,6 +15,9 @@ def fixture(name,sha):
  return json.loads(p.read_text())
 def baseline():return fixture('early-nlp-baseline.json',BASE_SHA)
 def validate(data):
+ if "inference_runtime_registry" in data:
+  from runtime_contract import legacy_view
+  data=legacy_view(data)
  b=baseline();o=fixture('early-nlp-golden.json',GOLDEN_SHA);r=fixture('early-nlp-registry.json',REGISTRY_SHA)
  need(set(data)==set(b)|{'early_nlp_registry'},'top-level fields')
  for k in b:

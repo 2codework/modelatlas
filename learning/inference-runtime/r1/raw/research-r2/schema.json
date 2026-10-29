@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "bundle_id",
+    "nodes",
+    "sources",
+    "execution_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "is_model",
+          "representative_version",
+          "representative_release",
+          "source_ids",
+          "license",
+          "steps_zh",
+          "io_contract",
+          "success_criteria_zh",
+          "independent_measurements"
+        ],
+        "properties": {
+          "type": {
+            "const": "runtime"
+          },
+          "is_model": {
+            "const": false
+          },
+          "runtime_verified": {
+            "const": false
+          },
+          "execution_status": {
+            "const": "never-run"
+          },
+          "first_release_date": {
+            "type": "null"
+          },
+          "representative_release": {
+            "type": "object",
+            "required": [
+              "date_iso",
+              "source_id"
+            ],
+            "properties": {
+              "date_iso": {
+                "type": "null"
+              }
+            }
+          },
+          "independent_measurements": {
+            "type": "object",
+            "required": [
+              "minimum_memory",
+              "speed",
+              "cost",
+              "accuracy_delta"
+            ],
+            "additionalProperties": {
+              "const": "unknown"
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "maxItems": 16,
+      "minItems": 16
+    },
+    "bundle_id": {
+      "const": "inference-runtime-research-r2"
+    }
+  }
+}

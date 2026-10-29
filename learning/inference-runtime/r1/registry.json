@@ -1,0 +1,36 @@
+{
+  "schema_version": "inference-runtime.registry.r1",
+  "node_ids": [
+    "irt-sg-lang",
+    "irt-trt-llm",
+    "irt-ort-core",
+    "irt-ov-core"
+  ],
+  "scope_zh": "全球部署/量化知识图谱的有限代表补缺批次：4个非模型runtime家族，不是全部、最新或排行榜。",
+  "reading_counts": {
+    "r2_reread": 3,
+    "inherited_r1": 13,
+    "total": 16
+  },
+  "new_edges": [],
+  "new_events": [],
+  "new_catalog_records": [],
+  "unknown_first_release_dates": 4,
+  "unknown_representative_release_dates": 4,
+  "execution_status": "never-run",
+  "coverage_gaps": [
+    "各版本完整OS/设备矩阵",
+    "first-release dates",
+    "full release year verification",
+    "all model architecture combinations",
+    "independent execution and performance",
+    "dependency/model license inventory"
+  ],
+  "counts": {
+    "nodes": 258,
+    "sources": 421,
+    "events": 211,
+    "edges": 151,
+    "catalog_records": 77
+  }
+}

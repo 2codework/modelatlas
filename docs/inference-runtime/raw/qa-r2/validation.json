@@ -1,0 +1,214 @@
+{
+  "status": "passed",
+  "errors": [],
+  "checks": [
+    {
+      "check": "4 original family identities retained",
+      "passed": true
+    },
+    {
+      "check": "16 original source identities and URLs retained",
+      "passed": true
+    },
+    {
+      "check": "only permitted field changes irt-sg-lang",
+      "passed": true
+    },
+    {
+      "check": "unknown dates irt-sg-lang",
+      "passed": true
+    },
+    {
+      "check": "four unknown metrics irt-sg-lang",
+      "passed": true
+    },
+    {
+      "check": "no runtime verification irt-sg-lang",
+      "passed": true
+    },
+    {
+      "check": "only permitted field changes irt-trt-llm",
+      "passed": true
+    },
+    {
+      "check": "unknown dates irt-trt-llm",
+      "passed": true
+    },
+    {
+      "check": "four unknown metrics irt-trt-llm",
+      "passed": true
+    },
+    {
+      "check": "no runtime verification irt-trt-llm",
+      "passed": true
+    },
+    {
+      "check": "only permitted field changes irt-ort-core",
+      "passed": true
+    },
+    {
+      "check": "unknown dates irt-ort-core",
+      "passed": true
+    },
+    {
+      "check": "four unknown metrics irt-ort-core",
+      "passed": true
+    },
+    {
+      "check": "no runtime verification irt-ort-core",
+      "passed": true
+    },
+    {
+      "check": "only permitted field changes irt-ov-core",
+      "passed": true
+    },
+    {
+      "check": "unknown dates irt-ov-core",
+      "passed": true
+    },
+    {
+      "check": "four unknown metrics irt-ov-core",
+      "passed": true
+    },
+    {
+      "check": "no runtime verification irt-ov-core",
+      "passed": true
+    },
+    {
+      "check": "preserved date-evidence.json",
+      "passed": true
+    },
+    {
+      "check": "preserved dedup.json",
+      "passed": true
+    },
+    {
+      "check": "r1 source ledger exactly preserved",
+      "passed": true
+    },
+    {
+      "check": "three reread source labels",
+      "passed": true
+    },
+    {
+      "check": "13 inherited source labels",
+      "passed": true
+    },
+    {
+      "check": "disjoint complete ledger irt-sg-lang",
+      "passed": true
+    },
+    {
+      "check": "disjoint complete ledger irt-trt-llm",
+      "passed": true
+    },
+    {
+      "check": "disjoint complete ledger irt-ort-core",
+      "passed": true
+    },
+    {
+      "check": "disjoint complete ledger irt-ov-core",
+      "passed": true
+    },
+    {
+      "check": "ledger full unique coverage",
+      "passed": true
+    },
+    {
+      "check": "author ledger arithmetic; not independent transcript recount",
+      "passed": true
+    },
+    {
+      "check": "exact exception path and branch",
+      "passed": true
+    },
+    {
+      "check": "separate historical release/license scope",
+      "passed": true
+    },
+    {
+      "check": "rolling DirectML lifecycle only",
+      "passed": true
+    },
+    {
+      "check": "complete manifest inference-runtime-research-r1",
+      "passed": true
+    },
+    {
+      "check": "all listed hashes inference-runtime-research-r1",
+      "passed": true
+    },
+    {
+      "check": "complete manifest inference-runtime-research-r2",
+      "passed": true
+    },
+    {
+      "check": "all listed hashes inference-runtime-research-r2",
+      "passed": true
+    },
+    {
+      "check": "complete manifest inference-runtime-independent-qa-r1",
+      "passed": true
+    },
+    {
+      "check": "all listed hashes inference-runtime-independent-qa-r1",
+      "passed": true
+    },
+    {
+      "check": "all 16 r2 input snapshot hashes",
+      "passed": true
+    },
+    {
+      "check": "all inputs unchanged during QA",
+      "passed": true
+    }
+  ],
+  "counts": {
+    "families": 4,
+    "sources": 16,
+    "unknown_first_dates": 4,
+    "unknown_full_dates": 4,
+    "unknown_metrics": 16,
+    "reread": 3,
+    "inherited": 13
+  },
+  "input_hashes": {
+    "inference-runtime-research-r1": {
+      "runtime-learning.json": "ad9376f6f507726974b509df4f052bbb12d7eb4eb19402c4c0ca76b41c818938",
+      "schema.json": "aabfaeaaf5c457a9c72078807d731b87468f9c1525c351c9c5ed411e160b596c",
+      "date-evidence.json": "85ee23bde73396d1999ba5bcc9dda4d6d4754dce6dbc0784661874015d9eae0d",
+      "source-checks.json": "d515695cc3f097e33a06f9fed09a7b9a700fb2a9710408cb77b832dfea32b193",
+      "validate.py": "6ca39af36bdf383e011e22d256a63bacc5074cc3c19019fea9dab21c0b6247e0",
+      "build_bundle.py": "cc50fc8bbf4936f3d0f9f81ba12c919a864d0311efd40ba45eb61a18e5d6c3b2",
+      "SHA256SUMS": "2d2e88e99ae99e51e9fd45c325b93556187a9ce87dca17f46360d7d9a33ab34b",
+      "README.zh-CN.md": "fbcb256ec1da83a5cfbb8f47c4511fbe1038ffe5e6b538f9692dfe686a60b761",
+      "dedup.json": "dfbdad9099d526c67f85911765571c19ee4cca4107e749554dddb58d08300a08",
+      "validation.json": "9266da372c0c19aab904ff66352c6afd99f3ab7df9405f7e48d193f3a5ca45f3"
+    },
+    "inference-runtime-research-r2": {
+      "runtime-learning.json": "8cec9ead3e6b021f8f903608370d70d16492d18d70533d9d8c85b070ae059094",
+      "schema.json": "4439d18160bfc0b9e468b43692be0baa455d0373055aa064662a79b9f8a25d15",
+      "date-evidence.json": "85ee23bde73396d1999ba5bcc9dda4d6d4754dce6dbc0784661874015d9eae0d",
+      "reading-ledger.json": "36f6e416a1b1a5b95f8aa8eec559368f821852e3a49b4a9329fe37464a39c9a3",
+      "source-checks.json": "b448a9309355123eed38ffeb0ad884a77e7ecb2546bc94bd2a32f9b38059cc89",
+      "remediation.json": "39199bb3194f478e5f72773c61d4153d1b98c010fe63b6762ef97d0d9dca3dc5",
+      "REPORT.zh-CN.txt": "ba2d7721230a265bb41771ba7f4d273eda19d99e387000f5cf92eea235e37c5d",
+      "input-integrity.json": "77d04799339858e2b1cab5e1acd40800a9d8de2c4786b1ac822b0a4c396903d4",
+      "validate.py": "9043a4599be04fe64ad7d583668afe966a396f0fc76cc375f4ad07c1aee573ba",
+      "source-checks-r1-history.json": "d515695cc3f097e33a06f9fed09a7b9a700fb2a9710408cb77b832dfea32b193",
+      "SHA256SUMS": "632ab1507da33b0747057bec419f72f994828146ef8acb9c356033ab2e874bdd",
+      "README.zh-CN.md": "8c5c6ae981784b41b84ab175f8434e63ecef29c81921921d58fdcf8398e8fda2",
+      "dedup.json": "dfbdad9099d526c67f85911765571c19ee4cca4107e749554dddb58d08300a08",
+      "validation.json": "f296da7ee96cb22297c5f50e44561901a18c35d0549d4865b9be989ee1b21006"
+    },
+    "inference-runtime-independent-qa-r1": {
+      "source-verification.json": "562b73e8fd47e71b79a4a313256d7bcdd484ffc6adacd3da38b542e36f527264",
+      "license-verification.json": "42e9814bf74f1f8fb6c4634e83caddb36d03e3b1d03f47a97935a761f345cd8e",
+      "date-verification.json": "c9c15733d939e9ac49fd3dc2d30e7aca9e3c717a6a07746e9137bd871593335e",
+      "REPORT.zh-CN.txt": "a3ed2eaf79cb19eec5dfd41f09a1641358483036b1b70d0376509efb6be56b39",
+      "SHA256SUMS": "49452b90cbcf5b363e7507fad5443d10cd50b1b416cdf305d0f5d08d3df44c8f",
+      "qa-report.json": "5e654b778db2fe2b0b2fce91ca6f1a25a626e6cd4192d6b36fa167e8f4cef89b"
+    }
+  },
+  "scope": "data delta and hashes, not execution or full new 16-page review"
+}

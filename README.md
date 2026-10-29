@@ -114,3 +114,9 @@ python -m unittest discover -s learning/mcp/raw/tests -v
 `learning/realtime-audio/r1/`封存R1/R2及两轮独立QA原字节；新admission严格检查旧顶层对象完整哈希、新ID、对象哈希及来源清单。测试在验证封闭增量后才向旧模块测试提供独立封存旧阶段，旧fixture及断言不削弱。GPT2前代历史仍是覆盖缺口；2.1无已证实首发日期，不补事件；2027停用仅为指定旧ID的未来计划，列表和详情显著标记。
 
 所有模型均never-run；没有登录、权重下载、SDK执行、收费或设备访问。新的离线DOM测试只验证自编展示程序，不是浏览器渲染或语音性能测试。
+
+## 推理运行时学习补缺
+
+[四条运行时阅读路线](INFERENCE_RUNTIME.md)：SGLang、TensorRT-LLM、ONNX Runtime、OpenVINO，均为非模型运行时家族、never-run。新增4节点/16来源，零关系边、零日期事件、零厂商目录记录。首次和完整版本发布日期未知；不以核验日补填。研究 r2 仅3页重读、13页继承，不是16页再次核验。TensorRT滚动main许可和历史Windows说明分开；ORT核心、GenAI和DirectML/WinML范围分开。
+
+后置独立接纳严格绑定当前254节点/405来源全对象基线；旧adapter和admission未改。原研究与独立QA逐字节封存在 `learning/inference-runtime/r1/raw/`。当前258节点/421来源/211事件/151边，77条厂商目录；旧registry计数仅是历史接纳阶段。无安装、下载、SDK/API/模型执行或性能结论。

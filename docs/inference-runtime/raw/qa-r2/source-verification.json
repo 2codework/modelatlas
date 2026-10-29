@@ -1,0 +1,40 @@
+{
+  "status": "accept",
+  "checked_at": "2026-10-29",
+  "scope": "independent targeted delta QA",
+  "source_checks": [
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE",
+      "ref": "turn384view0 / turn385view0",
+      "lines": "1859-1870",
+      "result": "exact directory exception; rolling main only"
+    },
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0",
+      "ref": "turn384view1",
+      "lines": "151,169-173",
+      "result": "historical Windows deprecation; partial date without year remains unknown"
+    },
+    {
+      "url": "https://onnxruntime.ai/docs/install/",
+      "ref": "turn384view2 / turn385view1",
+      "lines": "239-241,331-340",
+      "result": "sustained engineering; Python consider vs C#/C/C++ use WinML"
+    }
+  ],
+  "web_calls": 2,
+  "web_operations": 6,
+  "open_operations": 3,
+  "find_operations": 3,
+  "unique_pages": 3,
+  "api_retries": 0,
+  "http_status": "unknown_not_exposed",
+  "network_requests": "unknown",
+  "blockers": [],
+  "runtime_tests": "never-run",
+  "author_scripts_executed": false,
+  "canonical_modified": false,
+  "push": false,
+  "original_user_evidence": "用户：modelstlas也要持续的并行的维护和整理好更多的数据和信息",
+  "authorization_boundary": "read-only research QA plus separate new QA artifacts, not execution or publication"
+}

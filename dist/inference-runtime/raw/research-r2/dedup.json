@@ -1,0 +1,20 @@
+{
+  "canonical_path": "github-migration-r1/public/modelatlas/docs/data.json",
+  "canonical_sha256": "0384f0d93ce7cdb3a81bbb913afb53fb75667f5f350bfc0a46d02e743b710b7a",
+  "canonical_node_count": 254,
+  "reviewed_existing_ids": [
+    "sys-vllm",
+    "sys-llamacpp",
+    "sys-mlx"
+  ],
+  "existing_ort_model_reference": "edge-phi4-multimodal-instruct mentions ONNX artifact but is a model, not runtime identity",
+  "candidate_ids": [
+    "irt-ort-core",
+    "irt-ov-core",
+    "irt-sg-lang",
+    "irt-trt-llm"
+  ],
+  "id_collisions": [],
+  "identity_result": "No standalone SGLang/TensorRT-LLM/ONNX Runtime/OpenVINO entity found in initial canonical scan; conceptual layer references retained, not duplicated",
+  "canonical_modified": false
+}

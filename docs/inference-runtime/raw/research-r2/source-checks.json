@@ -1,0 +1,147 @@
+{
+  "bundle_id": "inference-runtime-research-r2",
+  "checked_at": "2026-10-29",
+  "scope": "targeted QA remediation; no claim of reopening all 16 pages",
+  "retained_source_entities": 16,
+  "r2_unique_pages_opened": 3,
+  "r2_web_tool_calls": 3,
+  "r2_web_operations": 8,
+  "r2_open_operations": 4,
+  "r2_find_operations": 4,
+  "r2_successful_content_pages": 3,
+  "r2_blocked_pages": 0,
+  "r2_failed_content_pages": 0,
+  "network_requests": "unknown",
+  "inherited_history": "source-checks-r1-history.json; r1 counts are not r2 counts",
+  "checks": [
+    {
+      "source_id": "irt-src-sg-repo",
+      "url": "https://github.com/sgl-project/sglang",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn327view0",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-trt-license",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE",
+      "status": "r2_reverified",
+      "evidence_ref": "turn382view0",
+      "focus": "main LICENSE: L1742-1755 and L1859-1870",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ort-repo",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn327view2",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ov-repo",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn333view1",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-sg-install",
+      "url": "https://docs.sglang.ai/get_started/install.html",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn328view0",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-sg-quant",
+      "url": "https://docs.sglang.ai/advanced_features/quantization.html",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn332view5",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-trt-support",
+      "url": "https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn333view2",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-trt-quick",
+      "url": "https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn332view3",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ort-genai",
+      "url": "https://onnxruntime.ai/docs/genai/",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn331view1",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ort-quant",
+      "url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn332view6",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ort-install",
+      "url": "https://onnxruntime.ai/docs/install/",
+      "status": "r2_reverified",
+      "evidence_ref": "turn382view1",
+      "focus": "rolling install: L239-241 Python; L331-340 C#/C/C++ and WinML",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ov-genai",
+      "url": "https://github.com/openvinotoolkit/openvino.genai",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn333view0",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-sg-release",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.4.6",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn331view4",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-trt-release",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0",
+      "status": "r2_reverified",
+      "evidence_ref": "turn381view2",
+      "focus": "v0.18.0: L151 partial date; L169-173 Windows deprecation",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ort-release",
+      "url": "https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn330view2",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    },
+    {
+      "source_id": "irt-src-ov-release",
+      "url": "https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0",
+      "status": "inherited_r1_not_reopened_r2",
+      "evidence_ref": "turn330view3",
+      "focus": "r1 source and QA history retained; not reopened in r2",
+      "http_status": "unknown_not_exposed"
+    }
+  ],
+  "blocked_api_retries": 0
+}

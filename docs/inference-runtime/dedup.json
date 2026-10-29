@@ -1,0 +1,26 @@
+{
+  "baseline_commit": "fa7b378943e0550a05f86b7616a01470f3592b12",
+  "baseline_counts": {
+    "nodes": 254,
+    "sources": 405
+  },
+  "node_id_collisions": [],
+  "source_id_collisions": [],
+  "normalized_url_collisions": [],
+  "alias_matches": [],
+  "aliases_scanned": [
+    "sglang",
+    "sg-lang",
+    "tensorrt-llm",
+    "tensorrt llm",
+    "onnx runtime",
+    "onnxruntime",
+    "openvino"
+  ],
+  "existing_runtime_families_not_recreated": [
+    "vLLM",
+    "llama.cpp",
+    "MLX LM"
+  ],
+  "scope": "Current full node records and source URLs; no inferred equivalence from shared technology."
+}

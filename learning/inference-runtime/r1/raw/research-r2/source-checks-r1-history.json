@@ -1,0 +1,166 @@
+{
+  "checked_at": "2026-10-29",
+  "retained_source_entities": 16,
+  "unique_pages_opened": 17,
+  "web_tool_calls": 9,
+  "web_operations": 39,
+  "open_or_click_operations": 34,
+  "find_operations": 5,
+  "successful_content_pages": 17,
+  "blocked_pages": 0,
+  "failed_content_pages": 0,
+  "http_status_unknown_pages": 17,
+  "checks": [
+    {
+      "source_id": "irt-src-sg-repo",
+      "requested_url": "https://github.com/sgl-project/sglang",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn327view0",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-trt-license",
+      "requested_url": "https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn335view0",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ort-repo",
+      "requested_url": "https://github.com/microsoft/onnxruntime",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn327view2",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ov-repo",
+      "requested_url": "https://github.com/openvinotoolkit/openvino",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn333view1",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-sg-install",
+      "requested_url": "https://docs.sglang.ai/get_started/install.html",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn328view0",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-sg-quant",
+      "requested_url": "https://docs.sglang.ai/advanced_features/quantization.html",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn332view5",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-trt-support",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn333view2",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-trt-quick",
+      "requested_url": "https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn332view3",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ort-genai",
+      "requested_url": "https://onnxruntime.ai/docs/genai/",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn331view1",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ort-quant",
+      "requested_url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn332view6",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ort-install",
+      "requested_url": "https://onnxruntime.ai/docs/install/",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn331view3",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ov-genai",
+      "requested_url": "https://github.com/openvinotoolkit/openvino.genai",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn333view0",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-sg-release",
+      "requested_url": "https://github.com/sgl-project/sglang/releases/tag/v0.4.6",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn331view4",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-trt-release",
+      "requested_url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn330view1",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ort-release",
+      "requested_url": "https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn330view2",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    },
+    {
+      "source_id": "irt-src-ov-release",
+      "requested_url": "https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0",
+      "status": "success_content_read",
+      "http_status": "unknown_not_exposed",
+      "method": "web.open or click then line review",
+      "evidence_ref": "turn330view3",
+      "limitation": "GitHub dynamic chrome errors ignored only when substantive page body was available; not execution evidence"
+    }
+  ],
+  "excluded_discovery_pages": [
+    {
+      "url": "https://github.com/NVIDIA/TensorRT-LLM",
+      "reason": "discovery page replaced by specific LICENSE source within 16 retained sources; visited, not counted as retained claim source"
+    }
+  ],
+  "note": "Tool operations include repeated line opens/finds, not independent source count. Exact network request count is unknown because web backend caching/redirects are opaque."
+}

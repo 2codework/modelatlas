@@ -1,0 +1,87 @@
+{
+  "source_reading": "16 retained source identities: 3 targeted rechecks; 13 inherited. Reading does not mean execution.",
+  "entries": [
+    {
+      "node_id": "irt-sg-lang",
+      "source_ids": [
+        "irt-src-sg-repo",
+        "irt-src-sg-install",
+        "irt-src-sg-quant",
+        "irt-src-sg-release"
+      ],
+      "read_in_r2": [],
+      "inherited_r1": [
+        "irt-src-sg-repo",
+        "irt-src-sg-install",
+        "irt-src-sg-quant",
+        "irt-src-sg-release"
+      ],
+      "exercise_status": "prospective reading goals, not completed exercises or runtime tests",
+      "runtime_status": "never-run"
+    },
+    {
+      "node_id": "irt-trt-llm",
+      "source_ids": [
+        "irt-src-trt-license",
+        "irt-src-trt-support",
+        "irt-src-trt-quick",
+        "irt-src-trt-release"
+      ],
+      "read_in_r2": [
+        "irt-src-trt-license",
+        "irt-src-trt-release"
+      ],
+      "inherited_r1": [
+        "irt-src-trt-support",
+        "irt-src-trt-quick"
+      ],
+      "exercise_status": "prospective reading goals, not completed exercises or runtime tests",
+      "runtime_status": "never-run"
+    },
+    {
+      "node_id": "irt-ort-core",
+      "source_ids": [
+        "irt-src-ort-repo",
+        "irt-src-ort-install",
+        "irt-src-ort-quant",
+        "irt-src-ort-genai",
+        "irt-src-ort-release"
+      ],
+      "read_in_r2": [
+        "irt-src-ort-install"
+      ],
+      "inherited_r1": [
+        "irt-src-ort-repo",
+        "irt-src-ort-quant",
+        "irt-src-ort-genai",
+        "irt-src-ort-release"
+      ],
+      "exercise_status": "prospective reading goals, not completed exercises or runtime tests",
+      "runtime_status": "never-run"
+    },
+    {
+      "node_id": "irt-ov-core",
+      "source_ids": [
+        "irt-src-ov-repo",
+        "irt-src-ov-genai",
+        "irt-src-ov-release"
+      ],
+      "read_in_r2": [],
+      "inherited_r1": [
+        "irt-src-ov-repo",
+        "irt-src-ov-genai",
+        "irt-src-ov-release"
+      ],
+      "exercise_status": "prospective reading goals, not completed exercises or runtime tests",
+      "runtime_status": "never-run"
+    }
+  ],
+  "unread_boundaries": [
+    "SGLang Basic Usage / Sending a request subpages not opened",
+    "OpenVINO linked OS system requirements not opened",
+    "ORT GenAI LICENSE not opened",
+    "Optimum standalone LICENSE not opened",
+    "historical TensorRT-LLM v0.18.0 LICENSE not opened"
+  ],
+  "commands_from_sources": "none executed"
+}

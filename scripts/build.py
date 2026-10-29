@@ -18,6 +18,7 @@ import knowledge_graph_links
 import realtime_audio
 import edge_multimodal
 import early_nlp
+import inference_runtime
 import audio_diagram
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -310,6 +311,7 @@ def build():
     audio_stage=copy.deepcopy(data)
     edge_multimodal.apply(data,ROOT)
     early_nlp.apply(data,ROOT)
+    inference_runtime.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     import build_foundations
     build_foundations.render(ROOT)
@@ -335,6 +337,7 @@ def build():
     realtime_audio.publish(ROOT,out,audio_stage)
     edge_multimodal.publish(ROOT,out)
     early_nlp.publish(ROOT,out)
+    inference_runtime.publish(ROOT,out)
     audio_diagram.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)

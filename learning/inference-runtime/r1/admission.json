@@ -1,0 +1,122 @@
+{
+  "schema_version": "inference-runtime.admission.r1",
+  "base_commit": "fa7b378943e0550a05f86b7616a01470f3592b12",
+  "base_object_sha256": {
+    "schema_version": "1954610e2829b5b69c6136e604a4f4c83e8d7f258ed0ec314ca2a7fe92aaf1c4",
+    "version": "49d0595b4d00f126d07172522b7fc795353d4b12b86bea8577497c92991b8829",
+    "checked_at": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f",
+    "nodes": "9467c26bbd8026d71a7b495ad3723656a56222d60667582809745d81a2cf19e4",
+    "edges": "15ac0aab613aec3aab7606fe01ca41c59e5b6112bf2a0899affcabff59f56307",
+    "sources": "c13a23c8f422d516091c44b58ca545e2522038ee0754500817912b0af6b107f3",
+    "events": "425d5c32fb257bde23f11e08e0035ce2b313d2d53baf12d6b3a784da528cde75",
+    "research_bundles": "9a7929ec56acdf93f828a1e51d0f5039a50a6a13967c0e50b1dda092bfeb7815",
+    "coverage_gaps": "af0a292b74c7802acf48f45872825a33cfe765d1aaf10dc69f5588fddc015de9",
+    "evaluation_snapshots": "91e4537d8d62e59061a7c8ab985412f549b4a396002e703f389d398de916ad1c",
+    "dataset_benchmark_registry": "39e12e0a86858cd4415619213818acc03d08e4b5742b955cbedeace87c005843",
+    "media_evaluation_registry": "ea8d882e5c7bfe0b66e261fb9ea36e677c7f504c8356483f54b30953e06e1f9a",
+    "view_nodes": "b30a81ea3e43bd1a0770b879236083254f868883c5745eec955558c3731a1b5a",
+    "learning_paths": "1a103036024eb7ed72f0bc964daa56a4aa42fe98c68ee8edb8e54d7c0e74b497",
+    "creative_learning_registry": "83a660442124a32b96f865b1898db70ae0f8daface00e691ac46d7dfd4897877",
+    "vendor_catalog": "155440c06a9f18edd91e0317136c1d2c5d0d88b42b965e95ce3f9a6f97835218",
+    "knowledge_graph_links_application": "b6349af4a79a59219e5ed6525164e3396f1c9cac66d5e967628bb45ba49de211",
+    "realtime_audio_registry": "3b46468505af9a7850f846b9c45b5c64cdd49558f0d693354e2f84fabeb0fb95",
+    "edge_multimodal_registry": "027fa0a41694788fc2c07f21a184e11ea3d24bdf231fd8a323b94fb55a354887",
+    "early_nlp_registry": "4bed05696cb06d64dfab28735985dcaf0b2b54e4913047b3e4da902bef71befd"
+  },
+  "files_sha256": {
+    "overlay.json": "2c41d29f1313c3c5afc66062fbab01fab82a5f6d713ddd3c5543a77a9a15a89a",
+    "registry.json": "fbe74aefff276896a454e1d8ee4ff01706d1886e9e5cd726e78f83aeac2ff768",
+    "dedup.json": "1d93b4da9083875f70f9f0c8811c63899859ae49a3396b16d109ac5d2cd7b818",
+    "raw/qa-r2/source-verification.json": "8f62b5e5c83e4281b99407630ac425a4a282f51c4d7e0732098c9769894c27bb",
+    "raw/qa-r2/REPORT.zh-CN.txt": "ab32d3bc380316c6354485d0d535715d3b91d1c10d554caa509b199487a3ca4b",
+    "raw/qa-r2/validate_delta.py": "05c8e1891558427b4fb6a409116da859db5843b17590b1411ecd39d256d73288",
+    "raw/qa-r2/SHA256SUMS": "6754233124a62a144474bf89064a85c670eeb080d222f899e452e6b285573ad7",
+    "raw/qa-r2/validation.json": "6754e188e772875302e26727093b53e6c27c75b4fe02e8d202a382e9d7e5ad14",
+    "raw/research-r2/runtime-learning.json": "8cec9ead3e6b021f8f903608370d70d16492d18d70533d9d8c85b070ae059094",
+    "raw/research-r2/schema.json": "4439d18160bfc0b9e468b43692be0baa455d0373055aa064662a79b9f8a25d15",
+    "raw/research-r2/date-evidence.json": "85ee23bde73396d1999ba5bcc9dda4d6d4754dce6dbc0784661874015d9eae0d",
+    "raw/research-r2/reading-ledger.json": "36f6e416a1b1a5b95f8aa8eec559368f821852e3a49b4a9329fe37464a39c9a3",
+    "raw/research-r2/source-checks.json": "b448a9309355123eed38ffeb0ad884a77e7ecb2546bc94bd2a32f9b38059cc89",
+    "raw/research-r2/remediation.json": "39199bb3194f478e5f72773c61d4153d1b98c010fe63b6762ef97d0d9dca3dc5",
+    "raw/research-r2/REPORT.zh-CN.txt": "ba2d7721230a265bb41771ba7f4d273eda19d99e387000f5cf92eea235e37c5d",
+    "raw/research-r2/input-integrity.json": "77d04799339858e2b1cab5e1acd40800a9d8de2c4786b1ac822b0a4c396903d4",
+    "raw/research-r2/validate.py": "9043a4599be04fe64ad7d583668afe966a396f0fc76cc375f4ad07c1aee573ba",
+    "raw/research-r2/source-checks-r1-history.json": "d515695cc3f097e33a06f9fed09a7b9a700fb2a9710408cb77b832dfea32b193",
+    "raw/research-r2/SHA256SUMS": "632ab1507da33b0747057bec419f72f994828146ef8acb9c356033ab2e874bdd",
+    "raw/research-r2/README.zh-CN.md": "8c5c6ae981784b41b84ab175f8434e63ecef29c81921921d58fdcf8398e8fda2",
+    "raw/research-r2/dedup.json": "dfbdad9099d526c67f85911765571c19ee4cca4107e749554dddb58d08300a08",
+    "raw/research-r2/validation.json": "f296da7ee96cb22297c5f50e44561901a18c35d0549d4865b9be989ee1b21006"
+  },
+  "expected_ids": {
+    "nodes": [
+      "irt-sg-lang",
+      "irt-trt-llm",
+      "irt-ort-core",
+      "irt-ov-core"
+    ],
+    "sources": [
+      "irt-src-sg-repo",
+      "irt-src-trt-license",
+      "irt-src-ort-repo",
+      "irt-src-ov-repo",
+      "irt-src-sg-install",
+      "irt-src-sg-quant",
+      "irt-src-trt-support",
+      "irt-src-trt-quick",
+      "irt-src-ort-genai",
+      "irt-src-ort-quant",
+      "irt-src-ort-install",
+      "irt-src-ov-genai",
+      "irt-src-sg-release",
+      "irt-src-trt-release",
+      "irt-src-ort-release",
+      "irt-src-ov-release"
+    ],
+    "events": [],
+    "view_nodes": [
+      "irt-sg-lang",
+      "irt-trt-llm",
+      "irt-ort-core",
+      "irt-ov-core"
+    ]
+  },
+  "expected_object_sha256": {
+    "nodes": {
+      "irt-sg-lang": "655c358c6ab22fe49eaa77d1489133ed538c0f47d1437e21281f8a262f02c196",
+      "irt-trt-llm": "9abd9697effcd4235c960bde8521acc757b8353fb682262602537dd6a5c7f3ca",
+      "irt-ort-core": "488a614a8156626c52b295ed63879824766abfe3fb698fba641741a8f83c6be2",
+      "irt-ov-core": "c1fe4fb4f5bb2adbe60b979b9bab2577a660bccc455a20ec2b5bcd65d899bb82"
+    },
+    "sources": {
+      "irt-src-sg-repo": "fabd8d003da83728c678ee8e905d7af2bb3f2549276caac3b122422bcc5a12fe",
+      "irt-src-trt-license": "c7762db1d2ccb33ba8a576106de4499a8b4fc22749860ae74852e7e859dbfbbd",
+      "irt-src-ort-repo": "97447d30544e5de41d70686cfe029b58e53488c318406d763e68df3d2429d3f1",
+      "irt-src-ov-repo": "495e5d5b6d66ded3d0a49701f5445b9ce0c3046feb53d31ae88f67df480f46a5",
+      "irt-src-sg-install": "a8de752567a18f08597a1677ea50fb04633435cc93f04b1b2053c26882b247fc",
+      "irt-src-sg-quant": "3883e44c1caf14ded289de16fc391daa0366eb64055faa01e4a8cba25e2de25c",
+      "irt-src-trt-support": "b3732ea1c9c5c43d1c461e9cc621494798403a32e8a69d4b459de47761e02708",
+      "irt-src-trt-quick": "136db7353505a679a9327d8d3eafd3ac0738e1198cb05d906c02b65849d0dc9a",
+      "irt-src-ort-genai": "aa01dc2d73a2389957f90816594d8c57ca0682941f7f56b9ec47dbc2ed144cfe",
+      "irt-src-ort-quant": "f9e0b62624665059c76106ad3995d6da2e7f6448484e4c1ff6e286d292c705f2",
+      "irt-src-ort-install": "778ca13819dde0f8dbf50bb8d40711f823917faafd911c97cef08270792c697c",
+      "irt-src-ov-genai": "2709760453e235142a5e6dbf4a9e1f6949ac9494a8212c94e8e26cb3814cca85",
+      "irt-src-sg-release": "2e62317e98ce0ae9729c3f5765e1a850faa45dfd8aaafd1d08f3b798464c6634",
+      "irt-src-trt-release": "52cbcd910bb436810e1271dac08fe629d2df3320c6dcad04f888bf6e84270355",
+      "irt-src-ort-release": "2994420e65d2b7506fca603285fde4e4567b12332761f68465b07ba83cbf95c1",
+      "irt-src-ov-release": "6bb24870509b49490eb62e214ad0f30cba7dc36f1f85521917e68187cdae0a5a"
+    },
+    "events": {},
+    "view_nodes": {
+      "irt-sg-lang": "8c56b0e7069ca14a5d52d9d8b5067068d764a416ecd023f25cf4474821abea6f",
+      "irt-trt-llm": "1a5ae0db13605b76df5be2cd76ff3578d70c947154af9a08f4cae119852c8af0",
+      "irt-ort-core": "c084cacb5734e77468c0529fe8cb74e2704eaf16ce447afa416bed16792eb748",
+      "irt-ov-core": "bf6b5ba873ddac50047a99b7178775061b324396c11840612fdb6a90f6e6486b"
+    }
+  },
+  "expected_counts": {
+    "nodes": 258,
+    "sources": 421,
+    "events": 211,
+    "view_nodes": 258
+  }
+}

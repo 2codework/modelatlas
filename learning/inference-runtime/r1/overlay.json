@@ -1,0 +1,947 @@
+{
+  "nodes": [
+    {
+      "id": "irt-sg-lang",
+      "title": "SGLang",
+      "type": "runtime",
+      "category": "deployment",
+      "is_model": false,
+      "description_zh": "LLM及多模态推理服务框架，不是模型或权重。",
+      "version": "v0.4.6 · historical representative; not latest",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "source_ids": [
+        "irt-src-sg-repo",
+        "irt-src-sg-install",
+        "irt-src-sg-quant",
+        "irt-src-sg-release"
+      ],
+      "first_release": null,
+      "lifecycle": "unknown",
+      "license": "code：Apache-2.0 (repository label)；dependencies：independent licenses; not exhaustively audited；models：separate model/checkpoint license; unknown until selected",
+      "availability": "滚动安装页默认Linux+NVIDIA；AMD/Ascend及其他设备走专用路径，不据此保证Windows/macOS。",
+      "steps_zh": [
+        "先固定release、模型revision和硬件路径。",
+        "阅读官方安装入口，只做依赖清单，不复制latest当固定版本。",
+        "对照量化矩阵读一条离线权重路径与一条在线路径。",
+        "设计单条短prompt和受限输出长度；再计划原精度/量化对照。"
+      ],
+      "misconceptions": [
+        "旧release与当前CUDA/Python要求不能混用。",
+        "attention内核、GEMM内核、权重量化不是同一个选择。",
+        "模型可加载不等于聊天模板正确；OOM不能只由参数量推断。",
+        "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      ],
+      "tutorial_markdown": "### 运行时阅读任务（未执行）\n\n本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。\n\n#### 平台与版本边界\n\ndocumented：滚动安装页默认Linux+NVIDIA；AMD/Ascend及其他设备走专用路径，不据此保证Windows/macOS。；exact_os_matrix：unknown; not opened in this batch\n\n#### 模型、量化与后端\n\nv0.4.6 release提及DeepSeek/Qwen/Llama主流架构与Llama3.2视觉修复；不是所有同名派生模型保证。\n\n区分离线预量化AWQ/GPTQ与在线缩放转换；滚动矩阵区分FP8、AWQ、gptq_marlin等设备路径；不要对预量化权重再次盲设在线量化。\n\nCUDA/ROCm/CANN等设备路径与attention/GEMM内核选择分开；支持取决于版本和设备。\n\ncheckpoint及tokenizer/config是制品；量化方法名不是可互换文件格式。\n\n#### 许可分层\n\ncode：Apache-2.0 (repository label)；dependencies：independent licenses; not exhaustively audited；models：separate model/checkpoint license; unknown until selected\n\n#### 输入输出\n\ninput：受支持checkpoint/tokenizer与文本prompt；多模态另核模型输入协议；output：生成token/text或对应API响应\n\n#### 阅读目标\n\n能说明同一checkpoint的加载、tokenization、prefill/decode、输出终止四阶段，并标出量化所在阶段。\n\n#### 未来验收（本批未做）\n\n未来授权运行时：后端/版本有日志，单请求有可解析响应和终止原因，无NaN/异常；质量另用固定样本对照。此次未达运行验收。\n\n实测最小内存、速度、成本、精度变化均 unknown；无性能排名。\n\n#### 官方阅读入口\n\n- [installation](https://docs.sglang.ai/get_started/install.html)\n\n- [quantization_reading](https://docs.sglang.ai/advanced_features/quantization.html)\n\n#### 来源阅读范围\n\nr2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。\n\n[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)",
+      "inference_runtime": {
+        "id": "irt-sg-lang",
+        "title": "SGLang",
+        "type": "runtime",
+        "category": "deployment",
+        "identity_zh": "LLM及多模态推理服务框架，不是模型或权重。",
+        "is_model": false,
+        "description_zh": "LLM及多模态推理服务框架，不是模型或权重。",
+        "representative_version": "v0.4.6",
+        "version_scope": "historical_release_checked; not latest; rolling documentation separately scoped",
+        "checked_at": "2026-10-29",
+        "verification_status": "primary_sources_reviewed_not_executed",
+        "execution_status": "never-run",
+        "runtime_verified": false,
+        "source_ids": [
+          "irt-src-sg-repo",
+          "irt-src-sg-install",
+          "irt-src-sg-quant",
+          "irt-src-sg-release"
+        ],
+        "first_release_date": null,
+        "representative_release": {
+          "event_type": "github_release_published",
+          "date_iso": null,
+          "visible_partial": "27 Apr 21:47",
+          "date_precision": "month_day_time_no_year",
+          "year": "unknown",
+          "timezone": "unknown",
+          "source_id": "irt-src-sg-release"
+        },
+        "platform_hardware": {
+          "documented": "滚动安装页默认Linux+NVIDIA；AMD/Ascend及其他设备走专用路径，不据此保证Windows/macOS。",
+          "exact_os_matrix": "unknown; not opened in this batch"
+        },
+        "model_compatibility": "v0.4.6 release提及DeepSeek/Qwen/Llama主流架构与Llama3.2视觉修复；不是所有同名派生模型保证。",
+        "quantization": "区分离线预量化AWQ/GPTQ与在线缩放转换；滚动矩阵区分FP8、AWQ、gptq_marlin等设备路径；不要对预量化权重再次盲设在线量化。",
+        "execution_backend": "CUDA/ROCm/CANN等设备路径与attention/GEMM内核选择分开；支持取决于版本和设备。",
+        "weight_artifact": "checkpoint及tokenizer/config是制品；量化方法名不是可互换文件格式。",
+        "license": {
+          "code": "Apache-2.0 (repository label)",
+          "dependencies": "independent licenses; not exhaustively audited",
+          "models": "separate model/checkpoint license; unknown until selected"
+        },
+        "steps_zh": [
+          "先固定release、模型revision和硬件路径。",
+          "阅读官方安装入口，只做依赖清单，不复制latest当固定版本。",
+          "对照量化矩阵读一条离线权重路径与一条在线路径。",
+          "设计单条短prompt和受限输出长度；再计划原精度/量化对照。"
+        ],
+        "pitfalls": [
+          "旧release与当前CUDA/Python要求不能混用。",
+          "attention内核、GEMM内核、权重量化不是同一个选择。",
+          "模型可加载不等于聊天模板正确；OOM不能只由参数量推断。"
+        ],
+        "io_contract": {
+          "input": "受支持checkpoint/tokenizer与文本prompt；多模态另核模型输入协议",
+          "output": "生成token/text或对应API响应"
+        },
+        "success_criteria_zh": "未来授权运行时：后端/版本有日志，单请求有可解析响应和终止原因，无NaN/异常；质量另用固定样本对照。此次未达运行验收。",
+        "learning_links": [
+          {
+            "role": "installation",
+            "url": "https://docs.sglang.ai/get_started/install.html",
+            "source_id": "irt-src-sg-install"
+          },
+          {
+            "role": "quantization_reading",
+            "url": "https://docs.sglang.ai/advanced_features/quantization.html",
+            "source_id": "irt-src-sg-quant"
+          }
+        ],
+        "minimum_sample_reading_goal": "能说明同一checkpoint的加载、tokenization、prefill/decode、输出终止四阶段，并标出量化所在阶段。",
+        "independent_measurements": {
+          "minimum_memory": "unknown",
+          "speed": "unknown",
+          "cost": "unknown",
+          "accuracy_delta": "unknown"
+        },
+        "artifact_pin": {
+          "runtime_commit": "unknown",
+          "weight_revision": "unknown",
+          "weight_sha256": "unknown",
+          "weights_downloaded": false
+        },
+        "compatibility_warning": "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      }
+    },
+    {
+      "id": "irt-trt-llm",
+      "title": "TensorRT-LLM",
+      "type": "runtime",
+      "category": "deployment",
+      "is_model": false,
+      "description_zh": "NVIDIA推理库与服务组件；不是TensorRT本体，也不是ONNX Runtime TensorRT EP或模型。",
+      "version": "v0.18.0 · historical representative; not latest",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "source_ids": [
+        "irt-src-trt-license",
+        "irt-src-trt-support",
+        "irt-src-trt-quick",
+        "irt-src-trt-release"
+      ],
+      "first_release": null,
+      "lifecycle": "unknown",
+      "license": "code：当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。；dependencies：当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。；models：量化checkpoint仍需独立模型许可，不随代码Apache自动授权；scope：source_id：irt-src-trt-license；branch：main；commit：unknown；historical_v0_18_0_license：not reviewed; do not backport current main exception；exception_path：tensorrt_llm/_torch/visual_gen/models/ltx2/；exception_license：LTX-2 Community License Agreement",
+      "availability": "r1 已读矩阵页注明 2025-09-15：Linux x86_64/aarch64，列 Ampere/Ada/Hopper/Grace Hopper/Blackwell；不是当前全版本保证。",
+      "steps_zh": [
+        "读v0.18.0发布说明，先排除Windows旧教程。",
+        "读标有日期的支持矩阵，固定GPU/模型/backend组合。",
+        "读Quick Start的LLM对象、SamplingParams与generate返回对象，不运行。",
+        "再读HTTP请求结构，将服务层与底层引擎区分。"
+      ],
+      "misconceptions": [
+        "把2025矩阵当最新全覆盖。",
+        "把ModelOpt权重与engine混用。",
+        "CUDA/TensorRT版本错配；忽略SBSA bare-metal限制。",
+        "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      ],
+      "tutorial_markdown": "### 运行时阅读任务（未执行）\n\n本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。\n\n#### 平台与版本边界\n\ndocumented：r1 已读矩阵页注明 2025-09-15：Linux x86_64/aarch64，列 Ampere/Ada/Hopper/Grace Hopper/Blackwell；不是当前全版本保证。；not_claimed：macOS support；all NVIDIA GPUs；minimum VRAM；historical_release：source_id：irt-src-trt-release；version：v0.18.0；claim：Windows support deprecated as of v0.18.0; removal announced for future releases；scope：historical release only; not a current-platform determination and unrelated to main LICENSE exception\n\n#### 模型、量化与后端\n\n矩阵将PyTorch与TensorRT backend模型分别列出，如Llama/Qwen与若干VLM；模型架构、模态和精度须联合核查。\n\n矩阵列FP16/BF16/INT8/INT4及部分GPU的FP8，非全模型支持；AWQ/GPTQ配FP8 activation要求SM>=89（该矩阵范围）。\n\nPyTorch backend与TensorRT engine路径分开；不可把名称推断为始终必须预先手工构建engine。\n\nHF checkpoint/ModelOpt量化checkpoint与TensorRT engine不是同一制品；新旧后端构建流程不同。\n\n#### 许可分层\n\ncode：当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。；dependencies：当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。；models：量化checkpoint仍需独立模型许可，不随代码Apache自动授权；scope：source_id：irt-src-trt-license；branch：main；commit：unknown；historical_v0_18_0_license：not reviewed; do not backport current main exception；exception_path：tensorrt_llm/_torch/visual_gen/models/ltx2/；exception_license：LTX-2 Community License Agreement\n\n#### 输入输出\n\ninput：兼容checkpoint及prompt列表/采样配置；或chat messages JSON；output：RequestOutput中的生成文本或chat completion JSON\n\n#### 阅读目标\n\n阅读TinyLlama示例，定位模型标识、采样配置、输出字段；不获取权重，也不把示例输出当本机结果。\n\n#### 未来验收（本批未做）\n\n未来授权后要求版本/后端可追溯，输出文本与finish_reason可检验，实际GPU路径有证据；不预设tokens/s。\n\n实测最小内存、速度、成本、精度变化均 unknown；无性能排名。\n\n#### 官方阅读入口\n\n- [installation_and_call](https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html)\n\n- [compatibility](https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html)\n\n#### 来源阅读范围\n\nr2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。\n\n[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)",
+      "inference_runtime": {
+        "id": "irt-trt-llm",
+        "title": "TensorRT-LLM",
+        "type": "runtime",
+        "category": "deployment",
+        "identity_zh": "NVIDIA推理库与服务组件；不是TensorRT本体，也不是ONNX Runtime TensorRT EP或模型。",
+        "is_model": false,
+        "description_zh": "NVIDIA推理库与服务组件；不是TensorRT本体，也不是ONNX Runtime TensorRT EP或模型。",
+        "representative_version": "v0.18.0",
+        "version_scope": "historical_release_checked; not latest; rolling documentation separately scoped",
+        "checked_at": "2026-10-29",
+        "verification_status": "primary_sources_reviewed_not_executed",
+        "execution_status": "never-run",
+        "runtime_verified": false,
+        "source_ids": [
+          "irt-src-trt-license",
+          "irt-src-trt-support",
+          "irt-src-trt-quick",
+          "irt-src-trt-release"
+        ],
+        "first_release_date": null,
+        "representative_release": {
+          "event_type": "github_release_published",
+          "date_iso": null,
+          "visible_partial": "02 Apr 09:08",
+          "date_precision": "month_day_time_no_year",
+          "year": "unknown",
+          "timezone": "unknown",
+          "source_id": "irt-src-trt-release"
+        },
+        "platform_hardware": {
+          "documented": "r1 已读矩阵页注明 2025-09-15：Linux x86_64/aarch64，列 Ampere/Ada/Hopper/Grace Hopper/Blackwell；不是当前全版本保证。",
+          "not_claimed": [
+            "macOS support",
+            "all NVIDIA GPUs",
+            "minimum VRAM"
+          ],
+          "historical_release": {
+            "source_id": "irt-src-trt-release",
+            "version": "v0.18.0",
+            "claim": "Windows support deprecated as of v0.18.0; removal announced for future releases",
+            "scope": "historical release only; not a current-platform determination and unrelated to main LICENSE exception"
+          }
+        },
+        "model_compatibility": "矩阵将PyTorch与TensorRT backend模型分别列出，如Llama/Qwen与若干VLM；模型架构、模态和精度须联合核查。",
+        "quantization": "矩阵列FP16/BF16/INT8/INT4及部分GPU的FP8，非全模型支持；AWQ/GPTQ配FP8 activation要求SM>=89（该矩阵范围）。",
+        "execution_backend": "PyTorch backend与TensorRT engine路径分开；不可把名称推断为始终必须预先手工构建engine。",
+        "weight_artifact": "HF checkpoint/ModelOpt量化checkpoint与TensorRT engine不是同一制品；新旧后端构建流程不同。",
+        "license": {
+          "code": "当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。",
+          "dependencies": "当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。",
+          "models": "量化checkpoint仍需独立模型许可，不随代码Apache自动授权",
+          "scope": {
+            "source_id": "irt-src-trt-license",
+            "branch": "main",
+            "commit": "unknown",
+            "historical_v0_18_0_license": "not reviewed; do not backport current main exception",
+            "exception_path": "tensorrt_llm/_torch/visual_gen/models/ltx2/",
+            "exception_license": "LTX-2 Community License Agreement"
+          }
+        },
+        "steps_zh": [
+          "读v0.18.0发布说明，先排除Windows旧教程。",
+          "读标有日期的支持矩阵，固定GPU/模型/backend组合。",
+          "读Quick Start的LLM对象、SamplingParams与generate返回对象，不运行。",
+          "再读HTTP请求结构，将服务层与底层引擎区分。"
+        ],
+        "pitfalls": [
+          "把2025矩阵当最新全覆盖。",
+          "把ModelOpt权重与engine混用。",
+          "CUDA/TensorRT版本错配；忽略SBSA bare-metal限制。"
+        ],
+        "io_contract": {
+          "input": "兼容checkpoint及prompt列表/采样配置；或chat messages JSON",
+          "output": "RequestOutput中的生成文本或chat completion JSON"
+        },
+        "success_criteria_zh": "未来授权后要求版本/后端可追溯，输出文本与finish_reason可检验，实际GPU路径有证据；不预设tokens/s。",
+        "learning_links": [
+          {
+            "role": "installation_and_call",
+            "url": "https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html",
+            "source_id": "irt-src-trt-quick"
+          },
+          {
+            "role": "compatibility",
+            "url": "https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html",
+            "source_id": "irt-src-trt-support"
+          }
+        ],
+        "minimum_sample_reading_goal": "阅读TinyLlama示例，定位模型标识、采样配置、输出字段；不获取权重，也不把示例输出当本机结果。",
+        "independent_measurements": {
+          "minimum_memory": "unknown",
+          "speed": "unknown",
+          "cost": "unknown",
+          "accuracy_delta": "unknown"
+        },
+        "artifact_pin": {
+          "runtime_commit": "unknown",
+          "weight_revision": "unknown",
+          "weight_sha256": "unknown",
+          "weights_downloaded": false
+        },
+        "compatibility_warning": "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      }
+    },
+    {
+      "id": "irt-ort-core",
+      "title": "ONNX Runtime（含GenAI分层导读）",
+      "type": "runtime",
+      "category": "deployment",
+      "is_model": false,
+      "description_zh": "跨平台图执行运行时；GenAI是独立生成循环层，提供tokenization、采样和KV管理。不是模型。",
+      "version": "v1.22.0 · historical representative; not latest",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "source_ids": [
+        "irt-src-ort-repo",
+        "irt-src-ort-install",
+        "irt-src-ort-quant",
+        "irt-src-ort-genai",
+        "irt-src-ort-release"
+      ],
+      "first_release": null,
+      "lifecycle": "unknown",
+      "license": "code：ONNX Runtime core MIT (repository label)；dependencies：EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown；models：exported weights retain independent upstream model terms",
+      "availability": "安装入口按OS/语言/硬件/EP选择；有CPU、CUDA、DirectML、QNN及Web/Mobile路径，不是一个wheel覆盖所有目标。",
+      "steps_zh": [
+        "先选CPU或一个明确EP，读官方安装表而不安装。",
+        "画出ONNX图输入输出的name/dtype/shape。",
+        "从量化文档区分校准静态量化与动态量化。",
+        "需要对话才继续读GenAI生成循环，不把InferenceSession单次图调用等同聊天。"
+      ],
+      "misconceptions": [
+        "EP未实际启用却以为在GPU运行；隐式fallback误读。",
+        "opset/输入dtype/动态shape不匹配。",
+        "把INT4算子支持推广到所有模型；量化精度下降未做对照。",
+        "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      ],
+      "tutorial_markdown": "### 运行时阅读任务（未执行）\n\n本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。\n\n#### 平台与版本边界\n\ndocumented：安装入口按OS/语言/硬件/EP选择；有CPU、CUDA、DirectML、QNN及Web/Mobile路径，不是一个wheel覆盖所有目标。；historical_release：v1.22.0 GPU包要求CUDA12.x，Windows最低10.0.19041；非所有EP/未来版本通用要求。；rolling_lifecycle：source_id：irt-src-ort-install；scope：rolling official installation page observed 2026-10-29; not v1.22.0 release note；directml：sustained engineering；python_guidance：new Windows projects: consider WinML；c_cxx_csharp_guidance：new Windows projects: use WinML; page labels WinML recommended for Windows；not_claimed：DirectML removed, unsupported, or automatically equivalent to WinML; no universal migration guarantee\n\n#### 模型、量化与后端\n\n必须可导出兼容ONNX图且opset/算子在所选EP可执行；GenAI另受生成模型配置与支持架构限制。\n\n8bit静态/动态量化，QOperator与QDQ为图表示；INT4/UINT4为限定算子block-wise weight-only，如MatMul常量B，不是全图通用INT4。\n\nExecution Provider负责设备算子执行；TensorRT EP不等于TensorRT-LLM；GenAI提供生成循环而非替换EP。\n\nONNX图及external data/配置与runtime二进制分开；量化图不是原权重无损别名。\n\n#### 许可分层\n\ncode：ONNX Runtime core MIT (repository label)；dependencies：EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown；models：exported weights retain independent upstream model terms\n\n#### 输入输出\n\ninput：core: named tensors matching graph schema; GenAI: model config/tokenizer + prompt/generation settings；output：core: output tensor arrays; GenAI: decoded text/token sequence\n\n#### 阅读目标\n\n能解释为何同一ONNX图在CPU EP可运行不代表CUDA/QNN/GenAI全部可运行；按一个输入张量追踪至输出。\n\n#### 未来验收（本批未做）\n\n未来授权后：记录实际provider、输出shape/dtype和有限数值，比较固定浮点baseline；生成输出可解码不等于质量达标。\n\n实测最小内存、速度、成本、精度变化均 unknown；无性能排名。\n\n#### 官方阅读入口\n\n- [installation](https://onnxruntime.ai/docs/install/)\n\n- [call_layer_reading](https://onnxruntime.ai/docs/genai/)\n\n- [quantization](https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html)\n\n#### 来源阅读范围\n\nr2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。\n\n[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)",
+      "inference_runtime": {
+        "id": "irt-ort-core",
+        "title": "ONNX Runtime（含GenAI分层导读）",
+        "type": "runtime",
+        "category": "deployment",
+        "identity_zh": "跨平台图执行运行时；GenAI是独立生成循环层，提供tokenization、采样和KV管理。不是模型。",
+        "is_model": false,
+        "description_zh": "跨平台图执行运行时；GenAI是独立生成循环层，提供tokenization、采样和KV管理。不是模型。",
+        "representative_version": "v1.22.0",
+        "version_scope": "historical_release_checked; not latest; rolling documentation separately scoped",
+        "checked_at": "2026-10-29",
+        "verification_status": "primary_sources_reviewed_not_executed",
+        "execution_status": "never-run",
+        "runtime_verified": false,
+        "source_ids": [
+          "irt-src-ort-repo",
+          "irt-src-ort-install",
+          "irt-src-ort-quant",
+          "irt-src-ort-genai",
+          "irt-src-ort-release"
+        ],
+        "first_release_date": null,
+        "representative_release": {
+          "event_type": "github_release_published",
+          "date_iso": null,
+          "visible_partial": "10 May 01:14",
+          "date_precision": "month_day_time_no_year",
+          "year": "unknown",
+          "timezone": "unknown",
+          "source_id": "irt-src-ort-release"
+        },
+        "platform_hardware": {
+          "documented": "安装入口按OS/语言/硬件/EP选择；有CPU、CUDA、DirectML、QNN及Web/Mobile路径，不是一个wheel覆盖所有目标。",
+          "historical_release": "v1.22.0 GPU包要求CUDA12.x，Windows最低10.0.19041；非所有EP/未来版本通用要求。",
+          "rolling_lifecycle": {
+            "source_id": "irt-src-ort-install",
+            "scope": "rolling official installation page observed 2026-10-29; not v1.22.0 release note",
+            "directml": "sustained engineering",
+            "python_guidance": "new Windows projects: consider WinML",
+            "c_cxx_csharp_guidance": "new Windows projects: use WinML; page labels WinML recommended for Windows",
+            "not_claimed": "DirectML removed, unsupported, or automatically equivalent to WinML; no universal migration guarantee"
+          }
+        },
+        "model_compatibility": "必须可导出兼容ONNX图且opset/算子在所选EP可执行；GenAI另受生成模型配置与支持架构限制。",
+        "quantization": "8bit静态/动态量化，QOperator与QDQ为图表示；INT4/UINT4为限定算子block-wise weight-only，如MatMul常量B，不是全图通用INT4。",
+        "execution_backend": "Execution Provider负责设备算子执行；TensorRT EP不等于TensorRT-LLM；GenAI提供生成循环而非替换EP。",
+        "weight_artifact": "ONNX图及external data/配置与runtime二进制分开；量化图不是原权重无损别名。",
+        "license": {
+          "code": "ONNX Runtime core MIT (repository label)",
+          "dependencies": "EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown",
+          "models": "exported weights retain independent upstream model terms"
+        },
+        "steps_zh": [
+          "先选CPU或一个明确EP，读官方安装表而不安装。",
+          "画出ONNX图输入输出的name/dtype/shape。",
+          "从量化文档区分校准静态量化与动态量化。",
+          "需要对话才继续读GenAI生成循环，不把InferenceSession单次图调用等同聊天。"
+        ],
+        "pitfalls": [
+          "EP未实际启用却以为在GPU运行；隐式fallback误读。",
+          "opset/输入dtype/动态shape不匹配。",
+          "把INT4算子支持推广到所有模型；量化精度下降未做对照。"
+        ],
+        "io_contract": {
+          "input": "core: named tensors matching graph schema; GenAI: model config/tokenizer + prompt/generation settings",
+          "output": "core: output tensor arrays; GenAI: decoded text/token sequence"
+        },
+        "success_criteria_zh": "未来授权后：记录实际provider、输出shape/dtype和有限数值，比较固定浮点baseline；生成输出可解码不等于质量达标。",
+        "learning_links": [
+          {
+            "role": "installation",
+            "url": "https://onnxruntime.ai/docs/install/",
+            "source_id": "irt-src-ort-install"
+          },
+          {
+            "role": "call_layer_reading",
+            "url": "https://onnxruntime.ai/docs/genai/",
+            "source_id": "irt-src-ort-genai"
+          },
+          {
+            "role": "quantization",
+            "url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+            "source_id": "irt-src-ort-quant"
+          }
+        ],
+        "minimum_sample_reading_goal": "能解释为何同一ONNX图在CPU EP可运行不代表CUDA/QNN/GenAI全部可运行；按一个输入张量追踪至输出。",
+        "independent_measurements": {
+          "minimum_memory": "unknown",
+          "speed": "unknown",
+          "cost": "unknown",
+          "accuracy_delta": "unknown"
+        },
+        "artifact_pin": {
+          "runtime_commit": "unknown",
+          "weight_revision": "unknown",
+          "weight_sha256": "unknown",
+          "weights_downloaded": false
+        },
+        "compatibility_warning": "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      }
+    },
+    {
+      "id": "irt-ov-core",
+      "title": "OpenVINO（含GenAI与Optimum分层导读）",
+      "type": "runtime",
+      "category": "deployment",
+      "is_model": false,
+      "description_zh": "模型转换/优化/推理工具包；GenAI提供管线，Optimum Intel承担集成/导出，两者不等于OpenVINO Runtime本体。",
+      "version": "2025.1.0 · historical representative; not latest",
+      "checked_at": "2026-10-29",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "execution_status": "never-run",
+      "runtime_verified": false,
+      "source_ids": [
+        "irt-src-ov-repo",
+        "irt-src-ov-genai",
+        "irt-src-ov-release"
+      ],
+      "first_release": null,
+      "lifecycle": "unknown",
+      "license": "code：OpenVINO core Apache-2.0; GenAI Apache-2.0；dependencies：Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE；models：转换或INT4压缩不消除原模型许可",
+      "availability": "核心README列CPU x86/ARM、Intel集成/独立GPU、Intel NPU；GenAI示例使用CPU/GPU。",
+      "steps_zh": [
+        "先读core README的convert_model→compile_model→调用链。",
+        "再读GenAI README，画出Optimum导出与LLMPipeline运行的边界。",
+        "把设备写成具体CPU/GPU/NPU型号，核对目标版本系统要求后才考虑安装。",
+        "设计短文本生成与小张量图推理两套验收，不混成一个成功指标。"
+      ],
+      "misconceptions": [
+        "照抄示例trust_remote_code会增加外部代码执行风险，本轮不启用。",
+        "把pip安装成功当设备驱动/模型兼容成功。",
+        "把CPU示例推广成任意NPU兼容；IR目录缺tokenizer/config。",
+        "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      ],
+      "tutorial_markdown": "### 运行时阅读任务（未执行）\n\n本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。\n\n#### 平台与版本边界\n\ndocumented：核心README列CPU x86/ARM、Intel集成/独立GPU、Intel NPU；GenAI示例使用CPU/GPU。；exact_os_versions：unknown; linked system requirements not opened; no generic Windows/macOS guarantee；npu_caveat：Runtime有NPU不等于每条GenAI管线/模型/精度都支持NPU。\n\n#### 模型、量化与后端\n\n转换入口支持多个训练框架，但受算子/形状/设备限制；GenAI只取官方支持管线，不推定任意模型。\n\n已核GenAI Quick Start用Optimum导出INT4权重OpenVINO IR；这是weight compression路径，不等于所有激活/算子INT4。\n\nOpenVINO CPU/GPU/NPU device plugins；GenAI LLMPipeline在其上；Optimum导出在运行之前。\n\nIR模型及其权重/配置/tokenizer与runtime插件分开；转换后制品应另记revision和hash。\n\n#### 许可分层\n\ncode：OpenVINO core Apache-2.0; GenAI Apache-2.0；dependencies：Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE；models：转换或INT4压缩不消除原模型许可\n\n#### 输入输出\n\ninput：core: compatible model/tensors; GenAI LLMPipeline: prepared IR directory + prompt/device；output：core output tensors; GenAI generated text; other pipelines have separate contracts\n\n#### 阅读目标\n\n阅读CPU编译示例和TinyLlama GenAI示例，只指出转换、设备编译、分词与生成的责任层，不运行torch.hub或下载模型。\n\n#### 未来验收（本批未做）\n\n未来授权后：目标device实际编译、输入shape对齐、输出有限；生成管线有可解码文本与停止上限；量化另做质量对照。\n\n实测最小内存、速度、成本、精度变化均 unknown；无性能排名。\n\n#### 官方阅读入口\n\n- [installation_and_core_call](https://github.com/openvinotoolkit/openvino)\n\n- [genai_call_and_export](https://github.com/openvinotoolkit/openvino.genai)\n\n#### 来源阅读范围\n\nr2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。\n\n[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)",
+      "inference_runtime": {
+        "id": "irt-ov-core",
+        "title": "OpenVINO（含GenAI与Optimum分层导读）",
+        "type": "runtime",
+        "category": "deployment",
+        "identity_zh": "模型转换/优化/推理工具包；GenAI提供管线，Optimum Intel承担集成/导出，两者不等于OpenVINO Runtime本体。",
+        "is_model": false,
+        "description_zh": "模型转换/优化/推理工具包；GenAI提供管线，Optimum Intel承担集成/导出，两者不等于OpenVINO Runtime本体。",
+        "representative_version": "2025.1.0",
+        "version_scope": "historical_release_checked; not latest; rolling documentation separately scoped",
+        "checked_at": "2026-10-29",
+        "verification_status": "primary_sources_reviewed_not_executed",
+        "execution_status": "never-run",
+        "runtime_verified": false,
+        "source_ids": [
+          "irt-src-ov-repo",
+          "irt-src-ov-genai",
+          "irt-src-ov-release"
+        ],
+        "first_release_date": null,
+        "representative_release": {
+          "event_type": "github_release_published",
+          "date_iso": null,
+          "visible_partial": "10 Apr 08:57",
+          "date_precision": "month_day_time_no_year",
+          "year": "unknown",
+          "timezone": "unknown",
+          "source_id": "irt-src-ov-release"
+        },
+        "platform_hardware": {
+          "documented": "核心README列CPU x86/ARM、Intel集成/独立GPU、Intel NPU；GenAI示例使用CPU/GPU。",
+          "exact_os_versions": "unknown; linked system requirements not opened; no generic Windows/macOS guarantee",
+          "npu_caveat": "Runtime有NPU不等于每条GenAI管线/模型/精度都支持NPU。"
+        },
+        "model_compatibility": "转换入口支持多个训练框架，但受算子/形状/设备限制；GenAI只取官方支持管线，不推定任意模型。",
+        "quantization": "已核GenAI Quick Start用Optimum导出INT4权重OpenVINO IR；这是weight compression路径，不等于所有激活/算子INT4。",
+        "execution_backend": "OpenVINO CPU/GPU/NPU device plugins；GenAI LLMPipeline在其上；Optimum导出在运行之前。",
+        "weight_artifact": "IR模型及其权重/配置/tokenizer与runtime插件分开；转换后制品应另记revision和hash。",
+        "license": {
+          "code": "OpenVINO core Apache-2.0; GenAI Apache-2.0",
+          "dependencies": "Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE",
+          "models": "转换或INT4压缩不消除原模型许可"
+        },
+        "steps_zh": [
+          "先读core README的convert_model→compile_model→调用链。",
+          "再读GenAI README，画出Optimum导出与LLMPipeline运行的边界。",
+          "把设备写成具体CPU/GPU/NPU型号，核对目标版本系统要求后才考虑安装。",
+          "设计短文本生成与小张量图推理两套验收，不混成一个成功指标。"
+        ],
+        "pitfalls": [
+          "照抄示例trust_remote_code会增加外部代码执行风险，本轮不启用。",
+          "把pip安装成功当设备驱动/模型兼容成功。",
+          "把CPU示例推广成任意NPU兼容；IR目录缺tokenizer/config。"
+        ],
+        "io_contract": {
+          "input": "core: compatible model/tensors; GenAI LLMPipeline: prepared IR directory + prompt/device",
+          "output": "core output tensors; GenAI generated text; other pipelines have separate contracts"
+        },
+        "success_criteria_zh": "未来授权后：目标device实际编译、输入shape对齐、输出有限；生成管线有可解码文本与停止上限；量化另做质量对照。",
+        "learning_links": [
+          {
+            "role": "installation_and_core_call",
+            "url": "https://github.com/openvinotoolkit/openvino",
+            "source_id": "irt-src-ov-repo"
+          },
+          {
+            "role": "genai_call_and_export",
+            "url": "https://github.com/openvinotoolkit/openvino.genai",
+            "source_id": "irt-src-ov-genai"
+          }
+        ],
+        "minimum_sample_reading_goal": "阅读CPU编译示例和TinyLlama GenAI示例，只指出转换、设备编译、分词与生成的责任层，不运行torch.hub或下载模型。",
+        "independent_measurements": {
+          "minimum_memory": "unknown",
+          "speed": "unknown",
+          "cost": "unknown",
+          "accuracy_delta": "unknown"
+        },
+        "artifact_pin": {
+          "runtime_commit": "unknown",
+          "weight_revision": "unknown",
+          "weight_sha256": "unknown",
+          "weights_downloaded": false
+        },
+        "compatibility_warning": "不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "irt-src-sg-repo",
+      "url": "https://github.com/sgl-project/sglang",
+      "title": "官方代码仓库：身份与Apache-2.0",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn327view0",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-sg-repo",
+        "url": "https://github.com/sgl-project/sglang",
+        "title": "官方代码仓库：身份与Apache-2.0",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn327view0",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-trt-license",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE",
+      "title": "官方代码许可：Apache-2.0，列出不同第三方许可证及LTX-2目录例外",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn382view0",
+      "execution_evidence": false,
+      "reading_revision": "r2_reverified",
+      "prior_web_evidence_ref": "turn335view0",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；r2_reverified",
+      "raw_record": {
+        "id": "irt-src-trt-license",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE",
+        "title": "官方代码许可：Apache-2.0，列出不同第三方许可证及LTX-2目录例外",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn382view0",
+        "execution_evidence": false,
+        "reading_revision": "r2_reverified",
+        "prior_web_evidence_ref": "turn335view0"
+      }
+    },
+    {
+      "id": "irt-src-ort-repo",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "title": "官方代码仓库：核心运行时与MIT",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn327view2",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ort-repo",
+        "url": "https://github.com/microsoft/onnxruntime",
+        "title": "官方代码仓库：核心运行时与MIT",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn327view2",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-ov-repo",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "title": "官方代码仓库：硬件类别、转换与调用示例、Apache-2.0",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn333view1",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ov-repo",
+        "url": "https://github.com/openvinotoolkit/openvino",
+        "title": "官方代码仓库：硬件类别、转换与调用示例、Apache-2.0",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn333view1",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-sg-install",
+      "url": "https://docs.sglang.ai/get_started/install.html",
+      "title": "官方滚动安装入口，重定向至docs.sglang.io/docs/get-started/install",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn328view0",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-sg-install",
+        "url": "https://docs.sglang.ai/get_started/install.html",
+        "title": "官方滚动安装入口，重定向至docs.sglang.io/docs/get-started/install",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn328view0",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-sg-quant",
+      "url": "https://docs.sglang.ai/advanced_features/quantization.html",
+      "title": "官方滚动量化矩阵，重定向至docs.sglang.io/docs/advanced_features/quantization",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn332view5",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-sg-quant",
+        "url": "https://docs.sglang.ai/advanced_features/quantization.html",
+        "title": "官方滚动量化矩阵，重定向至docs.sglang.io/docs/advanced_features/quantization",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn332view5",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-trt-support",
+      "url": "https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html",
+      "title": "官方支持矩阵；页尾2025-09-15、commit 0c9430e，不是当前所有版本保证",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn333view2",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-trt-support",
+        "url": "https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html",
+        "title": "官方支持矩阵；页尾2025-09-15、commit 0c9430e，不是当前所有版本保证",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn333view2",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-trt-quick",
+      "url": "https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html",
+      "title": "官方滚动入门，LLM API与服务请求",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn332view3",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-trt-quick",
+        "url": "https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html",
+        "title": "官方滚动入门，LLM API与服务请求",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn332view3",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-ort-genai",
+      "url": "https://onnxruntime.ai/docs/genai/",
+      "title": "官方生成循环API，preview",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn331view1",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ort-genai",
+        "url": "https://onnxruntime.ai/docs/genai/",
+        "title": "官方生成循环API，preview",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn331view1",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-ort-quant",
+      "url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+      "title": "官方QDQ/QOperator与受限算子INT4",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn332view6",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ort-quant",
+        "url": "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html",
+        "title": "官方QDQ/QOperator与受限算子INT4",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn332view6",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-ort-install",
+      "url": "https://onnxruntime.ai/docs/install/",
+      "title": "官方按平台/语言/EP选择安装入口",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn382view1",
+      "execution_evidence": false,
+      "reading_revision": "r2_reverified",
+      "prior_web_evidence_ref": "turn331view3",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；r2_reverified",
+      "raw_record": {
+        "id": "irt-src-ort-install",
+        "url": "https://onnxruntime.ai/docs/install/",
+        "title": "官方按平台/语言/EP选择安装入口",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn382view1",
+        "execution_evidence": false,
+        "reading_revision": "r2_reverified",
+        "prior_web_evidence_ref": "turn331view3"
+      }
+    },
+    {
+      "id": "irt-src-ov-genai",
+      "url": "https://github.com/openvinotoolkit/openvino.genai",
+      "title": "官方GenAI层，Optimum导出与LLMPipeline示例",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn333view0",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ov-genai",
+        "url": "https://github.com/openvinotoolkit/openvino.genai",
+        "title": "官方GenAI层，Optimum导出与LLMPipeline示例",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn333view0",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-sg-release",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.4.6",
+      "title": "代表历史release；非首发非最新版",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn331view4",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-sg-release",
+        "url": "https://github.com/sgl-project/sglang/releases/tag/v0.4.6",
+        "title": "代表历史release；非首发非最新版",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn331view4",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-trt-release",
+      "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0",
+      "title": "代表历史release及Windows弃用",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn381view2",
+      "execution_evidence": false,
+      "reading_revision": "r2_reverified",
+      "prior_web_evidence_ref": "turn330view1",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；r2_reverified",
+      "raw_record": {
+        "id": "irt-src-trt-release",
+        "url": "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0",
+        "title": "代表历史release及Windows弃用",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn381view2",
+        "execution_evidence": false,
+        "reading_revision": "r2_reverified",
+        "prior_web_evidence_ref": "turn330view1"
+      }
+    },
+    {
+      "id": "irt-src-ort-release",
+      "url": "https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0",
+      "title": "代表历史release及CUDA/Windows版本约束",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn330view2",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ort-release",
+        "url": "https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0",
+        "title": "代表历史release及CUDA/Windows版本约束",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn330view2",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    },
+    {
+      "id": "irt-src-ov-release",
+      "url": "https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0",
+      "title": "代表历史release；非首发非最新版",
+      "kind": "official_primary",
+      "checked_at": "2026-10-29",
+      "access_status": "opened_content_read",
+      "web_evidence_ref": "turn330view3",
+      "execution_evidence": false,
+      "reading_revision": "inherited_r1_not_reopened_r2",
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "evidence_scope": "官方文档阅读，非执行证据；inherited_r1_not_reopened_r2",
+      "raw_record": {
+        "id": "irt-src-ov-release",
+        "url": "https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0",
+        "title": "代表历史release；非首发非最新版",
+        "kind": "official_primary",
+        "checked_at": "2026-10-29",
+        "access_status": "opened_content_read",
+        "web_evidence_ref": "turn330view3",
+        "execution_evidence": false,
+        "reading_revision": "inherited_r1_not_reopened_r2"
+      }
+    }
+  ],
+  "events": [],
+  "view_nodes": [
+    {
+      "id": "irt-sg-lang",
+      "lifecycle": "unknown",
+      "vendor": "未核验",
+      "availability": "滚动安装页默认Linux+NVIDIA；AMD/Ascend及其他设备走专用路径，不据此保证Windows/macOS。",
+      "license": "code：Apache-2.0 (repository label)；dependencies：independent licenses; not exhaustively audited；models：separate model/checkpoint license; unknown until selected"
+    },
+    {
+      "id": "irt-trt-llm",
+      "lifecycle": "unknown",
+      "vendor": "未核验",
+      "availability": "r1 已读矩阵页注明 2025-09-15：Linux x86_64/aarch64，列 Ampere/Ada/Hopper/Grace Hopper/Blackwell；不是当前全版本保证。",
+      "license": "code：当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。；dependencies：当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。；models：量化checkpoint仍需独立模型许可，不随代码Apache自动授权；scope：source_id：irt-src-trt-license；branch：main；commit：unknown；historical_v0_18_0_license：not reviewed; do not backport current main exception；exception_path：tensorrt_llm/_torch/visual_gen/models/ltx2/；exception_license：LTX-2 Community License Agreement"
+    },
+    {
+      "id": "irt-ort-core",
+      "lifecycle": "unknown",
+      "vendor": "未核验",
+      "availability": "安装入口按OS/语言/硬件/EP选择；有CPU、CUDA、DirectML、QNN及Web/Mobile路径，不是一个wheel覆盖所有目标。",
+      "license": "code：ONNX Runtime core MIT (repository label)；dependencies：EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown；models：exported weights retain independent upstream model terms"
+    },
+    {
+      "id": "irt-ov-core",
+      "lifecycle": "unknown",
+      "vendor": "未核验",
+      "availability": "核心README列CPU x86/ARM、Intel集成/独立GPU、Intel NPU；GenAI示例使用CPU/GPU。",
+      "license": "code：OpenVINO core Apache-2.0; GenAI Apache-2.0；dependencies：Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE；models：转换或INT4压缩不消除原模型许可"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "events": [
+    {
+      "node_id": "irt-sg-lang",
+      "representative_version": "v0.4.6",
+      "event_type": "github_release_published",
+      "date_iso": null,
+      "visible_partial": "27 Apr 21:47",
+      "date_precision": "month_day_time_no_year",
+      "year": "unknown",
+      "timezone": "unknown",
+      "source_id": "irt-src-sg-release",
+      "first_release_date": null
+    },
+    {
+      "node_id": "irt-trt-llm",
+      "representative_version": "v0.18.0",
+      "event_type": "github_release_published",
+      "date_iso": null,
+      "visible_partial": "02 Apr 09:08",
+      "date_precision": "month_day_time_no_year",
+      "year": "unknown",
+      "timezone": "unknown",
+      "source_id": "irt-src-trt-release",
+      "first_release_date": null
+    },
+    {
+      "node_id": "irt-ort-core",
+      "representative_version": "v1.22.0",
+      "event_type": "github_release_published",
+      "date_iso": null,
+      "visible_partial": "10 May 01:14",
+      "date_precision": "month_day_time_no_year",
+      "year": "unknown",
+      "timezone": "unknown",
+      "source_id": "irt-src-ort-release",
+      "first_release_date": null
+    },
+    {
+      "node_id": "irt-ov-core",
+      "representative_version": "2025.1.0",
+      "event_type": "github_release_published",
+      "date_iso": null,
+      "visible_partial": "10 Apr 08:57",
+      "date_precision": "month_day_time_no_year",
+      "year": "unknown",
+      "timezone": "unknown",
+      "source_id": "irt-src-ov-release",
+      "first_release_date": null
+    }
+  ],
+  "rules_zh": "月日时分原样保留；release标记不证明首发；缺年份和时区不补ISO日期；观察日期不是发布日期。",
+  "documentation_events": [
+    {
+      "source_id": "irt-src-trt-support",
+      "event_type": "documentation_last_updated",
+      "date": "2025-09-15",
+      "commit_short": "0c9430e"
+    }
+  ]
+}

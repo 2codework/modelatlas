@@ -7725,6 +7725,284 @@ HMM用隐藏状态及其概率性观测描述序列；观测序列似然计算�
 - 事件：paper_publication · 1997 · 长短期记忆 LSTM（1997期刊版） · 代表论文发表（非发明日） · 精度 year · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明  书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://people.idsia.ch/~juergen/onlinepub.html, https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/, https://people.idsia.ch/~juergen/lstm1997-2024head.pdf
 - 事件：report_publication · 1995-08 · 长短期记忆 LSTM（1997期刊版） · FKI-207-95 技术报告书目日期 · 精度 month · 时区 未知 · 范围 未核验 · 版本 未核验 · 截至已可用（非首发） 无独立观察 · 说明 Schmidhuber作者onlinepub明确August 1995，JKU确认1995报告；月精度由前者支持。报告书目日期不等于已证明首次公众可得。 书目日期，非first_release证明；不补日级精度。 · 证据 作者/出版社书目；PDF仅已注明的物理页选定区域 · 来源 https://people.idsia.ch/~juergen/onlinepub.html, https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/
 
+## SGLang
+
+LLM及多模态推理服务框架，不是模型或权重。
+
+- ID / 类型：irt-sg-lang / runtime
+- 生命周期：unknown
+- 版本：v0.4.6 · historical representative; not latest
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+### 运行时阅读任务（未执行）
+
+本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。
+
+#### 平台与版本边界
+
+documented：滚动安装页默认Linux+NVIDIA；AMD/Ascend及其他设备走专用路径，不据此保证Windows/macOS。；exact_os_matrix：unknown; not opened in this batch
+
+#### 模型、量化与后端
+
+v0.4.6 release提及DeepSeek/Qwen/Llama主流架构与Llama3.2视觉修复；不是所有同名派生模型保证。
+
+区分离线预量化AWQ/GPTQ与在线缩放转换；滚动矩阵区分FP8、AWQ、gptq_marlin等设备路径；不要对预量化权重再次盲设在线量化。
+
+CUDA/ROCm/CANN等设备路径与attention/GEMM内核选择分开；支持取决于版本和设备。
+
+checkpoint及tokenizer/config是制品；量化方法名不是可互换文件格式。
+
+#### 许可分层
+
+code：Apache-2.0 (repository label)；dependencies：independent licenses; not exhaustively audited；models：separate model/checkpoint license; unknown until selected
+
+#### 输入输出
+
+input：受支持checkpoint/tokenizer与文本prompt；多模态另核模型输入协议；output：生成token/text或对应API响应
+
+#### 阅读目标
+
+能说明同一checkpoint的加载、tokenization、prefill/decode、输出终止四阶段，并标出量化所在阶段。
+
+#### 未来验收（本批未做）
+
+未来授权运行时：后端/版本有日志，单请求有可解析响应和终止原因，无NaN/异常；质量另用固定样本对照。此次未达运行验收。
+
+实测最小内存、速度、成本、精度变化均 unknown；无性能排名。
+
+#### 官方阅读入口
+
+- [installation](https://docs.sglang.ai/get_started/install.html)
+
+- [quantization_reading](https://docs.sglang.ai/advanced_features/quantization.html)
+
+#### 来源阅读范围
+
+r2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。
+
+[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)
+- license：code：Apache-2.0 (repository label)；dependencies：independent licenses; not exhaustively audited；models：separate model/checkpoint license; unknown until selected
+- 学习步骤（未执行）：先固定release、模型revision和硬件路径。
+- 学习步骤（未执行）：阅读官方安装入口，只做依赖清单，不复制latest当固定版本。
+- 学习步骤（未执行）：对照量化矩阵读一条离线权重路径与一条在线路径。
+- 学习步骤（未执行）：设计单条短prompt和受限输出长度；再计划原精度/量化对照。
+- 注意：旧release与当前CUDA/Python要求不能混用。
+- 注意：attention内核、GEMM内核、权重量化不是同一个选择。
+- 注意：模型可加载不等于聊天模板正确；OOM不能只由参数量推断。
+- 注意：不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。
+- 来源：https://github.com/sgl-project/sglang
+- 来源：https://docs.sglang.ai/get_started/install.html
+- 来源：https://docs.sglang.ai/advanced_features/quantization.html
+- 来源：https://github.com/sgl-project/sglang/releases/tag/v0.4.6
+
+## TensorRT-LLM
+
+NVIDIA推理库与服务组件；不是TensorRT本体，也不是ONNX Runtime TensorRT EP或模型。
+
+- ID / 类型：irt-trt-llm / runtime
+- 生命周期：unknown
+- 版本：v0.18.0 · historical representative; not latest
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+### 运行时阅读任务（未执行）
+
+本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。
+
+#### 平台与版本边界
+
+documented：r1 已读矩阵页注明 2025-09-15：Linux x86_64/aarch64，列 Ampere/Ada/Hopper/Grace Hopper/Blackwell；不是当前全版本保证。；not_claimed：macOS support；all NVIDIA GPUs；minimum VRAM；historical_release：source_id：irt-src-trt-release；version：v0.18.0；claim：Windows support deprecated as of v0.18.0; removal announced for future releases；scope：historical release only; not a current-platform determination and unrelated to main LICENSE exception
+
+#### 模型、量化与后端
+
+矩阵将PyTorch与TensorRT backend模型分别列出，如Llama/Qwen与若干VLM；模型架构、模态和精度须联合核查。
+
+矩阵列FP16/BF16/INT8/INT4及部分GPU的FP8，非全模型支持；AWQ/GPTQ配FP8 activation要求SM>=89（该矩阵范围）。
+
+PyTorch backend与TensorRT engine路径分开；不可把名称推断为始终必须预先手工构建engine。
+
+HF checkpoint/ModelOpt量化checkpoint与TensorRT engine不是同一制品；新旧后端构建流程不同。
+
+#### 许可分层
+
+code：当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。；dependencies：当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。；models：量化checkpoint仍需独立模型许可，不随代码Apache自动授权；scope：source_id：irt-src-trt-license；branch：main；commit：unknown；historical_v0_18_0_license：not reviewed; do not backport current main exception；exception_path：tensorrt_llm/_torch/visual_gen/models/ltx2/；exception_license：LTX-2 Community License Agreement
+
+#### 输入输出
+
+input：兼容checkpoint及prompt列表/采样配置；或chat messages JSON；output：RequestOutput中的生成文本或chat completion JSON
+
+#### 阅读目标
+
+阅读TinyLlama示例，定位模型标识、采样配置、输出字段；不获取权重，也不把示例输出当本机结果。
+
+#### 未来验收（本批未做）
+
+未来授权后要求版本/后端可追溯，输出文本与finish_reason可检验，实际GPU路径有证据；不预设tokens/s。
+
+实测最小内存、速度、成本、精度变化均 unknown；无性能排名。
+
+#### 官方阅读入口
+
+- [installation_and_call](https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html)
+
+- [compatibility](https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html)
+
+#### 来源阅读范围
+
+r2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。
+
+[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)
+- license：code：当前 main LICENSE 声明 Apache-2.0，但有文件/目录级例外；这是滚动 main 观察，不是 v0.18.0 许可证结论。；dependencies：当前 main LICENSE 列有不同第三方条款；LTX-2 Community License Agreement 例外仅适用于 tensorrt_llm/_torch/visual_gen/models/ltx2/ 目录代码，不适用于整个仓库。CUDA/TensorRT 等外部依赖另审。；models：量化checkpoint仍需独立模型许可，不随代码Apache自动授权；scope：source_id：irt-src-trt-license；branch：main；commit：unknown；historical_v0_18_0_license：not reviewed; do not backport current main exception；exception_path：tensorrt_llm/_torch/visual_gen/models/ltx2/；exception_license：LTX-2 Community License Agreement
+- 学习步骤（未执行）：读v0.18.0发布说明，先排除Windows旧教程。
+- 学习步骤（未执行）：读标有日期的支持矩阵，固定GPU/模型/backend组合。
+- 学习步骤（未执行）：读Quick Start的LLM对象、SamplingParams与generate返回对象，不运行。
+- 学习步骤（未执行）：再读HTTP请求结构，将服务层与底层引擎区分。
+- 注意：把2025矩阵当最新全覆盖。
+- 注意：把ModelOpt权重与engine混用。
+- 注意：CUDA/TensorRT版本错配；忽略SBSA bare-metal限制。
+- 注意：不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。
+- 来源：https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE
+- 来源：https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html
+- 来源：https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html
+- 来源：https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0
+
+## ONNX Runtime（含GenAI分层导读）
+
+跨平台图执行运行时；GenAI是独立生成循环层，提供tokenization、采样和KV管理。不是模型。
+
+- ID / 类型：irt-ort-core / runtime
+- 生命周期：unknown
+- 版本：v1.22.0 · historical representative; not latest
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+### 运行时阅读任务（未执行）
+
+本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。
+
+#### 平台与版本边界
+
+documented：安装入口按OS/语言/硬件/EP选择；有CPU、CUDA、DirectML、QNN及Web/Mobile路径，不是一个wheel覆盖所有目标。；historical_release：v1.22.0 GPU包要求CUDA12.x，Windows最低10.0.19041；非所有EP/未来版本通用要求。；rolling_lifecycle：source_id：irt-src-ort-install；scope：rolling official installation page observed 2026-10-29; not v1.22.0 release note；directml：sustained engineering；python_guidance：new Windows projects: consider WinML；c_cxx_csharp_guidance：new Windows projects: use WinML; page labels WinML recommended for Windows；not_claimed：DirectML removed, unsupported, or automatically equivalent to WinML; no universal migration guarantee
+
+#### 模型、量化与后端
+
+必须可导出兼容ONNX图且opset/算子在所选EP可执行；GenAI另受生成模型配置与支持架构限制。
+
+8bit静态/动态量化，QOperator与QDQ为图表示；INT4/UINT4为限定算子block-wise weight-only，如MatMul常量B，不是全图通用INT4。
+
+Execution Provider负责设备算子执行；TensorRT EP不等于TensorRT-LLM；GenAI提供生成循环而非替换EP。
+
+ONNX图及external data/配置与runtime二进制分开；量化图不是原权重无损别名。
+
+#### 许可分层
+
+code：ONNX Runtime core MIT (repository label)；dependencies：EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown；models：exported weights retain independent upstream model terms
+
+#### 输入输出
+
+input：core: named tensors matching graph schema; GenAI: model config/tokenizer + prompt/generation settings；output：core: output tensor arrays; GenAI: decoded text/token sequence
+
+#### 阅读目标
+
+能解释为何同一ONNX图在CPU EP可运行不代表CUDA/QNN/GenAI全部可运行；按一个输入张量追踪至输出。
+
+#### 未来验收（本批未做）
+
+未来授权后：记录实际provider、输出shape/dtype和有限数值，比较固定浮点baseline；生成输出可解码不等于质量达标。
+
+实测最小内存、速度、成本、精度变化均 unknown；无性能排名。
+
+#### 官方阅读入口
+
+- [installation](https://onnxruntime.ai/docs/install/)
+
+- [call_layer_reading](https://onnxruntime.ai/docs/genai/)
+
+- [quantization](https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html)
+
+#### 来源阅读范围
+
+r2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。
+
+[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)
+- license：code：ONNX Runtime core MIT (repository label)；dependencies：EP SDK及GenAI包许可分别核验；本轮未打开GenAI LICENSE，unknown；models：exported weights retain independent upstream model terms
+- 学习步骤（未执行）：先选CPU或一个明确EP，读官方安装表而不安装。
+- 学习步骤（未执行）：画出ONNX图输入输出的name/dtype/shape。
+- 学习步骤（未执行）：从量化文档区分校准静态量化与动态量化。
+- 学习步骤（未执行）：需要对话才继续读GenAI生成循环，不把InferenceSession单次图调用等同聊天。
+- 注意：EP未实际启用却以为在GPU运行；隐式fallback误读。
+- 注意：opset/输入dtype/动态shape不匹配。
+- 注意：把INT4算子支持推广到所有模型；量化精度下降未做对照。
+- 注意：不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。
+- 来源：https://github.com/microsoft/onnxruntime
+- 来源：https://onnxruntime.ai/docs/install/
+- 来源：https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html
+- 来源：https://onnxruntime.ai/docs/genai/
+- 来源：https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0
+
+## OpenVINO（含GenAI与Optimum分层导读）
+
+模型转换/优化/推理工具包；GenAI提供管线，Optimum Intel承担集成/导出，两者不等于OpenVINO Runtime本体。
+
+- ID / 类型：irt-ov-core / runtime
+- 生命周期：unknown
+- 版本：2025.1.0 · historical representative; not latest
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+### 运行时阅读任务（未执行）
+
+本条是非模型运行时家族；版本仅作历史代表，不代表最新版。首次发布与完整版本日期均未知。
+
+#### 平台与版本边界
+
+documented：核心README列CPU x86/ARM、Intel集成/独立GPU、Intel NPU；GenAI示例使用CPU/GPU。；exact_os_versions：unknown; linked system requirements not opened; no generic Windows/macOS guarantee；npu_caveat：Runtime有NPU不等于每条GenAI管线/模型/精度都支持NPU。
+
+#### 模型、量化与后端
+
+转换入口支持多个训练框架，但受算子/形状/设备限制；GenAI只取官方支持管线，不推定任意模型。
+
+已核GenAI Quick Start用Optimum导出INT4权重OpenVINO IR；这是weight compression路径，不等于所有激活/算子INT4。
+
+OpenVINO CPU/GPU/NPU device plugins；GenAI LLMPipeline在其上；Optimum导出在运行之前。
+
+IR模型及其权重/配置/tokenizer与runtime插件分开；转换后制品应另记revision和hash。
+
+#### 许可分层
+
+code：OpenVINO core Apache-2.0; GenAI Apache-2.0；dependencies：Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE；models：转换或INT4压缩不消除原模型许可
+
+#### 输入输出
+
+input：core: compatible model/tensors; GenAI LLMPipeline: prepared IR directory + prompt/device；output：core output tensors; GenAI generated text; other pipelines have separate contracts
+
+#### 阅读目标
+
+阅读CPU编译示例和TinyLlama GenAI示例，只指出转换、设备编译、分词与生成的责任层，不运行torch.hub或下载模型。
+
+#### 未来验收（本批未做）
+
+未来授权后：目标device实际编译、输入shape对齐、输出有限；生成管线有可解码文本与停止上限；量化另做质量对照。
+
+实测最小内存、速度、成本、精度变化均 unknown；无性能排名。
+
+#### 官方阅读入口
+
+- [installation_and_core_call](https://github.com/openvinotoolkit/openvino)
+
+- [genai_call_and_export](https://github.com/openvinotoolkit/openvino.genai)
+
+#### 来源阅读范围
+
+r2 仅3页定向重读，13页继承 r1；不是16页再次打开。未打开的下级页、许可证与平台矩阵不补作已核验。
+
+[完整学习页与来源边界](https://2codework.github.io/modelatlas/INFERENCE_RUNTIME.md)
+- license：code：OpenVINO core Apache-2.0; GenAI Apache-2.0；dependencies：Optimum Intel及tokenizers/驱动依赖条款另审；本轮未核Optimum独立LICENSE；models：转换或INT4压缩不消除原模型许可
+- 学习步骤（未执行）：先读core README的convert_model→compile_model→调用链。
+- 学习步骤（未执行）：再读GenAI README，画出Optimum导出与LLMPipeline运行的边界。
+- 学习步骤（未执行）：把设备写成具体CPU/GPU/NPU型号，核对目标版本系统要求后才考虑安装。
+- 学习步骤（未执行）：设计短文本生成与小张量图推理两套验收，不混成一个成功指标。
+- 注意：照抄示例trust_remote_code会增加外部代码执行风险，本轮不启用。
+- 注意：把pip安装成功当设备驱动/模型兼容成功。
+- 注意：把CPU示例推广成任意NPU兼容；IR目录缺tokenizer/config。
+- 注意：不能把一个模型/算子/量化/硬件组合的官方支持扩展到全部组合；未实测。
+- 来源：https://github.com/openvinotoolkit/openvino
+- 来源：https://github.com/openvinotoolkit/openvino.genai
+- 来源：https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -8492,6 +8770,22 @@ creative-indesign → design-c2pa
 - early-nlp-src-crf-lafferty-list · https://www.cs.cmu.edu/afs/cs/usr/lafferty/www/publications.html · 核验 2026-10-29 · 2001段确认题名、John Lafferty / Andrew McCallum / Fernando Pereira、ICML 2001。
 - early-nlp-src-lstm-schmidhuber-list · https://people.idsia.ch/~juergen/onlinepub.html · 核验 2026-10-29 · ["1997 journal bibliographic identity, two authors, volume 9(8), pages 1735–1780", "Separate FKI-207-95 technical report dated August 1995"]
 - early-nlp-src-lstm-jku-list · https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/ · 核验 2026-10-29 · ["1997 journal identity, two authors, volume and pages", "1995 FKI-207-95 report"]
+- irt-src-sg-repo · https://github.com/sgl-project/sglang · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-trt-license · https://github.com/NVIDIA/TensorRT-LLM/blob/main/LICENSE · 核验 2026-10-29 · 官方文档阅读，非执行证据；r2_reverified
+- irt-src-ort-repo · https://github.com/microsoft/onnxruntime · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-ov-repo · https://github.com/openvinotoolkit/openvino · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-sg-install · https://docs.sglang.ai/get_started/install.html · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-sg-quant · https://docs.sglang.ai/advanced_features/quantization.html · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-trt-support · https://nvidia.github.io/TensorRT-LLM/reference/support-matrix.html · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-trt-quick · https://nvidia.github.io/TensorRT-LLM/quick-start-guide.html · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-ort-genai · https://onnxruntime.ai/docs/genai/ · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-ort-quant · https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-ort-install · https://onnxruntime.ai/docs/install/ · 核验 2026-10-29 · 官方文档阅读，非执行证据；r2_reverified
+- irt-src-ov-genai · https://github.com/openvinotoolkit/openvino.genai · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-sg-release · https://github.com/sgl-project/sglang/releases/tag/v0.4.6 · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-trt-release · https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v0.18.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；r2_reverified
+- irt-src-ort-release · https://github.com/microsoft/onnxruntime/releases/tag/v1.22.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
+- irt-src-ov-release · https://github.com/openvinotoolkit/openvino/releases/tag/2025.1.0 · 核验 2026-10-29 · 官方文档阅读，非执行证据；inherited_r1_not_reopened_r2
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果
