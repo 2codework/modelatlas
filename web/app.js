@@ -27,10 +27,16 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  function renderEdgeRecord(root,n){
   const record=C.projectEdgeRecord(n);if(!record)return;
   const box=section(root,'端侧模型 · 怎么看这份模型记录');box.className='edge-record-reader';
-  box.append(el('p','先确认精确身份和输入输出，再看参数分母、许可、运行条件。官方自报不等于独立实测；unknown 保持未知。这里只读来源，未下载或运行模型。','edge-reading-guide'));
-  for(const [index,group] of record.groups.entries()){
-   const part=el(index===0?'div':'details');if(index>0)part.append(el('summary',group.title));
-   const dl=el('dl');for(const row of group.rows){const dd=el('dd',row.text);if(typeof row.original==='string'&&row.text!==row.original)dd.append(el('small','原文：'+row.original,'edge-original'));dl.append(el('dt',row.label),dd);}part.append(dl);box.append(part);
+  box.append(el('p','先看身份与输入输出，再按需展开。官方自报≠独立实测；unknown 保持未知。本页未下载或运行模型。','edge-reading-guide'));
+  const identity=record.groups[0],value=path=>identity.rows.find(row=>row.path===path)?.text||'未知／未登记',modalities=key=>identity.rows.filter(row=>row.path===key||row.path.startsWith(key+'.')).map(row=>row.text).join('、')||'未知／未登记';
+  const overview=el('div',undefined,'edge-record-overview');overview.append(el('p',value('organization')+' · '+value('exact_id')),el('p','输入：'+modalities('inputs')+' → 输出：'+modalities('outputs')));box.append(overview);
+  const shortcuts=el('nav',undefined,'edge-record-shortcuts');shortcuts.setAttribute('aria-label','本条模型记录快捷阅读');box.append(shortcuts);
+  const groups=[...record.groups.slice(1),identity];
+  function readableValue(row){const v=row.original;if(row.path.startsWith('parameters.')&&Number.isSafeInteger(v)&&v>=1000000&&v%1000000===0){const divisor=v>=1000000000?1000000000:1000000;return String(v/divisor)+(divisor===1000000000?'B':'M')+'（原值：'+v+'）';}return row.text;}
+  for(const [index,group] of groups.entries()){
+   const part=el('details'),summary=el('summary',group===identity?'完整身份与原文':group.title);part.append(summary);
+   const dl=el('dl');for(const row of group.rows){const dd=el('dd',readableValue(row));if(typeof row.original==='string'&&row.text!==row.original)dd.append(el('small','原文：'+row.original,'edge-original'));dl.append(el('dt',row.label),dd);}part.append(dl);box.append(part);
+   if(index<4){const labels=['参数','许可','运行与量化','官方测量'];shortcuts.append(button(labels[index],()=>{part.open=true;summary.focus?.({preventScroll:true});part.scrollIntoView({behavior:'auto',block:'nearest'});}));}
   }
   const provenance=el('details');provenance.append(el('summary','已核验来源链接与阅读范围'));
   const verified=record.source_ids.filter(id=>sources.has(id)&&sources.get(id).verification_status==='primary_source_opened');sourceList(provenance,{source_ids:verified});
@@ -80,7 +86,7 @@ function pinnedDataURL(){const url=document.documentElement?.getAttribute('data-
  }
  function choose(id,scroll=false,historyMode='push'){if(!nodes.has(id))return;selected=id;const n=nodes.get(id),v=views.get(id),root=$('detail');root.replaceChildren();root.append(el('h3',n.title));const tags=el('div',undefined,'tags');for(const [value,kind] of [[n.type,'type'],[n.category,'category'],[n.verification_status,'evidence']])tags.append(el('span',C.displayLabel(value,kind),'tag'));root.append(tags,el('p',n.description_zh||n.summary_zh));if(n.edge_multimodal)renderEdgeRecord(root,n);if(n.prerequisites?.length){const box=section(root,'先修知识 · 编辑建议');box.className='prerequisite-strip';box.append(el('p','不熟悉这些概念？先打开阅读。已读不等于掌握；本条不是无先修入门课。'));for(const i of n.prerequisites)if(nodes.has(i))box.append(button(nodes.get(i).title,()=>choose(i)));}else root.append(el('p','本条未登记先修要求；内容是知识介绍，不代表完整课程。','muted'));const dl=el('dl');
  const fields={'版本 / 快照':n.version,'最后核验':n.checked_at,'机构':v.vendor,'可获得性':v.availability,'许可证':n.license||n.license_notes||v.license,'费用与预算':n.cost||n.cost_notes,'生命周期':v.lifecycle||'unknown','适用版本':n.lifecycle?.applicable_version||n.applicable_versions||n.version,'输入模态':n.input_modalities,'输出模态':n.output_modalities};
- for(const [k,value] of Object.entries(fields)){dl.append(el('dt',k),el('dd',display(value)));}root.append(dl);
+ for(const [k,value] of Object.entries(fields)){dl.append(el('dt',k),el('dd',display(value)));}if(n.edge_multimodal){const metadata=el('details');metadata.className='edge-legacy-metadata';metadata.append(el('summary','版本、核验时间与其他元数据'),dl);root.append(metadata);}else root.append(dl);
  if(n.realtime_audio){const m=n.realtime_audio,box=section(root,'实时语音模型 · 版本与未执行边界');for(const [key,label] of [['runtime_zh','运行与硬件'],['account_cost_zh','账号与费用'],['latency_zh','延迟口径'],['streaming','流式条件'],['version_records','各版本价格与生命周期'],['reviewed_variants','已核变体'],['current_2_1_release_date','2.1发布日期'],['weights_first_upload_date','权重首次上传日期']])if(Object.hasOwn(m,key))box.append(el('h5',label),el('pre',display(m[key])));const a=el('a','完整语音学习页 · 许可、未知与官方入口');a.href='realtime-audio.html#'+encodeURIComponent(n.id);box.append(a);box.append(el('p','模型未运行；GPT家族无统一弃用态，旧ID的计划停用不能继承到2.1。'));}
  if(n.tutorial_markdown){root.append(markdownDOM(n.tutorial_markdown));const a=link('https://2codework.github.io/modelatlas/mcp-offline-labs.zip','下载原创离线课程包（ZIP；不自动执行）');a.href='mcp-offline-labs.zip';a.removeAttribute('target');a.download='mcp-offline-labs.zip';root.append(a);}
  if(D.creative_learning_registry?.node_to_cases?.[id]){const box=section(root,'创意学习 · 未执行练习');for(const cid of D.creative_learning_registry.node_to_cases[id]){const c=D.creative_learning_registry.cases.find(x=>x.id===cid);if(c){const a=el('a',c.title+'（documentation-only / never-run）');a.href='creative-learning.html#'+encodeURIComponent(cid);box.append(a);}}}

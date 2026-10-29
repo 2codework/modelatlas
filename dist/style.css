@@ -64,3 +64,13 @@ pre { max-width:100%; overflow-x:auto; white-space:pre; padding:1rem; line-heigh
 .edge-original{display:block;color:var(--muted,#526174);font-size:14px;line-height:1.5;margin-top:4px}
 .edge-reading-guide{border-left:3px solid #397a73;padding-left:12px}
 @media(max-width:600px){.edge-record-reader dl{display:block}.edge-record-reader dt{margin-top:12px}.edge-record-reader dd{margin-left:0}.edge-record-reader{width:100%}}
+
+/* Compact edge overview; full originals stay in native keyboard disclosures. */
+.edge-record-reader .edge-reading-guide{margin:8px 0;font-size:16px}
+.edge-record-overview{padding:8px 12px;background:var(--panel,#f2f4ee);border-radius:6px}
+.edge-record-overview p{margin:2px 0;line-height:1.45;overflow-wrap:anywhere}
+.edge-record-shortcuts{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.edge-record-shortcuts button{font-size:16px;padding:6px 12px;min-height:40px}
+.edge-record-reader details{margin:0;padding:9px 0}
+.edge-record-reader summary:focus-visible,.edge-record-shortcuts button:focus-visible{outline:3px solid #397a73;outline-offset:3px}
+.edge-legacy-metadata{margin:12px 0;font-size:16px}
