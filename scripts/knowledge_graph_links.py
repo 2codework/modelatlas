@@ -55,10 +55,60 @@ def apply(data,root):
  return data
 
 def book(data):
- app=data.get('knowledge_graph_links_application')
- if not app:return []
+ from pathlib import Path
+ def book_edges(data):
+  """Select this admitted stage only; not an admission gate for later graph stages."""
+  app=data.get('knowledge_graph_links_application')
+  if app is None:
+   need(not any(e.get('admission_id')=='knowledge-graph-links-r1' for e in data['edges']),'book missing application')
+   return []
+  a,raw=load(Path(__file__).resolve().parents[1])
+  need(isinstance(app,dict) and app.get('admission_sha256')==ADMISSION_SHA,'book application binding')
+  for key in ('qa_sha256','research_manifest_sha256','baseline_commit'):
+   need(app.get(key)==a[key],'book application identity binding: '+key)
+  need(app.get('schema_version')=='knowledge-graph-links.application.r1' and
+       app.get('status')=='applied_to_local_derived_graph_only' and
+       app.get('raw_candidate_status')=='candidate_only_not_applied','book application identity/status')
+  referenced={sid for candidate in raw['edges'] for sid in candidate['source_ids']}
+  source_objects={}
+  for source in data['sources']:
+   sid=source.get('id')
+   if sid not in referenced:continue
+   need(sid not in source_objects,'book duplicate referenced source: '+sid)
+   need(object_sha(source)==a['source_object_sha256'][sid],'book referenced source content mismatch: '+sid)
+   source_objects[sid]=source
+  need(set(source_objects)==referenced,'book missing referenced source')
+  records=app.get('records');ids=a['accepted_candidate_ids']
+  need(isinstance(records,list) and len(records)==len(ids) and
+       all(isinstance(r,dict) for r in records),'book application records')
+  need([r.get('candidate_id') for r in records]==ids,'book candidate identity/order')
+  selected={}
+  for e in data['edges']:
+   eid=e.get('id')
+   if eid not in ids:
+    need(e.get('admission_id')!='knowledge-graph-links-r1','book unregistered stage edge')
+    continue
+   need(eid not in selected,'book duplicate stage edge: '+eid)
+   need(e.get('admission_id')=='knowledge-graph-links-r1','book stage binding: '+eid)
+   selected[eid]=e
+  need(set(selected)==set(ids),'book missing stage edge')
+  for record,candidate in zip(records,raw['edges']):
+   eid=record['candidate_id'];e=selected[eid]
+   need(candidate['id']==eid and record.get('candidate_object_sha256')==object_sha(candidate),'book candidate hash binding: '+eid)
+   need(record.get('source_ids')==e.get('source_ids') and
+        record.get('source_object_sha256')=={sid:a['source_object_sha256'][sid] for sid in candidate['source_ids']},'book source binding: '+eid)
+   need(e.get('application_status')==record.get('application_status')=='accepted_into_derived_graph_not_product_execution' and
+        e.get('candidate_status_at_research')=='candidate_only_not_applied','book application status: '+eid)
+   original=copy.deepcopy(e)
+   for key in ('application_status','candidate_status_at_research','admission_id'):original.pop(key)
+   need('integration_status' not in original,'book raw status overwritten: '+eid)
+   original['integration_status']='candidate_only_not_applied'
+   need(object_sha(original)==record['candidate_object_sha256'],'book candidate content mismatch: '+eid)
+  return [selected[eid] for eid in ids]
+ edges=book_edges(data)
+ if not edges:return []
  lines=['','## 新增12条知识关联 · 接纳状态与阅读边界','1条官方文档迁移目标、11条编辑学习对照。迁移目标不表示迁移已完成、旧服务已关闭或功能完全等价；编辑箭头仅为阅读对照，不是厂商整合、模型派生或权限继承。','接纳到本地构建关系不代表产品运行或网站部署。原始研究candidate_only_not_applied保留原状，派生应用索引单独记录候选ID及来源对象哈希。','只统计D.edges内部图：139→151边，89→72孤立，120→108弱连通分量。排除practice registry、AgentWork跨站、来源与网页导航链接；孤立不等于网页无链接。']
- for e in data['edges'][-12:]:
+ for e in edges:
   lines+=['','### '+e['id']+' · '+('官方文档迁移关系（非运行核验）' if e['type']=='documented_migration_target' else '编辑学习对照（非厂商集成）'),e['source']+' → '+e['target'],e['explanation_zh'],'- 方向：'+e['direction_semantics'],'- 未知边界：'+e['unknown_boundary_zh']]
   for ev in e['official_evidence']:lines+=['- 来源 '+ev['source_id']+'：'+ev['url']+' · '+ev['locator']]
  return lines

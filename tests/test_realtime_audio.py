@@ -79,8 +79,10 @@ class AudioProductionAdmission(unittest.TestCase):
   sys.path.insert(0,str(ROOT/'scripts'))
   import realtime_audio
   cls.A=realtime_audio
- def test_old_production_admission_original_bytes(self):
-  self.assertEqual(hashlib.sha256((ROOT/'scripts/knowledge_graph_links.py').read_bytes()).hexdigest(),'b877d7655593471edf54db2341962f783cc4b1b971a6ab3b6a15e724f50e8cab')
+ def test_production_admission_book_only_compatibility_exception(self):
+  # Historical full SHA + approved full SHA + byte-exact nonbook source.
+  from relation_book_contract import validate
+  validate()
  def test_production_matches_independent_closed_contract(self):
   d=baseline();self.A.apply(d,ROOT);validate(d)
  def test_admission_hash(self):

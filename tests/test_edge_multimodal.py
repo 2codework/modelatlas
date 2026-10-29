@@ -53,7 +53,10 @@ class EdgeAdmission(unittest.TestCase):
  def test_baseline_fixture_bytes(self):
   self.assertEqual(hashlib.sha256((ROOT/'tests/fixtures/edge-multimodal-baseline.json').read_bytes()).hexdigest(),'2d55feb50ce42852031a03a1992d41a1cf37b237008bf4bdcc1b70582e856cc2')
  def test_docs_dist_bytes(self):self.assertEqual((ROOT/'docs/data.json').read_bytes(),(ROOT/'dist/data.json').read_bytes())
- def test_immutable_old_adapter(self):self.assertEqual(hashlib.sha256((ROOT/'scripts/knowledge_graph_links.py').read_bytes()).hexdigest(),'b877d7655593471edf54db2341962f783cc4b1b971a6ab3b6a15e724f50e8cab')
+ def test_approved_book_only_adapter_exception(self):
+  # Original source remains pinned; only the separately pinned book helper may differ.
+  from relation_book_contract import validate
+  validate()
  def test_production_exact(self):validate(E.apply(baseline(),ROOT))
  def test_production_repeated(self):
   with self.assertRaisesRegex(ValueError,'baseline fields'):E.apply(copy.deepcopy(self.live),ROOT)
