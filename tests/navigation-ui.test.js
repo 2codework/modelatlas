@@ -150,3 +150,27 @@ test('untrusted music-like IDs never select the optional link or create HTML',as
  const h=await boot('https://example.test/modelatlas/?node='+encodeURIComponent('music-lyria<img src=x onerror=alert(1)>'));
  const nodes=descendants(h.ids.get('detail'));assert.equal(nodes.filter(n=>n.attrs?.['data-optional-practice']).length,0);assert.equal(nodes.filter(n=>['img','script','iframe'].includes(n.tag)).length,0);
 });
+
+test('Underlord has exactly one fixed safe optional video practice link with accurate boundaries',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=creative-underlord'),nodes=descendants(h.ids.get('detail'));
+ const blocks=nodes.filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut');assert.equal(blocks.length,1);
+ const text=descendants(blocks[0]).map(n=>n.textContent||'').join(' '),links=descendants(blocks[0]).filter(n=>n.tag==='a');assert.equal(links.length,1);
+ assert.equal(links[0].href,'https://2codework.github.io/agentwork/index.html?q=%E8%A7%86%E9%A2%91');assert.equal(links[0].target,'_blank');assert.equal(links[0].rel,'noopener noreferrer');
+ for(const term of ['应用内剪辑 Agent','不是基础模型','90 秒英文合成输入','不是真人影片','未在产品实跑','没有已完成的 45 秒输出','听觉验收仍待实际试听','先试听','三条事实','第 1 步','账号','费用','恢复范围','实际授权'])assert.ok(text.includes(term),term);
+ assert.equal(descendants(blocks[0]).filter(n=>['script','iframe','audio','video','input','button'].includes(n.tag)).length,0);assert.equal(h.stored.size,0);
+ assert.equal(title(h,'node'),nodeTitle('creative-underlord'));
+});
+test('video pointer does not duplicate across history and leaves other nodes and default entry alone',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=creative-underlord');
+ const count=()=>descendants(h.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut').length;
+ for(let i=0;i<2;i++){h.hash('transformer');assert.equal(count(),0);h.back();assert.equal(count(),1);h.forward();assert.equal(count(),0);h.back();assert.equal(count(),1);}
+ const music=await boot('https://example.test/modelatlas/?node=music-lyria');assert.equal(descendants(music.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut').length,0);
+ const home=await boot('https://example.test/modelatlas/',false,true);assert.equal(home.ids.get('nav-start').attrs['aria-current'],'page');assert.equal(descendants(home.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut').length,0);
+});
+test('similar or hostile Underlord IDs never activate the optional video link or HTML',async()=>{
+ for(const id of ['creative-underlord-extra','Creative-underlord','creative-underlord ','creative-underlord<img src=x onerror=evil>','__proto__']){
+  const h=await boot('https://example.test/modelatlas/?node='+encodeURIComponent(id)),nodes=descendants(h.ids.get('detail'));
+  assert.equal(nodes.filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut').length,0,id);
+  assert.equal(nodes.filter(n=>['img','script','iframe'].includes(n.tag)).length,0,id);
+ }
+});
