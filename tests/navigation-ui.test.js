@@ -130,3 +130,23 @@ test('each learning path exposes unfulfilled ordering prerequisites without muta
 test('actual entry plus async app initialization and Back/Forward keep home current, never the library',async()=>{const h=await boot('https://example.test/modelatlas/',false,true);const home=()=>{assert.equal(h.ids.get('nav-start').attrs['aria-current'],'page');assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'false');assert.equal(h.ids.get('start-here').hidden,false);};home();h.ids.get('nav-explore').events.click({preventDefault(){}});assert.equal(h.ids.get('nav-start').attrs['aria-current'],'false');assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'true');assert.equal(h.ids.get('start-here').hidden,true);h.back();home();h.forward();assert.equal(h.ids.get('nav-explore').attrs['aria-current'],'true');h.back();home();});
 
 test('library overview does not misrepresent the data snapshot date as whole-site verification',async()=>{const h=await boot();const label=h.ids.get('stats').textContent;assert.match(label,/各条核验范围与日期见详情/);assert.ok(label.includes(String(data.nodes.length)));assert.ok(label.includes(String(data.sources.length)));assert.ok(!label.includes('核验 '+data.checked_at));assert.ok(!label.includes(data.checked_at));});
+
+// One optional editorial cross-site pointer; no vendor or historical record mutation.
+function descendants(n){return [n,...(n.children||[]).flatMap(descendants)];}
+test('Lyria optional music practice uses one safe verified search link and keeps legacy practices',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=music-lyria'),nodes=descendants(h.ids.get('detail'));
+ const cards=nodes.filter(n=>n.attrs?.['data-optional-practice']==='music-intro-ab');assert.equal(cards.length,1);
+ const card=cards[0],text=descendants(card).map(n=>n.textContent||'').join(' '),a=descendants(card).filter(n=>n.tag==='a');assert.equal(a.length,1);
+ assert.equal(a[0].href,'https://2codework.github.io/agentwork/index.html?q=%E9%9F%B3%E4%B9%90');assert.equal(a[0].target,'_blank');assert.equal(a[0].rel,'noopener noreferrer');
+ for(const term of ['选读','合成创作要求','人的工作流程','未在产品实跑','不附参考音频','精确 20 秒成品','第 2 步','账号','地区','费用'])assert.ok(text.includes(term),term);
+ for(const original of data.nodes.find(n=>n.id==='music-lyria').agentwork_links)assert.ok(nodes.some(n=>n.tag==='a'&&n.href===original.url&&n.textContent===original.title));
+ assert.equal(descendants(card).filter(n=>['script','iframe','audio','input','button'].includes(n.tag)).length,0);assert.equal(h.stored.size,0);
+});
+test('music pointer is scoped to Lyria and restores singly on history without changing default course',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=music-lyria');h.hash('transformer');assert.equal(descendants(h.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']).length,0);h.back();assert.equal(descendants(h.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']).length,1);h.forward();h.back();assert.equal(descendants(h.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']).length,1);
+ const home=await boot('https://example.test/modelatlas/',false,true);assert.equal(home.ids.get('nav-start').attrs['aria-current'],'page');assert.equal(descendants(home.ids.get('detail')).filter(n=>n.attrs?.['data-optional-practice']).length,0);
+});
+test('untrusted music-like IDs never select the optional link or create HTML',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node='+encodeURIComponent('music-lyria<img src=x onerror=alert(1)>'));
+ const nodes=descendants(h.ids.get('detail'));assert.equal(nodes.filter(n=>n.attrs?.['data-optional-practice']).length,0);assert.equal(nodes.filter(n=>['img','script','iframe'].includes(n.tag)).length,0);
+});
