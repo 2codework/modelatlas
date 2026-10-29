@@ -133,6 +133,17 @@ def markdown(text,sources,route,script_panel,insert_prefix):
   else:out.append(rendered)
  return ''.join(out),toc
 
+def local_response_bridge():
+ # Author-created editorial reading aid; not raw research, an actual response or new executable code.
+ sample='HTTP/1.1 200 OK\nContent-Type: application/json\n\n{"model":"qwen3:0.6b","message":{"role":"assistant","content":"提交海报｜小林｜2026-10-30｜L1\\n跟进场地报价｜待确认｜待确认｜L2"},"done":true}'
+ return ('<section class="editorial-response" aria-labelledby="response-reading-title"><h3 id="response-reading-title">先读懂终端里的 HTTP 和 JSON</h3>'
+ '<p><strong>作者示意，不是真实运行结果。</strong>下面只节选状态、响应头和几个字段，用来说明怎么看；不是完整响应，也不表示你的电脑已经跑通。只读示意，不是可执行命令。现有脚本使用 curl 的 <code>--include</code>，所以会把 HTTP 响应头和 JSON 一起打印出来。</p>'
+ '<pre id="local-response-example"><code>'+h(sample)+'</code></pre>'
+ '<ol><li>开头 <code>HTTP/1.1 200 OK</code> 是状态行，后面是响应头；空行之后才是 JSON 正文。状态成功只说明这次请求的状态，不证明答案正确。实际状态行和响应头可能不同。</li>'
+ '<li><code>message.content</code> 不是要寻找的一整个键名：先找 <code>message</code> 对象，再读其中的 <code>content</code> 字符串，这里才是回答文字。<code>model</code> 是模型字段，<code>done</code> 是完成标记，不是回答正文。</li>'
+ '<li>字符串里的 <code>\\n</code> 是换行的转义写法，不是让你输入的新命令。阅读时把它当作换行：示意中的 <code>content</code> 就是下方参考答案的两行。不用把整个 JSON 当作待办表格，也不用为读懂它另装工具。</li></ol>'
+ '<p>最后的 <code>curl exit=0</code> 只说明 curl 这次传输正常结束，不等于 HTTP 200，更不等于答案正确；退出码非零也不能证明服务端没有执行。没有运行时，只做这道纸面阅读练习，记录“未执行”。真正运行后，仍须按下面清单核对实际状态、模型、完成/截断情况与正文；字段缺失、HTTP 错误、空答案或截断不能靠这份示意补填成成功。字段依据复用本页 <a href="#source-L6">L6</a>，curl 响应头选项依据复用 <a href="#source-L10">L10</a>；未新增产品实测。</p></section>')
+
 def projection_record(hashes):
  return {'schema':'modelatlas.optional-practice-projection.v1','admitted_manifest_sha256':MANIFEST_SHA,'raw_archive':'learning/api-local/r1/raw','published_files_sha256':{n:hashes[n]for n in PUBLIC_RAW},'omitted_files':{n:'internal integration, QA or package-overview material; intentionally not published in repository or site; admitted package remains separately archived by publisher'for n in sorted(FULL_RAW_NAMES-set(PUBLIC_RAW))},'source_binding':{'practice-api.html':'FIRST_API.zh-CN.md','practice-local.html':'FIRST_LOCAL.zh-CN.md'},'runtime_execution':'never-run','scope':'closed static projection; no new graph nodes, events or license grant'}
 
@@ -142,6 +153,10 @@ def render(root):
   panel='<div class="script-download"><a class="primary-action" href="practice/'+script+'" download="'+script+'">下载 '+script+'（仅文件，不自动执行）</a><details><summary>查看并复制完整脚本</summary>'+code_block(raw[script].decode(),route+'-full-script','复制完整脚本')+'</details></div>'
   route_sources={k:v for k,v in sources.items()if k.startswith(prefix)}
   body,toc=markdown(raw[doc].decode(),route_sources,route,panel,insert)
+  if route=='local':
+   anchor='<h2 id="section-5" tabindex="-1">4．怎样才算跑通</h2>'
+   need(body.count(anchor)==1,'local response editorial anchor')
+   body=body.replace(anchor,anchor+local_response_bridge())
   nav=''.join('<a href="#'+ident+'">'+h(plain_heading(title))+'</a>'for ident,title in toc)
   evidence='<details id="practice-evidence" class="sources"><summary>原始教程、官方依据与核验范围</summary><p>以下核验日是文档读取日期，不是软件发布日期。页面和脚本未替你运行；参考答案为作者编写，不是服务返回。</p><a href="practice/'+doc+'">下载原始教程</a><ul>'
   for sid,s in sources.items():

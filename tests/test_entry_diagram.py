@@ -24,7 +24,14 @@ class EntryDiagram(unittest.TestCase):
  def test_only_existing_first_flow_replaced_all_remaining_course_bytes_preserved(self):
   self.assertEqual(self.html.count('class="entry-diagram"'),1)
   self.assertLess(self.html.index(self.figure),self.html.index('id="step-2"'))
-  self.assertEqual(hashlib.sha256(normal(self.html.replace(self.figure,OLD)).encode()).hexdigest(),BASELINE_HTML)
+  # Explicit later editorial addition: pin its whole bytes before projecting the unchanged historical stage.
+  access=re.findall(r'<div class="caution editorial-access">.*?</div>',self.html,re.S)
+  self.assertEqual(len(access),1)
+  step3=re.search(r'<article id="step-3"[^>]*>(.*?)</article>',self.html,re.S).group(1)
+  self.assertEqual(step3.count(access[0]),1)
+  self.assertLess(step3.index(access[0]),step3.index('class="primary-action"'))
+  self.assertEqual(hashlib.sha256(access[0].encode()).hexdigest(),'8783f15736509e7cc4bd5feffe189100824a2f177680a98267cca54575a042c2')
+  self.assertEqual(hashlib.sha256(normal(self.html.replace(access[0],'').replace(self.figure,OLD)).encode()).hexdigest(),BASELINE_HTML)
   self.assertIn('提出下一步',self.html);self.assertIn('concept-bridge',self.html)
  def test_two_real_text_ordered_routes_and_unambiguous_labels(self):
   routes=[n for n in nodes(self.tree) if n['attrs'].get('class')=='entry-route'];self.assertEqual(len(routes),2);self.assertTrue(all(any(n['tag']=='h2' for n in nodes(route)) for route in routes))
