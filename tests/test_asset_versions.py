@@ -41,3 +41,10 @@ class AssetVersions(unittest.TestCase):
   helper=next(line for line in js.splitlines() if line.startswith('function pinnedDataURL()'))
   program='const assert=require("assert/strict");let value="data.json?v="+"a".repeat(64),document={documentElement:{getAttribute:()=>value}};'+helper+'assert.equal('+expression+',value);for(const bad of ["", "data.json", "https://evil.example/data.json?v="+"a".repeat(64),"//evil.example/data.json", "../data.json?v="+"a".repeat(64),"data.json?v=bad", "data.json?v="+"a".repeat(64)+"#x"]){value=bad;assert.throws(()=>'+expression+');}value=null;assert.equal('+expression+',"data.json");document={};assert.equal('+expression+',"data.json");'
   subprocess.run(['node','-e',program],check=True)
+
+ def test_foundations_assets_are_pinned_to_same_build(self):
+  tags=Tags();tags.feed((ROOT/'dist/foundations.html').read_text())
+  self.assertEqual({urlsplit(u).path for u in tags.urls},{'foundations.js','foundations.css'})
+  for url in tags.urls:
+   u=urlsplit(url);self.assertEqual(parse_qs(u.query),{'v':[hashlib.sha256((ROOT/'dist'/u.path).read_bytes()).hexdigest()]})
+  self.assertEqual((ROOT/'dist/foundations.html').read_bytes(),(ROOT/'docs/foundations.html').read_bytes())

@@ -18,3 +18,14 @@ class LearningDesk(unittest.TestCase):
   text=(ROOT/'web/index.html').read_text()
   for k in ['explore','vendor-catalog','timeline','evaluation','learn','coverage']:self.assertIn('id="nav-'+k+'"',text)
   self.assertIn('href="BOOK.md"',text);self.assertIn('href="?node=mcp-lab-roles-tutorial"',text)
+
+ def test_sidebar_link_background_does_not_inherit_old_light_mobile_pills(self):
+  css=(ROOT/'web/style.css').read_text()
+  self.assertIn('.atlas-workspace>header nav a{background:transparent;color:#d0dcd7;',css)
+  self.assertIn('.atlas-workspace>header nav a[aria-current=true]{background:#d6e8ba;color:#263c32;',css)
+  text=(ROOT/'web/index.html').read_text();self.assertEqual(text.count('<b aria-hidden="true">→</b>'),3);self.assertNotIn('<b>↗</b>',text)
+
+ def test_sidebar_interaction_colors_have_explicit_pairs_and_visible_focus(self):
+  css=(ROOT/'web/style.css').read_text()
+  for state,bg,fg in [('hover','#344647','#fff'),('focus-visible','#344647','#fff'),('active','#d6e8ba','#263c32')]:self.assertIn(f'.atlas-workspace>header nav a:{state}{{background:{bg};color:{fg}',css)
+  self.assertIn('outline:3px solid #d6e8ba;outline-offset:2px',css)
