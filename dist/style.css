@@ -74,3 +74,17 @@ pre { max-width:100%; overflow-x:auto; white-space:pre; padding:1rem; line-heigh
 .edge-record-reader details{margin:0;padding:9px 0}
 .edge-record-reader summary:focus-visible,.edge-record-shortcuts button:focus-visible{outline:3px solid #397a73;outline-offset:3px}
 .edge-legacy-metadata{margin:12px 0;font-size:16px}
+
+/* Runtime-only reading: compact identity, full metadata on demand. */
+.runtime-reading{min-width:0;overflow-wrap:anywhere}
+.runtime-reading-overview{border-left:3px solid #397a73;padding:8px 14px;background:var(--panel,#f2f4ee);border-radius:6px}
+.runtime-reading-overview p{margin:6px 0}
+.runtime-reading-overview h4{margin:10px 0 4px}
+.runtime-legacy-metadata{margin:12px 0;font-size:16px}
+.runtime-reading dd{min-width:0;overflow-wrap:anywhere;white-space:normal}
+.atlas-workspace #detail.runtime-reading :is(h4,h5,h6){scroll-margin-top:240px}
+.runtime-reading :is(h4,h5,h6):focus-visible,.runtime-legacy-metadata summary:focus-visible{outline:3px solid #397a73;outline-offset:3px}
+@media(max-width:600px){.runtime-reading dl{display:block}.runtime-reading dt{margin-top:12px}.runtime-reading dd{margin-left:0}}
+@media(max-width:760px){.atlas-workspace #detail.runtime-reading :is(h4,h5,h6){scroll-margin-top:190px}}
+
+.atlas-workspace #detail.runtime-reading :is(h5,h6){font-size:18px;line-height:1.5;margin:24px 0 8px}
