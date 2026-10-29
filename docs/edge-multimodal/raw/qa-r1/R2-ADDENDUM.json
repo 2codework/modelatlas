@@ -1,0 +1,35 @@
+{
+  "decision": "accept_r2_three_requested_corrections",
+  "checked_at": "2026-10-29",
+  "r2_path": "edge-multimodal-model-research-r2",
+  "hashes": {
+    "CHANGES.zh.md": "4ee9cbc20104cb58492a8909fb46468bddad6112fb62544223171e45a1517020",
+    "R1-SHA256.json": "107228434ec65db874ecc16d6ae4a65c5ee36b49a684017079e3038e2f195b64",
+    "REPORT.zh.md": "036b1533aad3f97b860e01c980d63bb8dbec839bec0134e9ba010c16cb9d359e",
+    "SHA256SUMS": "ff1492eed42dbc9a32ce341d49c0ef05e83a208607027514f7725550f48b3426",
+    "VALIDATION.json": "d94c0dabb593294d1113a00de1a166da0e737aef3c01755c4450f4c73840beca",
+    "canonical-baseline-sha256.json": "b71e1be577e194799a1d1a8ecfbe68143e136310a5f6f8e4226e18ba85814142",
+    "date-evidence.json": "b04b993da945ca7fe27d2556fb590a4a479d743bfd8082ddf93ee2bfe9f3da85",
+    "dedup.json": "3066146904008e78dfdabd27d40f92c78c959b22da53506f045b74739af02106",
+    "research.json": "0d42b558e49640d5b0aa6f142e08956b820edcb698baafb154332f2da9a1c0a5",
+    "source-checks.json": "da5e5399c7010644a0ea23339b080fa6753319ab43f7f8e1343f54b5f7e0efe0"
+  },
+  "source_id_url_status_unchanged": true,
+  "date_events_unchanged": true,
+  "all_other_research_content_unchanged": true,
+  "r1_hashes_unchanged": true,
+  "r2_manifest_checks": [
+    "CHANGES.zh.md: OK",
+    "R1-SHA256.json: OK",
+    "REPORT.zh.md: OK",
+    "VALIDATION.json: OK",
+    "canonical-baseline-sha256.json: OK",
+    "date-evidence.json: OK",
+    "dedup.json: OK",
+    "research.json: OK",
+    "source-checks.json: OK"
+  ],
+  "canonical_head": "11c74bc780688f4c489e710404e52789fe4a10b4",
+  "new_web_requests": 0,
+  "integration_or_publication_approval": false
+}

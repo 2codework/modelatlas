@@ -1,0 +1,14 @@
+{
+  "records": 4,
+  "source_entries": 18,
+  "independently_reopened": 17,
+  "prior_failed_not_retried": 1,
+  "date_slots": 24,
+  "dated_slots": 15,
+  "unknown_slots": 9,
+  "source_manifest_check": "7/7 original SHA256SUMS entries passed",
+  "canonical_head_matches_requested": true,
+  "no_canonical_or_original_edits": true,
+  "no_weights_downloaded_or_models_executed": true,
+  "no_account_key_or_Mac_access": true
+}

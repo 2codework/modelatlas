@@ -1,0 +1,164 @@
+[
+  {
+    "source_id": "smol-card",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn301view0",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "smol-launch",
+    "url": "https://huggingface.co/blog/smolvlm2",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn302view1",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "smol-paper",
+    "url": "https://arxiv.org/abs/2504.05299",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn297view2",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-repo",
+    "url": "https://github.com/apple-aiml-research/ml-fastvlm",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn301view1",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-paper",
+    "url": "https://arxiv.org/abs/2412.13303",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn295view3",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-license-code",
+    "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn300view1",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-license-model",
+    "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE_MODEL",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn297view7",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-export",
+    "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/model_export/README.md",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn300view2",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-app",
+    "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/app/README.md",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn300view3",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-highlight",
+    "url": "https://machinelearning.apple.com/research/fast-vision-language-models",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn303view0",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "fast-hf",
+    "url": "https://huggingface.co/apple/FastVLM-0.5B",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn300view4",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "gemma-card",
+    "url": "https://huggingface.co/google/gemma-3n-E2B-it",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn297view5 / turn297view6 / turn300view10",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "gemma-launch",
+    "url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn295view1 / turn302view2",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "gemma-failed",
+    "url": "https://ai.google.dev/gemma/docs/core/model_card_3n",
+    "checked_at": "2026-10-29",
+    "independent_status": "not_retried_prior_tool_failure_respected",
+    "web_evidence_ref": null,
+    "original_summary_supported": false,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "phi-card",
+    "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn300view8 / turn302view3",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "phi-launch",
+    "url": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn299view6",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "phi-paper",
+    "url": "https://arxiv.org/abs/2503.01743",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn299view7",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  },
+  {
+    "source_id": "phi-onnx",
+    "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct-onnx",
+    "checked_at": "2026-10-29",
+    "independent_status": "reopened_public_primary_text",
+    "web_evidence_ref": "turn297view4 / turn300view9",
+    "original_summary_supported": true,
+    "limits": "Rolling public text, not pinned artifact or execution verification. No full page copy."
+  }
+]

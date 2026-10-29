@@ -1,0 +1,17 @@
+{
+  "head": "11c74bc780688f4c489e710404e52789fe4a10b4",
+  "nodes": 246,
+  "catalog_records": 77,
+  "normalized_term_checks": {
+    "smolvlm": [],
+    "fastvlm": [],
+    "gemma3n": [],
+    "phi4multimodal": []
+  },
+  "decision": "all_four_exact_families_absent_in_nodes_and_catalog",
+  "scope": "read only; matches ignore punctuation, spaces and case; not a worldwide completeness claim",
+  "data_sha256": {
+    "dist/data.json": "2d55feb50ce42852031a03a1992d41a1cf37b237008bf4bdcc1b70582e856cc2",
+    "docs/data.json": "2d55feb50ce42852031a03a1992d41a1cf37b237008bf4bdcc1b70582e856cc2"
+  }
+}

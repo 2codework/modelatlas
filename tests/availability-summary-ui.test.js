@@ -30,7 +30,7 @@ test('production regional count is seven, legacy unknown subtotal preserved and 
  assert.equal(legacy,133);assert.equal(explicitOther,legacy);
  const legacyNewViews=legacyData.view_nodes.filter(v=>!baselineIds.has(v.id));assert.equal(legacyNewViews.length,5);
  const audioIds=['speech-moshi','speech-csm-1b','speech-voxtral-realtime-2602','speech-gpt-realtime-family'];const audioViews=data.view_nodes.filter(v=>audioIds.includes(v.id));assert.deepEqual(audioViews.map(v=>v.id),audioIds);
- const newViews=data.view_nodes.filter(v=>!baselineIds.has(v.id));assert.equal(newViews.length,9);
+ const newViews=data.view_nodes.filter(v=>!baselineIds.has(v.id));assert.equal(newViews.length,13);
  const addedUnknowns=newViews.filter(v=>C.hasExplicitUnknownAvailability(v.availability)).length;
  assert.equal(rows.reduce((sum,r)=>sum+Number(r[3]),0),legacy+7+addedUnknowns);
  for(const row of rows){const expected=data.nodes.filter(n=>n.category===row[0]&&C.hasExplicitUnknownAvailability(views.get(n.id).availability)).length;assert.equal(Number(row[3]),expected,row[0]);}

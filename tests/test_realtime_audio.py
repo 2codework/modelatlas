@@ -1,5 +1,6 @@
 """Reviewed research is the independent oracle; never invoke any model."""
 import copy, hashlib, json, unittest
+from edge_contract import legacy_view as edge_legacy
 from audio_contract import ROOT, baseline, validate, legacy_view, NODE_IDS, SOURCE_IDS, EVENT_DATES, strict
 
 RESEARCH_SHA='a05361a48710722d564d18757e5404ddb8d7103ca9541d28078429a723f2f9c2'
@@ -11,14 +12,14 @@ def research():
 class AudioAdmission(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.live=strict((ROOT/'dist/data.json').read_bytes());cls.raw=research()
+  cls.live=edge_legacy(strict((ROOT/'dist/data.json').read_bytes()));cls.raw=research()
  def reject(self,fn,pattern):
   d=copy.deepcopy(self.live);fn(d)
   with self.assertRaisesRegex(ValueError,pattern):validate(d)
  def test_closed_live_admission(self):validate(self.live)
  def test_docs_dist_same_and_compact(self):
   raw=(ROOT/'dist/data.json').read_bytes();self.assertEqual(raw,(ROOT/'docs/data.json').read_bytes())
-  self.assertEqual(raw,(json.dumps(self.live,ensure_ascii=False,separators=(',',':'))+'\n').encode())
+  self.assertEqual(raw,(json.dumps(strict(raw),ensure_ascii=False,separators=(',',':'))+'\n').encode())
  def test_legacy_stage_exact(self):self.assertEqual(legacy_view(self.live),baseline())
  def test_duplicate_old_node(self):self.reject(lambda d:d['nodes'].append(copy.deepcopy(d['nodes'][0])),'duplicate nodes')
  def test_duplicate_new_source(self):self.reject(lambda d:d['sources'].append(copy.deepcopy(d['sources'][-1])),'duplicate sources')

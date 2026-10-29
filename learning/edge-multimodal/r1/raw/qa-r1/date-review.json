@@ -1,0 +1,248 @@
+{
+  "count": 24,
+  "dated": 15,
+  "unknown": 9,
+  "events": [
+    {
+      "model_id": "edge-smolvlm2-500m-video-instruct",
+      "event": "announced",
+      "date": "2025-02-20",
+      "precision": "day",
+      "source_id": "smol-launch",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn302view1"
+    },
+    {
+      "model_id": "edge-smolvlm2-500m-video-instruct",
+      "event": "weights_available_by",
+      "date": "2025-02-20",
+      "precision": "day",
+      "source_id": "smol-launch",
+      "note_zh": "当天文明确称模型开放；不是独立仓库首个权重commit证明",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn302view1"
+    },
+    {
+      "model_id": "edge-smolvlm2-500m-video-instruct",
+      "event": "paper_first_submitted",
+      "date": "2025-04-07",
+      "precision": "day",
+      "source_id": "smol-paper",
+      "note_zh": "家族论文，非权重首发",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn297view2"
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "paper_first_submitted",
+      "date": "2024-12-17",
+      "precision": "day",
+      "source_id": "fast-paper",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn295view3"
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "paper_v2",
+      "date": "2025-05-15",
+      "precision": "day",
+      "source_id": "fast-paper",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn295view3"
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "official_highlight",
+      "date": "2025-07-23",
+      "precision": "day",
+      "source_id": "fast-highlight",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn303view0"
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "weights_available_by",
+      "date": "2025-07-23",
+      "precision": "day",
+      "source_id": "fast-highlight",
+      "note_zh": "介绍文称权重可用，不证明首次上传日期",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn303view0"
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "hf_availability_update",
+      "date": "2025-09-22",
+      "precision": "day",
+      "source_id": "fast-highlight",
+      "note_zh": "更新日期，非首发",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn303view0"
+    },
+    {
+      "model_id": "edge-gemma3n-e2b-it",
+      "event": "full_launch",
+      "date": "2025-06-26",
+      "precision": "day",
+      "source_id": "gemma-launch",
+      "note_zh": "launch而非早期preview",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn295view1 / turn302view2"
+    },
+    {
+      "model_id": "edge-gemma3n-e2b-it",
+      "event": "weights_available_by",
+      "date": "2025-06-26",
+      "precision": "day",
+      "source_id": "gemma-launch",
+      "note_zh": "官方文提供权重入口；本轮未过门禁",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn295view1 / turn302view2"
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "announced",
+      "date": "2025-02-26",
+      "precision": "day",
+      "source_id": "phi-launch",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn299view6"
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "release_month",
+      "date": "2025-02",
+      "precision": "month",
+      "source_id": "phi-card",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn300view8 / turn302view3"
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "weights_available_by",
+      "date": "2025-02-26",
+      "precision": "day",
+      "source_id": "phi-launch",
+      "note_zh": "公告称HF可用，精确首次权重commit未核验",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn299view6"
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "paper_first_submitted",
+      "date": "2025-03-03",
+      "precision": "day",
+      "source_id": "phi-paper",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn299view7"
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "paper_v2",
+      "date": "2025-03-07",
+      "precision": "day",
+      "source_id": "phi-paper",
+      "note_zh": "",
+      "qa_decision": "accept_date_and_event_type",
+      "independent_ref": "turn299view7"
+    },
+    {
+      "model_id": "edge-smolvlm2-500m-video-instruct",
+      "event": "weights_first_uploaded",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "未查实首个权重上传，不能用论文/公告/更新替代",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-smolvlm2-500m-video-instruct",
+      "event": "repo_first_public",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "weights_first_uploaded",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "未查实首个权重上传，不能用论文/公告/更新替代",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-fastvlm-05b-stage3",
+      "event": "repo_first_public",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-gemma3n-e2b-it",
+      "event": "weights_first_uploaded",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "未查实首个权重上传，不能用论文/公告/更新替代",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-gemma3n-e2b-it",
+      "event": "repo_first_public",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "weights_first_uploaded",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "未查实首个权重上传，不能用论文/公告/更新替代",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-phi4-multimodal-instruct",
+      "event": "repo_first_public",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    },
+    {
+      "model_id": "edge-gemma3n-e2b-it",
+      "event": "paper_first_submitted",
+      "date": null,
+      "precision": "unknown",
+      "source_id": null,
+      "note_zh": "本批未确认专属技术报告，不误用Gemma3或架构论文日期",
+      "qa_decision": "accept_unknown_not_a_verified_date",
+      "independent_ref": null
+    }
+  ],
+  "caveat": "Availability-by claims are dated publisher statements on rolling pages, not immutable first-upload evidence; FastVLM family statement is not byte-identity proof for stage3."
+}

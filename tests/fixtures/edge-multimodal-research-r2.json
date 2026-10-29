@@ -1,0 +1,521 @@
+{
+  "schema_version": "modelatlas.edge-multimodal-research.v1",
+  "checked_at": "2026-10-29",
+  "scope_zh": "4模型/4组织的代表性有限批次，非全球全集、非当前性能排名。只读候选，不改canonical、不发布、不实施UI。",
+  "records": [
+    {
+      "id": "edge-smolvlm2-500m-video-instruct",
+      "organization": "Hugging Face",
+      "exact_id": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "inputs": [
+        "text",
+        "image",
+        "multiple_images",
+        "video_frames"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "parameters": {
+        "total_nominal": 500000000,
+        "total_exact": "unknown",
+        "active": "unknown",
+        "effective": "not separately claimed",
+        "scope": "official model size label, not independently counted"
+      },
+      "openness": {
+        "weights": "public Apache-2.0 per card",
+        "code": "Transformers/MLX examples publicly linked; full code-license audit unknown",
+        "terms": "Apache-2.0 model; downstream inputs and code separate"
+      },
+      "runtime": {
+        "documented": [
+          "Transformers CUDA BF16 with flash_attention_2",
+          "decord video preprocessing",
+          "MLX Python/Swift on Apple Silicon, historical launch examples"
+        ],
+        "quantization": "official launch links unquantized MLX conversion; exact official quantized artifact unknown",
+        "hardware_minimum": "unknown; iPhone demo does not establish all iPhones support"
+      },
+      "reported_measurements": [
+        {
+          "metric": "GPU RAM for video inference",
+          "value": "1.8GB",
+          "status": "official_self_report",
+          "source": "smol-card",
+          "hardware": "unknown",
+          "frames_context_batch": "unknown",
+          "warning": "not a universal minimum or independent test"
+        }
+      ],
+      "source_ids": [
+        "smol-card",
+        "smol-launch",
+        "smol-paper"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "gui_action_capability": "unknown_not_established; not a phone controller",
+      "independent_measurements": {
+        "latency": "unknown",
+        "peak_memory": "unknown",
+        "benchmark": "unknown"
+      },
+      "artifact_pin": {
+        "commit": "unknown",
+        "weight_sha256": "unknown",
+        "downloaded": false
+      },
+      "learning_path_zh": [
+        "先读模型卡核输入输出和限制",
+        "区分参数总量、effective/active及运行时精度",
+        "读许可及官方运行示例（本轮只读）",
+        "将实际环境/内存/延迟保持unknown，获授权后另设小样本验证"
+      ],
+      "learning_source_ids": [
+        "smol-card",
+        "smol-launch",
+        "smol-paper"
+      ]
+    },
+    {
+      "id": "edge-fastvlm-05b-stage3",
+      "organization": "Apple",
+      "exact_id": "fastvlm_0.5b_stage3",
+      "inputs": [
+        "text",
+        "image"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "parameters": {
+        "total": "unknown",
+        "llm_nominal": 500000000,
+        "active": "unknown",
+        "effective": "unknown",
+        "scope": "0.5B names language backbone, not full vision-language system",
+        "related_not_identity_proof": "apple/FastVLM-0.5B HF metadata approximately0.8B; stage3 equality not verified"
+      },
+      "openness": {
+        "weights": "public download links, restricted research license",
+        "code": "public Apple custom software license plus third-party notices",
+        "terms": "Apple Machine Learning Research Model License: non-commercial scientific research and academic development only; excludes commercial exploitation, product development, and use in any commercial product or service."
+      },
+      "runtime": {
+        "documented": [
+          "PyTorch Python3.10",
+          "CoreML vision encoder plus patched mlx-vlm LLM",
+          "iOS18.2+ / macOS15.2+ visual-QA demo built in Xcode"
+        ],
+        "quantization": "LLM-only export supports8-bit/4-bit; full-model precision not inferred",
+        "hardware_minimum": "Apple Silicon path; exact minimum model/total RAM unknown"
+      },
+      "reported_measurements": [
+        {
+          "metric": "relative TTFT",
+          "value": "85x",
+          "status": "official_self_report",
+          "source": "fast-paper",
+          "baseline": "LLaVA-OneVision with0.5B LLM at1152x1152",
+          "hardware": "not established in abstract reviewed",
+          "warning": "not tokens/sec, not per-action/GUI end-to-end timing; not assumed stage3-specific"
+        }
+      ],
+      "source_ids": [
+        "fast-repo",
+        "fast-paper",
+        "fast-license-code",
+        "fast-license-model",
+        "fast-export",
+        "fast-app",
+        "fast-highlight",
+        "fast-hf"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "gui_action_capability": "unknown_not_established; not a phone controller",
+      "independent_measurements": {
+        "latency": "unknown",
+        "peak_memory": "unknown",
+        "benchmark": "unknown"
+      },
+      "artifact_pin": {
+        "commit": "unknown",
+        "weight_sha256": "unknown",
+        "downloaded": false
+      },
+      "learning_path_zh": [
+        "先读模型卡核输入输出和限制",
+        "区分参数总量、effective/active及运行时精度",
+        "读许可及官方运行示例（本轮只读）",
+        "将实际环境/内存/延迟保持unknown，获授权后另设小样本验证"
+      ],
+      "learning_source_ids": [
+        "fast-repo",
+        "fast-paper",
+        "fast-license-code",
+        "fast-license-model",
+        "fast-export",
+        "fast-app",
+        "fast-highlight",
+        "fast-hf"
+      ]
+    },
+    {
+      "id": "edge-gemma3n-e2b-it",
+      "organization": "Google DeepMind",
+      "exact_id": "google/gemma-3n-E2B-it (launch, not preview)",
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "parameters": {
+        "total": "scope_or_version_unknown",
+        "official_claims": [
+          {
+            "source": "gemma-card",
+            "raw": 6000000000
+          },
+          {
+            "source": "gemma-launch",
+            "raw": 5000000000
+          }
+        ],
+        "effective": 2000000000,
+        "active": "unknown",
+        "scope": "E2B effective accelerator-memory footprint; not total and not generic MoE active count",
+        "reconciliation_note_zh": "两数均来自官方作者正文，非HF自动tensor-size面板；未确认是否包含同样模态encoder及同版本，暂不定性同口径冲突。"
+      },
+      "openness": {
+        "weights": "open-weight designation under Gemma custom terms; HF file gate requires account and agreement",
+        "code": "Transformers implementation referenced; independent full code-license audit unknown",
+        "terms": "Gemma custom license; license acceptance not performed; complete terms not reviewed"
+      },
+      "runtime": {
+        "documented": [
+          "Transformers≥4.53.0",
+          "official blog links Google AI Edge Gallery/LiteRT-LLM and MLX"
+        ],
+        "quantization": "exact official quantization artifact and precision unknown in this bounded pass",
+        "hardware_minimum": "unknown; runtime-specific modality support and memory must be verified separately"
+      },
+      "reported_measurements": [],
+      "source_ids": [
+        "gemma-card",
+        "gemma-launch",
+        "gemma-failed"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "gui_action_capability": "unknown_not_established; not a phone controller",
+      "independent_measurements": {
+        "latency": "unknown",
+        "peak_memory": "unknown",
+        "benchmark": "unknown"
+      },
+      "artifact_pin": {
+        "commit": "unknown",
+        "weight_sha256": "unknown",
+        "downloaded": false
+      },
+      "learning_path_zh": [
+        "先读模型卡核输入输出和限制",
+        "区分参数总量、effective/active及运行时精度",
+        "读许可及官方运行示例（本轮只读）",
+        "将实际环境/内存/延迟保持unknown，获授权后另设小样本验证"
+      ],
+      "learning_source_ids": [
+        "gemma-card",
+        "gemma-launch",
+        "gemma-failed"
+      ]
+    },
+    {
+      "id": "edge-phi4-multimodal-instruct",
+      "organization": "Microsoft",
+      "exact_id": "microsoft/Phi-4-multimodal-instruct",
+      "inputs": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "outputs": [
+        "text"
+      ],
+      "parameters": {
+        "total_nominal": 5600000000,
+        "total_exact": "unknown",
+        "active": "unknown",
+        "effective": "unknown",
+        "scope": "full multimodal transformer including backbone/encoders/adapters; mixture-of-LoRAs not interchangeable with MoE active count"
+      },
+      "openness": {
+        "weights": "public MIT per model card",
+        "code": "public custom_code inference examples; MIT model repo metadata, dependencies separate",
+        "terms": "MIT; downstream media rights and dependencies require own review"
+      },
+      "runtime": {
+        "documented": [
+          "Python3.10, Transformers4.48.2 example stack with trust_remote_code",
+          "official ONNX INT4 CUDA / DirectML"
+        ],
+        "quantization": "microsoft/Phi-4-multimodal-instruct-onnx gpu-int4-rtn-block-32; conversion treated separately, not bit-identical base",
+        "hardware_minimum": "unknown; CUDA/DML targets not phone guarantee; training A100 counts excluded from inference requirements",
+        "cpu": "official ONNX card says stay tuned or convert; no ready CPU compatibility claimed"
+      },
+      "reported_measurements": [],
+      "source_ids": [
+        "phi-card",
+        "phi-launch",
+        "phi-paper",
+        "phi-onnx"
+      ],
+      "verification_status": "primary_sources_reviewed_not_executed",
+      "gui_action_capability": "unknown_not_established; not a phone controller",
+      "independent_measurements": {
+        "latency": "unknown",
+        "peak_memory": "unknown",
+        "benchmark": "unknown"
+      },
+      "artifact_pin": {
+        "commit": "unknown",
+        "weight_sha256": "unknown",
+        "downloaded": false
+      },
+      "learning_path_zh": [
+        "先读模型卡核输入输出和限制",
+        "区分参数总量、effective/active及运行时精度",
+        "读许可及官方运行示例（本轮只读）",
+        "将实际环境/内存/延迟保持unknown，获授权后另设小样本验证"
+      ],
+      "learning_source_ids": [
+        "phi-card",
+        "phi-launch",
+        "phi-paper",
+        "phi-onnx"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "smol-card",
+      "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "图像/多图/视频/文本入、文本出；500M标签；Apache-2.0权重；BF16 CUDA例程、decord视频预处理；官方称视频推理1.8GB GPU RAM，未列完整测量配置。",
+      "locator": "Model Summary; Uses; License; How to get started",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "smol-launch",
+      "url": "https://huggingface.co/blog/smolvlm2",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "2025-02-20发布三种规模，声明模型已开放；500M视频模型；提供MLX Python/Swift路径，引用未量化社区转换件；iPhone应用为演示，不是通用控制。",
+      "locator": "Published; Technical Details; MLX",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "smol-paper",
+      "url": "https://arxiv.org/abs/2504.05299",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "关联SmolVLM家族论文首次提交2025-04-07；不是该权重首次发布日期。",
+      "locator": "Submission history v1",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-repo",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "Model Zoo明确0.5B stage2与stage3；另有stage3 Apple Silicon格式；PyTorch、导出、demo入口。代码与模型分开授权。",
+      "locator": "Model Zoo; Inference; License",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-paper",
+      "url": "https://arxiv.org/abs/2412.13303",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "v1 2024-12-17，v2 2025-05-15。摘要0.5B是LLM大小；85倍TTFT为相对LLaVA-OneVision、1152×1152设定的官方自报，不是GUI完成时间。",
+      "locator": "v2 abstract; Submission history",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-license-code",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "Apple自定义软件许可，允许受条款约束的使用/修改/再分发，另有第三方声明；不能当作模型许可。",
+      "locator": "LICENSE",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-license-model",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE_MODEL",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "Apple Machine Learning Research Model License：限非商业科研及学术开发；排除商业利用、产品开发、商业产品/服务用途，衍生模型亦受限制。",
+      "locator": "License Scope",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-export",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/model_export/README.md",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "研究探索而非正式推荐；视觉编码器CoreML导出；补丁mlx-vlm；LLM支持8/4-bit量化，不等于整VLM全量同精度。",
+      "locator": "Export Vision Encoder; Export VLM",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-app",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/app/README.md",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "视觉问答demo声明iOS18.2+、macOS15.2+；Xcode构建，设备本地推理。未给全机型最低RAM。",
+      "locator": "Features",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-highlight",
+      "url": "https://machinelearning.apple.com/research/fast-vision-language-models",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "2025-07-23研究介绍称代码/权重/demo可用；2025-09-22更新称HF MLX/CoreML件可用；二者不能当首发权重日。UI导航只是VLM潜在应用语境。",
+      "locator": "Published; Update",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "fast-hf",
+      "url": "https://huggingface.co/apple/FastVLM-0.5B",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "官方仓库面板约0.8B params，BF16；未在本轮证实与repo stage3字节相同，不据此填stage3精确总量。",
+      "locator": "Safetensors metadata",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "gemma-card",
+      "url": "https://huggingface.co/google/gemma-3n-E2B-it",
+      "checked_at": "2026-10-29",
+      "status": "public_card_read_weights_gated_not_accessed",
+      "primary": true,
+      "evidence_summary_zh": "launch版E2B IT，文本/图像/视频/音频入、文本出；raw6B，effective2B；Transformers≥4.53.0。公开模型卡可读，文件需登录同意Gemma许可，本轮未同意/访问文件。",
+      "locator": "Launch note; Access; Usage",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "gemma-launch",
+      "url": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "2025-06-26完整发布入口与权重链接；正文E2B raw5B，HF作者正文6B；两者范围/版本是否相同待确认。effective2B指加速器驻留口径，不是MoE active。列AI Edge Gallery/LiteRT-LLM、MLX入口，不保证各端全模态等价。",
+      "locator": "Date; PLE; Get started",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "gemma-failed",
+      "url": "https://ai.google.dev/gemma/docs/core/model_card_3n",
+      "checked_at": "2026-10-29",
+      "status": "failed_tool_access",
+      "primary": true,
+      "evidence_summary_zh": "web工具报URL不可访问；未重试、未绕过。其他公开官方页独立读取，不访问受限权重。",
+      "locator": "open result",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "phi-card",
+      "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "5.6B含主干/视觉/语音编码器和适配器；文本图像音频入、文本出；MIT；Python3.10、Transformers4.48.2例程及自定义代码；发布时间仅月精度2025-02。",
+      "locator": "Model; Requirements; License",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "phi-launch",
+      "url": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "2025-02-26公告称Phi-4-multimodal已在HF等入口可用；5.6B官方自报；不以该日期证明权重首次上传时间。",
+      "locator": "Date; Now available",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "phi-paper",
+      "url": "https://arxiv.org/abs/2503.01743",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "Phi-4-Mini Technical Report包含multimodal与Mixture-of-LoRAs；v1 2025-03-03，v2 2025-03-07。",
+      "locator": "Title; Submission history",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    },
+    {
+      "id": "phi-onnx",
+      "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct-onnx",
+      "checked_at": "2026-10-29",
+      "status": "reviewed_public_text",
+      "primary": true,
+      "evidence_summary_zh": "官方INT4 ONNX转换，CUDA及DirectML例程；CPU现成包未承诺，页称待续或自行转换；不能泛化成手机支持。",
+      "locator": "Introduction; Model Run",
+      "revision": "rolling page unless arXiv version stated",
+      "executed": false
+    }
+  ],
+  "safety_boundary": {
+    "weights_downloaded": false,
+    "sdk_installed": false,
+    "model_executed": false,
+    "device_accessed": false,
+    "account_or_key_used": false,
+    "license_accepted": false,
+    "canonical_modified": false,
+    "ui_implemented": false
+  },
+  "ui_handoff_zh": "后续仅按简卡入口→单项学习组织；不要堆成长页。本批不做UI。",
+  "summary_counts": {
+    "source_record_count": 18,
+    "readable_source_count": 17,
+    "historical_failed_source_count": 1,
+    "date_event_slot_count": 24,
+    "known_date_count": 15,
+    "unknown_date_count": 9
+  }
+}

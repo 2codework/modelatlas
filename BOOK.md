@@ -7537,6 +7537,111 @@ Labs为历史名，当前创建文件与简单应用的功能；不是独立LLM�
 - 事件：documentation_update · 2026-07-20 · GPT-Realtime family (2025-08-28 / 2.1) · 旧版快照弃用公告（尚未到停用日） · 精度 day · 时区 未知 · 范围 仅本事件类型/精确版本；来源核验不代表实际账号可用。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 事件日期由官方来源证明，不用核查日替代；权重首传日期仍未知。 · 证据 research-r2/raw-models.json dates; gpt-deprecations · 来源 https://developers.openai.com/api/docs/deprecations
 - 事件：scheduled_shutdown · 2027-01-20 · GPT-Realtime family (2025-08-28 / 2.1) · 【计划·尚未发生】旧快照计划停止服务 · 精度 day · 时区 未知 · 范围 计划停用，尚未发生；不能外推2.1或Realtime API整体。 · 版本 gpt-realtime / gpt-realtime-2025-08-28 · 截至已可用（非首发） 无独立观察 · 说明 未来计划，非已停用 · 证据 research-r2/raw-models.json dates; gpt-deprecations · 来源 https://developers.openai.com/api/docs/deprecations
 
+## HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+
+端侧多模态有限样本；仅来源审阅、未执行。精确身份：HuggingFaceTB/SmolVLM2-500M-Video-Instruct；不证明通用手机控制能力。
+
+- ID / 类型：edge-smolvlm2-500m-video-instruct / model
+- 生命周期：unknown
+- 版本：HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+- license：Apache-2.0 model; downstream inputs and code separate
+- 学习步骤（未执行）：先读模型卡核输入输出和限制
+- 学习步骤（未执行）：区分参数总量、effective/active及运行时精度
+- 学习步骤（未执行）：读许可及官方运行示例（本轮只读）
+- 学习步骤（未执行）：将实际环境/内存/延迟保持unknown，获授权后另设小样本验证
+- 注意：参数总量、主干、effective与active不是同一分母；官方自报不是独立实测。
+- 注意：公告、论文、可用上界及首次权重上传分别记录；未知不补日期。
+- 来源：https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+- 来源：https://huggingface.co/blog/smolvlm2
+- 来源：https://arxiv.org/abs/2504.05299
+- 事件：announcement · 2025-02-20 · edge-smolvlm2-500m-video-instruct · announced · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · announced · 来源 https://huggingface.co/blog/smolvlm2
+- 事件：documentation_update · 2025-02-20 · edge-smolvlm2-500m-video-instruct · weights_available_by · 精度 day · 时区 未知 · 范围 截至此日可用的官方陈述，非首次上传证据 · 版本 HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 截至已可用（非首发） 无独立观察 · 说明 当天文明确称模型开放；不是独立仓库首个权重commit证明 · 证据 research-r2/date-evidence.json · weights_available_by · 来源 https://huggingface.co/blog/smolvlm2
+- 事件：paper_submission · 2025-04-07 · edge-smolvlm2-500m-video-instruct · paper_first_submitted · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 截至已可用（非首发） 无独立观察 · 说明 家族论文，非权重首发 · 证据 research-r2/date-evidence.json · paper_first_submitted · 来源 https://arxiv.org/abs/2504.05299
+- 事件：weights_release · 未知 / 待核验 · edge-smolvlm2-500m-video-instruct · weights_first_uploaded · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 截至已可用（非首发） 无独立观察 · 说明 未查实首个权重上传，不能用论文/公告/更新替代 · 证据 research-r2/date-evidence.json · weights_first_uploaded · 来源
+- 事件：documentation_update · 未知 / 待核验 · edge-smolvlm2-500m-video-instruct · repo_first_public · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · repo_first_public · 来源
+
+## fastvlm_0.5b_stage3
+
+端侧多模态有限样本；仅来源审阅、未执行。精确身份：fastvlm_0.5b_stage3；不证明通用手机控制能力。
+
+- ID / 类型：edge-fastvlm-05b-stage3 / model
+- 生命周期：unknown
+- 版本：fastvlm_0.5b_stage3
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+- license：Apple Machine Learning Research Model License: non-commercial scientific research and academic development only; excludes commercial exploitation, product development, and use in any commercial product or service.
+- 学习步骤（未执行）：先读模型卡核输入输出和限制
+- 学习步骤（未执行）：区分参数总量、effective/active及运行时精度
+- 学习步骤（未执行）：读许可及官方运行示例（本轮只读）
+- 学习步骤（未执行）：将实际环境/内存/延迟保持unknown，获授权后另设小样本验证
+- 注意：参数总量、主干、effective与active不是同一分母；官方自报不是独立实测。
+- 注意：公告、论文、可用上界及首次权重上传分别记录；未知不补日期。
+- 来源：https://github.com/apple-aiml-research/ml-fastvlm
+- 来源：https://arxiv.org/abs/2412.13303
+- 来源：https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE
+- 来源：https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE_MODEL
+- 来源：https://github.com/apple-aiml-research/ml-fastvlm/blob/main/model_export/README.md
+- 来源：https://github.com/apple-aiml-research/ml-fastvlm/blob/main/app/README.md
+- 来源：https://machinelearning.apple.com/research/fast-vision-language-models
+- 来源：https://huggingface.co/apple/FastVLM-0.5B
+- 事件：paper_submission · 2024-12-17 · edge-fastvlm-05b-stage3 · paper_first_submitted · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · paper_first_submitted · 来源 https://arxiv.org/abs/2412.13303
+- 事件：paper_revision · 2025-05-15 · edge-fastvlm-05b-stage3 · paper_v2 · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · paper_v2 · 来源 https://arxiv.org/abs/2412.13303
+- 事件：documentation_update · 2025-07-23 · edge-fastvlm-05b-stage3 · official_highlight · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · official_highlight · 来源 https://machinelearning.apple.com/research/fast-vision-language-models
+- 事件：documentation_update · 2025-07-23 · edge-fastvlm-05b-stage3 · weights_available_by · 精度 day · 时区 未知 · 范围 截至此日可用的官方陈述，非首次上传证据 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明 介绍文称权重可用，不证明首次上传日期 · 证据 research-r2/date-evidence.json · weights_available_by · 来源 https://machinelearning.apple.com/research/fast-vision-language-models
+- 事件：documentation_update · 2025-09-22 · edge-fastvlm-05b-stage3 · hf_availability_update · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明 更新日期，非首发 · 证据 research-r2/date-evidence.json · hf_availability_update · 来源 https://machinelearning.apple.com/research/fast-vision-language-models
+- 事件：weights_release · 未知 / 待核验 · edge-fastvlm-05b-stage3 · weights_first_uploaded · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明 未查实首个权重上传，不能用论文/公告/更新替代 · 证据 research-r2/date-evidence.json · weights_first_uploaded · 来源
+- 事件：documentation_update · 未知 / 待核验 · edge-fastvlm-05b-stage3 · repo_first_public · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 fastvlm_0.5b_stage3 · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · repo_first_public · 来源
+
+## google/gemma-3n-E2B-it (launch, not preview)
+
+端侧多模态有限样本；仅来源审阅、未执行。精确身份：google/gemma-3n-E2B-it (launch, not preview)；不证明通用手机控制能力。
+
+- ID / 类型：edge-gemma3n-e2b-it / model
+- 生命周期：unknown
+- 版本：google/gemma-3n-E2B-it (launch, not preview)
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+- license：Gemma custom license; license acceptance not performed; complete terms not reviewed
+- 学习步骤（未执行）：先读模型卡核输入输出和限制
+- 学习步骤（未执行）：区分参数总量、effective/active及运行时精度
+- 学习步骤（未执行）：读许可及官方运行示例（本轮只读）
+- 学习步骤（未执行）：将实际环境/内存/延迟保持unknown，获授权后另设小样本验证
+- 注意：参数总量、主干、effective与active不是同一分母；官方自报不是独立实测。
+- 注意：公告、论文、可用上界及首次权重上传分别记录；未知不补日期。
+- 来源：https://huggingface.co/google/gemma-3n-E2B-it
+- 来源：https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/
+- 事件：announcement · 2025-06-26 · edge-gemma3n-e2b-it · full_launch · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 google/gemma-3n-E2B-it (launch, not preview) · 截至已可用（非首发） 无独立观察 · 说明 launch而非早期preview · 证据 research-r2/date-evidence.json · full_launch · 来源 https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/
+- 事件：documentation_update · 2025-06-26 · edge-gemma3n-e2b-it · weights_available_by · 精度 day · 时区 未知 · 范围 截至此日可用的官方陈述，非首次上传证据 · 版本 google/gemma-3n-E2B-it (launch, not preview) · 截至已可用（非首发） 无独立观察 · 说明 官方文提供权重入口；本轮未过门禁 · 证据 research-r2/date-evidence.json · weights_available_by · 来源 https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/
+- 事件：weights_release · 未知 / 待核验 · edge-gemma3n-e2b-it · weights_first_uploaded · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 google/gemma-3n-E2B-it (launch, not preview) · 截至已可用（非首发） 无独立观察 · 说明 未查实首个权重上传，不能用论文/公告/更新替代 · 证据 research-r2/date-evidence.json · weights_first_uploaded · 来源
+- 事件：documentation_update · 未知 / 待核验 · edge-gemma3n-e2b-it · repo_first_public · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 google/gemma-3n-E2B-it (launch, not preview) · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · repo_first_public · 来源
+- 事件：paper_submission · 未知 / 待核验 · edge-gemma3n-e2b-it · paper_first_submitted · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 google/gemma-3n-E2B-it (launch, not preview) · 截至已可用（非首发） 无独立观察 · 说明 本批未确认专属技术报告，不误用Gemma3或架构论文日期 · 证据 research-r2/date-evidence.json · paper_first_submitted · 来源
+
+## microsoft/Phi-4-multimodal-instruct
+
+端侧多模态有限样本；仅来源审阅、未执行。精确身份：microsoft/Phi-4-multimodal-instruct；不证明通用手机控制能力。
+
+- ID / 类型：edge-phi4-multimodal-instruct / model
+- 生命周期：unknown
+- 版本：microsoft/Phi-4-multimodal-instruct
+- 核验：2026-10-29 · primary_sources_reviewed_not_executed
+- license：MIT; downstream media rights and dependencies require own review
+- 学习步骤（未执行）：先读模型卡核输入输出和限制
+- 学习步骤（未执行）：区分参数总量、effective/active及运行时精度
+- 学习步骤（未执行）：读许可及官方运行示例（本轮只读）
+- 学习步骤（未执行）：将实际环境/内存/延迟保持unknown，获授权后另设小样本验证
+- 注意：参数总量、主干、effective与active不是同一分母；官方自报不是独立实测。
+- 注意：公告、论文、可用上界及首次权重上传分别记录；未知不补日期。
+- 来源：https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+- 来源：https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
+- 来源：https://arxiv.org/abs/2503.01743
+- 来源：https://huggingface.co/microsoft/Phi-4-multimodal-instruct-onnx
+- 事件：announcement · 2025-02-26 · edge-phi4-multimodal-instruct · announced · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · announced · 来源 https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
+- 事件：documentation_update · 2025-02 · edge-phi4-multimodal-instruct · release_month · 精度 month · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · release_month · 来源 https://huggingface.co/microsoft/Phi-4-multimodal-instruct
+- 事件：documentation_update · 2025-02-26 · edge-phi4-multimodal-instruct · weights_available_by · 精度 day · 时区 未知 · 范围 截至此日可用的官方陈述，非首次上传证据 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明 公告称HF可用，精确首次权重commit未核验 · 证据 research-r2/date-evidence.json · weights_available_by · 来源 https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/
+- 事件：paper_submission · 2025-03-03 · edge-phi4-multimodal-instruct · paper_first_submitted · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · paper_first_submitted · 来源 https://arxiv.org/abs/2503.01743
+- 事件：paper_revision · 2025-03-07 · edge-phi4-multimodal-instruct · paper_v2 · 精度 day · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · paper_v2 · 来源 https://arxiv.org/abs/2503.01743
+- 事件：weights_release · 未知 / 待核验 · edge-phi4-multimodal-instruct · weights_first_uploaded · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明 未查实首个权重上传，不能用论文/公告/更新替代 · 证据 research-r2/date-evidence.json · weights_first_uploaded · 来源
+- 事件：documentation_update · 未知 / 待核验 · edge-phi4-multimodal-instruct · repo_first_public · 精度 unknown · 时区 未知 · 范围 精确模型相关事件；不外推家族全部版本 · 版本 microsoft/Phi-4-multimodal-instruct · 截至已可用（非首发） 无独立观察 · 说明  · 证据 research-r2/date-evidence.json · repo_first_public · 来源
+
 ## 历史报告成绩快照（非排行榜，非独立复现）
 
 ### GPT-4历史报告：MMLU
@@ -7887,9 +7992,14 @@ creative-indesign → design-c2pa
 - 来源 creative-gap-src-font-licensing-faq-independent：https://helpx.adobe.com/fonts/web/font-licensing/font-licensing.html · lines 116–117,128–130,137–152
 - 来源 design-src-c2pa：https://spec.c2pa.org/specifications/specifications/2.5/specs/C2PA_Specification.html · C2PA Specification 2.5: claims, assertions, signatures, validation
 
+以下实时语音段落中的全图数字仅指其封存的246节点历史阶段；当前端侧多模态阶段为250节点、151边、77目录记录。
+
 ## 实时语音模型专题（有限样本，未执行）
 完整可读版本表、输入输出、许可/硬件/费用与时间证据见 [实时语音学习页](realtime-audio.html) 和 [同源专题书稿](REALTIME_AUDIO.md)。
 旧12边知识图接纳章节中的242节点/72孤点/108弱分量仅是r1接纳阶段统计；本批零新边，当前全图246节点/151边/76孤点/112弱分量。
+
+## 端侧多模态有限样本
+精确身份、参数/许可边界及原始来源见 [来源范围说明](edge-multimodal/SOURCE_SCOPE.md)。18来源=17可读+1历史失败；24日期槽=15已知+9未知。本批零目录新增、零关系新增；来源审阅不是运行验证。
 
 ## 来源目录
 - design-src-figma · https://developers.figma.com/docs/figma-mcp-server/ · 核验 2026-10-28 · 仅核验公开文档；未登录、调用付费API、下载模型或运行第三方软件。
@@ -8265,6 +8375,24 @@ creative-indesign → design-c2pa
 - audio-src-gpt-current-card · https://developers.openai.com/api/docs/models/gpt-realtime-2.1 · 核验 2026-10-28 · 精确公开标识2.1，没有日期快照；text/audio双向image输入；无免费tier；定价和推理effort条件。
 - audio-src-gpt-guide · https://developers.openai.com/api/docs/guides/realtime · 核验 2026-10-28 · 指南2.1示例：WebRTC浏览器/WebSocket服务端；临时密钥、打断和轮次管理；独立后端的full-duplex另外指向GPT-Live。
 - audio-src-vox-paper-html · https://arxiv.org/html/2602.11298v3 · 核验 2026-10-28 · §3.2目标delay、§4实际部署开销、A.2双向流式转写传输；未复制评测题目。
+- edge-src-smol-card · https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct · 核验 2026-10-29 · 图像/多图/视频/文本入、文本出；500M标签；Apache-2.0权重；BF16 CUDA例程、decord视频预处理；官方称视频推理1.8GB GPU RAM，未列完整测量配置。
+- edge-src-smol-launch · https://huggingface.co/blog/smolvlm2 · 核验 2026-10-29 · 2025-02-20发布三种规模，声明模型已开放；500M视频模型；提供MLX Python/Swift路径，引用未量化社区转换件；iPhone应用为演示，不是通用控制。
+- edge-src-smol-paper · https://arxiv.org/abs/2504.05299 · 核验 2026-10-29 · 关联SmolVLM家族论文首次提交2025-04-07；不是该权重首次发布日期。
+- edge-src-fast-repo · https://github.com/apple-aiml-research/ml-fastvlm · 核验 2026-10-29 · Model Zoo明确0.5B stage2与stage3；另有stage3 Apple Silicon格式；PyTorch、导出、demo入口。代码与模型分开授权。
+- edge-src-fast-paper · https://arxiv.org/abs/2412.13303 · 核验 2026-10-29 · v1 2024-12-17，v2 2025-05-15。摘要0.5B是LLM大小；85倍TTFT为相对LLaVA-OneVision、1152×1152设定的官方自报，不是GUI完成时间。
+- edge-src-fast-license-code · https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE · 核验 2026-10-29 · Apple自定义软件许可，允许受条款约束的使用/修改/再分发，另有第三方声明；不能当作模型许可。
+- edge-src-fast-license-model · https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE_MODEL · 核验 2026-10-29 · Apple Machine Learning Research Model License：限非商业科研及学术开发；排除商业利用、产品开发、商业产品/服务用途，衍生模型亦受限制。
+- edge-src-fast-export · https://github.com/apple-aiml-research/ml-fastvlm/blob/main/model_export/README.md · 核验 2026-10-29 · 研究探索而非正式推荐；视觉编码器CoreML导出；补丁mlx-vlm；LLM支持8/4-bit量化，不等于整VLM全量同精度。
+- edge-src-fast-app · https://github.com/apple-aiml-research/ml-fastvlm/blob/main/app/README.md · 核验 2026-10-29 · 视觉问答demo声明iOS18.2+、macOS15.2+；Xcode构建，设备本地推理。未给全机型最低RAM。
+- edge-src-fast-highlight · https://machinelearning.apple.com/research/fast-vision-language-models · 核验 2026-10-29 · 2025-07-23研究介绍称代码/权重/demo可用；2025-09-22更新称HF MLX/CoreML件可用；二者不能当首发权重日。UI导航只是VLM潜在应用语境。
+- edge-src-fast-hf · https://huggingface.co/apple/FastVLM-0.5B · 核验 2026-10-29 · 官方仓库面板约0.8B params，BF16；未在本轮证实与repo stage3字节相同，不据此填stage3精确总量。
+- edge-src-gemma-card · https://huggingface.co/google/gemma-3n-E2B-it · 核验 2026-10-29 · launch版E2B IT，文本/图像/视频/音频入、文本出；raw6B，effective2B；Transformers≥4.53.0。公开模型卡可读，文件需登录同意Gemma许可，本轮未同意/访问文件。
+- edge-src-gemma-launch · https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/ · 核验 2026-10-29 · 2025-06-26完整发布入口与权重链接；正文E2B raw5B，HF作者正文6B；两者范围/版本是否相同待确认。effective2B指加速器驻留口径，不是MoE active。列AI Edge Gallery/LiteRT-LLM、MLX入口，不保证各端全模态等价。
+- edge-src-gemma-failed · https://ai.google.dev/gemma/docs/core/model_card_3n · 核验 2026-10-29 · web工具报URL不可访问；未重试、未绕过。其他公开官方页独立读取，不访问受限权重。
+- edge-src-phi-card · https://huggingface.co/microsoft/Phi-4-multimodal-instruct · 核验 2026-10-29 · 5.6B含主干/视觉/语音编码器和适配器；文本图像音频入、文本出；MIT；Python3.10、Transformers4.48.2例程及自定义代码；发布时间仅月精度2025-02。
+- edge-src-phi-launch · https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/ · 核验 2026-10-29 · 2025-02-26公告称Phi-4-multimodal已在HF等入口可用；5.6B官方自报；不以该日期证明权重首次上传时间。
+- edge-src-phi-paper · https://arxiv.org/abs/2503.01743 · 核验 2026-10-29 · Phi-4-Mini Technical Report包含multimodal与Mixture-of-LoRAs；v1 2025-03-03，v2 2025-03-07。
+- edge-src-phi-onnx · https://huggingface.co/microsoft/Phi-4-multimodal-instruct-onnx · 核验 2026-10-29 · 官方INT4 ONNX转换，CUDA及DirectML例程；CPU现成包未承诺，页称待续或自行转换；不能泛化成手机支持。
 
 ## 覆盖缺口
 - 未比较真实生成质量、成本、速度或生产部署效果

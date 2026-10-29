@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "record_count": 4,
+  "organization_count": 4,
+  "source_refs_resolve": true,
+  "canonical_files_checked": 877,
+  "canonical_changed": [],
+  "git_head": "11c74bc780688f4c489e710404e52789fe4a10b4",
+  "canonical_git_status": "",
+  "model_tests": "not run by design",
+  "ui_tests": "not applicable; no UI edits",
+  "source_record_count": 18,
+  "readable_source_count": 17,
+  "historical_failed_source_count": 1,
+  "date_event_slot_count": 24,
+  "known_date_count": 15,
+  "unknown_date_count": 9,
+  "revision": "r2",
+  "qa_basis": "../edge-multimodal-independent-qa-r1/REPORT.zh.md",
+  "r1_preserved": true,
+  "new_web_requests": 0
+}

@@ -52,6 +52,9 @@ def validate(data):
  return data
 
 def legacy_view(data):
+ if "edge_multimodal_registry" in data:
+  from edge_contract import legacy_view as edge_legacy
+  data=edge_legacy(data)
  validate(data)
  # Return the separately sealed stage only after full closed validation of live.
  return copy.deepcopy(baseline())

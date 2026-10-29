@@ -16,6 +16,7 @@ import benchmark_catalog
 import world_models
 import knowledge_graph_links
 import realtime_audio
+import edge_multimodal
 import audio_diagram
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -253,7 +254,9 @@ def book(data):
     lines+=['','## 关系索引（教学建议不代表历史因果）']
     for e in data['edges']: lines+=['- '+e['source']+' → '+e['type']+' → '+e['target']+' · '+str(e.get('verification_status',e.get('evidence_type','未核验')))+' · '+', '.join(e.get('source_ids',[]))]
     lines+=knowledge_graph_links.book(data)
+    lines += ["", "以下实时语音段落中的全图数字仅指其封存的246节点历史阶段；当前端侧多模态阶段为250节点、151边、77目录记录。"]
     lines+=realtime_audio.book(data)
+    lines += ["", "## 端侧多模态有限样本", "精确身份、参数/许可边界及原始来源见 [来源范围说明](edge-multimodal/SOURCE_SCOPE.md)。18来源=17可读+1历史失败；24日期槽=15已知+9未知。本批零目录新增、零关系新增；来源审阅不是运行验证。"]
     lines+=['','## 来源目录']
     for source in data['sources']: lines+=['- '+source['id']+' · '+source['url']+' · 核验 '+str(source.get('checked_at','未核验'))+' · '+str(source.get('evidence_scope',source.get('evidence_summary_zh',source.get('notes_zh','原始来源页面'))))]
     lines+=['','## 覆盖缺口']+[('- '+str(g)) for g in data['coverage_gaps']]
@@ -280,6 +283,8 @@ def build():
     data['vendor_catalog']=vendor_catalog.load(ROOT,data['nodes'])
     knowledge_graph_links.apply(data,ROOT)
     realtime_audio.apply(data,ROOT)
+    audio_stage=copy.deepcopy(data)
+    edge_multimodal.apply(data,ROOT)
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     import build_foundations
     build_foundations.render(ROOT)
@@ -302,7 +307,8 @@ def build():
     regional_office.publish(ROOT,out)
     creative_gaps.publish(ROOT,out,gap_registry,data['sources'])
     knowledge_graph_links.publish(ROOT,out,data)
-    realtime_audio.publish(ROOT,out,data)
+    realtime_audio.publish(ROOT,out,audio_stage)
+    edge_multimodal.publish(ROOT,out)
     audio_diagram.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)

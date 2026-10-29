@@ -1,0 +1,35 @@
+{
+  "schema_version": "edge-multimodal.registry.r1",
+  "admission_sha256": "0beca167e4ad56635d5110e1dbba78e167f52908ccf15bd5ea300e1017e7747c",
+  "node_ids": [
+    "edge-smolvlm2-500m-video-instruct",
+    "edge-fastvlm-05b-stage3",
+    "edge-gemma3n-e2b-it",
+    "edge-phi4-multimodal-instruct"
+  ],
+  "catalog_record_ids": [],
+  "new_edge_ids": [],
+  "summary_counts": {
+    "source_record_count": 18,
+    "readable_source_count": 17,
+    "historical_failed_source_count": 1,
+    "date_event_slot_count": 24,
+    "known_date_count": 15,
+    "unknown_date_count": 9
+  },
+  "execution_status": "never-run",
+  "scope_zh": "4模型/4组织有限样本，非全球全集、非排名；节点与厂商目录身份分开，本批目录仍77条。旧图接纳及实时语音统计仅描述各自固定历史阶段。18来源=17可读+1历史失败；24日期槽=15已知+9未知。",
+  "graph_statistics_current": {
+    "nodes": 250,
+    "edges": 151,
+    "isolated": 80,
+    "weak_components": 116,
+    "graph_scope": "D.nodes / D.edges only; undirected degree and weak components",
+    "excluded_links": [
+      "practice registry / learning_paths",
+      "AgentWork cross-site links / agentwork_links",
+      "source URLs / Markdown links / site navigation"
+    ],
+    "interpretation_zh": "内部图孤立不等于网页没有链接；边数不证明准确性提升或厂商集成。"
+  }
+}

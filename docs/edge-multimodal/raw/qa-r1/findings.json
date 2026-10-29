@@ -1,0 +1,53 @@
+{
+  "overall": "accept_research_with_minor_summary_revisions",
+  "not_publication_approval": true,
+  "accept": [
+    {
+      "model": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "decision": "accept_existing_bounded_claims"
+    },
+    {
+      "model": "fastvlm_0.5b_stage3",
+      "decision": "accept_existing_bounded_claims"
+    },
+    {
+      "model": "google/gemma-3n-E2B-it (launch, not preview)",
+      "decision": "accept_existing_bounded_claims"
+    },
+    {
+      "model": "microsoft/Phi-4-multimodal-instruct",
+      "decision": "accept_existing_bounded_claims"
+    }
+  ],
+  "revisions": [
+    {
+      "id": "R1",
+      "severity": "editorial",
+      "target": "source/date coverage summary",
+      "decision": "revise",
+      "change_zh": "统一表述为18个来源条目，其中17个成功重开官方公开正文、1个历史访问失败；24个日期事件槽位，其中15个有日期、9个unknown。不可写成18条已核验证据或24个已查实日期。"
+    },
+    {
+      "id": "R2",
+      "severity": "precision",
+      "target": "FastVLM license synopsis",
+      "decision": "revise",
+      "change_zh": "许可排除项应保留产品开发的独立限制，不将其缩窄成仅商业产品开发：非商业科研及学术开发范围内使用；排除商业利用、产品开发、商业产品或服务用途。此为条款摘要，非法律意见。",
+      "source": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/LICENSE_MODEL"
+    }
+  ],
+  "optional_enrichment": [
+    {
+      "model": "Gemma 3n",
+      "claim": "Launch-time audio encoder implementation processes clips up to 30 seconds; do not generalize to current all backends.",
+      "source": "https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/",
+      "locator": "Audio understanding, launch-time limitation"
+    },
+    {
+      "model": "Phi-4 multimodal",
+      "claim": "Model card separately lists text languages, vision English, audio eight languages; modality capability does not imply equal multilingual coverage.",
+      "source": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+      "locator": "Model Summary"
+    }
+  ]
+}

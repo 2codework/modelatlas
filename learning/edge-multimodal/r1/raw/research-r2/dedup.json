@@ -1,0 +1,42 @@
+{
+  "claimed_parent_head": "11c74bc780688f4c489e710404e52789fe4a10b4",
+  "local_git_head_status": "verified at canonical root; initial outer-directory command corrected",
+  "actual_nodes": 246,
+  "actual_catalog_records": 77,
+  "checks": [
+    {
+      "term": "smolvlm",
+      "hits": []
+    },
+    {
+      "term": "fastvlm",
+      "hits": []
+    },
+    {
+      "term": "gemma-3n",
+      "hits": []
+    },
+    {
+      "term": "gemma 3n",
+      "hits": []
+    },
+    {
+      "term": "phi-4-multimodal",
+      "hits": []
+    }
+  ],
+  "related_existing": [
+    {
+      "id": "global-oogle-gemma-4",
+      "title": "Gemma 4"
+    },
+    {
+      "id": "global-oogle-arxiv-2607-02770",
+      "title": "Gemma 4 Technical Report"
+    }
+  ],
+  "decision": "four exact candidates absent from nodes/catalog by term scan; Gemma4 is distinct, not merge target",
+  "scope": "read dist/data.json nodes + vendor_catalog and related raw research; no duplicate additions made",
+  "actual_git_head": "11c74bc780688f4c489e710404e52789fe4a10b4",
+  "docs_data_sha256": "2d55feb50ce42852031a03a1992d41a1cf37b237008bf4bdcc1b70582e856cc2"
+}
