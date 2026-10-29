@@ -156,7 +156,7 @@ test('Underlord has exactly one fixed safe optional video practice link with acc
  const blocks=nodes.filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut');assert.equal(blocks.length,1);
  const text=descendants(blocks[0]).map(n=>n.textContent||'').join(' '),links=descendants(blocks[0]).filter(n=>n.tag==='a');assert.equal(links.length,1);
  assert.equal(links[0].href,'https://2codework.github.io/agentwork/index.html?q=%E8%A7%86%E9%A2%91');assert.equal(links[0].target,'_blank');assert.equal(links[0].rel,'noopener noreferrer');
- for(const term of ['应用内剪辑 Agent','不是基础模型','90 秒英文合成输入','不是真人影片','未在产品实跑','没有已完成的 45 秒输出','听觉验收仍待实际试听','先试听','三条事实','第 1 步','账号','费用','恢复范围','实际授权'])assert.ok(text.includes(term),term);
+ for(const term of ['应用内剪辑 Agent','不是基础模型','90 秒英文合成输入','不是真人影片','未在产品实跑','没有已完成的 45 秒输出','听觉验收仍待实际试听','先试听','三条事实','第1步','账号','费用','第5步的影响范围','实际授权'])assert.ok(text.includes(term),term);
  assert.equal(descendants(blocks[0]).filter(n=>['script','iframe','audio','video','input','button'].includes(n.tag)).length,0);assert.equal(h.stored.size,0);
  assert.equal(title(h,'node'),nodeTitle('creative-underlord'));
 });
@@ -173,4 +173,12 @@ test('similar or hostile Underlord IDs never activate the optional video link or
   assert.equal(nodes.filter(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut').length,0,id);
   assert.equal(nodes.filter(n=>['img','script','iframe'].includes(n.tag)).length,0,id);
  }
+});
+
+test('Underlord correction points accounts to step 1 and recovery scope to step 5 with exact full paragraph',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=creative-underlord'),nodes=descendants(h.ids.get('detail'));
+ const box=nodes.find(n=>n.attrs?.['data-optional-practice']==='video-fact-preserving-cut');
+ const paragraphs=descendants(box).filter(n=>n.tag==='p');
+ assert.equal(paragraphs[1].textContent,'先试听素材，再核对三条事实与使用条件。打开后选择视频任务，从第1步核对账号和费用；遇到恢复操作，先看第5步的影响范围。按实际授权决定是否继续，不将文字检查当成成片验收。');
+ assert.equal(descendants(box).find(n=>n.tag==='a').href,'https://2codework.github.io/agentwork/index.html?q=%E8%A7%86%E9%A2%91');
 });
