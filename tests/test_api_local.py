@@ -117,3 +117,28 @@ class OptionalPractice(unittest.TestCase):
    P.render(r);f=r/'web/practice'/name;f.write_bytes(f.read_bytes()+b' ')
    with self.assertRaises(ValueError):P.publish(r,r/'dist')
    self.assertEqual(list((r/'dist').iterdir()),[])
+
+ def test_toc_uses_plain_heading_text_without_nested_citations(self):
+  class Nav(HTMLParser):
+   def __init__(self):super().__init__();self.in_nav=False;self.anchor_depth=0;self.entries=[];self.label='';self.href='';self.nested=False
+   def handle_starttag(self,t,a):
+    a=dict(a)
+    if t=='nav'and a.get('aria-label')=='本页步骤':self.in_nav=True
+    if self.in_nav and t=='a':
+     self.anchor_depth+=1;self.nested|=self.anchor_depth>1;self.label='';self.href=a.get('href')
+   def handle_data(self,d):
+    if self.in_nav and self.anchor_depth:self.label+=d
+   def handle_endtag(self,t):
+    if self.in_nav and t=='a':self.entries.append((self.href,self.label));self.anchor_depth-=1
+    if t=='nav':self.in_nav=False
+  for route in ['api','local']:
+   html=(ROOT/'web'/('practice-'+route+'.html')).read_text();n=Nav();n.feed(html)
+   self.assertFalse(n.nested);self.assertTrue(n.entries);self.assertEqual(n.anchor_depth,0)
+   self.assertTrue(all(href.startswith('#section-')for href,_ in n.entries))
+   for _,label in n.entries:self.assertNotRegex(label,r'\[(?:A|L)\d+|\]')
+   if route=='api':
+    self.assertIn('失败时怎么收手',[label for _,label in n.entries])
+    self.assertRegex(html,r'<h2 id="section-\d+" tabindex="-1">失败时怎么收手 \[<a href="#source-A8">A8</a>\]</h2>')
+ def test_plain_heading_never_renders_active_markup(self):
+  self.assertEqual(P.plain_heading('失败时怎么收手 [A8]'),'失败时怎么收手')
+  self.assertEqual(P.plain_heading('**查看** `状态` [官方](https://example.test) [L1,L2]'),'查看 状态 官方')

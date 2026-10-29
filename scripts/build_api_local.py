@@ -86,6 +86,12 @@ def inline(text,sources):
  out.append(h(text[end:]));result=''.join(out)
  return result
 
+def plain_heading(text):
+ # TOC anchors own navigation; never nest citation/external links inside them.
+ text=re.sub(r'\[(?:A|L)\d+(?:,(?:A|L)\d+)*\]','',text)
+ text=re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',text)
+ return text.replace('**','').replace('`','').strip()
+
 def code_block(text,cid,label='复制代码'):
  return '<div class="code-card"><pre id="'+cid+'"><code>'+h(text)+'</code></pre><button type="button" data-copy="'+cid+'">'+label+'</button><p id="'+cid+'-status" role="status"></p></div>'
 def markdown(text,sources,route,script_panel,insert_prefix):
@@ -136,7 +142,7 @@ def render(root):
   panel='<div class="script-download"><a class="primary-action" href="practice/'+script+'" download="'+script+'">下载 '+script+'（仅文件，不自动执行）</a><details><summary>查看并复制完整脚本</summary>'+code_block(raw[script].decode(),route+'-full-script','复制完整脚本')+'</details></div>'
   route_sources={k:v for k,v in sources.items()if k.startswith(prefix)}
   body,toc=markdown(raw[doc].decode(),route_sources,route,panel,insert)
-  nav=''.join('<a href="#'+ident+'">'+inline(title,sources)+'</a>'for ident,title in toc)
+  nav=''.join('<a href="#'+ident+'">'+h(plain_heading(title))+'</a>'for ident,title in toc)
   evidence='<details id="practice-evidence" class="sources"><summary>原始教程、官方依据与核验范围</summary><p>以下核验日是文档读取日期，不是软件发布日期。页面和脚本未替你运行；参考答案为作者编写，不是服务返回。</p><a href="practice/'+doc+'">下载原始教程</a><ul>'
   for sid,s in sources.items():
    if sid.startswith(prefix):evidence+='<li id="source-'+sid+'"><a href="'+h(s['url'])+'" target="_blank" rel="noopener noreferrer">'+sid+' · '+h(s['url'])+'</a><p>'+h(s['supports'])+'</p></li>'
