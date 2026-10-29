@@ -1,5 +1,5 @@
 {
-  "version": "modelatlas-practice-toc-fix-r1",
+  "version": "modelatlas-beginner-clarity-r1",
   "baseline_commit": "057bbd40f8be580c43f02e20c7957a17fa9f8178",
   "checked_at": "2026-10-29",
   "counts": {
@@ -10,11 +10,11 @@
     "view_nodes": 258
   },
   "verification": {
-    "python_tests": 444,
+    "python_tests": 449,
     "node_tests": 167,
     "mcp_tests": 18,
     "offline_mcp_cases": 12,
-    "browser": "not rerun for this candidate; root observed r59 TOC issue; all other key reading/copy/download flows nonblocking per root",
+    "browser": "not run for teaching additions; independent and root browser QA pending",
     "runtime_execution": "never-run; no client/API/model/install/Mac operation",
     "double_build_files": 689
   },
@@ -250,7 +250,7 @@
     "dist/knowledge-graph-links/raw/research-r2/statistics.json": "5b222f12efdfbe762df02e014b0183816618a7f869f0785c0aa61d23f2f6a6b0",
     "dist/knowledge-graph-links/raw/research-r2/validation.json": "6217fb3373f2c67996a09c9f10c17a20748640bdf4571c9ae5f8b72862fe61c5",
     "dist/learn.css": "1f84f940dc26f76c4fadf8e3457097a1e780473b65eaa51aa04a5e74ca79f698",
-    "dist/learn.html": "931e23a118f011b17abbbd3e07db392f15b57a3f846d55f2c94ccb83edd79822",
+    "dist/learn.html": "b706089473b769d386a3c454af6bb5195078e4db85f97bfecf6dbe09011bbbd4",
     "dist/learn.js": "0fa19ad8f8275d4030e2ab159363d30eda92285fbcf25f6ea2dbba29e0cedf1a",
     "dist/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "dist/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
@@ -595,7 +595,7 @@
     "docs/knowledge-graph-links/raw/research-r2/statistics.json": "5b222f12efdfbe762df02e014b0183816618a7f869f0785c0aa61d23f2f6a6b0",
     "docs/knowledge-graph-links/raw/research-r2/validation.json": "6217fb3373f2c67996a09c9f10c17a20748640bdf4571c9ae5f8b72862fe61c5",
     "docs/learn.css": "1f84f940dc26f76c4fadf8e3457097a1e780473b65eaa51aa04a5e74ca79f698",
-    "docs/learn.html": "931e23a118f011b17abbbd3e07db392f15b57a3f846d55f2c94ccb83edd79822",
+    "docs/learn.html": "b706089473b769d386a3c454af6bb5195078e4db85f97bfecf6dbe09011bbbd4",
     "docs/learn.js": "0fa19ad8f8275d4030e2ab159363d30eda92285fbcf25f6ea2dbba29e0cedf1a",
     "docs/learning/mcp/overlay.json": "65b51f88d5f371e92bc799b76ed2c04a6e629dae219137f4ac0f17a79cc33ade",
     "docs/learning/mcp/raw/README.md": "06a6b350077bd39e50bed3e9a6b5a78a845b05649ad1290b197b0c6c47f8b585",
@@ -1052,7 +1052,7 @@
     "scripts/benchmark_catalog.py": "da92553b04c01567ae5989081e3dca454eb1fc040415f9c0071528dd1f2a37e5",
     "scripts/build.py": "c6e54bb243a9646081825c9443bb9963564349d8e583a76422b9c91f44f332a1",
     "scripts/build_api_local.py": "59939249c8e651370ea74d67c3df19a5d2311eba3556ca3934828d52aeb49a3f",
-    "scripts/build_beginner.py": "0d0ea7251f46ad6f7a0b9e2cf8cbaf71f0fe56b204eca8727be51c4a73e8498b",
+    "scripts/build_beginner.py": "e1b1219a12c7fa13d2317f6e5789fe8bcb3efa5aeb0a32a45f3252ff639cab81",
     "scripts/build_connections.py": "19cff11dc80e714477710a3f761d760b9a59e1d1c256551b79421aed116413b1",
     "scripts/build_foundations.py": "0be2624fc27b7c8eaf484008c1c693aeaf4b2a43f28e287c8df2569668f90f27",
     "scripts/check_checkpoint.py": "288b01edc52bb77db3b3ef46f37ef2e24a9629e79c05edea8313a523208732eb",
@@ -1127,6 +1127,7 @@
     "tests/test_assistant_workspace.py": "8603a898eec90612e686eeefb8bcf1bed9b7462eefb36ee38937f13efef00f26",
     "tests/test_audio_diagram.py": "5caac7ab729fb92647bd0e1234ff1fa56cca717911410e3970a9ef7c882bd9b7",
     "tests/test_beginner.py": "33bb8897130f434f11c2347c71ac5c073e7e3306c397df3181d9ed1e78ea2953",
+    "tests/test_beginner_clarity.py": "7dc6cea87918e7c88f7bc4534807313ec274632490f7deedc64ec6f02ec77432",
     "tests/test_benchmark_catalog.py": "5c2c3df1f5e192f2994686e06e1b819d4751481d9b1cb92533491dfb89d3be4f",
     "tests/test_book_assets.py": "8f1696b0677f0d359bc6fb71c608a4e4c8a4d2964955f9d1bdb3423569b610a0",
     "tests/test_build.py": "d304b5b0333b25b014634afb356dda39b3b0ecd66e02b297f5435f58e9549bd4",
@@ -1171,7 +1172,7 @@
     "web/foundations.js": "c27040e75672543ebb0fb90a2ad7496bbe4d7b63291ef360a119b2dc8c76d8ca",
     "web/index.html": "5f84df31edba0e8b8b1ac891a7bf0dc186c1be9973569afa007ac20f03723f84",
     "web/learn.css": "1f84f940dc26f76c4fadf8e3457097a1e780473b65eaa51aa04a5e74ca79f698",
-    "web/learn.html": "7e2c23574fdaf5ee29d34be2e033f6cb67714b9841dc36977b6442b854403f10",
+    "web/learn.html": "efd7371becec324dda536955681aa4dd28ec146aa8983bc8743cd7d1f5f81c30",
     "web/learn.js": "0fa19ad8f8275d4030e2ab159363d30eda92285fbcf25f6ea2dbba29e0cedf1a",
     "web/practice/FIRST_API.zh-CN.md": "70511698541247c4612f60810167929fb0a939c0a5658cb279251d72842fa463",
     "web/practice/FIRST_LOCAL.zh-CN.md": "da2f9b83b8031a7907dabc2e56772a6443d047f9d908e980b89864abb6b7df4c",
@@ -1189,5 +1190,9 @@
     "web/topic.js": "45cdf68e7d81c18d9d650b80c10ce94ba9541a57cb76d8d46a0fdc8bca5b6411",
     "web/world-model-learning.svg": "312f3904766a1a54c1bdc46d612086412fb984195133ccda8df2221e7125fe6d",
     "world-model-learning.svg": "312f3904766a1a54c1bdc46d612086412fb984195133ccda8df2221e7125fe6d"
+  },
+  "depends_on": {
+    "candidate": "modelatlas-practice-toc-fix-r1",
+    "validation_sha256": "a27acf5f624211dccb3e4931a96bc9bc01eaf7fcb722e883d4df176c424dc746"
   }
 }
