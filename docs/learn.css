@@ -4,3 +4,14 @@
 @media print{header,aside,.skip,.lesson-next,button,#lesson-status,#connection-status{display:none!important}.learn-layout{display:block;padding:0}article{break-before:page;border:0;padding:0}[data-lesson][hidden],[data-route][hidden]{display:block!important}body{background:#fff}details{break-inside:avoid}}
 /* Keep live navigation announcements available without repeating the visible chapter label. */
 .reader-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* Original conceptual diagram: readable ordered text, not a product architecture. */
+.entry-diagram{margin:24px 0;padding:20px;background:#f3f7f5;border:1px solid var(--line);border-radius:10px;min-width:0}
+.entry-diagram figcaption{font-size:19px;font-weight:750;line-height:1.5}
+.entry-route h2{font-size:16px;line-height:1.6;margin:20px 0 12px;color:var(--ink)}
+.entry-route ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;list-style-position:inside;margin:0;padding:0}
+.entry-route li{position:relative;min-width:0;padding:10px 8px;background:white;border:1px solid var(--line);border-radius:6px;overflow-wrap:anywhere;font-size:14px;line-height:1.6}
+.entry-route li::marker{color:var(--green);font-weight:700}
+.route-arrow{position:absolute;right:-17px;top:50%;transform:translateY(-50%);color:var(--green);font-weight:400}
+.entry-diagram-note,.entry-diagram-scope{font-size:14px;line-height:1.7;margin:18px 0 0;color:var(--muted)}
+@media(max-width:620px){.entry-diagram{padding:16px}.entry-route ol{grid-template-columns:minmax(0,1fr);gap:24px}.entry-route li{font-size:16px;padding:10px 12px}.route-arrow{right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%) rotate(90deg)}}
