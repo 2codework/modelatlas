@@ -315,6 +315,10 @@ def build():
     out=ROOT/'dist'; out.mkdir(exist_ok=True)
     import build_foundations
     build_foundations.render(ROOT)
+    import build_beginner
+    build_beginner.render(ROOT)
+    import build_connections
+    build_connections.render(ROOT)
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')

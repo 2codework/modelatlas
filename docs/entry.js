@@ -1,0 +1,2 @@
+/* Default editorial entry; query and legacy hash routes remain the reference library. */
+(function(){'use strict';function refresh(){const home=!location.search&&(!location.hash||location.hash==='#main'||location.hash==='#start-here');document.body.classList.toggle('beginner-home',home);const entry=document.getElementById('start-here');if(entry)entry.hidden=!home;}globalThis.ModelAtlasEntry={refresh};refresh();window.addEventListener('popstate',refresh);window.addEventListener('hashchange',refresh);})();
