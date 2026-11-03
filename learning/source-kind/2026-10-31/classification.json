@@ -1,0 +1,116 @@
+{
+  "schema_version": "source-kind-classification.v1",
+  "scope": "Presentation-only source genre classification, not full content revalidation, availability verification or product execution. Canonical source records and original checked_at dates are unchanged.",
+  "match_policy": "Exact source ID and exact URL; apply only when kind and source_type are absent or empty. Existing explicit fields, including unknown types, take precedence.",
+  "records": [
+    {
+      "source_id": "assistant-src-cl-cowork",
+      "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork",
+      "kind": "official_docs",
+      "reason": "Existing title, availability/how-tasks-run/requirements locator and accepted official_page_read QA identify a usage help document.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "existing_metadata",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "assistant-src-p-pro",
+      "url": "https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro",
+      "kind": "official_docs",
+      "reason": "Existing question-title, Research Mode/Create files and apps locator and official_page_read QA identify product help documentation.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "existing_metadata",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "cgw-src-inputs",
+      "url": "https://learn.chatgpt.com/docs/image-inputs",
+      "kind": "official_docs",
+      "reason": "Fresh primary page identifies itself as ChatGPT Learn documentation, with Docs navigation and Image inputs title; prior metadata describes image input usage.",
+      "source_observation_date": "2026-10-31",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "fresh_primary_page",
+      "primary_page_reopened_for_genre": true,
+      "legacy_title": "cgw-src-inputs",
+      "display_title_zh": "ChatGPT 图像输入文档",
+      "display_title_policy": "Only replaces this exact legacy shorthand after the same identity and explicit-type guards. Original record remains unchanged."
+    },
+    {
+      "source_id": "course-skills",
+      "url": "https://agentskills.io/specification",
+      "kind": "specification",
+      "reason": "Canonical data/research/systems.json /sources/26 explicitly types same URL as specification (sys-src-skills). Broad display group official_docs is proposed only with specification subtype retained.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "canonical_typed_metadata",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "edge-src-fast-export",
+      "url": "https://github.com/apple-aiml-research/ml-fastvlm/blob/main/model_export/README.md",
+      "kind": "official_docs",
+      "reason": "Fresh specific README contains Model Export heading and Export Vision Encoder/Export VLM instructions. Author-maintained technical documentation; its research-only/not official recommendation disclaimer must remain.",
+      "source_observation_date": "2026-10-31",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "fresh_primary_page",
+      "primary_page_reopened_for_genre": true,
+      "legacy_title": "fast-export",
+      "display_title_zh": "FastVLM 模型导出说明",
+      "display_title_policy": "Only replaces this exact legacy shorthand after the same identity and explicit-type guards. Original record remains unchanged."
+    },
+    {
+      "source_id": "edge-src-smol-card",
+      "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "kind": "official_model_card",
+      "reason": "Fresh page explicitly labels Model card and contains Model Summary, Uses, Evaluation, License and Training Data sections.",
+      "source_observation_date": "2026-10-31",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "fresh_primary_page",
+      "primary_page_reopened_for_genre": true,
+      "legacy_title": "smol-card",
+      "display_title_zh": "SmolVLM2-500M-Video-Instruct 官方模型卡",
+      "display_title_policy": "Only replaces this exact legacy shorthand after the same identity and explicit-type guards. Original record remains unchanged."
+    },
+    {
+      "source_id": "music-src-musicgen",
+      "url": "https://github.com/facebookresearch/audiocraft/blob/main/model_cards/MUSICGEN_MODEL_CARD.md",
+      "kind": "official_model_card",
+      "reason": "Canonical source title explicitly MusicGen model card; Model details / License locator confirms card structure.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "canonical_explicit_title",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "office-src-lindy-home",
+      "url": "https://docs.lindy.ai/",
+      "kind": "official_docs",
+      "reason": "Canonical evidence explicitly official_documentation, with What is Lindy? title; no execution verification implied.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "canonical_typed_metadata",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "r2-audacity-spectral",
+      "url": "https://manual.audacityteam.org/man/spectral_selection.html",
+      "kind": "official_docs",
+      "reason": "Canonical record explicitly names Development Manual version and spectral-selection functionality; classify manual documentation, not research paper.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "existing_metadata",
+      "primary_page_reopened_for_genre": false
+    },
+    {
+      "source_id": "regional-src-bailian-faq",
+      "url": "https://docs.agent.bailian.aliyun.com/zh/resources/faq",
+      "kind": "official_docs",
+      "reason": "Canonical title explicitly Agent Studio FAQ, publisher official and source opened; supports official help documentation.",
+      "source_observation_date": "2026-10-28",
+      "classification_reviewed_at": "2026-10-31",
+      "review_basis": "existing_metadata",
+      "primary_page_reopened_for_genre": false
+    }
+  ]
+}

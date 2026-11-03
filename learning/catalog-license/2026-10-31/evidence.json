@@ -1,0 +1,591 @@
+{
+  "schema": "modelatlas.catalog-license-evidence.v1",
+  "checked_at": "2026-10-31",
+  "scope": "五条原目录身份对应的权重许可声明审阅；非法律意见、商业用途许可或全球覆盖证明。",
+  "method": "先核对官方公开权重文件列表，再分别阅读精确检查点模型卡及许可文本。未下载权重、执行模型或验证下载门槛。",
+  "rows": [
+    {
+      "guard": {
+        "id": "global-istral-mistral-large-4",
+        "title": "Mistral Large 4",
+        "exact_id": null,
+        "entity_type": "model_family",
+        "version": "26.10",
+        "access": "open_weights_documented",
+        "provider": "Mistral",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.mistral.ai/models"
+      ],
+      "checked_at": "2026-10-31",
+      "checkpoint": "mistralai/Mistral-Large-4-1T-A52B",
+      "license_name": "Mistral Ecosystem Open-Weight License",
+      "declaration_status": "已阅读该检查点官方模型卡的许可声明",
+      "text_status": "已阅读该仓库许可全文",
+      "scope_note": "仅核对 1T-A52B 检查点；目录本身为 26.10 家族记录，不将本结论外推至所有变体。自定义许可含 MaaS 条款与例外，不等于普通 MIT。",
+      "links": [
+        {
+          "label": "官方模型卡声明",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+        },
+        {
+          "label": "仓库许可全文",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE"
+        },
+        {
+          "label": "官方权重文件列表（未下载）",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/tree/main"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-21-jamba2-3b",
+        "title": "Jamba2 3B",
+        "exact_id": null,
+        "entity_type": "model_variant",
+        "version": "2",
+        "access": "open_weights_documented",
+        "provider": "AI21",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models",
+        "https://docs.ai21.com/docs/model-availability-across-platforms"
+      ],
+      "checked_at": "2026-10-31",
+      "checkpoint": "ai21labs/AI21-Jamba2-3B",
+      "license_name": "Apache License 2.0",
+      "declaration_status": "已阅读该检查点官方模型卡的许可声明",
+      "text_status": "已阅读该仓库许可全文",
+      "scope_note": "仅适用于 Jamba2 3B，不外推至 Mini、1.7 或 Reasoning 3B。",
+      "links": [
+        {
+          "label": "官方模型卡声明",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B"
+        },
+        {
+          "label": "仓库许可全文",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/blob/main/LICENSE.txt"
+        },
+        {
+          "label": "官方权重文件列表（未下载）",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/tree/main"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-think-dpo",
+        "title": "allenai/Olmo-3-7B-Think-DPO",
+        "exact_id": "allenai/Olmo-3-7B-Think-DPO",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 DPO",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "checked_at": "2026-10-31",
+      "checkpoint": "allenai/Olmo-3-7B-Think-DPO",
+      "license_name": "Apache License 2.0",
+      "declaration_status": "已阅读该检查点官方模型卡的许可声明",
+      "text_status": "已阅读 Apache-2.0 标准文本；该检查点文件列表未列单独 LICENSE 文件",
+      "scope_note": "模型卡另有研究／教育用途说明并链接 Ai2 使用指南；两者适用关系未作法律判断。",
+      "links": [
+        {
+          "label": "官方模型卡声明",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO"
+        },
+        {
+          "label": "Apache-2.0 标准文本",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        },
+        {
+          "label": "官方权重文件列表（未下载）",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO/tree/main"
+        },
+        {
+          "label": "Ai2 使用指南",
+          "url": "https://allenai.org/responsible-use"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-think",
+        "title": "allenai/Olmo-3-7B-Think",
+        "exact_id": "allenai/Olmo-3-7B-Think",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 RLVR",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "checked_at": "2026-10-31",
+      "checkpoint": "allenai/Olmo-3-7B-Think",
+      "license_name": "Apache License 2.0",
+      "declaration_status": "已阅读该检查点官方模型卡的许可声明",
+      "text_status": "已阅读 Apache-2.0 标准文本；该检查点文件列表未列单独 LICENSE 文件",
+      "scope_note": "模型卡另有研究／教育用途说明并链接 Ai2 使用指南；两者适用关系未作法律判断。",
+      "links": [
+        {
+          "label": "官方模型卡声明",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think"
+        },
+        {
+          "label": "Apache-2.0 标准文本",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        },
+        {
+          "label": "官方权重文件列表（未下载）",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think/tree/main"
+        },
+        {
+          "label": "Ai2 使用指南",
+          "url": "https://allenai.org/responsible-use"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-instruct",
+        "title": "allenai/Olmo-3-7B-Instruct",
+        "exact_id": "allenai/Olmo-3-7B-Instruct",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 RLVR",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://huggingface.co/allenai/Olmo-3-1025-7B",
+        "https://docs.allenai.org/models/olmo/index.html"
+      ],
+      "checked_at": "2026-10-31",
+      "checkpoint": "allenai/Olmo-3-7B-Instruct",
+      "license_name": "Apache License 2.0",
+      "declaration_status": "已阅读该检查点官方模型卡的许可声明",
+      "text_status": "已阅读 Apache-2.0 标准文本；该检查点文件列表未列单独 LICENSE 文件",
+      "scope_note": "模型卡另有研究／教育用途说明并链接 Ai2 使用指南；两者适用关系未作法律判断。",
+      "links": [
+        {
+          "label": "官方模型卡声明",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct"
+        },
+        {
+          "label": "Apache-2.0 标准文本",
+          "url": "https://www.apache.org/licenses/LICENSE-2.0"
+        },
+        {
+          "label": "官方权重文件列表（未下载）",
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct/tree/main"
+        },
+        {
+          "label": "Ai2 使用指南",
+          "url": "https://allenai.org/responsible-use"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "catalog_id": "global-istral-mistral-large-4",
+      "guard": {
+        "id": "global-istral-mistral-large-4",
+        "title": "Mistral Large 4",
+        "exact_id": null,
+        "entity_type": "model_family",
+        "version": "26.10",
+        "access": "open_weights_documented",
+        "provider": "Mistral",
+        "checked_at": "2026-10-28"
+      },
+      "checked_at": "2026-10-31",
+      "applicability": "applicable",
+      "applicability_meaning": "Official declaration applies to this model/checkpoint; not a legal clearance for any proposed use.",
+      "verified_repository": "mistralai/Mistral-Large-4-1T-A52B",
+      "repository_revision": "main (mutable; not an immutable weight hash)",
+      "access": {
+        "status": "public_weight_files_listed",
+        "evidence_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/tree/main",
+        "download_tested": false,
+        "gating_note": "Public card and file listing readable without signing in; actual weight download and any download-time gate not tested."
+      },
+      "license": {
+        "declared_name": "Mistral Ecosystem Open-Weight License",
+        "spdx_id": null,
+        "declaration_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+        "full_text_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE",
+        "full_text_review": "model_repository_license_read",
+        "scope": "Weights of mistralai/Mistral-Large-4-1T-A52B on observed main; do not extend to unrelated checkpoints or service terms.",
+        "version": "2026 attribution; no separate license version number shown",
+        "tiny_excerpt": "including the model weights, parameters, configuration files",
+        "text_locator": "LICENSE lines 274–291 in reviewed web extraction; sections 1–3"
+      },
+      "sources": [
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+          "kind": "official_exact_model_card",
+          "supports": [
+            "identity",
+            "model_license_declaration"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/tree/main",
+          "kind": "official_repository_file_listing",
+          "supports": [
+            "public_weight_files"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE",
+          "kind": "license_text",
+          "supports": [
+            "license_text"
+          ]
+        },
+        {
+          "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+          "kind": "official_catalog",
+          "supports": [
+            "family_version_26.10",
+            "license_label"
+          ]
+        }
+      ],
+      "caveats": [
+        "No weights downloaded, inference run, API call, credentials, or publishing.",
+        "Observed main and short displayed commit references do not prove immutable model artifacts.",
+        "Original catalog checked_at and release dates must not be rewritten by this review.",
+        "Custom license, not plain MIT or automatic open-source classification. Section 2 applies to MaaS businesses including affiliates; section 3 contains exceptions. Do not replace text with a blanket commercial-use claim.",
+        "Catalog is family/version 26.10, while direct license check is exact 1T-A52B checkpoint; other variants not audited.",
+        "Existing monthly exact record names this license but earlier full-text recheck failed; this later review succeeds and should remain separately dated."
+      ],
+      "ui_note_zh": "权重许可声明：Mistral Ecosystem Open-Weight License；已读该检查点许可全文，含 MaaS 条款，请按具体用途阅读原文。",
+      "observed_tree_short_commit": "f12dabd",
+      "observed_license_short_commit": "9bc5357"
+    },
+    {
+      "catalog_id": "global-21-jamba2-3b",
+      "guard": {
+        "id": "global-21-jamba2-3b",
+        "title": "Jamba2 3B",
+        "exact_id": null,
+        "entity_type": "model_variant",
+        "version": "2",
+        "access": "open_weights_documented",
+        "provider": "AI21",
+        "checked_at": "2026-10-28"
+      },
+      "checked_at": "2026-10-31",
+      "applicability": "applicable",
+      "applicability_meaning": "Official declaration applies to this model/checkpoint; not a legal clearance for any proposed use.",
+      "verified_repository": "ai21labs/AI21-Jamba2-3B",
+      "repository_revision": "main (mutable; not an immutable weight hash)",
+      "access": {
+        "status": "public_weight_files_listed",
+        "evidence_url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/tree/main",
+        "download_tested": false,
+        "gating_note": "Public card and file listing readable without signing in; actual weight download and any download-time gate not tested."
+      },
+      "license": {
+        "declared_name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "declaration_url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B",
+        "full_text_url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/blob/main/LICENSE.txt",
+        "full_text_review": "model_repository_license_read",
+        "scope": "Weights of ai21labs/AI21-Jamba2-3B on observed main; do not extend to unrelated checkpoints or service terms.",
+        "version": "2.0, January 2004",
+        "tiny_excerpt": "Apache License / Version 2.0, January 2004",
+        "text_locator": "LICENSE.txt lines 214–414; copyright AI21 Labs 2026"
+      },
+      "sources": [
+        {
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B",
+          "kind": "official_exact_model_card",
+          "supports": [
+            "identity",
+            "model_license_declaration"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/tree/main",
+          "kind": "official_repository_file_listing",
+          "supports": [
+            "public_weight_files"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba2-3B/blob/main/LICENSE.txt",
+          "kind": "license_text",
+          "supports": [
+            "license_text"
+          ]
+        },
+        {
+          "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+          "kind": "official_catalog",
+          "supports": [
+            "Jamba2_3B_identity",
+            "self_deployment"
+          ]
+        },
+        {
+          "url": "https://docs.ai21.com/docs/model-availability-across-platforms",
+          "kind": "official_catalog",
+          "supports": [
+            "Jamba2_3B_identity",
+            "self_deployment"
+          ]
+        }
+      ],
+      "caveats": [
+        "No weights downloaded, inference run, API call, credentials, or publishing.",
+        "Observed main and short displayed commit references do not prove immutable model artifacts.",
+        "Original catalog checked_at and release dates must not be rewritten by this review.",
+        "Not Jamba2 Mini, Jamba 1.7, or AI21-Jamba-Reasoning-3B. Apache declaration is exact-model evidence, not inherited from a code repository."
+      ],
+      "observed_tree_short_commit": "525c6c8",
+      "observed_license_short_commit": "525c6c8",
+      "ui_note_zh": "权重许可声明：Apache-2.0；已读 AI21-Jamba2-3B 仓库 LICENSE.txt。未实际下载或运行。"
+    },
+    {
+      "catalog_id": "global-i2-allenai-olmo-3-7b-think-dpo",
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-think-dpo",
+        "title": "allenai/Olmo-3-7B-Think-DPO",
+        "exact_id": "allenai/Olmo-3-7B-Think-DPO",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 DPO",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "checked_at": "2026-10-31",
+      "applicability": "applicable",
+      "applicability_meaning": "Official declaration applies to this model/checkpoint; not a legal clearance for any proposed use.",
+      "verified_repository": "allenai/Olmo-3-7B-Think-DPO",
+      "repository_revision": "main (mutable; not an immutable weight hash)",
+      "access": {
+        "status": "public_weight_files_listed",
+        "evidence_url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO/tree/main",
+        "download_tested": false,
+        "gating_note": "Public card and file listing readable without signing in; actual weight download and any download-time gate not tested."
+      },
+      "license": {
+        "declared_name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "declaration_url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO",
+        "full_text_url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "full_text_review": "standard_Apache_2_0_text_read; exact_model_card_declaration_read; no_model_repository_LICENSE_listed",
+        "scope": "Weights of allenai/Olmo-3-7B-Think-DPO on observed main; do not extend to unrelated checkpoints or service terms.",
+        "version": "2.0, January 2004",
+        "tiny_excerpt": "This model is licensed under Apache 2.0.",
+        "text_locator": "Exact model card: Model Description and License sections"
+      },
+      "sources": [
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO",
+          "kind": "official_exact_model_card",
+          "supports": [
+            "identity",
+            "model_license_declaration"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think-DPO/tree/main",
+          "kind": "official_repository_file_listing",
+          "supports": [
+            "public_weight_files"
+          ]
+        },
+        {
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "kind": "license_text",
+          "supports": [
+            "license_text"
+          ]
+        },
+        {
+          "url": "https://allenai.org/responsible-use",
+          "kind": "official_linked_use_guidelines",
+          "supports": [
+            "linked_usage_caveat"
+          ]
+        }
+      ],
+      "caveats": [
+        "No weights downloaded, inference run, API call, credentials, or publishing.",
+        "Observed main and short displayed commit references do not prove immutable model artifacts.",
+        "Original catalog checked_at and release dates must not be rewritten by this review.",
+        "Exact model card also states research/educational intent and links Ai2 Responsible Use Guidelines (page updated June 2024). Preserve both; their legal interaction is not resolved here.",
+        "Current canonical source points to base Olmo-3-1025-7B; do not derive stage-specific license from that base. This review uses exact post-training checkpoint instead.",
+        "The public files listing did not list a separate LICENSE; standard Apache text is not being misrepresented as a license file shipped inside this checkpoint."
+      ],
+      "observed_tree_short_commit": "7b18bf9",
+      "ui_note_zh": "权重许可声明：Apache-2.0（该检查点模型卡）；已读标准许可文本。模型卡另链接 Ai2 使用指南，适用关系未作法律判断。"
+    },
+    {
+      "catalog_id": "global-i2-allenai-olmo-3-7b-think",
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-think",
+        "title": "allenai/Olmo-3-7B-Think",
+        "exact_id": "allenai/Olmo-3-7B-Think",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 RLVR",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "checked_at": "2026-10-31",
+      "applicability": "applicable",
+      "applicability_meaning": "Official declaration applies to this model/checkpoint; not a legal clearance for any proposed use.",
+      "verified_repository": "allenai/Olmo-3-7B-Think",
+      "repository_revision": "main (mutable; not an immutable weight hash)",
+      "access": {
+        "status": "public_weight_files_listed",
+        "evidence_url": "https://huggingface.co/allenai/Olmo-3-7B-Think/tree/main",
+        "download_tested": false,
+        "gating_note": "Public card and file listing readable without signing in; actual weight download and any download-time gate not tested."
+      },
+      "license": {
+        "declared_name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "declaration_url": "https://huggingface.co/allenai/Olmo-3-7B-Think",
+        "full_text_url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "full_text_review": "standard_Apache_2_0_text_read; exact_model_card_declaration_read; no_model_repository_LICENSE_listed",
+        "scope": "Weights of allenai/Olmo-3-7B-Think on observed main; do not extend to unrelated checkpoints or service terms.",
+        "version": "2.0, January 2004",
+        "tiny_excerpt": "This model is licensed under Apache 2.0.",
+        "text_locator": "Exact model card: Model Description and License sections"
+      },
+      "sources": [
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think",
+          "kind": "official_exact_model_card",
+          "supports": [
+            "identity",
+            "model_license_declaration"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Think/tree/main",
+          "kind": "official_repository_file_listing",
+          "supports": [
+            "public_weight_files"
+          ]
+        },
+        {
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "kind": "license_text",
+          "supports": [
+            "license_text"
+          ]
+        },
+        {
+          "url": "https://allenai.org/responsible-use",
+          "kind": "official_linked_use_guidelines",
+          "supports": [
+            "linked_usage_caveat"
+          ]
+        }
+      ],
+      "caveats": [
+        "No weights downloaded, inference run, API call, credentials, or publishing.",
+        "Observed main and short displayed commit references do not prove immutable model artifacts.",
+        "Original catalog checked_at and release dates must not be rewritten by this review.",
+        "Exact model card also states research/educational intent and links Ai2 Responsible Use Guidelines (page updated June 2024). Preserve both; their legal interaction is not resolved here.",
+        "Current canonical source points to base Olmo-3-1025-7B; do not derive stage-specific license from that base. This review uses exact post-training checkpoint instead.",
+        "The public files listing did not list a separate LICENSE; standard Apache text is not being misrepresented as a license file shipped inside this checkpoint."
+      ],
+      "observed_tree_short_commit": "d97e442",
+      "ui_note_zh": "权重许可声明：Apache-2.0（该检查点模型卡）；已读标准许可文本。模型卡另链接 Ai2 使用指南，适用关系未作法律判断。"
+    },
+    {
+      "catalog_id": "global-i2-allenai-olmo-3-7b-instruct",
+      "guard": {
+        "id": "global-i2-allenai-olmo-3-7b-instruct",
+        "title": "allenai/Olmo-3-7B-Instruct",
+        "exact_id": "allenai/Olmo-3-7B-Instruct",
+        "entity_type": "open_weight_checkpoint",
+        "version": "3 RLVR",
+        "access": "open_weights",
+        "provider": "Ai2",
+        "checked_at": "2026-10-28"
+      },
+      "checked_at": "2026-10-31",
+      "applicability": "applicable",
+      "applicability_meaning": "Official declaration applies to this model/checkpoint; not a legal clearance for any proposed use.",
+      "verified_repository": "allenai/Olmo-3-7B-Instruct",
+      "repository_revision": "main (mutable; not an immutable weight hash)",
+      "access": {
+        "status": "public_weight_files_listed",
+        "evidence_url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct/tree/main",
+        "download_tested": false,
+        "gating_note": "Public card and file listing readable without signing in; actual weight download and any download-time gate not tested."
+      },
+      "license": {
+        "declared_name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "declaration_url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+        "full_text_url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "full_text_review": "standard_Apache_2_0_text_read; exact_model_card_declaration_read; no_model_repository_LICENSE_listed",
+        "scope": "Weights of allenai/Olmo-3-7B-Instruct on observed main; do not extend to unrelated checkpoints or service terms.",
+        "version": "2.0, January 2004",
+        "tiny_excerpt": "This model is licensed under Apache 2.0.",
+        "text_locator": "Exact model card: Model Description and License sections"
+      },
+      "sources": [
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+          "kind": "official_exact_model_card",
+          "supports": [
+            "identity",
+            "model_license_declaration"
+          ]
+        },
+        {
+          "url": "https://huggingface.co/allenai/Olmo-3-7B-Instruct/tree/main",
+          "kind": "official_repository_file_listing",
+          "supports": [
+            "public_weight_files"
+          ]
+        },
+        {
+          "url": "https://www.apache.org/licenses/LICENSE-2.0",
+          "kind": "license_text",
+          "supports": [
+            "license_text"
+          ]
+        },
+        {
+          "url": "https://allenai.org/responsible-use",
+          "kind": "official_linked_use_guidelines",
+          "supports": [
+            "linked_usage_caveat"
+          ]
+        }
+      ],
+      "caveats": [
+        "No weights downloaded, inference run, API call, credentials, or publishing.",
+        "Observed main and short displayed commit references do not prove immutable model artifacts.",
+        "Original catalog checked_at and release dates must not be rewritten by this review.",
+        "Exact model card also states research/educational intent and links Ai2 Responsible Use Guidelines (page updated June 2024). Preserve both; their legal interaction is not resolved here.",
+        "Current canonical source points to base Olmo-3-1025-7B; do not derive stage-specific license from that base. This review uses exact post-training checkpoint instead.",
+        "The public files listing did not list a separate LICENSE; standard Apache text is not being misrepresented as a license file shipped inside this checkpoint."
+      ],
+      "observed_tree_short_commit": "6e5971d",
+      "ui_note_zh": "权重许可声明：Apache-2.0（该检查点模型卡）；已读标准许可文本。模型卡另链接 Ai2 使用指南，适用关系未作法律判断。"
+    }
+  ]
+}

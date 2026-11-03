@@ -1,0 +1,146 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-01",
+  "scope": "Three reviewed non-weight historical events. Separate from weights admission; no global-completeness or execution claim.",
+  "events": [
+    {
+      "provider": "DeepSeek",
+      "checked_at": "2026-11-01",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "id": "deepseek-prover-v2-paper-revision-2025-07-18",
+      "kind": "paper_revision",
+      "title": {
+        "zh": "DeepSeek-Prover-V2 论文 v2 修订",
+        "en": "DeepSeek-Prover-V2 paper v2 revision"
+      },
+      "version": "arXiv:2504.21801v2",
+      "date": "2025-07-18",
+      "timestamp_utc": "2025-07-18T08:20:23Z",
+      "api_alias": null,
+      "first_paper_submission": "2025-04-30",
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2504.21801v2",
+          "kind": "paper_revision",
+          "date": "2025-07-18",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "summary": {
+        "zh": "原论文版本记录显示 v2 于 2025-07-18 08:20:23 UTC 修订；v1 首次提交为 2025-04-30 16:57:48 UTC。",
+        "en": "The original version history records v2 on 2025-07-18 at 08:20:23 UTC, following v1 submitted on 2025-04-30 at 16:57:48 UTC."
+      },
+      "note": {
+        "zh": "这是论文修订，不是七月模型、代码或权重首发。权重首次公开日与许可适用性未由本事件确认；没有运行模型或复现论文评测。",
+        "en": "This is a paper revision, not a July model, code or weights launch. This event does not establish first-public weights dates or license applicability; no model or paper evaluation was run."
+      },
+      "context_sources": []
+    },
+    {
+      "provider": "DeepSeek",
+      "checked_at": "2026-11-01",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "id": "deepseek-v4-pro-ga-api-2026-08-13",
+      "kind": "api_ga_announcement",
+      "title": {
+        "zh": "DeepSeek-V4-Pro 正式版服务部署公告",
+        "en": "DeepSeek-V4-Pro GA service deployment announcement"
+      },
+      "version": "DeepSeek-V4-Pro GA (historical API alias)",
+      "date": "2026-08-13",
+      "timestamp_utc": null,
+      "api_alias": "deepseek-v4-pro",
+      "first_paper_submission": null,
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news260813/",
+          "kind": "api_ga_announcement",
+          "date": "2026-08-13",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "summary": {
+        "zh": "官方日期导航及公告记载正式版在 App、Web 与 API 推出。事件日为 2026-08-13，时刻与时区未登记。",
+        "en": "The dated official announcement records GA availability on App, Web and API on 2026-08-13; the event time and timezone are not recorded."
+      },
+      "note": {
+        "zh": "不是该家族首次 API 上线或权重发布。2026-08-16 16:00 UTC 是价格生效时间，不是此事件日。deepseek-v4-pro 是调用别名，不是固定模型检查点；当前精确路由未调用验证，地区资格及费用仍须单独核对。",
+        "en": "This is not the family’s first API launch or a weights release. 2026-08-16 at 16:00 UTC is a pricing-effective time, not this event date. deepseek-v4-pro is an alias, not a pinned checkpoint; current routing was not tested and regional eligibility/costs need separate checks."
+      },
+      "context_sources": [
+        {
+          "url": "https://api-docs.deepseek.com/updates/",
+          "role": "api_alias",
+          "date": "2026-08-13"
+        }
+      ]
+    },
+    {
+      "provider": "DeepSeek",
+      "checked_at": "2026-11-01",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "id": "deepseek-v4-flash-vision-exp-api-2026-08-21",
+      "kind": "api_availability_announcement",
+      "title": {
+        "zh": "DeepSeek-V4-Flash-Vision-Exp 实验 API 可用公告",
+        "en": "DeepSeek-V4-Flash-Vision-Exp experimental API availability"
+      },
+      "version": "DeepSeek-V4-Flash-Vision-Exp (historical API alias)",
+      "date": "2026-08-21",
+      "timestamp_utc": null,
+      "api_alias": "deepseek-v4-flash-vision-exp",
+      "first_paper_submission": null,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news260821/",
+          "kind": "api_availability_announcement",
+          "date": "2026-08-21",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "summary": {
+        "zh": "官方公告于 2026-08-21 记载实验视觉理解模型提供 API，支持文本与图像输入。时刻与时区未登记；不由 API 日期推断权重日期。",
+        "en": "The dated announcement records experimental visual-understanding API availability on 2026-08-21 with text and image inputs. Event time/timezone are unrecorded; the API date is not a weights date."
+      },
+      "note": {
+        "zh": "历史状态警告：2026-09-10 官方日志当时宣布原 V4 Flash / Vision Exp 退役，旧别名临时指向 V4.1 Flash（https://api-docs.deepseek.com/updates/）。旧调用名不能保证复现八月版本；截至核对日的当前精确路由未实际调用验证。未下载权重或实跑 API，不据此声称开源、可用性或性能。",
+        "en": "Historical-status warning: the 2026-09-10 official log announced retirement of original V4 Flash / Vision Exp and temporary routing of old aliases to V4.1 Flash (https://api-docs.deepseek.com/updates/). An old name cannot reproduce the August checkpoint reliably; current exact routing was not tested. No weights download/API execution or openness, availability or performance certification."
+      },
+      "context_sources": [
+        {
+          "url": "https://api-docs.deepseek.com/updates/",
+          "role": "later_lifecycle",
+          "date": "2026-09-10"
+        }
+      ]
+    }
+  ]
+}

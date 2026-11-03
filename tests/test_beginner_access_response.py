@@ -2,13 +2,15 @@
 import hashlib,json,re,unittest
 from pathlib import Path
 from html import unescape
+from campus_contract import before_campus
 ROOT=Path(__file__).resolve().parents[1]
 class BeginnerAccessResponse(unittest.TestCase):
  def test_only_additive_overlays_and_original_api_page(self):
   expected={'learn.html': {'web': '7a0860e45bfa04e985322dcc277595e1dfe6d5dd102f8c9ed48c5fe0f870a26b', 'dist': '5121670481c7c39ac81029ec55523526b529202071b650dc4bf80fcd0b6ed4bb', 'docs': '5121670481c7c39ac81029ec55523526b529202071b650dc4bf80fcd0b6ed4bb'}, 'practice-local.html': {'web': '0c113b101da4e753c84b1fc0f0edec54eb337f26347df2440e2b3c574671cc82', 'dist': 'ec500846350cf9a1344c2c01c2e2798936f215d528078d2f779d8ba58a45e2a4', 'docs': 'ec500846350cf9a1344c2c01c2e2798936f215d528078d2f779d8ba58a45e2a4'}, 'practice-api.html': {'web': 'b9634518230fc4f40a60e28799ef5dbde0fb9d33b0d616a4124e4d4ae8555813', 'dist': 'c40929767bdd1a324e361a85a415996970e745ee358d8a712005ab8da7a26298', 'docs': 'c40929767bdd1a324e361a85a415996970e745ee358d8a712005ab8da7a26298'}}
   for name,digest in expected.items():
    for folder in ['web','dist','docs']:
-    text=(ROOT/folder/name).read_text()
+    text=before_campus((ROOT/folder/name).read_text())
+    if name.startswith('practice-'):text,n=re.subn(r'<section class="editorial-preflight".*?</section>','',text,flags=re.S);self.assertEqual(n,1)
     if name=='learn.html':text,n=re.subn(r'<div class="caution editorial-access">.*?</div>','',text,flags=re.S);self.assertEqual(n,1)
     if name=='practice-local.html':text,n=re.subn(r'<section class="editorial-response".*?</section>','',text,flags=re.S);self.assertEqual(n,1)
     self.assertEqual(hashlib.sha256(text.encode()).hexdigest(),digest[folder])

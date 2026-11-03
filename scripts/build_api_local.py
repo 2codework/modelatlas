@@ -133,6 +133,26 @@ def markdown(text,sources,route,script_panel,insert_prefix):
   else:out.append(rendered)
  return ''.join(out),toc
 
+def readiness_panel(route):
+ # Additive author guidance: frozen downloads remain unchanged, never executed here.
+ if route=='api':
+  warning='API 脚本只有带 --send-once 才请求；检查依赖时不要带这个参数，也不要为了预检创建或输入密钥。'
+  commands="python3 --version\npython3 -c \"import os; print('密钥已设置（不显示值）' if os.environ.get('OPENAI_API_KEY', '').strip() else '密钥未设置：不发送')\""
+  dependency='需要已有 Python 3.8+。命令不存在或版本不足就停，回到网页练习；本检查不安装软件。密钥仅检查当前环境中的有无，不显示值、不验证权限或额度；未设置是安全停止状态。'
+  logs='脚本仅对 HTTP 错误正文替换完全匹配的密钥；响应头和成功输出没有同样处理。这不是通用脱敏器，不代表其他输出已脱敏。不要分享原始终端日志、截图或环境变量；需要求助时只手写 HTTP 状态、错误类别和不含敏感值的现象。'
+  stop='缺依赖、密钥、费用或权限确认就停。网络/TLS/超时可能已有远端执行，先核对用量，不自动重试、不关闭证书验证。HTTP 错误、无文本、未完成或内容核对失败均不是练习通过。'
+ else:
+  warning='注意：运行 bash local_request.sh 会立即发送一次本地模型请求；它没有预检模式。不要用运行该脚本来检查依赖。'
+  commands='command -v bash\ncommand -v curl\ncommand -v ollama'
+  dependency='这三行只查命令路径，不启动模型、不连接本地服务、不下载。任一命令没有路径就停，按原教程核对安装与终端；不要自动安装。找到路径也不证明版本兼容、服务运行或模型已下载。此路线不需要 API 密钥。'
+  logs='脚本直接显示 HTTP 响应头和 JSON，没有自动脱敏。不要直接分享终端日志或截图；只手写状态码、错误类别和不含敏感值的现象。'
+  stop='连接失败、模型缺失、HTTP 错误、资源压力或超时就停，不并发重试、不改成公网接口。超时不证明模型停止，按原教程手动停止并检查。curl exit=0 仅是传输结束，不是 HTTP 成功，更不是内容验收通过。'
+ return ('<section class="editorial-preflight" aria-labelledby="preflight-title"><h2 id="preflight-title">先做不联网的准备检查</h2>'
+  '<p><strong>'+h(warning)+'</strong></p><p>作者补充检查单；不是模型实测。两条路线仍为 never-run（未执行）。下面的命令仅供读者在自己的终端检查，本网页不会执行。</p>'
+  '<details><summary>查看依赖检查、日志边界与停止条件</summary><p>'+h(dependency)+'</p>'
+  +code_block(commands,route+'-preflight-check','复制不联网检查')+'<p>'+h(logs)+'</p><p>'+h(stop)+'</p>'
+  '<p>传输状态、生成完成和人工内容验收分开记录；未运行的字段写“未执行”，不能用预检通过替代真实结果。原始下载脚本保持不变。</p></details></section>')
+
 def local_response_bridge():
  # Author-created editorial reading aid; not raw research, an actual response or new executable code.
  sample='HTTP/1.1 200 OK\nContent-Type: application/json\n\n{"model":"qwen3:0.6b","message":{"role":"assistant","content":"提交海报｜小林｜2026-10-30｜L1\\n跟进场地报价｜待确认｜待确认｜L2"},"done":true}'
@@ -153,6 +173,7 @@ def render(root):
   panel='<div class="script-download"><a class="primary-action" href="practice/'+script+'" download="'+script+'">下载 '+script+'（仅文件，不自动执行）</a><details><summary>查看并复制完整脚本</summary>'+code_block(raw[script].decode(),route+'-full-script','复制完整脚本')+'</details></div>'
   route_sources={k:v for k,v in sources.items()if k.startswith(prefix)}
   body,toc=markdown(raw[doc].decode(),route_sources,route,panel,insert)
+  body=readiness_panel(route)+body
   if route=='local':
    anchor='<h2 id="section-5" tabindex="-1">4．怎样才算跑通</h2>'
    need(body.count(anchor)==1,'local response editorial anchor')
@@ -162,7 +183,7 @@ def render(root):
   for sid,s in sources.items():
    if sid.startswith(prefix):evidence+='<li id="source-'+sid+'"><a href="'+h(s['url'])+'" target="_blank" rel="noopener noreferrer">'+sid+' · '+h(s['url'])+'</a><p>'+h(s['supports'])+'</p></li>'
   evidence+='</ul><p>来源读取：'+h(ledger['access_date_utc'])+'。失败读取保持独立，不作为已读证据。</p><a href="practice/source-ledger.json">完整来源与失败记录</a> · <a href="practice/projection.json">公开投影范围</a></details>'
-  html='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>'''+h(title)+''' · ModelAtlas</title><link rel="stylesheet" href="learn.css"><link rel="stylesheet" href="practice.css"><script src="practice.js" defer></script></head><body><a class="skip" href="#practice-main">跳至正文</a><header><a class="brand" href="index.html">MODEL ATLAS</a><nav aria-label="主导航"><a href="learn.html#step-3">← 回到网页练习</a><a href="index.html?view=learn">进阶资料</a></nav></header><div class="learn-layout"><aside><details class="chapter-menu" open><summary>本页步骤 · 可选进阶</summary><nav aria-label="本页步骤">'''+nav+'''</nav></details><p class="side-note">不想安装或承担额外费用？<br><a href="learn.html#step-2">继续原来的网页练习</a></p></aside><main id="practice-main"><article><p class="eyebrow">可选进阶 · 不属于四步入门必做项</p><h1>'''+h(title)+'''</h1><div class="caution"><strong>'''+h(scope)+'''</strong><p>本页只展示教程和下载文件，不接收密钥、不发模型请求。API / 本地运行不是 MCP；这两条练习不需要 MCP、Skill 或外部办公权限。</p></div>'''+body+evidence+'''<nav class="lesson-next"><a class="primary-action" href="learn.html#step-3">回到网页练习 →</a><a href="'''+('practice-local.html'if route=='api'else'practice-api.html')+'''">查看另一条可选路线</a></nav></article><noscript>全文无需脚本即可阅读。复制按钮不可用时，直接选中文字复制；下载链接仍可用。</noscript><footer>原创教学示例；第三方软件、模型及服务各自适用其条款。没有运行或效果保证。</footer></main></div></body></html>'''
+  html='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>'''+h(title)+''' · ModelAtlas</title><link rel="stylesheet" href="learn.css"><link rel="stylesheet" href="practice.css"><script src="practice.js" defer></script><link rel="stylesheet" href="campus.css"></head><body class="campus" data-site="modelatlas"><a class="skip" href="#practice-main">跳至正文</a><header><a class="brand" href="index.html">ModelAtlas</a><nav aria-label="主导航"><a href="learn.html#step-3">← 回到网页练习</a><a href="index.html?view=learn">进阶资料</a></nav></header><div class="learn-layout"><aside><details class="chapter-menu" open><summary>本页步骤 · 可选进阶</summary><nav aria-label="本页步骤">'''+nav+'''</nav></details><p class="side-note">不想安装或承担额外费用？<br><a href="learn.html#step-2">继续原来的网页练习</a></p></aside><main id="practice-main"><article><p class="eyebrow">可选进阶 · 不属于四步入门必做项</p><h1>'''+h(title)+'''</h1><div class="caution"><strong>'''+h(scope)+'''</strong><p>本页只展示教程和下载文件，不接收密钥、不发模型请求。API / 本地运行不是 MCP；这两条练习不需要 MCP、Skill 或外部办公权限。</p></div>'''+body+evidence+'''<nav class="lesson-next"><a class="primary-action" href="learn.html#step-3">回到网页练习 →</a><a href="'''+('practice-local.html'if route=='api'else'practice-api.html')+'''">查看另一条可选路线</a></nav></article><noscript>全文无需脚本即可阅读。复制按钮不可用时，直接选中文字复制；下载链接仍可用。</noscript><footer>原创教学示例；第三方软件、模型及服务各自适用其条款。没有运行或效果保证。</footer></main></div></body></html>'''
   outputs['practice-'+route+'.html']=html.encode()
  projection=projection_record(hashes)
  outputs.update({'practice/'+n:raw[n]for n in PUBLIC_RAW});outputs['practice/projection.json']=(json.dumps(projection,ensure_ascii=False,indent=2)+'\n').encode()

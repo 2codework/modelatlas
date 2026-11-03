@@ -142,3 +142,25 @@ class OptionalPractice(unittest.TestCase):
  def test_plain_heading_never_renders_active_markup(self):
   self.assertEqual(P.plain_heading('失败时怎么收手 [A8]'),'失败时怎么收手')
   self.assertEqual(P.plain_heading('**查看** `状态` [官方](https://example.test) [L1,L2]'),'查看 状态 官方')
+
+ def test_additive_readiness_panels_preserve_frozen_scripts_and_never_run(self):
+  for route in ['api','local']:
+   page=(ROOT/'web'/('practice-'+route+'.html')).read_text();parsed=ReaderHTML();parsed.feed(page)
+   self.assertIn('never-run（未执行）',page);self.assertIn('未运行的字段写',page)
+   self.assertLess(page.index('id="preflight-title"'),page.index('script-download'))
+   self.assertEqual(len(parsed.ids),len(set(parsed.ids)))
+   check=parsed.code[route+'-preflight-check']
+   for forbidden in ['--send-once','local_request.sh','curl http','ollama ls','ollama pull','urllib','requests','print(os.environ']:
+    self.assertNotIn(forbidden,check)
+   if route=='local':
+    self.assertEqual(check,'command -v bash\ncommand -v curl\ncommand -v ollama')
+    self.assertIn('会立即发送一次本地模型请求',page);self.assertIn('没有自动脱敏',page)
+   else:
+    self.assertIn('密钥未设置：不发送',check);self.assertIn('密钥已设置（不显示值）',check)
+    self.assertIn('响应头和成功输出没有同样处理',page)
+    self.assertIn('不代表其他输出已脱敏',page)
+  raw,_,hashes=P.load(ROOT)
+  for name in P.PUBLIC_RAW:
+   self.assertEqual((ROOT/'web/practice'/name).read_bytes(),raw[name])
+   self.assertEqual(P.sha(raw[name]),hashes[name])
+  self.assertEqual(json.loads((ROOT/'web/practice/projection.json').read_text())['runtime_execution'],'never-run')

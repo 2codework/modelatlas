@@ -1,0 +1,50 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "One pinned SpeakStream first arXiv paper submission, not a new model/weights/API release or complete Apple history.",
+  "events": [
+    {
+      "id": "apple-speakstream-paper-v1-2025-05-25",
+      "kind": "paper",
+      "title": {
+        "zh": "Apple SpeakStream 论文首次 arXiv 提交",
+        "en": "Apple SpeakStream paper first arXiv submission"
+      },
+      "provider": "Apple",
+      "version": "arXiv:2505.19206v1",
+      "api_alias": null,
+      "date": "2025-05-25",
+      "timestamp_utc": "2025-05-25T16:11:10Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text",
+        "audio"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2505.19206v1",
+          "kind": "paper",
+          "date": "2025-05-25",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv v1 于 2025-05-25 16:11:10 UTC 提交，标题为 SpeakStream: Streaming Text-to-Speech with Interleaved Data。作者为 Richard He Bai、Zijin Gu、Tatiana Likhomanenko 与 Navdeep Jaitly。摘要介绍以交错文本与语音训练的 decoder-only 流式文本转语音系统，可随文本输入逐步生成语音。",
+        "en": "arXiv v1 was submitted on 2025-05-25 at 16:11:10 UTC, titled SpeakStream: Streaming Text-to-Speech with Interleaved Data, by Richard He Bai, Zijin Gu, Tatiana Likhomanenko and Navdeep Jaitly. The abstract describes a decoder-only streaming text-to-speech system trained on interleaved text and speech, generating audio incrementally from incoming text."
+      },
+      "note": {
+        "zh": "这是论文首次 arXiv 提交，不是模型、API 或权重发布；Apple 页面仅标 May 2025，不替代固定版本提交时间。仅核对固定版本摘要、作者、提交历史及 Apple 论文页，未全文复核或复现作者性能结论。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、权重与代码许可、固定 API 修订及地区可用性仍未知；论文许可不能替代权重许可，公开权重不自动等于开源。此为有界补录，不代表 Apple 完整历史。",
+        "en": "This is a first arXiv paper submission, not a model, API or weights release. Apple’s May 2025 page label does not replace the pinned submission timestamp. Review covers the pinned abstract, authors, submission history and Apple paper page, not full-paper verification or replication of author performance claims. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights date, weights and code licenses, pinned API revision and regional availability remain unknown. Paper licensing cannot establish weights licensing; open weights do not automatically mean open source. This bounded admission is not complete Apple history."
+      },
+      "first_paper_submission": "2025-05-25",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

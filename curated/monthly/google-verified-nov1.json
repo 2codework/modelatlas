@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "purpose": "仅复核此前准备的两个 Google 候选；收录 T5Gemma 一名精确成员的家族开放公告，WeatherNext 历史检查点映射继续保留未知。",
+  "verified_on": "2026-11-01",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-07",
+    "2026-08"
+  ],
+  "date_policy": "公告与首次上传、当前元数据更新时间分别保存。",
+  "events": [
+    {
+      "id": "t5gemma-2b-2b-ul2-it-availability-2025-07-09",
+      "name": "T5Gemma 2B-2B UL2 IT（家族开放公告中的精确成员）",
+      "vendor": "Google DeepMind",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "google/t5gemma-2b-2b-ul2-it"
+      ],
+      "announcement_date": "2025-07-09",
+      "weights_release_date": "2025-07-09",
+      "weights_release_date_kind": "official_family_availability_announcement_for_identified_member",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-11-01",
+      "download_verification": "public_official_sources_only_no_download_no_gate_acceptance",
+      "access_note": "Hugging Face 权重文件需登录并同意 Google Gemma 使用条款；本次未接受条款、未下载。开放权重不等于无条件使用或开源认证。",
+      "licenses": [
+        {
+          "name": "Gemma Terms of Use（自定义条款）",
+          "url": "https://ai.google.dev/gemma/terms",
+          "applies_to": "精确模型卡链接的 Gemma 条款；当前附录列有 T5Gemma，不覆盖全部代码、数据与第三方组件",
+          "review_status": "current_exact_card_plus_terms_scope_review",
+          "reviewed_on": "2026-11-01",
+          "terms_last_modified": "2026-04-01",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "已读当前条款正文及附录，包含再分发义务与引用的禁止用途政策；未完成全部被引用政策/历史条款审查，不作法律适用判断。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/google/t5gemma-2b-2b-ul2-it"
+      ],
+      "evidence": [
+        {
+          "url": "https://developers.googleblog.com/en/t5gemma/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "family_scope"
+          ],
+          "date_text": "2025-07-09",
+          "locator": "JULY 9, 2025; Explore our models: Releasing T5Gemma checkpoints; Getting started download links",
+          "summary_zh": "官方当日声明发布预训练和指令微调、UL2/PrefixLM 检查点，并链接官方集合；本条日期是家族可取得公告，不是单文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/collections/google/t5gemma",
+          "supports": [
+            "exact_member_identity"
+          ],
+          "locator": "google/t5gemma-2b-2b-ul2-it entry; reached through announcement download link",
+          "summary_zh": "官方集合列明本条精确成员。Updated Jul 9, 2025 仅作页面元数据记录，不作为权重日期依据。"
+        },
+        {
+          "url": "https://huggingface.co/google/t5gemma-2b-2b-ul2-it",
+          "supports": [
+            "exact_member_identity",
+            "current_weight_entry",
+            "license",
+            "access_gate",
+            "modality"
+          ],
+          "locator": "identity line; repository corresponds to instruction-tuned 2B encoder/2B decoder UL2; Terms link; gate notice",
+          "summary_zh": "精确成员、文本输入输出、自定义 Gemma 许可及登录/同意访问条件可读；文件未读取。"
+        },
+        {
+          "url": "https://ai.google.dev/gemma/terms",
+          "supports": [
+            "current_license_scope"
+          ],
+          "locator": "Last modified April 1, 2026; Sections 3.1/3.2; Appendix T5Gemma",
+          "summary_zh": "当前条款适用名单含 T5Gemma；不能倒填为2025年初始条款。"
+        }
+      ],
+      "notes": [
+        "2025-07-09取自官方家族权重开放公告，本条只收录经官方集合及模型卡确认的 google/t5gemma-2b-2b-ul2-it 成员；不外推其他检查点，不以集合 Updated 日期定发布日期。",
+        "首次上传时间未知；论文、代码及 API 独立日期未在本轮核验。",
+        "Hugging Face 权重文件需登录并同意 Gemma 条款；未接受、未下载。",
+        "当前条款页面最后修改为2026-04-01，本次核验为2026-11-01；初始发布许可未知，未复核完整许可文本及全部引用政策。"
+      ]
+    }
+  ]
+}

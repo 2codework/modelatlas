@@ -182,3 +182,46 @@ test('Underlord correction points accounts to step 1 and recovery scope to step 
  assert.equal(paragraphs[1].textContent,'先试听素材，再核对三条事实与使用条件。打开后选择视频任务，从第1步核对账号和费用；遇到恢复操作，先看第5步的影响范围。按实际授权决定是否继续，不将文字检查当成成片验收。');
  assert.equal(descendants(box).find(n=>n.tag==='a').href,'https://2codework.github.io/agentwork/index.html?q=%E8%A7%86%E9%A2%91');
 });
+
+test('campus titles follow actual view, node and catalog across repeated navigation',async()=>{
+ const names={'explore':'知识目录','vendor-catalog':'厂商与模型目录','timeline':'事件时间线','evaluation':'评测与方法','learn':'学习路线与专题','coverage':'方法与证据边界'};
+ for(const [view,label] of Object.entries(names)){
+  const h=await boot('https://example.test/modelatlas/?view='+view);
+  assert.equal(h.ctx.document.title,label+' · ModelAtlas');
+ }
+ const home=await boot('https://example.test/modelatlas/',false,true);assert.equal(home.ctx.document.title,'理解 AI，开发 Agent · ModelAtlas');
+ const h=await boot();h.click('node',n2);assert.equal(h.ctx.document.title,nodeTitle(n2)+' · ModelAtlas');h.back();assert.equal(h.ctx.document.title,'知识目录 · ModelAtlas');h.forward();assert.equal(h.ctx.document.title,nodeTitle(n2)+' · ModelAtlas');
+ const c=await boot('https://example.test/modelatlas/?catalog='+c1);assert.equal(c.ctx.document.title,catTitle(c1)+' · ModelAtlas');
+});
+test('coverage table has Chinese category labels while keeping exact IDs and counts',async()=>{
+ const h=await boot('https://example.test/modelatlas/?view=coverage');
+ const rows=descendants(h.ids.get('coverage-table')).filter(n=>n.tag==='tbody')[0].children;
+ for(const row of rows){const id=row.children[0].children[0].textContent;assert.match(row.children[0].textContent,/[\u3400-\u9fff]/);assert.equal(Number(row.children[1].textContent),data.nodes.filter(n=>n.category===id).length);}
+ assert.equal(rows.length,new Set(data.nodes.map(n=>n.category)).size);
+});
+
+test('campus node reader uses h1 and readable guidance while exact source remains in full record',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=design-figma-mcp');const n=data.nodes.find(n=>n.id==='design-figma-mcp'),root=h.ids.get('detail');assert.equal(root.children[0].tag,'h1');assert.equal(root.children[0].textContent,n.title);
+ const nodes=descendants(root),practice=nodes.find(x=>x.className==='guidance-reading');assert.ok(practice);assert.deepEqual(descendants(practice).find(x=>x.tag==='ol').children.map(x=>x.textContent),n.best_practice_path.steps);assert.equal(descendants(practice).some(x=>x.tag==='pre'),false);assert.ok(nodes.some(x=>x.tag==='pre'&&x.textContent===JSON.stringify(n,null,2)));
+ const c=await boot('https://example.test/modelatlas/?catalog='+c1);assert.equal(c.ids.get('catalog-detail').children[0].tag,'h1');
+});
+
+test('historical evaluation snapshots use Chinese field labels without changing values or raw evidence',async()=>{
+ const h=await boot('https://example.test/modelatlas/?view=evaluation'),cards=h.ids.get('evaluation-snapshots').children;
+ assert.equal(cards.length,data.evaluation_snapshots.length);
+ const keys=['model','model_version','model_version_note','benchmark','benchmark_version','benchmark_version_note','split','split_note','shot','shot_note','prompt','harness','harness_note','sampling','report_date','report_date_note','report_first_published_date','report_version','reported_by','evidence_type','verification_status','checked_at'];
+ for(const [i,card] of cards.entries()){
+  const snap=data.evaluation_snapshots[i],nodes=descendants(card),dl=nodes.find(x=>x.tag==='dl'),labels=dl.children.filter(x=>x.tag==='dt'),values=dl.children.filter(x=>x.tag==='dd');
+  assert.equal(labels.length,keys.length);assert.ok(labels.every(x=>/[\u3400-\u9fff]/.test(x.textContent)));
+  for(const [j,key] of keys.entries()){const v=snap[key];if(v!==null&&v!==undefined&&typeof v!=='object')assert.equal(values[j].textContent,String(v));else assert.ok(values[j].textContent.length);}
+  assert.ok(nodes.some(x=>x.tag==='pre'&&x.textContent===JSON.stringify(snap,null,2)));assert.ok(nodes.some(x=>x.tag==='p'&&x.textContent===snap.limitations_zh));
+ }
+});
+
+test('reference access opens existing source and metadata disclosures without history or progress writes',async()=>{
+ const h=await boot('https://example.test/modelatlas/?node=transformer'),root=h.ids.get('detail'),panel=descendants(root).find(x=>x.className==='reference-access');assert.ok(panel);const count=h.writes.length,stored=h.stored.size;
+ const actions=descendants(panel).filter(x=>x.tag==='button');actions.find(x=>x.attrs['data-reference-action']==='all-sources').events.click();actions.find(x=>x.attrs['data-reference-action']==='metadata').events.click();
+ const sourceFold=root.children.find(x=>x.tag==='details'&&x.children[0].textContent==='原始来源 · 请阅读适用范围');assert.equal(sourceFold.open,true);assert.equal(root.children.find(x=>x.className==='reference-metadata').open,true);assert.equal(h.writes.length,count);assert.equal(h.stored.size,stored);
+ const source=data.sources.find(s=>s.id==='found-src-005');assert.ok(descendants(sourceFold).some(x=>x.tag==='pre'&&x.textContent===JSON.stringify(source,null,2)));assert.ok(descendants(sourceFold).some(x=>x.tag==='p'&&x.textContent.includes('仅元数据与摘要')));
+ const c=await boot('https://example.test/modelatlas/?catalog='+c1),catalog=c.ids.get('catalog-detail');const p=descendants(catalog).find(x=>x.className==='reference-access');const before=c.writes.length;for(const b of descendants(p).filter(x=>x.tag==='button'))b.events.click();assert.equal(c.writes.length,before);assert.ok(catalog.children.find(x=>x.tag==='details'&&x.children[0].textContent==='官方来源与逐字段证据').open);
+});

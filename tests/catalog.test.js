@@ -13,7 +13,7 @@ const content=n=>[n.textContent,...n.children.map(content)].join('\n');
 test('reader introduces missing summaries from exact recorded fields only',()=>{
  const r=data.vendor_catalog.records.find(r=>r.exact_id==='Qwen/Qwen3-0.6B');
  const intro=introduction(r);assert.match(intro,/Alibaba\/Qwen 的模型检查点/);assert.match(intro,/输入：文本；输出：文本/);assert.match(intro,/不表示服务当前可用/);
- const {get}=setup('?catalog='+r.id);const detail=get('catalog-detail');assert.equal(detail.children[1].textContent,intro);
+ const {get}=setup('?catalog='+r.id);const detail=get('catalog-detail');assert.equal(detail.children[1].textContent,'原登记摘要（补充核验见下方）：'+intro);
  assert.match(content(detail),/Apache-2.0/);assert.match(content(detail),/官方教程参考；未执行/);assert.match(content(detail),/未完整审阅论文/);assert.match(content(detail),/open weights 不等于 open source/);
  assert.equal(detail.querySelectorAll('details')[0].attrs.open,undefined);
  assert.deepEqual(JSON.parse(detail.querySelectorAll('pre')[0].textContent),r);
@@ -28,11 +28,23 @@ test('reader uses text-only rendering and rejects unsafe source links',()=>{
  const fixture=JSON.parse(JSON.stringify(data)),r=fixture.vendor_catalog.records[0];
  r.summary='<img src=x onerror=alert(1)>';r.sources=[{url:'javascript:alert(1)',sourceproof_zh:'<script>bad()</script>',status:'primary_content_read'}];r.urls={report:'data:text/html,bad',repository:'https://example.com/model'};
  const {get}=setup('?catalog='+r.id,fixture);assert.equal(get('catalog-detail').children[1].textContent,r.summary);
- const links=get('catalog-detail').querySelectorAll('a');assert.equal(links.filter(a=>a.href).length,1);assert.equal(links.find(a=>a.href).href,'https://example.com/model');
+ const links=get('catalog-detail').querySelectorAll('a');assert.equal(links.filter(a=>a.href).length,2);assert.deepEqual([...new Set(links.filter(a=>a.href).map(a=>a.href))],['https://example.com/model']);
  assert.match(content(get('catalog-detail')),/<script>bad\(\)<\/script>/);
 });
 test('every record renders without mutating any data or hiding full conditions',()=>{
  const before=JSON.stringify(data),{api,get}=setup('');
- for(const r of data.vendor_catalog.records){api.select(r.id);const detail=get('catalog-detail');assert.deepEqual(JSON.parse(detail.querySelectorAll('pre')[0].textContent),r);assert.match(content(detail),/未执行 SDK/);assert.equal(detail.children[1].textContent,introduction(r));}
+ for(const r of data.vendor_catalog.records){api.select(r.id);const detail=get('catalog-detail');assert.deepEqual(JSON.parse(detail.querySelectorAll('pre')[0].textContent),r);assert.match(content(detail),/未执行 SDK/);assert.equal(detail.children[1].textContent,((require('../web/core.js').catalogLicenseOverlay(r)||require('../web/core.js').catalogDateOverlay(r)||require('../web/core.js').catalogLifecycleNotice(r))?'原登记摘要（补充核验见下方）：':'')+introduction(r));}
  assert.equal(JSON.stringify(data),before);
+});
+
+test('four DeepSeek deep links show guide plus separately labeled price/reference without changing historical records',()=>{
+ const before=JSON.stringify(data),C=require('../web/core.js'),{api,get}=setup('');
+ for(const r of data.vendor_catalog.records.filter(r=>C.catalogResourceOverlay(r))){
+  api.select(r.id);api.select(r.id);const detail=get('catalog-detail'),links=detail.querySelectorAll('a').map(a=>a.href),body=content(detail);
+  assert.ok(links.includes('https://api-docs.deepseek.com/'));assert.ok(links.includes(r.urls.tutorial));assert.ok(links.includes('https://api-docs.deepseek.com/api/create-chat-completion/'));
+  assert.match(body,/价格与模型映射参考（非教程）/);assert.match(body,/2026-10-31/);assert.match(body,/服务可用性未验证/);assert.ok(body.includes(r.version));
+  if(r.entity_type==='legacy_api_alias'){assert.match(body,/旧名称仍接受/);assert.match(body,/原底层模型退役/);}
+  assert.deepEqual(JSON.parse(detail.querySelectorAll('pre')[0].textContent),r);
+ }
+ api.select(data.vendor_catalog.records[0].id);assert.ok(!get('catalog-detail').querySelectorAll('a').some(a=>a.href==='https://api-docs.deepseek.com/'));assert.equal(JSON.stringify(data),before);
 });

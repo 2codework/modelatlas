@@ -1,0 +1,91 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "Only the pinned TSPulse v1 submission and v2 revision; two paper events, not models or weights releases. Other IBM candidates remain outside this scope.",
+  "events": [
+    {
+      "provider": "IBM",
+      "checked_at": "2026-11-02",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "timestamp_utc": "2025-05-19T12:18:53Z",
+      "api_alias": null,
+      "first_paper_submission": "2025-05-19",
+      "modalities": [
+        "time_series"
+      ],
+      "context_sources": [],
+      "id": "ibm-tspulse-paper-submission-2025-05-19",
+      "kind": "paper",
+      "date": "2025-05-19",
+      "version": "arXiv:2505.13033v1",
+      "title": {
+        "zh": "IBM TSPulse 论文首次 arXiv 提交",
+        "en": "IBM TSPulse paper first arXiv submission"
+      },
+      "summary": {
+        "zh": "arXiv 记录 v1 于 2025-05-19 12:18:53 UTC 提交。该版本标题为 TSPulse: Dual Space Tiny Pre-Trained Models for Rapid Time-Series Analysis，介绍在时间与频率空间进行掩码重建的时间序列模型，涉及分类、异常检测、插补与检索。",
+        "en": "arXiv records v1 on 2025-05-19 at 12:18:53 UTC. This version is titled TSPulse: Dual Space Tiny Pre-Trained Models for Rapid Time-Series Analysis and describes masked reconstruction in time and frequency spaces for time-series classification, anomaly detection, imputation and retrieval."
+      },
+      "note": {
+        "zh": "v1 摘要表示模型将在之后开放，不能当作当日权重已发布的证据。同一论文的提交与修订是两个事件，不是两个模型或两次权重发布；首次 arXiv 提交不证明所有渠道最早公开时刻。当前模型卡的许可不能回填历史权重许可。权重日期、历史权重许可与固定 API 修订未知；未运行模型或复现作者评测。",
+        "en": "The v1 abstract says models will be made available later, not that weights were released that day. Submission and revision are two events for one paper, not two models or two weights releases. First arXiv submission does not establish earliest public appearance across all channels. Current model-card licensing must not be backdated to historical weights. Weights dates, historical weights licenses and pinned API revisions are unknown; no model or author evaluation was run."
+      },
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2505.13033v1",
+          "kind": "paper",
+          "date": "2025-05-19",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "IBM",
+      "checked_at": "2026-11-02",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "timestamp_utc": "2025-06-25T04:59:41Z",
+      "api_alias": null,
+      "first_paper_submission": "2025-05-19",
+      "modalities": [
+        "time_series"
+      ],
+      "context_sources": [],
+      "id": "ibm-tspulse-paper-revision-2025-06-25",
+      "kind": "paper_revision",
+      "date": "2025-06-25",
+      "version": "arXiv:2505.13033v2",
+      "title": {
+        "zh": "IBM TSPulse 论文 v2 修订",
+        "en": "IBM TSPulse paper v2 revision"
+      },
+      "summary": {
+        "zh": "arXiv 记录 v2 于 2025-06-25 04:59:41 UTC 提交。该版本标题为 TSPulse: Dual Space Tiny Pre-Trained Models for Rapid Time-Series Analysis，介绍在时间与频率空间进行掩码重建的时间序列模型，涉及分类、异常检测、插补与检索。",
+        "en": "arXiv records v2 on 2025-06-25 at 04:59:41 UTC. This version is titled TSPulse: Dual Space Tiny Pre-Trained Models for Rapid Time-Series Analysis and describes masked reconstruction in time and frequency spaces for time-series classification, anomaly detection, imputation and retrieval."
+      },
+      "note": {
+        "zh": "v2 摘要增加模型仓库链接，但不证明首次完整公开权重的日期。同一论文的提交与修订是两个事件，不是两个模型或两次权重发布；首次 arXiv 提交不证明所有渠道最早公开时刻。当前模型卡的许可不能回填历史权重许可。权重日期、历史权重许可与固定 API 修订未知；未运行模型或复现作者评测。",
+        "en": "The v2 abstract adds a model repository link but does not establish the first complete public weights date. Submission and revision are two events for one paper, not two models or two weights releases. First arXiv submission does not establish earliest public appearance across all channels. Current model-card licensing must not be backdated to historical weights. Weights dates, historical weights licenses and pinned API revisions are unknown; no model or author evaluation was run."
+      },
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2505.13033v2",
+          "kind": "paper_revision",
+          "date": "2025-06-25",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ]
+    }
+  ]
+}

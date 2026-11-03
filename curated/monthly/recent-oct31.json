@@ -1,0 +1,623 @@
+{
+  "schema_version": "1.0",
+  "title": "2026-10-31 当前公开权重补录：日期未决候选",
+  "as_of": "2026-10-31",
+  "verified_on": "2026-10-31",
+  "coverage": {
+    "exhaustive": false,
+    "note": "六个精确版本；均已核实当前官方权重入口，但未确认首次公开权重日期，不增加任何月份的已知日期计数。"
+  },
+  "date_policy": "公告与权重公开日期分开；未知保留 null；不从 lastModified、提交时间、API上线或未来承诺推断权重发布日期。",
+  "records": [
+    {
+      "id": "zai-glm-5.3",
+      "model_name": "GLM-5.3",
+      "provider": "Z.ai",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "unknown",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/zai-org/GLM-5.3",
+      "license": {
+        "name": "GLM-5.3 License",
+        "spdx_id": null,
+        "url": "https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE",
+        "applies_to": "GLM-5.3 精确仓库模型权重；不外推其他精度版本或家族成员",
+        "scope": "model_weights",
+        "verification_note": "已打开精确权重仓库许可原文；自定义条款，不能继承代码仓库的 Apache-2.0。"
+      },
+      "notes": [
+        "已确认官方仓库列出可获取权重；未下载完整权重、未运行模型。",
+        "官方博客返回无可读正文，首次公开权重日期未知；不把末次修改、提交或核验日期当发布日期。"
+      ],
+      "uncertainties": [
+        "公告、论文、代码及权重首次公开日期本轮均未核实，保留 null。",
+        "仅本精确版本，不含 BF16 等独立仓库。"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "license",
+            "official_weights_url"
+          ],
+          "note": "精确官方模型卡确认任务模态和许可元数据。",
+          "locator": "页面标题、任务标签、许可元数据",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3/tree/main",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url"
+          ],
+          "note": "文件树列出 safetensors 分片；可见权重文件不证明历史首次公开日期。",
+          "locator": "文件树：756 GB / model-00001-of-00141.safetensors",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/zai-org/GLM-5",
+          "source_type": "official",
+          "supports": [
+            "official_weights_url",
+            "exact_version"
+          ],
+          "note": "官方 Download Model 表逐项链接本仓库及独立 BF16 仓库。",
+          "locator": "Download Model",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE",
+          "source_type": "official",
+          "supports": [
+            "license"
+          ],
+          "note": "已读取 GLM-5.3 自定义许可；特定大型 MaaS 商业使用附安全审查条件。",
+          "locator": "LICENSE 标题与条件 2",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    },
+    {
+      "id": "zai-glm-5.3-flash",
+      "model_name": "GLM-5.3-Flash",
+      "provider": "Z.ai",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "unknown",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "license": {
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/blob/main/LICENSE",
+        "applies_to": "GLM-5.3-Flash 精确仓库模型权重；不外推其他精度版本或家族成员",
+        "scope": "model_weights",
+        "verification_note": "MIT 名称依据模型卡许可元数据；未逐条核读本版本许可原文。"
+      },
+      "notes": [
+        "已确认官方仓库列出可获取权重；未下载完整权重、未运行模型。",
+        "官方博客返回无可读正文，首次公开权重日期未知；不把末次修改、提交或核验日期当发布日期。"
+      ],
+      "uncertainties": [
+        "公告、论文、代码及权重首次公开日期本轮均未核实，保留 null。",
+        "仅本精确版本，不含 BF16 等独立仓库。"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "license",
+            "official_weights_url"
+          ],
+          "note": "精确官方模型卡确认任务模态和许可元数据。",
+          "locator": "页面标题、任务标签、许可元数据",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/tree/main",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url"
+          ],
+          "note": "文件树列出 safetensors 分片；可见权重文件不证明历史首次公开日期。",
+          "locator": "文件树：328 GB / model-00001-of-00062.safetensors",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/zai-org/GLM-5",
+          "source_type": "official",
+          "supports": [
+            "official_weights_url",
+            "exact_version"
+          ],
+          "note": "官方 Download Model 表逐项链接本仓库及独立 BF16 仓库。",
+          "locator": "Download Model",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    },
+    {
+      "id": "mistralai-timestral-5m",
+      "model_name": "Timestral-5M",
+      "provider": "Mistral AI",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "time_series"
+        ],
+        "output": [
+          "probabilistic_time_series_forecasts"
+        ]
+      },
+      "announcement_date": "2026-10-15",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "day_official_family_announcement",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/mistralai/Timestral-5M",
+      "license": {
+        "name": "Modified MIT",
+        "spdx_id": null,
+        "url": "https://huggingface.co/mistralai/Timestral-5M/blob/main/LICENSE",
+        "applies_to": "Timestral-5M 模型权重；不适用于推理代码仓库",
+        "scope": "model_weights",
+        "verification_note": "模型卡及官方代码仓库明确区分权重 Modified MIT 与代码 Apache-2.0；本版本未逐条法律审计。"
+      },
+      "code_license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://github.com/mistralai/timestral/blob/main/LICENSE",
+        "applies_to": "timestral 推理代码与测试；不覆盖模型权重"
+      },
+      "notes": [
+        "家族公告日期为 2026-10-15；本记录仅登记 Timestral-5M 精确检查点。",
+        "当前公开权重入口已核实；未独立确定每个检查点的首次权重公开日，不计入有明确日期的月度开放权重数量。",
+        "输入为时间序列及历史/未来协变量，输出为概率预测，不是文本生成模型。"
+      ],
+      "uncertainties": [
+        "权重首次公开日、代码独立公开日与论文公开日保留 null。",
+        "公告时技术报告尚待提供；当前可用状态不反推历史开放日期。"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/timestral/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "family",
+            "modalities"
+          ],
+          "note": "公告页标为 2026-10-15，列出四尺寸与概率预测输入输出；不是独立的精确检查点上传日期证据。",
+          "locator": "日期页眉；Family of models；规格表",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Timestral-5M",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "official_weights_url",
+            "modalities",
+            "license"
+          ],
+          "note": "已打开精确模型卡；本版本属于时间序列预测家族，权重许可为 Modified MIT。",
+          "locator": "模型说明、Model Details、License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/mistralai/timestral",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url",
+            "license",
+            "code_license"
+          ],
+          "note": "Models 表逐项列出四个精确权重仓库；License 节明确代码 Apache-2.0 不适用于权重。",
+          "locator": "Models；License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    },
+    {
+      "id": "mistralai-timestral-28m",
+      "model_name": "Timestral-28M",
+      "provider": "Mistral AI",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "time_series"
+        ],
+        "output": [
+          "probabilistic_time_series_forecasts"
+        ]
+      },
+      "announcement_date": "2026-10-15",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "day_official_family_announcement",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/mistralai/Timestral-28M",
+      "license": {
+        "name": "Modified MIT",
+        "spdx_id": null,
+        "url": "https://huggingface.co/mistralai/Timestral-28M/blob/main/LICENSE",
+        "applies_to": "Timestral-28M 模型权重；不适用于推理代码仓库",
+        "scope": "model_weights",
+        "verification_note": "模型卡及官方代码仓库明确区分权重 Modified MIT 与代码 Apache-2.0；本版本未逐条法律审计。"
+      },
+      "code_license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://github.com/mistralai/timestral/blob/main/LICENSE",
+        "applies_to": "timestral 推理代码与测试；不覆盖模型权重"
+      },
+      "notes": [
+        "家族公告日期为 2026-10-15；本记录仅登记 Timestral-28M 精确检查点。",
+        "当前公开权重入口已核实；未独立确定每个检查点的首次权重公开日，不计入有明确日期的月度开放权重数量。",
+        "输入为时间序列及历史/未来协变量，输出为概率预测，不是文本生成模型。"
+      ],
+      "uncertainties": [
+        "权重首次公开日、代码独立公开日与论文公开日保留 null。",
+        "公告时技术报告尚待提供；当前可用状态不反推历史开放日期。"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/timestral/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "family",
+            "modalities"
+          ],
+          "note": "公告页标为 2026-10-15，列出四尺寸与概率预测输入输出；不是独立的精确检查点上传日期证据。",
+          "locator": "日期页眉；Family of models；规格表",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Timestral-28M",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "official_weights_url",
+            "modalities",
+            "license"
+          ],
+          "note": "已打开精确模型卡；本版本属于时间序列预测家族，权重许可为 Modified MIT。",
+          "locator": "模型说明、Model Details、License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/mistralai/timestral",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url",
+            "license",
+            "code_license"
+          ],
+          "note": "Models 表逐项列出四个精确权重仓库；License 节明确代码 Apache-2.0 不适用于权重。",
+          "locator": "Models；License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    },
+    {
+      "id": "mistralai-timestral-123m",
+      "model_name": "Timestral-123M",
+      "provider": "Mistral AI",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "time_series"
+        ],
+        "output": [
+          "probabilistic_time_series_forecasts"
+        ]
+      },
+      "announcement_date": "2026-10-15",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "day_official_family_announcement",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/mistralai/Timestral-123M",
+      "license": {
+        "name": "Modified MIT",
+        "spdx_id": null,
+        "url": "https://huggingface.co/mistralai/Timestral-123M/blob/main/LICENSE",
+        "applies_to": "Timestral-123M 模型权重；不适用于推理代码仓库",
+        "scope": "model_weights",
+        "verification_note": "模型卡及官方代码仓库明确区分权重 Modified MIT 与代码 Apache-2.0；本版本未逐条法律审计。"
+      },
+      "code_license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://github.com/mistralai/timestral/blob/main/LICENSE",
+        "applies_to": "timestral 推理代码与测试；不覆盖模型权重"
+      },
+      "notes": [
+        "家族公告日期为 2026-10-15；本记录仅登记 Timestral-123M 精确检查点。",
+        "当前公开权重入口已核实；未独立确定每个检查点的首次权重公开日，不计入有明确日期的月度开放权重数量。",
+        "输入为时间序列及历史/未来协变量，输出为概率预测，不是文本生成模型。"
+      ],
+      "uncertainties": [
+        "权重首次公开日、代码独立公开日与论文公开日保留 null。",
+        "公告时技术报告尚待提供；当前可用状态不反推历史开放日期。"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/timestral/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "family",
+            "modalities"
+          ],
+          "note": "公告页标为 2026-10-15，列出四尺寸与概率预测输入输出；不是独立的精确检查点上传日期证据。",
+          "locator": "日期页眉；Family of models；规格表",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Timestral-123M",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "official_weights_url",
+            "modalities",
+            "license"
+          ],
+          "note": "已打开精确模型卡；本版本属于时间序列预测家族，权重许可为 Modified MIT。",
+          "locator": "模型说明、Model Details、License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/mistralai/timestral",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url",
+            "license",
+            "code_license"
+          ],
+          "note": "Models 表逐项列出四个精确权重仓库；License 节明确代码 Apache-2.0 不适用于权重。",
+          "locator": "Models；License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    },
+    {
+      "id": "mistralai-timestral-209m",
+      "model_name": "Timestral-209M",
+      "provider": "Mistral AI",
+      "event_granularity": "exact_model",
+      "modalities": {
+        "input": [
+          "time_series"
+        ],
+        "output": [
+          "probabilistic_time_series_forecasts"
+        ]
+      },
+      "announcement_date": "2026-10-15",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "first_upload_timestamp": null,
+      "event_precision": {
+        "announcement": "day_official_family_announcement",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "availability": "open_weights",
+      "availability_verified_on": "2026-10-31",
+      "download_verification": "public_repository_or_official_download_instructions_only_no_binary_download",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "verified_at": "2026-10-31",
+      "verified_on": "2026-10-31",
+      "official_weights_url": "https://huggingface.co/mistralai/Timestral-209M",
+      "license": {
+        "name": "Modified MIT",
+        "spdx_id": null,
+        "url": "https://huggingface.co/mistralai/Timestral-209M/blob/main/LICENSE",
+        "applies_to": "Timestral-209M 模型权重；不适用于推理代码仓库",
+        "scope": "model_weights",
+        "verification_note": "模型卡及官方代码仓库明确区分权重 Modified MIT 与代码 Apache-2.0；本版本未逐条法律审计。"
+      },
+      "code_license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://github.com/mistralai/timestral/blob/main/LICENSE",
+        "applies_to": "timestral 推理代码与测试；不覆盖模型权重"
+      },
+      "notes": [
+        "家族公告日期为 2026-10-15；本记录仅登记 Timestral-209M 精确检查点。",
+        "当前公开权重入口已核实；未独立确定每个检查点的首次权重公开日，不计入有明确日期的月度开放权重数量。",
+        "输入为时间序列及历史/未来协变量，输出为概率预测，不是文本生成模型。"
+      ],
+      "uncertainties": [
+        "权重首次公开日、代码独立公开日与论文公开日保留 null。",
+        "公告时技术报告尚待提供；当前可用状态不反推历史开放日期。"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/timestral/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "family",
+            "modalities"
+          ],
+          "note": "公告页标为 2026-10-15，列出四尺寸与概率预测输入输出；不是独立的精确检查点上传日期证据。",
+          "locator": "日期页眉；Family of models；规格表",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Timestral-209M",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "official_weights_url",
+            "modalities",
+            "license"
+          ],
+          "note": "已打开精确模型卡；本版本属于时间序列预测家族，权重许可为 Modified MIT。",
+          "locator": "模型说明、Model Details、License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://github.com/mistralai/timestral",
+          "source_type": "official",
+          "supports": [
+            "weights_available",
+            "official_weights_url",
+            "license",
+            "code_license"
+          ],
+          "note": "Models 表逐项列出四个精确权重仓库；License 节明确代码 Apache-2.0 不适用于权重。",
+          "locator": "Models；License",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Timestral-209M/blob/main/LICENSE",
+          "source_type": "official",
+          "supports": [
+            "license"
+          ],
+          "note": "已打开 209M 精确仓库许可文件；未将 MIT 变体归为标准 MIT。",
+          "locator": "LICENSE",
+          "verified_at": "2026-10-31",
+          "verification_status": "opened_primary_page"
+        }
+      ]
+    }
+  ],
+  "monthly_open_weights": {}
+}

@@ -1,0 +1,953 @@
+{
+  "schema_version": "1.0",
+  "title": "ModelAtlas 2026年9—10月模型开放事件核验样本",
+  "as_of": "2026-10-30",
+  "coverage": {
+    "months": [
+      "2026-09",
+      "2026-10"
+    ],
+    "exhaustive": false,
+    "note": "本批10个精确版本；覆盖K2 Horizon公告的六种基础规格，但不覆盖全部适配器、量化、中间检查点或全球所有厂商。10月截至30日。",
+    "family_coverage": {
+      "K2 Horizon": {
+        "announced_base_sizes": 6,
+        "included_base_sizes": 6,
+        "excludes": [
+          "适配器变体",
+          "量化版本",
+          "中间训练检查点"
+        ]
+      }
+    }
+  },
+  "rules": [
+    "只有有明确权重开放日期且官方证据支持的记录进入本月开放权重。",
+    "公告/API上线/论文/代码/权重日期分开存；未知保留 null。",
+    "open_source_claimed 仅表示厂商有完整开放声明，不是研究者认证。",
+    "不把许可证名称含 MIT 的自定义限制许可证降格为 MIT。",
+    "Git 提交时间不自动等同公开权重日期。"
+  ],
+  "records": [
+    {
+      "id": "ifm-k2-horizon-0.9b",
+      "model_name": "K2-Horizon-0.9B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-0.9B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "ifm-k2-horizon-3.7b",
+      "model_name": "K2-Horizon-3.7B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-3.7B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "ifm-k2-horizon-32b",
+      "model_name": "K2-Horizon-32B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-32B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-32B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-32B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "ifm-k2-horizon-375b-a23b",
+      "model_name": "K2-Horizon-375B-A23B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-375B-A23B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "ifm-k2-horizon-7b",
+      "model_name": "K2-Horizon-7B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-7B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-7B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-7B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "ifm-k2-horizon-mova-36b-a4b",
+      "model_name": "K2-Horizon-MoVA-36B-A4B",
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-03",
+      "paper_date": null,
+      "code_release_date": "2026-09-03",
+      "weights_release_date": "2026-09-03",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "day_official_family_release_statement",
+        "weights": "day_official_family_release_statement"
+      },
+      "open_type": "open_source_claimed",
+      "open_type_note": "厂商明确声称权重、代码、训练数据、方法均开放；不是本研究对 OSI 定义的独立认证。",
+      "license": {
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "evidence_url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+        "scope": "模型及代码；依据官方公告和模型卡许可元数据"
+      },
+      "official_weights_url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-09",
+      "evidence": [
+        {
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "code_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "公告日期为2026-09-03；正文逐项列出六种尺寸，明确宣布其权重、代码、训练数据及方法当日开放，并给出可立即取得模型的官方入口与许可证名称。",
+          "verified_at": "2026-10-30",
+          "locator": "公告日期；首段；尺寸说明段；正文最后一段"
+        },
+        {
+          "url": "https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "official_weights_url",
+            "license",
+            "open_type"
+          ],
+          "note": "已打开该精确模型卡，核实模型名、文本生成模态、Apache-2.0许可元数据及开放材料清单。技术报告日期未由此确定。",
+          "verified_at": "2026-10-30",
+          "locator": "页面标题、许可元数据、开放材料清单"
+        },
+        {
+          "url": "https://huggingface.co/collections/IFM/k2-horizon",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "family"
+          ],
+          "note": "官方集合列出六种基础规格及独立的适配器变体；本记录不包含适配器、量化或中间检查点。",
+          "locator": "集合内模型列表",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文实际发布日期未核得，保留 null；不把预计日期当作已发布。",
+        "权重和代码日期依据厂商对六规格家族的明确发布声明；不表示所有中间训练检查点同日上传。"
+      ],
+      "verified_at": "2026-10-30",
+      "family": "K2 Horizon"
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "model_name": "DeepSeek-V4.1-Flash",
+      "provider": "DeepSeek",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-09-10",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "unknown_publication_date",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "license": {
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE",
+        "scope": "repository and model weights"
+      },
+      "official_weights_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/updates/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "model_name"
+          ],
+          "note": "官方更新日志分别把初版公告与后续版本更新标为9月10日、10月17日；这不等于证明权重首次开放时间。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "license",
+            "official_weights_url",
+            "open_type"
+          ],
+          "note": "官方模型卡确认仓库及模型权重使用MIT许可，支持图像、文本输入和文本输出。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/commits/main",
+          "source_type": "official",
+          "supports": [
+            "repository_commit_date"
+          ],
+          "note": "当日有初始化、版本发布及大文件上传提交；版本库提交日期不能独立证明首次向公众开放的日期，故不据此填写权重公开日。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE",
+          "source_type": "official",
+          "supports": [
+            "license"
+          ],
+          "note": "已打开许可原文页面。",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "可见同日版本库提交和上传记录，但尚无不歧义的权重公开日证据；权重日期保留 null，不计月度开放数量。",
+        "初版报告文件有9月10日上传记录，但提交时间不等同论文公开日。"
+      ],
+      "verified_at": "2026-10-30"
+    },
+    {
+      "id": "meta-muse-spark-open-816b-a42b",
+      "model_name": "Muse-Spark-Open-816B-A42B",
+      "provider": "Meta",
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-10-15",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": "2026-10-15",
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "day_official_explicit_release"
+      },
+      "open_type": "open_weights",
+      "open_type_note": "自定义许可证、受限制商业使用、Hugging Face 需申请访问；不可标为 OSI 开源或 unrestricted。",
+      "license": {
+        "name": "Muse Model License",
+        "spdx_id": null,
+        "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md",
+        "scope": "模型、代码、权重及相关文档；以许可原文为准",
+        "restrictions_summary": "附使用政策、署名要求及特定 Model-as-a-Service 商业条件；非标准 MIT。"
+      },
+      "official_weights_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "access": "gated_requires_license_acceptance_and_user_information; no login attempted",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-10",
+      "evidence": [
+        {
+          "url": "https://research.meta.ai/blog/muse-spark-open",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "open_type",
+            "license"
+          ],
+          "note": "日期为2026-10-15的官方公告明确宣布当日发布权重，并给出许可名称。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "weights_release_date",
+            "license",
+            "access"
+          ],
+          "note": "精确官方仓库的许可页眉与模型概述均写出2026-10-15；支持文本、图像、音频、视频输入及文本输出，并显示访问申请要求。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B/blob/main/LICENSE.md",
+          "source_type": "official",
+          "supports": [
+            "license"
+          ],
+          "note": "已查看 Muse Model License 原文页面。",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "代码与论文独立公开日未核实。"
+      ],
+      "verified_at": "2026-10-30"
+    },
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "model_name": "DeepSeek-V4.1-Flash-1017",
+      "provider": "DeepSeek",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-10-17",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": null,
+      "event_precision": {
+        "announcement": "day",
+        "paper": "unknown",
+        "code": "unknown_publication_date",
+        "weights": "unknown_publication_date"
+      },
+      "open_type": "open_weights",
+      "license": {
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/main/LICENSE",
+        "scope": "repository and model weights"
+      },
+      "official_weights_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "monthly_open_weights_eligible": false,
+      "monthly_open_weights_month": null,
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/updates/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "model_name"
+          ],
+          "note": "官方更新日志分别把初版公告与后续版本更新标为9月10日、10月17日；这不等于证明权重首次开放时间。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "modalities",
+            "license",
+            "official_weights_url",
+            "open_type"
+          ],
+          "note": "官方模型卡确认仓库及模型权重使用MIT许可，支持图像、文本输入和文本输出。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/commits/main",
+          "source_type": "official",
+          "supports": [
+            "repository_commit_date"
+          ],
+          "note": "当日有初始化、版本发布及大文件上传提交；版本库提交日期不能独立证明首次向公众开放的日期，故不据此填写权重公开日。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/blob/main/LICENSE",
+          "source_type": "official",
+          "supports": [
+            "license"
+          ],
+          "note": "已打开许可原文页面。",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "可见同日版本库提交和上传记录，但尚无不歧义的权重公开日证据；权重日期保留 null，不计月度开放数量。",
+        "初版报告文件有9月10日上传记录，但提交时间不等同论文公开日。"
+      ],
+      "verified_at": "2026-10-30"
+    },
+    {
+      "id": "mistralai-mistral-large-4-1t-a52b",
+      "model_name": "Mistral-Large-4-1T-A52B",
+      "provider": "Mistral AI",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "announcement_date": "2026-10-29",
+      "paper_date": null,
+      "code_release_date": null,
+      "weights_release_date": "2026-10-29",
+      "event_precision": {
+        "announcement": "day_official_news_index",
+        "paper": "unknown",
+        "code": "unknown",
+        "weights": "day_official_news_index_plus_explicit_release"
+      },
+      "open_type": "open_weights",
+      "license": {
+        "name": "Mistral Ecosystem Open-Weight License",
+        "spdx_id": null,
+        "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE",
+        "license_document_recheck": "not_accessible_this_review",
+        "review_note": "本轮未能重新访问许可原文，仅列许可证名称及官方链接，不提供条款解释。"
+      },
+      "official_weights_url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+      "monthly_open_weights_eligible": true,
+      "monthly_open_weights_month": "2026-10",
+      "prior_events": [
+        {
+          "date": "2026-10-06",
+          "type": "hosted_preview",
+          "url": "https://mistral.ai/news/mistral-large-4/",
+          "note": "10月6日为预览；10月29日开放的是继续训练后的版本，不把二者视为完全相同检查点。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/",
+          "source_type": "official",
+          "supports": [
+            "announcement_date",
+            "weights_release_date"
+          ],
+          "note": "官方新闻索引把该权重发布公告标为2026-10-29。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://mistral.ai/news/mistral-large-4-oss/",
+          "source_type": "official",
+          "supports": [
+            "weights_release_date",
+            "open_type",
+            "official_weights_url",
+            "license"
+          ],
+          "note": "公告明确发布继续训练后的改进版本权重，链接精确模型仓库与许可证；技术报告仍称将另行提供。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+          "source_type": "official",
+          "supports": [
+            "model_name",
+            "official_weights_url",
+            "modalities"
+          ],
+          "note": "官方精确模型仓库。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B/blob/main/LICENSE",
+          "source_type": "official",
+          "supports": [
+            "license_link"
+          ],
+          "note": "本轮未能重新访问许可原文，仅依官方公告列出许可证名称和链接；不作为条款复核通过的证据。",
+          "verified_at": "2026-10-30",
+          "recheck_status": "not_accessible_this_review"
+        },
+        {
+          "url": "https://mistral.ai/news/mistral-large-4/",
+          "source_type": "official",
+          "supports": [
+            "prior_events"
+          ],
+          "note": "10月6日公告只宣布接口预览，权重预计月底提供；因此不把该日作为权重开放日。",
+          "verified_at": "2026-10-30"
+        }
+      ],
+      "uncertainties": [
+        "论文和代码的独立公开日期未核实；10月29日公告仍称完整报告将另行提供。",
+        "许可证原文在二次审计时无法访问，不提供条款解释。"
+      ],
+      "verified_at": "2026-10-30"
+    }
+  ],
+  "monthly_open_weights": {
+    "2026-09": [
+      "ifm-k2-horizon-0.9b",
+      "ifm-k2-horizon-3.7b",
+      "ifm-k2-horizon-32b",
+      "ifm-k2-horizon-375b-a23b",
+      "ifm-k2-horizon-7b",
+      "ifm-k2-horizon-mova-36b-a4b"
+    ],
+    "2026-10": [
+      "meta-muse-spark-open-816b-a42b",
+      "mistralai-mistral-large-4-1t-a52b"
+    ]
+  },
+  "not_completed_candidates": [
+    {
+      "name": "Timestral",
+      "official_url": "https://mistral.ai/news/timestral/",
+      "announcement_date": "2026-10-15",
+      "reason": "已确认四尺寸家族、代码仓库及 Modified MIT；本轮未逐一核精确权重仓库和开放日期，故不入 records。"
+    },
+    {
+      "name": "Voxtral 3",
+      "exact_versions_reviewed": [
+        "voxtral-mini-tts-3-0",
+        "voxtral-mini-transcribe-3-0",
+        "voxtral-mini-transcribe-realtime-3-0"
+      ],
+      "official_url": "https://mistral.ai/news/voxtral-3/",
+      "announcement_date": "2026-10-20",
+      "weights_release_date": null,
+      "license": null,
+      "monthly_open_weights_eligible": false,
+      "reason": "官方公告确认接口服务及需联系团队的本地/私有云部署；所查三张官方型号页未提供公开权重入口或权重许可证。自部署销售路径不等于公开权重，故不纳入开放榜。此为证据不足结论，不推断厂商永不开放。",
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/",
+          "supports": [
+            "announcement_date"
+          ],
+          "note": "新闻索引将该家族公告标为10月20日。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://mistral.ai/news/voxtral-3/",
+          "supports": [
+            "hosted_availability",
+            "self_deployment_contact_required"
+          ],
+          "note": "开始使用一节确认接口服务；本地或私有云部署要求联系团队，未给公开权重下载和许可入口。",
+          "locator": "开始使用一节，研究读取行436—450",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "supports": [
+            "model_name",
+            "no_public_weights_evidence_in_reviewed_page"
+          ],
+          "note": "已打开官方型号页；本页未见公开权重链接和权重许可证。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "supports": [
+            "model_name",
+            "no_public_weights_evidence_in_reviewed_page"
+          ],
+          "note": "已打开官方型号页；本页未见公开权重链接和权重许可证。",
+          "verified_at": "2026-10-30"
+        },
+        {
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "supports": [
+            "model_name",
+            "no_public_weights_evidence_in_reviewed_page"
+          ],
+          "note": "已打开官方型号页；本页未见公开权重链接和权重许可证。",
+          "verified_at": "2026-10-30"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>扩散噪声与预测误差 · ModelAtlas</title><link rel="stylesheet" href="diffusion-noise-lab.css"><script src="diffusion-noise.js" defer></script><script src="diffusion-noise-fixtures.js" defer></script><script src="diffusion-noise-lab.js" defer></script></head><body><a class="skip" href="#noise-main">跳至课程</a><header><a href="academy.html#multimodal">ModelAtlas · 多模态机制</a><nav aria-label="语言"><a data-noise-language href="diffusion-noise-lab.html">中文</a> · <a data-noise-language href="diffusion-noise-lab-en.html">English</a></nav></header><main id="noise-main"><p>MODELATLAS · MIX → INVERT → COMPARE → EXPLAIN</p><h1>扩散噪声与预测误差</h1><div class="warning"><p>前置：二维向量、平方根与均方误差（MSE）。完成后能计算正向带噪信号，区分已知噪声反解与人为错误估计，解释误差放大。这里是原创数值教学，不是图像、潜变量张量或模型输出；没有训练、反向采样、图像/视频生成、质量评测或厂商模型实跑。</p></div><p>语言与地区独立。本课无需厂商服务；导航只保留合法地区与共同章节，不保留输入和结果。</p><nav aria-label="课程目录"><a href="#worked">跟做</a> · <a href="#interactive">交互计算</a> · <a href="#transfer">独立迁移</a> · <a href="#downloads">下载</a></nav><section id="contract"><h2>1 · 先读懂符号</h2><p>x0 是已知原始信号；epsilon 是给定噪声；a = alpha_bar 是累计 alpha，不是单步 beta、时间或图像质量。论文边缘分布中的噪声服从标准高斯分布；本课固定的示意 epsilon 并非随机高斯抽样，也不验证该分布。固定 epsilon 改变 a 的比较，不是一条正向 Markov 轨迹。</p><p>xt = sqrt(a) * x0 + sqrt(1-a) * epsilon</p><p>x0_hat = (xt - sqrt(1-a) * epsilon_hat) / sqrt(a)</p><p>给定的 epsilon_hat 不是训练出来的预测器。当它等于已知 epsilon 时，反解只是代数 oracle：已经知道加了什么，当然可以减去。不是从纯噪声生成新图像。</p></section><section id="worked"><h2>2 · 完整跟做推导</h2><p>W：x0=[1,-1]，epsilon=[0.5,-0.5]，a=0.64，epsilon_hat=[0.3,-0.3]。sqrt(a)=0.8，sqrt(1-a)=0.6。信号项=[0.8,-0.8]；噪声项=[0.3,-0.3]；xt=[1.1,-1.1]。已知噪声反解=[1,-1]。错误估计反解=[1.15,-1.15]；误差=[0.15,-0.15]；MSE=(0.15²+(-0.15)²)/2=0.0225。</p><p>x0_hat-x0 = sqrt((1-a)/a) * (epsilon-epsilon_hat)。因此重建 MSE = ((1-a)/a) * 噪声估计 MSE。此时噪声估计 MSE 为 0.04。改成 a=0.04，重建 MSE=0.96，是 W 的约 42.6667 倍；前提是估计误差保持相同。真实模型误差未必随噪声水平保持不变。这里 MSE 依赖已知教学 x0，不是通用图片质量分数。</p></section><section id="interactive"><h2>亲手计算：先预测，再点击</h2><p>更改输入会隐藏旧结果。T 预设只加载输入；点击计算才揭晓。a 滑块与数值框同步；范围只是教学护栏。</p><div class="noise-controls"><label for="preset">原创输入预设<select id="preset"><option value="worked">W · 跟做</option><option value="high">高噪声，同一估计误差</option><option value="transfer">T · 独立迁移</option></select></label><label for="alpha">alpha_bar · [0.01, 1]<input id="alpha" type="number" min="0.01" max="1" step="any" aria-describedby="input-error"></label><label for="alpha-slider">调节累计 alpha<input id="alpha-slider" type="range" min="0.01" max="1" step="any"></label><label for="estimate-0">epsilon_hat[0] · [-10, 10]<input id="estimate-0" type="number" min="-10" max="10" step="any" aria-describedby="input-error"></label><label for="estimate-1">epsilon_hat[1] · [-10, 10]<input id="estimate-1" type="number" min="-10" max="10" step="any" aria-describedby="input-error"></label><button id="calculate" type="button">计算</button><button id="reset" type="button">重置为 W</button></div><p id="fixture-context"></p><p id="input-error" role="alert"></p><p id="calculation-status" role="status" aria-live="polite"></p><div id="result" hidden><p class="warning">当前估计由你给定，不是模型预测。MSE 对照已知教学信号，不代表图像或视频质量。</p><dl class="result-grid"><div><dt>本次 a</dt><dd id="out-alpha_bar"></dd></div><div><dt>本次估计</dt><dd id="out-estimate"></dd></div><div><dt>信号系数</dt><dd id="out-signal_coefficient"></dd></div><div><dt>噪声系数</dt><dd id="out-noise_coefficient"></dd></div><div><dt>信号项</dt><dd id="out-signal"></dd></div><div><dt>噪声项</dt><dd id="out-noise"></dd></div><div><dt>带噪信号 xt</dt><dd id="out-xt"></dd></div><div><dt>已知噪声反解</dt><dd id="out-oracle"></dd></div><div><dt>给定估计反解</dt><dd id="out-predicted"></dd></div><div><dt>逐维误差</dt><dd id="out-error"></dd></div><div><dt>误差幅度放大系数</dt><dd id="out-amplification"></dd></div><div><dt>噪声估计 MSE</dt><dd id="out-estimate_mse"></dd></div><div><dt>重建 MSE</dt><dd id="out-mse"></dd></div><div><dt>恒等式预期 MSE</dt><dd id="out-expected_mse"></dd></div></dl></div><noscript><p>交互需 JavaScript。下方 Python 下载和上方完整推导仍可使用。</p></noscript></section><section id="run"><h2>3 · 离线运行完整源码</h2><p>下载并解压 diffusion-noise-lab.zip，在其中 diffusion-noise 目录打开终端。只需 Python 3.9+ 标准库，不安装依赖，不需要账号、API 密钥、GPU、联网或模型权重。原样运行：</p><pre><code>python3 -B demo.py</code></pre><pre><code>python3 -B -m unittest -v</code></pre><p>默认演示以 JSON 打印 W 和高噪声的全部中间结果，不揭晓 T。预期 MSE 分别为 0.0225、0.96，允许浮点误差。九项单元测试覆盖恒等式、oracle 与输入校验。可在 fixtures.json 的副本上修改估计；测试特意保留参考输入。不要先舍入再计算；显示舍入不反馈进入下一步。</p></section><section id="transfer"><h2>4 · 先独立迁移，再看参考</h2><p>T：x0=[-0.5,1]，epsilon=[1,-0.25]，a=0.36，epsilon_hat=[0.7,-0.1]。先不要展开答案或运行 T 预设：预测 xt、反解、逐维误差及 MSE。如果 a 下降而估计误差保持不变，什么被放大？为什么 oracle 不是生成模型？在 WORKSHEET-zh.md 记录计算和一项局限，再对照 REFERENCE-zh.md。独立尝试 T 后，才为 demo.py 添加 --include-transfer 参数运行并揭晓计算参考。打开参考不代表掌握。</p></section><details id="reference"><summary>独立尝试后展开 T 参考</summary><pre># 迁移 T 参考——先独立尝试
+sqrt(a)=0.6；sqrt(1-a)=0.8。信号项=[-0.3,0.6]；噪声项=[0.8,-0.2]；xt=[0.5,0.4]。oracle=[-0.5,1]；反解=[-0.1,0.8]；误差=[0.4,-0.2]；重建 MSE=0.1。噪声估计 MSE=0.05625，乘以 (1-a)/a = 0.64/0.36 得到 0.1。
+a 越小，sqrt((1-a)/a) 越大；比较前提是估计误差不变。不能据此声称真实模型误差在各噪声水平不变。没有学习参数、逐步反向采样器或生成图片；未验证图片/视频质量或时序一致性。查看参考不是掌握证据。
+</pre></details><section id="finish"><h2>5 · 失败恢复与下一步</h2><p>输入协议：a∈[0.01,1]；每个输入向量恰好两个有限分量，各在 [-10,10]。拒绝布尔值、空输入、Python API 中的字符串、NaN、无穷，不静默裁剪；派生结果可以超过输入范围。a=0 无法反解；0.01 只是教学和数值护栏，并非物理扩散下限。浏览器编辑后隐藏旧结果，须点击计算；预设只设置输入，不自动揭晓答案。重置恢复 W 并清空结果，不写学习记录。语言跳转只保留合法地区与共同章节，不保留未完成输入和计算结果。禁用 JavaScript 时仍可读推导并运行 Python。JSON 损坏：恢复下载的输入；目录错误：进入解压后的 diffusion-noise；缺少 Python：按你通常可信的方式安装支持版本。</p><p>通过标准是能解释机制和边界，不是交付生成图片。接着学习视频抽帧，区分数值机制与时序证据；再用微型训练理解参数优化。本课没有训练 epsilon 预测器，也不实现 classifier-free guidance。</p></section><section id="downloads"><h2>完整源码材料包</h2><p><a href="diffusion-noise-lab.zip" download>下载标准库 Python 实验 ZIP</a></p><ul><li><a href="diffusion-noise-core.py">core.py</a> · <a href="#source-core.py">检查源码</a></li><li><a href="diffusion-noise-fixtures.json">fixtures.json</a> · <a href="#source-fixtures.json">检查源码</a></li><li><a href="diffusion-noise-demo.py">demo.py</a> · <a href="#source-demo.py">检查源码</a></li><li><a href="diffusion-noise-test_core.py">test_core.py</a> · <a href="#source-test_core.py">检查源码</a></li><li><a href="diffusion-noise-README-zh.md">README-zh.md</a> · <a href="#source-README-zh.md">检查源码</a></li><li><a href="diffusion-noise-README-en.md">README-en.md</a> · <a href="#source-README-en.md">检查源码</a></li><li><a href="diffusion-noise-WORKSHEET-zh.md">WORKSHEET-zh.md</a> · <a href="#source-WORKSHEET-zh.md">检查源码</a></li><li><a href="diffusion-noise-WORKSHEET-en.md">WORKSHEET-en.md</a> · <a href="#source-WORKSHEET-en.md">检查源码</a></li><li><a href="diffusion-noise-REFERENCE-zh.md">REFERENCE-zh.md</a> · <a href="#source-REFERENCE-zh.md">检查源码</a></li><li><a href="diffusion-noise-REFERENCE-en.md">REFERENCE-en.md</a> · <a href="#source-REFERENCE-en.md">检查源码</a></li><li><a href="diffusion-noise-SOURCES.md">SOURCES.md</a> · <a href="#source-SOURCES.md">检查源码</a></li></ul><details id="source-core.py"><summary>core.py</summary><pre><code>&quot;&quot;&quot;Original two-dimensional algebra, not a denoiser or diffusion sampler.&quot;&quot;&quot;
+import math
+
+def number(value, lower, upper, field):
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not lower &lt;= value &lt;= upper or not math.isfinite(value):
+        raise ValueError(field + &#x27;: expected a finite number in [&#x27; + str(lower) + &#x27;, &#x27; + str(upper) + &#x27;]&#x27;)
+    return float(value)
+
+def vector(value, field):
+    if not isinstance(value, (list, tuple)) or len(value) != 2:
+        raise ValueError(field + &#x27;: expected exactly two components&#x27;)
+    return [number(v, -10, 10, field + &#x27;[&#x27; + str(i) + &#x27;]&#x27;) for i, v in enumerate(value)]
+
+def calculate(alpha_bar, x0, epsilon, estimate):
+    a = number(alpha_bar, 0.01, 1, &#x27;alpha_bar&#x27;)
+    x0, epsilon, estimate = vector(x0, &#x27;x0&#x27;), vector(epsilon, &#x27;epsilon&#x27;), vector(estimate, &#x27;estimate&#x27;)
+    signal_coefficient, noise_coefficient = math.sqrt(a), math.sqrt(1-a)
+    signal = [signal_coefficient * v for v in x0]
+    noise = [noise_coefficient * v for v in epsilon]
+    xt = [s+n for s, n in zip(signal, noise)]
+    reconstruct = lambda e: [(z-noise_coefficient*v)/signal_coefficient for z,v in zip(xt,e)]
+    oracle, predicted = reconstruct(epsilon), reconstruct(estimate)
+    error = [p-v for p,v in zip(predicted,x0)]
+    mse = sum(v*v for v in error)/2
+    estimate_mse = sum((p-v)**2 for p,v in zip(estimate,epsilon))/2
+    return dict(alpha_bar=a, x0=x0, epsilon=epsilon, estimate=estimate,
+                signal_coefficient=signal_coefficient, noise_coefficient=noise_coefficient,
+                signal=signal, noise=noise, xt=xt, oracle=oracle, predicted=predicted,
+                error=error, mse=mse, estimate_mse=estimate_mse,
+                amplification=math.sqrt((1-a)/a), expected_mse=(1-a)/a*estimate_mse)
+</code></pre></details><details id="source-fixtures.json"><summary>fixtures.json</summary><pre><code>{&quot;worked&quot;:{&quot;alpha_bar&quot;:0.64,&quot;x0&quot;:[1,-1],&quot;epsilon&quot;:[0.5,-0.5],&quot;estimate&quot;:[0.3,-0.3]},&quot;high&quot;:{&quot;alpha_bar&quot;:0.04,&quot;x0&quot;:[1,-1],&quot;epsilon&quot;:[0.5,-0.5],&quot;estimate&quot;:[0.3,-0.3]},&quot;transfer&quot;:{&quot;alpha_bar&quot;:0.36,&quot;x0&quot;:[-0.5,1],&quot;epsilon&quot;:[1,-0.25],&quot;estimate&quot;:[0.7,-0.1]}}
+</code></pre></details><details id="source-demo.py"><summary>demo.py</summary><pre><code>&quot;&quot;&quot;Run original fixtures; all outputs are algebra, not model predictions.&quot;&quot;&quot;
+import json
+import argparse
+from pathlib import Path
+from core import calculate
+if __name__ == &#x27;__main__&#x27;:
+    parser = argparse.ArgumentParser(description=&#x27;Original noise algebra; no model execution.&#x27;)
+    parser.add_argument(&#x27;--include-transfer&#x27;, action=&#x27;store_true&#x27;, help=&#x27;Reveal T only after an independent attempt&#x27;)
+    args = parser.parse_args()
+    fixtures = json.loads(Path(__file__).with_name(&#x27;fixtures.json&#x27;).read_text())
+    if not args.include_transfer:
+        fixtures.pop(&#x27;transfer&#x27;)
+    print(json.dumps({key: calculate(**value) for key,value in fixtures.items()}, indent=2, allow_nan=False))
+</code></pre></details><details id="source-test_core.py"><summary>test_core.py</summary><pre><code>import json, math, unittest
+from pathlib import Path
+from core import calculate
+F=json.loads(Path(__file__).with_name(&#x27;fixtures.json&#x27;).read_text())
+class NoiseTests(unittest.TestCase):
+    def test_worked(self):
+        r=calculate(**F[&#x27;worked&#x27;]);self.assertEqual(r[&#x27;xt&#x27;],[1.1,-1.1]);self.assertAlmostEqual(r[&#x27;mse&#x27;],.0225)
+    def test_high(self):self.assertAlmostEqual(calculate(**F[&#x27;high&#x27;])[&#x27;mse&#x27;],.96)
+    def test_transfer(self):
+        r=calculate(**F[&#x27;transfer&#x27;]);self.assertAlmostEqual(r[&#x27;mse&#x27;],.1)
+        for a,b in zip(r[&#x27;xt&#x27;],[.5,.4]):self.assertAlmostEqual(a,b)
+    def test_oracle(self):
+        for fixture in F.values():
+            r=calculate(**dict(fixture,estimate=fixture[&#x27;epsilon&#x27;]));self.assertLess(r[&#x27;mse&#x27;],1e-25)
+    def test_identity(self):
+        for a in [.01,.04,.36,.64,1]:
+            for estimate in [[-10,10],[0,0],[.3,-.3]]:
+                r=calculate(a,[1,-1],[.5,-.5],estimate);self.assertAlmostEqual(r[&#x27;mse&#x27;],r[&#x27;expected_mse&#x27;])
+    def test_one(self):
+        r=calculate(1,[10,-10],[-10,10],[10,-10]);self.assertEqual(r[&#x27;predicted&#x27;],[10,-10]);self.assertEqual(r[&#x27;mse&#x27;],0)
+    def test_derived_values_not_input_clipped(self):
+        r=calculate(.5,[10,10],[10,10],[-10,-10]);self.assertGreater(r[&#x27;xt&#x27;][0],10);self.assertGreater(r[&#x27;predicted&#x27;][0],10)
+    def test_bad_alpha(self):
+        for value in [0,-1,.009,1.01,10**1000,math.nan,math.inf,True,&#x27;0.5&#x27;,None]:
+            with self.subTest(value=value),self.assertRaises(ValueError):calculate(value,[1,1],[1,1],[1,1])
+    def test_bad_vectors(self):
+        for value in [[],[1],[1,2,3],[True,1],[math.nan,1],[math.inf,1],[11,1],[&#x27;1&#x27;,1],None]:
+            for field in [&#x27;x0&#x27;,&#x27;epsilon&#x27;,&#x27;estimate&#x27;]:
+                fixture=dict(F[&#x27;worked&#x27;]);fixture[field]=value
+                with self.subTest(value=value,field=field),self.assertRaises(ValueError):calculate(**fixture)
+if __name__==&#x27;__main__&#x27;:unittest.main()
+</code></pre></details><details id="source-README-zh.md"><summary>README-zh.md</summary><pre><code># 扩散噪声与预测误差
+
+前置：二维向量、平方根与均方误差（MSE）。完成后能计算正向带噪信号，区分已知噪声反解与人为错误估计，解释误差放大。这里是原创数值教学，不是图像、潜变量张量或模型输出；没有训练、反向采样、图像/视频生成、质量评测或厂商模型实跑。
+
+## 1 · 先读懂符号
+
+x0 是已知原始信号；epsilon 是给定噪声；a = alpha_bar 是累计 alpha，不是单步 beta、时间或图像质量。论文边缘分布中的噪声服从标准高斯分布；本课固定的示意 epsilon 并非随机高斯抽样，也不验证该分布。固定 epsilon 改变 a 的比较，不是一条正向 Markov 轨迹。
+
+xt = sqrt(a) * x0 + sqrt(1-a) * epsilon
+
+x0_hat = (xt - sqrt(1-a) * epsilon_hat) / sqrt(a)
+
+给定的 epsilon_hat 不是训练出来的预测器。当它等于已知 epsilon 时，反解只是代数 oracle：已经知道加了什么，当然可以减去。不是从纯噪声生成新图像。
+
+## 2 · 完整跟做推导
+
+W：x0=[1,-1]，epsilon=[0.5,-0.5]，a=0.64，epsilon_hat=[0.3,-0.3]。sqrt(a)=0.8，sqrt(1-a)=0.6。信号项=[0.8,-0.8]；噪声项=[0.3,-0.3]；xt=[1.1,-1.1]。已知噪声反解=[1,-1]。错误估计反解=[1.15,-1.15]；误差=[0.15,-0.15]；MSE=(0.15²+(-0.15)²)/2=0.0225。
+
+x0_hat-x0 = sqrt((1-a)/a) * (epsilon-epsilon_hat)。因此重建 MSE = ((1-a)/a) * 噪声估计 MSE。此时噪声估计 MSE 为 0.04。改成 a=0.04，重建 MSE=0.96，是 W 的约 42.6667 倍；前提是估计误差保持相同。真实模型误差未必随噪声水平保持不变。这里 MSE 依赖已知教学 x0，不是通用图片质量分数。
+
+## 3 · 离线运行完整源码
+
+下载并解压 diffusion-noise-lab.zip，在其中 diffusion-noise 目录打开终端。只需 Python 3.9+ 标准库，不安装依赖，不需要账号、API 密钥、GPU、联网或模型权重。原样运行：
+
+    python3 -B demo.py
+
+    python3 -B -m unittest -v
+
+默认演示以 JSON 打印 W 和高噪声的全部中间结果，不揭晓 T。预期 MSE 分别为 0.0225、0.96，允许浮点误差。九项单元测试覆盖恒等式、oracle 与输入校验。可在 fixtures.json 的副本上修改估计；测试特意保留参考输入。不要先舍入再计算；显示舍入不反馈进入下一步。
+
+## 4 · 先独立迁移，再看参考
+
+T：x0=[-0.5,1]，epsilon=[1,-0.25]，a=0.36，epsilon_hat=[0.7,-0.1]。先不要展开答案或运行 T 预设：预测 xt、反解、逐维误差及 MSE。如果 a 下降而估计误差保持不变，什么被放大？为什么 oracle 不是生成模型？在 WORKSHEET-zh.md 记录计算和一项局限，再对照 REFERENCE-zh.md。独立尝试 T 后，才为 demo.py 添加 --include-transfer 参数运行并揭晓计算参考。打开参考不代表掌握。
+
+## 5 · 失败恢复与下一步
+
+输入协议：a∈[0.01,1]；每个输入向量恰好两个有限分量，各在 [-10,10]。拒绝布尔值、空输入、Python API 中的字符串、NaN、无穷，不静默裁剪；派生结果可以超过输入范围。a=0 无法反解；0.01 只是教学和数值护栏，并非物理扩散下限。浏览器编辑后隐藏旧结果，须点击计算；预设只设置输入，不自动揭晓答案。重置恢复 W 并清空结果，不写学习记录。语言跳转只保留合法地区与共同章节，不保留未完成输入和计算结果。禁用 JavaScript 时仍可读推导并运行 Python。JSON 损坏：恢复下载的输入；目录错误：进入解压后的 diffusion-noise；缺少 Python：按你通常可信的方式安装支持版本。
+
+通过标准是能解释机制和边界，不是交付生成图片。接着学习视频抽帧，区分数值机制与时序证据；再用微型训练理解参数优化。本课没有训练 epsilon 预测器，也不实现 classifier-free guidance。
+</code></pre></details><details id="source-README-en.md"><summary>README-en.md</summary><pre><code># Diffusion noise and prediction error
+
+Prerequisites: two-dimensional vectors, square roots and mean squared error (MSE). Outcome: compute a forward noisy signal, distinguish oracle inversion from a supplied wrong estimate, and explain error amplification. Original numerical teaching fixtures, not images, latent tensors or model outputs. No training, reverse sampling, image/video generation, quality benchmark or provider execution.
+
+## 1 · What the symbols mean
+
+x0 is the known original signal; epsilon is the supplied noise; a = alpha_bar is cumulative alpha, not a single-step beta, time or image quality. The paper&#x27;s marginal distribution uses standard Gaussian noise. Our fixed illustrative epsilon is not a random Gaussian draw and does not test that distribution. Comparing different a with fixed epsilon is NOT a forward Markov trajectory.
+
+xt = sqrt(a) * x0 + sqrt(1-a) * epsilon
+
+x0_hat = (xt - sqrt(1-a) * epsilon_hat) / sqrt(a)
+
+The supplied epsilon_hat is NOT a trained predictor. If epsilon_hat equals the known epsilon, inversion is an algebraic oracle. We already know what was added; this is not generation from pure noise.
+
+## 2 · Follow the full worked trace
+
+W: x0=[1,-1], epsilon=[0.5,-0.5], a=0.64, epsilon_hat=[0.3,-0.3]. sqrt(a)=0.8 and sqrt(1-a)=0.6. Signal term=[0.8,-0.8]; noise term=[0.3,-0.3]; xt=[1.1,-1.1]. Oracle reconstruction=[1,-1]. Wrong estimate reconstruction=[1.15,-1.15]; error=[0.15,-0.15]; MSE=(0.15²+(-0.15)²)/2=0.0225.
+
+x0_hat-x0 = sqrt((1-a)/a) * (epsilon-epsilon_hat). Therefore reconstruction MSE = ((1-a)/a) * noise-estimate MSE. The noise-estimate MSE is 0.04. At a=0.04, reconstruction MSE=0.96: 42.6667 times the W result, under the same fixed estimation error. Real model errors need not stay fixed across noise levels. This MSE uses the known teaching x0; it is not a universal image-quality score.
+
+## 3 · Run the complete source offline
+
+Download and extract diffusion-noise-lab.zip, open a terminal in its diffusion-noise directory. Python 3.9+ standard library only; no installation, account, API key, GPU, internet or model weights. Run exactly:
+
+    python3 -B demo.py
+
+    python3 -B -m unittest -v
+
+The default demo prints every intermediate value for W and high noise as JSON, without revealing T. Expected MSE values are 0.0225 and 0.96, within floating-point tolerance. Nine unit tests cover the identities, oracle and validation. Edit a copy of fixtures.json to try a different estimate; tests intentionally retain the reference fixtures. Never round intermediate values; display rounding does not feed back into calculation.
+
+## 4 · Independent transfer before the reference
+
+T: x0=[-0.5,1], epsilon=[1,-0.25], a=0.36, epsilon_hat=[0.7,-0.1]. Without opening the reference or running the T preset, predict xt, reconstruction, coordinate errors and MSE. What happens to reconstruction error if a decreases while estimation error stays fixed? Explain why an oracle is not a generation model. Record your calculation and one limitation in WORKSHEET-en.md, then compare with REFERENCE-en.md. Only after attempting T, run demo.py with the --include-transfer flag to reveal its computed reference. Opening the reference does not establish mastery.
+
+## 5 · Recovery and next step
+
+Allowed inputs: a in [0.01,1] and exactly two finite components in [-10,10] for each input vector. Booleans, empty input, strings in the Python API, NaN and infinity are rejected, never silently clipped. Derived outputs may exceed input bounds. a=0 cannot be inverted; 0.01 is only a teaching/numerical guardrail, not a physical diffusion limit. Browser edits hide previous results until Calculate; presets set inputs without revealing answers. Reset restores W and clears output; no learning records are written. Language navigation preserves only valid region and shared section, not unfinished input or computed output. If JavaScript is disabled, use the trace and Python packet. Invalid JSON: restore the downloaded fixture. Wrong directory: enter the extracted diffusion-noise directory. Missing Python: install a supported interpreter through your normal trusted workflow.
+
+Success means explaining the mechanism and limits, not reporting a generated image. Continue with video sampling to distinguish arithmetic from temporal evidence; use tiny training to learn what parameter optimization actually means. This unit does not train an epsilon predictor or implement classifier-free guidance.
+</code></pre></details><details id="source-WORKSHEET-zh.md"><summary>WORKSHEET-zh.md</summary><pre><code># 独立迁移 T 工作表
+看参考前：x0=[-0.5,1]，epsilon=[1,-0.25]，a=0.36，estimate=[0.7,-0.1]。
+1. 信号系数 / 噪声系数：
+2. 信号项 / 噪声项 / xt：
+3. oracle 反解 / 给定估计反解：
+4. 逐维误差 / 重建 MSE / 噪声估计 MSE：
+5. 推导放大恒等式。比较时什么必须保持不变？
+6. 为什么 oracle 不是生成？写出一项未验证属性。
+7. 对照参考后记录具体修正，不只标记“完成”。
+</code></pre></details><details id="source-WORKSHEET-en.md"><summary>WORKSHEET-en.md</summary><pre><code># Independent T worksheet
+Before opening the reference: x0=[-0.5,1], epsilon=[1,-0.25], a=0.36, estimate=[0.7,-0.1].
+1. Signal coefficient / noise coefficient:
+2. Signal term / noise term / xt:
+3. Oracle reconstruction / supplied-estimate reconstruction:
+4. Coordinate errors / reconstruction MSE / noise-estimate MSE:
+5. Derive the amplification identity. What must remain fixed in the comparison?
+6. Explain why oracle inversion is not generation. State one untested property.
+7. Compare to the reference and record what you corrected, not merely “done”.
+</code></pre></details><details id="source-REFERENCE-zh.md"><summary>REFERENCE-zh.md</summary><pre><code># 迁移 T 参考——先独立尝试
+sqrt(a)=0.6；sqrt(1-a)=0.8。信号项=[-0.3,0.6]；噪声项=[0.8,-0.2]；xt=[0.5,0.4]。oracle=[-0.5,1]；反解=[-0.1,0.8]；误差=[0.4,-0.2]；重建 MSE=0.1。噪声估计 MSE=0.05625，乘以 (1-a)/a = 0.64/0.36 得到 0.1。
+a 越小，sqrt((1-a)/a) 越大；比较前提是估计误差不变。不能据此声称真实模型误差在各噪声水平不变。没有学习参数、逐步反向采样器或生成图片；未验证图片/视频质量或时序一致性。查看参考不是掌握证据。
+</code></pre></details><details id="source-REFERENCE-en.md"><summary>REFERENCE-en.md</summary><pre><code># Transfer T reference — attempt first
+sqrt(a)=0.6; sqrt(1-a)=0.8. Signal=[-0.3,0.6]; noise=[0.8,-0.2]; xt=[0.5,0.4]. Oracle=[-0.5,1]; reconstruction=[-0.1,0.8]; error=[0.4,-0.2]; reconstruction MSE=0.1. Noise-estimate MSE=0.05625; multiply by (1-a)/a = 0.64/0.36 to obtain 0.1.
+As a decreases, the factor sqrt((1-a)/a) grows, holding the estimation error fixed. It is not evidence that a real model has constant error across noise levels. No learned parameters, iterative reverse sampler or generated image exists here. Image/video quality and temporal consistency are not tested. Reference inspection is not proof of mastery.
+</code></pre></details><details id="source-SOURCES.md"><summary>SOURCES.md</summary><pre><code># Sources / 来源
+Checked / 核对：2026-11-02.
+- Ho, Jain, Abbeel: Denoising Diffusion Probabilistic Models, fixed v2: https://arxiv.org/html/2006.11239v2 . Section 2, Equation 4: forward marginal; sections 3.2/3.4: noise parameterization. First arXiv submission 2020-06-19; v2 2020-12-16. These are paper version dates, not commercial model releases. 首次投稿与论文版本日期，不是商用模型发布。
+- 本课只取正向边缘式；反解和误差恒等式是课堂代数推导。二维固定输入原创，不是论文测试数据；没有复现训练或采样，也没有运行厂商模型。
+- Only the forward marginal algebra is used. Inversion/error identities are classroom derivations; fixed 2-D fixtures are original, not paper benchmark data. No training/sampling reproduction, real model run, CFG, or quality evaluation.
+</code></pre></details></section><footer><p>来源核对: 2026-11-02 · <a href="https://arxiv.org/html/2006.11239v2">DDPM v2 · Eq. 4</a> · 首次投稿 2020-06-19，v2 2020-12-16，非商用模型发布日期。</p><p><a href="video-sampling-lab.html">下一步：视频抽帧与时序证据</a> · <a href="tiny-training.html">什么才是训练？</a></p></footer></main></body></html>

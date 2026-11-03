@@ -1,0 +1,61 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-01",
+  "scope": "One bounded family announcement, not individual weight releases, API availability certification or global coverage.",
+  "events": [
+    {
+      "provider": "AI21",
+      "checked_at": "2026-11-01",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "id": "ai21-jamba-1-7-family-announcement-2025-07-03",
+      "kind": "model_family_announcement",
+      "title": {
+        "zh": "AI21 Jamba 1.7 家族发布公告",
+        "en": "AI21 Jamba 1.7 family announcement"
+      },
+      "version": "Jamba 1.7 (family announcement)",
+      "date": "2025-07-03",
+      "timestamp_utc": null,
+      "api_alias": null,
+      "first_paper_submission": null,
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://docs.ai21.com/changelog",
+          "kind": "model_family_announcement",
+          "date": "2025-07-03",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "family_members": [
+        {
+          "name": "AI21-Jamba-Large-1.7",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba-Large-1.7",
+          "source_url": "https://docs.ai21.com/changelog"
+        },
+        {
+          "name": "AI21-Jamba-Mini-1.7",
+          "url": "https://huggingface.co/ai21labs/AI21-Jamba-Mini-1.7",
+          "source_url": "https://docs.ai21.com/changelog"
+        }
+      ],
+      "summary": {
+        "zh": "官方日志 July 3, 2025 段落公告 Jamba 1.7，并直接链接 Large 1.7 与 Mini 1.7；这是一个家族公告事件，不是两次权重发布。公告时刻与时区未登记。",
+        "en": "The official July 3, 2025 changelog announces Jamba 1.7 and links Large 1.7 and Mini 1.7. This is one family-announcement event, not two weights releases; time and timezone are unrecorded."
+      },
+      "note": {
+        "zh": "不是权重首次公开日期，也不证明精确 API 版本。两个成员的首次完整公开权重日期、固定修订和历史许可证适用性仍未知；公开卡链接自定义许可，不据此称为完整开源或无限制商用。成员链接只标明公告所指对象，不证明当前下载资格。未接受访问协议、下载权重或运行模型。",
+        "en": "Not a first-public weights date or proof of an exact API revision. First complete public weights dates, pinned revisions and historical license applicability remain unknown for both members. Cards link a custom license, not proof of fully open-source AI or unrestricted commercial use. Member links identify announcement targets, not current download eligibility. No access agreement accepted, weights downloaded or model run."
+      },
+      "context_sources": []
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0",
+  "purpose": "补录2025年7月与2026年8月的六条公开权重事件；不是全球完整发布目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-07",
+    "2026-08"
+  ],
+  "coverage": {
+    "provider_denominator": 20,
+    "searched_providers": [
+      "Alibaba/Qwen",
+      "Mistral"
+    ],
+    "unsearched_providers": [
+      "AI21",
+      "Ai2",
+      "Anthropic",
+      "BAAI",
+      "Baidu",
+      "ByteDance Seed",
+      "Cohere",
+      "DeepSeek",
+      "Google",
+      "LG AI Research",
+      "Meta",
+      "MiniMax",
+      "Moonshot AI",
+      "NII / LLM-jp",
+      "OpenAI",
+      "Sarvam AI",
+      "Tencent Hunyuan",
+      "Z.ai / 智谱"
+    ],
+    "note": "两个目标月份各检索上述两家机构，达到六条候选上限后停止；未检索不表示没有发布。"
+  },
+  "date_policy": "仅使用官方明确权重可取得声明；不将API上线、论文、后续承诺或文件更新时间当作首次上传日期。",
+  "license_policy": "模型权重许可按精确检查点记录，代码许可未知；已读许可声明但未复核完整法律文本。",
+  "events": [
+    {
+      "id": "voxtral-initial-2025-07-15",
+      "name": "Voxtral 首批 24B / 3B 权重发布",
+      "vendor": "Mistral AI",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Voxtral-Small-24B-2507",
+        "Voxtral-Mini-3B-2507"
+      ],
+      "announcement_date": "2025-07-15",
+      "weights_release_date": "2025-07-15",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-07",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "audio",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+          "applies_to": "Voxtral-Small-24B-2507 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507",
+          "applies_to": "Voxtral-Mini-3B-2507 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+        "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/voxtral/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "Article date and Try it for free / Download and run locally",
+          "explicit_date_text": "July 15, 2025",
+          "summary_zh": "官方公告标注7月15日，说明两种尺寸均可从 Hugging Face 下载。"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Voxtral-Small-24B-2507",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Voxtral-Mini-3B-2507",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。",
+        "本家族事件仅包括 Voxtral Small 24B 和 Mini 3B 的 2507 检查点；不包括 API 专用 Mini Transcribe 或后续 Realtime。"
+      ]
+    },
+    {
+      "id": "qwen3-235b-instruct-2507",
+      "name": "Qwen3-235B-A22B-Instruct-2507 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Qwen3-235B-A22B-Instruct-2507"
+      ],
+      "announcement_date": "2025-07-21",
+      "weights_release_date": "2025-07-21",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-07",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+          "applies_to": "Qwen3-235B-A22B-Instruct-2507 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "README / News / 2025.07.21; Models / official model weights",
+          "explicit_date_text": "2025.07.21",
+          "summary_zh": "官方仓库 News 的对应日期条目明确列出该检查点发布；结合官方模型卡确认权重入口。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。"
+      ]
+    },
+    {
+      "id": "qwen3-235b-thinking-2507",
+      "name": "Qwen3-235B-A22B-Thinking-2507 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Qwen3-235B-A22B-Thinking-2507"
+      ],
+      "announcement_date": "2025-07-25",
+      "weights_release_date": "2025-07-25",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-07",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "applies_to": "Qwen3-235B-A22B-Thinking-2507 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "README / News / 2025.07.25; Models / official model weights",
+          "explicit_date_text": "2025.07.25",
+          "summary_zh": "官方仓库 News 的对应日期条目明确列出该检查点发布；结合官方模型卡确认权重入口。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。"
+      ]
+    },
+    {
+      "id": "qwen38-24t-2026-08-12",
+      "name": "Qwen3.8-2.4T-A95B 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Qwen3.8-2.4T-A95B"
+      ],
+      "announcement_date": "2026-08-12",
+      "weights_release_date": "2026-08-12",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2026-08",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "qwen3.8-max",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+          "applies_to": "Qwen3.8-2.4T-A95B 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3.8",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "README / News / 2026-08-12; Models / official model weights",
+          "explicit_date_text": "2026-08-12",
+          "summary_zh": "官方仓库 News 的对应日期条目与 Models 权重章节共同支持本检查点的公开权重可取得日期。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。",
+        "8月3日公告中的权重承诺不是开放日期；本记录使用官方仓库8月12日的可取得声明。"
+      ]
+    },
+    {
+      "id": "qwen38-27b-2026-08-14",
+      "name": "Qwen3.8-27B 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Qwen3.8-27B"
+      ],
+      "announcement_date": "2026-08-14",
+      "weights_release_date": "2026-08-14",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2026-08",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "image",
+          "video",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "applies_to": "Qwen3.8-27B 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3.8-27B"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3.8",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "README / News / 2026-08-14; Models / official model weights",
+          "explicit_date_text": "2026-08-14",
+          "summary_zh": "官方仓库 News 的对应日期条目与 Models 权重章节共同支持本检查点的公开权重可取得日期。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。"
+      ]
+    },
+    {
+      "id": "qwen38-flash-next-2026-08-26",
+      "name": "Qwen3.8-Flash-Next 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Qwen3.8-Flash-Next"
+      ],
+      "announcement_date": "2026-08-26",
+      "weights_release_date": "2026-08-26",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2026-08",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "modality": {
+        "input": [
+          "image",
+          "video",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "verified_on": "2026-10-31",
+      "code_license": null,
+      "licenses": [
+        {
+          "name": "qwen-community-1.0",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "applies_to": "Qwen3.8-Flash-Next 模型权重",
+          "review_note": "已核对官方模型卡的许可声明；本轮未复核完整许可文本。",
+          "full_license_text_reviewed": false
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/QwenLM/Qwen3.8-Flash-Next",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "locator": "README / News / 2026-08-26; Models / official model weights",
+          "explicit_date_text": "2026-08-26",
+          "summary_zh": "官方仓库 News 的对应日期条目与 Models 权重章节共同支持本检查点的公开权重可取得日期。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "supports": [
+            "checkpoint_identity",
+            "modality",
+            "weights_currently_available",
+            "license"
+          ],
+          "locator": "Model card / model identity, license metadata and usage",
+          "summary_zh": "官方精确模型卡与许可声明；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "日期是官方声明权重可取得的日期，不是各文件首次上传时间。仅收录明确列出的检查点，不外推其他版本。",
+        "许可名称来自官方精确模型卡；本轮未复核完整许可文本，不将代码仓库许可套用于模型权重。"
+      ]
+    }
+  ]
+}

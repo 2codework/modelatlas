@@ -2,6 +2,7 @@
 import unittest,re,hashlib
 from pathlib import Path
 from html.parser import HTMLParser
+from campus_contract import before_campus
 ROOT=Path(__file__).resolve().parents[1]
 OLD='<div class="flow" aria-label="从输入到验收的教学流程"><span>你给材料</span><b>→</b><span>应用把材料交给模型</span><b>→</b><span>生成草稿</span><b>→</b><span>你核对</span></div>'
 BASELINE_HTML='efd7371becec324dda536955681aa4dd28ec146aa8983bc8743cd7d1f5f81c30'
@@ -31,7 +32,7 @@ class EntryDiagram(unittest.TestCase):
   self.assertEqual(step3.count(access[0]),1)
   self.assertLess(step3.index(access[0]),step3.index('class="primary-action"'))
   self.assertEqual(hashlib.sha256(access[0].encode()).hexdigest(),'8783f15736509e7cc4bd5feffe189100824a2f177680a98267cca54575a042c2')
-  self.assertEqual(hashlib.sha256(normal(self.html.replace(access[0],'').replace(self.figure,OLD)).encode()).hexdigest(),BASELINE_HTML)
+  self.assertEqual(hashlib.sha256(normal(before_campus(self.html).replace(access[0],'').replace(self.figure,OLD)).encode()).hexdigest(),BASELINE_HTML)
   self.assertIn('提出下一步',self.html);self.assertIn('concept-bridge',self.html)
  def test_two_real_text_ordered_routes_and_unambiguous_labels(self):
   routes=[n for n in nodes(self.tree) if n['attrs'].get('class')=='entry-route'];self.assertEqual(len(routes),2);self.assertTrue(all(any(n['tag']=='h2' for n in nodes(route)) for route in routes))

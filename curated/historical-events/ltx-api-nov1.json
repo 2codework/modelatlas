@@ -1,0 +1,97 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-01",
+  "scope": "Two API-alias availability events from one dated announcement; neither weight releases nor claims of independent underlying models.",
+  "events": [
+    {
+      "id": "lightricks-ltx-2-5-fast-api-2026-08-11",
+      "kind": "api_availability_announcement",
+      "title": {
+        "zh": "LTX-2.5 Fast API 可用公告",
+        "en": "LTX-2.5 Fast API availability announcement"
+      },
+      "provider": "Lightricks",
+      "version": "ltx-2-5-fast (LTX-2.5 Fast; historical API alias)",
+      "api_alias": "ltx-2-5-fast",
+      "date": "2026-08-11",
+      "timestamp_utc": null,
+      "checked_at": "2026-11-01",
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "evidence": [
+        {
+          "url": "https://docs.ltx.io/api-changelog/2026/8/11",
+          "kind": "api_availability_announcement",
+          "date": "2026-08-11",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "官方2026-08-11 API日志登记 ltx-2-5-fast，支持文本、图像或音频驱动的视频以及横竖构图。Fast文生/图生视频最高4K，音频输入的视频为1080p。",
+        "en": "The official August 11, 2026 API log announces ltx-2-5-fast for text-, image- or audio-driven video in landscape and portrait. Fast text/image-to-video supports up to 4K, while audio-to-video is 1080p."
+      },
+      "note": {
+        "zh": "这是同一篇公告内一个调用别名的服务事件，不是独立权重首发、固定检查点或GA/实验状态认定。首次完整公开权重日、历史后端修订与许可证适用性未由本事件确认。公告时刻/时区未知；当前端点、分辨率、地区资格与费用未实测，须另核。资料核验日为2026-11-01，没有调用API或生成媒体。",
+        "en": "One service event for an alias in the same announcement, not a separate weights launch, pinned checkpoint or GA/experimental classification. First complete public weights date, historical backend revision and license applicability are not established. Announcement time/timezone are unknown. Current endpoint, resolution, regional eligibility and costs were not tested and need separate verification. Sources checked November 1, 2026; no API call or media generation."
+      },
+      "first_paper_submission": null,
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "lightricks-ltx-2-5-pro-api-2026-08-11",
+      "kind": "api_availability_announcement",
+      "title": {
+        "zh": "LTX-2.5 Pro API 可用公告",
+        "en": "LTX-2.5 Pro API availability announcement"
+      },
+      "provider": "Lightricks",
+      "version": "ltx-2-5-pro (LTX-2.5 Pro; historical API alias)",
+      "api_alias": "ltx-2-5-pro",
+      "date": "2026-08-11",
+      "timestamp_utc": null,
+      "checked_at": "2026-11-01",
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ],
+      "evidence": [
+        {
+          "url": "https://docs.ltx.io/api-changelog/2026/8/11",
+          "kind": "api_availability_announcement",
+          "date": "2026-08-11",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "官方2026-08-11 API日志登记 ltx-2-5-pro，支持文本、图像或音频驱动的视频以及横竖构图。Pro文生/图生视频为720p或1080p，音频输入的视频为1080p。",
+        "en": "The official August 11, 2026 API log announces ltx-2-5-pro for text-, image- or audio-driven video in landscape and portrait. Pro text/image-to-video supports 720p or 1080p; audio-to-video is 1080p."
+      },
+      "note": {
+        "zh": "这是同一篇公告内一个调用别名的服务事件，不是独立权重首发、固定检查点或GA/实验状态认定。首次完整公开权重日、历史后端修订与许可证适用性未由本事件确认。公告时刻/时区未知；当前端点、分辨率、地区资格与费用未实测，须另核。资料核验日为2026-11-01，没有调用API或生成媒体。",
+        "en": "One service event for an alias in the same announcement, not a separate weights launch, pinned checkpoint or GA/experimental classification. First complete public weights date, historical backend revision and license applicability are not established. Announcement time/timezone are unknown. Current endpoint, resolution, regional eligibility and costs were not tested and need separate verification. Sources checked November 1, 2026; no API call or media generation."
+      },
+      "first_paper_submission": null,
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

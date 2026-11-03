@@ -1,0 +1,50 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "One pinned SmolVLA first arXiv paper submission; no announcement, weights, API or license admission and no complete Hugging Face inventory.",
+  "events": [
+    {
+      "id": "huggingface-smolvla-paper-v1-2025-06-02",
+      "kind": "paper",
+      "title": {
+        "zh": "Hugging Face SmolVLA 论文首次 arXiv 提交",
+        "en": "Hugging Face SmolVLA paper first arXiv submission"
+      },
+      "provider": "Hugging Face",
+      "version": "arXiv:2506.01844v1",
+      "api_alias": null,
+      "date": "2025-06-02",
+      "timestamp_utc": "2025-06-02T16:30:19Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "image",
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2506.01844v1",
+          "kind": "paper",
+          "date": "2025-06-02",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv v1 于 2025-06-02 16:30:19 UTC 提交，标题为 SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics。作者：Mustafa Shukor, Dana Aubakirova, Francesco Capuano, Pepijn Kooijmans, Steven Palma, Adil Zouitine, Michel Aractingi, Caroline Pascal, Martino Russi, Andres Marafioti, Simon Alibert, Matthieu Cord, Thomas Wolf, Remi Cadene。这是一项机器人视觉—语言—动作（VLA）研究：图像、语言指令与机器人感觉运动状态输入，预测机器人动作；不是通用办公 Agent。",
+        "en": "arXiv v1 was submitted on 2025-06-02 at 16:30:19 UTC: SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics, by Mustafa Shukor, Dana Aubakirova, Francesco Capuano, Pepijn Kooijmans, Steven Palma, Adil Zouitine, Michel Aractingi, Caroline Pascal, Martino Russi, Andres Marafioti, Simon Alibert, Matthieu Cord, Thomas Wolf, Remi Cadene. This robotics vision-language-action (VLA) work uses images, language instructions and robot sensorimotor state to predict robot actions; it is not a general office agent."
+      },
+      "note": {
+        "zh": "核对固定 v1 摘要、作者、提交历史及 HTML 的机构与图1说明，另读 Hugging Face 官方博客；未全文复核或复现评测。HTML 列出 Hugging Face、Sorbonne University、valeo.ai、École Normale Supérieure Paris-Saclay，归入 Hugging Face 不表示所有作者只属于该机构。官方博客 2025-06-03 公告与 2025-06-02 论文提交分开，本次只收录论文。模态标签 image/text 表示视觉和语言输入，机器人状态及动作输出在文字中保留，不归为视频生成或办公自动化。本条不是模型、API 或权重发布，也不证明所有渠道最早公开时刻。论文及博客的发布声明不证明首次完整权重可下载日期；首次公开权重日期、历史权重与代码许可、固定 API 修订及地区可用性仍未知。论文许可不替代权重许可，当前模型卡许可不回填历史，开放权重不自动等于开源。有界补录，不代表 Hugging Face 完整历史。",
+        "en": "Review covers the pinned v1 abstract, authors, submission history and HTML affiliations/Figure 1, plus the official Hugging Face blog; not full-paper verification or replicated evaluations. HTML names Hugging Face, Sorbonne University, valeo.ai and École Normale Supérieure Paris-Saclay; Hugging Face attribution does not imply exclusive affiliation for every author. The 2025-06-03 official blog announcement is distinct from the 2025-06-02 paper submission; only the paper is admitted here. The image/text tags describe visual and language inputs; robot state and action output remain explicit in prose, not video generation or office automation. This is not a model, API or weights release, nor earliest public appearance across all channels. Paper and blog release statements do not establish the first complete downloadable weights date. First public weights date, historical weights and code licenses, pinned API revision and regional availability remain unknown. Paper licensing cannot establish weights licensing; current model-card licensing is not backfilled historically; open weights do not automatically mean open source. Bounded admission, not complete Hugging Face history."
+      },
+      "first_paper_submission": "2025-06-02",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

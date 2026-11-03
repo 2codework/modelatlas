@@ -88,3 +88,10 @@ pre { max-width:100%; overflow-x:auto; white-space:pre; padding:1rem; line-heigh
 @media(max-width:760px){.atlas-workspace #detail.runtime-reading :is(h4,h5,h6){scroll-margin-top:190px}}
 
 .atlas-workspace #detail.runtime-reading :is(h5,h6){font-size:18px;line-height:1.5;margin:24px 0 8px}
+/* Scoped license evidence is independent of the historical raw catalog fields. */
+.catalog-license-evidence{margin:1rem 0;padding:1rem;border:1px solid var(--line,#bccbd1);border-radius:12px;overflow-wrap:anywhere}
+.catalog-license-evidence h3{margin-top:0}
+.catalog-license-evidence p{margin:.55rem 0}
+.catalog-license-evidence a{display:inline-block;margin:.2rem .25rem .2rem 0}
+
+.catalog-lifecycle-notice{border-left:4px solid #b96b24;padding:.6rem .9rem;background:#fff7e9;color:#342517;border-radius:.4rem}.catalog-lifecycle-notice h3{margin:.2rem 0}.catalog-date-evidence{margin:1rem 0}.catalog-date-evidence li{margin:.7rem 0}.catalog-date-evidence p{margin:.3rem 0}.catalog-date-evidence a,.catalog-lifecycle-notice a{overflow-wrap:anywhere}.catalog-date-evidence summary{cursor:pointer}

@@ -36,3 +36,45 @@ function researchChapterDOM(chapter,cases,doc=document){
  const raw=make('details');raw.open=false;raw.append(make('summary','原始资料 · 历史采集快照，不代表当前整合状态'),make('p','以下保留采集时的全部原字段。适配、整合与发布状态可能已经变化；请勿将内部元数据视为当前产品状态。'),make('pre',JSON.stringify(d,null,2)));root.append(raw);return root;
 }
 if(typeof module!=='undefined')module.exports={markdownDOM,deepLinkID,researchChapterDOM};
+
+// Bounded teaching projections: prose for known schemas, explicit original fallback
+// for unknown keys/shapes. This never changes the research object or executes HTML.
+function guidanceDOM(value,kind,doc=document){
+ const make=(tag,text)=>{const e=doc.createElement(tag);if(text!==undefined)e.textContent=text;return e;};
+ const root=make('div');root.className='guidance-reading';
+ const statuses={editorial_guidance_not_executed:'编辑学习建议 · 未执行',unknown_or_configuration_dependent:'未知，或取决于具体配置',paper_reported:'论文自报 · 非独立复测',counting_scope_unresolved:'参数统计口径尚未消歧',different_scopes_do_not_merge:'统计范围不同，不合并数值',deprecated_not_yet_scheduled_shutdown:'已弃用；计划停用日期尚未到达',current_guide_example_not_marked_deprecated_in_reviewed_sources:'已核资料中的当前指南示例；该资料未标为弃用'};
+ const schemas={
+  best_practice:{status:['实践状态','status'],steps:['建议步骤','steps'],acceptance_zh:['验收标准','text']},
+  streaming:{input:['流式输入','bool'],output:['流式输出','bool'],full_duplex:['全双工','bool'],condition_zh:['适用条件与限制','text'],transport_bidirectional_streaming:['双向流式传输','bool'],conversational_speech_to_speech:['语音到语音对话','bool'],source_ids:['来源记录 ID','list']},
+  parameters:{value:['参数记录','scalar'],status:['统计口径','status'],source_ids:['来源记录 ID','list']},
+  variants:{exact_id:['精确标识','text'],parent_family:['所属家族','text'],revision_sha:['固定修订 SHA','scalar'],first_weights_upload_date:['权重首次上传日期','scalar'],source_ids:['来源记录 ID','list']},
+  versions:{exact_id:['精确版本','text'],related_alias:['相关别名','text'],immutable_dated_snapshot:['固定日期快照','scalar'],announcement_date:['公告日期','scalar'],release_date:['发布日期','scalar'],deprecation_announced:['弃用公告日期','scalar'],scheduled_shutdown:['计划停用日期（非已发生）','scalar'],lifecycle_as_of:['生命周期资料截至','scalar'],status:['生命周期状态','status'],inputs:['输入类型','modalities'],outputs:['输出类型','modalities'],pricing_per_million_tokens_usd:['来源记录价格 · 美元 / 百万 token（非当前报价）','pricing'],free_tier:['免费层记录','free'],source_ids:['来源记录 ID','list']},
+  pricing:{text_input:['文本输入','scalar'],text_output:['文本输出','scalar'],audio_input:['音频输入','scalar'],audio_output:['音频输出','scalar']}
+ };
+ const modalityLabels={text:'文本',audio:'音频',image:'图像',aligned_text:'对齐文本'};
+ const scalar=x=>x===null||typeof x==='string'||typeof x==='number'||typeof x==='boolean';
+ const words=x=>x===null?'未知 / 未注明':typeof x==='boolean'?(x?'是（仅来源记录）':'否（仅来源记录）'):String(x);
+ function fallback(parent,raw){const d=make('details');d.className='guidance-original';d.append(make('summary','未适配的字段或格式 · 展开原始记录'),make('p','以下字段尚未转换为阅读形式，不据此补充含义或验证状态。完整内容仍保留。'),make('pre',JSON.stringify(raw,null,2)));parent.append(d);}
+ function render(parent,item,type){
+  if(!item||typeof item!=='object'||Array.isArray(item)||!Object.hasOwn(schemas,type)){fallback(parent,item);return;}
+  const schema=schemas[type];let unknown=false;const definitions=type==='best_practice'?null:make('dl');if(definitions)parent.append(definitions);
+  for(const [key,[label,format]] of Object.entries(schema)){
+   if(!Object.hasOwn(item,key))continue;const v=item[key];let node;
+   if(format==='text'&&typeof v==='string')node=make('p',v);
+   else if(format==='scalar'&&scalar(v))node=make('p',words(v));
+   else if(format==='bool'&&(v===null||typeof v==='boolean'))node=make('p',words(v));
+   else if(format==='status'&&typeof v==='string')node=make('p',Object.hasOwn(statuses,v)?statuses[v]:'尚无中文状态说明：'+v);
+   else if(format==='free'&&typeof v==='string')node=make('p',v==='not supported'?'来源记录为不支持；以所列版本及核验范围为限':v);
+   else if(['steps','list','modalities'].includes(format)&&Array.isArray(v)&&v.every(x=>typeof x==='string')){node=make(format==='steps'?'ol':'ul');for(const text of v)node.append(make('li',format==='modalities'&&Object.hasOwn(modalityLabels,text)?modalityLabels[text]:text));}
+   else if(format==='pricing'&&v&&typeof v==='object'&&!Array.isArray(v)){node=make('div');render(node,v,'pricing');}
+   else{unknown=true;continue;}
+   if(definitions){const description=make('dd');description.append(node);definitions.append(make('dt',label),description);}else parent.append(make('h5',label),node);
+  }
+  if(Object.keys(item).some(k=>!Object.hasOwn(schema,k)))unknown=true;
+  if(unknown)fallback(parent,item);
+ }
+ if(['variants','versions'].includes(kind)&&Array.isArray(value)){const list=make('ol');for(const item of value){const li=make('li');render(li,item,kind);list.append(li);}root.append(list);}
+ else render(root,value,kind);
+ return root;
+}
+if(typeof module!=='undefined')module.exports.guidanceDOM=guidanceDOM;

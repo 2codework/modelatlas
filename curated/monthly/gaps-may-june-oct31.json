@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "purpose": "2025年五月、六月有限范围的官方权重开放公告补录；不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-05",
+    "2025-06"
+  ],
+  "date_policy": "只记录官方有日期的权重可取得声明；首次上传、论文、代码和 API 首次发布日期均不推断。",
+  "license_policy": "权重与代码许可分别登记；许可声明不等于完整法律条款审核。",
+  "events": [
+    {
+      "id": "devstral-small-2505-2025-05-21",
+      "name": "Devstral Small 2505",
+      "vendor": "Mistral AI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "mistralai/Devstral-Small-2505"
+      ],
+      "announcement_date": "2025-05-21",
+      "weights_release_date": "2025-05-21",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/mistralai/Devstral-Small-2505",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对许可声明与模型卡标识，未逐条审核完整许可正文。"
+        }
+      ],
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/mistralai/Devstral-Small-2505"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/devstral/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "May 21, 2025",
+          "summary_zh": "官方日期标题与 Availability 段明确表示当天可下载模型，并链接 Small 2505 精确模型卡。"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Devstral-Small-2505",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方精确模型卡确认身份、用途、许可声明和权重入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅记录 Devstral-Small-2505，不包含后续版本或同名 API 的生命周期。",
+        "许可范围只依据官方声明；未逐条审核完整许可正文。代码许可未单独核验，不从权重许可推定。"
+      ]
+    },
+    {
+      "id": "deepseek-r1-0528-2025-05-28",
+      "name": "DeepSeek-R1-0528",
+      "vendor": "DeepSeek",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "deepseek-ai/DeepSeek-R1-0528"
+      ],
+      "announcement_date": "2025-05-28",
+      "weights_release_date": "2025-05-28",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对许可声明与模型卡标识，未逐条审核完整许可正文。"
+        },
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+          "applies_to": "仅该模型卡 License 段所指代码仓库；与权重分列",
+          "review_status": "model_card_explicit_code_declaration",
+          "review_note": "模型卡明确区分代码与模型的 MIT 声明；未逐条审核完整许可正文。"
+        }
+      ],
+      "code_license": "MIT",
+      "weight_entries": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528"
+      ],
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news250528/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "DeepSeek-R1-0528 Release 2025/05/28",
+          "summary_zh": "官方发布导航列明 2025/05/28，正文提供精确 R1-0528 权重入口；不借助型号后缀推断日期。"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方精确模型卡确认身份、用途、许可声明和权重入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅记录 DeepSeek-R1-0528，不把日期外推到 DeepSeek-R1-0528-Qwen3-8B；不同于一月初始 R1。",
+        "许可范围只依据官方声明；未逐条审核完整许可正文。代码许可由模型卡单独声明为 MIT，不与权重许可混为同一依据。"
+      ]
+    },
+    {
+      "id": "qwen3-embedding-family-2025-06-05",
+      "name": "Qwen3 Embedding / Reranker 首批嵌入与重排模型",
+      "vendor": "Alibaba/Qwen",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen/Qwen3-Embedding-0.6B",
+        "Qwen/Qwen3-Embedding-4B",
+        "Qwen/Qwen3-Embedding-8B",
+        "Qwen/Qwen3-Reranker-0.6B",
+        "Qwen/Qwen3-Reranker-4B",
+        "Qwen/Qwen3-Reranker-8B"
+      ],
+      "announcement_date": "2025-06-05",
+      "weights_release_date": "2025-06-05",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "embedding",
+          "score"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对许可声明与模型卡标识，未逐条审核完整许可正文。"
+        }
+      ],
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+        "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "date_text": "June 5, 2025",
+          "summary_zh": "官方日期标题为 2025-06-05；正文声明向 Hugging Face 与 ModelScope 开放嵌入和重排模型，表格列明六个型号。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方精确模型卡确认身份、用途、许可声明和权重入口；不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方精确模型卡确认身份、用途、许可声明和权重入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "这是六个已列明检查点的一次家族公告，不是六个独立核实的首次上传事件。两种 0.6B 模型卡已另行阅读，其余四个型号范围来自公告表格。",
+        "许可范围只依据官方声明；未逐条审核完整许可正文。代码许可未单独核验，不从权重许可推定。"
+      ]
+    },
+    {
+      "id": "magistral-small-2506-2025-06-10",
+      "name": "Magistral Small 2506",
+      "vendor": "Mistral AI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "mistralai/Magistral-Small-2506"
+      ],
+      "announcement_date": "2025-06-10",
+      "weights_release_date": "2025-06-10",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/mistralai/Magistral-Small-2506",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对许可声明与模型卡标识，未逐条审核完整许可正文。"
+        }
+      ],
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/mistralai/Magistral-Small-2506"
+      ],
+      "evidence": [
+        {
+          "url": "https://mistral.ai/news/magistral/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "June 10, 2025",
+          "summary_zh": "官方日期标题为 2025-06-10；Availability 段明确 Small 可自行部署并提供 2506 精确权重入口。"
+        },
+        {
+          "url": "https://huggingface.co/mistralai/Magistral-Small-2506",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方精确模型卡确认身份、用途、许可声明和权重入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅记录 Magistral-Small-2506；同页 Magistral Medium 是企业/API 预览，不计入本条公开权重。",
+        "许可范围只依据官方声明；未逐条审核完整许可正文。代码许可未单独核验，不从权重许可推定。"
+      ]
+    }
+  ]
+}

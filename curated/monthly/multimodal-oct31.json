@@ -1,0 +1,883 @@
+{
+  "schema_version": "1.0",
+  "purpose": "补录图像、音频与视频历史权重事件；不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "date_policy": "首次上传均保留 null；仅采用官方明确发布检查点或权重可取得声明；LTX 0.9 不计入已知月份。",
+  "deduplication": {
+    "against": [
+      "recovered-sites/modelatlas/dist/monthly-releases.json",
+      "recovered-sites/modelatlas/curated/monthly/*.json"
+    ],
+    "notes": "已存在 HunyuanVideo/Qwen-Image/Omni 与实时音频记录不重复；Whisper 原论文不是权重事件。"
+  },
+  "events": [
+    {
+      "id": "sd14-public-2022-08-22",
+      "name": "Stable Diffusion v1.4 权重发布",
+      "vendor": "CompVis / Stability AI",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "stable-diffusion-v1-4"
+      ],
+      "announcement_date": "2022-08-22",
+      "weights_release_date": "2022-08-22",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2022-08",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "CreativeML OpenRAIL-M",
+          "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4",
+          "applies_to": "stable-diffusion-v1-4 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/CompVis/stable-diffusion-v1-4"
+      ],
+      "evidence": [
+        {
+          "url": "https://stability.ai/news-updates/stable-diffusion-public-release",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方公开发布文章明确推荐 v1.4 470k，提供权重入口和许可名称。"
+        },
+        {
+          "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/CompVis/stable-diffusion-v1-4",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "不是 2022-08-10 限研究者阶段；不包含其他 v1.x 版本。",
+        "许可含用途限制，不标为无条件商用或 OSI 开源。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "whisper-initial-2022-09-21",
+      "name": "Whisper 初始检查点 权重发布",
+      "vendor": "OpenAI",
+      "event_granularity": "family_release",
+      "included_models": [
+        "tiny",
+        "tiny.en",
+        "base",
+        "base.en",
+        "small",
+        "small.en",
+        "medium",
+        "medium.en",
+        "large-v1"
+      ],
+      "announcement_date": "2022-09-21",
+      "weights_release_date": "2022-09-21",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2022-09",
+      "modality": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://github.com/openai/whisper#license",
+          "applies_to": "tiny、tiny.en、base、base.en、small、small.en、medium、medium.en、large-v1 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://github.com/openai/whisper"
+      ],
+      "evidence": [
+        {
+          "url": "https://openai.com/index/whisper/",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方首发文章声明开放模型与推理代码；仓库明确模型权重和代码采用 MIT。"
+        },
+        {
+          "url": "https://github.com/openai/whisper",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://github.com/openai/whisper#license",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        },
+        {
+          "url": "https://github.com/openai/whisper/blob/main/model-card.md",
+          "supports": [
+            "scope"
+          ],
+          "summary_zh": "官方模型卡说明 2022-09 原始模型家族规模。"
+        },
+        {
+          "url": "https://github.com/openai/whisper/discussions/661",
+          "supports": [
+            "checkpoint_identity",
+            "scope"
+          ],
+          "locator": "维护者 jongwook 首帖，2022-12-08，第 1 段与加载别名说明",
+          "summary_zh": "维护者明确说明原始 large 重命名为 large-v1；large 别名改指向 large-v2。此证据仅支持原始检查点身份，不改写首发日期。"
+        }
+      ],
+      "notes": [
+        "large-v1 是初始 large 的后续消歧名；不可用当前 large 别名指代初代。",
+        "现有 projection 仅有 Whisper 论文事件，本条是不同类型的权重事件。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。",
+        "原始 large→large-v1 的身份映射由维护者公告 #661 明确确认，不是依据当前名称猜测。"
+      ]
+    },
+    {
+      "id": "sdxl-base-2023-07-26",
+      "name": "Stable Diffusion XL base 1.0 权重发布",
+      "vendor": "Stability AI",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "stable-diffusion-xl-base-1.0"
+      ],
+      "announcement_date": "2023-07-26",
+      "weights_release_date": "2023-07-26",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2023-07",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "CreativeML Open RAIL++-M (July 26, 2023)",
+          "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md",
+          "applies_to": "stable-diffusion-xl-base-1.0 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "primary_license_text_read",
+          "review_note": "已核读精确版本许可正文；未作完整法律审计。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0"
+      ],
+      "evidence": [
+        {
+          "url": "https://stability.ai/news-updates/stable-diffusion-sdxl-1-announcement",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "公告明确权重及源代码已经发布；本条限 base 1.0。"
+        },
+        {
+          "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "不包括 SDXL 0.9、refiner 或 Turbo；用途限制随再分发传递。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "whisper-large-v3-2023-11-06",
+      "name": "Whisper large-v3 权重发布",
+      "vendor": "OpenAI",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "large-v3"
+      ],
+      "announcement_date": "2023-11-06",
+      "weights_release_date": "2023-11-06",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2023-11",
+      "modality": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://github.com/openai/whisper#license",
+          "applies_to": "large-v3 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://github.com/openai/whisper"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/openai/whisper/discussions/1762",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "维护者公告明确 large-v3 已在 openai-whisper==20231106 可加载。"
+        },
+        {
+          "url": "https://github.com/openai/whisper",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://github.com/openai/whisper#license",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "不包括 large-v3-turbo；不是 Whisper API 上线日期。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "flux1-dev-2024-08-01",
+      "name": "FLUX.1 [dev] 权重发布",
+      "vendor": "Black Forest Labs",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "FLUX.1-dev"
+      ],
+      "announcement_date": "2024-08-01",
+      "weights_release_date": "2024-08-01",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-08",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "availability": "gated_open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "gated_terms_shown_not_accepted_no_binary_download",
+      "licenses": [
+        {
+          "name": "FLUX.1 [dev] Non-Commercial License",
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md",
+          "applies_to": "FLUX.1-dev 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/black-forest-labs/FLUX.1-dev"
+      ],
+      "evidence": [
+        {
+          "url": "https://bfl.ai/blog/24-08-01-bfl",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "首发官方文章分别声明 dev/schnell 权重可在 Hugging Face 取得。"
+        },
+        {
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "当前模型卡显示登录、分享账户信息并接受条件后才能访问文件；本次未接受。",
+        "dev 权重是非商业许可，输出权利不等于模型商用许可。",
+        "不含 API-only FLUX.1 pro。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。"
+      ]
+    },
+    {
+      "id": "flux1-schnell-2024-08-01",
+      "name": "FLUX.1 [schnell] 权重发布",
+      "vendor": "Black Forest Labs",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "FLUX.1-schnell"
+      ],
+      "announcement_date": "2024-08-01",
+      "weights_release_date": "2024-08-01",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-08",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "availability": "gated_open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "gated_terms_shown_not_accepted_no_binary_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+          "applies_to": "FLUX.1-schnell 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/black-forest-labs/FLUX.1-schnell"
+      ],
+      "evidence": [
+        {
+          "url": "https://bfl.ai/blog/24-08-01-bfl",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "首发官方文章分别声明 dev/schnell 权重可在 Hugging Face 取得。"
+        },
+        {
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "当前模型卡显示登录、分享账户信息并接受条件后才能访问文件；本次未接受。",
+        "schnell 是 Apache-2.0，但当前平台访问门槛独立登记；不等于无需登录。",
+        "不含 API-only FLUX.1 pro。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。"
+      ]
+    },
+    {
+      "id": "qwen2-audio-2024-08-09",
+      "name": "Qwen2-Audio 7B / Instruct 权重发布",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2-Audio-7B",
+        "Qwen2-Audio-7B-Instruct"
+      ],
+      "announcement_date": "2024-08-09",
+      "weights_release_date": "2024-08-09",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-08",
+      "modality": {
+        "input": [
+          "audio",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct",
+          "applies_to": "Qwen2-Audio-7B、Qwen2-Audio-7B-Instruct 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2-Audio-7B",
+        "https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2-audio/",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方文章明确同时开放基础与指令模型；两个精确模型卡都标 Apache-2.0。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2-Audio-7B",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "本条音频输入、文本输出，不是语音合成；不沿用论文 2024-07-15 日期。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "ltx-video-2b-09-undated",
+      "name": "LTX-Video 2B 0.9 权重入口（日期未定）",
+      "vendor": "Lightricks",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "ltx-video-2b-v0.9"
+      ],
+      "announcement_date": "2024-11-21",
+      "weights_release_date": null,
+      "weights_release_date_kind": "unverified",
+      "event_precision": {
+        "weights": "unknown_publication_date"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": null,
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "LTX Video 0.9 RAIL-M License (November 22, 2024)",
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.license.txt",
+          "applies_to": "ltx-video-2b-v0.9 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "primary_license_text_read",
+          "review_note": "已核读精确版本许可正文；未作完整法律审计。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.safetensors",
+        "https://huggingface.co/Lightricks/LTX-Video/tree/main"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Lightricks/LTX-Video/blob/main/README.md",
+          "supports": [
+            "scope",
+            "current_availability"
+          ],
+          "summary_zh": "README 写 initial release 为 2024-11-21；精确旧权重可见，但本次未确认该日权重公开语义。"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/tree/main",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.license.txt",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.safetensors",
+          "supports": [
+            "exact_weight_file_currently_listed"
+          ],
+          "summary_zh": "官方文件目录已核实本条精确 .safetensors 文件存在；未下载权重。"
+        }
+      ],
+      "notes": [
+        "公告日 2024-11-21 与许可文件所载 2024-11-22 不一致，不把任一许可证日期当权重首发日。",
+        "Permitted Purpose 限学术或研究，明确排除商业化；不能套用 0.9.5 的商用许可。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "wan21-t2v13b-2025-02-25",
+      "name": "Wan2.1 T2V 1.3B 权重发布",
+      "vendor": "Alibaba/Wan",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Wan2.1-T2V-1.3B"
+      ],
+      "announcement_date": "2025-02-25",
+      "weights_release_date": "2025-02-25",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-02",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+          "applies_to": "Wan2.1-T2V-1.3B 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "精确模型卡 News 明确 2025-02-25 发布推理代码及权重。"
+        },
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "不外推后来的 VACE、FLF2V 或其他 Wan2.1 检查点。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    },
+    {
+      "id": "ltx-video-2b-095-2025-03-05",
+      "name": "LTX-Video 2B 0.9.5 权重发布",
+      "vendor": "Lightricks",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "ltx-video-2b-v0.9.5"
+      ],
+      "announcement_date": "2025-03-05",
+      "weights_release_date": "2025-03-05",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-03",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "LTX Video 2B 0.9.5 Open RAIL-M License (March 5, 2025)",
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.license.txt",
+          "applies_to": "ltx-video-2b-v0.9.5 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "primary_license_text_read",
+          "review_note": "已核读精确版本许可正文；未作完整法律审计。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.safetensors",
+        "https://huggingface.co/Lightricks/LTX-Video/tree/main"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Lightricks/LTX-Video/blob/main/README.md",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "README 对 2025-03-05 明确记载发布新 checkpoint v0.9.5，及新的商用许可。",
+          "locator": "News > March, 5th, 2025: New checkpoint v0.9.5 > Release a new checkpoint v0.9.5 with improved quality"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/tree/main",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.license.txt",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        },
+        {
+          "url": "https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.5.safetensors",
+          "supports": [
+            "exact_weight_file_currently_listed"
+          ],
+          "summary_zh": "官方文件目录已核实本条精确 .safetensors 文件存在；未下载权重。"
+        }
+      ],
+      "notes": [
+        "许可正文允许商用但保留用途限制；不包括 0.9.6、13B 或 LTX-2。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。",
+        "2025-03-05 来自官方 README 发布新检查点的新闻段；不是从许可证落款推断。"
+      ]
+    },
+    {
+      "id": "wan22-ti2v5b-2025-07-28",
+      "name": "Wan2.2 TI2V 5B 权重发布",
+      "vendor": "Alibaba/Wan",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "Wan2.2-TI2V-5B"
+      ],
+      "announcement_date": "2025-07-28",
+      "weights_release_date": "2025-07-28",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+          "applies_to": "Wan2.2-TI2V-5B 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "model_card_metadata_and_official_statement",
+          "review_note": "许可名称依据官方模型卡元数据或官方声明；不宣称本次逐条核读完整许可正文。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+          "supports": [
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "精确模型卡 News 写明 2025-07-28 发布代码和权重。"
+        },
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+          "supports": [
+            "current_weight_entry",
+            "modality"
+          ],
+          "summary_zh": "只核对公开模型卡或官方加载入口，未下载二进制、未接受条款。"
+        },
+        {
+          "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+          "supports": [
+            "weights_license"
+          ],
+          "summary_zh": "按精确版本登记；见 review_status，不宣称完整法律审计。"
+        }
+      ],
+      "notes": [
+        "不包含后来 S2V、Animate 或 A14B。",
+        "声明可取得日期不等于首次上传时间；未从论文、许可证日期或 lastModified 推断。",
+        "本次只核对公开页面和官方权重入口；未下载模型，未测试登录后的访问权限。"
+      ]
+    }
+  ],
+  "coverage_months": [
+    "2022-08",
+    "2022-09",
+    "2023-07",
+    "2023-11",
+    "2024-08",
+    "2025-02",
+    "2025-03",
+    "2025-07"
+  ]
+}

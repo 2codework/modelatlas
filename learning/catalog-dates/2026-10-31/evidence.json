@@ -1,0 +1,1849 @@
+{
+  "schema": "modelatlas.catalog-date-display.v1",
+  "checked_at": "2026-10-31",
+  "scope_zh": "固定10条、10厂商的日期口径核验；不是全球或目录全量。原登记日期、摘要、核验日不修改。",
+  "policy_zh": "空值表示本次范围内未知；家族日期不升级为精确检查点日期。权重首次上传时间全部未知。生命周期通知不是实测。",
+  "rows": [
+    {
+      "guard": {
+        "id": "global-pen-gpt-4o-2024-05-13",
+        "exact_id": "gpt-4o-2024-05-13",
+        "provider": "OpenAI",
+        "title": "GPT-4o initial snapshot",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "2024-05-13",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "original_dates": {
+        "release_date": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_api_snapshot",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2024-05-13",
+          "precision": "day",
+          "scope_zh": "GPT-4o 家族公告；不独立证明精确快照首发日",
+          "note_zh": "不能只由型号后缀推导发布日期。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://openai.com/index/hello-gpt-4o/"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": "2024-05-13",
+          "precision": "day",
+          "scope_zh": "GPT-4o 家族的文本／视觉 API",
+          "note_zh": "首发仅文本／视觉 API；不能外推音频／视频能力。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://developers.openai.com/api/docs/changelog"
+            },
+            {
+              "label": "官方依据2",
+              "url": "https://openai.com/index/hello-gpt-4o/"
+            }
+          ]
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2024-10-25",
+          "precision": "day",
+          "scope_zh": "GPT-4o 家族系统卡，不限于五月快照",
+          "note_zh": "论文首次提交不是模型首发。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2410.21276"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "托管 API 记录",
+          "note_zh": "未建立公开权重事件。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-nthropic-claude-sonnet-4-5-20250929",
+        "exact_id": "claude-sonnet-4-5-20250929",
+        "provider": "Anthropic",
+        "title": "Claude Sonnet 4.5",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "4.5",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "original_dates": {
+        "release_date": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_api_snapshot",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-09-29",
+          "precision": "day",
+          "scope_zh": "Sonnet 4.5 具名型号公告",
+          "note_zh": "型号日期后缀不是独立证据。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://www.anthropic.com/news/claude-sonnet-4-5"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": "2025-09-29",
+          "precision": "day",
+          "scope_zh": "Sonnet 4.5 具名 API 型号",
+          "note_zh": "具名 API 发布与公告同日；不是端点实测。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://platform.claude.com/docs/en/release-notes/overview"
+            }
+          ]
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未核定首次论文提交",
+          "note_zh": "已知系统卡存在，首次论文提交日未核定。",
+          "links": []
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "托管型号",
+          "note_zh": "未建立公开权重事件。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-ohere-command-a-03-2025",
+        "exact_id": "command-a-03-2025",
+        "provider": "Cohere",
+        "title": "command-a-03-2025",
+        "entity_type": "api_model_id",
+        "access": "hosted_api",
+        "version": "A 03-2025",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.cohere.com/docs/models"
+      ],
+      "original_dates": {
+        "release_date": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_api_snapshot",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope_zh": "Command A 精确型号",
+          "note_zh": "月份快照不等同月初首发。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://docs.cohere.com/changelog/command-a"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope_zh": "command-a-03-2025 精确 API 型号",
+          "note_zh": "官方公告明确给出精确 API 标识。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://docs.cohere.com/changelog/command-a"
+            }
+          ]
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2025-04-01",
+          "precision": "day",
+          "scope_zh": "Command A 技术报告",
+          "note_zh": "论文晚于平台与权重可获取公告。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2504.00698"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope_zh": "Command A 官方 Hugging Face 可获取公告",
+          "note_zh": "这是公开可获取公告，不是文件首次上传时间。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://docs.cohere.com/changelog/command-a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-21-jamba-large",
+        "exact_id": "jamba-large",
+        "provider": "AI21",
+        "title": "Jamba Large alias",
+        "entity_type": "api_alias",
+        "access": "hosted_api",
+        "version": "1.7",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "original_dates": {
+        "release_date": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "rolling_api_alias",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "滚动别名，无单一检查点首发日",
+          "note_zh": "别名首次引入日未知。",
+          "links": []
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "滚动别名；当前映射不是首次上线",
+          "note_zh": "2025-07 只是当前文档所列目标快照月份。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": null,
+          "precision": null,
+          "scope_zh": "无唯一对应论文",
+          "note_zh": "不同目标快照不能共用一个论文首发日。",
+          "links": []
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "别名不是可下载检查点",
+          "note_zh": "不能把目标权重日期当成别名权重日期。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-0a43d4e73fceebd3",
+        "exact_id": "Qwen/Qwen3-0.6B",
+        "provider": "Alibaba/Qwen",
+        "title": "Qwen/Qwen3-0.6B",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "Qwen3-0.6B",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://github.com/QwenLM/Qwen3"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-04-29",
+          "precision": "day",
+          "scope_zh": "明确包含 Qwen3-0.6B",
+          "note_zh": "不混同后续 Qwen3-2507 版本。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://qwenlm.github.io/blog/qwen3/"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未核定精确 0.6B 托管 API",
+          "note_zh": "Qwen Chat 可用不等同该检查点 API 首发。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2025-05-14",
+          "precision": "day",
+          "scope_zh": "Qwen3 家族，包含 0.6B",
+          "note_zh": "家族报告不是所有版本共同首发日。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2505.09388"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": "2025-04-29",
+          "precision": "day",
+          "scope_zh": "明确列出的 Qwen3-0.6B",
+          "note_zh": "明确开放权重的公告；首次上传时间未核定。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://qwenlm.github.io/blog/qwen3/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-b6afd0ae26a893cc",
+        "exact_id": "zai-org/GLM-4.5",
+        "provider": "Z.ai / 智谱",
+        "title": "zai-org/GLM-4.5",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "GLM-4.5",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://github.com/zai-org/GLM-4.5"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-07-28",
+          "precision": "day",
+          "scope_zh": "厂商公告中的 355B GLM-4.5",
+          "note_zh": "厂商撰写并发布于新闻稿分发平台。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://www.prnewswire.com/news-releases/zai-releases-glm-4-5--setting-new-standards-for-ai-performance-and-accessibility-while-improving-affordability-302514803.html"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未核定精确托管型号",
+          "note_zh": "仅有价格描述不足以确认精确 API 上线。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2025-08-08",
+          "precision": "day",
+          "scope_zh": "GLM-4.5／Air 家族报告",
+          "note_zh": "论文首次提交晚于公告。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2508.06471"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未核定精确权重公开日",
+          "note_zh": "新闻稿许可用将来时；无日期仓库不能补成权重日。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-869b695cea3fae25",
+        "exact_id": "Kimi-K2-Base",
+        "provider": "Moonshot AI",
+        "title": "Kimi-K2-Base",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "Kimi-K2-Base",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://github.com/MoonshotAI/Kimi-K2",
+        "https://huggingface.co/moonshotai/Kimi-K2-Base"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-07-11",
+          "precision": "day",
+          "scope_zh": "Kimi K2 家族博客条目，不限于 Base",
+          "note_zh": "官方索引有日期；正文无法抽取，只保留家族范围。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://platform.kimi.ai/blog"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "Base 检查点不等同托管 Instruct",
+          "note_zh": "不继承其他 Kimi API 型号日期。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2025-07-28",
+          "precision": "day",
+          "scope_zh": "Kimi K2 家族报告",
+          "note_zh": "7月11日博客条目不是7月28日 arXiv 提交。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2507.20534"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "Base 模型卡可读但日期未定",
+          "note_zh": "不使用仓库创建时间或 Instruct 日期补值。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-ed654b3f250a4f1d",
+        "exact_id": "MiniMaxAI/MiniMax-M1-40k",
+        "provider": "MiniMax",
+        "title": "MiniMaxAI/MiniMax-M1-40k",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "MiniMax-M1-40k",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://github.com/MiniMax-AI/MiniMax-M1"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope_zh": "M1 公告明确包括 40k",
+          "note_zh": "保留官方网页打印日期，时区未注明；不改成6月17日。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://www.minimax.io/news/minimaxm1"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "家族 API 不等同精确 40k 型号",
+          "note_zh": "公告提及家族 API，但精确 40k 托管映射未核定。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope_zh": "MiniMax-M1 家族报告",
+          "note_zh": "仅指 arXiv 首次提交。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2506.13585"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope_zh": "M1 公告包含 40k／80k 并说明完整权重可获取",
+          "note_zh": "可获取公告，不是首个权重文件上传时间。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://www.minimax.io/news/minimaxm1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-63c957bf96d4f761",
+        "exact_id": "BAAI/bge-m3",
+        "provider": "BAAI",
+        "title": "BAAI/bge-m3",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "bge-m3",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://huggingface.co/BAAI/bge-m3"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2024-01-30",
+          "precision": "day",
+          "scope_zh": "BGE-M3 具名发布公告",
+          "note_zh": "后续工具、数据或评测修订日期不是模型首发。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://github.com/FlagOpen/FlagEmbedding"
+            },
+            {
+              "label": "官方依据2",
+              "url": "https://huggingface.co/BAAI/bge-m3"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "本地集成不等同托管 API",
+          "note_zh": "文档可运行示例不证明托管服务上线。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2024-02-05",
+          "precision": "day",
+          "scope_zh": "M3-Embedding 论文",
+          "note_zh": "仅指 arXiv 首次提交，不是后续修订。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2402.03216"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未独立核定权重公开日",
+          "note_zh": "具名发布公告不单独证明权重首次可获取日。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "asia-ec3d82de8dfd437a",
+        "exact_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "provider": "LG AI Research",
+        "title": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+        "entity_type": "model_checkpoint",
+        "access": "open_weight",
+        "version": "EXAONE-3.5-7.8B-Instruct",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+      ],
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "checked_at": "2026-10-31",
+      "identity_class": "exact_checkpoint",
+      "events": [
+        {
+          "key": "announced",
+          "label": "公告",
+          "value": "2024-12-09",
+          "precision": "day",
+          "scope_zh": "EXAONE 3.5 公告明确包含 7.8B Instruct",
+          "note_zh": "12月11日 Ollama 上架是另一个事件。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://github.com/LG-AI-EXAONE/EXAONE-3.5"
+            }
+          ]
+        },
+        {
+          "key": "api_launched",
+          "label": "API 上线",
+          "value": null,
+          "precision": null,
+          "scope_zh": "本地服务不等同厂商 API",
+          "note_zh": "本地部署命令不是厂商 API 上线证据。",
+          "links": []
+        },
+        {
+          "key": "paper_first_submitted",
+          "label": "论文／报告首次提交（arXiv v1）",
+          "value": "2024-12-06",
+          "precision": "day",
+          "scope_zh": "EXAONE 3.5 家族，包含 7.8B",
+          "note_zh": "12月6日论文早于12月9日模型公告。",
+          "links": [
+            {
+              "label": "官方依据1",
+              "url": "https://arxiv.org/abs/2412.04862"
+            }
+          ]
+        },
+        {
+          "key": "weights_public_availability",
+          "label": "权重公开可获取公告",
+          "value": null,
+          "precision": null,
+          "scope_zh": "未独立核定权重公开日",
+          "note_zh": "模型家族发布已核实；权重公开日未单独核定。",
+          "links": []
+        }
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "guard": {
+        "id": "global-21-jamba-large",
+        "exact_id": "jamba-large",
+        "provider": "AI21",
+        "title": "Jamba Large alias",
+        "entity_type": "api_alias",
+        "access": "hosted_api",
+        "version": "1.7",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "original_lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "checked_at": "2026-10-31",
+      "kind": "vendor_sunset_notice",
+      "text_zh": "官方公告列明 AI21 Jamba API 于 2026-08-09 停用；此处保留历史型号资料，未实测端点。该公告不表示下载权重或第三方托管同步停用。",
+      "links": [
+        {
+          "label": "官方 API 停用公告",
+          "url": "https://docs.ai21.com/august-deprecation-notice"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-21-jamba-large-1-7-2025-07",
+        "exact_id": "jamba-large-1.7-2025-07",
+        "provider": "AI21",
+        "title": "Jamba Large snapshot",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "1.7",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "original_lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "checked_at": "2026-10-31",
+      "kind": "vendor_sunset_notice",
+      "text_zh": "官方公告列明 AI21 Jamba API 于 2026-08-09 停用；此处保留历史型号资料，未实测端点。该公告不表示下载权重或第三方托管同步停用。",
+      "links": [
+        {
+          "label": "官方 API 停用公告",
+          "url": "https://docs.ai21.com/august-deprecation-notice"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-21-jamba-mini-2-2026-01",
+        "exact_id": "jamba-mini-2-2026-01",
+        "provider": "AI21",
+        "title": "Jamba Mini snapshot",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "2",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "original_lifecycle": {
+        "status": "catalog_listed",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": null
+      },
+      "checked_at": "2026-10-31",
+      "kind": "vendor_sunset_notice",
+      "text_zh": "官方公告列明 AI21 Jamba API 于 2026-08-09 停用；此处保留历史型号资料，未实测端点。该公告不表示下载权重或第三方托管同步停用。",
+      "links": [
+        {
+          "label": "官方 API 停用公告",
+          "url": "https://docs.ai21.com/august-deprecation-notice"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-21-jamba-mini-1-7-2025-08",
+        "exact_id": "jamba-mini-1.7-2025-08",
+        "provider": "AI21",
+        "title": "Jamba Mini 1.7",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "1.7",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "original_lifecycle": {
+        "status": "deprecated",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-02-01",
+        "retirement_date": null
+      },
+      "checked_at": "2026-10-31",
+      "kind": "vendor_sunset_notice",
+      "text_zh": "官方公告列明 AI21 Jamba API 于 2026-08-09 停用；此处保留历史型号资料，未实测端点。该公告不表示下载权重或第三方托管同步停用。",
+      "links": [
+        {
+          "label": "官方 API 停用公告",
+          "url": "https://docs.ai21.com/august-deprecation-notice"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-pen-gpt-4o-2024-05-13",
+        "exact_id": "gpt-4o-2024-05-13",
+        "provider": "OpenAI",
+        "title": "GPT-4o initial snapshot",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "2024-05-13",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "original_lifecycle": {
+        "status": "retired",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": null,
+        "retirement_date": "2026-10-23"
+      },
+      "checked_at": "2026-10-31",
+      "kind": "vendor_shutdown_status",
+      "text_zh": "官方型号页在本次核验时将此精确快照标为已关闭；这里保留历史资料，未调用端点核验。",
+      "links": [
+        {
+          "label": "官方生命周期依据",
+          "url": "https://developers.openai.com/api/docs/models/gpt-4o"
+        }
+      ]
+    },
+    {
+      "guard": {
+        "id": "global-nthropic-claude-sonnet-4-5-20250929",
+        "exact_id": "claude-sonnet-4-5-20250929",
+        "provider": "Anthropic",
+        "title": "Claude Sonnet 4.5",
+        "entity_type": "fixed_snapshot",
+        "access": "hosted_api",
+        "version": "4.5",
+        "checked_at": "2026-10-28"
+      },
+      "source_urls": [
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "original_lifecycle": {
+        "status": "deprecated",
+        "scope": "hosted_api",
+        "as_of": "2026-10-28",
+        "deprecation_date": "2026-09-30",
+        "retirement_date": "2026-11-30"
+      },
+      "checked_at": "2026-10-31",
+      "kind": "scheduled_retirement",
+      "text_zh": "官方记录：2026-09-30 已弃用；计划于 2026-11-30 退役。截至本次 2026-10-31 核验，退役日仍在未来，不表示已经停用。仅指 Anthropic 运营平台的公告；第三方运营平台另定计划。未调用端点。",
+      "links": [
+        {
+          "label": "官方生命周期依据",
+          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "o_ann": {
+      "url": "https://openai.com/index/hello-gpt-4o/",
+      "locator": "2024-05-13 heading; Model availability paragraph",
+      "verified_claim": "GPT-4o family announced; text/vision API available, audio/video API future at that time.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "o_api": {
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "locator": "May 2024 / May 13",
+      "verified_claim": "GPT-4o API release. Entry names family, not exact snapshot.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "o_id": {
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o",
+      "locator": "Snapshots",
+      "verified_claim": "Exact 2024-05-13 snapshot is listed and marked shut down at review.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "o_paper": {
+      "url": "https://arxiv.org/abs/2410.21276",
+      "locator": "Submission history v1",
+      "verified_claim": "GPT-4o System Card first submitted 2024-10-25; broader model/system scope, not exact May checkpoint.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "a_ann": {
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "locator": "Published date; Further information",
+      "verified_claim": "Sonnet 4.5 launch dated 2025-09-29; API availability described.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "a_api": {
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "locator": "September 29, 2025",
+      "verified_claim": "API changelog launches Sonnet 4.5; exact suffix not independently used as a date source.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "c_ann": {
+      "url": "https://docs.cohere.com/changelog/command-a",
+      "locator": "March 13, 2025; final availability sentence",
+      "verified_claim": "Command A available on platform, Hugging Face and SDK with exact command-a-03-2025 ID.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "c_paper": {
+      "url": "https://arxiv.org/abs/2504.00698",
+      "locator": "Submission history v1",
+      "verified_claim": "Command A paper first submitted 2025-04-01.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "j_id": {
+      "url": "https://docs.ai21.com/docs/jamba-foundation-models",
+      "locator": "Model Details; API Versioning",
+      "verified_claim": "jamba-large points to jamba-large-1.7-2025-07; snapshot precision month, not release day.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "j_sunset": {
+      "url": "https://docs.ai21.com/august-deprecation-notice",
+      "locator": "Deprecation notice body",
+      "verified_claim": "Official Jamba API sunset date 2026-08-09. Static mapping documentation does not prove service availability.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "q_ann": {
+      "url": "https://qwenlm.github.io/blog/qwen3/",
+      "locator": "April 29 2025; Introduction dense-model list",
+      "verified_claim": "Qwen3-0.6B explicitly included in released/open-weighted dense models.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "q_paper": {
+      "url": "https://arxiv.org/abs/2505.09388",
+      "locator": "Submission history v1 and abstract",
+      "verified_claim": "Qwen3 family report first submitted 2025-05-14, spanning 0.6B to 235B.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "g_ann": {
+      "url": "https://www.prnewswire.com/news-releases/zai-releases-glm-4-5--setting-new-standards-for-ai-performance-and-accessibility-while-improving-affordability-302514803.html",
+      "locator": "News provided by Z.ai; July 28 2025; model sizes",
+      "verified_claim": "Vendor-authored press release distinguishes 355B GLM-4.5 and 106B Air. License availability phrased prospectively; not proof of exact weight upload date.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "g_repo": {
+      "url": "https://github.com/zai-org/GLM-4.5",
+      "locator": "README model introduction",
+      "verified_claim": "Official repository identifies exact model but reviewed content has no dated release entry.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "g_paper": {
+      "url": "https://arxiv.org/abs/2508.06471",
+      "locator": "Submission history v1",
+      "verified_claim": "Family report first submitted 2025-08-08.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "k_index": {
+      "url": "https://platform.kimi.ai/blog",
+      "locator": "Kimi K2: Open Agentic Intelligence entry",
+      "verified_claim": "Official blog index dates Kimi K2 report entry 2025-07-11; linked page returns no readable lines.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "k_card": {
+      "url": "https://huggingface.co/moonshotai/Kimi-K2-Base",
+      "locator": "Model identity and model card",
+      "verified_claim": "Exact Base checkpoint exists; no first availability date established in reviewed card.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "k_paper": {
+      "url": "https://arxiv.org/abs/2507.20534",
+      "locator": "Submission history v1",
+      "verified_claim": "Kimi K2 family report first submitted 2025-07-28; 2026 revision is not release.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "m_ann": {
+      "url": "https://www.minimax.io/news/minimaxm1",
+      "locator": "06.16.2025; 40k/80k paragraphs; final availability paragraphs",
+      "verified_claim": "Dated announcement identifies both 40k and 80k and states complete weights available; API family mentioned without exact hosted 40k mapping.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "m_paper": {
+      "url": "https://arxiv.org/abs/2506.13585",
+      "locator": "Submission history v1",
+      "verified_claim": "MiniMax-M1 report first submitted 2025-06-16.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "b_ann": {
+      "url": "https://github.com/FlagOpen/FlagEmbedding",
+      "locator": "News / 1/30/2024",
+      "verified_claim": "Dated BGE-M3 release announcement; not a first upload timestamp.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "b_card": {
+      "url": "https://huggingface.co/BAAI/bge-m3",
+      "locator": "Specs and News",
+      "verified_claim": "Exact bge-m3 distinct from unsupervised/retromae. Later evaluation/data/tool entries are not model release dates.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "b_paper": {
+      "url": "https://arxiv.org/abs/2402.03216",
+      "locator": "Submission history v1",
+      "verified_claim": "M3-Embedding first submitted 2024-02-05; later revisions separate.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "l_ann": {
+      "url": "https://github.com/LG-AI-EXAONE/EXAONE-3.5",
+      "locator": "News / 2024.12.09; example model_name",
+      "verified_claim": "Release includes 7.8B instruction-tuned model, matching exact LGAI-EXAONE ID. Dec 11 is separate Ollama availability.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "l_paper": {
+      "url": "https://arxiv.org/abs/2412.04862",
+      "locator": "Submission history v1; abstract",
+      "verified_claim": "Family report first submitted 2024-12-06 and explicitly includes 7.8B.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    },
+    "a_id": {
+      "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+      "locator": "Model status; 2026-09-30 Claude Sonnet 4.5 model",
+      "verified_claim": "Exact API snapshot is documented; deprecated 2026-09-30, retirement scheduled 2026-11-30. Neither date is release.",
+      "primary": true,
+      "checked_at": "2026-10-31",
+      "read_status": "opened_primary_page"
+    }
+  },
+  "evidence": [
+    {
+      "record_id": "global-pen-gpt-4o-2024-05-13",
+      "provider": "OpenAI",
+      "exact_id": "gpt-4o-2024-05-13",
+      "identity_class": "exact_api_snapshot",
+      "identity_scope_note": "Versioned hosted snapshot, not downloadable checkpoint.",
+      "original_dates": {
+        "release_date": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://developers.openai.com/api/docs/deprecations"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2024-05-13",
+          "precision": "day",
+          "scope": "GPT-4o family",
+          "status": "verified",
+          "source_ids": [
+            "o_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": "2024-05-13",
+          "precision": "day",
+          "scope": "GPT-4o family text/vision API",
+          "status": "verified",
+          "source_ids": [
+            "o_api",
+            "o_ann"
+          ],
+          "note": "Exact snapshot identity is documented separately; launch entry only names family."
+        },
+        "paper_first_submitted": {
+          "value": "2024-10-25",
+          "precision": "day",
+          "scope": "GPT-4o system card family",
+          "status": "verified",
+          "source_ids": [
+            "o_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "No public weights release established; hosted API record."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Do not derive release from snapshot suffix alone.",
+        "Do not attribute all multimodal API features to May launch.",
+        "System-card submission is not model release."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at.",
+      "identity_source_ids": [
+        "o_id"
+      ]
+    },
+    {
+      "record_id": "global-nthropic-claude-sonnet-4-5-20250929",
+      "provider": "Anthropic",
+      "exact_id": "claude-sonnet-4-5-20250929",
+      "identity_class": "exact_api_snapshot",
+      "identity_scope_note": "Versioned hosted snapshot, not downloadable checkpoint.",
+      "original_dates": {
+        "release_date": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-09-29",
+          "precision": "day",
+          "scope": "Claude Sonnet 4.5 named model",
+          "status": "verified",
+          "source_ids": [
+            "a_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": "2025-09-29",
+          "precision": "day",
+          "scope": "Claude Sonnet 4.5 named API model",
+          "status": "verified",
+          "source_ids": [
+            "a_api"
+          ],
+          "note": ""
+        },
+        "paper_first_submitted": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "System card exists, but first paper submission day not established in this bounded review."
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "No public weight event established; hosted model."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Do not turn suffix into independent date evidence.",
+        "System-card month or retrieval date is not paper first submission."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at.",
+      "identity_source_ids": [
+        "a_id"
+      ],
+      "lifecycle_observation": {
+        "status": "vendor_documented_deprecated",
+        "deprecated_at": "2026-09-30",
+        "scheduled_retirement": "2026-11-30",
+        "source_ids": [
+          "a_id"
+        ],
+        "runtime_tested": false
+      }
+    },
+    {
+      "record_id": "global-ohere-command-a-03-2025",
+      "provider": "Cohere",
+      "exact_id": "command-a-03-2025",
+      "identity_class": "exact_api_snapshot",
+      "identity_scope_note": "Versioned hosted snapshot, not downloadable checkpoint.",
+      "original_dates": {
+        "release_date": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://docs.cohere.com/docs/models"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope": "exact_record",
+          "status": "verified",
+          "source_ids": [
+            "c_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope": "exact_record",
+          "status": "verified",
+          "source_ids": [
+            "c_ann"
+          ],
+          "note": ""
+        },
+        "paper_first_submitted": {
+          "value": "2025-04-01",
+          "precision": "day",
+          "scope": "Command A report",
+          "status": "verified",
+          "source_ids": [
+            "c_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": "2025-03-13",
+          "precision": "day",
+          "scope": "Command A publicly announced HF availability",
+          "status": "verified",
+          "source_ids": [
+            "c_ann"
+          ],
+          "note": "Availability announcement, not first file upload."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "March snapshot string is not March 1 release.",
+        "Paper postdates platform/weight announcement."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "global-21-jamba-large",
+      "provider": "AI21",
+      "exact_id": "jamba-large",
+      "identity_class": "rolling_api_alias",
+      "identity_scope_note": "Rolling hosted alias; no single checkpoint release date.",
+      "original_dates": {
+        "release_date": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://docs.ai21.com/docs/jamba-foundation-models"
+      ],
+      "dates": {
+        "announced": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Alias introduction unknown; current documented target month is not alias birth date."
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Alias launch unknown; vendor sunset notice separately verified."
+        },
+        "paper_first_submitted": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "No unique paper applies to rolling alias."
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Alias is not a downloadable checkpoint."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "2025-07 target snapshot month is not alias release date.",
+        "2026-08-09 API sunset is not model release.",
+        "Documented mapping is not evidence API still works."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at.",
+      "alias_observation": {
+        "target": "jamba-large-1.7-2025-07",
+        "snapshot_label": {
+          "value": "2025-07",
+          "precision": "month",
+          "scope": "documented target snapshot",
+          "status": "verified",
+          "source_ids": [
+            "j_id"
+          ],
+          "note": ""
+        },
+        "observed_at": "2026-10-31",
+        "api_sunset": {
+          "value": "2026-08-09",
+          "precision": "day",
+          "scope": "AI21 Jamba API service",
+          "status": "verified",
+          "source_ids": [
+            "j_sunset"
+          ],
+          "note": ""
+        },
+        "runtime_status": "not_tested"
+      }
+    },
+    {
+      "record_id": "asia-0a43d4e73fceebd3",
+      "provider": "Alibaba/Qwen",
+      "exact_id": "Qwen/Qwen3-0.6B",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://github.com/QwenLM/Qwen3"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-04-29",
+          "precision": "day",
+          "scope": "exact_record",
+          "status": "verified",
+          "source_ids": [
+            "q_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Qwen Chat availability is not exact 0.6B hosted API launch."
+        },
+        "paper_first_submitted": {
+          "value": "2025-05-14",
+          "precision": "day",
+          "scope": "Qwen3 family includes 0.6B",
+          "status": "verified",
+          "source_ids": [
+            "q_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": "2025-04-29",
+          "precision": "day",
+          "scope": "exact_record",
+          "status": "verified",
+          "source_ids": [
+            "q_ann"
+          ],
+          "note": "Explicit open-weight availability announcement, not first file upload."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Qwen3-2507 events do not apply to original 0.6B.",
+        "Chat demo is not API launch."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "asia-b6afd0ae26a893cc",
+      "provider": "Z.ai / 智谱",
+      "exact_id": "zai-org/GLM-4.5",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://github.com/zai-org/GLM-4.5"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-07-28",
+          "precision": "day",
+          "scope": "355B GLM-4.5 included in vendor announcement",
+          "status": "verified",
+          "source_ids": [
+            "g_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Pricing mentioned, but exact hosted-ID launch not established."
+        },
+        "paper_first_submitted": {
+          "value": "2025-08-08",
+          "precision": "day",
+          "scope": "GLM-4.5/4.5-Air family",
+          "status": "verified",
+          "source_ids": [
+            "g_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Dated press release uses prospective license wording; undated repo does not independently fix weight day."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Do not infer weight publication from press-release title.",
+        "GLM-4.5-Air not interchangeable with 355B."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "asia-869b695cea3fae25",
+      "provider": "Moonshot AI",
+      "exact_id": "Kimi-K2-Base",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://github.com/MoonshotAI/Kimi-K2",
+        "https://huggingface.co/moonshotai/Kimi-K2-Base"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-07-11",
+          "precision": "day",
+          "scope": "Kimi K2 family blog/report entry",
+          "status": "verified",
+          "source_ids": [
+            "k_index"
+          ],
+          "note": "Index dated; exact Base announcement body unreadable."
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Base weight record is not Kimi hosted Instruct alias; no matching launch established."
+        },
+        "paper_first_submitted": {
+          "value": "2025-07-28",
+          "precision": "day",
+          "scope": "Kimi K2 family",
+          "status": "verified",
+          "source_ids": [
+            "k_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Exact card readable but first dated availability not established."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Instruct hosted API or HF creation dates do not establish Base release.",
+        "July 11 blog/report entry is not July 28 arXiv submission."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "asia-ed654b3f250a4f1d",
+      "provider": "MiniMax",
+      "exact_id": "MiniMaxAI/MiniMax-M1-40k",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://github.com/MiniMax-AI/MiniMax-M1"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope": "MiniMax M1 announcement explicitly includes 40k",
+          "status": "verified",
+          "source_ids": [
+            "m_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Family APIs mentioned but exact 40k hosted mapping not established."
+        },
+        "paper_first_submitted": {
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope": "MiniMax-M1 family",
+          "status": "verified",
+          "source_ids": [
+            "m_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": "2025-06-16",
+          "precision": "day",
+          "scope": "M1 announcement includes 40k/80k and complete model weights",
+          "status": "verified",
+          "source_ids": [
+            "m_ann"
+          ],
+          "note": "Official page date as printed, timezone unspecified; not first upload timestamp."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "Do not silently normalize June 16 to June 17.",
+        "M1 family API mention does not establish exact 40k API launch."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "asia-63c957bf96d4f761",
+      "provider": "BAAI",
+      "exact_id": "BAAI/bge-m3",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://huggingface.co/BAAI/bge-m3"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2024-01-30",
+          "precision": "day",
+          "scope": "BGE-M3 named release",
+          "status": "verified",
+          "source_ids": [
+            "b_ann",
+            "b_card"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Local integration instructions not hosted API launch."
+        },
+        "paper_first_submitted": {
+          "value": "2024-02-05",
+          "precision": "day",
+          "scope": "M3-Embedding paper",
+          "status": "verified",
+          "source_ids": [
+            "b_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Release news identifies model, but first weight availability day not separately established."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "July 1 evaluation correction is not release.",
+        "February 6 dataset/pipeline release is not weight release."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    },
+    {
+      "record_id": "asia-ec3d82de8dfd437a",
+      "provider": "LG AI Research",
+      "exact_id": "LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct",
+      "identity_class": "exact_checkpoint",
+      "identity_scope_note": "Exact catalog identity, not immutable weight-file revision.",
+      "original_dates": {
+        "announced": null,
+        "weights_released": null,
+        "api_launched": null,
+        "paper_first_submitted": null
+      },
+      "original_checked_at": "2026-10-28",
+      "original_source_urls": [
+        "https://huggingface.co/LGAI-EXAONE/EXAONE-3.5-7.8B-Instruct"
+      ],
+      "dates": {
+        "announced": {
+          "value": "2024-12-09",
+          "precision": "day",
+          "scope": "EXAONE3.5 release explicitly includes 7.8B Instruct",
+          "status": "verified",
+          "source_ids": [
+            "l_ann"
+          ],
+          "note": ""
+        },
+        "api_launched": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Local serving instructions not vendor hosted API launch."
+        },
+        "paper_first_submitted": {
+          "value": "2024-12-06",
+          "precision": "day",
+          "scope": "EXAONE3.5 family includes 7.8B",
+          "status": "verified",
+          "source_ids": [
+            "l_paper"
+          ],
+          "note": ""
+        },
+        "weights_public_availability": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Model-series release verified; first dated weight availability not independently established."
+        },
+        "weights_first_uploaded": {
+          "value": null,
+          "precision": null,
+          "scope": "exact_record",
+          "status": "unknown_in_reviewed_sources",
+          "source_ids": [],
+          "note": "Not investigated via storage/commit timestamps; no weight download."
+        }
+      },
+      "rejected_conflations": [
+        "December 11 Ollama availability is distinct from December 9 model release.",
+        "December 6 paper submission is not model release."
+      ],
+      "recommended_action": "Optional separately labeled display overlay only; do not replace canonical dates or checked_at."
+    }
+  ]
+}

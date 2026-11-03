@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>发布阅读课：把 Qwen3-8B 公告写成有条件的简报 · ModelAtlas</title><link rel="stylesheet" href="academy.css?v=5aa6392785cc2be89973cc8b088eb0eb200ff75fdf81cde459a047cd6fea76f6"><link rel="stylesheet" href="release-reading.css?v=3f77b82f2940bc8810a73a7c331dcaa742b79b8b034b84b3f88e6e60fa0c486e"><script src="release-reading.js?v=26156c1a01fae57c65d6e8521b67dcc47c89dd88f6ef8cead21687b858ba4114" defer></script></head><body class="academy-page"><main class="release-lesson"><header><a href="academy.html#timeline">← 返回 AI 发展史</a><a data-release-language href="release-reading-en.html" lang="en">English</a></header>
+<p class="academy-eyebrow">MODELATLAS · 真实模型 / 编辑释义 / 无代码练习</p><h1>发布阅读课：把 Qwen3-8B 公告写成有条件的简报</h1>
+<p>前置：知道模型不等于应用或 Agent。产出：一份能保留条件与未知项的发布简报。路线：读证据卡 → 看推理示范 → 独立修订 → 按量规回查。无需账号；下方材料足够完成，外链只是进一步核对。</p>
+<p class="scope">这是一个有界的真实模型阅读案例，不是最新榜单或完整发布史。核验日 2026-11-01；旧目录记录仍为 2026-10-28，不因本课刷新。main 分支与模型卡会变化，未固定权重修订。没有下载权重、运行真实模型、调用 API/MCP、执行宿主动作或保存学习记录。</p>
+<p class="scope">证据模式：本页使用编辑提供的原始来源释义，编辑核验日为 2026-11-01。只读本页的学习者应填写“未独立核验”；只有自己打开并核对原始来源后，才能记录自己的核验日期。编辑日期不是模型卡原始发表/更新日期，后者在本课中未独立确立。</p><nav aria-label="本课目录"><a href="#evidence">1 · 证据</a><a href="#worked">2 · 示范</a><a href="#practice">3 · 独立修订</a><a href="#reference">4 · 参考与回查</a><a href="#template">5 · 带走模板</a></nav>
+<section id="evidence"><h2>1 · 先区分证据能回答什么</h2><p>下面是精简的编辑释义，不是网页全文或运行结果。A 定事件，B 限定准确对象与条件，C 定报告日期，D/E 检查可见文件与许可；没有一张卡能单独证明部署就绪。</p><article class="evidence-card" id="evidence-A"><h3>A · Introduction / dense-model table</h3><p>公告日期为 2025-04-29，开放权重名单包含 Qwen3-8B；表中上下文简写为 128K。</p><p><a href="https://qwenlm.github.io/blog/qwen3/">官方原始来源（可选外链）</a> · 编辑核验 2026-11-01</p></article><article class="evidence-card" id="evidence-B"><h3>B · Model Overview / Processing Long Texts</h3><p>准确模型：稠密因果语言模型，8.2B 参数、36 层、GQA 32 个 Q 头 / 8 个 KV 头。上下文：原生 32,768；使用 YaRN 时 131,072 token。</p><p><a href="https://huggingface.co/Qwen/Qwen3-8B">官方原始来源（可选外链）</a> · 编辑核验 2026-11-01</p></article><article class="evidence-card" id="evidence-C"><h3>C · Abstract / Submission history [v1]</h3><p>Qwen3 家族技术报告 v1 提交于 2025-05-14T13:41:34 UTC；不是 8B 专属发布公告。</p><p><a href="https://arxiv.org/abs/2505.09388v1">官方原始来源（可选外链）</a> · 编辑核验 2026-11-01</p></article><article class="evidence-card" id="evidence-D"><h3>D · Files / safetensors shards and index</h3><p>公开文件列表可见权重分片与索引；本课未下载权重。</p><p><a href="https://huggingface.co/Qwen/Qwen3-8B/tree/main">官方原始来源（可选外链）</a> · 编辑核验 2026-11-01</p></article><article class="evidence-card" id="evidence-E"><h3>E · LICENSE / heading</h3><p>准确仓库的 LICENSE 显示 Apache 2.0；只记录可见许可证据，不作法律批准。</p><p><a href="https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE">官方原始来源（可选外链）</a> · 编辑核验 2026-11-01</p></article><h3>只需读懂这四个术语</h3><dl><dt>稠密 / MoE</dt><dd>这是架构分类，不是质量排名。MoE 按路由选择部分专家；不能只凭家族名判断某个成员。</dd><dt>因果语言模型</dt><dd>按已有上下文预测后续 token；不表示理解或输出必然正确。</dd><dt>GQA</dt><dd>多个 query 头共享较少的 key/value 头。头数描述内部结构，不直接说明速度或质量。</dd><dt>原生 / YaRN 扩展</dt><dd>前者与需要额外扩展方法的长度不是同一条件。这里把 YaRN 视为必须保留的配置限定，不演示部署，也不保证任意长文本任务质量。</dd></dl></section>
+<section id="worked"><h2>2 · 示范：先修饰主张，再写简报</h2><ol><li>先固定对象为准确仓库，不把家族中的所有能力合并。</li><li>公告与模型卡不是简单二选一：保留公告的历史事件，用模型卡给最大数字补上运行条件。</li><li>报告晚于公告不冲突，因为它们不是同一种事件。核验时间也不是首次发布时间。</li><li>许可线索与能力描述都不能替代授权、性能评测或上线验收。</li></ol><blockquote>Qwen 团队在 2025-04-29 的公告中将 Qwen/Qwen3-8B 列入开放权重的稠密模型（A）。不要把公告表中的 128K 直接写成原生上限；准确模型卡区分原生与 YaRN 扩展（B）。2025-05-14 是家族报告 v1 提交日（C），不是本课证明的首次上传日。权重列表与许可文件可见（D/E），但这不能证明特定地区服务可用或部署就绪。</blockquote><h3>身份 / 日期 / 条件 / 许可 / 未知账本</h3><dl><dt>对象 <small>· A/B</small></dt><dd>Qwen/Qwen3-8B；提供方 Qwen / Alibaba；不是整个家族、Base 变体或 API 别名。</dd><dt>日期 <small>· A/C</small></dt><dd>2025-04-29：有日期的官方公告；2025-05-14：报告 v1；2026-11-01：本课核验。首次上传仍未知。</dd><dt>特点与条件 <small>· A/B</small></dt><dd>稠密文本生成模型，不因家族含 MoE 就变成 MoE。原生 32,768 / YaRN 131,072；扩展条件不能省略。</dd><dt>权重与许可 <small>· D/E</small></dt><dd>开放权重列表 + Apache 2.0 文件。main 可变，未固定权重修订、未下载、未审计；开放权重不自动等于开源。</dd><dt>未知与边界 <small>· 本课范围</small></dt><dd>首次上传、模型卡原始发表/更新日期、API 上线、地区与账号条件、延迟、硬件需求、任务质量均未独立确立。无最新、全球完整或基准冠军结论。</dd></dl></section>
+<section id="practice"><h2>3 · 独立修订：给同事的简报哪里会误导？</h2><p>先别展开参考答案。以下是本站原创的错误简报，不是厂商原话。</p><blockquote class="flawed">“Qwen3-8B 于 2025-05-14 发布，原生支持 128K。Qwen3 家族有 MoE，所以 8B 也是 MoE。支持 Agent 就表示模型能自主执行宿主操作；既然开放权重，就能直接部署。”</blockquote><ol><li>逐句写“保留 / 改写 / 证据不足”，为每个修改标 A–E 或“本课推理边界”。</li><li>用自己的话写三至五句替代简报，并在账本中单列原生与扩展条件。</li><li>至少保留三项未知，并提出一个下一步证据问题。可用纸笔或下方 Markdown，不必提交任何内容。</li></ol></section>
+<section id="reference"><h2>4 · 参考答案、量规与失败恢复</h2><details><summary>完成独立修订后展开参考答案</summary><ol><li>日期句改为带事件名的日期：A 是有日期的公告，C 是报告 v1；首次上传不在本课证据中。</li><li>上下文句要引用 B 的原生 / YaRN 两档，而不是把 A 的简写当成无条件原生值。</li><li>架构句改为准确成员的稠密模型；不能从家族包含 MoE 推断所有成员都是 MoE（A/B）。</li><li>自主执行句删去：这是能力到权限的错误推理。模型提出动作不等于宿主已批准并执行；授权和工具校验属于系统边界。</li><li>部署结论改为“可以规划评估，尚不能批准上线”；D/E 不回答地区、账号、硬件、延迟或任务质量。</li></ol></details>
+<h3>回查量规（不是掌握认证）</h3><ul><li>对象：准确 ID 不丢，家族 / 服务 / 模型不混。</li><li>时间：事件带日期；公告、报告、核验和未知的首次上传分开。</li><li>条件：原生与扩展同时出现，保留 YaRN；不把能力当授权。</li><li>证据：每项修订有卡片 ID / 推理边界；至少三项未知和一个补证问题。</li><li>结论：不从许可和权重直接跳到上线，也不声称最新、完整或冠军。</li></ul><p>漏掉任一项，先回到相应卡片重写，而不是重复背日期。混淆对象→A/B；最大值丢条件→B；日期混淆→A/C；许可外推→D/E。完成只是一次可检查的练习，不证明已掌握所有发布阅读。</p></section>
+<section id="template"><h2>5 · 复用简报，而不是复制结论</h2><p><a download href="release-brief-template.md">下载 Markdown 模板</a> · <a download href="release-brief-example.md">下载本课填写示例</a></p><details><summary>在浏览器中阅读 / 复制完整模板</summary><pre># 模型发布简报模板
+
+- 准确对象 / 提供方 / 家族（不要合并服务、别名、checkpoint）：
+- 证据模式：仅使用本课编辑释义 / 自己打开并核对原始来源（逐项注明）：
+- 编辑核验日期：2026-11-01（仅指本课证据卡；其他模型另填）：
+- 学习者独立核验日期：未独立核验（仅在自己核对后填写；不要继承编辑日期）：
+- 公告日期 + 事件类型 + 来源定位：
+- 论文日期 + 版本 + 来源定位：
+- 首次上传 / 权重开放 / API 上线（分别记录；缺证据写未知）：
+- 特点：输入输出、架构、参数；每项绑定准确对象与来源：
+- 条件：原生限制 / 扩展上限 / 额外配置；不要只抄最大数字：
+- 权重与许可：列表、许可文件、可变分支或固定版本；未验证事项：
+- 未知：模型卡原始发表/更新日期、地区、账号、延迟、硬件、任务质量：
+- 一句判断：支持什么决策？还不支持什么决策？
+- 下一步：要补的证据、成功条件与停止条件：
+
+## 证据账本
+
+| 主张 | 对象/事件 | 来源与章节 | 条件 | 已知/未知 | 编辑核验日 / 学习者核验日 |
+| --- | --- | --- | --- | --- | --- |
+| 待填写 | | | | | |
+
+## 发布前自查
+
+- 日期是否带事件名？是否把核验日当发布日？
+- 家族特性是否误套到某个成员？
+- 最大值是否丢失配置条件？
+- 开放权重是否被误写成开源、无条件商用或部署就绪？
+- 是否把工具能力写成宿主授权或自动执行？
+- 不知道的项目是否明确保留未知？
+
+练习用模板；不是法律审查、性能测试或掌握证明。
+</pre></details><p>下一次换模型时重新核对准确版本、事件和条件，不继承这里的数值与许可。若要真正部署，先提出任务与授权范围，另做环境、可用性和质量评估；本课到简报修订为止。</p><p><a href="academy.html#resources">返回模型与资料</a> · <a href="academy.html#tools">补课：工具与授权边界</a> · <a href="academy.html#evaluation">下一步：评测方法</a></p></section>
+<footer><p>语言不等于地区。链接携带地区选择，但本课未核验任何地区服务可用性；离线阅读内容在各地区相同。</p><noscript>JavaScript 已关闭：全部材料与下载仍可读；切换页面时地区参数不会自动携带。</noscript></footer></main></body></html>

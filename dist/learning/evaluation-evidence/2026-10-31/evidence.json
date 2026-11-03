@@ -1,0 +1,95 @@
+{
+  "schema_version": "modelatlas.scoped_evaluation_evidence.v1",
+  "checked_at": "2026-10-31",
+  "scope": "one_existing_checkpoint_one_vendor_reported_score",
+  "not_executed": true,
+  "snapshot": {
+    "id": "seed-coder-8b-instruct-arxiv-v1-bigcodebench-completion-full",
+    "title": "Seed-Coder-8B-Instruct：一条论文自报成绩",
+    "model": "Seed-Coder-8B-Instruct",
+    "model_version": "ByteDance-Seed/Seed-Coder-8B-Instruct",
+    "model_version_note": "精确发布型号；不代表已锁定论文实际评测权重字节。",
+    "evaluated_weight_revision": null,
+    "evaluated_weight_revision_note": "已核对来源未披露评测使用的权重提交或文件哈希；模型卡提交不能替代评测权重版本。",
+    "benchmark": "BigCodeBench-Completion",
+    "benchmark_version": null,
+    "benchmark_version_note": "已核对段落与表格未给出数据 revision；不从当前工具默认值补猜。",
+    "split": "Full",
+    "split_note": "论文 Table 7 的 Full 列及 §5.2.1 BigCodeBench 段；不是 Hard，也不是 BigCodeBench-Instruct。",
+    "metric": "pass@1",
+    "unit": "%",
+    "value": 53.3,
+    "shot": null,
+    "shot_note": "所核对来源未给出该行的 shot 数；不默认 0-shot。",
+    "prompt": null,
+    "prompt_note": "已确认 Completion 任务口径；实际评测 prompt/chat template 未锁定，不能用 Quickstart 示例替代。",
+    "harness": null,
+    "harness_note": "§5.2 泛指官方榜单或 Qwen2.5-Coder 开源评测套件；该分数的具体实现与提交未锁定。",
+    "sampling": null,
+    "sampling_note": "该行的采样温度、样本数、seed 和输出上限未核实；不套用 Reasoning 训练配置。",
+    "report_date": "2025-06-04",
+    "report_date_note": "固定 arXiv v1 提交日，不是权重发布日或实际运行日。",
+    "report_first_published_date": null,
+    "report_version": "arXiv:2506.03524v1",
+    "checked_at": "2026-10-31",
+    "source_url": "https://arxiv.org/html/2506.03524v1",
+    "evidence_locator": "§5.2、§5.2.1 BigCodeBench 段；Table 7，Seed-Coder-8B-Instruct 行 / BigCodeBench Full 列。",
+    "reported_by": "ByteDance Seed — original report self-reported",
+    "evidence_type": "primary_report_aggregate_metadata",
+    "verification_status": "primary_report_checked_not_independently_reproduced",
+    "score_comparable": false,
+    "limitations_zh": "厂商论文自报，仅核对一项公开汇总值；本站未下载权重、未运行评测。配置不完整，不做当前排名，不与不同任务、数据版本或采样配置直接横比。",
+    "correction_note_zh": "官方仓库 News 的 2025-05-14 条目披露曾修正 BigCodeBench 设置，统一为 Completion；本条只记录之后的固定论文 v1，不恢复或比较旧分数。",
+    "report_first_published_date_note": "最早公开报告日期未核实；2025-06-04 仅为 arXiv v1 提交日，不排除此前官方仓库已有报告。"
+  },
+  "sources": [
+    {
+      "id": "paper-v1",
+      "url": "https://arxiv.org/html/2506.03524v1",
+      "kind": "fixed_primary_paper",
+      "locator": "§5.2 / §5.2.1 / Table 7",
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "paper-v1-date",
+      "url": "https://arxiv.org/abs/2506.03524v1",
+      "kind": "fixed_primary_paper_metadata",
+      "locator": "Submission history; v1 2025-06-04, later v2 exists",
+      "checked_at": "2026-10-31"
+    },
+    {
+      "id": "model-card-pinned",
+      "url": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct/blob/1c5af72afa21c22c9272a0b60a3a404195e88fcd/README.md",
+      "kind": "fixed_official_model_card",
+      "revision": "1c5af72afa21c22c9272a0b60a3a404195e88fcd",
+      "locator": "Model Downloads, Evaluation; same checkpoint and Full score",
+      "checked_at": "2026-10-31",
+      "note": "文档提交，不声称是论文评测权重 SHA。"
+    },
+    {
+      "id": "official-correction",
+      "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+      "kind": "rolling_official_repository",
+      "revision": null,
+      "locator": "News, 2025/05/14",
+      "checked_at": "2026-10-31",
+      "note": "滚动 master；条目日期与本次读取日期分开。"
+    }
+  ],
+  "local_identity_match": {
+    "path": "data/vendor-catalog/asia.json",
+    "exactid": "ByteDance-Seed/Seed-Coder-8B-Instruct",
+    "entity_type": "model_checkpoint",
+    "action": "reference_existing_not_add_model"
+  },
+  "unknowns": [
+    "evaluated_weight_revision",
+    "benchmark_version",
+    "exact_prompt",
+    "shot",
+    "harness_revision",
+    "sampling",
+    "actual_evaluation_date"
+  ],
+  "validation_boundary": "只做来源/结构核对；没有模型实跑、性能测试或可复现性认证。"
+}

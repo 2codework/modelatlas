@@ -1,0 +1,836 @@
+{
+  "schema_version": "1.0",
+  "purpose": "腾讯、百度、字节四个月共12个机构月份单元有限核查；仅纳入可直接核对的权重声明，不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2026-08"
+  ],
+  "coverage": {
+    "searched_providers": [
+      "Tencent Hunyuan",
+      "Baidu",
+      "ByteDance"
+    ],
+    "searched_cells": 12,
+    "ledger": [
+      {
+        "provider": "Tencent Hunyuan",
+        "month": "2025-05",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.tencent.com \"2025\" \"May\" Hunyuan open source"
+        ],
+        "sources": [
+          "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar"
+        ],
+        "admitted_event_ids": [
+          "tencent-hunyuanvideo-avatar-2025-05-28"
+        ],
+        "exhaustive": false,
+        "conclusion": "Avatar 5月28日代码/权重，论文5月26日；HunyuanCustom等仍是未完成线索。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Tencent Hunyuan",
+        "month": "2025-06",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.github.com Tencent Hunyuan July 2025 June May release"
+        ],
+        "sources": [
+          "https://github.com/Tencent-Hunyuan/Hunyuan-A13B"
+        ],
+        "admitted_event_ids": [
+          "tencent-hunyuan-a13b-2025-06-27"
+        ],
+        "exhaustive": false,
+        "conclusion": "A13B 6月27日四个精确变体；不是全部混元6月发布。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Tencent Hunyuan",
+        "month": "2025-07",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.github.com/Tencent-Hunyuan \"2025.7\" release"
+        ],
+        "sources": [
+          "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0"
+        ],
+        "admitted_event_ids": [
+          "tencent-hunyuanworld-1-components-2025-07-26"
+        ],
+        "exhaustive": false,
+        "conclusion": "World1四组件7月26日Models Zoo；7月27许可头/7月29arXiv差异保留。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Tencent Hunyuan",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.tencent.com Hunyuan \"August\" \"2026\""
+        ],
+        "sources": [
+          "https://github.com/Tencent-Hunyuan/Hunyuan3D-WorldClaw"
+        ],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "WorldClaw官方8月7只称paper/project page；未确定权重，排除。Hy4压缩版线索未核实。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Baidu",
+        "month": "2025-05",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.baidu.com \"2025-05\" 模型 开源"
+        ],
+        "sources": [],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "检索未建立精确权重公告，不表示当月没有发布。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Baidu",
+        "month": "2025-06",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.baidu.com \"June 30, 2025\" \"ERNIE\""
+        ],
+        "sources": [
+          "https://ernie.baidu.com/blog/posts/ernie4.5/"
+        ],
+        "admitted_event_ids": [
+          "baidu-ernie-4.5-0.3b-paddle-2025-06-30"
+        ],
+        "exhaustive": false,
+        "conclusion": "迁移后的官方博客直接确认6月30家族公告；本轮只核对0.3B Paddle。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Baidu",
+        "month": "2025-07",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.github.com PaddlePaddle ERNIE June 30 2025"
+        ],
+        "sources": [
+          "https://ir.baidu.com/news-releases/news-release-details/baidu-announces-second-quarter-2025-results"
+        ],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "官方Q2报告列MuseSteamer在7月发布，但称proprietary且未核对公共检查点，不作权重条目。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "Baidu",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.baidu.com \"2026年8月\" 文心 模型 发布"
+        ],
+        "sources": [],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "检索产品/应用更新及第三方说法，未建立精确权重事件。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "ByteDance",
+        "month": "2025-05",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.github.com ByteDance Seed May June July 2025 released"
+        ],
+        "sources": [
+          "https://github.com/ByteDance-Seed/Seed-Coder",
+          "https://github.com/ByteDance-Seed/Bagel",
+          "https://github.com/bytedance/UI-TARS"
+        ],
+        "admitted_event_ids": [
+          "bytedance-seed-coder-2025-05-08",
+          "bytedance-bagel-7b-mot-2025-05-20"
+        ],
+        "exhaustive": false,
+        "conclusion": "Seed-Coder 5月8日三款、BAGEL 5月20日；UI-TARS1.5官方为4月16日，不采用5月社交帖日期。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "ByteDance",
+        "month": "2025-06",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.seed.bytedance.com \"June\" \"2025\" Seed1.6"
+        ],
+        "sources": [
+          "https://seed.bytedance.com/en/seed1_6"
+        ],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "Seed1.6及Embedding为产品线索；当前直接页面仅首页，未建立权重条目；Seed-Coder论文6月4日不重复当权重。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "ByteDance",
+        "month": "2025-07",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.seed.bytedance.com \"July\" \"2025\""
+        ],
+        "sources": [
+          "https://seed.bytedance.com/en/seed_diffusion"
+        ],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "Seed Diffusion/LiveInterpret搜索摘要有7月日期，但直接页面未确认权重；保留未解决线索。 有限检索，不是完整档案或无发布证明。"
+      },
+      {
+        "provider": "ByteDance",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.seed.bytedance.com \"August\" \"2026\" model"
+        ],
+        "sources": [
+          "https://seed.bytedance.com/en/seedrealtime"
+        ],
+        "admitted_event_ids": [],
+        "exhaustive": false,
+        "conclusion": "SeedRealtime搜索摘要为8月5，直接页面却首页；未建立权重开放证据，不据索引日期纳入。 有限检索，不是完整档案或无发布证明。"
+      }
+    ]
+  },
+  "date_policy": "公告、权重可取得、论文v1、代码、API和首次上传分列；未知保持null，冲突并列。",
+  "license_policy": "当前许可不倒填为初始版本；模型卡声明与全文/局部条款阅读明确区分，不作开源认证或法律适用判断。",
+  "events": [
+    {
+      "id": "bytedance-seed-coder-2025-05-08",
+      "name": "Seed-Coder 首批三款 8B",
+      "vendor": "ByteDance",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "ByteDance-Seed/Seed-Coder-8B-Base",
+        "ByteDance-Seed/Seed-Coder-8B-Instruct",
+        "ByteDance-Seed/Seed-Coder-8B-Reasoning"
+      ],
+      "announcement_date": "2025-05-08",
+      "weights_release_date": "2025-05-08",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-06-04",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；不倒填初始发布许可，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+        "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+        "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/ByteDance-Seed/Seed-Coder",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-05-08",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Base",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Instruct",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/ByteDance-Seed/Seed-Coder-8B-Reasoning",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.03524",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-06-04",
+          "summary_zh": "arXiv 首次提交日期；不替代权重公告。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "仅含Base、Instruct、Reasoning三款；不把当前列表另列的Reasoning-bf16倒填至首批。Seed-Coder旧名Doubao-Coder，不重复计。",
+        "5月8日家族开放声明与6月4日arXiv v1分列；5月14日BigCodeBench修正不是新权重发布，不录入未复现分数。"
+      ]
+    },
+    {
+      "id": "bytedance-bagel-7b-mot-2025-05-20",
+      "name": "BAGEL-7B-MoT",
+      "vendor": "ByteDance",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "ByteDance-Seed/BAGEL-7B-MoT"
+      ],
+      "announcement_date": "2025-05-20",
+      "weights_release_date": "2025-05-20",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-05-20",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；不倒填初始发布许可，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/ByteDance-Seed/Bagel",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-05-20",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2505.14683",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-05-20",
+          "summary_zh": "arXiv 首次提交日期；不替代权重公告。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "采用GitHub明确链接该检查点的5月20日声明，不用后来的5月28日宣传博客替代。6月15日KRIS/RISE评测修正不算新发布；不登记分数。",
+        "本条模态限已核对检查点的文本/图像理解与生成；不从训练含视频推断完整视频生成产品。"
+      ]
+    },
+    {
+      "id": "tencent-hunyuanvideo-avatar-2025-05-28",
+      "name": "HunyuanVideo-Avatar",
+      "vendor": "Tencent Hunyuan",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "tencent/HunyuanVideo-Avatar"
+      ],
+      "announcement_date": "2025-05-28",
+      "weights_release_date": "2025-05-28",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-05-26",
+      "code_release_date": "2025-05-28",
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Tencent Hunyuan Community License (Avatar)",
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar/blob/main/LICENSE",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_license_text_read",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": true,
+          "at_initial_release": null,
+          "review_note": "当前自定义许可完整文本已读；初始发布时版本未核验，不作法律适用判断。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/tencent/HunyuanVideo-Avatar"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "code_release_date"
+          ],
+          "date_text": "2025-05-28",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/HunyuanVideo-Avatar",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2505.20156",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-05-26",
+          "summary_zh": "arXiv 首次提交日期；不替代权重公告。"
+        },
+        {
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar/blob/main/LICENSE",
+          "supports": [
+            "license",
+            "access_conditions"
+          ],
+          "summary_zh": "当前许可地域排除及附加商业/使用条款；不推定用户所在地或法律适用。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "5月26日论文v1与5月28日代码/权重声明分列；6月6日低显存集成不是首发。",
+        "仅研究官方说明，未验证低显存、单卡运行或人物授权。",
+        "当前许可排除欧盟、英国、韩国；发行日前月全产品/服务月活超过1亿须另获腾讯许可。"
+      ],
+      "access_note": "自定义许可不适用于欧盟、英国、韩国，并有商业及使用条件；开放权重不等于无地域限制或无条件商用。"
+    },
+    {
+      "id": "tencent-hunyuan-a13b-2025-06-27",
+      "name": "Hunyuan-A13B 首批四种检查点",
+      "vendor": "Tencent Hunyuan",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "tencent/Hunyuan-A13B-Pretrain",
+        "tencent/Hunyuan-A13B-Instruct",
+        "tencent/Hunyuan-A13B-Instruct-FP8",
+        "tencent/Hunyuan-A13B-Instruct-GPTQ-Int4"
+      ],
+      "announcement_date": "2025-06-27",
+      "weights_release_date": "2025-06-27",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Tencent Hunyuan Community License (A13B)",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B/blob/main/LICENSE",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_license_clauses_read",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前自定义许可已读地域与商业条件，未完成全文复核；初始发布时版本未核验，不作法律适用判断。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/tencent/Hunyuan-A13B-Pretrain",
+        "https://huggingface.co/tencent/Hunyuan-A13B-Instruct",
+        "https://huggingface.co/tencent/Hunyuan-A13B-Instruct-FP8",
+        "https://huggingface.co/tencent/Hunyuan-A13B-Instruct-GPTQ-Int4"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-27",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/Hunyuan-A13B-Pretrain",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/Hunyuan-A13B-Instruct",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/Hunyuan-A13B-Instruct-FP8",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/Hunyuan-A13B-Instruct-GPTQ-Int4",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B/blob/main/LICENSE",
+          "supports": [
+            "license",
+            "access_conditions"
+          ],
+          "summary_zh": "当前许可地域排除及附加商业/使用条款；不推定用户所在地或法律适用。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "News逐一列出四种检查点；量化版不是四个独立基础模型。技术报告存在，但本条未确定其首次公开日期。",
+        "当前许可排除欧盟、英国、韩国；发行日前月全产品/服务月活超过1亿须另获腾讯许可。"
+      ],
+      "access_note": "自定义许可不适用于欧盟、英国、韩国，并有商业及使用条件；开放权重不等于无地域限制或无条件商用。"
+    },
+    {
+      "id": "baidu-ernie-4.5-0.3b-paddle-2025-06-30",
+      "name": "ERNIE 4.5 0.3B Paddle（家族中的单款）",
+      "vendor": "Baidu",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "baidu/ERNIE-4.5-0.3B-Paddle"
+      ],
+      "announcement_date": "2025-06-30",
+      "weights_release_date": "2025-06-30",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-Paddle",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；不倒填初始发布许可，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/baidu/ERNIE-4.5-0.3B-Paddle"
+      ],
+      "evidence": [
+        {
+          "url": "https://ernie.baidu.com/blog/posts/ernie4.5/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-30",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/baidu/ERNIE-4.5-0.3B-Paddle",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://github.com/PaddlePaddle/ERNIE",
+          "supports": [
+            "scope",
+            "current_weight_entry"
+          ],
+          "summary_zh": "家族表列0.3B并提供该Paddle检查点下载示例；工具包不是另一个模型。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "日期来自6月30日十款家族权重开放声明；本轮只纳入已核对的0.3B Paddle分发，不代表十款全部逐项核验。",
+        "当前模型卡区分Paddle与PT格式；不把PT转换上传时间或家族3月产品公告当本条权重日期。论文日期未单独核实。"
+      ]
+    },
+    {
+      "id": "tencent-hunyuanworld-1-components-2025-07-26",
+      "name": "HunyuanWorld 1.0 四个全景生成组件",
+      "vendor": "Tencent Hunyuan",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "tencent/HunyuanWorld-1/HunyuanWorld-PanoDiT-Text",
+        "tencent/HunyuanWorld-1/HunyuanWorld-PanoDiT-Image",
+        "tencent/HunyuanWorld-1/HunyuanWorld-PanoInpaint-Scene",
+        "tencent/HunyuanWorld-1/HunyuanWorld-PanoInpaint-Sky"
+      ],
+      "announcement_date": "2025-07-26",
+      "weights_release_date": "2025-07-26",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-07-29",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Tencent HunyuanWorld-1.0 Community License",
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0/blob/main/LICENSE",
+          "applies_to": "仅对应本条列明检查点的当前许可；不自动覆盖第三方基座、数据、代码及依赖组件",
+          "review_status": "current_official_license_text_read",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": true,
+          "at_initial_release": null,
+          "review_note": "当前自定义许可完整文本已读；初始发布时版本未核验，不作法律适用判断。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoDiT-Text",
+        "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoDiT-Image",
+        "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoInpaint-Scene",
+        "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoInpaint-Sky"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-26",
+          "locator": "Official dated release News / model availability statement",
+          "summary_zh": "官方权重可取得声明；不等于首次文件上传。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoDiT-Text",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoDiT-Image",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoInpaint-Scene",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://huggingface.co/tencent/HunyuanWorld-1/tree/main/HunyuanWorld-PanoInpaint-Sky",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型身份、当前许可与入口；未下载或执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.21809",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-07-29",
+          "summary_zh": "arXiv 首次提交日期；不替代权重公告。"
+        },
+        {
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0/blob/main/LICENSE",
+          "supports": [
+            "license",
+            "access_conditions"
+          ],
+          "summary_zh": "当前许可地域排除及附加商业/使用条款；不推定用户所在地或法律适用。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；API上线未核实。",
+        "当前许可与初始发布许可分列；没有实际下载、推理或独立评测。",
+        "日期口径并列：News与Models Zoo为7月26日；当前LICENSE头写7月27日；arXiv v1为7月29日。保留差异，不宣称已解决时区或最早上传。",
+        "仅含四个全景生成/修补LoRA组件；组件输出图像，完整流程再重建3D网格，不将组件误称独立完整3D基座。",
+        "依赖FLUX等第三方模型及组件；官方安装流程含Hugging Face登录步骤，各依赖许可/门槛需另查，未登录或接受条款。",
+        "当前许可排除欧盟、英国、韩国；发行日前月全产品/服务月活超过100万须另获腾讯许可。"
+      ],
+      "license_header_release_date": "2025-07-27",
+      "access_note": "自定义许可不适用于欧盟、英国、韩国，并有商业及使用条件；开放权重不等于无地域限制或无条件商用。"
+    }
+  ]
+}

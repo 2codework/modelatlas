@@ -1,0 +1,61 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "One bounded SmolLM3 family announcement, not first weights dates, API availability or global coverage.",
+  "events": [
+    {
+      "provider": "Hugging Face",
+      "checked_at": "2026-11-02",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "id": "huggingface-smollm3-family-announcement-2025-07-08",
+      "kind": "model_family_announcement",
+      "title": {
+        "zh": "Hugging Face SmolLM3 Base / Instruct-reasoning 家族公告",
+        "en": "Hugging Face SmolLM3 Base / Instruct-reasoning family announcement"
+      },
+      "version": "SmolLM3 Base / Instruct-reasoning (family announcement)",
+      "date": "2025-07-08",
+      "timestamp_utc": null,
+      "api_alias": null,
+      "first_paper_submission": null,
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/blog/smollm3",
+          "kind": "model_family_announcement",
+          "date": "2025-07-08",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "family_members": [
+        {
+          "name": "SmolLM3-3B-Base",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B-Base",
+          "source_url": "https://huggingface.co/blog/smollm3"
+        },
+        {
+          "name": "SmolLM3-3B",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B",
+          "source_url": "https://huggingface.co/blog/smollm3"
+        }
+      ],
+      "summary": {
+        "zh": "官方博客标注 2025-07-08，链接 SmolLM3-3B-Base 与 SmolLM3-3B；后者合并指令与推理双模式，不是另一个 reasoning 权重事件。作者描述 3B 文本模型、六种主要语言、64k 训练上下文及通过 YaRN 外推至 128k；不把外推长度写成训练长度。公告时刻与时区未登记。",
+        "en": "The blog dated July 8, 2025 links SmolLM3-3B-Base and SmolLM3-3B. The latter combines instruction and reasoning modes, not a separate reasoning weights event. Authors describe 3B text models, six main languages, 64k training context and YaRN extrapolation to 128k; extrapolated length is not training length. Publication time and timezone are unrecorded."
+      },
+      "note": {
+        "zh": "一条家族公告，不是首次权重公开日期。Transformers 文档的 2025-06-25 是代码贡献日期，不是模型公告日（https://huggingface.co/docs/transformers/model_doc/smollm3）。截至 2026-11-02 的成员卡元数据标注 8 languages，正文明确六种主要语言：英语、法语、西班牙语、德语、意大利语、葡萄牙语；不能推断八种语言同等级支持。当前卡片 Apache-2.0 不证明公告日历史许可，也不自动证明完整开源。卡片提示可能有事实错误、逻辑不一致和偏差。首次完整权重日期、固定修订、历史许可与地区/账户/API 可用性未核实；当前可变页面不是历史快照。未登录、下载权重、运行模型或复现作者评测。",
+        "en": "One family announcement, not a first-public weights date. The Transformers date 2025-06-25 is code contribution, not model announcement (https://huggingface.co/docs/transformers/model_doc/smollm3). Member cards checked 2026-11-02 show 8 languages in metadata but six main languages in prose: English, French, Spanish, German, Italian and Portuguese; this does not establish equal support for eight. Current Apache-2.0 labels do not prove historical license applicability or fully open-source AI. Cards warn of factual errors, inconsistency and bias. First complete weights dates, pinned revisions, historical licensing and regional/account/API access remain unverified; mutable current pages are not historical snapshots. No login, weights download, model execution or reproduction of author evaluations."
+      },
+      "context_sources": []
+    }
+  ]
+}

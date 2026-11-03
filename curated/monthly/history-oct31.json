@@ -1,0 +1,904 @@
+{
+  "schema_version": "1.0",
+  "purpose": "补充经官方来源核对的历史权重开放公告；不是全球完整发布目录。",
+  "verified_on": "2026-10-31",
+  "date_policy": "公告与权重可取得日期分列；不推断首次上传、代码或论文日期。",
+  "license_policy": "分别登记模型权重与代码许可；不据权重开放自动认定开源人工智能。",
+  "coverage_months": [
+    "2024-02",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2025-03"
+  ],
+  "events": [
+    {
+      "id": "qwen25-initial-2024-09-19",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2.5-0.5B",
+        "Qwen2.5-0.5B-Instruct",
+        "Qwen2.5-1.5B",
+        "Qwen2.5-1.5B-Instruct",
+        "Qwen2.5-3B",
+        "Qwen2.5-3B-Instruct",
+        "Qwen2.5-7B",
+        "Qwen2.5-7B-Instruct",
+        "Qwen2.5-14B",
+        "Qwen2.5-14B-Instruct",
+        "Qwen2.5-32B",
+        "Qwen2.5-32B-Instruct",
+        "Qwen2.5-72B",
+        "Qwen2.5-72B-Instruct"
+      ],
+      "announcement_date": "2024-09-19",
+      "weights_release_date": "2024-09-19",
+      "name": "Qwen2.5 首批语言模型",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-09",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/main/LICENSE",
+          "applies_to": "0.5B、1.5B、7B、14B、32B 的基础与指令权重"
+        },
+        {
+          "name": "Qwen Research License",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/main/LICENSE",
+          "applies_to": "3B 的基础与指令权重"
+        },
+        {
+          "name": "Qwen License",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct/blob/main/LICENSE",
+          "applies_to": "72B 的基础与指令权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2.5-llm/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含所列七种尺寸的基础与指令模型；不包含 Coder、Math、API 服务或后续 1M 版本。3B、72B 与其他尺寸许可不同。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "qwen25-coder-initial-2024-09-19",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2.5-Coder-1.5B",
+        "Qwen2.5-Coder-1.5B-Instruct",
+        "Qwen2.5-Coder-7B",
+        "Qwen2.5-Coder-7B-Instruct"
+      ],
+      "announcement_date": "2024-09-19",
+      "weights_release_date": "2024-09-19",
+      "name": "Qwen2.5-Coder 首批 1.5B / 7B",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-09",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "applies_to": "1.5B、7B 的基础与指令权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "supports": [
+            "license",
+            "scope"
+          ],
+          "summary_zh": "官方补充来源用于核对型号、当前权重获取或许可登记；不以当前页面推定首次上传时间。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含当时已开放的 1.5B、7B；32B 在此日仍标为即将发布。许可依据后续官方型号表核对，不是逐个检查点的历史许可审计。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "qwen25-coder-expansion-2024-11-12",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2.5-Coder-0.5B",
+        "Qwen2.5-Coder-0.5B-Instruct",
+        "Qwen2.5-Coder-3B",
+        "Qwen2.5-Coder-3B-Instruct",
+        "Qwen2.5-Coder-14B",
+        "Qwen2.5-Coder-14B-Instruct",
+        "Qwen2.5-Coder-32B",
+        "Qwen2.5-Coder-32B-Instruct"
+      ],
+      "announcement_date": "2024-11-12",
+      "weights_release_date": "2024-11-12",
+      "name": "Qwen2.5-Coder 新增四种尺寸",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-11",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "applies_to": "0.5B、14B、32B 的基础与指令权重"
+        },
+        {
+          "name": "Qwen Research License",
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "applies_to": "3B 的基础与指令权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅新增 0.5B、3B、14B、32B；不重复计算此前的 1.5B、7B。使用官方博客标注的 11 月 12 日，不以第三方报道推算更早日期。3B 使用 Qwen Research 许可。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "qwen2-vl-initial-2024-08-29",
+      "vendor": "Alibaba/Qwen",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2-VL-2B-Instruct",
+        "Qwen2-VL-7B-Instruct"
+      ],
+      "announcement_date": "2024-08-29",
+      "weights_release_date": "2024-08-29",
+      "name": "Qwen2-VL 首批 2B / 7B 指令模型",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-08",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://qwenlm.github.io/blog/qwen2-vl/",
+          "applies_to": "2B、7B 指令模型权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2-VL-2B-Instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2-vl/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2-VL-2B-Instruct",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅记录 2B、7B 指令模型。72B 在此公告中仅提供 API，不登记为同日开放权重；不外推基础模型的日期。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "gemma-initial-2024-02-21",
+      "vendor": "Google DeepMind",
+      "event_granularity": "family_release",
+      "included_models": [
+        "gemma-2b",
+        "gemma-2b-it",
+        "gemma-7b",
+        "gemma-7b-it"
+      ],
+      "announcement_date": "2024-02-21",
+      "weights_release_date": "2024-02-21",
+      "name": "Gemma 首批 2B / 7B",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-02",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Gemma Terms of Use",
+          "url": "https://ai.google.dev/gemma/terms",
+          "applies_to": "本条所列模型权重，不是代码示例许可",
+          "review_note": "当前条款页面核验于 2026-10-31，不代表已审计发布日法律文本。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/google/gemma-2b"
+      ],
+      "evidence": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/google/gemma-2b",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含初代 2B、7B 的预训练与指令版本。下载可能需登录并接受 Gemma 条款；当前条款页面不是 2024 年发布日的法律文本快照。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "gemma2-initial-2024-06-27",
+      "vendor": "Google DeepMind",
+      "event_granularity": "family_release",
+      "included_models": [
+        "gemma-2-9b",
+        "gemma-2-9b-it",
+        "gemma-2-27b",
+        "gemma-2-27b-it"
+      ],
+      "announcement_date": "2024-06-27",
+      "weights_release_date": "2024-06-27",
+      "name": "Gemma 2 首批 9B / 27B",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-06",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Gemma Terms of Use",
+          "url": "https://ai.google.dev/gemma/terms",
+          "applies_to": "本条所列模型权重",
+          "review_note": "当前条款页面核验于 2026-10-31，不代表已审计发布日法律文本。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/google/gemma-2-9b"
+      ],
+      "evidence": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-gemma-2/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/google/gemma-2-9b",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含 9B、27B；2B 当时尚未发布，另列 7 月事件。官方代码仓库 6 月 26 日的支持日期不替代 6 月 27 日权重公告。下载可能需接受 Gemma 条款。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "gemma2-2b-2024-07-31",
+      "vendor": "Google DeepMind",
+      "event_granularity": "family_release",
+      "included_models": [
+        "gemma-2-2b",
+        "gemma-2-2b-it"
+      ],
+      "announcement_date": "2024-07-31",
+      "weights_release_date": "2024-07-31",
+      "name": "Gemma 2 新增 2B",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-07",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Gemma Terms of Use",
+          "url": "https://ai.google.dev/gemma/terms",
+          "applies_to": "本条所列模型权重",
+          "review_note": "当前条款页面核验于 2026-10-31，不代表已审计发布日法律文本。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/google/gemma-2-2b"
+      ],
+      "evidence": [
+        {
+          "url": "https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/google/gemma-2-2b",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含新增的 2B 基础与指令版本；不把同篇文章中的 ShieldGemma、Gemma Scope 合并为本记录。下载可能需接受 Gemma 条款。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "gemma3-initial-2025-03-12",
+      "vendor": "Google DeepMind",
+      "event_granularity": "family_release",
+      "included_models": [
+        "gemma-3-1b-pt",
+        "gemma-3-1b-it",
+        "gemma-3-4b-pt",
+        "gemma-3-4b-it",
+        "gemma-3-12b-pt",
+        "gemma-3-12b-it",
+        "gemma-3-27b-pt",
+        "gemma-3-27b-it"
+      ],
+      "announcement_date": "2025-03-12",
+      "weights_release_date": "2025-03-12",
+      "name": "Gemma 3 首批四种尺寸",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true,
+        "scope_note": "1B 仅文本；4B、12B、27B 支持文本与图像输入。"
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-03",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Gemma Terms of Use",
+          "url": "https://ai.google.dev/gemma/terms",
+          "applies_to": "本条所列模型权重",
+          "review_note": "当前条款页面核验于 2026-10-31，不代表已审计发布日法律文本。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/google/gemma-3-1b-it"
+      ],
+      "evidence": [
+        {
+          "url": "https://developers.googleblog.com/en/introducing-gemma3/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "modality"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
+          "supports": [
+            "weights_release_date"
+          ],
+          "summary_zh": "官方补充来源用于核对型号、当前权重获取或许可登记；不以当前页面推定首次上传时间。"
+        },
+        {
+          "url": "https://huggingface.co/google/gemma-3-1b-it",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "1B 仅支持文本；4B、12B、27B 支持图像和文本输入、文本输出。家族模态为所列版本的合并范围，不表示每个版本都支持图像。不包含后续 270M、QAT 或 Gemma 3n。下载可能需接受 Gemma 条款。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "deepseek-v2-base-2024-05-06",
+      "vendor": "DeepSeek",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "deepseek-ai/DeepSeek-V2"
+      ],
+      "announcement_date": "2024-05-06",
+      "weights_release_date": "2024-05-06",
+      "name": "DeepSeek-V2 基础模型",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-05",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "DeepSeek License Agreement v1.0",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL",
+          "applies_to": "DeepSeek-V2 基础模型权重"
+        },
+        {
+          "name": "MIT",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-CODE",
+          "applies_to": "仅仓库代码，不是原始模型权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V2"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V2",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "保守地只登记基础模型，不将后续 Chat-0628 等版本归入本日期。代码 MIT 许可不适用于这些原始模型权重。论文提交日期与权重公告日期分别处理。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "deepseek-v2-lite-base-2024-05-16",
+      "vendor": "DeepSeek",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "deepseek-ai/DeepSeek-V2-Lite"
+      ],
+      "announcement_date": "2024-05-16",
+      "weights_release_date": "2024-05-16",
+      "name": "DeepSeek-V2-Lite 基础模型",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-05",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "DeepSeek License Agreement v1.0",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL",
+          "applies_to": "DeepSeek-V2-Lite 基础模型权重"
+        },
+        {
+          "name": "MIT",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-CODE",
+          "applies_to": "仅仓库代码，不是原始模型权重"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-V2",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "只登记 Lite 基础模型；Lite 的日期为 5 月 16 日，不与完整 V2 的 5 月 6 日混用。代码 MIT 许可不适用于模型权重。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "phi3-mini-2024-04-23",
+      "vendor": "Microsoft",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Phi-3-mini（3.8B，官方首发家族范围）"
+      ],
+      "announcement_date": "2024-04-23",
+      "weights_release_date": "2024-04-23",
+      "name": "Phi-3-mini 首次家族发布",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-04",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct/blob/main/LICENSE",
+          "applies_to": "当前 Phi-3-mini-4k-instruct 权重；未核定发布日许可"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://azure-int.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+          "supports": [
+            "license",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方补充来源用于核对型号、当前权重获取或许可登记；不以当前页面推定首次上传时间。"
+        },
+        {
+          "url": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "官方公告确认 3.8B mini 家族当日可在 Hugging Face 获取，但没有逐一列出全部 4k/128k 检查点，故保留家族粒度。MIT 是当前 4k 指令模型卡的许可登记，不断言为发布日许可；当前检查点经过后续更新，未证明与 4 月文件完全一致。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    },
+    {
+      "id": "granite3-dense-2024-10-21",
+      "vendor": "IBM",
+      "event_granularity": "family_release",
+      "included_models": [
+        "granite-3.0-2b-base",
+        "granite-3.0-2b-instruct",
+        "granite-3.0-8b-base",
+        "granite-3.0-8b-instruct"
+      ],
+      "announcement_date": "2024-10-21",
+      "weights_release_date": "2024-10-21",
+      "name": "Granite 3.0 稠密语言模型",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-10",
+      "availability": "open_weights",
+      "open_source_ai_status": "未据权重开放推定开源人工智能认证",
+      "verified_on": "2026-10-31",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct",
+          "applies_to": "本条所列稠密模型权重",
+          "review_note": "名称由公告及模型卡确认；独立许可文件本次未能读取。"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://newsroom.ibm.com/2024-10-21-ibm-introduces-granite-3-0-high-performing-ai-models-built-for-business",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope",
+            "license"
+          ],
+          "summary_zh": "官方公告提供本记录的日期与范围依据；与下列说明及许可来源共同核对。"
+        },
+        {
+          "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct",
+          "supports": [
+            "license",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方补充来源用于核对型号、当前权重获取或许可登记；不以当前页面推定首次上传时间。"
+        },
+        {
+          "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct",
+          "supports": [
+            "modality",
+            "weights_currently_available"
+          ],
+          "summary_zh": "官方模型页面展示输入输出或文本生成用法，并提供权重文件入口；不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "仅包含 2B、8B 的稠密基础与指令模型；不包含 Guardian、混合专家或时间序列模型。Apache-2.0 由 IBM 公告及官方模型卡确认；独立许可文件本次读取失败，未声称完成许可全文审查。",
+        "日期是官方声明权重可取得的日期，不是逐个文件的首次上传时间。权重入口为本条范围内的代表型号，完整范围以型号清单和官方公告为准。"
+      ]
+    }
+  ]
+}

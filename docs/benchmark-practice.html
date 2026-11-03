@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="description" content="读取评测更正与配置说明，练习区分发布者报告、独立复现和不可直接比较的情况；不运行模型。"><title>这些评测成绩能直接比较吗？ · ModelAtlas</title><link rel="stylesheet" href="learn.css"><link rel="stylesheet" href="campus.css"><link rel="stylesheet" href="benchmark-practice.css"><script src="benchmark-practice.js" defer></script></head>
+<body class="campus" data-site="modelatlas"><a class="skip" href="#benchmark-main">跳至正文</a><header><a class="brand" href="index.html">ModelAtlas</a><nav aria-label="主导航"><a href="index.html?view=coverage">← 来源与证据边界</a><a href="learn.html">入门练习</a></nav></header>
+<div class="learn-layout"><aside><nav aria-label="本页步骤"><a href="#prepare">目标与边界</a><a href="#materials">1．读两张来源卡</a><a href="#worksheet">2．填写评测账本</a><a href="#questions">3．修正三个结论</a><a href="#transfer">4．独立迁移练习</a><a href="#finish">5．验收与停止</a></nav></aside>
+<main id="benchmark-main"><article><div class="benchmark-nav"><a href="academy.html#evaluation">返回核心课：08 · 评测与方法</a><a data-benchmark-language href="benchmark-practice-en.html">English</a></div><p class="benchmark-context">地区上下文仅用于返回课程，不改变证据与判断；语言不代表地区或服务可用性。</p><p class="eyebrow">可选进阶 · 原创评测阅读练习</p><h1>这些评测成绩<br>能直接比较吗？</h1><p class="lead">先读更正，再看配置。把“有官方来源”与“已经独立验证”分开，不急着选冠军。</p>
+<section id="prepare"><h2>目标与边界</h2><p>交付一份评测阅读账本、C1–C3三个修订结论、至少两项未知，以及两条独立迁移比较决定与人工自查。<strong>原三题编辑估计15–20分钟；新增迁移另计</strong>，只用本页材料完成；不是实测用时。外部原文延伸阅读另计。</p><p>只需纸笔或本地文本编辑器。无需账号、安装、密钥、模型下载或付费。页面不保存填写内容，也不自动判分；本页无需JavaScript。</p><div class="caution"><strong>本课只读来源，不执行评测。</strong><p>本站未运行这些基准，也没有独立复现。网页与自动测试通过只说明页面检查结果，不说明模型性能。本课不要求跟随原文的下载、安装或API步骤。</p></div><dl class="terms"><dt>基准</dt><dd>用一套任务和评分办法观察能力；不是所有真实工作的总成绩。</dd><dt>harness</dt><dd>组织输入、调用模型和计分的评测程序；版本与设置可能影响结果。</dd><dt>判分模型</dt><dd>评判输出的另一个模型，也叫judge；它的版本是评测条件之一。</dd><dt>CoT</dt><dd>思考或推理模式相关的提示与流程；不能默认不同模式使用同样条件。</dd><dt>独立复现</dt><dd>另一方实际执行并留下可检查的过程与结果；读过官方报告不算。</dd></dl></section>
+<p class="material-card"><a href="evaluation-evidence.html">延伸阅读：核对 Seed-Coder 一条论文自报成绩的完整口径 →</a>（独立证据补充，未实跑，不是排行榜。）</p>
+<section id="materials"><h2>1．读两张来源卡</h2><p>下方为本站原创短摘记，不是完整原文。两卡均由本站于<strong>2026-10-31</strong>读取官方页面；你完成纸面题不等于亲自读过外部全文。链接指向滚动main，<strong>未固定提交SHA</strong>，不能把当前文档全部当作历史公告当日的内容。</p>
+<div class="material-card" id="source-a"><p class="eyebrow">A · 发布者的更正公告</p><h3>BAGEL README · News</h3><p>定位：News中<strong>June 15, 2025</strong>条目。发布者宣布修正KRIS-Bench与RISEBench结果，并公开相关评测代码。</p><p><strong>2025-06-15是更正公告日期</strong>；本课未核对修正前数值、修正原因或实验实际执行日，不把它当成模型新版本发布日期。</p><a href="https://github.com/ByteDance-Seed/Bagel/blob/main/README.md" target="_blank" rel="noopener noreferrer">A · 官方README原文（外部链接）</a></div>
+<div class="material-card" id="source-b"><p class="eyebrow">B · 发布者的评测说明</p><h3>BAGEL EVAL · KRIS / RISE</h3><p>定位：KRIS与RISE各自的Evaluation，以及RISE的Results标题。文档说明对基准代码作加速修改，并列出思考模式、判分模型版本与生成配置。</p><p>RISE说明段的默认<code>cfg_img_scale=2.0</code>，普通Results标题则标为<code>cfg_img_scale=1.5</code>。这是<strong>两处不同范围的标注</strong>；实际运行配置与对应关系仍待核，不能仅据此认定哪一处错误。</p><a href="https://github.com/ByteDance-Seed/Bagel/blob/main/EVAL.md" target="_blank" rel="noopener noreferrer">B · 官方EVAL原文（外部链接）</a></div>
+<p><strong>编辑提示：</strong><code>cfg_img_scale</code>是图像引导相关设置。本题不要求理解算法，只要求不要把“当前默认设置”自动移填到“历史结果所用设置”。两卡的来源身份都是发布者材料，不是本站的实验记录。</p></section>
+<p class="material-card">原摘记核验：2026-10-31；本轮对上述两处官方页面重新读取：2026-11-01。重读确认这些定位内容仍可见，不固定历史提交、不证明实验执行。学习者未亲自核验时应写“未独立核验”，不要继承编辑日期。</p><section id="worksheet"><h2>2．填写评测阅读账本</h2><ol><li>先为A、B各写一行来源账本，分别记录公告日和阅读日。</li><li>按材料填写条件，没写的保留“未知”；不要从模型名猜检查点版本。</li><li>每个比较决定写理由和缺失证据，不用“分数更高”替代条件检查。</li></ol><p>复制空模板到本地文件，或照着写。以下栏目不含参考答案。</p><pre class="worksheet" tabindex="0" aria-label="空白评测阅读账本">核验人：________
+练习完成日期：________
+阅读方式：仅本页卡片 / 亲自打开外部原文（选一）
+
+来源A / B：________
+报告者与来源身份：________
+URL及章节定位：________
+公告日期 / 本站摘记读取日期：________
+我实际读取外部原文的日期（未读写未读）：________
+文件提交版本 / 未固定原因：________
+
+模型精确版本：________
+基准数据版本与子集：________
+harness版本、改动与环境：________
+提示词 / 思考模式：________
+判分模型版本：________
+生成参数：说明段默认值________；结果标题标注________
+实际运行配置及其证据：________
+指标 / 单位 / 聚合方式 / 预算：________
+可直接比较吗？范围与理由：________
+
+未知1 / 缺什么证据 / 未确认前如何处理：________
+未知2 / 缺什么证据 / 未确认前如何处理：________
+三个主张的修订（C1—C3）：________
+最终结论（80—150字，不排名）：________
+人工复核人与日期：________</pre><p><a href="benchmark-ledger-template.md" download>下载空白 Markdown 模板</a></p><p>仅凭材料卡不能填满全部条件，这是有意保留的练习边界。可填写“本页材料未提供”，不等于断言官方全文也没有。</p></section>
+<section id="questions"><h2>3．修正三个结论</h2><p>以下是<strong>人工编写的待核主张</strong>，不是模型实际输出。先写“支持 / 不支持 / 证据不足”及理由，再展开答案；判断标签可讨论，但证据范围不能扩大。</p>
+<h3>C1 · “官方修正并公开了代码，所以本站已独立实测证实结果。”</h3><details><summary>做完再看：C1参考答案</summary><p><strong>不支持。</strong>A证明发布者公告过更正与代码公开，不证明本站执行过任何评测。修订：发布者于2025-06-15公告更正；本站于2026-10-31阅读该公告，未独立复现。</p></details>
+<h3>C2 · “RISE说明段默认是2.0，因此普通Results的实验一定使用2.0，标题1.5肯定写错了。”</h3><details><summary>做完再看：C2参考答案</summary><p><strong>证据不足。</strong>B有不同范围的标注。不能把当前默认值当成某张表的运行记录，也不能反过来确定1.5就是所有实验的设置。修订：分别记录默认2.0与结果标题1.5；实际配置及映射待核，需对应版本、配置和运行记录。不能据此认定文档错误或推导性能差异。</p></details>
+<h3>C3 · “只要同名基准分数更高，就证明模型在相同条件下更强。”</h3><details><summary>做完再看：C3参考答案</summary><p><strong>证据不足。</strong>本页没有提供可作这一结论的完整对照实验。至少需核对模型快照、数据版本/子集、harness、提示词/模式、judge、生成配置、预算及指标口径。修订：条件未核齐，暂不直接比较；即使条件一致，也只说明该评测范围，不自动推广到所有工作。</p></details>
+<p class="caution">参考答案是编辑推理，不是新实验或官方结论。公告更正也不意味着所有其他结果都不可信；未知既不是零分，也不是反面结论已成立。</p></section>
+<section id="transfer"><h2>4．独立迁移：同名任务，是否同一条件？</h2><p class="caution">先离开上面的 BAGEL 答案。以下是原创虚构记录卡，没有真实厂商、运行日志或成绩；编号和版本仅用于纸面练习。不要把它们录入模型目录。</p><div class="material-card" id="t-a"><h3>T-A</h3><p>教学模型 Cedar-r1；教学数据 LedgerQA-v1 / Full（100题）；程序 harness-h1；提示 p1；一次输出；精确匹配准确率；同一虚构运行环境 e1。以上是题设字段，不是运行证据。</p></div><div class="material-card" id="t-b"><h3>T-B</h3><p>与 T-A 其他题设字段相同，但子集为 LedgerQA-v1 / Hard（20题）。没有任何成绩或原始输出。</p></div><div class="material-card" id="t-c"><h3>T-C</h3><p>数据为 LedgerQA-v1 / Full（100题），提示、输出次数、指标与环境同 T-A；模型仅写滚动别名 Cedar-latest，具体快照未知；程序版本未知。没有任何成绩或原始输出。</p></div><p>独立写两条比较决定：T-A 与 T-B 是否能直接作同条件模型排名？T-A 与 T-C 是否已确认条件相同？每条都写：判断、卡片字段证据、缺什么、未补齐前的处理。再写两句不排名的结论。题设相同也不证明真实实验执行。</p><details><summary>做完再看：T-A / T-B 参考</summary><p>不能直接作同条件模型排名。明确差异是 Full / Hard 子集及100 / 20题，不应把两者合并成同一测试；两卡模型甚至相同。先固定同一数据修订与子集、题目范围和计分聚合，再索取对应输出与运行记录。现有卡片只支持识别条件差异，没有性能结论。</p></details><details><summary>做完再看：T-A / T-C 参考</summary><p>条件是否相同仍未知。Full 相同不足以弥补 Cedar-latest 未固定快照和 harness 版本缺失。需要别名在该次运行时对应的模型修订、程序提交与配置及输出记录，不能照抄 T-A 的版本补空。当前停止直接比较，不能推断 C 更强、较弱或等同。</p><p><a href="benchmark-ledger-reference.md" download>做完再下载参考与迁移自查</a></p></details><p>迁移验收：两条决定各有具体字段依据；区分“已知不同”和“未知是否相同”；各列至少一项缺失证据和暂缓动作；没有虚构分数、假装独立复现或把题设当日志。四项全满足才完成本练习的人工自查，不代表掌握认证。</p></section><section id="finish"><h2>5．验收与停止</h2><p><strong>还需交付 T-A/T-B 与 T-A/T-C 两条独立比较决定，并完成迁移四项人工自查。</strong></p><ul><li>A、B均有来源身份与章节定位；公告日、本站读取日和你的实际阅读日分开。</li><li>默认设置与结果标注分开；未固定版本及至少两项未知未被补猜。</li><li>三个修订都没有把“官方报告”升级成“独立实测”，也没有生成排名。</li><li>最终80—150字结论说明目前能证明什么、不能证明什么、需要什么证据；由人逐项复核。</li></ul><p><strong>停止条件：</strong>账本、C1–C3三题、有边界的结论、两条迁移比较决定及迁移四项人工自查齐全后即可结束。原文打不开、版本关系不明或缺少运行记录时停在待核，不绕过访问限制、不下载模型、不填密钥，也不为完成练习强求实验结果。</p><p>用于真实选型时，先另行确认任务、预算、权限与可复现方案。本课仅训练阅读判断，不是模型选型结论。</p><p><a href="#worksheet">回到账本完成复核 →</a> · <a href="index.html?view=coverage">回到来源与证据边界</a></p></section>
+<footer>ModelAtlas · 原创阅读练习 · 材料核对2026-10-31。第三方来源保留其权利；无账号、追踪或自动执行。</footer></article></main></div></body></html>

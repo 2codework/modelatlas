@@ -18,7 +18,7 @@ def pin(output):
         text = match.group(0)
         attribute = 'src' if text.lower().startswith('<script') else 'href'
         return re.sub(r'\b'+attribute+r'="([^"]+)"', lambda m: attribute+'="'+version(m.group(1))+'"', text)
-    for name in ['index.html', 'realtime-audio.html', 'creative-learning.html', 'foundations.html', 'learn.html', 'connections.html', 'practice-api.html', 'practice-local.html']:
+    for name in ['release-reading.html', 'release-reading-en.html', 'video-sampling-lab.html', 'video-sampling-lab-en.html', 'attention-lab.html', 'attention-lab-en.html', 'academy.html', 'academy-en.html', 'monthly.html', 'index.html', 'realtime-audio.html', 'creative-learning.html', 'foundations.html', 'learn.html', 'connections.html', 'practice-api.html', 'practice-local.html']:
         html_path = output/name
         if not html_path.exists():
             continue

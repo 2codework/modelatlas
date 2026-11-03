@@ -68,7 +68,7 @@ def publish(root,out,data):
  p=root/REL;shutil.copytree(p,out/'realtime-audio',dirs_exist_ok=True)
  text=markdown(data);(root/'REALTIME_AUDIO.md').write_text(text);(out/'REALTIME_AUDIO.md').write_text(text)
  esc=lambda x:html.escape(readable(x),quote=True)
- parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时语音模型 · ModelAtlas</title><link rel="stylesheet" href="style.css"><script src="topic.js" defer></script></head><body class="topic-page"><main><h1>实时语音模型 · 四个有限样本</h1><p><a href="index.html">返回知识地图</a> · <a href="REALTIME_AUDIO.md">专题书稿</a></p><p>来源审阅 / never-run；模型、API和客户端分开。不是全球完整目录。</p><p>'+esc(data['realtime_audio_registry']['scope_zh'])+'</p><nav aria-label="模型目录">']
+ parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时语音模型 · ModelAtlas</title><link rel="stylesheet" href="style.css"><script src="topic.js" defer></script><link rel="stylesheet" href="campus.css"></head><body class="topic-page campus" data-site="modelatlas"><header><a class="brand" href="index.html">ModelAtlas</a><nav aria-label="主导航"><a href="index.html">首页</a><a href="index.html?view=explore">知识目录</a><a href="learn.html#step-1">动手练习</a></nav></header><main><h1>实时语音模型 · 四个有限样本</h1><p><a href="index.html">返回知识地图</a> · <a href="REALTIME_AUDIO.md">专题书稿</a></p><p>来源审阅 / never-run；模型、API和客户端分开。不是全球完整目录。</p><p>'+esc(data['realtime_audio_registry']['scope_zh'])+'</p><nav aria-label="模型目录">']
  for n in data['nodes']:
   if 'realtime_audio' in n:parts+=['<a href="#'+esc(n['id'])+'">'+esc(n['title'])+'</a> ·']
  parts+=['</nav>']

@@ -1,0 +1,319 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>Nine parameters: one training step · ModelAtlas</title><link rel="stylesheet" href="tiny-training.css"><script src="tiny-training.js" defer></script></head><body><a class="skip" href="#training-main">Skip to lesson</a><header><a href="academy-en.html#foundations">ModelAtlas · Chapter 01</a> / <a href="academy-en.html#tokens">Chapter 02</a><nav aria-label="Language"><a data-training-language href="tiny-training.html">中文</a> · <a data-training-language href="tiny-training-en.html">English</a></nav></header><main id="training-main"><p>LEARN → CALCULATE → RUN → EXPLAIN</p><h1>Nine parameters: one training step</h1><p>Language and region are independent; this offline lab requires no regional provider service. Region is preserved in navigation only, not inferred from language.</p><nav aria-label="Lesson sections"><a href="#worked">Worked example</a> · <a href="#run">Run</a> · <a href="#transfer">Transfer</a> · <a href="#downloads">Downloads and source</a></nav><section id="prepare"><h2>01 · Know the learning target</h2><p>Prerequisites: lists, loops, arithmetic and probabilities; recognize natural logarithms, without requiring calculus. Derive a gradient from examples, explain one changing parameter, and distinguish training from frozen inference. Newcomers can return to chapters 01 and 02. Learning time has not been measured in learner trials.</p><p>This is a <strong>nine-logit bigram model</strong>: W[previous token][next token], rows and columns A/B/C, one-token context. It is not attention, a Transformer, a pretrained LLM or a vendor evaluation. Numerical training really happens, but only on this tiny table.</p></section>
+<section id="worked"><h2>02 · Five transitions, one complete step</h2><p>The original sequence <code>A B A B A C</code> gives <code>A→B, B→A, A→B, B→A, A→C</code>: five samples, not six. Never create transitions between independent sequences. Start with zero W, learning rate η=0.3, full-batch mean loss and natural logarithms.</p><p>For input a, take row z=W[a], subtract m=max(z), then compute <code>p[j]=exp(z[j]-m)/Σexp(z[k]-m)</code>. This preserves probabilities while avoiding exponentiation of large positive numbers. Initially each probability is 1/3.</p><p>For target b, cross-entropy is <code>ℓ=-ln p[b]</code>. The code uses <code>ln Σexp(z-m) - (z[b]-m)</code> to avoid log(0) when probabilities underflow. L averages all five losses: initially <strong>ln 3 = 1.0986122886681098</strong>.</p><p>The derivative is <code>∂ℓ/∂z[j] = p[j] - 1[j=b]</code>: each candidate contributes its probability, then the true target subtracts one. A→B contributes [1/3,-2/3,1/3] twice; A→C contributes [1/3,1/3,-2/3] once; B→A contributes [-2/3,1/3,1/3] twice. Sum by row and divide by <strong>all five samples</strong>, not each row's count.</p><pre>Mean gradient G (rows/columns A,B,C)
+A: [ 1/5, -1/5,     0 ]
+B: [-4/15, 2/15, 2/15 ]
+C: [    0,    0,     0 ]
+
+W_new = W_old - 0.3 × G
+A: [-0.06,  0.06,  0.00]
+B: [ 0.08, -0.04, -0.04]
+C: [ 0.00,  0.00,  0.00]</pre><p>One actual parameter: W[A,B]=0−0.3×(−1/5)=0.06. Repeated A→B targets push that score up on this step. No sample uses C as input, so its row gradient is zero; C still belongs to the vocabulary.</p><pre>Updated p(next|A) = [0.3135451441, 0.3535211628, 0.3329336930]
+Updated p(next|B) = [0.3605109470, 0.3197445265, 0.3197445265]
+L = (-2 ln p(B|A) -2 ln p(A|B) -ln p(C|A))/5
+  = 1.0439803399807872</pre><p>Training loss falls. Yet the deliberately selected <strong>A→A counterexample</strong>, excluded from optimization, rises from ln3 to <strong>1.159811928855196</strong>. This nonrepresentative probe refutes “training improvement improves everything”; it is not a representative test set, generalization benchmark or model ranking.</p></section>
+<section id="run"><h2>03 · Download and actually run</h2><p>Python 3.9+, standard library only; no installation, network, account, GPU, model or API key. Inspect the source below, extract the ZIP, then enter tiny-training. The website does not execute your Python.</p><pre>python3 -B demo.py
+python3 -B -m unittest -v</pre><p>The demo prints JSON, computes in memory and does not save weights; -B avoids bytecode files. Check before, gradient, after, both losses and inference_parameters_unchanged=true. Record your Python version and commands. Tests cover all nine finite differences, stable loss, unchanged inputs, sequence boundaries and invalid values; passing tests does not prove learner mastery.</p><p>If results differ, reset zero weights, original TRAIN and η=0.3. Check the total-sample mean, update minus sign and natural logarithms. Floating-point residuals near 10⁻¹⁷ are normal. Do not change expected answers to conceal a failure; larger learning rates do not guarantee improvement.</p></section>
+<section id="inference"><h2>04 · Freeze parameters, then generate</h2><p>Copy updated W before predict or generate; every value must remain equal. Prediction reads only the final token, so A B and C B have identical next-token distributions under the worked-example table. Generation is greedy, ties follow A/B/C order, with an integer budget of 0..32 new tokens. Starting A and adding eight produces ABABABABA. There is no EOS; stopping at the budget does not mean the content is complete.</p><p>Vocabulary is closed to A/B/C. Bool/unknown tokens, NaN/Inf, malformed 3×3 tables, negative learning rates and noninteger/out-of-range generation budgets are rejected. Finite logits whose differences overflow are rejected too. Rate 0 returns a new table with identical values. Empty/singleton sequences have no transition; training needs at least one. There is no arbitrary batch-size cap: use the supplied tiny fixture. The generation budget bounds new tokens only.</p></section>
+<section id="transfer"><h2>05 · Independent transfer: attempt before revealing</h2><ol><li>Reset weights to zero. Use A C A C A B and η=0.3. List five transitions, derive the mean gradient and new table, identify the unchanged row and explain why.</li><li>Return to the <strong>worked-example updated table</strong>. Compare A B with C B; report distributions and explain why changing context does not update parameters.</li><li>Critique “Training loss fell, so it understands all Chinese and replaces a production LLM.” Identify missing evidence and why the A→A counterexample is not a generalization test.</li><li>Explain η=0, the generation stopping budget and why documents in a prompt are not training.</li></ol><p>Record calculations, commands, observed outputs and limitations in the downloadable independent worksheet before copying a reference.</p></section><details id="reference"><summary>Reveal transfer reference after your attempt</summary><pre># Transfer reference — open only after your attempt
+1. A→C,C→A,A→C,C→A,A→B. Gradient rows [1/5,0,-1/5], [0,0,0], [-4/15,2/15,2/15]. Updated rows [-.06,0,.06], [0,0,0], [.08,-.04,-.04]. B is unchanged: no B input sample. Mean loss after step 1.0439803399807872. The C-target probability after A is now the largest.
+2. Original worked-example W has B row [.08,-.04,-.04]. Both contexts end in B, so both give [.36051094696066394,.31974452651966806,.31974452651966806]. Earlier tokens are ignored by this bigram model. Predict/generate return outputs without updating W.
+3. Nine logits over three symbols capture only one-step toy counts, not language understanding, attention or a production task. The training objective improved on its own five transitions. The deliberately nonrepresentative A→A probe demonstrates one counterexample, not representative generalization measurement. Need suitably independent representative data, fixed task and baseline, uncertainty/error analysis and operational evidence before broader claims.
+4. Rate 0 returns identical parameter values; inference only reads. Greedy ties choose A/B/C order and stop at max_new_tokens (0..32), not meaningful completion. Context documents alter inputs; training explicitly changes W by a gradient update.
+</pre></details><section id="finish"><h2>06 · Manual learning acceptance</h2><p>Without the reference: recover all five pairs and nine gradients; explain at least one update, unchanged C row, frozen parameters and the nonrepresentative counterexample; complete transfer tasks with reasons; run both commands and explain mismatches. Missing any item means return to that section, not claim mastery. No learner trials or production-model evaluation have been performed.</p></section><section id="downloads"><h2>Download / inspect</h2><p><a href="tiny-training-lab.zip" download>Download self-contained Python lab ZIP</a></p><ul><li><a href="tiny-training-core.py">core.py</a> · <a href="#source-core.py">Read source</a></li><li><a href="tiny-training-fixtures.py">fixtures.py</a> · <a href="#source-fixtures.py">Read source</a></li><li><a href="tiny-training-demo.py">demo.py</a> · <a href="#source-demo.py">Read source</a></li><li><a href="tiny-training-test_core.py">test_core.py</a> · <a href="#source-test_core.py">Read source</a></li><li><a href="tiny-training-README-zh.md">README-zh.md</a> · <a href="#source-README-zh.md">Read source</a></li><li><a href="tiny-training-README-en.md">README-en.md</a> · <a href="#source-README-en.md">Read source</a></li><li><a href="tiny-training-WORKSHEET-zh.md">WORKSHEET-zh.md</a> · <a href="#source-WORKSHEET-zh.md">Read source</a></li><li><a href="tiny-training-WORKSHEET-en.md">WORKSHEET-en.md</a> · <a href="#source-WORKSHEET-en.md">Read source</a></li><li><a href="tiny-training-REFERENCE-zh.md">REFERENCE-zh.md</a> · <a href="#source-REFERENCE-zh.md">Read source</a></li><li><a href="tiny-training-REFERENCE-en.md">REFERENCE-en.md</a> · <a href="#source-REFERENCE-en.md">Read source</a></li><li><a href="tiny-training-SOURCES.md">SOURCES.md</a> · <a href="#source-SOURCES.md">Read source</a></li></ul><details id="source-core.py"><summary>core.py</summary><pre><code>&quot;&quot;&quot;Original nine-logit bigram teaching model. Python 3.9+, standard library only.&quot;&quot;&quot;
+import math
+
+VOCAB = (&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;)
+MAX_NEW_TOKENS = 32
+
+
+def number(value):
+    if type(value) not in (int, float):
+        raise ValueError(&#x27;Expected a finite number, not a bool&#x27;)
+    try:
+        value = float(value)
+    except (OverflowError, ValueError):
+        raise ValueError(&#x27;Number outside finite float range&#x27;) from None
+    if not math.isfinite(value):
+        raise ValueError(&#x27;Expected finite number&#x27;)
+    return value
+
+
+def vector(values):
+    if not isinstance(values, (list, tuple)) or len(values) != 3:
+        raise ValueError(&#x27;Expected three logits&#x27;)
+    return [number(v) for v in values]
+
+
+def weights(w):
+    if not isinstance(w, (list, tuple)) or len(w) != 3:
+        raise ValueError(&#x27;Expected a 3 by 3 table&#x27;)
+    return [vector(row) for row in w]
+
+
+def zeros():
+    return [[0.0] * 3 for _ in VOCAB]
+
+
+def tokens(sequence):
+    if not isinstance(sequence, (list, tuple)):
+        raise ValueError(&#x27;Sequence must be a list/tuple of A/B/C strings&#x27;)
+    if any(type(t) is not str or t not in VOCAB for t in sequence):
+        raise ValueError(&#x27;Closed vocabulary: A, B, C only&#x27;)
+    return list(sequence)
+
+
+def pairs(sequences):
+    if not isinstance(sequences, (list, tuple)):
+        raise ValueError(&#x27;Expected a list/tuple of independent sequences&#x27;)
+    result = []
+    for sequence in sequences:
+        seq = tokens(sequence)
+        result.extend((VOCAB.index(a), VOCAB.index(b)) for a, b in zip(seq, seq[1:]))
+    if not result:
+        raise ValueError(&#x27;Training requires at least one within-sequence transition&#x27;)
+    return result
+
+
+def shifted(row):
+    row = vector(row)
+    maximum = max(row)
+    values = [x - maximum for x in row]
+    # Finite inputs may still exceed representable differences: reject explicitly.
+    if not all(math.isfinite(x) for x in values):
+        raise ValueError(&#x27;Logit differences exceed finite arithmetic range&#x27;)
+    return values
+
+
+def softmax(row):
+    values = shifted(row)
+    exp = [math.exp(x) for x in values]
+    denominator = math.fsum(exp)
+    return [x / denominator for x in exp]
+
+
+def loss(w, sequences):
+    w = weights(w)
+    samples = pairs(sequences)
+    losses = []
+    for a, b in samples:
+        row = shifted(w[a])
+        # Do not take log(softmax): probabilities can underflow to zero.
+        losses.append(math.log(math.fsum(math.exp(x) for x in row)) - row[b])
+    # Divide before summing to avoid avoidable overflow in the sum.
+    result = math.fsum(x / len(samples) for x in losses)
+    return number(result)
+
+
+def gradient(w, sequences):
+    w = weights(w)
+    samples = pairs(sequences)
+    grad = zeros()
+    for a, b in samples:
+        p = softmax(w[a])
+        for j in range(3):
+            grad[a][j] += (p[j] - int(j == b)) / len(samples)
+    return grad
+
+
+def step(w, sequences, learning_rate=0.3):
+    old = weights(w)
+    rate = number(learning_rate)
+    if rate &lt; 0:
+        raise ValueError(&#x27;Learning rate must be nonnegative&#x27;)
+    grad = gradient(old, sequences)
+    return weights([[old[i][j] - rate * grad[i][j] for j in range(3)] for i in range(3)])
+
+
+def predict(w, context):
+    table = weights(w)
+    seq = tokens(context)
+    if not seq:
+        raise ValueError(&#x27;Prediction requires context&#x27;)
+    return softmax(table[VOCAB.index(seq[-1])])
+
+
+def generate(w, context, max_new_tokens=8):
+    table = weights(w)
+    result = tokens(context)
+    if not result:
+        raise ValueError(&#x27;Generation requires context&#x27;)
+    if type(max_new_tokens) is not int or not 0 &lt;= max_new_tokens &lt;= MAX_NEW_TOKENS:
+        raise ValueError(&#x27;Generation budget must be integer 0..32&#x27;)
+    for _ in range(max_new_tokens):
+        p = predict(table, result)
+        # Greedy; ties use fixed A,B,C order. No EOS token in this tiny vocabulary.
+        result.append(VOCAB[max(range(3), key=lambda j: p[j])])
+    return result
+</code></pre></details><details id="source-fixtures.py"><summary>fixtures.py</summary><pre><code>&quot;&quot;&quot;Original teaching data; deliberately not a language benchmark.&quot;&quot;&quot;
+TRAIN = ((&#x27;A&#x27;, &#x27;B&#x27;, &#x27;A&#x27;, &#x27;B&#x27;, &#x27;A&#x27;, &#x27;C&#x27;),)
+TRANSFER = ((&#x27;A&#x27;, &#x27;C&#x27;, &#x27;A&#x27;, &#x27;C&#x27;, &#x27;A&#x27;, &#x27;B&#x27;),)
+COUNTEREXAMPLE = ((&#x27;A&#x27;, &#x27;A&#x27;),)  # deliberately nonrepresentative; never optimized
+</code></pre></details><details id="source-demo.py"><summary>demo.py</summary><pre><code>&quot;&quot;&quot;Run: python3 -B demo.py. Prints only; no network or model downloads.&quot;&quot;&quot;
+import json
+from core import zeros, gradient, step, loss, predict, generate
+from fixtures import TRAIN, COUNTEREXAMPLE
+
+
+def main():
+    before = zeros()
+    after = step(before, TRAIN, 0.3)
+    frozen = [row[:] for row in after]
+    output = {&#x27;parameters&#x27;: 9, &#x27;samples&#x27;: 5, &#x27;before&#x27;: before,
+              &#x27;gradient&#x27;: gradient(before, TRAIN), &#x27;after&#x27;: after,
+              &#x27;train_loss_before&#x27;: loss(before, TRAIN),
+              &#x27;train_loss_after&#x27;: loss(after, TRAIN),
+              &#x27;counterexample_loss_before&#x27;: loss(before, COUNTEREXAMPLE),
+              &#x27;counterexample_loss_after&#x27;: loss(after, COUNTEREXAMPLE),
+              &#x27;p_after_A&#x27;: predict(after, [&#x27;A&#x27;]), &#x27;p_after_B&#x27;: predict(after, [&#x27;B&#x27;]),
+              &#x27;greedy_A_8&#x27;: generate(after, [&#x27;A&#x27;], 8)}
+    assert after == frozen
+    output[&#x27;inference_parameters_unchanged&#x27;] = after == frozen
+    print(json.dumps(output, indent=2, allow_nan=False))
+
+
+if __name__ == &#x27;__main__&#x27;:
+    main()
+</code></pre></details><details id="source-test_core.py"><summary>test_core.py</summary><pre><code>import copy
+import math
+import unittest
+from core import *
+from fixtures import TRAIN, TRANSFER, COUNTEREXAMPLE
+
+class TrainingTests(unittest.TestCase):
+    def assertTable(self, actual, expected):
+        for row, wanted in zip(actual, expected):
+            for x, y in zip(row, wanted): self.assertAlmostEqual(x, y, places=10)
+
+    def test_worked(self):
+        self.assertEqual(len(pairs(TRAIN)), 5)
+        self.assertAlmostEqual(loss(zeros(), TRAIN), math.log(3))
+        self.assertTable(gradient(zeros(), TRAIN), [[.2,-.2,0],[-4/15,2/15,2/15],[0,0,0]])
+        w=step(zeros(), TRAIN)
+        self.assertTable(w, [[-.06,.06,0],[.08,-.04,-.04],[0,0,0]])
+        self.assertAlmostEqual(loss(w, TRAIN), 1.0439803399807872)
+        self.assertAlmostEqual(loss(w, COUNTEREXAMPLE), 1.159811928855196)
+        self.assertGreater(loss(w, COUNTEREXAMPLE),loss(zeros(),COUNTEREXAMPLE))
+
+    def test_transfer(self):
+        self.assertTable(step(zeros(),TRANSFER), [[-.06,0,.06],[0,0,0],[.08,-.04,-.04]])
+
+    def test_finite_difference_all_nine(self):
+        w=[[.2,-.4,.7],[.3,.1,-.8],[-.1,.5,.9]]
+        g=gradient(w, TRAIN)
+        for i in range(3):
+            for j in range(3):
+                a=copy.deepcopy(w); b=copy.deepcopy(w)
+                a[i][j]+=1e-6; b[i][j]-=1e-6
+                self.assertAlmostEqual(g[i][j],(loss(a,TRAIN)-loss(b,TRAIN))/2e-6, places=7)
+
+    def test_stability(self):
+        for a,b in zip(softmax([1000,1001,999]),softmax([0,1,-1])): self.assertAlmostEqual(a,b)
+        self.assertAlmostEqual(sum(softmax([-1000,0,1000])),1)
+        self.assertEqual(loss([[1000,-1000,0],[0,0,0],[0,0,0]], [(&#x27;A&#x27;,&#x27;B&#x27;)]),2000)
+
+    def test_boundaries(self):
+        self.assertEqual(pairs([[&#x27;A&#x27;,&#x27;B&#x27;],[&#x27;C&#x27;,&#x27;A&#x27;]]),[(0,1),(2,0)])
+        self.assertEqual(pairs([[],[&#x27;A&#x27;],[&#x27;B&#x27;,&#x27;C&#x27;]]),[(1,2)])
+
+    def test_zero_rate_and_immutability(self):
+        w=zeros(); seq=[list(TRAIN[0])]; old=copy.deepcopy((w,seq))
+        result=step(w,seq,0); loss(w,seq); gradient(w,seq); predict(w,[&#x27;A&#x27;]); generate(w,[&#x27;A&#x27;],8)
+        self.assertEqual((w,seq),old); self.assertEqual(result,w)
+        result[0][0]=99; self.assertEqual(w,zeros())
+
+    def test_frozen_context_and_budget(self):
+        w=step(zeros(),TRAIN); before=copy.deepcopy(w); context=[&#x27;A&#x27;]
+        self.assertEqual(predict(w,[&#x27;A&#x27;,&#x27;B&#x27;]),predict(w,[&#x27;C&#x27;,&#x27;B&#x27;]))
+        self.assertEqual(generate(w,context,0),context)
+        self.assertEqual(len(generate(w,context,32)),33)
+        self.assertEqual(generate(w,[&#x27;A&#x27;],8),list(&#x27;ABABABABA&#x27;))
+        self.assertEqual(w,before); self.assertEqual(context,[&#x27;A&#x27;])
+        for v in [-1,33,True,1.5,&#x27;2&#x27;,None]:
+            with self.assertRaises(ValueError): generate(w,[&#x27;A&#x27;],v)
+
+    def test_invalid_data(self):
+        for seq in [[],[[]],[[&#x27;A&#x27;]],[[True,&#x27;B&#x27;]],[[&#x27;D&#x27;,&#x27;A&#x27;]],[&#x27;AB&#x27;],None]:
+            with self.assertRaises(ValueError): loss(zeros(),seq)
+        for context in [[],[False],[&#x27;Z&#x27;],&#x27;A&#x27;]:
+            with self.assertRaises(ValueError): predict(zeros(),context)
+
+    def test_invalid_numbers_and_shapes(self):
+        for v in [True, float(&#x27;nan&#x27;), float(&#x27;inf&#x27;),float(&#x27;-inf&#x27;),&#x27;1&#x27;,None,10**400]:
+            w=zeros(); w[0][0]=v
+            with self.assertRaises(ValueError): loss(w,TRAIN)
+            with self.assertRaises(ValueError): step(zeros(),TRAIN,v)
+        for w in [[],[[0,0,0]],[[0]*2]*3,None]:
+            with self.assertRaises(ValueError): predict(w,[&#x27;A&#x27;])
+        with self.assertRaises(ValueError): step(zeros(),TRAIN,-.1)
+        with self.assertRaises(ValueError): softmax([1e308,-1e308,0])
+        self.assertEqual(softmax([1e308]*3),[1/3]*3)
+
+if __name__==&#x27;__main__&#x27;: unittest.main()
+</code></pre></details><details id="source-README-zh.md"><summary>README-zh.md</summary><pre><code># 九个参数：真正更新一次
+
+需要 Python 3.9+，只用标准库。不安装依赖，不用账号、API Key、GPU、网络或预训练模型。解压 tiny-training-lab.zip，进入 tiny-training 目录：
+
+```sh
+python3 -B demo.py
+python3 -B -m unittest -v
+```
+
+-B 禁止写入字节码文件；演示只在内存计算并打印 JSON，不保存权重。执行前可读 core.py、fixtures.py、test_core.py。网站不提供执行任意用户代码的服务。这是真实数值更新的 3×3 教学分数表，不是 Transformer、大模型复现、厂商评测或学习效果证明。
+
+## 输入与停止契约
+词表仅 A/B/C；行是前一 token，列是下一 token，只看最后一个 token。全批量平均交叉熵使用自然对数。独立序列不拼接；空/单 token 序列不产生样本，整个训练集至少要一个转移。未知或布尔 token、非有限数、错误维度、负学习率、非法生成预算均报 ValueError。极大有限值相减溢出也明确拒绝。所有输入不变；更新返回新表；学习率零不改变值。生成用贪心选择，同分按 A/B/C 顺序，整数预算 0..32，没有 EOS，不保证连贯语言。
+
+## 复现
+原始 TRAIN=A B A B A C 有 5 个转移。全零表，学习率 0.3。平均损失应从 1.0986122886681098 降到 1.0439803399807872；更新后行 [-.06,.06,0]、[.08,-.04,-.04]、[0,0,0]。浮点接近零的小残差正常。刻意挑选的、无代表性的 A→A 反例从未参与优化，其损失上升到 1.159811928855196；不能称为代表性泛化测试。失败时恢复原始数据和全零表，不改答案掩盖失败。大学习率不保证损失下降。
+
+先完成 WORKSHEET-zh.md，再看 REFERENCE-zh.md。单元测试只验证实现契约，不证明学习者掌握；尚无试学验证。
+
+机制来源：https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html 的损失/优化器段落，编辑核对日期 2026-11-01。ABC 数据、计算与代码均为原创教学材料，不依赖 PyTorch；来源日期分开记录于 SOURCES.md。
+</code></pre></details><details id="source-README-en.md"><summary>README-en.md</summary><pre><code># Nine parameters: one real learning step
+
+Python 3.9+; standard library only. No installation, API key, account, GPU, network or pretrained model. Extract `tiny-training-lab.zip`, enter `tiny-training`, then run:
+
+```sh
+python3 -B demo.py
+python3 -B -m unittest -v
+```
+
+`-B` suppresses Python bytecode files. The demo computes in memory and prints JSON; it does not save weights. Read `core.py`, `fixtures.py` and `test_core.py` before execution. No user-provided code execution service exists on the website. This is actual numerical optimization of an original 3×3 logit table, not a Transformer, pretrained LLM, vendor evaluation or evidence of learning effectiveness.
+
+## Contract
+Vocabulary A/B/C; rows previous token, columns next token. One-token context. Full-batch mean cross-entropy with natural logarithm. Independent sequence boundaries are preserved. Training requires at least one transition; empty/singleton sequences contribute none. Unknown and bool tokens, nonfinite numbers, malformed tables, negative learning rates and invalid generation budgets fail with ValueError. Extremely large finite logits whose differences overflow also fail rather than return misleading values. No input is mutated. Step returns a new table; zero learning rate preserves values. Generation is deterministic greedy, tie order A/B/C, budget integer 0..32; no EOS, no promise of coherent language.
+
+## Reproduce
+TRAIN=A B A B A C yields 5 transitions. Zero table, learning rate 0.3. Expected mean loss 1.0986122886681098→1.0439803399807872; updated rows [-.06,.06,0], [.08,-.04,-.04], [0,0,0]. Floating-point near-zero residues are normal. The deliberately nonrepresentative A→A counterexample is never optimized; its loss rises to 1.159811928855196. This is not a representative held-out generalization test. For errors, restore original fixtures and zero table; do not edit expected answers to hide failures. A larger rate is not guaranteed to reduce loss.
+
+Complete WORKSHEET-en.md before opening REFERENCE-en.md. Unit tests establish the implementation contract, not learner mastery. This lab has not undergone learner trials.
+
+Mechanism reference: https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html (loss and optimizer sections; editorial check 2026-11-01). All ABC data, calculations and code are original teaching material; PyTorch is not a dependency. See SOURCES.md for separate source dates.
+</code></pre></details><details id="source-WORKSHEET-zh.md"><summary>WORKSHEET-zh.md</summary><pre><code># 独立迁移——先答题，再展开参考
+1. 九个参数归零。用 A C A C A B、学习率 0.3，列出五个转移，求平均梯度、新表与未改变的行；不能沿用已训练的主例参数。
+2. 使用主例更新后的表（不是迁移题的表），比较 A B 与 C B 之后的分布。解释原因，证明推理没有改变参数。
+3. 批判：“训练损失下降，所以它理解全部中文，可以替代生产大模型。”指出缺失的规模、结构、代表性独立验证与岗位任务证据。为何刻意挑选的 A→A 不足以证明泛化？
+4. 解释零学习率、贪心生成预算，以及为什么往上下文上传文档不是本课的参数更新。
+在这里记录计算、命令、实际输出、偏差/恢复过程及边界。人工验收，不颁发能力证明。
+</code></pre></details><details id="source-WORKSHEET-en.md"><summary>WORKSHEET-en.md</summary><pre><code># Independent transfer — answer before opening the reference
+1. Reset all nine logits to zero. Use A C A C A B, rate 0.3. List all five transitions, derive the averaged gradient, updated rows and unchanged row. Do not reuse trained worked-example weights.
+2. Using the original worked-example updated table (not transfer weights), compare distributions after A B and C B. Explain why and show that inference did not change weights.
+3. Critique: “Training loss went down, so it understands all Chinese and can replace a production LLM.” Identify missing scale, structure, representative independent validation and task evidence. Why is the deliberately chosen A→A probe insufficient?
+4. Explain zero learning rate, the greedy generation budget and why uploading documents to context is not this weight update.
+Record your calculations, commands, observed outputs, mismatch/recovery notes and limitations here. Completion is manual, not a certificate.
+</code></pre></details><details id="source-REFERENCE-zh.md"><summary>REFERENCE-zh.md</summary><pre><code># 独立迁移参考——作答后再看
+1. A→C、C→A、A→C、C→A、A→B。梯度各行 [1/5,0,-1/5]、[0,0,0]、[-4/15,2/15,2/15]。新表 [-.06,0,.06]、[0,0,0]、[.08,-.04,-.04]。没有 B 输入样本，所以 B 行不变。更新后平均损失 1.0439803399807872；A 之后的 C 概率最高。
+2. 使用主例 B 行 [.08,-.04,-.04]，两种上下文末尾都是 B，均得到 [.36051094696066394,.31974452651966806,.31974452651966806]。本模型忽略更早 token；predict/generate 不更新 W。
+3. 三个符号上的九个分数只学到玩具的一步统计，不证明语言理解、attention 或生产任务能力。训练目标只在自身五条转移上改善。无代表性的 A→A 只证明存在一个反例，不是代表性泛化测量；进一步结论需要适当独立且有代表性的数据、固定任务与基线、不确定性/错误分析和实际运行证据。
+4. 学习率零返回相同参数值；推理只读。贪心同分按 A/B/C 选，达到 0..32 的生成预算即停，不等于内容完整。上下文文档改变输入；训练通过梯度明确改变 W。
+</code></pre></details><details id="source-REFERENCE-en.md"><summary>REFERENCE-en.md</summary><pre><code># Transfer reference — open only after your attempt
+1. A→C,C→A,A→C,C→A,A→B. Gradient rows [1/5,0,-1/5], [0,0,0], [-4/15,2/15,2/15]. Updated rows [-.06,0,.06], [0,0,0], [.08,-.04,-.04]. B is unchanged: no B input sample. Mean loss after step 1.0439803399807872. The C-target probability after A is now the largest.
+2. Original worked-example W has B row [.08,-.04,-.04]. Both contexts end in B, so both give [.36051094696066394,.31974452651966806,.31974452651966806]. Earlier tokens are ignored by this bigram model. Predict/generate return outputs without updating W.
+3. Nine logits over three symbols capture only one-step toy counts, not language understanding, attention or a production task. The training objective improved on its own five transitions. The deliberately nonrepresentative A→A probe demonstrates one counterexample, not representative generalization measurement. Need suitably independent representative data, fixed task and baseline, uncertainty/error analysis and operational evidence before broader claims.
+4. Rate 0 returns identical parameter values; inference only reads. Greedy ties choose A/B/C order and stop at max_new_tokens (0..32), not meaningful completion. Context documents alter inputs; training explicitly changes W by a gradient update.
+</code></pre></details><details id="source-SOURCES.md"><summary>SOURCES.md</summary><pre><code># Provenance / 来源
+Editorial check / 编辑核对: 2026-11-01 UTC.
+Official mechanism source: [PyTorch, Optimizing Model Parameters](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html), Optimization Loop / Loss Function / Optimizer.
+Source-displayed metadata: Created 2021-02-09; Last Updated 2026-07-31; Last Verified 2024-11-05. These distinct source dates are not our check date or a model release date.
+Supports the conceptual distinction between a loss, a gradient-based parameter update and separate evaluation. This project does not use its FashionMNIST dataset, neural architecture, reported results or code, and does not require PyTorch. ABC sequences, hand derivation, implementation and counterexample are original simplifications. Unknown: learner effectiveness and relevance to production language tasks. No vendor/model benchmark or real-model API run.
+</code></pre></details></section><footer><p>Mechanism reference: <a href="https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html">PyTorch · Optimizing Model Parameters</a> — Loss Function / Optimizer. Editorial check: 2026-11-01. Source dates: created 2021-02-09; updated 2026-07-31; verified 2024-11-05. Original ABC examples; no PyTorch dependency or copied benchmark.</p><a href="academy-en.html#project">Continue: build a document Q&A Agent →</a></footer></main></body></html>

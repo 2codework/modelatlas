@@ -1,0 +1,49 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "One pinned Nile-Chat first arXiv paper submission; no model, weights, API or license admission and no complete IFM inventory.",
+  "events": [
+    {
+      "id": "ifm-nile-chat-paper-v1-2025-07-06",
+      "kind": "paper",
+      "title": {
+        "zh": "IFM Paris Nile-Chat 论文首次 arXiv 提交",
+        "en": "IFM Paris Nile-Chat paper first arXiv submission"
+      },
+      "provider": "MBZUAI Institute of Foundation Models (IFM)",
+      "version": "arXiv:2507.04569v1",
+      "api_alias": null,
+      "date": "2025-07-06",
+      "timestamp_utc": "2025-07-06T22:53:41Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2507.04569v1",
+          "kind": "paper",
+          "date": "2025-07-06",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv v1 于 2025-07-06 22:53:41 UTC 提交，标题为 Nile-Chat: Egyptian Language Models for Arabic and Latin Scripts。作者：Guokan Shang, Hadi Abdine, Ahmad Chamma, Amr Mohamed, Mohamed Anwar, Abdelaziz Bounhar, Omar El Herraoui, Preslav Nakov, Michalis Vazirgiannis, Eric Xing。论文介绍面向埃及阿拉伯语及 Latin-script Arabizi 的 4B、3x4B-A6B、12B 系列；一篇论文事件不拆成三个模型发布。",
+        "en": "arXiv v1 was submitted on 2025-07-06 at 22:53:41 UTC: Nile-Chat: Egyptian Language Models for Arabic and Latin Scripts, by Guokan Shang, Hadi Abdine, Ahmad Chamma, Amr Mohamed, Mohamed Anwar, Abdelaziz Bounhar, Omar El Herraoui, Preslav Nakov, Michalis Vazirgiannis, Eric Xing. It describes 4B, 3x4B-A6B and 12B variants for Egyptian Arabic and Latin-script Arabizi. One paper event is not three model releases."
+      },
+      "note": {
+        "zh": "仅核对固定 v1 摘要、作者、提交历史及 HTML 的机构与模型链接，未全文复核或复现作者评测。论文链接 MBZUAI-Paris，官方 HF 组织卡将该发布组织标为 MBZUAI-IFM Paris Lab、隶属 IFM；不把整个大学的论文自动归入 IFM。不同的 2505.18383 NileChat 为另一组作者的 3B 工作，不能借用其五月论文日期。五月 HF 仓库提交不证明当时公开或首次完整权重可下载。本条只是首次 arXiv 提交，不是模型、API 或权重发布，也不证明所有渠道最早公开时刻。首次完整公开权重日期、权重与代码许可、固定 API 修订及地区可用性仍未知；论文许可不替代权重许可，开放权重不自动等于开源。有界补录，不代表 IFM 完整历史。",
+        "en": "Review covers the pinned v1 abstract, authors, submission history and HTML affiliation/model links, not full-paper verification or replication of author evaluations. The paper links MBZUAI-Paris; its official HF organization card identifies MBZUAI-IFM Paris Lab and IFM affiliation, not a blanket attribution of university papers. The separate 2505.18383 NileChat is a 3B work by different authors; its May paper date does not apply. May HF repository commits do not prove historical public visibility or first complete downloadable weights. This is a first arXiv submission, not a model, API or weights release, nor earliest public appearance across all channels. First complete public weights date, weights and code licenses, pinned API revision and regional availability remain unknown. Paper licensing cannot establish weights licensing; open weights do not automatically mean open source. Bounded admission, not complete IFM history."
+      },
+      "first_paper_submission": "2025-07-06",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

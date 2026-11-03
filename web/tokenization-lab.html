@@ -1,0 +1,299 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>从字符到 token ID · ModelAtlas</title><link rel="stylesheet" href="tokenization-lab.css"><script src="tokenization-lab.js" defer></script></head><body><a class="skip" href="#tokenization-main">跳至课程</a><header><a href="academy.html#tokens">ModelAtlas · 分词与 attention</a><nav aria-label="语言"><a data-tokenization-language href="tokenization-lab.html">中文</a> · <a data-tokenization-language href="tokenization-lab-en.html">English</a></nav></header><main id="tokenization-main"><p>READ → COUNT → MERGE → ENCODE → EXPLAIN</p><h1>从字符到 token ID</h1><p>原创可运行的 Unicode 字符级 BPE 教学简化，不是厂商分词器、字节级 BPE 或语言模型。前置：列表、字典、循环与整数运算。目标：统计相邻对、学两条规则、冻结分词器、编码解码新词串并说明失败边界。未进行学习者试学或完成时间测量。</p><p>语言与地区独立。离线算法不需要厂商账号；导航只保留有效的明确地区选择。</p><nav aria-label="课程目录"><a href="#worked">完整推导</a> · <a href="#run">实际运行源码</a> · <a href="#transfer">独立迁移</a> · <a href="#downloads">下载</a></nav><section id="contract"><h2>契约</h2><p>语料是1..32个不同的非空词串及1..1000的正整数频数。每个词串最多64个Unicode代码点；频数加权总长度最多10000。拒绝空白与代理代码点，不偷偷归一化或删除。词串独立，不跨边界统计；这不是整句预分词器。没有Unicode归一化、特殊token协议、聊天模板或字节回退。</p><p>训练按词频加权统计相邻token对。选择最高频对；平局按Python元组的Unicode代码点字符串顺序。每轮重算频数，左至右非重叠合并。初始ID按唯一字符排序；新合并字符串取下一个ID，若同形字符串已存在则复用原ID，不覆盖它。整数预算0..32次，或无相邻对时提前停止。返回不可变元组规则/词表及独立检查trace。</p><p>编码按已学顺序使用冻结规则，不从新输入学习。只接受1..256代码点的一个词串，未知字符明确报错。解码拼接词表字符串；要求1..256个严格整数ID，解码后不超过256字符。空输入拒绝。ID只在这份词表有意义，不是跨模型语义编号。任意合法ID序列解码后再编码，不保证恢复原ID分段。这些限制是教学契约，不是所有BPE的通用要求。</p></section><section id="worked"><h2>完整示范语料与推导</h2><p>W={&quot;abab&quot;:2,&quot;abac&quot;:1}，字母表a,b,c的ID为0,1,2。</p><p>初始相邻对：(a,b)=5、(b,a)=3、(a,c)=1。abab中ab出现两次，每次乘词频2，abac再贡献一次。先合并(a,b)→ab，ID 3。</p><p>分段变为abab→[ab,ab]、abac→[ab,a,c]。重新计数：(ab,ab)=2、(ab,a)=1、(a,c)=1。第二次合并(ab,ab)→abab，ID 4。最终词表[a,b,c,ab,abab]。</p><p>冻结编码：abab→[4]；abac→[3,0,2]；未在训练中出现的新组合ababc→[4,2]。解码还原原词串。ababc的5个字符变为2个教学token，不能据此估计真实API费用或证明理解。</p><p>计数不等于替换次数：aaa中有两个重叠(a,a)，一次左至右合并只得到[aa,a]，不是[aa,aa]。语料{&quot;ac&quot;:1,&quot;ab&quot;:1}的首轮平局选(a,b)，不依赖字典插入顺序。</p></section><section id="run"><h2>运行与检查</h2><p>Python 3.9+，仅标准库。先审阅core.py，再解压ZIP进入bpe-tokenizer：</p><pre><code>python3 -B demo.py
+python3 -B -m unittest -v</code></pre><p>无需安装依赖、账号、网络、GPU、权重或API Key。网页不执行Python；demo只在内存计算并打印JSON，不写入分词器文件。核对trace、vocabulary、encoded、roundtrips和frozen_tokenizer_unchanged=true。测试检查算法契约，不是模型性能或学习者掌握率。</p><p>在自己的副本把demo中的合并预算改为0、1、2，记录差异；跑测试前还原。分词器训练学习符号规则，不是神经语言模型权重训练。不能把本课ID直接送入不相干的模型。</p></section><section id="transfer"><h2>独立迁移</h2><p>T={&quot;猫猫狗&quot;:2,&quot;猫狗&quot;:1}，预算2次。先填写WORKSHEET-zh.md，再打开REFERENCE-zh.md：首轮频数、两次规则、带ID词表、冻结编码/解码猫狗猫狗，以及猫鸟会怎样。解释排序为什么不是拼音，为什么新输入不改规则，为什么token少不证明语言能力好。</p></section><section id="finish"><h2>恢复与验收</h2><p>频数不一致：核对词频，并在合并前统计所有相邻对，勿拼接独立词串。ID不一致：恢复代码点排序与预算。未知字符：保留原输入和错误，不能默默删字。改变语料或归一化策略会产生不同分词器及不兼容ID，不能把它当旧输出的补丁；保留旧版本并重新测试。</p><p>验收：不看参考重建示范频数与规则；解释重叠、平局与边界；有理由完成迁移；实际跑demo与测试，记录Python版本、命令及输出；列出至少三项缺失的生产功能。通过不意味着精通、压缩质量保证或真实模型兼容。</p></section><details id="reference"><summary>独立作答后展开迁移参考</summary><pre># 迁移参考：独立作答后再读
+初始ID：狗=0（U+72D7）、猫=1（U+732B），按代码点而非拼音排序。
+首轮：(猫,猫)=2；(猫,狗)=3。选(猫,狗)，新token猫狗为ID 2。
+分段：猫猫狗→[猫,猫狗]，频数2；猫狗→[猫狗]，频数1。
+第二轮只有(猫,猫狗)=2，合并成猫猫狗，ID 3。
+词表[狗,猫,猫狗,猫猫狗]。冻结后猫狗猫狗→[2,2]并解码回原串；猫猫狗→[3]。猫鸟因鸟不在初始字母表而失败，不能删鸟或假称未知替换可逆。
+编码只用已有规则，不增加token。新语料或预算可能改变ID与边界。aaa有2个重叠相邻对，一次扫描只有1次非重叠替换。此算法学习符号，不更新神经权重；没有字节回退、预分词、归一化、特殊token及聊天模板。数量不代表厂商计费或模型理解。
+</pre></details><section id="downloads"><h2>完整源码材料包</h2><p><a href="tokenization-lab.zip" download>下载可独立运行的 Python 实验 ZIP</a></p><ul><li><a href="tokenization-core.py">core.py</a> · <a href="#source-core.py">检查源码</a></li><li><a href="tokenization-fixtures.py">fixtures.py</a> · <a href="#source-fixtures.py">检查源码</a></li><li><a href="tokenization-demo.py">demo.py</a> · <a href="#source-demo.py">检查源码</a></li><li><a href="tokenization-test_core.py">test_core.py</a> · <a href="#source-test_core.py">检查源码</a></li><li><a href="tokenization-README-zh.md">README-zh.md</a> · <a href="#source-README-zh.md">检查源码</a></li><li><a href="tokenization-README-en.md">README-en.md</a> · <a href="#source-README-en.md">检查源码</a></li><li><a href="tokenization-WORKSHEET-zh.md">WORKSHEET-zh.md</a> · <a href="#source-WORKSHEET-zh.md">检查源码</a></li><li><a href="tokenization-WORKSHEET-en.md">WORKSHEET-en.md</a> · <a href="#source-WORKSHEET-en.md">检查源码</a></li><li><a href="tokenization-REFERENCE-zh.md">REFERENCE-zh.md</a> · <a href="#source-REFERENCE-zh.md">检查源码</a></li><li><a href="tokenization-REFERENCE-en.md">REFERENCE-en.md</a> · <a href="#source-REFERENCE-en.md">检查源码</a></li><li><a href="tokenization-SOURCES.md">SOURCES.md</a> · <a href="#source-SOURCES.md">检查源码</a></li></ul><details id="source-core.py"><summary>core.py</summary><pre><code>&quot;&quot;&quot;Original bounded Unicode-character BPE lesson; not a vendor tokenizer.&quot;&quot;&quot;
+from collections import Counter
+from dataclasses import dataclass
+
+
+def integer(value, low, high):
+    if type(value) is not int or not low &lt;= value &lt;= high:
+        raise ValueError(&#x27;integer outside allowed range&#x27;)
+
+
+def word(value, maximum=256):
+    if type(value) is not str or not 1 &lt;= len(value) &lt;= maximum:
+        raise ValueError(&#x27;one nonempty bounded word string required&#x27;)
+    if any(c.isspace() or 0xD800 &lt;= ord(c) &lt;= 0xDFFF for c in value):
+        raise ValueError(&#x27;whitespace and surrogate code points are unsupported&#x27;)
+
+
+def merge_once(symbols, pair):
+    &quot;&quot;&quot;Left-to-right non-overlapping replacement, returning a new tuple.&quot;&quot;&quot;
+    result, i = [], 0
+    while i &lt; len(symbols):
+        if i + 1 &lt; len(symbols) and (symbols[i], symbols[i+1]) == pair:
+            result.append(pair[0] + pair[1]); i += 2
+        else:
+            result.append(symbols[i]); i += 1
+    return tuple(result)
+
+
+@dataclass(frozen=True)
+class Tokenizer:
+    alphabet: tuple
+    merges: tuple
+    vocabulary: tuple
+
+
+def validate(model):
+    if type(model) is not Tokenizer or type(model.alphabet) is not tuple or type(model.merges) is not tuple or type(model.vocabulary) is not tuple:
+        raise ValueError(&#x27;invalid tokenizer&#x27;)
+    if not model.alphabet or any(type(s) is not str or len(s) != 1 for s in model.alphabet):
+        raise ValueError(&#x27;invalid alphabet&#x27;)
+    for s in model.alphabet: word(s)
+    if model.alphabet != tuple(sorted(set(model.alphabet))) or len(model.merges) &gt; 32:
+        raise ValueError(&#x27;invalid alphabet order or merge count&#x27;)
+    vocab = list(model.alphabet)
+    for pair in model.merges:
+        if type(pair) is not tuple or len(pair) != 2 or any(type(s) is not str or s not in vocab for s in pair):
+            raise ValueError(&#x27;merge depends on unavailable symbols&#x27;)
+        token = &#x27;&#x27;.join(pair)
+        if len(token) &gt; 64: raise ValueError(&#x27;merged symbol too long&#x27;)
+        if token not in vocab: vocab.append(token)
+    if tuple(vocab) != model.vocabulary: raise ValueError(&#x27;invalid vocabulary IDs&#x27;)
+
+
+def train(corpus, budget=2):
+    integer(budget, 0, 32)
+    if type(corpus) is not dict or not 1 &lt;= len(corpus) &lt;= 32:
+        raise ValueError(&#x27;1..32 distinct word strings required&#x27;)
+    for text, frequency in corpus.items():
+        word(text, 64); integer(frequency, 1, 1000)
+    if sum(len(text)*frequency for text, frequency in corpus.items()) &gt; 10000:
+        raise ValueError(&#x27;weighted corpus exceeds 10000 characters&#x27;)
+    alphabet = tuple(sorted(set(&#x27;&#x27;.join(corpus))))
+    vocab, rules, trace = list(alphabet), [], []
+    pieces = {text: tuple(text) for text in sorted(corpus)}
+    for _ in range(budget):
+        counts = Counter()
+        for text, symbols in pieces.items():
+            for pair in zip(symbols, symbols[1:]): counts[pair] += corpus[text]
+        if not counts: break
+        pair = min(counts, key=lambda p: (-counts[p], p))
+        pieces = {text: merge_once(symbols, pair) for text, symbols in pieces.items()}
+        token = &#x27;&#x27;.join(pair)
+        if token not in vocab: vocab.append(token)
+        rules.append(pair)
+        trace.append({&#x27;counts&#x27;: [(a,b,counts[(a,b)]) for a,b in sorted(counts)],
+                      &#x27;selected&#x27;: pair, &#x27;pieces&#x27;: dict(pieces)})
+    model = Tokenizer(alphabet, tuple(rules), tuple(vocab))
+    validate(model)
+    return model, trace
+
+
+def encode(model, text):
+    validate(model); word(text)
+    unknown = sorted(set(text) - set(model.alphabet))
+    if unknown: raise ValueError(&#x27;unknown characters: &#x27; + repr(unknown))
+    symbols = tuple(text)
+    for pair in model.merges: symbols = merge_once(symbols, pair)
+    return tuple(model.vocabulary.index(s) for s in symbols)
+
+
+def decode(model, ids):
+    validate(model)
+    if type(ids) not in (tuple, list) or not 1 &lt;= len(ids) &lt;= 256:
+        raise ValueError(&#x27;1..256 token IDs required&#x27;)
+    for i in ids: integer(i, 0, len(model.vocabulary)-1)
+    result = &#x27;&#x27;.join(model.vocabulary[i] for i in ids)
+    if len(result) &gt; 256: raise ValueError(&#x27;decoded word exceeds 256 characters&#x27;)
+    return result
+</code></pre></details><details id="source-fixtures.py"><summary>fixtures.py</summary><pre><code>&quot;&quot;&quot;Original word-frequency fixtures, not a benchmark or natural corpus.&quot;&quot;&quot;
+WORKED = {&#x27;abab&#x27;: 2, &#x27;abac&#x27;: 1}
+TRANSFER = {&#x27;猫猫狗&#x27;: 2, &#x27;猫狗&#x27;: 1}
+</code></pre></details><details id="source-demo.py"><summary>demo.py</summary><pre><code>import json
+from core import train, encode, decode
+from fixtures import WORKED
+model, trace = train(WORKED, 2)
+before = repr(model)
+encoded = {s: list(encode(model, s)) for s in (&#x27;abab&#x27;,&#x27;abac&#x27;,&#x27;ababc&#x27;)}
+print(json.dumps({&#x27;corpus&#x27;: WORKED, &#x27;vocabulary&#x27;: model.vocabulary, &#x27;merges&#x27;: model.merges,
+ &#x27;trace&#x27;: trace, &#x27;encoded&#x27;: encoded, &#x27;roundtrips&#x27;: {s: decode(model, ids) for s,ids in encoded.items()},
+ &#x27;frozen_tokenizer_unchanged&#x27;: before == repr(model)}, ensure_ascii=False, indent=2))
+</code></pre></details><details id="source-test_core.py"><summary>test_core.py</summary><pre><code>import copy
+import unittest
+from core import train, encode, decode, merge_once, Tokenizer
+from fixtures import WORKED, TRANSFER
+class BPE(unittest.TestCase):
+ def test_worked(self):
+  m,t=train(WORKED); self.assertEqual(t[0][&#x27;counts&#x27;],[(&#x27;a&#x27;,&#x27;b&#x27;,5),(&#x27;a&#x27;,&#x27;c&#x27;,1),(&#x27;b&#x27;,&#x27;a&#x27;,3)]); self.assertEqual(m.merges,((&#x27;a&#x27;,&#x27;b&#x27;),(&#x27;ab&#x27;,&#x27;ab&#x27;))); self.assertEqual(m.vocabulary,(&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;,&#x27;ab&#x27;,&#x27;abab&#x27;)); self.assertEqual(encode(m,&#x27;abac&#x27;),(3,0,2)); self.assertEqual(encode(m,&#x27;ababc&#x27;),(4,2))
+ def test_transfer(self):
+  m,t=train(TRANSFER); self.assertEqual(m.alphabet,(&#x27;狗&#x27;,&#x27;猫&#x27;)); self.assertEqual(m.merges,((&#x27;猫&#x27;,&#x27;狗&#x27;),(&#x27;猫&#x27;,&#x27;猫狗&#x27;))); self.assertEqual(encode(m,&#x27;猫狗猫狗&#x27;),(2,2)); self.assertEqual(encode(m,&#x27;猫猫狗&#x27;),(3,))
+ def test_tie(self):
+  m,_=train({&#x27;ac&#x27;:1,&#x27;ab&#x27;:1},1); self.assertEqual(m.merges,((&#x27;a&#x27;,&#x27;b&#x27;),))
+ def test_overlap(self):
+  m,t=train({&#x27;aaa&#x27;:1},1); self.assertEqual(t[0][&#x27;counts&#x27;],[(&#x27;a&#x27;,&#x27;a&#x27;,2)]); self.assertEqual(t[0][&#x27;pieces&#x27;][&#x27;aaa&#x27;],(&#x27;aa&#x27;,&#x27;a&#x27;)); self.assertEqual(merge_once(tuple(&#x27;aaaa&#x27;),(&#x27;a&#x27;,&#x27;a&#x27;)),(&#x27;aa&#x27;,&#x27;aa&#x27;))
+ def test_boundaries_and_early_stop(self):
+  m,t=train({&#x27;a&#x27;:2,&#x27;b&#x27;:1},32); self.assertEqual(t,[]); self.assertEqual(m.merges,())
+ def test_immutable_and_deterministic(self):
+  c=copy.deepcopy(WORKED);m,t=train(c);before=repr(m);encode(m,&#x27;ababc&#x27;);self.assertEqual(before,repr(m));self.assertEqual(c,WORKED);self.assertEqual((m,t),train(dict(reversed(list(c.items())))))
+ def test_roundtrip(self):
+  import itertools
+  for budget in range(3):
+   m,_=train(WORKED,budget)
+   for n in range(1,5):
+    for chars in itertools.product(&#x27;abc&#x27;,repeat=n):
+     text=&#x27;&#x27;.join(chars);self.assertEqual(decode(m,encode(m,text)),text)
+ def test_unknown_and_whitespace(self):
+  m,_=train(WORKED)
+  for s in (&#x27;&#x27;,&#x27;a b&#x27;,&#x27;ab\n&#x27;,&#x27;x&#x27;,&#x27;a\ud800&#x27;):
+   with self.assertRaises(ValueError):encode(m,s)
+ def test_bad_corpus(self):
+  for c in ({},{&#x27;&#x27;:1},{&#x27;a b&#x27;:1},{&#x27;a&#x27;:True},{&#x27;a&#x27;:0},{&#x27;a&#x27;:1.5},{&#x27;a&#x27;*65:1},{&#x27;a&#x27;*64:1000},[],{&#x27;a&#x27;:1001}):
+   with self.assertRaises(ValueError):train(c)
+ def test_bad_budget(self):
+  for b in (True,-1,33,1.1,&#x27;2&#x27;):
+   with self.assertRaises(ValueError):train(WORKED,b)
+ def test_bad_ids(self):
+  m,_=train(WORKED)
+  for ids in ([],[True],[-1],[5],[0.0],&#x27;0&#x27;,[4]*257):
+   with self.assertRaises(ValueError):decode(m,ids)
+ def test_bad_model_and_lengths(self):
+  m,_=train(WORKED)
+  for bad in (None,Tokenizer((&#x27;a&#x27;,),((&#x27;a&#x27;,&#x27;b&#x27;),),(&#x27;a&#x27;,&#x27;ab&#x27;)),Tokenizer((&#x27;a&#x27;,),(),(&#x27;x&#x27;,))):
+   with self.assertRaises(ValueError):encode(bad,&#x27;a&#x27;)
+  with self.assertRaises(ValueError):encode(m,&#x27;a&#x27;*257)
+  with self.assertRaises(ValueError):decode(m,[4]*65)
+if __name__==&#x27;__main__&#x27;: unittest.main()
+</code></pre></details><details id="source-README-zh.md"><summary>README-zh.md</summary><pre><code># 从字符到 token ID：微型 BPE
+
+原创可运行的 Unicode 字符级 BPE 教学简化，不是厂商分词器、字节级 BPE 或语言模型。前置：列表、字典、循环与整数运算。目标：统计相邻对、学两条规则、冻结分词器、编码解码新词串并说明失败边界。未进行学习者试学或完成时间测量。
+
+## 契约
+
+语料是1..32个不同的非空词串及1..1000的正整数频数。每个词串最多64个Unicode代码点；频数加权总长度最多10000。拒绝空白与代理代码点，不偷偷归一化或删除。词串独立，不跨边界统计；这不是整句预分词器。没有Unicode归一化、特殊token协议、聊天模板或字节回退。
+
+训练按词频加权统计相邻token对。选择最高频对；平局按Python元组的Unicode代码点字符串顺序。每轮重算频数，左至右非重叠合并。初始ID按唯一字符排序；新合并字符串取下一个ID，若同形字符串已存在则复用原ID，不覆盖它。整数预算0..32次，或无相邻对时提前停止。返回不可变元组规则/词表及独立检查trace。
+
+编码按已学顺序使用冻结规则，不从新输入学习。只接受1..256代码点的一个词串，未知字符明确报错。解码拼接词表字符串；要求1..256个严格整数ID，解码后不超过256字符。空输入拒绝。ID只在这份词表有意义，不是跨模型语义编号。任意合法ID序列解码后再编码，不保证恢复原ID分段。这些限制是教学契约，不是所有BPE的通用要求。
+
+## 完整示范语料与推导
+
+W={&quot;abab&quot;:2,&quot;abac&quot;:1}，字母表a,b,c的ID为0,1,2。
+
+初始相邻对：(a,b)=5、(b,a)=3、(a,c)=1。abab中ab出现两次，每次乘词频2，abac再贡献一次。先合并(a,b)→ab，ID 3。
+
+分段变为abab→[ab,ab]、abac→[ab,a,c]。重新计数：(ab,ab)=2、(ab,a)=1、(a,c)=1。第二次合并(ab,ab)→abab，ID 4。最终词表[a,b,c,ab,abab]。
+
+冻结编码：abab→[4]；abac→[3,0,2]；未在训练中出现的新组合ababc→[4,2]。解码还原原词串。ababc的5个字符变为2个教学token，不能据此估计真实API费用或证明理解。
+
+计数不等于替换次数：aaa中有两个重叠(a,a)，一次左至右合并只得到[aa,a]，不是[aa,aa]。语料{&quot;ac&quot;:1,&quot;ab&quot;:1}的首轮平局选(a,b)，不依赖字典插入顺序。
+
+## 运行与检查
+
+Python 3.9+，仅标准库。先审阅core.py，再解压ZIP进入bpe-tokenizer：
+
+    python3 -B demo.py
+    python3 -B -m unittest -v
+
+无需安装依赖、账号、网络、GPU、权重或API Key。网页不执行Python；demo只在内存计算并打印JSON，不写入分词器文件。核对trace、vocabulary、encoded、roundtrips和frozen_tokenizer_unchanged=true。测试检查算法契约，不是模型性能或学习者掌握率。
+
+在自己的副本把demo中的合并预算改为0、1、2，记录差异；跑测试前还原。分词器训练学习符号规则，不是神经语言模型权重训练。不能把本课ID直接送入不相干的模型。
+
+## 独立迁移
+
+T={&quot;猫猫狗&quot;:2,&quot;猫狗&quot;:1}，预算2次。先填写WORKSHEET-zh.md，再打开REFERENCE-zh.md：首轮频数、两次规则、带ID词表、冻结编码/解码猫狗猫狗，以及猫鸟会怎样。解释排序为什么不是拼音，为什么新输入不改规则，为什么token少不证明语言能力好。
+
+## 恢复与验收
+
+频数不一致：核对词频，并在合并前统计所有相邻对，勿拼接独立词串。ID不一致：恢复代码点排序与预算。未知字符：保留原输入和错误，不能默默删字。改变语料或归一化策略会产生不同分词器及不兼容ID，不能把它当旧输出的补丁；保留旧版本并重新测试。
+
+验收：不看参考重建示范频数与规则；解释重叠、平局与边界；有理由完成迁移；实际跑demo与测试，记录Python版本、命令及输出；列出至少三项缺失的生产功能。通过不意味着精通、压缩质量保证或真实模型兼容。
+</code></pre></details><details id="source-README-en.md"><summary>README-en.md</summary><pre><code># From characters to token IDs: a tiny BPE
+
+Original, runnable Unicode-character BPE lesson, not a vendor tokenizer, byte-level BPE or language model. Prerequisites: lists, dictionaries, loops and integer arithmetic. Outcome: count pairs, learn two rules, freeze a tokenizer, encode/decode a new word and explain failure boundaries. No learner trial or completion-time claim.
+
+## Contract
+
+A corpus is 1..32 distinct nonempty word strings with positive integer frequencies 1..1000. Each word has at most 64 Unicode code points; the frequency-weighted total is at most 10000. Whitespace and surrogate code points are rejected, not normalized or discarded. Words are independent: no pair crosses a boundary. This is not a sentence pre-tokenizer. There is no Unicode normalization, special-token protocol, chat template or byte fallback.
+
+Training counts adjacent token pairs weighted by word frequency. Choose maximum count; ties use Python tuple ordering of Unicode code-point strings. Recount after every merge. Replace left-to-right without overlap. Initial IDs follow sorted unique characters; each new merged string gets the next ID. If a merged string already exists, reuse its ID, without overwriting it. Stop after the integer budget 0..32 or when no pairs remain. Training returns immutable tuple-based rules/vocabulary plus a separate inspection trace.
+
+Encoding uses frozen rules in their learned order; it does not learn from the new input. One word of 1..256 code points is supported; unknown characters fail explicitly. Decoding joins vocabulary strings; 1..256 exact integer IDs are required and decoded length is capped at 256. Empty input is rejected. IDs are local to this tokenizer, not semantic labels shared by models. A decoded arbitrary valid ID sequence need not be the canonical encoding of that word. These are teaching bounds, not general BPE requirements.
+
+## Worked corpus and full trace
+
+W = {&quot;abab&quot;:2, &quot;abac&quot;:1}. Alphabet a,b,c receives IDs 0,1,2.
+
+Initial pairs: (a,b)=5, (b,a)=3, (a,c)=1. The two occurrences of ab inside abab each count twice because the word frequency is 2; abac contributes one more. Merge(a,b)→ ab, ID 3.
+
+Pieces: abab→[ab,ab], abac→[ab,a,c]. New pairs: (ab,ab)=2, (ab,a)=1, (a,c)=1. Merge(ab,ab)→ abab, ID 4. Vocabulary is [a,b,c,ab,abab].
+
+Frozen encoding: abab→[4]; abac→[3,0,2]; new combination ababc→[4,2]. Decoding reconstructs each exact word. The 5 characters of ababc become 2 toy tokens; neither count estimates a real API bill or proves understanding.
+
+Pair counting and replacement differ: aaa contains two overlapping(a,a) pairs, but one left-to-right merge produces[aa,a], not[aa,aa]. With corpus {&quot;ac&quot;:1,&quot;ab&quot;:1}, the tied first choice is(a,b), regardless of dictionary insertion order.
+
+## Run and inspect
+
+Python 3.9+, standard library only. Inspect core.py first, extract the ZIP, enter bpe-tokenizer, then run:
+
+    python3 -B demo.py
+    python3 -B -m unittest -v
+
+No package installation, account, network, GPU, weights or API key. The page does not execute Python. The demo computes in memory and prints JSON; it does not write a tokenizer file. Check trace, vocabulary, encoded, roundtrips and frozen_tokenizer_unchanged=true. Tests are algorithm contracts, not model performance or learner mastery.
+
+For manual zero/one/two-merge comparisons, change the demo train budget to 0,1,2 in your own copy and record outputs. Restore the original before running tests. Tokenizer training learns symbol rules; it is not neural language-model weight training. Do not feed these IDs into an unrelated model.
+
+## Independent transfer
+
+Use T={&quot;猫猫狗&quot;:2,&quot;猫狗&quot;:1}, budget 2. Before opening REFERENCE-en.md, fill WORKSHEET-en.md: first pair counts, two selected rules, vocabulary with IDs, frozen encoding/decoding of 猫狗猫狗, and what happens for 猫鸟. Explain why ordering uses code points rather than pronunciation; why new input does not change rules; why fewer tokens is not a language-quality result.
+
+## Recover and accept
+
+If counts differ, check word frequencies and count every adjacent pair before merging; do not join separate words. If IDs differ, restore alphabetical code-point order and merge budget. Unknown characters: retain the failing input and error; do not silently delete a character. A new corpus or normalization policy means a different tokenizer and incompatible IDs, not a patch to existing output. Preserve the old artifact and rerun tests.
+
+Acceptance: independently recover the worked counts and rules, explain overlap/ties/boundaries, complete the transfer with reasons, run demo/tests and record Python version, commands and outputs. State at least three missing production features. No statement of mastery, compression quality or real-model compatibility follows from passing.
+</code></pre></details><details id="source-WORKSHEET-zh.md"><summary>WORKSHEET-zh.md</summary><pre><code># 独立练习单
+语料/版本：____；Python版本与命令：____
+T={&quot;猫猫狗&quot;:2,&quot;猫狗&quot;:1}，合并预算2。
+按代码点排序的初始字母表与ID：____
+第1轮频数/选中对/新分段：____
+第2轮频数/选中对/新分段：____
+最终词表ID：____
+冻结编码与解码猫狗猫狗：____
+猫鸟的未知字符结果与恢复：____
+编码不修改分词器的证据：____
+aaa的相邻对数为何不同于替换次数：____
+为何不是神经训练、字节BPE或API计费分词：____
+实际输出与差异（未运行不编造）：____
+</code></pre></details><details id="source-WORKSHEET-en.md"><summary>WORKSHEET-en.md</summary><pre><code># Independent worksheet
+Corpus/revision: ____; Python version and commands: ____
+T = {&quot;猫猫狗&quot;:2,&quot;猫狗&quot;:1}, merge budget 2.
+Initial alphabet in code-point order and IDs: ____
+Round 1 pair counts / chosen pair / new pieces: ____
+Round 2 pair counts / chosen pair / new pieces: ____
+Final vocabulary IDs: ____
+Frozen encode and decode of 猫狗猫狗: ____
+Unknown-character outcome for 猫鸟 and recovery: ____
+Evidence that encoding leaves the tokenizer unchanged: ____
+Why aaa pair count differs from replacements: ____
+Why this is not neural training, byte BPE or API token counting: ____
+Observed outputs and discrepancies (do not invent a run): ____
+</code></pre></details><details id="source-REFERENCE-zh.md"><summary>REFERENCE-zh.md</summary><pre><code># 迁移参考：独立作答后再读
+初始ID：狗=0（U+72D7）、猫=1（U+732B），按代码点而非拼音排序。
+首轮：(猫,猫)=2；(猫,狗)=3。选(猫,狗)，新token猫狗为ID 2。
+分段：猫猫狗→[猫,猫狗]，频数2；猫狗→[猫狗]，频数1。
+第二轮只有(猫,猫狗)=2，合并成猫猫狗，ID 3。
+词表[狗,猫,猫狗,猫猫狗]。冻结后猫狗猫狗→[2,2]并解码回原串；猫猫狗→[3]。猫鸟因鸟不在初始字母表而失败，不能删鸟或假称未知替换可逆。
+编码只用已有规则，不增加token。新语料或预算可能改变ID与边界。aaa有2个重叠相邻对，一次扫描只有1次非重叠替换。此算法学习符号，不更新神经权重；没有字节回退、预分词、归一化、特殊token及聊天模板。数量不代表厂商计费或模型理解。
+</code></pre></details><details id="source-REFERENCE-en.md"><summary>REFERENCE-en.md</summary><pre><code># Transfer reference — use after an independent attempt
+Base IDs: 狗=0 (U+72D7), 猫=1 (U+732B), code-point order, not pronunciation.
+First counts: (猫,猫)=2; (猫,狗)=3. Select (猫,狗), token 猫狗 ID 2.
+Pieces: 猫猫狗→[猫,猫狗] with frequency 2; 猫狗→[猫狗] with frequency 1.
+Second count: (猫,猫狗)=2. Select it; 猫猫狗 becomes ID 3.
+Vocabulary: [狗,猫,猫狗,猫猫狗]. Frozen 猫狗猫狗→[2,2] and back to the same word; 猫猫狗→[3]. 猫鸟 fails because 鸟 was absent from the base alphabet. Do not remove it or claim reversible unknown replacement.
+Encoding uses existing rules and does not add tokens. A new corpus/rule budget can change IDs and token boundaries. aaa has 2 overlapping pairs but only 1 non-overlapping replacement in one scan. This algorithm learns symbols, not neural weights; no byte fallback, pre-tokenization, normalization, special tokens or chat templates. Its token count says nothing about a vendor&#x27;s bill or model understanding.
+</code></pre></details><details id="source-SOURCES.md"><summary>SOURCES.md</summary><pre><code># Mechanism sources / 机制来源
+Editorial check / 编辑核对：2026-11-02。
+
+- https://huggingface.co/learn/llm-course/en/chapter6/5 — official BPE lesson, read for weighted pair merging and the character/byte distinction. Publication/update date unknown. 官方课程，用于相邻对合并与字符/字节区别；发布时间、更新时间未知。
+- https://arxiv.org/abs/1508.07909 — Sennrich, Haddow and Birch, Neural Machine Translation of Rare Words with Subword Units. Abstract/history read, not a full-paper reproduction. First arXiv submission 2015-08-31 16:37:31 UTC; v 5 dated 2016-06-10; ACL 2016 is a venue/year, not the first submission date. 首稿日期与会议年份分开，不声称这是压缩BPE的首次发明。
+
+All abab/abac and Chinese fixtures, implementation, trace, tests and exercises are original teaching materials. No copied Hugging Face example corpus/code, paper benchmark or BLEU result. Original sources support the mechanism, not this lab&#x27;s compatibility, learning effectiveness or real model performance. No vendor tokenizer was downloaded or run.
+</code></pre></details></section><footer><p>机制来源核对于2026-11-02；语料与实现原创，未运行厂商模型。 <a href="https://huggingface.co/learn/llm-course/en/chapter6/5">Hugging Face · BPE</a> · <a href="https://arxiv.org/abs/1508.07909">Sennrich et al. · Subword units</a></p><a href="attention-lab.html">下一步：计算 attention →</a></footer></main></body></html>

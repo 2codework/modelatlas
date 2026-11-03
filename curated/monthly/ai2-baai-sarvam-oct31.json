@@ -1,0 +1,571 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Ai2、BAAI、Sarvam AI 四个月共12个机构月份单元有限核查；仅补充可直接核实的精确权重公告，不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2026-08"
+  ],
+  "coverage": {
+    "searched_providers": [
+      "Ai2",
+      "BAAI",
+      "Sarvam AI"
+    ],
+    "searched_cells": 12,
+    "ledger": [
+      {
+        "provider": "Ai2",
+        "month": "2025-05",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.allenai.org/blog 2025 July June May model release OLMo"
+        ],
+        "exhaustive": false,
+        "conclusion": "OLMo 2 1B indexed official release notes state May 1, but direct page renders Introduction; held pending direct date verification. Atlantes April 28 and DataDecide April 15 are outside scope despite May newsletter. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Ai2",
+        "month": "2025-06",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.allenai.org/blog \"June\" \"2025\" release"
+        ],
+        "exhaustive": false,
+        "conclusion": "June newsletter highlights RewardBench 2 evaluation, not a new exact weight event. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Ai2",
+        "month": "2025-07",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.allenai.org/blog \"July\" \"2025\" model release"
+        ],
+        "exhaustive": false,
+        "conclusion": "July newsletter highlights SciArena, IFBench and Genesys. FlexOlmo is an unresolved search lead; no exact weight date/license admitted. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Ai2",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.allenai.org \"August\" \"2026\" model release"
+        ],
+        "exhaustive": false,
+        "conclusion": "August newsletter covers partnership, existing models, Asta and Playground updates; no exact new weights event established. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "BAAI",
+        "month": "2025-05",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.baai.ac.cn \"2025-05\" 模型 开源"
+        ],
+        "exhaustive": false,
+        "conclusion": "No qualifying event established in bounded queries. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "BAAI",
+        "month": "2025-06",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.baai.ac.cn 2025 6 7 模型 发布 悟界"
+        ],
+        "exhaustive": false,
+        "conclusion": "Exact RoboBrain2.0-7B weights statement June 6. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "BAAI",
+        "month": "2025-07",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.baai.ac.cn \"2025-07\" 模型 开源"
+        ],
+        "exhaustive": false,
+        "conclusion": "Exact RoboBrain2.0-32B July 3 and 3B July 23, not the July 2 report date. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "BAAI",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.baai.ac.cn \"2026年8月\" 模型"
+        ],
+        "exhaustive": false,
+        "conclusion": "Index surfaces FlagEval-Robo August 21 and AREX August 10; no verified exact model checkpoint/weight date in this pass. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Sarvam AI",
+        "month": "2025-05",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.sarvam.ai/blogs 2025 May June July sarvam m"
+        ],
+        "exhaustive": false,
+        "conclusion": "Sarvam-M download blog May 23; May 20 ecosystem announcement does not name exact checkpoint. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Sarvam AI",
+        "month": "2025-06",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.sarvam.ai \"Translate\" \"June\" \"2025\""
+        ],
+        "exhaustive": false,
+        "conclusion": "Translate download blog June 7 distinguished from June 1 API changelog. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Sarvam AI",
+        "month": "2025-07",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.sarvam.ai \"July\" \"2025\" model"
+        ],
+        "exhaustive": false,
+        "conclusion": "No qualifying event established in bounded queries. Search is bounded, not evidence of no releases."
+      },
+      {
+        "provider": "Sarvam AI",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.sarvam.ai \"August\" \"2026\" model release"
+        ],
+        "exhaustive": false,
+        "conclusion": "Saaras v4 API documented August 18; current blog September 25 conflicts with staging search August 24. No public weight entry established, excluded from weight package. Search is bounded, not evidence of no releases."
+      }
+    ]
+  },
+  "date_policy": "有日期的官方权重可取得声明与API、论文v1、首次上传分列；不从月份后缀或文件更新时间推断。",
+  "license_policy": "仅核对精确模型卡当前许可声明；未复核完整许可文本，不追溯为初始发布许可，不自动覆盖代码、数据、基座及第三方组件。",
+  "events": [
+    {
+      "id": "sarvamai-sarvam-m-2025-05-23",
+      "name": "Sarvam-M",
+      "vendor": "Sarvam AI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "sarvamai/sarvam-m"
+      ],
+      "announcement_date": "2025-05-23",
+      "weights_release_date": "2025-05-23",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/sarvamai/sarvam-m",
+          "applies_to": "仅对应 sarvamai/sarvam-m 权重的当前模型卡声明；不自动覆盖代码、数据、基座和依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前声明；初始发布时许可未核验，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/sarvamai/sarvam-m"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.sarvam.ai/blogs/sarvam-m",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-05-23",
+          "locator": "May 23, 2025 and opening Download the model link",
+          "summary_zh": "官方明确链接本条检查点并声明权重可取得；不是首次文件上传记录。"
+        },
+        {
+          "url": "https://huggingface.co/sarvamai/sarvam-m",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型卡身份与当前许可声明；未下载、未执行。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；代码发布日期和代码许可未单独核实。",
+        "许可为2026-10-31当前模型卡声明，不倒填初始发布许可；未复核完整许可文本。",
+        "5月23日是本文技术博客的权重可取得声明，不宣称最早发布；5月20日生态公告未明确列出本检查点。"
+      ]
+    },
+    {
+      "id": "baai-robobrain2.0-7b-2025-06-06",
+      "name": "RoboBrain 2.0 7B",
+      "vendor": "BAAI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "BAAI/RoboBrain2.0-7B"
+      ],
+      "announcement_date": "2025-06-06",
+      "weights_release_date": "2025-06-06",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-07-02",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-7B",
+          "applies_to": "仅对应 BAAI/RoboBrain2.0-7B 权重的当前模型卡声明；不自动覆盖代码、数据、基座和依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前声明；初始发布时许可未核验，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/BAAI/RoboBrain2.0-7B"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-7B",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-06",
+          "locator": "Exact model card News: 2025-06-06 checkpoint release entry",
+          "summary_zh": "官方明确链接本条检查点并声明权重可取得；不是首次文件上传记录。"
+        },
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-7B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型卡身份与当前许可声明；未下载、未执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.02029",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "Submitted on 2 Jul 2025 (v1)",
+          "summary_zh": "7B/32B家族技术报告v1日期；不等于检查点权重公告日期。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；代码发布日期和代码许可未单独核实。",
+        "许可为2026-10-31当前模型卡声明，不倒填初始发布许可；未复核完整许可文本。",
+        "精确模型卡公开可读，但文件访问存在同意分享账号信息及不得伤害人类受试者的条件；Apache标签不代表无访问门槛。",
+        "RoboBrain2.0仓库现重定向至2.5；引用其历史News，不把2.5当前版本当本条型号。",
+        "输出为文本形式的计划和空间信息；不意味着已验证实体机器人控制或安全。"
+      ],
+      "access_note": "官方权重入口需登录并同意分享 Hugging Face 信息及使用条件；本轮未接受条款、未下载。"
+    },
+    {
+      "id": "baai-robobrain2.0-32b-2025-07-03",
+      "name": "RoboBrain 2.0 32B",
+      "vendor": "BAAI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "BAAI/RoboBrain2.0-32B"
+      ],
+      "announcement_date": "2025-07-03",
+      "weights_release_date": "2025-07-03",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-07-02",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-32B",
+          "applies_to": "仅对应 BAAI/RoboBrain2.0-32B 权重的当前模型卡声明；不自动覆盖代码、数据、基座和依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前声明；初始发布时许可未核验，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/BAAI/RoboBrain2.0-32B"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-32B",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-03",
+          "locator": "Exact model card News: 2025-07-03 checkpoint release entry",
+          "summary_zh": "官方明确链接本条检查点并声明权重可取得；不是首次文件上传记录。"
+        },
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-32B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型卡身份与当前许可声明；未下载、未执行。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.02029",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "Submitted on 2 Jul 2025 (v1)",
+          "summary_zh": "7B/32B家族技术报告v1日期；不等于检查点权重公告日期。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；代码发布日期和代码许可未单独核实。",
+        "许可为2026-10-31当前模型卡声明，不倒填初始发布许可；未复核完整许可文本。",
+        "精确模型卡公开可读，但文件访问存在同意分享账号信息及不得伤害人类受试者的条件；Apache标签不代表无访问门槛。",
+        "RoboBrain2.0仓库现重定向至2.5；引用其历史News，不把2.5当前版本当本条型号。",
+        "输出为文本形式的计划和空间信息；不意味着已验证实体机器人控制或安全。"
+      ],
+      "access_note": "官方权重入口需登录并同意分享 Hugging Face 信息及使用条件；本轮未接受条款、未下载。"
+    },
+    {
+      "id": "baai-robobrain2.0-3b-2025-07-23",
+      "name": "RoboBrain 2.0 3B",
+      "vendor": "BAAI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "BAAI/RoboBrain2.0-3B"
+      ],
+      "announcement_date": "2025-07-23",
+      "weights_release_date": "2025-07-23",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-3B",
+          "applies_to": "仅对应 BAAI/RoboBrain2.0-3B 权重的当前模型卡声明；不自动覆盖代码、数据、基座和依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前声明；初始发布时许可未核验，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/BAAI/RoboBrain2.0-3B"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-3B",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-23",
+          "locator": "Exact model card News: 2025-07-23 checkpoint release entry",
+          "summary_zh": "官方明确链接本条检查点并声明权重可取得；不是首次文件上传记录。"
+        },
+        {
+          "url": "https://huggingface.co/BAAI/RoboBrain2.0-3B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型卡身份与当前许可声明；未下载、未执行。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；代码发布日期和代码许可未单独核实。",
+        "许可为2026-10-31当前模型卡声明，不倒填初始发布许可；未复核完整许可文本。",
+        "精确模型卡公开可读，但文件访问存在同意分享账号信息及不得伤害人类受试者的条件；Apache标签不代表无访问门槛。",
+        "RoboBrain2.0仓库现重定向至2.5；引用其历史News，不把2.5当前版本当本条型号。",
+        "输出为文本形式的计划和空间信息；不意味着已验证实体机器人控制或安全。",
+        "技术报告摘要明确列7B/32B，故不将该家族论文日期套用到3B精确检查点。"
+      ],
+      "access_note": "官方权重入口需登录并同意分享 Hugging Face 信息及使用条件；本轮未接受条款、未下载。"
+    },
+    {
+      "id": "sarvamai-sarvam-translate-2025-06-07",
+      "name": "Sarvam-Translate",
+      "vendor": "Sarvam AI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "sarvamai/sarvam-translate"
+      ],
+      "announcement_date": "2025-06-07",
+      "weights_release_date": "2025-06-07",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": "2025-06-01",
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "GPL-3.0",
+          "url": "https://huggingface.co/sarvamai/sarvam-translate",
+          "applies_to": "仅对应 sarvamai/sarvam-translate 权重的当前模型卡声明；不自动覆盖代码、数据、基座和依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前声明；初始发布时许可未核验，未复核完整许可文本。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/sarvamai/sarvam-translate"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.sarvam.ai/blogs/sarvam-translate",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-07",
+          "locator": "Jun 7, 2025; opening download link and releasing open-weights statement",
+          "summary_zh": "官方明确链接本条检查点并声明权重可取得；不是首次文件上传记录。"
+        },
+        {
+          "url": "https://huggingface.co/sarvamai/sarvam-translate",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确模型卡身份与当前许可声明；未下载、未执行。"
+        },
+        {
+          "url": "https://docs.sarvam.ai/changelog/2025/6/1",
+          "supports": [
+            "api_release_date"
+          ],
+          "date_text": "June 1, 2025",
+          "summary_zh": "API更新日志称发布sarvam-translate:v1并描述为开放权重；与6月7日精确下载博客并列，不消除来源日期差异。"
+        }
+      ],
+      "notes": [
+        "首次上传时间未知；代码发布日期和代码许可未单独核实。",
+        "许可为2026-10-31当前模型卡声明，不倒填初始发布许可；未复核完整许可文本。",
+        "日期口径并列：API更新日志6月1日称发布sarvam-translate:v1并描述开放权重；精确权重下载博客为6月7日。选后者记录本次可取得声明，不声称最早开放日；首次上传仍未知。",
+        "只确认文本翻译：检查点支持英语与22种印度语言互译；印度语言之间需经英语中转，不据image-text-to-text自动标签宣称图像输入。",
+        "GPL-3.0是本模型卡当前声明；基于Gemma3-4B-IT，未据此排除基座及其他适用条件。"
+      ],
+      "access_note": "当前模型卡标 GPL-3.0，模型基于 Gemma 3；基座和其他适用条款未完成法律核验。"
+    }
+  ]
+}

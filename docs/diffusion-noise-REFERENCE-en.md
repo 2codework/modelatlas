@@ -1,0 +1,3 @@
+# Transfer T reference — attempt first
+sqrt(a)=0.6; sqrt(1-a)=0.8. Signal=[-0.3,0.6]; noise=[0.8,-0.2]; xt=[0.5,0.4]. Oracle=[-0.5,1]; reconstruction=[-0.1,0.8]; error=[0.4,-0.2]; reconstruction MSE=0.1. Noise-estimate MSE=0.05625; multiply by (1-a)/a = 0.64/0.36 to obtain 0.1.
+As a decreases, the factor sqrt((1-a)/a) grows, holding the estimation error fixed. It is not evidence that a real model has constant error across noise levels. No learned parameters, iterative reverse sampler or generated image exists here. Image/video quality and temporal consistency are not tested. Reference inspection is not proof of mastery.

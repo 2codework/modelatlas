@@ -1,0 +1,1 @@
+globalThis.ModelAtlasDiffusionFixtures={"worked":{"alpha_bar":0.64,"x0":[1,-1],"epsilon":[0.5,-0.5],"estimate":[0.3,-0.3]},"high":{"alpha_bar":0.04,"x0":[1,-1],"epsilon":[0.5,-0.5],"estimate":[0.3,-0.3]},"transfer":{"alpha_bar":0.36,"x0":[-0.5,1],"epsilon":[1,-0.25],"estimate":[0.7,-0.1]}};

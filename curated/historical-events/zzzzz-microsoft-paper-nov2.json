@@ -1,0 +1,260 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "Six pinned historical paper events for Skala (v1/v2/v3), Phi-4-mini-flash-reasoning (v1/v2) and Phi-Ground (v1). Not six models, announcements, weights releases, current license determinations or complete provider history.",
+  "events": [
+    {
+      "id": "microsoft-skala-paper-submission-2025-06-17",
+      "kind": "paper",
+      "title": {
+        "zh": "Microsoft Skala 论文 首次 arXiv 提交",
+        "en": "Microsoft Skala paper first arXiv submission"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2506.14665v1",
+      "api_alias": null,
+      "date": "2025-06-17",
+      "timestamp_utc": "2025-06-17T15:56:56Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "未登记"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2506.14665v1",
+          "kind": "paper",
+          "date": "2025-06-17",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v1 于 2025-06-17 15:56:56 UTC 提交。该版本标题为 Accurate and scalable exchange-correlation with deep learning。介绍用于密度泛函理论的深度学习交换-相关泛函。",
+        "en": "arXiv records v1 on 2025-06-17 at 15:56:56 UTC. This version is titled Accurate and scalable exchange-correlation with deep learning. Introduces a deep-learning exchange-correlation functional for density functional theory."
+      },
+      "note": {
+        "zh": "这是首次 arXiv 提交，不是 6 月 18 日公告事件。科学计算模态未映射到本站现有标签，保留“未登记”，不把论文文本当作模型文本模态。本轮只核对固定版本的摘要页、提交历史与修订备注，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "This is the first arXiv submission, not the June 18 announcement. Its scientific-computing modality is not mapped to the site’s existing labels and remains unregistered; paper text is not a model text modality. This review covers pinned abstract pages, submission history and revision comments, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-06-17",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "microsoft-skala-paper-revision-2025-06-18",
+      "kind": "paper_revision",
+      "title": {
+        "zh": "Microsoft Skala 论文 v2 修订",
+        "en": "Microsoft Skala paper v2 revision"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2506.14665v2",
+      "api_alias": null,
+      "date": "2025-06-18",
+      "timestamp_utc": "2025-06-18T08:39:15Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "未登记"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2506.14665v2",
+          "kind": "paper_revision",
+          "date": "2025-06-18",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v2 于 2025-06-18 08:39:15 UTC 提交。该版本标题为 Accurate and scalable exchange-correlation with deep learning。v2 备注说明修正 Safari PDF 阅读器中图 1 与图 5 部分内容的显示。",
+        "en": "arXiv records v2 on 2025-06-18 at 08:39:15 UTC. This version is titled Accurate and scalable exchange-correlation with deep learning. The v2 comments identify a Safari PDF rendering correction for figure 1 and part of figure 5."
+      },
+      "note": {
+        "zh": "这是论文显示修正，不是新模型、权重发布或同日公告的替代记录。科学计算模态未映射到本站现有标签，保留“未登记”。本轮只核对固定版本的摘要页、提交历史与修订备注，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "This is a paper rendering correction, not a new model, weights release or substitute for the same-day announcement. Its scientific-computing modality remains unregistered in the site’s current labels. This review covers pinned abstract pages, submission history and revision comments, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-06-17",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "microsoft-skala-paper-revision-2025-06-23",
+      "kind": "paper_revision",
+      "title": {
+        "zh": "Microsoft Skala 论文 v3 修订",
+        "en": "Microsoft Skala paper v3 revision"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2506.14665v3",
+      "api_alias": null,
+      "date": "2025-06-23",
+      "timestamp_utc": "2025-06-23T17:52:42Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "未登记"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2506.14665v3",
+          "kind": "paper_revision",
+          "date": "2025-06-23",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v3 于 2025-06-23 17:52:42 UTC 提交。该版本标题为 Accurate and scalable exchange-correlation with deep learning。v3 备注说明更新作者信息并修正笔误；不把后续版本作者名单倒填本版本。",
+        "en": "arXiv records v3 on 2025-06-23 at 17:52:42 UTC. This version is titled Accurate and scalable exchange-correlation with deep learning. The v3 comments identify updated author information and a typo correction; later author lists are not backfilled into this version."
+      },
+      "note": {
+        "zh": "这是论文修订，不是新模型或权重发布；科学计算模态未映射到本站现有标签，保留“未登记”。本轮只核对固定版本的摘要页、提交历史与修订备注，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "This is a paper revision, not a new model or weights release; its scientific-computing modality remains unregistered in the site’s current labels. This review covers pinned abstract pages, submission history and revision comments, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-06-17",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "microsoft-phi-4-mini-flash-reasoning-paper-submission-2025-07-09",
+      "kind": "paper",
+      "title": {
+        "zh": "Microsoft Phi-4-mini-flash-reasoning 论文 首次 arXiv 提交",
+        "en": "Microsoft Phi-4-mini-flash-reasoning paper first arXiv submission"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2507.06607v1",
+      "api_alias": null,
+      "date": "2025-07-09",
+      "timestamp_utc": "2025-07-09T07:27:00Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2507.06607v1",
+          "kind": "paper",
+          "date": "2025-07-09",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v1 于 2025-07-09 07:27:00 UTC 提交。该版本标题为 Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation。该固定版本摘要以 Phi4-mini-Flash-Reasoning 命名相关推理模型，讨论 SambaY 架构。",
+        "en": "arXiv records v1 on 2025-07-09 at 07:27:00 UTC. This version is titled Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation. The pinned abstract names the reasoning model Phi4-mini-Flash-Reasoning and discusses the SambaY architecture."
+      },
+      "note": {
+        "zh": "这是论文首次 arXiv 提交，与同日模型公告分开；不把后续 v3 内容或当前模型卡许可倒填至 v1。本轮只核对固定版本的摘要页、提交历史与修订备注，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "This is the first arXiv submission, separate from the same-day model announcement; later v3 content or current model-card licensing is not backfilled into v1. This review covers pinned abstract pages, submission history and revision comments, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-07-09",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "microsoft-phi-4-mini-flash-reasoning-paper-revision-2025-07-16",
+      "kind": "paper_revision",
+      "title": {
+        "zh": "Microsoft Phi-4-mini-flash-reasoning 论文 v2 修订",
+        "en": "Microsoft Phi-4-mini-flash-reasoning paper v2 revision"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2507.06607v2",
+      "api_alias": null,
+      "date": "2025-07-16",
+      "timestamp_utc": "2025-07-16T07:00:01Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2507.06607v2",
+          "kind": "paper_revision",
+          "date": "2025-07-16",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v2 于 2025-07-16 07:00:01 UTC 提交。该版本标题为 Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation。v2 保留该历史标题与 Phi4-mini-Flash-Reasoning 摘要名称；此次仅确认修订身份与时间。",
+        "en": "arXiv records v2 on 2025-07-16 at 07:00:01 UTC. This version is titled Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation. The v2 page retains this historical title and the abstract name Phi4-mini-Flash-Reasoning; this review establishes the revision identity and time only."
+      },
+      "note": {
+        "zh": "摘要页未列修订原因；本轮未核对全文差异，不推断架构、训练或性能变化。这是论文修订，不是新模型或权重发布；不以 10 月 v3 代替 7 月 v2。本轮只核对固定版本的摘要页、提交历史与修订备注，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "The abstract page lists no revision reason; full-text differences were not checked, so no architecture, training or performance changes are inferred. This is a paper revision, not a new model or weights release; October v3 does not substitute for July v2. This review covers pinned abstract pages, submission history and revision comments, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-07-09",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    },
+    {
+      "id": "microsoft-phi-ground-paper-submission-2025-07-31",
+      "kind": "paper",
+      "title": {
+        "zh": "Microsoft Phi-Ground 论文 首次 arXiv 提交",
+        "en": "Microsoft Phi-Ground paper first arXiv submission"
+      },
+      "provider": "Microsoft",
+      "version": "arXiv:2507.23779v1",
+      "api_alias": null,
+      "date": "2025-07-31",
+      "timestamp_utc": "2025-07-31T17:59:09Z",
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2507.23779v1",
+          "kind": "paper",
+          "date": "2025-07-31",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "summary": {
+        "zh": "arXiv 记录 v1 于 2025-07-31 17:59:09 UTC 提交。该版本标题为 Phi-Ground Tech Report: Advancing Perception in GUI Grounding。讨论基于图像与文本指令的 GUI 定位；模态另核对 v1 正文的输入/输出小节。",
+        "en": "arXiv records v1 on 2025-07-31 at 17:59:09 UTC. This version is titled Phi-Ground Tech Report: Advancing Perception in GUI Grounding. Discusses GUI grounding from images and textual instructions; modalities were additionally checked against the v1 input/output section."
+      },
+      "note": {
+        "zh": "保留来源明确的 UTC 日期，不猜本地时区，也不拿项目页的 August 2025 月份替换论文提交日。论文描述模型家族，不证明当日权重开放；不复制作者评测分数或声称本站实测。本轮核对固定版本的摘要页、提交历史，另读 v1 正文输入/输出小节，不是全文复核或模型实测。六条记录是三篇论文的提交/修订事件，不是六个新模型或权重发布。首次 arXiv 提交不证明所有渠道最早公开时刻。首次完整公开权重日期、历史权重许可与固定 API 修订仍未知；当前模型卡或后续论文的许可不能回填历史。",
+        "en": "The explicit UTC date is retained without guessing a local timezone or replacing it with the project page’s August 2025 month. A paper describing a model family does not establish same-day weights availability; no author benchmark scores are copied or claimed as site-run tests. This review covers the pinned abstract page, submission history and the selected v1 input/output section, not full-paper verification or model execution. These six records are submission/revision events for three papers, not six new models or weights releases. First arXiv submission does not establish earliest public appearance across all channels. First complete public weights dates, historical weights licenses and pinned API revisions remain unknown; current model cards or later paper licenses cannot be backdated."
+      },
+      "first_paper_submission": "2025-07-31",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

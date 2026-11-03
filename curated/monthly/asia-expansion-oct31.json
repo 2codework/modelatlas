@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "purpose": "MiniMax、Moonshot AI 与 Z.ai 的有限范围官方权重公告补录；不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2026-08"
+  ],
+  "date_policy": "日期依据官方可取得权重声明，不代表首次文件上传；论文、代码、API 与许可日期分开。",
+  "license_policy": "精确卡许可与代码分列；H3 自定义全文已阅读，不作用户适用性或无限制使用结论。",
+  "events": [
+    {
+      "id": "minimax-m1-family-2025-06-16",
+      "name": "MiniMax-M1 40k / 80k",
+      "vendor": "MiniMax",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "MiniMaxAI/MiniMax-M1-40k",
+        "MiniMaxAI/MiniMax-M1-80k"
+      ],
+      "announcement_date": "2025-06-16",
+      "weights_release_date": "2025-06-16",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-06-16",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+        "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k"
+      ],
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对精确模型卡的许可声明，未逐条审核完整许可正文。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.minimax.io/news/minimaxm1",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-16",
+          "summary_zh": "官方日期标题与末段声明模型权重可取得，并列明 40k / 80k 两个版本。"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1-40k",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确官方模型卡确认身份、权重入口及许可标识；不作为首次上传时间证据。"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M1-80k",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确官方模型卡确认身份、权重入口及许可标识；不作为首次上传时间证据。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2506.13585v1",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-06-16",
+          "summary_zh": "arXiv v1 投稿日期；与权重可取得公告分列，不从论文日期反推上传时间。"
+        }
+      ],
+      "notes": [
+        "本条合并 40k 与 80k 两个检查点的一次官方权重公告；不作为两个独立首次上传事件。",
+        "论文首次投稿为 2025-06-16；同日官方文章另有 API 提供声明，但 API 首次可调用时间未独立核验。"
+      ],
+      "api_announcement_date": "2025-06-16"
+    },
+    {
+      "id": "kimi-vl-a3b-thinking-2506-2025-06-21",
+      "name": "Kimi-VL-A3B-Thinking-2506",
+      "vendor": "Moonshot AI",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "moonshotai/Kimi-VL-A3B-Thinking-2506"
+      ],
+      "announcement_date": "2025-06-21",
+      "weights_release_date": "2025-06-21",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-06",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506"
+      ],
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对精确模型卡的许可声明，未逐条审核完整许可正文。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/MoonshotAI/Kimi-VL",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-06-21",
+          "summary_zh": "官方仓库 News 的 2025.06.21 条目明确公布并链接该 2506 检查点。"
+        },
+        {
+          "url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确官方模型卡确认身份、权重入口及许可标识；不作为首次上传时间证据。"
+        }
+      ],
+      "notes": [
+        "仅记录 2506 检查点，不沿用四月初始 Kimi-VL 家族论文日期。"
+      ]
+    },
+    {
+      "id": "glm-41v-9b-thinking-2025-07-02",
+      "name": "GLM-4.1V-9B-Thinking",
+      "vendor": "Z.ai",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "zai-org/GLM-4.1V-9B-Thinking"
+      ],
+      "announcement_date": "2025-07-02",
+      "weights_release_date": "2025-07-02",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-07-01",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking"
+      ],
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking",
+          "applies_to": "本条列明的模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "official_declaration_and_model_card_metadata",
+          "review_note": "本次核对精确模型卡的许可声明，未逐条审核完整许可正文。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/zai-org/GLM-4",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-02",
+          "summary_zh": "官方仓库 Project Updates 的 2025/07/02 条目公布并链接该精确模型。"
+        },
+        {
+          "url": "https://huggingface.co/zai-org/GLM-4.1V-9B-Thinking",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确官方模型卡确认身份、权重入口及许可标识；不作为首次上传时间证据。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.01006v1",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "2025-07-01",
+          "summary_zh": "arXiv v1 投稿日期；与权重可取得公告分列，不从论文日期反推上传时间。"
+        }
+      ],
+      "notes": [
+        "论文 v1 首次投稿为 2025-07-01，权重公告为 2025-07-02；不把后续论文修订中的 GLM-4.5V / 4.6V 倒填到本版本。",
+        "精确模型卡声明 MIT；代码仓库的 Apache-2.0 标识不替代权重许可。"
+      ]
+    },
+    {
+      "id": "minimax-h3-base-family-2026-08-03",
+      "name": "MiniMax H3-Base FL2VA / Ref2VA",
+      "vendor": "MiniMax",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "MiniMaxAI/MiniMax-H3:FL2VA/",
+        "MiniMaxAI/MiniMax-H3:Ref2VA/"
+      ],
+      "announcement_date": "2026-08-03",
+      "weights_release_date": "2026-08-03",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2026-08",
+      "modality": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video",
+          "audio"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "code_license": null,
+      "weight_entries": [
+        "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+      ],
+      "licenses": [
+        {
+          "name": "MiniMax H3 Community License Agreement",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+          "applies_to": "H3 自定义许可所定义的材料、模型派生物及相关代码；编码器另列 Apache-2.0，不外推所有组件",
+          "review_status": "official_full_license_text_inspected",
+          "review_note": "已阅读官方完整许可正文。地域、商业授权及用途限制并存；此摘要不判断具体用户适用性。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.minimax.io/news/minimax-h3-open-source",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2026-08-03",
+          "summary_zh": "官方文章日期为 2026-08-03；Local Deployment of H3-Base 表格列明两个任务检查点，完整流程与托管组件分别说明。"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "精确官方模型卡确认身份、权重入口及许可标识；不作为首次上传时间证据。"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+          "supports": [
+            "license",
+            "license_date",
+            "access_constraints"
+          ],
+          "date_text": "August 2, 2026",
+          "evidence_locator": "标题；I.3/I.5；II；IV.1；V.3/V.4；Additional Note",
+          "summary_zh": "标题为 8 月 2 日许可日期；适用地域排除欧盟、英国、韩国、美国，商业产品与服务年收入超过 2000 万美元需事先另获授权，并有用途限制。编码器另有 Apache-2.0 声明；不判断用户所在地及适用性。"
+        }
+      ],
+      "notes": [
+        "自定义许可含地域限制；完整 2K 官方流程含托管 API，不能据此承诺全本地或零费用。",
+        "本条仅含 H3-Base FL2VA / Ref2VA 两个 BF16、CFG 蒸馏任务检查点，存于同一官方仓库；不表示全部 H3 系统组件均可下载。",
+        "许可正文标题日期为 2026-08-02，权重可用性公告为 2026-08-03；前者不当作首次上传证据。",
+        "官方说明本地基础流程为 768p，完整 2K 流程另含托管 H3-Context-IR 与 H3-Regenerate-2K。未运行模型、下载权重或调用 API。"
+      ],
+      "access_note": "自定义许可含地域限制；完整 2K 官方流程含托管 API，不能据此承诺全本地或零费用。",
+      "license_date": "2026-08-02"
+    }
+  ]
+}

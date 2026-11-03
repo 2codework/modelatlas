@@ -44,7 +44,15 @@ class AssetVersions(unittest.TestCase):
 
  def test_foundations_assets_are_pinned_to_same_build(self):
   tags=Tags();tags.feed((ROOT/'dist/foundations.html').read_text())
-  self.assertEqual({urlsplit(u).path for u in tags.urls},{'foundations.js','foundations.css','foundation-self-checks.js'})
+  self.assertEqual({urlsplit(u).path for u in tags.urls},{'foundations.js','foundations.css','foundation-self-checks.js','campus.css'})
   for url in tags.urls:
    u=urlsplit(url);self.assertEqual(parse_qs(u.query),{'v':[hashlib.sha256((ROOT/'dist'/u.path).read_bytes()).hexdigest()]})
   self.assertEqual((ROOT/'dist/foundations.html').read_bytes(),(ROOT/'docs/foundations.html').read_bytes())
+
+ def test_attention_lab_assets_match_current_build(self):
+  for name in ['attention-lab.html','attention-lab-en.html']:
+   tags=Tags();tags.feed((ROOT/'dist'/name).read_text())
+   self.assertEqual({urlsplit(u).path for u in tags.urls},{'academy.css','attention-lab.css','attention-math.js','attention-lab.js'})
+   for url in tags.urls:
+    u=urlsplit(url);self.assertEqual(parse_qs(u.query),{'v':[hashlib.sha256((ROOT/'dist'/u.path).read_bytes()).hexdigest()]})
+   self.assertEqual((ROOT/'dist'/name).read_bytes(),(ROOT/'docs'/name).read_bytes())

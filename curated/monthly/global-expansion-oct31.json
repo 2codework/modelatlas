@@ -1,0 +1,651 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Cohere、LG AI Research、NII / LLM-jp 四个月共12个机构月份单元的有限核查补录；不是全球完整目录。",
+  "verified_on": "2026-10-31",
+  "exhaustive": false,
+  "coverage_months": [
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2026-08"
+  ],
+  "coverage": {
+    "searched_providers": [
+      "Cohere",
+      "LG AI Research",
+      "NII / LLM-jp"
+    ],
+    "searched_cells": 12,
+    "ledger": [
+      {
+        "provider": "Cohere",
+        "month": "2025-05",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.cohere.com/blog \"May\" \"2025\" model"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "Cohere",
+        "month": "2025-06",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.cohere.com/blog \"June\" \"2025\" model"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "Cohere",
+        "month": "2025-07",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.cohere.com/blog May June July 2025 model release Command Aya",
+          "site.cohere.com \"Command A Vision\" \"July\" \"weights\""
+        ],
+        "candidates": [
+          "command-a-vision-07-2025"
+        ],
+        "exhaustive": false,
+        "conclusion": "Named candidates established, not exhaustive."
+      },
+      {
+        "provider": "Cohere",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.cohere.com \"August\" \"2026\" \"North Micro\"",
+          "site.cohere.com \"North Micro Vision\" \"August 12\"",
+          "site.huggingface.co/blog/CohereLabs \"North\" \"August\""
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "LG AI Research",
+        "month": "2025-05",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.lgresearch.ai \"2025\" \"May\" EXAONE"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "LG AI Research",
+        "month": "2025-06",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.lgresearch.ai \"2025\" \"June\" EXAONE"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "LG AI Research",
+        "month": "2025-07",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.lgresearch.ai EXAONE 4.0 July 2025 release",
+          "site.lgresearch.ai \"EXAONE 4.0\" \"July 15\""
+        ],
+        "candidates": [
+          "exaone-4.0-initial-family"
+        ],
+        "exhaustive": false,
+        "conclusion": "Named candidates established, not exhaustive."
+      },
+      {
+        "provider": "LG AI Research",
+        "month": "2026-08",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.lgresearch.ai EXAONE \"August\" \"2026\""
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "NII / LLM-jp",
+        "month": "2025-05",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.llm-jp.nii.ac.jp 2025 5 6 7 モデル 公開"
+        ],
+        "candidates": [
+          "llm-jp-3.1-initial-family"
+        ],
+        "exhaustive": false,
+        "conclusion": "Named candidates established, not exhaustive."
+      },
+      {
+        "provider": "NII / LLM-jp",
+        "month": "2025-06",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.llm-jp.nii.ac.jp \"2025.06\" モデル 公開",
+          "site.llm-jp.nii.ac.jp 2025 6月 モデル 公開"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "NII / LLM-jp",
+        "month": "2025-07",
+        "status": "searched_no_conclusion",
+        "queries": [
+          "site.llm-jp.nii.ac.jp \"2025.07\" モデル 公開",
+          "site.llm-jp.nii.ac.jp 2025 7月 モデル 公開"
+        ],
+        "candidates": [],
+        "exhaustive": false,
+        "conclusion": "No qualifying dated event established in this bounded pass; NOT evidence of no release."
+      },
+      {
+        "provider": "NII / LLM-jp",
+        "month": "2026-08",
+        "status": "searched_candidates_found",
+        "queries": [
+          "site.llm-jp.nii.ac.jp \"2026.08\" モデル",
+          "site.llm-jp.nii.ac.jp \"33B\" \"2026\" \"8\""
+        ],
+        "candidates": [
+          "llm-jp-4-33b-initial-family"
+        ],
+        "exhaustive": false,
+        "conclusion": "Named candidates established, not exhaustive."
+      }
+    ],
+    "scope_note": "未找到接纳事件的单元仅为本轮无结论；其他机构不在本轮检索范围。"
+  },
+  "date_policy": "日期为官方声明权重可取得的日期，不等于最早上传；论文、API、代码日期分别登记，未知不推断。",
+  "license_policy": "许可是2026-10-31读取的当前声明；不倒填为首次发布时许可。权重与代码分列；未复核完整许可文本。",
+  "events": [
+    {
+      "id": "llm-jp-3.1-initial-family-2025-05-30",
+      "name": "LLM-jp-3.1 首批六个基础与 instruct4 检查点",
+      "vendor": "NII / LLM-jp",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "llm-jp/llm-jp-3.1-1.8b",
+        "llm-jp/llm-jp-3.1-13b",
+        "llm-jp/llm-jp-3.1-8x13b",
+        "llm-jp/llm-jp-3.1-1.8b-instruct4",
+        "llm-jp/llm-jp-3.1-13b-instruct4",
+        "llm-jp/llm-jp-3.1-8x13b-instruct4"
+      ],
+      "announcement_date": "2025-05-30",
+      "weights_release_date": "2025-05-30",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-05",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-1.8b 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-13b",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-13b 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-8x13b 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-1.8b-instruct4 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-13b-instruct4 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b-instruct4",
+          "applies_to": "仅对应 llm-jp/llm-jp-3.1-8x13b-instruct4 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b",
+        "https://huggingface.co/llm-jp/llm-jp-3.1-13b",
+        "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b",
+        "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4",
+        "https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4",
+        "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b-instruct4"
+      ],
+      "evidence": [
+        {
+          "url": "https://llm-jp.nii.ac.jp/blog/blog-887/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-05-30",
+          "locator": "DATE and opening release paragraph, base/instruct lists",
+          "summary_zh": "官方有日期的可取得声明明确列出本条检查点；不据型号后缀、论文或代码日期推断权重日期。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-13b",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-1.8b-instruct4",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-13b-instruct4",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-3.1-8x13b-instruct4",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "本条只覆盖列明检查点；家族公告不等于多个分别核验的首次上传事件。",
+        "首次上传时间未知；未下载权重或运行模型。代码发布日期与代码许可未单独核实。",
+        "许可为2026-10-31核验时的模型卡声明，不作为初始发布许可证明；未复核完整许可文本。",
+        "发布博客说明训练论文尚待发表，故论文日期保留未知。"
+      ]
+    },
+    {
+      "id": "exaone-4.0-initial-family-2025-07-15",
+      "name": "EXAONE 4.0 首批 32B / 1.2B",
+      "vendor": "LG AI Research",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "LGAI-EXAONE/EXAONE-4.0-32B",
+        "LGAI-EXAONE/EXAONE-4.0-1.2B"
+      ],
+      "announcement_date": "2025-07-15",
+      "weights_release_date": "2025-07-15",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": "2025-07-15",
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "EXAONE AI Model License Agreement 1.2 - NC",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "applies_to": "仅对应 LGAI-EXAONE/EXAONE-4.0-32B 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。模型卡明确说明许可已更新，不能倒填发布日。"
+        },
+        {
+          "name": "EXAONE AI Model License Agreement 1.2 - NC",
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B",
+          "applies_to": "仅对应 LGAI-EXAONE/EXAONE-4.0-1.2B 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。模型卡明确说明许可已更新，不能倒填发布日。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+        "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/LG-AI-EXAONE/EXAONE-4.0",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-15",
+          "locator": "News entry 2025.07.15 explicitly releases 32B and 1.2B and links models",
+          "summary_zh": "官方有日期的可取得声明明确列出本条检查点；不据型号后缀、论文或代码日期推断权重日期。"
+        },
+        {
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-1.2B",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://arxiv.org/abs/2507.11407",
+          "supports": [
+            "paper_date"
+          ],
+          "date_text": "Submitted on 15 Jul 2025 (v1)",
+          "summary_zh": "论文v1日期独立核验，不作为首次权重上传日期。"
+        }
+      ],
+      "notes": [
+        "本条只覆盖列明检查点；家族公告不等于多个分别核验的首次上传事件。",
+        "首次上传时间未知；未下载权重或运行模型。代码发布日期与代码许可未单独核实。",
+        "许可为2026-10-31核验时的模型卡声明，不作为初始发布许可证明；未复核完整许可文本。",
+        "EXAONE 当前模型卡明确标注许可已更新，当前为 EXAONE AI Model License Agreement 1.2 - NC；不能倒填为2025-07-15发布时许可，初始许可及变更生效日未核实。",
+        "论文v1为2025-07-15，独立记录；7月18日 llama.cpp 和7月26日 Transformers 支持不属于权重发布日。"
+      ]
+    },
+    {
+      "id": "command-a-vision-07-2025-2025-07-31",
+      "name": "Command A Vision 07-2025",
+      "vendor": "Cohere",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "exact_model",
+      "included_models": [
+        "CohereLabs/command-a-vision-07-2025"
+      ],
+      "announcement_date": "2025-07-31",
+      "weights_release_date": "2025-07-31",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": "2025-07-31",
+      "month": "2025-07",
+      "modality": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "CC-BY-NC-4.0",
+          "url": "https://huggingface.co/CohereLabs/command-a-vision-07-2025",
+          "applies_to": "仅对应 CohereLabs/command-a-vision-07-2025 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/CohereLabs/command-a-vision-07-2025"
+      ],
+      "evidence": [
+        {
+          "url": "https://huggingface.co/blog/CohereLabs/introducing-command-a-vision-07-2025",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2025-07-31",
+          "locator": "Published July 31, 2025; opening paragraph explicitly releases weights",
+          "summary_zh": "官方有日期的可取得声明明确列出本条检查点；不据型号后缀、论文或代码日期推断权重日期。"
+        },
+        {
+          "url": "https://huggingface.co/CohereLabs/command-a-vision-07-2025",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://docs.cohere.com/changelog/2025-07-31-command-a-vision",
+          "supports": [
+            "api_release_date"
+          ],
+          "date_text": "July 31, 2025",
+          "summary_zh": "单独的官方API发布公告；与权重声明分列。"
+        }
+      ],
+      "notes": [
+        "只覆盖 command-a-vision-07-2025，不外推其他 Command A 型号。",
+        "首次上传时间未知；未下载权重或运行模型。代码发布日期与代码许可未单独核实。",
+        "许可为2026-10-31核验时的模型卡声明，不作为初始发布许可证明；未复核完整许可文本。",
+        "独立API公告日期为2025-07-31：https://docs.cohere.com/changelog/2025-07-31-command-a-vision；非商业权重许可不等同于商业API条款。"
+      ]
+    },
+    {
+      "id": "llm-jp-4-33b-initial-family-2026-08-18",
+      "name": "LLM-jp-4 33B 基础与思考检查点",
+      "vendor": "NII / LLM-jp",
+      "event_type": "weights_release_announcement",
+      "event_granularity": "family_release",
+      "included_models": [
+        "llm-jp/llm-jp-4-33b-base",
+        "llm-jp/llm-jp-4-33b-thinking"
+      ],
+      "announcement_date": "2026-08-18",
+      "weights_release_date": "2026-08-18",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "event_precision": {
+        "weights": "day_official_family_release_statement"
+      },
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "api_release_date": null,
+      "month": "2026-08",
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "verified_on": "2026-10-31",
+      "download_verification": "public_model_card_and_weight_entry_no_download",
+      "licenses": [
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-4-33b-base",
+          "applies_to": "仅对应 llm-jp/llm-jp-4-33b-base 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        },
+        {
+          "name": "Apache-2.0",
+          "url": "https://huggingface.co/llm-jp/llm-jp-4-33b-thinking/blob/main/README.md",
+          "applies_to": "仅对应 llm-jp/llm-jp-4-33b-thinking 模型权重；不自动覆盖代码、数据、依赖组件",
+          "review_status": "current_official_model_card_declaration",
+          "reviewed_on": "2026-10-31",
+          "full_license_text_reviewed": false,
+          "at_initial_release": null,
+          "review_note": "当前许可声明；初始发布时许可未核验。"
+        }
+      ],
+      "code_license": null,
+      "initial_release_weights_license": null,
+      "weight_entries": [
+        "https://huggingface.co/llm-jp/llm-jp-4-33b-base",
+        "https://huggingface.co/llm-jp/llm-jp-4-33b-thinking"
+      ],
+      "evidence": [
+        {
+          "url": "https://llm-jp.nii.ac.jp/news/20260818/",
+          "supports": [
+            "announcement_date",
+            "weights_release_date",
+            "scope"
+          ],
+          "date_text": "2026-08-18",
+          "locator": "DATE 2026.08.18, release paragraph and two model links",
+          "summary_zh": "官方有日期的可取得声明明确列出本条检查点；不据型号后缀、论文或代码日期推断权重日期。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-4-33b-base",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        },
+        {
+          "url": "https://huggingface.co/llm-jp/llm-jp-4-33b-thinking/blob/main/README.md",
+          "supports": [
+            "current_weight_entry",
+            "license",
+            "modality"
+          ],
+          "summary_zh": "读取官方精确模型卡当前许可声明与身份，不作为首次上传日期证据。"
+        }
+      ],
+      "notes": [
+        "本条只覆盖列明检查点；家族公告不等于多个分别核验的首次上传事件。",
+        "首次上传时间未知；未下载权重或运行模型。代码发布日期与代码许可未单独核实。",
+        "许可为2026-10-31核验时的模型卡声明，不作为初始发布许可证明；未复核完整许可文本。",
+        "不包含四月的8B/32B-A3B或九月的4.1；thinking模型卡首页读取报内部错误，已读取同一仓库的README。"
+      ]
+    }
+  ]
+}

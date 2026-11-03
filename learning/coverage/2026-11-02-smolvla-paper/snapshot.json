@@ -1,0 +1,49 @@
+{
+  "schema": "modelatlas.coverage-snapshot.v1",
+  "checked_on": "2026-11-02",
+  "phase": "integrated",
+  "snapshot_note": "本页为 2026-11-02 SmolVLA 论文日期补录后的固定核验快照：原242条加1条首次 arXiv 提交，共243条事件；6月2日论文与6月3日公告分开，机器人 VLA 不是办公 Agent，默认权重范围仍为97条。",
+  "catalog": {
+    "records": 77,
+    "providers": 20,
+    "urls": {
+      "model_card": 26,
+      "report": 28,
+      "tutorial": 43,
+      "repository": 29
+    },
+    "release_date_known": 5
+  },
+  "monthly": {
+    "events": 243,
+    "weights_events": 97,
+    "dated": 76,
+    "undated": 21
+  },
+  "practice": {
+    "synthetic_cases": 138,
+    "cases": 138,
+    "product_books": 4,
+    "recipes": 32,
+    "external_product_runs_observed": 0,
+    "api_local_execution": "never-run"
+  },
+  "provenance": [
+    {
+      "path": "recovered-sites/agentwork/site/data.json",
+      "sha256": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc"
+    },
+    {
+      "path": "recovered-sites/modelatlas/dist/data.json",
+      "sha256": "29c60951372aa05714cc66bf5a638730b96d004bd4b5ad1a4cd77646cd734af0"
+    },
+    {
+      "path": "recovered-sites/modelatlas/dist/monthly-releases.json",
+      "sha256": "b43ecf96835a99d444e0146c12b9d5b2f1b20b4879fd5f8ca782b85d7a824a86"
+    },
+    {
+      "path": "recovered-sites/modelatlas/web/practice/projection.json",
+      "sha256": "800eb356d0561c4b42ca8aaf11af55e2e6571d310c642108b2f3fe91d7d0e45b"
+    }
+  ]
+}

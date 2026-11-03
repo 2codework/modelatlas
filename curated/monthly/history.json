@@ -1,0 +1,526 @@
+{
+  "schema_version": "1.0",
+  "purpose": "ModelAtlas historical monthly release evidence seeds; not exhaustive monthly coverage",
+  "verified_on": "2026-10-30",
+  "date_policy": "Announcement dates and official declared weights-availability dates are separate fields, even when equal. No exact first upload timestamp inferred. Unknown/unverified paper or code publication dates remain null.",
+  "license_policy": "Open weights does not establish open-source AI. Licenses are scoped to the exact models/artifacts; not legal advice.",
+  "coverage_months": [
+    "2024-04",
+    "2024-06",
+    "2024-12",
+    "2025-01",
+    "2025-04",
+    "2025-08"
+  ],
+  "events": [
+    {
+      "id": "meta-llama-3-2024-04-18",
+      "name": "Meta Llama 3 (initial 8B/70B release)",
+      "vendor": "Meta",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Meta-Llama-3-8B",
+        "Meta-Llama-3-8B-Instruct",
+        "Meta-Llama-3-70B",
+        "Meta-Llama-3-70B-Instruct"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2024-04-18",
+      "weights_release_date": "2024-04-18",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-04",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "Meta Llama 3 Community License Agreement",
+          "url": "https://github.com/meta-llama/llama3/blob/main/LICENSE",
+          "applies_to": "all listed weights"
+        }
+      ],
+      "weight_entries": [
+        "https://llama.meta.com/llama-downloads/"
+      ],
+      "evidence": [
+        {
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "quote": "April 18, 2024",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "article header"
+        },
+        {
+          "url": "https://ai.meta.com/blog/meta-llama-3/",
+          "quote": "Visit the Llama 3 website to download the models",
+          "supports": [
+            "weights_release_date"
+          ],
+          "locator": "Try Meta Llama 3 today"
+        },
+        {
+          "url": "https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md",
+          "quote": "Input Models input text only.",
+          "supports": [
+            "modality"
+          ],
+          "locator": "Model Details"
+        },
+        {
+          "url": "https://github.com/meta-llama/llama3/blob/main/LICENSE",
+          "quote": "META LLAMA 3 COMMUNITY LICENSE AGREEMENT",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        }
+      ],
+      "notes": [
+        "Custom commercial license; do not label OSI/open-source AI automatically. Initial 8B and 70B only; exclude 3.1 and later. Model card confirms April 18 release and base/instruction variants."
+      ],
+      "verified_on": "2026-10-30"
+    },
+    {
+      "id": "qwen2-2024-06-07",
+      "name": "Qwen2 initial language-model family",
+      "vendor": "Alibaba Cloud / Qwen Team",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen2-0.5B",
+        "Qwen2-0.5B-Instruct",
+        "Qwen2-1.5B",
+        "Qwen2-1.5B-Instruct",
+        "Qwen2-7B",
+        "Qwen2-7B-Instruct",
+        "Qwen2-57B-A14B",
+        "Qwen2-57B-A14B-Instruct",
+        "Qwen2-72B",
+        "Qwen2-72B-Instruct"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2024-06-07",
+      "weights_release_date": "2024-06-07",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-06",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://huggingface.co/Qwen/Qwen2-7B/blob/main/LICENSE",
+          "applies_to": "0.5B, 1.5B, 7B, 57B-A14B; base and Instruct"
+        },
+        {
+          "name": "Tongyi Qianwen LICENSE AGREEMENT",
+          "url": "https://huggingface.co/Qwen/Qwen2-72B/blob/main/LICENSE",
+          "applies_to": "72B and 72B-Instruct"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen2-0.5B",
+        "https://huggingface.co/Qwen/Qwen2-0.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2-1.5B",
+        "https://huggingface.co/Qwen/Qwen2-1.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2-7B",
+        "https://huggingface.co/Qwen/Qwen2-7B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2-57B-A14B",
+        "https://huggingface.co/Qwen/Qwen2-57B-A14B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2-72B",
+        "https://huggingface.co/Qwen/Qwen2-72B-Instruct"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2/",
+          "quote": "June 7, 2024",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "header"
+        },
+        {
+          "url": "https://qwenlm.github.io/blog/qwen2/",
+          "quote": "Now all models have been released in Hugging Face and ModelScope.",
+          "supports": [
+            "weights_release_date"
+          ],
+          "locator": "Developing with Qwen2"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2-72B/blob/main/LICENSE",
+          "quote": "Tongyi Qianwen LICENSE AGREEMENT",
+          "supports": [
+            "licenses"
+          ],
+          "locator": "license heading"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen2-7B/blob/main/LICENSE",
+          "quote": "License: apache-2.0",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        }
+      ],
+      "notes": [
+        "License split is explicitly stated in official blog License section. Do not apply Apache to 72B. Excludes Qwen2-VL/audio. License document historical date August 3, 2023 is NOT Qwen2 model release date."
+      ],
+      "verified_on": "2026-10-30"
+    },
+    {
+      "id": "deepseek-v3-2024-12-26",
+      "name": "DeepSeek-V3 original Base/Chat release",
+      "vendor": "DeepSeek",
+      "event_granularity": "family_release",
+      "included_models": [
+        "DeepSeek-V3-Base",
+        "DeepSeek-V3"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2024-12-26",
+      "weights_release_date": "2024-12-26",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2024-12",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "DEEPSEEK LICENSE AGREEMENT, Version 1.0, 23 October 2023",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+          "applies_to": "Base/Chat weights"
+        },
+        {
+          "name": "MIT License",
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-CODE",
+          "applies_to": "repository code only, NOT original model weights"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V3-Base",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V3"
+      ],
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news1226/",
+          "quote": "Introducing DeepSeek-V3 2024/12/26",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "official release-navigation entry"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/news/news1226/",
+          "quote": "Fully open-source models & papers",
+          "supports": [
+            "weights_release_date"
+          ],
+          "locator": "release announcement; model repo linked immediately below"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+          "quote": "The use of DeepSeek-V3 Base/Chat models is subject to the Model License.",
+          "supports": [
+            "licenses"
+          ],
+          "locator": "section 7"
+        },
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+          "quote": "DEEPSEEK LICENSE AGREEMENT",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        },
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+          "quote": "Version 1.0, 23 October 2023",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        }
+      ],
+      "notes": [
+        "Official announcement language is evidence of a release claim, not a certification of open-source AI. Original V3 only; excludes V3-0324, V3.1, V3.2. The repo download table confirms Base and Chat weights. No exact upload time established."
+      ],
+      "verified_on": "2026-10-30"
+    },
+    {
+      "id": "deepseek-r1-2025-01-20",
+      "name": "DeepSeek-R1 original reasoning model",
+      "vendor": "DeepSeek",
+      "event_granularity": "model_release",
+      "included_models": [
+        "DeepSeek-R1"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2025-01-20",
+      "weights_release_date": "2025-01-20",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-01",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "MIT License",
+          "url": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
+          "applies_to": "DeepSeek-R1 weights and repository code"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+      ],
+      "evidence": [
+        {
+          "url": "https://api-docs.deepseek.com/news/news250120/",
+          "quote": "DeepSeek-R1 Release 2025/01/20",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "official release-navigation entry"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/news/news250120/",
+          "quote": "Code and models are released under the MIT License",
+          "supports": [
+            "weights_release_date",
+            "licenses"
+          ],
+          "locator": null
+        },
+        {
+          "url": "https://github.com/deepseek-ai/DeepSeek-R1",
+          "quote": "This code repository and the model weights are licensed under the MIT License.",
+          "supports": [
+            "licenses"
+          ],
+          "locator": "section 7"
+        }
+      ],
+      "notes": [
+        "Scope deliberately only original DeepSeek-R1, not R1-0528, R1-Zero or distill models. Distill-Llama variants retain upstream Llama license considerations; do not automatically inherit this record."
+      ],
+      "verified_on": "2026-10-30"
+    },
+    {
+      "id": "qwen3-2025-04-29",
+      "name": "Qwen3 initial post-trained language-model family",
+      "vendor": "Alibaba Cloud / Qwen Team",
+      "event_granularity": "family_release",
+      "included_models": [
+        "Qwen3-0.6B",
+        "Qwen3-1.7B",
+        "Qwen3-4B",
+        "Qwen3-8B",
+        "Qwen3-14B",
+        "Qwen3-32B",
+        "Qwen3-30B-A3B",
+        "Qwen3-235B-A22B"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2025-04-29",
+      "weights_release_date": "2025-04-29",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-04",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE",
+          "applies_to": "all eight listed post-trained models; corroborated by official release article"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/Qwen/Qwen3-0.6B",
+        "https://huggingface.co/Qwen/Qwen3-1.7B",
+        "https://huggingface.co/Qwen/Qwen3-4B",
+        "https://huggingface.co/Qwen/Qwen3-8B",
+        "https://huggingface.co/Qwen/Qwen3-14B",
+        "https://huggingface.co/Qwen/Qwen3-32B",
+        "https://huggingface.co/Qwen/Qwen3-30B-A3B",
+        "https://huggingface.co/Qwen/Qwen3-235B-A22B"
+      ],
+      "evidence": [
+        {
+          "url": "https://qwenlm.github.io/blog/qwen3/",
+          "quote": "April 29, 2025",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "header"
+        },
+        {
+          "url": "https://qwenlm.github.io/blog/qwen3/",
+          "quote": "We are open-weighting two MoE models",
+          "supports": [
+            "weights_release_date"
+          ],
+          "locator": "Introduction"
+        },
+        {
+          "url": "https://qwenlm.github.io/blog/qwen3/",
+          "quote": "Additionally, six dense models are also open-weighted",
+          "supports": [
+            "weights_release_date"
+          ],
+          "locator": "Introduction"
+        },
+        {
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE",
+          "quote": "License: apache-2.0",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        },
+        {
+          "url": "https://qwenlm.github.io/blog/qwen3/",
+          "quote": "under Apache 2.0 license.",
+          "supports": [
+            "licenses"
+          ],
+          "locator": "Introduction: two MoE and six dense models"
+        }
+      ],
+      "notes": [
+        "Exact eight names and Apache 2.0 scope are in official Introduction; only post-trained variants counted here. Excludes separate Base checkpoints, Qwen3-2507, Qwen3-Coder, Qwen3-VL and later variants."
+      ],
+      "verified_on": "2026-10-30"
+    },
+    {
+      "id": "gpt-oss-2025-08-05",
+      "name": "gpt-oss initial reasoning-model pair",
+      "vendor": "OpenAI",
+      "event_granularity": "family_release",
+      "included_models": [
+        "gpt-oss-120b",
+        "gpt-oss-20b"
+      ],
+      "modality": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ],
+        "code_is_text": true
+      },
+      "announcement_date": "2025-08-05",
+      "weights_release_date": "2025-08-05",
+      "weights_release_date_kind": "official_declared_weights_available_date",
+      "first_upload_timestamp": null,
+      "paper_date": null,
+      "code_release_date": null,
+      "month": "2025-08",
+      "availability": "open_weights",
+      "open_source_ai_status": "not_assessed_do_not_infer_from_weights",
+      "licenses": [
+        {
+          "name": "Apache License, Version 2.0",
+          "url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+          "applies_to": "both models; official release article states common license"
+        }
+      ],
+      "weight_entries": [
+        "https://huggingface.co/openai/gpt-oss-120b",
+        "https://huggingface.co/openai/gpt-oss-20b"
+      ],
+      "evidence": [
+        {
+          "url": "https://openai.com/index/introducing-gpt-oss/",
+          "quote": "August 5, 2025",
+          "supports": [
+            "announcement_date"
+          ],
+          "locator": "header"
+        },
+        {
+          "url": "https://openai.com/index/introducing-gpt-oss/",
+          "quote": "We’re releasing gpt-oss-120b and gpt-oss-20b",
+          "supports": [
+            "weights_release_date",
+            "included_models"
+          ],
+          "locator": "Introduction"
+        },
+        {
+          "url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+          "quote": "Apache License",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        },
+        {
+          "url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+          "quote": "Version 2.0, January 2004",
+          "supports": [
+            "licenses"
+          ],
+          "locator": null
+        }
+      ],
+      "notes": [
+        "Text-only reasoning models; model names are not exact parameter counts. Excludes gpt-oss-safeguard. No inference calls or weight downloads were made."
+      ],
+      "verified_on": "2026-10-30"
+    }
+  ]
+}

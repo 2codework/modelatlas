@@ -1,5 +1,5 @@
 """Static editorial diagram only. No registry mutation or external dependencies."""
-import hashlib, html, json, shutil, xml.etree.ElementTree as ET
+import hashlib, html, json, re, shutil, xml.etree.ElementTree as ET
 REL = 'learning/audio-diagram/r1'
 MANIFEST_SHA = '8f59b7a3274f2d1cf6c85bf94f62cf79352db483641eea65dcb131a36f19bf5d'
 SVG = 'realtime-audio-four-checks.zh.svg'
@@ -39,5 +39,8 @@ def publish(root, out):
     section += ['</ul></section>']
     path = out / 'realtime-audio.html'
     original = path.read_text()
-    assert original.count('</nav>') == 1
-    path.write_text(original.replace('</nav>', '</nav>\n' + '\n'.join(section), 1))
+    # Site navigation is separate; retain a fail-closed unique directory anchor.
+    anchors = list(re.finditer(r'<nav aria-label="模型目录">.*?</nav>', original, re.S))
+    assert len(anchors) == 1, 'expected one model directory navigation'
+    end = anchors[0].end()
+    path.write_text(original[:end] + '\n' + '\n'.join(section) + original[end:])

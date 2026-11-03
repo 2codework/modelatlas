@@ -17,8 +17,13 @@ class DiscoveryLayout(unittest.TestCase):
  def test_exactly_one_real_search_per_searchable_view(self):
   html=(ROOT/'web/index.html').read_text();d=Controls();d.feed(html)
   expected={'explore':'query','vendor-catalog':'catalog-query','timeline':'event-query','evaluation':'evaluation-query','learn':'path-query'}
-  self.assertEqual(len(d.searches),5)
-  for attrs,stack in d.searches:
+  # The additive learning homepage has its own static lesson search.
+  self.assertEqual(len(d.searches),6)
+  academy=[(a,s) for a,s in d.searches if a.get('id')=='academy-search']
+  self.assertEqual(len(academy),1)
+  legacy=[(a,s) for a,s in d.searches if a.get('id')!='academy-search']
+  self.assertEqual(len(legacy),5)
+  for attrs,stack in legacy:
    sections=[a.get('id') for t,a in stack if t=='section'];self.assertEqual(len(sections),1);self.assertEqual(attrs['id'],expected[sections[0]]);self.assertNotIn('hidden',attrs);self.assertFalse(any(t=='details' for t,a in stack))
   self.assertNotIn('global-query',html)
  def test_advanced_filters_preserve_all_controls_but_not_primary_searches(self):

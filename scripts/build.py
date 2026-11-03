@@ -325,6 +325,28 @@ def build():
     import build_connections
     build_connections.render(ROOT)
     build_api_local.render(ROOT)
+    import build_evaluation_evidence
+    evidence_path=ROOT/'learning/evaluation-evidence/2026-10-31/evidence.json'
+    (ROOT/'web/evaluation-evidence.html').write_text(build_evaluation_evidence.render(json.loads(evidence_path.read_text())))
+    evidence_doc=json.loads(evidence_path.read_text())
+    evidence_snapshot=build_evaluation_evidence.validate(evidence_doc)
+    evidence_fields=('id','title','model','benchmark','split','report_version','report_date','checked_at')
+    evidence_index={'schema_version':'modelatlas.evaluation_evidence_index.v1','scope':evidence_doc['scope'],'not_executed':evidence_doc['not_executed'],'records':[{**{k:evidence_snapshot[k] for k in evidence_fields},'href':'evaluation-evidence.html'}]}
+    (ROOT/'web/evaluation-evidence-index.js').write_text('globalThis.ModelAtlasEvaluationEvidenceIndex='+json.dumps(evidence_index,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n')
+    import build_benchmark_practice
+    build_benchmark_practice.render(ROOT)
+    import build_retrieval_lab
+    build_retrieval_lab.render(ROOT)
+    import build_diffusion_noise_lab
+    build_diffusion_noise_lab.render(ROOT)
+    import build_bpe_lab
+    build_bpe_lab.render(ROOT)
+    import build_tiny_training
+    build_tiny_training.render(ROOT)
+    import monthly_releases
+    monthly_releases.publish(data,out)
+    import build_academy
+    build_academy.render(ROOT, len(json.loads((out/'monthly-releases.json').read_text())['records']))
     for p in (ROOT/'web').iterdir():
         if p.is_file(): shutil.copy2(p,out/p.name)
     (out/'data.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n')
@@ -351,6 +373,10 @@ def build():
     audio_diagram.publish(ROOT,out)
     chatgpt_images_feature.publish(ROOT,out)
     build_api_local.publish(ROOT,out)
+    evidence_out=out/'learning/evaluation-evidence/2026-10-31'
+    evidence_out.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(evidence_path,evidence_out/'evidence.json')
+    build_academy.publish(ROOT,out)
     (out/'.nojekyll').touch()
     asset_versions.pin(out)
     shutil.copytree(out,ROOT/'docs',dirs_exist_ok=True)

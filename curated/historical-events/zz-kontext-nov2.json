@@ -1,0 +1,110 @@
+{
+  "schema": "modelatlas.typed-historical-events.v1",
+  "checked_at": "2026-11-02",
+  "scope": "Two bounded Kontext historical events: one named-member family announcement and one arXiv revision; not weights, current availability certification or comprehensive coverage.",
+  "events": [
+    {
+      "id": "bfl-flux-1-kontext-family-announcement-2025-05-29",
+      "kind": "model_family_announcement",
+      "date": "2025-05-29",
+      "version": "FLUX.1 Kontext (family announcement)",
+      "title": {
+        "zh": "FLUX.1 Kontext 家族公告",
+        "en": "FLUX.1 Kontext family announcement"
+      },
+      "summary": {
+        "zh": "官方 2025-05-29 公告介绍文本与图像条件的生成和编辑家族：pro 与 max 加入 BFL API，其中 max 标为实验性；dev 当时仅为 private beta（私测）。公告未给出时刻或时区。",
+        "en": "The May 29, 2025 announcement introduces a text-and-image-conditioned generation and editing family: pro and max join the BFL API, with max described as experimental; dev is in private beta. No announcement time or timezone is recorded."
+      },
+      "note": {
+        "zh": "这是一个家族公告，不是三个权重发布。dev 私测不等于公开权重；首次完整公开权重日期、历史许可适用性和固定 API 修订仍未知。三个成员在公告中具名，但尚未收录成员专属页面链接，不虚构链接。公告与厂商效果陈述不保证当前地区、账户或端点可用；未调用 API、下载权重或实跑评测。",
+        "en": "One family announcement, not three weights releases. The dev private beta is not public weights; first complete public weights dates, historical license applicability and pinned API revisions remain unknown. Three members are named in the announcement, without registered member-specific links; no links are invented. Announcement and vendor performance claims do not establish current regional, account or endpoint availability. No API call, weights download or model evaluation was performed."
+      },
+      "provider": "Black Forest Labs",
+      "timestamp_utc": null,
+      "api_alias": null,
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "evidence": [
+        {
+          "url": "https://bfl.ai/blog/flux-1-kontext",
+          "kind": "model_family_announcement",
+          "date": "2025-05-29",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "first_paper_submission": null,
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed",
+      "family_members": [
+        {
+          "name": "FLUX.1 Kontext [pro]",
+          "url": null,
+          "source_url": "https://bfl.ai/blog/flux-1-kontext"
+        },
+        {
+          "name": "FLUX.1 Kontext [max]",
+          "url": null,
+          "source_url": "https://bfl.ai/blog/flux-1-kontext"
+        },
+        {
+          "name": "FLUX.1 Kontext [dev]",
+          "url": null,
+          "source_url": "https://bfl.ai/blog/flux-1-kontext"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-1-kontext-paper-revision-2025-06-24",
+      "kind": "paper_revision",
+      "date": "2025-06-24",
+      "version": "arXiv:2506.15742v2",
+      "title": {
+        "zh": "FLUX.1 Kontext 论文 arXiv v2 修订",
+        "en": "FLUX.1 Kontext paper arXiv v2 revision"
+      },
+      "summary": {
+        "zh": "arXiv 提交历史将 v2 修订登记为 2025-06-24 05:31:03 UTC；v1 首次 arXiv 提交为 2025-06-17 20:18:23 UTC。论文讨论文本与图像上下文条件下的生成和编辑。",
+        "en": "arXiv records revision v2 at 2025-06-24 05:31:03 UTC and the first arXiv submission v1 at 2025-06-17 20:18:23 UTC. The paper discusses generation and editing conditioned on text and image context."
+      },
+      "note": {
+        "zh": "这是论文修订，不是新模型、API 上线或权重发布。v1 只是首次 arXiv 提交，不代表报告整体最早公开：标注 5 月 29 日的官方公告页面目前链接技术报告；本轮未核实该链接的最早出现时间。本文未推定修订内容差异、权重日期或许可证；论文评测是作者报告，不是本站实测。",
+        "en": "A paper revision, not a new model, API launch or weights release. v1 is only the first arXiv submission, not necessarily the earliest public report: the official announcement page dated May 29 currently links a technical report; its first link appearance was not verified. No revision-content differences, weights dates or licenses are inferred. Paper evaluations are author-reported, not tests run by this site."
+      },
+      "provider": "Black Forest Labs",
+      "timestamp_utc": "2025-06-24T05:31:03Z",
+      "api_alias": null,
+      "checked_at": "2026-11-02",
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "evidence": [
+        {
+          "url": "https://arxiv.org/abs/2506.15742v2",
+          "kind": "paper_revision",
+          "date": "2025-06-24",
+          "supports": [
+            "event_kind",
+            "event_date",
+            "event_identity"
+          ]
+        }
+      ],
+      "context_sources": [],
+      "first_paper_submission": "2025-06-17",
+      "first_public_weights_date": null,
+      "pinned_api_revision": null,
+      "execution_status": "not_executed"
+    }
+  ]
+}

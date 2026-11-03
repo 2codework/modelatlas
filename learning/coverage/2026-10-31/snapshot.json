@@ -1,0 +1,49 @@
+{
+  "schema": "modelatlas.coverage-snapshot.v1",
+  "checked_on": "2026-10-31",
+  "phase": "integrated",
+  "snapshot_note": "本页为固定核验快照，不随外部发布实时变化；新增内容需经过核验后更新。",
+  "catalog": {
+    "records": 77,
+    "providers": 20,
+    "urls": {
+      "model_card": 26,
+      "report": 28,
+      "tutorial": 43,
+      "repository": 29
+    },
+    "release_date_known": 5
+  },
+  "monthly": {
+    "events": 221,
+    "weights_events": 96,
+    "dated": 75,
+    "undated": 21
+  },
+  "practice": {
+    "synthetic_cases": 138,
+    "cases": 138,
+    "product_books": 4,
+    "recipes": 32,
+    "external_product_runs_observed": 0,
+    "api_local_execution": "never-run"
+  },
+  "provenance": [
+    {
+      "path": "recovered-sites/agentwork/site/data.json",
+      "sha256": "e4ff39b74c99cc39095c36ff84714c517161a9b7f43748a3418b7575b49c3cfc"
+    },
+    {
+      "path": "recovered-sites/modelatlas/dist/data.json",
+      "sha256": "29c60951372aa05714cc66bf5a638730b96d004bd4b5ad1a4cd77646cd734af0"
+    },
+    {
+      "path": "recovered-sites/modelatlas/dist/monthly-releases.json",
+      "sha256": "4e87d353c9490d4c36b2545686c31346225171acb48e7a71f1e699305f485e35"
+    },
+    {
+      "path": "recovered-sites/modelatlas/web/practice/projection.json",
+      "sha256": "800eb356d0561c4b42ca8aaf11af55e2e6571d310c642108b2f3fe91d7d0e45b"
+    }
+  ]
+}
