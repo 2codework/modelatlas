@@ -449,7 +449,7 @@
     "dist/qa-agent/adapters.py": "3e516e0aa8db7e10a53a43f6ba73ce9abab70ccf495fa7a197de84b46c7e1f2a",
     "dist/qa-agent/core.py": "e5e52a41bf592137a442d9e5d0f8046195ef1c2be8034a56e6d9bb05080962dc",
     "dist/qa-agent/demo.py": "9d57fc3b6e61e5df0092f874db78e5db570dba750ee6f718b5379c867bd6e754",
-    "dist/qa-agent-lab.zip": "9849ed00c0b02286207d52c4d332bf3eb56279ca4136a921760ca95325e9e252",
+    "dist/qa-agent-lab.zip": "a99cf5ea147b77e63e0775bafe17678c75bfc3ef8837bbd98ed7f623ffa94fd8",
     "dist/reader.js": "ef5c41af6c331baae20166f88b8e3a459b4c55ab53a61b0bf2eae02033dd33d2",
     "dist/realtime-audio/admission.json": "5de29a453d196dc5ccd47376248f8898e10e8694d43c8cca18d5a4038ce4b74f",
     "dist/realtime-audio/overlay.json": "246db58481bd5179dbd52d7e22aca3f5458b5d7f66b758616ead34e893b72246",
@@ -904,7 +904,7 @@
     "docs/qa-agent/adapters.py": "3e516e0aa8db7e10a53a43f6ba73ce9abab70ccf495fa7a197de84b46c7e1f2a",
     "docs/qa-agent/core.py": "e5e52a41bf592137a442d9e5d0f8046195ef1c2be8034a56e6d9bb05080962dc",
     "docs/qa-agent/demo.py": "9d57fc3b6e61e5df0092f874db78e5db570dba750ee6f718b5379c867bd6e754",
-    "docs/qa-agent-lab.zip": "9849ed00c0b02286207d52c4d332bf3eb56279ca4136a921760ca95325e9e252",
+    "docs/qa-agent-lab.zip": "a99cf5ea147b77e63e0775bafe17678c75bfc3ef8837bbd98ed7f623ffa94fd8",
     "docs/reader.js": "ef5c41af6c331baae20166f88b8e3a459b4c55ab53a61b0bf2eae02033dd33d2",
     "docs/realtime-audio/admission.json": "5de29a453d196dc5ccd47376248f8898e10e8694d43c8cca18d5a4038ce4b74f",
     "docs/realtime-audio/overlay.json": "246db58481bd5179dbd52d7e22aca3f5458b5d7f66b758616ead34e893b72246",
@@ -1399,7 +1399,7 @@
     "scripts/audio_diagram.py": "917a33c1d634c47ee05bc6556a5c2d8f71212927ea1c622503504b45ede93506",
     "scripts/benchmark_catalog.py": "da92553b04c01567ae5989081e3dca454eb1fc040415f9c0071528dd1f2a37e5",
     "scripts/build.py": "21070bac5559eb2aa2cb2823bddb3a0e9e4de7ccaea94751e8f0a9f294bc06cc",
-    "scripts/build_academy.py": "24345ad2bc4f69df16bb4059462ce91ba4dd2f40d094eff307e76fd4987ffb8e",
+    "scripts/build_academy.py": "7581316a908c3a48443612c427f535a4ce12e05108933cfa555eeae5a74f11f7",
     "scripts/build_api_local.py": "75dc933ddb46eb135a72d5df3aea126619a82f0e5d1835318eb29d787811e53a",
     "scripts/build_attention_lab.py": "fc13792ff679211377c79374ff61376f09aa775af6ddc87b08a7b6eef9a128eb",
     "scripts/build_beginner.py": "da0c7607a9533f517043c075a3b9f4a87cc64e023310e0d742b27412edf55904",
@@ -1591,6 +1591,7 @@
     "tests/test_nile_chat_events.py": "4aeedda03c535cf36947d5c9245607826613a208057469fb0a5a56c804039f80",
     "tests/test_office_agents.py": "b6bd47cb456642fb0c09bcc20aab8f18be975ec837d0c571fb72ce29296b34cc",
     "tests/test_qa_agent_lab.py": "9320f26b0d505f7b1730df1a685acc59a1c5a81b7ca4a896f20b051b08863756",
+    "tests/test_qa_agent_zip_reproducible.py": "8f5659363d8fd1e92c2a9d7482427b8399220fd24c307fe65af22911186efd09",
     "tests/test_realtime_audio.py": "31963e50fb34d975aa813d3291b938ccd97bfcc4f773e481d6f573c1ef7f4038",
     "tests/test_regional_office.py": "06503f8e17ece66dad3dcab2bc9769f28bb47e1ed3ca9b91f733305c81ed55fa",
     "tests/test_relation_book_stability.py": "f18974885e394ed337062433096bdbaf5e49dd95b767e5f970cc9eb9d8b76bb4",
@@ -2152,5 +2153,15 @@
     "route_matrix_total": 220,
     "browser": "CNEN desktop,320/360 iframe, keyboard, home/legacy navigation; no new200% or AT certification",
     "published": false
+  },
+  "reproducible_zip_20261103": {
+    "python_tests": 738,
+    "node_tests": 517,
+    "mcp_tests": 18,
+    "scope": "Fixed six ZIP entry metadata and STORE method; all original payloads unchanged; clean relocated export with altered mtime/mode reproduces 1037 web/dist/docs files",
+    "lab_tests": 33,
+    "zip_bytes": 43045,
+    "zip_sha256": "a99cf5ea147b77e63e0775bafe17678c75bfc3ef8837bbd98ed7f623ffa94fd8",
+    "pages_files": 454
   }
 }

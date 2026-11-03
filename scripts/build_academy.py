@@ -266,8 +266,20 @@ def publish(root,out):
  import zipfile
  lab=root/'learning/qa-agent'
  shutil.copytree(lab,out/'qa-agent',dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__'))
- with zipfile.ZipFile(out/'qa-agent-lab.zip','w',zipfile.ZIP_DEFLATED) as z:
-  for p in sorted(lab.iterdir()):
-   if p.is_file(): z.write(p,'learning/qa-agent/'+p.name)
-  z.write(root/'tests/test_qa_agent_lab.py','tests/test_qa_agent_lab.py')
+ # Git checkouts change mtimes and may change permissions. Do not serialize
+ # filesystem metadata or zlib-dependent compressed bytes into the release.
+ members=[('learning/qa-agent/'+p.name,p) for p in sorted(lab.iterdir()) if p.is_file()]
+ members.append(('tests/test_qa_agent_lab.py',root/'tests/test_qa_agent_lab.py'))
+ with zipfile.ZipFile(out/'qa-agent-lab.zip','w',compression=zipfile.ZIP_STORED) as z:
+  for name,path in members:
+   info=zipfile.ZipInfo(name,date_time=(2026,11,1,0,0,0))
+   info.create_system=3
+   info.create_version=20
+   info.extract_version=20
+   info.compress_type=zipfile.ZIP_STORED
+   info.external_attr=(0o100644 << 16)
+   info.internal_attr=0
+   info.extra=b''
+   info.comment=b''
+   z.writestr(info,path.read_bytes())
 if __name__=='__main__': render(Path(__file__).resolve().parents[1])
